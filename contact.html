@@ -1,10 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap and Custom CSS files-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/design.css">
+    <!--Google Fonts and Fonts Awesome links -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
 </head>
 <body>
-
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Navbar</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <!-- Body and Main Content of page -->
+    <div class="container-fluid" id="top">
+        <div class="row">
+            <div class="col-md-10 offset-md-1 text-center csr">
+                <span class="align-middle">Speak to a customer service representative on <button type="button" class="btn btn-outline-purple">Live Chat</button></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 offset-md-1 contact-bg">
+                <img src="images/contact.jpg"/>
+            </div>
+            <div class="contact-txt text-right">
+                <h3>About to retire?</h3>
+                <span>Receive tips on how to make the transition easier!</span><br>
+                <a type="button" class="btn btn-subc">Subscribe</a>
+            </div>
+            <div class="col-md-5 h-office text-center">
+                <h2>Head Office</h2>
+                <p>Leadway Pensure PFA Limited<br>
+                121/123 Funsho Williams Avenue<br>
+                Surulere, Lagos.<br>
+                Nigeria.</p>
+                <i class="fa fa-phone" aria-hidden="true"></i> 01-2800850, 01-2800800
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 offset-md-1 divide"></div>
+            <div class="col-md-10 offset-md-1 location text-center">
+                <h1>Our Locations</h1>
+                <ul class="nav nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Western Region</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Eastern Region</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Northern Region</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Southern Region</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-10 offset-md-1" id="west">
+                <div id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#lagos" aria-expanded="true" aria-controls="lagos">
+                            <div class="card-header" role="tab" id="West1">
+                                <h5 class="mb-0">
+                                    Lagos
+                                </h5>
+                            </div>
+                        </a>
+                        <div id="lagos" class="collapse show" role="tabpanel" aria-labelledby="West1">
+                            <div class="card-block">
+                                <div class="row justify-content-around">
+                                    <div class="col-6 col-sm-5 col-md-4 loc-add">
+                                        <h6>Ikeja (Branch Office)</h6>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span >House 1, Gabriel Akinmade Taylor Estate, 2 Allen Avenue, Ikeja.</span><br>
+                                    </div>
+                                    <div class="col-6 col-sm-5 col-md-4 loc-person" >
+                                        <h6>Key Personnel</h6>
+                                        <i class="fa fa-user" aria-hidden="true"></i> Olugbenga Oriowo<br>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i> o-oriowo@leadway-pensure.com<br>
+                                        <i class="fa fa-phone" aria-hidden="true"></i> 09096995912, 08099803549<br>
+                                    </div>
+                                    <div class="col-10 text-center">
+                                        <a type="button" class="btn btn-outline-loc">Get Directions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Ogun" aria-expanded="false" aria-controls="Ogun">
+                            <div class="card-header" role="tab" id="West2">
+                                <h5 class="mb-0">
+                                    Ogun
+                                </h5>
+                            </div>
+                        </a>
+                        <div id="Ogun" class="collapse" role="tabpanel" aria-labelledby="West2">
+                            <div class="card-block">
+                                <div class="row justify-content-around mrg-bt">
+                                    <div class="col-6 col-sm-5 col-md-4 loc-add">
+                                        <h6>Abeokuta (Branch Office)</h6>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>22, Quarry Road, Old Savannah Building, Abeokuta.</span><br>
+                                    </div>
+                                    <div class="col-6 col-sm-5 col-md-4 loc-person" >
+                                        <h6>Key Personnel</h6>
+                                        <i class="fa fa-user" aria-hidden="true"></i> Olubunmi Akinrolabu <br>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i> o-akinrolabu@leadway-pensure.com<br>
+                                        <i class="fa fa-phone" aria-hidden="true"></i> 09096995916, 08034343937<br>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-around mrg-bt">
+                                    <div class="col-6 col-sm-5 col-md-4 loc-add">
+                                        <h6>Ota (Service Center)</h6>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>United Bank for African (UBA) Plc, KM 91 Idiroko Road, Ota.</span><br>
+                                    </div>
+                                    <div class="col-6 col-sm-5 col-md-4 loc-person" >
+                                        <h6>Key Personnel</h6>
+                                        <i class="fa fa-user" aria-hidden="true"></i> Segun Adefokun <br>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i> s-adefokun@leadway-pensure.com<br>
+                                        <i class="fa fa-phone" aria-hidden="true"></i> 08090217889<br>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-around">
+                                    <div class="col-6 col-sm-5 col-md-4 loc-add">
+                                        <h6>Sagamu (Service Center)</h6>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>143, Akarigbo Road, Ijoku, Sagamu.</span><br>
+                                    </div>
+                                    <div class="col-6 col-sm-5 col-md-4 loc-person" >
+                                        <h6>Key Personnel</h6>
+                                        <i class="fa fa-user" aria-hidden="true"></i> Adegbuyi Adenuga <br>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i> a-adenuga@leadway-pensure.com<br>
+                                        <i class="fa fa-phone" aria-hidden="true"></i> 08090217890<br>
+                                    </div>
+                                    <div class="col-10 text-center">
+                                        <a type="button" class="btn btn-outline-loc">Get Directions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Oyo" aria-expanded="false" aria-controls="Oyo">
+                            <div class="card-header" role="tab" id="West3">
+                                <h5 class="mb-0">
+                                    Oyo
+                                </h5>
+                            </div>
+                        </a>
+                        <div id="Oyo" class="collapse" role="tabpanel" aria-labelledby="West3">
+                            <div class="card-block">
+                                <div class="row justify-content-around">
+                                    <div class="col-6 col-sm-5 col-md-4 loc-add">
+                                        <h6>Ibadan (Branch Office)</h6>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>Leadway House, 25B Mogaji Are Road, Iyaganku, GRA, Off Moshood Abiola Way, Ibadan.</span><br>
+                                    </div>
+                                    <div class="col-6 col-sm-5 col-md-4 loc-person" >
+                                        <h6>Key Personnel</h6>
+                                        <i class="fa fa-user" aria-hidden="true"></i> Aderemi Ogunlaja<br>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i> a-ogunlaja@leadway-pensure.com<br>
+                                        <i class="fa fa-phone" aria-hidden="true"></i> 09096998478, 08023195689<br>
+                                    </div>
+                                    <div class="col-10 text-center">
+                                        <a type="button" class="btn btn-outline-loc">Get Directions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Osun" aria-expanded="false" aria-controls="Osun">
+                            <div class="card-header" role="tab" id="West4">
+                                <h5 class="mb-0">
+                                    Osun
+                                </h5>
+                            </div>
+                        </a>
+                        <div id="Osun" class="collapse" role="tabpanel" aria-labelledby="West3">
+                            <div class="card-block">
+                                <div class="row justify-content-around mrg-bt">
+                                    <div class="col-6 col-sm-5 col-md-4 loc-add">
+                                        <h6>Oshogbo (Service Center)</h6>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>Moye House, Adjacent Zenith Bank, KM2 gbongan Road, Osogbo.</span><br>
+                                    </div>
+                                    <div class="col-6 col-sm-5 col-md-4 loc-person" >
+                                        <h6>Key Personnel</h6>
+                                        <i class="fa fa-user" aria-hidden="true"></i> Ademola Adio<br>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i> a-adio@leadway-pensure.com<br>
+                                        <i class="fa fa-phone" aria-hidden="true"></i> 09096998488, 08035616372<br>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-around mrg-bt">
+                                    <div class="col-6 col-sm-5 col-md-4 loc-add">
+                                        <h6>Ile Ife (Service Center)</h6>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>UBA OAU Branch, Ile Ife.</span><br>
+                                    </div>
+                                    <div class="col-6 col-sm-5 col-md-4 loc-person" >
+                                        <h6>Key Personnel</h6>
+                                        <i class="fa fa-user" aria-hidden="true"></i> Bukola Fasasi<br>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i> b-fasasi@leadway-pensure.com<br>
+                                        <i class="fa fa-phone" aria-hidden="true"></i> 0909665046<br>
+                                    </div>
+                                    <div class="col-10 text-center">
+                                        <a type="button" class="btn btn-outline-loc">Get Directions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Ekiti" aria-expanded="false" aria-controls="Ekiti">
+                            <div class="card-header" role="tab" id="West5">
+                                <h5 class="mb-0">
+                                    Ekiti
+                                </h5>
+                            </div>
+                        </a>
+                        <div id="Ekiti" class="collapse" role="tabpanel" aria-labelledby="West5">
+                            <div class="card-block">
+                                <div class="row justify-content-around mrg-bt">
+                                    <div class="col-6 col-sm-5 col-md-4 loc-add">
+                                        <h6>Ekiti (Service Center)</h6>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>Little by little plaza, 1st floor, Ajilosun Street, Ado-Ekiti.</span><br>
+                                    </div>
+                                    <div class="col-6 col-sm-5 col-md-4 loc-person" >
+                                        <h6>Key Personnel</h6>
+                                        <i class="fa fa-user" aria-hidden="true"></i> Adeniyi Akomolafe<br>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i> a-akomolafe@leadway-pensure.com<br>
+                                        <i class="fa fa-phone" aria-hidden="true"></i> 09096998487, 07033419492<br>
+                                    </div>
+                                    <div class="col-10 text-center">
+                                        <a type="button" class="btn btn-outline-loc">Get Directions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Kwara" aria-expanded="false" aria-controls="Kwara">
+                            <div class="card-header" role="tab" id="West6">
+                                <h5 class="mb-0">
+                                    Kwara
+                                </h5>
+                            </div>
+                        </a>
+                        <div id="Kwara" class="collapse" role="tabpanel" aria-labelledby="West6">
+                            <div class="card-block">
+                                <div class="row justify-content-around mrg-bt">
+                                    <div class="col-6 col-sm-5 col-md-4 loc-add">
+                                        <h6>Ilorin (Branch Office)</h6>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>163, Ajase-Ipo Road, Gaa-Akanbi Junction. P.M.B 1538, Ilorin.</span><br>
+                                    </div>
+                                    <div class="col-6 col-sm-5 col-md-4 loc-person" >
+                                        <h6>Key Personnel</h6>
+                                        <i class="fa fa-user" aria-hidden="true"></i> Segun Kayode<br>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i> s-kayode@leadway-pensure.com<br>
+                                        <i class="fa fa-phone" aria-hidden="true"></i> 09096998483<br>
+                                    </div>
+                                    <div class="col-10 text-center">
+                                        <a type="button" class="btn btn-outline-loc">Get Directions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Ondo" aria-expanded="false" aria-controls="Ondo">
+                            <div class="card-header" role="tab" id="West7">
+                                <h5 class="mb-0">
+                                    Ondo
+                                </h5>
+                            </div>
+                        </a>
+                        <div id="Ondo" class="collapse" role="tabpanel" aria-labelledby="West7">
+                            <div class="card-block">
+                                <div class="row justify-content-around mrg-bt">
+                                    <div class="col-6 col-sm-5 col-md-4 loc-add">
+                                        <h6>Akure (Service Center)</h6>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>NACRDB Building, Beside Bank of Industry, Bishop Fagun Road, Alagabka, Akure.</span><br>
+                                    </div>
+                                    <div class="col-6 col-sm-5 col-md-4 loc-person" >
+                                        <h6>Key Personnel</h6>
+                                        <i class="fa fa-user" aria-hidden="true"></i> Adeboboye Bobola<br>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i> a-Adeboboye@leadway-pensure.com<br>
+                                        <i class="fa fa-phone" aria-hidden="true"></i> 09096998486, 07033301948<br>
+                                    </div>
+                                    <div class="col-10 text-center">
+                                        <a type="button" class="btn btn-outline-loc">Get Directions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer of page -->
+    <footer class="container-fluid">
+        <hr class="hr-red">
+        <div class="row">
+            <div class="col col-sm-6 align-self-center newsHeader">
+                <h2>LATEST NEWS</h2>
+            </div>
+            <div class="col-xs-12 col-sm-6 newsFeed">
+                <ul class="list-unstyled">
+                    <li  class="media">
+                        <img class="d-flex align-self-center mr-3" src="images/vas.png" height="50px" width="50px">
+                        <div class="media-body">
+                            <h5 class="mt-0">Leadway unveils value added services</h5>
+                            <p>Following our masterplan to becoma a consumer oriented brand we have implemented... <a href="#">Read more</a></p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex align-self-center mr-3" src="images/vas.png" height="50px" width="50px">
+                        <div class="media-body">
+                            <h5 class="mt-0">Leadway unveils value added services</h5>
+                            <p>Following our masterplan to becoma a consumer oriented brand we have implemented... <a href="#">Read more</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 10px">
+            <a class="col-md-6 btn-red" data-toggle="collapse" href="#sign" aria-expanded="false" aria-controls="sign">Sign-Up for News Letter</a>
+            <a class="col-md-6 btn-red" data-toggle="collapse" data-target="#feed" aria-expanded="false" aria-controls="feed">Give us your Feedback</a>
+        </div>
+        <div class="row justify-content-around" style="margin-bottom: 10px">
+            <div class="col-md-4 collapse" id="sign">
+                <form>
+                    <div class="form-group">
+                        <input class="form-control form-control-sm" type="text" placeholder="E-mail Address" required>
+                    </div>
+                    <div align="center"><button type="button" class="btn btn-outline-red btn-sm">Sign Up</button></div>
+                </form>
+            </div>
+            <div class="col-md-4 collapse" id="feed">
+                <form>
+                    <div class="form-group">
+                        <input class="form-control form-control-sm" type="text" placeholder="E-mail Address" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control form-control-sm" rows="3" cols="inherit" placeholder="Please write here" required></textarea>
+                    </div>
+                    <div align="center"><button type="button" class="btn btn-outline-red btn-sm">Post Feedback</button></div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h6> REGULATORY REQUIREMENTS </h6>
+                <p> Regulatory Information<br>
+                    Pension Reform Act <br>
+                    Whistle Blowing<br>
+                    Code of Ethics and Conduct<br>
+                    Retired and Terminal Benefits
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h6> QUICK LINKS </h6>
+                <p> Blog <br>
+                    Enroll Now<br>
+                    Benefits<br>
+                    Our Philosophy<br>
+                    Branch Network<br>
+                </p>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+                <h6> LEADERBOARD </h6>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th> #</th>
+                        <th> Name </th>
+                        <th> Score </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>1.</th>
+                        <td> Ayo Thomas </td>
+                        <td> 10,000 </td>
+                    </tr>
+                    <tr>
+                        <th>2.</th>
+                        <td> Kemi Juba </td>
+                        <td> 9,432 </td>
+                    </tr>
+                    <tr>
+                        <th>3.</th>
+                        <td> Chinenye Dike </td>
+                        <td> 9,010 </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <ul class="nav justify-content-center" style="margin-top: 15px">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Site Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Legal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Terms & Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 align-self-center"><img src="images/pencom.png" height="90" width="90" alt=""/></div>
+            <div class="col-md-4 align-self-center text-center">Copyright Leadway Pensure 2017</div>
+            <div class="col-md-4 align-self-center text-right">Web Design & Digital by iNspire</div>
+        </div>
+    </footer>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
 </html>
