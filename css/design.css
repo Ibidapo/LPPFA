@@ -1,0 +1,263 @@
+/*Styling Body defaults*/
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+/*Styling default Bootstrap classes*/
+.media-body {
+    color: grey !important;
+}
+.table td, .table th {
+    padding: 5px;
+    font-size: 14px;
+}
+.nav-link, .nav-link:hover, .nav-link:active, .nav-link:visited{
+    color: grey;
+    text-decoration: none;
+    padding: .5em 2em;
+}
+.list-group{
+    padding: 0;
+}
+.list-group-item{
+    height: 16%;
+    width: 100%;
+}
+
+/*Styling for Buttons*/
+.btn-red, .btn-red:hover, .btn-red:active, .btn-red:visited {
+    background-color: red;
+    color: white !important;
+    text-decoration: none !important;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.btn-outline-red, .btn-outline-purple, .btn-subc, .btn-outline-loc{
+    color: red;
+    background-image: none;
+    background-color: transparent;
+    border:1px solid red;
+    border-radius: 25px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+.btn-outline-purple, .btn-outline-loc{
+    border:2px solid #a990ba ;
+    color: #7c7a7d;
+    font-size: 15px;
+}
+.btn-outline-red:hover{
+    color: white;
+    background-color: red;
+}
+.btn-outline-loc{
+    font-size: 13px;
+    padding: 5px 10px;
+    margin-top: 15px;
+    -webkit-appearance: none !important;
+}
+.btn-subc{
+    margin-top: 15px;
+    background-color: #a9bcdc;
+    border: 1px solid #a9bcdc;
+    color: white !important;
+    -webkit-appearance: none !important;
+}
+
+/*Styling for Body Section of Product & Services page*/
+.prod-banner{
+    padding: 0;
+}
+
+.prod-banner img{
+    object-fit: contain;
+    width: 100%;
+}
+
+.info-icon{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.info-icon span{
+    display: inline-block;
+    width: 70%;
+}
+
+/* Styling for Body Section of Contact Us page */
+.csr{
+    background-color: #e1e1e1;
+    color: #7c7a7d;
+    font-size: 30px;
+    font-weight: 300;
+    height: 100px;
+    padding-top: 25px;
+}
+.contact-bg{
+    padding: 0;
+}
+.contact-bg img{
+    object-fit: cover;
+    width: 100%;
+    height: 380px;
+}
+.contact-txt {
+    position: absolute;
+    width: 25%;
+    top: 10%;
+    right: 50%;
+    z-index: 1080;
+    color: white;
+    margin-right: 15px;
+    font-size: 22px;
+    font-weight: 100;
+}
+.h-office{
+    height: 380px;
+    background-color: #a990ba;
+    color: white;
+    font-size: 25px;
+    font-weight: 100;
+    line-height: 2;
+}
+.h-office h2{
+    margin-top: 5%;
+}
+.divide{
+    height: 50px;
+    background-color: #e1e1e1;
+}
+.location{
+    background-color: #a9bcdc;
+}
+.location h1{
+    margin: 25px 0;
+    font-weight: 300;
+    color: white;
+}
+.location .nav-link {
+    color: white;
+}
+.location .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #e1e1e1;
+    transition: width .3s;
+    position: relative;
+    top: 8px;
+}
+.location .nav-link:hover::after, .location .nav-link:active::after, .location .nav-link:focus::after {
+    width: 100%;
+}
+#accordion{
+    margin: 25px auto;
+    width: 90%;
+}
+#accordion .card{
+    background: transparent;
+    margin: 10px auto;
+    border: 2px solid #4c4648;
+    border-radius: 25px;
+}
+#accordion .card .card-header{
+     background: transparent;
+     border-bottom: none;
+     text-align: center;
+ }
+#accordion a{
+    color: #4c4648;
+    text-decoration: none;
+}
+.loc-add span{
+    position: absolute;
+    top: 30px;
+    left: 55px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.loc-add i{
+    color: #387dc2;
+    font-size: 50px !important;
+}
+.loc-person {
+    font-size: 14px;
+    line-height: 1.5;
+}
+.loc-person i{
+    color: #387dc2;
+}
+.mrg-bt{
+     margin-bottom: 15px
+}
+#west{
+    background:url("../images/egun.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+
+/*Styling for Footer Section*/
+.hr-red{
+    border-top: 1px solid red;
+}
+@keyframes ticker {
+    0%   {margin-top: 0}
+    50%  {margin-top: -130px}
+    75%  {margin-top: -320px}
+    100% {margin-top: 0}
+}
+.newsHeader {
+    margin-top: -8px;
+    text-align: center;
+}
+.newsFeed {
+    width: 100%;
+    height:100px;
+    overflow: hidden;
+    -webkit-user-select: none;
+}
+.newsFeed ul {
+    margin-left: 1%;
+    animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+    padding:0;
+    -webkit-user-select: none;
+}
+.newsFeed ul li { margin-bottom:40px; }
+.newsFeed ul li a {
+    color: #fff;
+    text-decoration: none;
+    font: 14px Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-user-select: none
+}
+.newsFeed ul:hover { animation-play-state: paused }
+
+form{
+    margin: 10px 0;
+}
+
+/* Media Queries */
+@media (max-width:992px) {
+
+    @keyframes ticker {
+        0% {
+            margin-top: 0
+        }
+        50% {
+            margin-top: -100px
+        }
+        75% {
+            margin-top: -215px
+        }
+        100% {
+            margin-top: 0
+        }
+    }
+}
