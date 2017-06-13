@@ -6,17 +6,440 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap and Custom CSS files-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/design.css">
-</head>
+    <!--Google Fonts and Fonts Awesome links -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        
+    <!-- Default Navbar -->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="margin-bottom: 80px">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Navbar</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-
+    <!-- Body and Main Content of page -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="customer-intro" data-aos="fade-up">We celebrate every customer !</div>
+            <div class="hidden-sm-down col-md-8 col-lg-7 offset-lg-1 customer-txt">
+                <div id="grad-txt">
+                    <h3>"I just crossed the line."</h3>
+                    <p class="text-justify">Leadway Pensure PFA encourages you to subscribe to our monthly job adverts.
+                        We will partner with you from this moment till you retire. Our bond with you continues even
+                        after retirement. Kindly apply for the available vacancy and LPPFA wishes you success at your job
+                        interview. Remember to open your RSA with us, when you secure the job.</p>
+                    <a href="" type="button" class="btn btn-purple">Subscribe</a>
+                </div>
+                <div id="emp-txt">
+                    <h3>"I am at the peak of my career."</h3>
+                    <p class="text-justify">Enroll today for a pension plan with Leadway Pensure PFA where you will be
+                    guaranteed high quality services, enviable returns on investment and the opportunity to engage with
+                    our very experienced customer relationship managers. Don't forget to visit our investment page for
+                    tips on wealth creation, sustenance and more.</p>
+                    <a href="" type="button" class="btn btn-purple">Enroll Now</a>
+                </div>
+                <div id="retr-txt">
+                    <h3>"About to retire?"</h3>
+                    <p class="text-justify">If you are considering retirement or accessing your benefits, Leadway Pensure
+                    can help make the process seamless and stress free. We will work with you from the point of application
+                    through all necessary approvals until final payments are made, ensuring prompt payment and real-time
+                    notification of the status of your application throughout the process.</p>
+                    <a href="" type="button" class="btn btn-purple">Learn more</a>
+                </div>
+            </div>
+            <div class="hidden-sm-down col-md-4 col-lg-3 customer-pic">
+                <div id="customer-slide" class="carousel slide" data-aos="fade-left" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active" id="1">
+                            <img class="d-block mx-auto" src="images/graduate.png" alt="First slide">
+                        </div>
+                        <div class="carousel-item" id="2">
+                            <img class="d-block mx-auto" src="images/graduate.png" alt="Second slide">
+                        </div>
+                        <div class="carousel-item" id="3">
+                            <img class="d-block mx-auto" src="images/graduate.png" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#customer-slide" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#customer-slide" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-md-up col-12 customer-txt">
+                <div class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="card">
+                                <img class="card-img-top" src="images/graduate.png"/>
+                                <div class="card-block">
+                                    <h5 class="text-center">"I just crossed the line."</h5>
+                                    <p class="card-text text-justify">Leadway Pensure PFA encourages you to subscribe to
+                                        our monthly job adverts. We will partner with you from this moment till you retire.
+                                        Our bond with you continues even after retirement.</p>
+                                    <div class="text-center"><a href="#" type="button" class="btn btn-purple">Subscribe</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card">
+                                <img class="card-img-top" src="images/graduate.png"/>
+                                <div class="card-block">
+                                    <h5 class="text-center">"I am at the peak of my career."</h5>
+                                    <p class="card-text text-justify">Enroll today for a pension plan with Leadway Pensure
+                                        PFA where you will be guaranteed high quality services, enviable returns on investment
+                                        and the opportunity to engage with our very experienced customer relationship managers.</p>
+                                    <div class="text-center"><a href="#" type="button" class="btn btn-purple">Subscribe</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card">
+                                <img class="card-img-top" src="images/graduate.png"/>
+                                <div class="card-block">
+                                    <h5 class="text-center">"About to retire?"</h5>
+                                    <p class="card-text text-justify">If you are considering retirement or accessing your
+                                        benefits, Leadway Pensure can help make the process seamless and stress free.
+                                        We will work with you from the point of application through all necessary approvals
+                                        until final payments are made.</p>
+                                    <div class="text-center"><a href="#" type="button" class="btn btn-purple">Subscribe</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#customer-slide" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#customer-slide" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-10 offset-lg-1 vids-bg">
+                <div class="row" style="padding-top: 3%;padding-bottom: 3%">
+                    <div class="col-12 col-md-5 ">
+                        <div class="vids-txt">
+                            <h3 class="text-center">360&deg; Digital</h3>
+                            <p class="text-justify">Enjoy exciting content and keep customers update through our social channels. Engage customer care for
+                            more information on our products and services or catch up with live programmes featuring our seasoned professionals
+                            on our to tackle everyday financial problems.</p>
+                            <ul class="nav nav-justified">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7 vids-slide">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=NTieJAIyMNI"></a></div>
+                            <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=ymL_nLJpHFY"></a></div>
+                            <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=UXvS2ERjsD0"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-10 offset-lg-1 invest-bg">
+                <div class="invest-txt" data-aos="fade-right">
+                    <blockquote class="blockquote blockquote-reverse">
+                        <p class="mb-0">"If you're saving, you're succeeding."</p>
+                        <footer class="blockquote-footer"><cite title="Source Title">Steve Burkholder</cite></footer>
+                    </blockquote>
+                    <p> A successful financial plan creates the neccessary foundation for future wealth creation and sustenance.</p>
+                    <a href="#" class="btn btn-outline-white float-right">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-5 col-lg-4 offset-lg-1 benefit-txt">
+                <h2 class="hidden-md-down text-center"   data-aos="fade-up">Pensure Benefits</h2>
+                <h5 class="hidden-lg-up text-center">Pensure Benefits</h5>
+                <p class="text-justify"   data-aos="fade-up">Learn more about payment options and grounds for payment available to you.</p>
+                <div class="text-center"   data-aos="fade-up"><a href="#" class="btn btn-outline-purple">Explore Benefits</a></div>
+            </div>
+            <div class="hidden-sm-down col-md-7 col-lg-6 benefit-bg">
+                <img src="images/Benefits.png"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-10 offset-lg-1 culture">
+                <div class="hidden-sm-down culture-pic"  data-aos="fade-up"><img src="images/bulb.jpg"></div>
+                <div class="culture-txt float-right">
+                    <h4 class="hidden-md-down text-center">Cultivating a culture of success</h4>
+                    <h5 class="hidden-lg-up text-center">Cultivating a culture of success</h5>
+                    <p class="text-justify">We've grown from strength to strength over the last decade, rewarding customers with higher
+                        interest rates and benefits for their benefits</p>
+                    <div class="text-center"><a href="" class="btn btn-outline-white">Download Financial Reports</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="hidden-md-down col-lg-11 call-s8 mx-auto">
+                <div class="s8-txt">
+                    <h4 class="text-center">No matter who you are or where you may be, we have a plan for you !</h4>
+                    <p class="text-justify">Are you graduating, employed, about to retire? or retired, Our four tier solutions strategy ensures
+                    we can appeal to every consumer segment within the market place. Let's walk you through a plan </p>
+                    <div class="text-center"><a href="" class="btn btn-outline-white" role="button" aria-pressed="true">Talk to Leadway</a></div>
+                </div>
+                <div class="s8-pic"  data-aos="fade-left"><img src="images/mobile.png"></div>
+            </div>
+            <div class="hidden-lg-up hidden-sm-down col-12 call-s8">
+                <div class="s8-txt">
+                    <h6 class="text-center">No matter who you are or where you may be, we have a plan for you !</h6>
+                    <p class="text-justify">Are you graduating, employed, about to retire? or retired, Our four tier solutions strategy ensures
+                        we can appeal to every consumer segment within the market place. Let's walk you through a plan </p>
+                    <div class="text-center"><a href="" class="btn btn-outline-white" role="button" aria-pressed="true">Talk to Leadway</a></div>
+                </div>
+                <div class="s8-pic"  data-aos="fade-left"><img src="images/mobile.png"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-11 reg mx-auto">
+                <div class="hidden-sm-down reg-pic float-left"  data-aos="fade-right"><img src="images/jar.png"></div>
+                <div class="reg-txt float-right">
+                    <p class="text-center">Need a pension account today?<br>
+                    Register with the <span style="color: #2068a6;">Leading</span> PFA today</p>
+                    <div class="hidden-md-up text-center"><a href="#" class="btn btn-outline-blue">Get Started</a></div>
+                    <span class="hidden-sm-down reg-btn"><a href="#" class="btn btn-outline-blue">Get Started</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer of page -->
+    <footer class="container-fluid">
+        <hr class="hr-red">
+        <div class="row">
+            <div class="col-12 col-md-6 align-self-center newsHeader">
+                <h1>LATEST NEWS</h1>
+            </div>
+            <div class="col-12 col-md-6 newsFeed">
+                <ul class="list-unstyled">
+                    <li  class="media">
+                        <img class="d-flex align-self-center mr-3" src="images/vas.png" height="50px" width="50px">
+                        <div class="media-body">
+                            <h5 class="mt-0">Leadway unveils value added services</h5>
+                            <p>Following our masterplan to becoma a consumer oriented brand we have implemented... <a href="#">Read more</a></p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex align-self-center mr-3" src="images/vas.png" height="50px" width="50px">
+                        <div class="media-body">
+                            <h5 class="mt-0">Leadway unveils value added services</h5>
+                            <p>Following our masterplan to becoma a consumer oriented brand we have implemented... <a href="#">Read more</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 10px">
+            <a class="col-12 col-md-6 btn-red" data-toggle="collapse" href="#sign" aria-expanded="false" aria-controls="sign">Sign-Up for News Letter</a>
+            <a class="col-12 col-md-6 btn-red" data-toggle="collapse" data-target="#feed" aria-expanded="false" aria-controls="feed">Give us your Feedback</a>
+        </div>
+        <div class="row justify-content-around" style="margin-bottom: 10px">
+            <div class="col-12 col-md-4 collapse" id="sign">
+                <form>
+                    <div class="form-group">
+                        <input class="form-control form-control-sm" type="text" placeholder="E-mail Address" required>
+                    </div>
+                    <div align="center"><button type="button" class="btn btn-outline-red btn-sm">Sign Up</button></div>
+                </form>
+            </div>
+            <div class="col-12 col-md-4 collapse" id="feed">
+                <form>
+                    <div class="form-group">
+                        <input class="form-control form-control-sm" type="text" placeholder="E-mail Address" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control form-control-sm" rows="3" cols="inherit" placeholder="Please write here" required></textarea>
+                    </div>
+                    <div align="center"><button type="button" class="btn btn-outline-red btn-sm">Post Feedback</button></div>
+                </form>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Regulatory Requirements</h6>
+                <nav class="nav flex-column">
+                    <a class="nav-link active" href="#">Regulatory Information</a>
+                    <a class="nav-link" href="#">Pension Reform Act</a>
+                    <a class="nav-link" href="#"> Whistle Blowing</a>
+                    <a class="nav-link" href="#">Code of Ethics and Conduct</a>
+                    <a class="nav-link" href="#">Retired and Terminal Benefits</a>
+                </nav>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Quick Links</h6>
+                <nav class="nav flex-column">
+                    <a class="nav-link active" href="#">Blog</a>
+                    <a class="nav-link" href="#">Enroll Now</a>
+                    <a class="nav-link" href="#">Benefits</a>
+                    <a class="nav-link" href="#">Our Philosophy</a>
+                    <a class="nav-link" href="#">Branch Network</a>
+                </nav>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 app">
+                <h6>Our Mobile App</h6>
+                <img src="images/hand.png">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6> Our Game Board</h6>
+                <table class="table table-striped text-left mx-auto">
+                    <thead>
+                    <tr>
+                        <th> #</th>
+                        <th> Name </th>
+                        <th> Score </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>1.</th>
+                        <td> Ayo Thomas </td>
+                        <td> 10,000 </td>
+                    </tr>
+                    <tr>
+                        <th>2.</th>
+                        <td> Kemi Juba </td>
+                        <td> 9,432 </td>
+                    </tr>
+                    <tr>
+                        <th>3.</th>
+                        <td> Chinenye Dike </td>
+                        <td> 9,010 </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav justify-content-center" style="margin-top: 15px">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Site Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Legal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Terms & Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row signature">
+            <div class="col-12 col-md-4 align-self-center text-center text-md-left"><img src="images/pencom.png" height="90" width="90" alt=""/></div>
+            <div class="col-12 col-md-4 align-self-center text-center">&copy; Leadway Pensure 2017</div>
+            <div class="col-12 col-md-4 align-self-center text-center text-md-right">Web Design & Digital by iNspire</div>
+        </div>
+    </footer>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1000,
+            easing: 'ease-in-sine',
+            delay: 100
+        });
+
+        $('#customer-slide').carousel({
+            interval: 15000
+        })
+
+        $('#customer-slide').on('slide.bs.carousel', function (ev){
+            var id = ev.relatedTarget.id;
+            id = parseInt(id);
+            switch (id) {
+                case 1:
+                    $('#emp-txt').hide();
+                    $('#retr-txt').hide();
+                    $('#grad-txt').show()
+                    break;
+                case 2:
+                    $('#grad-txt').hide();
+                    $('#retr-txt').hide();
+                    $('#emp-txt').show()
+                    break;
+                case 3:
+                    $('#emp-txt').hide();
+                    $('#grad-txt').hide();
+                    $('#retr-txt').show()
+                    break;
+                default:
+                    document.write("Not working");
+            }
+        })
+
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel();
+        });
+
+        $('.owl-carousel').owlCarousel({
+            items:1,
+            merge:true,
+            loop:true,
+            margin:10,
+            video: true,
+            videoHeight: 360,
+            videoWidth: 480,
+            autoplay:true,
+            autoplayTimeout:5000,
+            autoplayHoverPause:true,
+            lazyLoad:true,
+            center:true,
+            responsive:{
+                480:{
+                    items:1
+                },
+                600:{
+                    items:1
+                }
+            }
+        })
+    </script>
 </body>
 </html>

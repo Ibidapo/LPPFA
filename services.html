@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-</head>
 <body>
+    <!-- Default Navbar -->
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,62 +35,148 @@
             </ul>
         </div>
     </nav>
+    <!-- Body and Main Content of page -->
     <div class="container-fluid" id="top">
-        <div class="row" style="padding-bottom: 20px">
-            <div class="col-md-10 offset-md-1 prod-banner">
-                <img src="images/pba.png">
+        <div class="row" style="background-color: #e1e1e1">
+            <div class="hidden-md-up col-12 col-sm-10 offset-sm-1" style="margin-top: 10px">
+                <form>
+                    <div class="form-group text-center">
+                        <label for="prod"><h5>Our Services</h5></label>
+                        <select class="form-control" id="prod">
+                            <option>Retirement Savings Account</option>
+                            <option>Additional Voluntary Contribution</option>
+                            <option>Managed Funds</option>
+                            <option>Cross Border Services</option>
+                            <option>NSTIF</option>
+                            <option>Personal Messaging Services</option>
+                        </select>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-7 offset-md-1" style="padding-bottom: 20px">
-                <p> The Retirement Savings Account was initiated by the Federal Government under the Pensions Reform Act 2004
+            <div class="col-12 col-lg-10 offset-lg-1 prod-banner">
+                <img src="images/pba.png">
+            </div>
+        </div>
+        <div class="row tab-content">
+            <div class="col-12 col-md-8 col-lg-7 offset-lg-1 prod-txt tab-pane active" role="tabpanel" id="rsa">
+                <p class="text-justify"> The Retirement Savings Account was initiated by the Federal Government under the Pensions Reform Act 2004
                 and is used to set aside money towards an individual’s retirement. The new pension Reform Act 2014 requires
                 the employer and employee to contribute a minimum total of 18% of the employee’s monthly emoluments (basic
                 salary, housing and transport) to a Retirement Savings Account (RSA) which will be managed by a private
                 sector Pension Fund Administrator (PFA).</p>
-                <h4 class="text-center" style="padding: 10px 0">Your new RSA account starts here</h4>
+                <h4 class="hidden-sm-down text-center">Your new RSA account starts here</h4>
+                <h5 class="hidden-md-up text-center">Your new RSA account starts here</h5>
                 <div class="row">
-                    <div class="col-md-4 info-icon">
-                        <img class="img-fluid" src="images/form.png" height="96" width="96"/><br><br>
+                    <div class="col-12 col-md-4 info-icon">
+                        <img class="img-fluid" src="images/form.png"><br><br>
                         <span>Click to Enroll now</span>
                     </div>
-                    <div class="col-md-4 info-icon">
-                        <img class="img-fluid" src="images/phone.png" height="96" width="96"/><br><br>
+                    <div class="col-12 col-md-4 info-icon">
+                        <img class="img-fluid" src="images/phone.png"><br><br>
                         <span>Wait for SMS Notification on account registration</span>
                     </div>
-                    <div class="col-md-4 info-icon">
-                        <img class="img-fluid" src="images/diploma.png" height="96" width="96"/><br><br>
+                    <div class="col-12 col-md-4 info-icon">
+                        <img class="img-fluid" src="images/diploma.png"><br><br>
                         <span>Receive membership certificate via mail</span>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 info-icon">
-                        <img class="img-fluid" src="images/talk.png" height="96" width="96"/><br><br>
+                    <div class="col-12 col-md-4 info-icon">
+                        <img class="img-fluid" src="images/talk.png"><br><br>
                         <span>Inform Employer / HR on registration status</span>
                     </div>
-                    <div class="col-md-4 info-icon">
-                        <img class="img-fluid" src="images/cloud.png" height="96" width="96"/><br><br>
+                    <div class="col-12 col-md-4 info-icon">
+                        <img class="img-fluid" src="images/cloud.png"><br><br>
                         <span>Login online here</span>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 list-group">
-                <a href="#" class="list-group-item">Retirement Savings Account</a>
-                <a href="#" class="list-group-item">Additional Voluntary Contribution</a>
-                <a href="#" class="list-group-item">Managed Funds</a>
-                <a href="#" class="list-group-item">Cross Border Services</a>
-                <a href="#" class="list-group-item">NSTIF</a>
-                <a href="#" class="list-group-item">Personal Messaging Services</a>
+            <div class="col-12 col-md-8 col-lg-7 offset-lg-1 tab-pane prod-txt" role="tabpanel" id="avc">
+                <p class="text-justify"> Additional Voluntary Contributions (AVC) is the discretionary contribution made
+                above the mandatory 18% employer and employee contributions into an individual’s Retirement Savings
+                Account (RSA) and cannot be more than 100% percentage of your emolument. You also have the benefit of
+                accessing your AVC any time before retirement. However, enjoying a TAX FREE withdrawal applies only after
+                FIVE YEARS of making contributions!</p>
+                <h4 class="hidden-sm-down text-center">Your new AVC account starts here</h4>
+                <h5 class="hidden-md-up text-center">Your new AVC account starts here</h5>
+                <div class="row">
+                    <div class="col-12 col-md-4 info-icon">
+                        <img class="img-fluid" src="images/form.png"><br><br>
+                        <span>Click to Enroll now</span>
+                    </div>
+                    <div class="col-12 col-md-4 info-icon">
+                        <img class="img-fluid" src="images/phone.png"><br><br>
+                        <span>Wait for SMS Notification on account registration</span>
+                    </div>
+                    <div class="col-12 col-md-4 info-icon">
+                        <img class="img-fluid" src="images/diploma.png"><br><br>
+                        <span>Receive membership certificate via mail</span>
+                    </div>
+                    <div class="col-12 col-md-4 info-icon">
+                        <img class="img-fluid" src="images/talk.png"><br><br>
+                        <span>Inform Employer / HR on registration status</span>
+                    </div>
+                    <div class="col-12 col-md-4 info-icon">
+                        <img class="img-fluid" src="images/cloud.png"><br><br>
+                        <span>Login online here</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 col-lg-7 offset-lg-1 tab-pane" role="tabpanel" id="mf">
+                <p class="text-justify">As a Pension Fund Administrator, our unique responsibilities include management
+                of Gratuity scheme, Legacy funds and other managed funds with tailored deliverables and value taken into
+                consideration.</p>
+
+                <b>Gratuity Funds</b>
+                <p class="text-justify">Gratuity Funds are lump sum amounts that employers give to their employees on leaving
+                the organization as a way of rewarding them for their past service. This cash reward is called “Gratuity”.
+                The amount paid to the employee is normally based on the number of years of service he/she worked for the organization.
+                Please note that Gratuity Funds are separate from the normal RSA Fund or Lump Sum payment made at retirement.</p>
+
+                <b>Legacy Funds</b>
+                <p class="text-justify">Legacy Funds are pre-scheme funds (i.e. funds up to December 2004) which were privately invested by an
+                organization for or its authorized agents on behalf of its workers before the Pension Reform Act 2004.
+                They are usually treated as separate funds from the normal mandatory contributions.</p>
+            </div>
+            <div class="col-12 col-md-8 col-lg-7 offset-lg-1 tab-pane" role="tabpanel" id="nst">
+                <p class="text-justify">The Pension Reform Act (PRA) 2004 made provision for contributions in the National
+                Provident Fund (NPF) and its successor scheme the National Social Insurance Trust Fund (NSITF) referred to
+                as the “old scheme” to be transferred into members’ Retirement Savings Accounts (RSAs).</p>
+                <p class="text-justify">Customers who were members of the “old scheme” are required by NSITF to update
+                their records on Trust fund’s website http://www.trustfundpensions.com. They are also required to submit
+                the following documents:</p>
+                <b>NSITF/NPF card</b> - Means of identification ( International Passport, Driver License, National ID and
+                Employer’s ID).<br>
+                <b>Completed NSITF Transfer Form</b> - NSITF (Trust Fund) statement of accounts/schedule for evidence of contribution.<br>
+                <b>Passport</b>. <br>
+                <p class="text-justify">In the event a customer does not have the original NSITF card or the organization no longer exists,
+                the required documents to submit include:</p>
+                1. A personal indemnity letter from the customer signed and stamped at the High court.<br>
+                2. Sworn affidavit for missing certificate with the registration number boldly written.<br>
+                3. NSITF Transfer form<br>
+                4. Means of identification ( International Passport, Driver License, National ID and Employer’s ID).<br>
+                5. NSITF (Trust fund) statement of accounts/evidence of contribution.<br>
+                6. Passport<br>
+                <i>NB:</i> But for organizations that still exist, the indemnity letter should be written on the organization’s letter headed paper.
+            </div>
+            <div class="hidden-sm-down col-md-4 col-lg-3 list-group" role="tablist">
+                <a href="#rsa" class="list-group-item active" data-toggle="tab" role="tab"><div class="list-item">Retirement Savings Account</div></a>
+                <a href="#avc" class="list-group-item" data-toggle="tab" role="tab"><div class="list-item">Additional Voluntary Contribution</div></a>
+                <a href="#mf" class="list-group-item" data-toggle="tab" role="tab"><div class="list-item">Managed Funds</div></a>
+                <a href="#cbs" class="list-group-item" data-toggle="tab" role="tab"><div class="list-item">Cross Border Services</div></a>
+                <a href="#nst" class="list-group-item" data-toggle="tab" role="tab"><div class="list-item">NSTIF</div></a>
+                <a href="#pms" class="list-group-item" data-toggle="tab" role="tab"><div class="list-item">Personal Messaging Services</div></a>
             </div>
         </div>
     </div>
+    <!-- Footer of page -->
     <footer class="container-fluid">
         <hr class="hr-red">
         <div class="row">
-            <div class="col col-sm-6 align-self-center newsHeader">
-                <h2>LATEST NEWS</h2>
+            <div class="col-12 col-md-6 align-self-center newsHeader">
+                <h1>LATEST NEWS</h1>
             </div>
-            <div class="col-xs-12 col-sm-6 newsFeed">
+            <div class="col-12 col-md-6 newsFeed">
                 <ul class="list-unstyled">
                     <li  class="media">
                         <img class="d-flex align-self-center mr-3" src="images/vas.png" height="50px" width="50px">
@@ -110,11 +196,11 @@
             </div>
         </div>
         <div class="row" style="margin-bottom: 10px">
-            <a class="col-md-6 btn-red" data-toggle="collapse" href="#sign" aria-expanded="false" aria-controls="sign">Sign-Up for News Letter</a>
-            <a class="col-md-6 btn-red" data-toggle="collapse" data-target="#feed" aria-expanded="false" aria-controls="feed">Give us your Feedback</a>
+            <a class="col-12 col-md-6 btn-red" data-toggle="collapse" href="#sign" aria-expanded="false" aria-controls="sign">Sign-Up for News Letter</a>
+            <a class="col-12 col-md-6 btn-red" data-toggle="collapse" data-target="#feed" aria-expanded="false" aria-controls="feed">Give us your Feedback</a>
         </div>
         <div class="row justify-content-around" style="margin-bottom: 10px">
-            <div class="col-md-4 collapse" id="sign">
+            <div class="col-12 col-md-4 collapse" id="sign">
                 <form>
                     <div class="form-group">
                         <input class="form-control form-control-sm" type="text" placeholder="E-mail Address" required>
@@ -122,7 +208,7 @@
                     <div align="center"><button type="button" class="btn btn-outline-red btn-sm">Sign Up</button></div>
                 </form>
             </div>
-            <div class="col-md-4 collapse" id="feed">
+            <div class="col-12 col-md-4 collapse" id="feed">
                 <form>
                     <div class="form-group">
                         <input class="form-control form-control-sm" type="text" placeholder="E-mail Address" required>
@@ -134,58 +220,63 @@
                 </form>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-3">
-                <h6> REGULATORY REQUIREMENTS </h6>
-                <p> Regulatory Information<br>
-                    Pension Reform Act <br>
-                    Whistle Blowing<br>
-                    Code of Ethics and Conduct<br>
-                    Retired and Terminal Benefits
-                </p>
+        <div class="row text-center">
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Regulatory Requirements</h6>
+                <nav class="nav flex-column">
+                    <a class="nav-link active" href="#">Regulatory Information</a>
+                    <a class="nav-link" href="#">Pension Reform Act</a>
+                    <a class="nav-link" href="#"> Whistle Blowing</a>
+                    <a class="nav-link" href="#">Code of Ethics and Conduct</a>
+                    <a class="nav-link" href="#">Retired and Terminal Benefits</a>
+                </nav>
             </div>
-            <div class="col-md-3">
-                <h6> QUICK LINKS </h6>
-                <p> Blog <br>
-                    Enroll Now<br>
-                    Benefits<br>
-                    Our Philosophy<br>
-                    Branch Network<br>
-                </p>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Quick Links</h6>
+                <nav class="nav flex-column">
+                    <a class="nav-link active" href="#">Blog</a>
+                    <a class="nav-link" href="#">Enroll Now</a>
+                    <a class="nav-link" href="#">Benefits</a>
+                    <a class="nav-link" href="#">Our Philosophy</a>
+                    <a class="nav-link" href="#">Branch Network</a>
+                </nav>
             </div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3">
-                <h6> LEADERBOARD </h6>
-                <table class="table table-striped">
+            <div class="col-12 col-md-6 col-lg-3 app">
+                <h6>Our Mobile App</h6>
+                <img src="images/hand.png">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6> Our Game Board</h6>
+                <table class="table table-striped text-left mx-auto">
                     <thead>
-                        <tr>
-                            <th> #</th>
-                            <th> Name </th>
-                            <th> Score </th>
-                        </tr>
+                    <tr>
+                        <th> #</th>
+                        <th> Name </th>
+                        <th> Score </th>
+                    </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th>1.</th>
-                            <td> Ayo Thomas </td>
-                            <td> 10,000 </td>
-                        </tr>
-                        <tr>
-                            <th>2.</th>
-                            <td> Kemi Juba </td>
-                            <td> 9,432 </td>
-                        </tr>
-                        <tr>
-                            <th>3.</th>
-                            <td> Chinenye Dike </td>
-                            <td> 9,010 </td>
-                        </tr>
+                    <tr>
+                        <th>1.</th>
+                        <td> Ayo Thomas </td>
+                        <td> 10,000 </td>
+                    </tr>
+                    <tr>
+                        <th>2.</th>
+                        <td> Kemi Juba </td>
+                        <td> 9,432 </td>
+                    </tr>
+                    <tr>
+                        <th>3.</th>
+                        <td> Chinenye Dike </td>
+                        <td> 9,010 </td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col-12">
                 <ul class="nav justify-content-center" style="margin-top: 15px">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Site Map</a>
@@ -202,10 +293,10 @@
                 </ul>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4 align-self-center"><img src="images/pencom.png" height="90" width="90" alt=""/></div>
-            <div class="col-md-4 align-self-center text-center">Copyright Leadway Pensure 2017</div>
-            <div class="col-md-4 align-self-center text-right">Web Design & Digital by iNspire</div>
+        <div class="row signature">
+            <div class="col-12 col-md-4 align-self-center text-center text-md-left"><img src="images/pencom.png" height="90" width="90" alt=""/></div>
+            <div class="col-12 col-md-4 align-self-center text-center">&copy; Leadway Pensure 2017</div>
+            <div class="col-12 col-md-4 align-self-center text-center text-md-right">Web Design & Digital by iNspire</div>
         </div>
     </footer>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
