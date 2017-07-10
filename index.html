@@ -31,15 +31,18 @@
 </head>
 <body>
     <!-- Mobile navigation -->
-    <nav class="m-style navbar fixed-top hidden-lg-up">
+    <nav class="m-style navbar fixed-top hidden-lg-up text-center">
         <div class="button_container" id="toggle">
             <span class="top"></span>
             <span class="middle"></span>
             <span class="bottom"></span>
         </div>
-        <a href="#" class="m-logo row navbar-brand" data-toggle="tooltip" title="Home" data-placement="bottom">
+        <a href="#" class="m-logo navbar-brand">
             <img src="images/logo-alt.png" class="img-responsive"  width="85" alt="">
         </a>
+        <form class="form-inline mob-search">
+            <input class="form-control" type="text" placeholder="Search">
+        </form>
         <div class="overlay text-center" id="overlay">
             <ul class="menu">
                 <li><a data-toggle="collapse" href="#lang" aria-expanded="false" aria-controls="lang">Select Language <i class="fa fa-chevron-down" aria-hidden="true"></i></a>

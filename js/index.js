@@ -41,5 +41,13 @@ $(document).ready(function(){
         }, 500);
     });
 
+    $('.mob-search input').blur(function() {
+        setTimeout(function(){
+        $('.m-logo').css('display','block')}, 500);
+    })
+    .focus(function() {
+        $('.m-logo').css('display','none');
+    });
+
     document.getElementById("date").innerHTML = moment().format("Do MMMM, YYYY.");
 });

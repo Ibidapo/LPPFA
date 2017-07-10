@@ -368,10 +368,27 @@ transition: opacity .25s ease;
 }
 a.m-logo{
 position: relative;
-left: 43%;
+left: 40%;
     width: 90px;
     padding: 0;
 }
+.mob-search input{
+    background: #ededed url("../images/search-bar.png") no-repeat right 7px center;
+    position: fixed;
+    top: 3%;
+    right: 4%;
+    border: solid 1px #ccc;
+    border-radius: 20px;
+    padding: 5px 23px 5px 15px;
+    width: 40px !important;
+    height: 40px;
+    transition: width .5s linear;
+}
+
+.mob-search input:focus {
+    width: calc(100% - 75px);
+}
+
 a.m-nav-color{
 color:white;
 }
@@ -413,6 +430,9 @@ color:white;
         height: 83px;
         background-color: #223e71;
     }
+    .mob-search input:focus {
+        width: calc(50% - 75px) !important;
+    }
 }
 @media(max-width:767px){
     .intro-box {
@@ -446,6 +466,9 @@ font-size: 10px;
     .solutions1 figure img{
         height: 80px;
     }
+    .mob-search input:focus {
+        width: calc(70% - 75px) !important;
+    }
 }
 @media(max-width:736px){
     h6.solutions, p.solutions{
@@ -471,6 +494,9 @@ top: 20px;
     }
     .solutions1 figure img {
         height: 64px;
+    }
+    .mob-search input:focus {
+        width: calc(100% - 75px) !important;
     }
 }
 @media(max-width:414px){
