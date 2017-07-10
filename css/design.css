@@ -4,25 +4,33 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif !important;
     font-weight: 400;
 }
 
 /*Styling default Bootstrap classes*/
+.container-fluid, .container{
+    overflow: hidden;
+}
+.container-fluid{
+    padding-bottom: 10px;
+}
+.container{
+    box-shadow: 3px 0 5px -2px rgba(41, 43, 44, 0.37), -3px 0 5px -2px rgba(41, 43, 44, 0.37);
+}
+#m-top{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 .media-body {
     color: grey !important;
 }
-.nav-link, .nav-link:hover, .nav-link:active, .nav-link:visited{
+footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-link:visited{
     color: grey;
     text-decoration: none;
     padding: .5em 2em;
 }
-.list-group{
-    padding: 0;
-}
-.list-group-item{
-    height: 17%;
-    width: 100%;
-}
+
 
 /*Styling for Buttons*/
 .btn-red, .btn-red:hover, .btn-red:active, .btn-purple {
@@ -35,7 +43,8 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid white;
     cursor: pointer;
 }
-.btn-outline-red, .btn-outline-purple, .btn-outline-loc, .btn-subc, .btn-purple, .btn-outline-white, .btn-outline-blue, .btn-outline-blue-sm{
+.btn-outline-red, .btn-outline-purple, .btn-outline-loc, .btn-subc, .btn-purple, .btn-outline-white, .btn-outline-white-sm,
+.btn-outline-blue, .btn-outline-blue-sm{
     -webkit-appearance: none !important;
     background-color: transparent;
     border-radius: 25px;
@@ -62,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5px 10px;
     box-shadow: none;
 }
-.btn-subc, .btn-purple, .btn-outline-white{
+.btn-subc, .btn-purple, .btn-outline-white, .btn-outline-white-sm{
     color: white !important;
 }
 .btn-subc{
@@ -79,7 +88,8 @@ h1, h2, h3, h4, h5, h6 {
 .btn-purple:hover{
     box-shadow: none;
 }
-.btn-outline-white, .btn-outline-white:hover, .btn-outline-white:active, .btn-outline-white:focus {
+.btn-outline-white, .btn-outline-white:hover, .btn-outline-white:active, .btn-outline-white:focus, .btn-outline-white-sm,
+.btn-outline-white-sm:hover, .btn-outline-white-sm:active{
     border: 2px solid white;
     font-size: 1rem;
     box-shadow: none;
@@ -92,13 +102,19 @@ h1, h2, h3, h4, h5, h6 {
 .btn-outline-blue-sm{
     font-size: 1rem;
 }
+.btn-outline-white-sm, .btn-outline-white-sm:hover, .btn-outline-white-sm:active{
+    font-size: 0.85rem;
+    box-shadow: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
 
 /*Styling for Body Section of Home page*/
 .landing {
     position: relative;
     height: 100vh;
 }
-div.scroll-btn{
+#scroll-btn{
     position: absolute;
     bottom: 40%;
     left: 50%;
@@ -109,11 +125,12 @@ div.scroll-btn{
     border: 2px solid #a890ba;
     border-radius: 50px;
     box-sizing: border-box;
+    cursor: pointer;
 }
-div.scroll-btn a {
+#scroll-btn div {
     padding-top: 70px;
 }
-div.scroll-btn a::before {
+#scroll-btn div::before {
     position: absolute;
     top: 20%;
     left: 53%;
@@ -125,7 +142,7 @@ div.scroll-btn a::before {
     border-radius: 50%;
     box-sizing: border-box;
 }
-div.scroll-btn a span {
+#scroll-btn div span {
     position: absolute;
     top: 90%;
     left: 50%;
@@ -182,7 +199,7 @@ div.scroll-btn a span {
     text-align: center;
 }
 .customer-txt, .customer-pic{
-    background-color: #e1e1e1;
+    background-color: #f7f7f9;
     color: #171616;
     height:280px;
     padding: 30px;
@@ -268,7 +285,7 @@ div.scroll-btn a span {
     font-size: 1.25rem;
     padding-bottom: 25px;
 }
-.benefit-txt h2, .benefit-txt h5{
+.benefit-txt h3, .benefit-txt h5{
     margin-top: 15%;
 }
 .benefit-txt p{
@@ -311,24 +328,22 @@ div.scroll-btn a span {
     position: relative;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    height: 400px;
     background: linear-gradient(to bottom, #2068a6 0%, #a5a8d9 100%);
     box-shadow: 0 -3px 9px -2px #464a4c, -5px -5px 8px -4px rgba(70, 74, 76, 0.15);
 }
-.s8-pic{
+#s8-pic{
     position: absolute;
-    width: 18%;
-    top: -20%;
+    width: 15%;
+    top: -15%;
     right: 7%;
 }
-.s8-pic img{
+#s8-pic img{
     object-fit: contain;
     width: 100%;
 }
 .s8-txt{
-    margin-top: 10%;
-    margin-left: 7%;
-    width: 63%;
+    margin: 10% auto 5% 7%;
+    width: 67%;
     color: white;
     font-size: 1.25rem;
     font-weight: 200;
@@ -346,6 +361,7 @@ div.scroll-btn a span {
 .reg-pic img{
     object-fit: contain;
     width: 100%;
+    border-bottom-left-radius: 40px;
 }
 .reg-txt{
     position: relative;
@@ -368,17 +384,21 @@ div.scroll-btn a span {
 /*Styling for Body Section of Product & Services page*/
 .prod-banner{
     padding: 0;
+    margin-top: 143px;
 }
 .prod-banner img{
     object-fit: contain;
-    width: 100%;
+    width: 101%;
 }
-.prod-txt{
+#rsa, #avc, #nst, #mf, #pms{
     background: url("../images/products-bg.jpg") no-repeat center;
     background-size: cover;
 }
-.prod-txt p{
+#rsa p, #avc p, #nst p, #mf p, #pms p{
     margin: 35px 20px;
+}
+#rsa p i, #avc p i, #nst p i, #mf p i{
+    font-weight: 500;
 }
 .info-icon{
     text-align: center;
@@ -386,18 +406,74 @@ div.scroll-btn a span {
     font-size: 13px;
 }
 .info-icon img{
-    height: 96px;
-    width: 96px;
+    height: 72px;
+    width: 72px;
 }
 .info-icon span{
     display: inline-block;
     width: 70%;
 }
-.list-item{
-    width: 100%;
+#prod-list {
+    padding: 0;
+    font-size: 0.85rem;
     text-align:center;
-    margin-right: auto!important;
-    margin-left: auto!important;
+    border-left: 1px solid #1f6aa4;
+    border-right: 1px solid #1f6aa4;
+    border-bottom: 1px solid #1f6aa4;
+    border-bottom-right-radius: 20px;
+}
+#prod-list li {
+    display: table;
+    height: 16.9%;
+    width: 101%;
+    border-bottom: 1px solid #1f6aa4;
+}
+#prod-list li:last-child{
+    border-bottom: none;
+}
+#prod-list li.show {
+    background-color: #1f6aa4;
+}
+#prod-list li a{
+     display: table-cell;
+     vertical-align: middle;
+     width: 100%;
+    color: #9a89b3;
+     padding: 0;
+     font-weight: 500;
+}
+#prod-list li.show a{
+    color: white;
+}
+.img-box {
+    position: relative;
+    width: 75%;
+}
+.img-box img{
+    width: 75%;
+}
+#sms-slide{
+    position: absolute;
+    top: 15.55%;
+    left: 17%;
+}
+#sms-slide .carousel-item{
+    background-color: white;
+    height: 357px;
+    width: 218px;
+}
+#sms-slide .carousel-control-prev {
+    left: -50px;
+}
+#sms-slide .carousel-control-next {
+    right: -50px;
+}
+#sms-slide .carousel-caption{
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+    color: #2466a2;
 }
 
 /* Styling for Body Section of Contact Us page */
@@ -408,6 +484,7 @@ div.scroll-btn a span {
     font-weight: 300;
     height: 100px;
     padding-top: 25px;
+    margin-top: 143px;
 }
 .contact-bg{
     padding: 0;
@@ -422,7 +499,6 @@ div.scroll-btn a span {
     width: 25%;
     top: 13%;
     right: 50%;
-    z-index: 1080;
     color: white;
     margin-right: 15px;
     font-size: 1.375rem;
@@ -474,27 +550,28 @@ div.scroll-btn a span {
 .location .nav-tabs .nav-item.show .nav-link, .location .nav-tabs .nav-link.active {
     background-color: transparent !important;
 }
-#accordion{
+/*Note:Accordion5 is for career page*/
+#accordion1, #accordion2, #accordion3, #accordion4, #acordion5{
     margin: 25px auto;
     width: 90%;
 }
-#accordion .card{
+#accordion1 .card, #accordion2 .card, #accordion3 .card, #accordion4 .card,  #accordion5 .card{
     background: transparent;
     margin: 10px auto;
     border: 2px solid #4c4648;
     border-radius: 25px;
 }
-#accordion .card .card-header{
+#accordion1 .card .card-header, #accordion2 .card .card-header, #accordion3 .card .card-header, #accordion4 .card .card-header, #accordion5 .card .card-header{
      background: transparent;
      border-bottom: none;
      text-align: center;
  }
-#accordion a{
+#accordion1 a, #accordion2 a, #accordion3 a, #accordion4 a, #accordion5 a {
     color: #4c4648;
     text-decoration: none;
 }
 .loc-add, .loc-person{
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 .loc-add span{
     position: absolute;
@@ -518,8 +595,192 @@ div.scroll-btn a span {
      margin-bottom: 15px
 }
 #west{
-    background:url("../images/egun.jpg") no-repeat center;
+    background: url("../images/egun.jpg") no-repeat center;
+}
+#east{
+    background: url("../images/igbo.jpg") no-repeat center;
+}
+#south{
+    background: url("../images/south-bg.jpg") no-repeat center;
+}
+#north{
+    background: url("../images/hausa.jpg") no-repeat center;
+}
+#west, #east, #south, #north{
     background-size: cover;
+}
+
+/*Styling for Body Section of Career Page*/
+.career-bg{
+    position: relative;
+    height: 550px;
+    background: url(../images/career-bg.jpg);
+    background-size: cover;
+    margin-top: 100px;
+    padding: 0;
+    color: white;
+}
+.bg-head{
+    position: absolute;
+    top: -55px;
+    height: 55px;
+    width: 300px;
+    border-top-right-radius: 25px;
+    background-color: rgba(255,255,255,.5);
+    text-align: center;
+    padding: 10px;
+}
+.bg-txt{
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(168, 144, 186, .8);
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+.bg-txt p{
+    width: 80%;
+    margin: 3% auto;
+}
+.bg-txt p a{
+    margin-top: 15px;
+}
+.career-tab{
+    background-color: #4b78af;
+    box-shadow: 0 5px 5px -5px #333;
+    z-index: 99;
+}
+.career-tab .nav-link {
+    color: white !important;
+    border: none;
+    padding: 1rem;
+    font-weight: 300;
+}
+.career-tab a.nav-link::before {
+    position: relative;
+    top: -16px;
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: white;
+    transition: width .3s;
+    margin: auto;
+}
+.career-tab a.nav-link.active::before, .career-tab a.nav-link:hover::before, .career-tab a.nav-link:focus::before {
+    width: 55%;
+}
+.career-tab .nav-tabs {
+    border-bottom: 0;
+}
+.career-tab .nav-tabs .nav-item.show .nav-link, .career-tab .nav-tabs .nav-link.active {
+    background-color: transparent !important;
+}
+#vac{
+    text-align: center;
+}
+#vac #accordion5 .card {
+    border: 2px solid #e2e2e0;
+    font-size: 0.85rem;
+}
+.vac-hd{
+    margin-top: 30px;
+    color: #4b78af;
+    font-weight: 300;
+}
+#vac #accordion5 h6{
+    color: #a990ba;
+}
+#cv, #alm{
+    height: 500px;
+}
+#cv{
+    background-color: #869791;
+}
+#alm{
+    background-color: #464a4c;
+}
+.hanger{
+    position: relative;
+    left: 15%;
+    width: 70%;
+    height: 50px;
+    border-left: 2px solid #c0d4ec;
+    border-right: 2px solid #c0d4ec;
+}
+.hanged{
+    position: relative;
+    width: 90%;
+    left: 5%;
+    box-shadow: 0 0 10px #333;
+}
+.sub-box, .pen-calc-bg{
+    position: relative;
+    color: white;
+    padding: 5%;
+    background-color: #c0d4ec;
+}
+.sub-box form{
+    position: relative;
+    left: 10%;
+    width: 80%;
+    margin-bottom: 10px;
+}
+.sub-box input{
+    border: 2px solid #e2e2e0;
+    border-radius: 25px;
+}
+.pen-calc-bg{
+    height: 300px;
+    background: url(../images/pen-calc.jpg);
+    background-size: cover;
+}
+.pen-calc{
+    position: absolute;
+    width: 90%;
+    bottom: 10%;
+}
+.career-cult-hd{
+    background-color: #52514f;
+    margin-top: 50px;
+}
+.career-cult-hd h3, .career-cult-hd h4{
+    color: white;
+    margin: 30px auto;
+    font-weight: 300;
+}
+.career-cult-box h3{
+    font-weight: 300;
+}
+.cult-box1, .cult-box2, .cult-box3, .cult-box4, .cult-box5, .cult-box6{
+    display: table;
+    height: 240px;
+}
+.career-cult-box p, .career-cult-box h3{
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+}
+.cult-box1{
+    background-color: #a890ba;
+}
+.cult-box2{
+    background: url(../images/hangout.jpg) no-repeat center center;
+    background-size: cover;
+}
+.cult-box3{
+    background: url(../images/class.jpg) no-repeat center center;
+    background-size: cover;
+}
+.cult-box4{
+    background: url(../images/sheet.jpg) no-repeat center center;
+    background-size: cover;
+}
+.cult-box5{
+    background: url(../images/crayon.jpg) no-repeat center center;
+    background-size: cover;
+}
+.cult-box6{
+    background-color: #c0d4ec;
 }
 
 /*Styling for Footer Section*/
@@ -538,7 +799,7 @@ div.scroll-btn a span {
     text-align: center;
 }
 .newsHeader h1{
-    font-weight: 200;
+    font-weight: 300 !important;
 }
 .newsFeed {
     font-weight: 300;
@@ -562,7 +823,7 @@ div.scroll-btn a span {
     -webkit-user-select: none
 }
 .newsFeed ul:hover { animation-play-state: paused }
-form{
+footer form{
     margin: 10px 0;
 }
 footer .nav .nav-link{
@@ -574,7 +835,8 @@ footer h6{
     color: #838080;
     margin-top: 25px;
 }
-footer table{
+footer .table td, .table th {
+    padding: 4px;
     font-size: 0.85rem;
 }
 .signature{
@@ -584,7 +846,45 @@ footer table{
 }
 .app img{
     object-fit: contain;
-    width: 65%;
+    width: 155px;
+}
+#back-top, #share, #print{
+    position: fixed;
+    display: none;
+    right: 30px;
+    background-color: #a890ba;
+    color: white;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 4px 5px -1px rgba(0,0,0,0.5);
+    cursor: pointer;
+    z-index: 999;
+}
+#back-top:hover, #share:hover, #print:hover{
+    box-shadow: 0 2px 2px -1px rgba(0,0,0,0.5);
+}
+#back-top{
+    bottom: 20px;
+}
+#print{
+    bottom: 70px;
+}
+#share{
+    bottom: 120px;
+}
+
+/*Styling for Font Awesome Icons*/
+.fa-chevron-left:before, .fa-chevron-right:before{
+    color: black;
+}
+.solutions .fa-chevron-right:before {
+    color: #1f69a5;
+    font-weight: 100;
+    font-size: smaller;
 }
 
 /*Styling from Integration*/
@@ -615,8 +915,32 @@ footer table{
     #customer-slide {
         top: -30%;
     }
+    .invest-bg{
+        height: 350px;
+    }
+    .invest-txt blockquote {
+        font-size: 1.65rem;
+    }
+    .invest-txt {
+        font-size: 1.25rem;
+    }
     .culture-pic {
         top: -15%;
+    }
+}
+
+/*Styling for Ipad Pro*/
+@media (max-width: 1100px) and (min-height: 1365px) {
+    .landing {
+        height: 65vh;
+    }
+    #slider, #slider .carousel-item {
+        height: 50vh;
+        padding: 0;
+        overflow: hidden;
+    }
+    #slider-icon{
+        margin-top: 0;
     }
 }
 
@@ -640,46 +964,38 @@ footer table{
     .culture{
         height: 330px;
     }
-    .call-s8 {
-        height: 350px;
-    }
     .s8-txt{
         font-size: 1rem;
+    }
+    #s8-pic {
+        top: -10%;
     }
     .reg-txt {
         font-size: 1.5rem;
     }
 }
 
-@media(max-width: 1024px) and (max-height: 768px ){
-    .landing {
-        height: auto;
-        margin-bottom: 35px;
-    }
-    #slider, #slider .carousel-item{
-        height: 65vh;
-    }
-    nav.style3 {
-        top: 57vh;
-    }
-    #slider-icon {
-        height: 12vh;
-        overflow: visible;
-    }
-    div.scroll-btn {
-        bottom: 30%;
-    }
-}
-
+/*Styling for Tablets*/
 @media (max-width: 991px) {
+
+    /*Global Styling*/
+    #m-top{
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 
     /*Styling Body of Home page*/
     .landing {
-        height: auto;
+        height: unset;
         margin-bottom: 35px;
     }
     #slider{
         margin-top: 83px;
+    }
+    #slider, #slider .carousel-item {
+        height: 40vh;
+        padding: 0;
+        overflow: hidden;
     }
     .customer-intro {
         width: 41.6667%;
@@ -699,15 +1015,15 @@ footer table{
         margin: 15% 10px 0 10px;
     }
     .invest-bg{
-        height: 330px;
+        height: 310px;
     }
     .invest-txt {
         width: 50%;
-        font-size: 1rem;
+        font-size: 1.125rem;
         font-weight: 400;
     }
     .invest-txt blockquote {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         margin-top: 5%;
     }
     .benefit-txt{
@@ -732,7 +1048,6 @@ footer table{
     .call-s8{
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        height: 220px;
     }
     .s8-txt{
         margin-top: 5%;
@@ -740,7 +1055,7 @@ footer table{
         width: 75%;
         font-size: 0.85rem;
     }
-    .s8-pic{
+    #s8-pic{
         position: absolute;
         width: 15%;
         top: -20%;
@@ -762,15 +1077,22 @@ footer table{
     }
 
     /*Styling for Products and Services*/
-    .list-group{
-        font-size: 0.85rem;
+    .prod-banner{
+        margin-top: 0;
+    }
+    .m-prod-list {
+        margin-top: 83px;
+    }
+    #prod-list{
+        font-size: 0.75rem;
+        border-bottom-right-radius: 0;
     }
     .info-icon img{
-        height: 72px;
-        width: 72px;
+        height: 58px;
+        width: 58px;
     }
     .info-icon span {
-        width: 100%;
+        width: 90%;
     }
 
     /*Styling for Contact page*/
@@ -778,6 +1100,7 @@ footer table{
         font-size: 1.5rem;
         height: 75px;
         padding-top: 15px;
+        margin-top: 83px;
     }
     .contact-bg img {
         height: 260px;
@@ -790,10 +1113,26 @@ footer table{
         height: 260px;
         font-size: 1rem;
     }
+    .contact-txt, .h-office {
+        font-weight: 300;
+    }
+
+    /*Styling for Career Page*/
+    .career-bg {
+        margin-top: 83px;
+        height: 450px;
+    }
+    .bg-txt{
+        font-size: 1rem;
+    }
+    .cult-box1, .cult-box2, .cult-box3, .cult-box4, .cult-box5, .cult-box6 {
+        font-size: 0.875rem;
+        height: 200px;
+    }
 
     /*Styling Button*/
     .btn-outline-white, .btn-outline-white:hover, .btn-outline-white:active, .btn-outline-white:focus, .btn-outline-red,
-    .btn-outline-purple, .btn-outline-loc, .btn-subc, .btn-purple, .btn-outline-blue, .btn-outline-blue-sm {
+    .btn-outline-purple, .btn-outline-purple:hover, .btn-outline-loc, .btn-subc, .btn-purple, .btn-outline-blue, .btn-outline-blue-sm {
         font-size: 0.85rem;
     }
 
@@ -817,6 +1156,7 @@ footer table{
     }
 }
 
+/*Styling for Landscape Phones*/
 @media (max-width: 767px){
 
     /*Styling for HomePage*/
@@ -834,7 +1174,7 @@ footer table{
         margin-left: 33%;
     }
     .carousel-inner .card{
-        background-color: #e1e1e1;
+        background-color: #f7f7f9;
         border: none;
     }
     .vids-txt {
@@ -842,6 +1182,12 @@ footer table{
     }
     .invest-bg {
         background-size: cover;
+    }
+    .invest-txt {
+        width: 55%;
+    }
+    .invest-txt blockquote {
+        font-size: 1.375rem;
     }
     .benefit-txt h5 {
         margin-top: 5%;
@@ -875,14 +1221,24 @@ footer table{
         margin-top: 10%;
         width: 100%;
     }
-    .call-s8{
-        height: auto;
-    }
     .s8-txt{
         margin: 0;
         padding: 50px 25px;
         height: auto;
         width: 100%;
+    }
+
+    /*Styling for Products and Services*/
+    .m-prod-list {
+        background-color: #e1e1e1;
+    }
+    .m-prod-list form{
+        width: 60%;
+    }
+    .m-prod-list label{
+        margin-top: 15px;
+       font-size: 20px;
+        font-weight: 400;
     }
 
     /*Styling for Contact Page*/
@@ -896,7 +1252,22 @@ footer table{
         right: 0;
         top: 5%;
         font-size: 1.375rem;
+    }
+    .h-office, .contact-txt {
         font-weight: 300;
+    }
+
+    /*Styling for Career page*/
+    .hanger {
+        width: 40%;
+        left: 30%;
+    }
+    .hanged {
+        width: 60%;
+        left: 20%;
+    }
+    .pen-calc-bg {
+        height: 250px;
     }
 
     /*Styling for Button*/
@@ -905,13 +1276,14 @@ footer table{
     }
 }
 
+/*Styling for Portrait Phones*/
 @media (max-width: 575px) {
 
     /*Styling for Home page*/
     .customer-intro {
         top: -59px;
-        width: 100%;
-        margin-left: 0;
+        width: 95%;
+        right: 2.5%;
         font-weight: 500;
         font-size: 1.25rem;
         box-shadow: -1px -1px 6px rgba(70, 74, 76, 0.332);
@@ -927,7 +1299,7 @@ footer table{
     .carousel-control-next, .carousel-control-prev{
         bottom: 50%;
     }
-    .card-block {
+    .carousel-item .card-block {
         padding: 1.25rem 0;
     }
     .invest-bg{
@@ -936,6 +1308,7 @@ footer table{
     .invest-txt{
         width: 100%;
         font-size: 1.25rem;
+        text-align: center;
     }
     .invest-txt blockquote {
         font-size: 1.25rem;
@@ -966,8 +1339,9 @@ footer table{
         height: 250px;
     }
     .contact-txt {
-        width: 80%;
+        width: 70%;
         margin-right: 5%;
+        font-size: 1rem;
     }
     .h-office {
         height: 250px;
@@ -976,8 +1350,54 @@ footer table{
     .divide {
         height: 15px;
     }
-    #accordion {
+    #accordion1, #accordion2, #accordion3, #accordion4, #accordion5 {
         width: 100%;
+    }
+
+    /*Styling for Career*/
+    .career-bg {
+        height: 400px;
+        background: url(../images/career-bg-mob.jpg) no-repeat;
+        background-size: cover;
+    }
+    .bg-head {
+        top: -50px;
+        height: 50px;
+        width: 60%;
+        left: 20%;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+    }
+    .bg-txt {
+        font-size: 0.875rem;
+    }
+    .bg-txt p {
+        width: 90%;
+        margin: 5%;
+        text-align: center;
+    }
+    .hanger {
+        width: 70%;
+        left: 15%;
+    }
+    .hanged {
+        width: 90%;
+        left: 5%;
+    }
+    .sub-box, .pen-calc-bg {
+        font-size: 0.85rem;
+    }
+    .cult-box1, .cult-box2, .cult-box3, .cult-box4, .cult-box5, .cult-box6 {
+        height: 180px;
+    }
+    .career-cult-box p{
+        width: 80%;
+    }
+
+    /*Styling for Products and Styling*/
+    .m-prod-list form{
+        margin-left: 0;
+        width: 80%;
     }
 
     /*Styling for footer*/
@@ -1008,5 +1428,4 @@ footer table{
         color: white;
         font-weight: 500;
     }
-
 }

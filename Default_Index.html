@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Leadway Pensure PFA | Products and Services</title>
+    <title>Default Page</title>
+    <!-- Hotjar Tracking Code for lppfa.inspireleadership.biz -->
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,6 +10,8 @@
     <!-- Bootstrap and Custom CSS files-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/docs.css">
     <link rel="stylesheet" href="css/design.css">
     <!--Google Fonts and Fonts Awesome links -->
@@ -27,9 +30,37 @@
         <a href="#" class="m-logo row navbar-brand" data-toggle="tooltip" title="Home" data-placement="bottom">
             <img src="images/logo-alt.png" class="img-responsive"  width="85" alt="">
         </a>
+        <div class="overlay text-center" id="overlay">
+            <ul class="menu">
+                <li><a data-toggle="collapse" href="#lang" aria-expanded="false" aria-controls="lang">Select Language <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                    <ul class="sub-menu collapse" id="lang">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Yoruba</a></li>
+                        <li><a href="#">Igbo</a></li>
+                        <li><a href="#">Hausa</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Our Company</a></li>
+                <li><a data-toggle="collapse" href="#prod" aria-expanded="false" aria-controls="prod">Products & Services <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                    <ul class="sub-menu collapse" id="prod">
+                        <li><a href="#">Retire Savings Account</a></li>
+                        <li><a href="#">Additional Voluntary Contribution</a></li>
+                        <li><a href="#">Managed Funds</a></li>
+                        <li><a href="#">Cross-Border Services</a></li>
+                        <li><a href="#">NSITF</a></li>
+                        <li><a href="#">SMS Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Benefits</a></li>
+                <li><a href="#">Investment</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
     </nav>
     <!-- Desktop navigation -->
-    <nav class="navbar fixed-top hidden-md-down pOff">
+    <nav class="navbar hidden-md-down pOff">
         <!-- desktop price charts start -->
         <table class="table table-responsive mOff">
             <tbody>
@@ -137,201 +168,7 @@
         </div>
     </nav>
     <!-- Body and Main Content of page -->
-    <div class="container" id="m-top">
-        <div class="row">
-            <div class="hidden-md-up col-12 m-prod-list">
-                <form class="mx-auto">
-                    <div class="form-group text-center">
-                        <label for="prod">Our Services</label>
-                        <select class="form-control" id="prod" onchange="myProduct()" data-aos="fade">
-                            <option>Retirement Savings Account</option>
-                            <option>Additional Voluntary Contribution</option>
-                            <option>Managed Funds</option>
-                            <option class="disabled">Cross Border Services</option>
-                            <option>NSTIF</option>
-                            <option>Personal Messaging Services</option>
-                        </select>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 prod-banner">
-                <img src="images/pba.png">
-            </div>
-        </div>
-        <div class="row tab-content">
-            <div class="col-12 col-md-9 fade show tab-pane active" role="tabpanel" id="rsa">
-                <p class="text-justify"> The Retirement Savings Account was initiated by the Federal Government under the
-                Pensions Reform Act 2004 and is used to set aside money towards an individual’s retirement. The new pension
-                Reform Act 2014 requires the employer and employee to contribute a minimum total of 18% of the employee’s
-                monthly emoluments (basic salary, housing and transport) to a Retirement Savings Account (RSA) which will be
-                managed by a private sector Pension Fund Administrator (PFA).</p>
-                <h4 class="hidden-sm-down text-center">Your new RSA account starts here</h4>
-                <h5 class="hidden-md-up text-center">Your new RSA account starts here</h5>
-                <div class="row">
-                    <div class="col-12 col-md-4 info-icon">
-                        <img class="img-fluid" src="images/form.png"><br><br>
-                        <span>Click to Enroll now</span>
-                    </div>
-                    <div class="col-12 col-md-4 info-icon">
-                        <img class="img-fluid" src="images/phone.png"><br><br>
-                        <span>Wait for SMS Notification on account registration</span>
-                    </div>
-                    <div class="col-12 col-md-4 info-icon">
-                        <img class="img-fluid" src="images/diploma.png"><br><br>
-                        <span>Receive membership certificate via mail</span>
-                    </div>
-                    <div class="col-12 col-md-4 info-icon">
-                        <img class="img-fluid" src="images/talk.png"><br><br>
-                        <span>Inform Employer / HR on registration status</span>
-                    </div>
-                    <div class="col-12 col-md-4 info-icon">
-                        <img class="img-fluid" src="images/cloud.png"><br><br>
-                        <span>Login online here</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-9 fade tab-pane" role="tabpanel" id="avc">
-                <p class="text-justify"> Additional Voluntary Contributions (AVC) is the discretionary contribution made
-                above the mandatory 18% employer and employee contributions into an individual’s Retirement Savings
-                Account (RSA) and cannot be more than 100% percentage of your emolument. You also have the benefit of
-                accessing your AVC any time before retirement. However, enjoying a TAX FREE withdrawal applies only after
-                FIVE YEARS of making contributions!</p>
-                <h4 class="hidden-sm-down text-center">Your new AVC account starts here</h4>
-                <h5 class="hidden-md-up text-center">Your new AVC account starts here</h5>
-                <div class="row">
-                    <div class="col-12 col-md-4 info-icon">
-                        <img class="img-fluid" src="images/form.png"><br><br>
-                        <span>Click to Enroll now</span>
-                    </div>
-                    <div class="col-12 col-md-4 info-icon">
-                        <img class="img-fluid" src="images/phone.png"><br><br>
-                        <span>Wait for SMS Notification on account registration</span>
-                    </div>
-                    <div class="col-12 col-md-4 info-icon">
-                        <img class="img-fluid" src="images/diploma.png"><br><br>
-                        <span>Receive membership certificate via mail</span>
-                    </div>
-                    <div class="col-12 col-md-4 info-icon">
-                        <img class="img-fluid" src="images/talk.png"><br><br>
-                        <span>Inform Employer / HR on registration status</span>
-                    </div>
-                    <div class="col-12 col-md-4 info-icon">
-                        <img class="img-fluid" src="images/cloud.png"><br><br>
-                        <span>Login online here</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-9 fade tab-pane" role="tabpanel" id="mf">
-                <p class="text-justify">As a Pension Fund Administrator, our unique responsibilities include management
-                of Gratuity scheme, Legacy funds and other managed funds with tailored deliverables and value taken into
-                consideration.</p>
-
-                <p class="text-justify"><i>Gratuity Funds</i><br> Gratuity Funds are lump sum amounts that employers give
-                to their employees on leaving the organization as a way of rewarding them for their past service. This cash
-                reward is called “Gratuity”. The amount paid to the employee is normally based on the number of years of service
-                he/she worked for the organization. Please note that Gratuity Funds are separate from the normal RSA Fund or Lump
-                Sum payment made at retirement.</p>
-
-                <p class="text-justify"><i>Legacy Funds</i><br> Legacy Funds are pre-scheme funds (i.e. funds up to December 2004)
-                which were privately invested by an organization for or its authorized agents on behalf of its workers before the
-                Pension Reform Act 2004. They are usually treated as separate funds from the normal mandatory contributions.</p>
-            </div>
-            <div class="col-12 col-md-9 fade tab-pane" role="tabpanel" id="nst">
-                <p class="text-justify">The Pension Reform Act (PRA) 2004 made provision for contributions in the National
-                Provident Fund (NPF) and its successor scheme the National Social Insurance Trust Fund (NSITF) referred to
-                as the “old scheme” to be transferred into members’ Retirement Savings Accounts (RSAs).</p>
-                <p class="text-justify">Customers who were members of the “old scheme” are required by NSITF to update
-                their records on <a href="https://www.trustfundpensions.com">Trust fund’s website</a>. They are also required
-                to submit the following documents:<br>
-                1. <i>NSITF/NPF Card</i> - Means of identification (International Passport, Driver License, National ID and
-                Employer’s ID).<br>
-                2. <i>Completed NSITF Transfer Form</i> - NSITF (Trust Fund) statement of accounts/schedule for evidence of contribution.<br>
-                3. <i>Passport</i>.</p>
-                <p class="text-justify">In the event a customer does not have the original NSITF card or the organization no longer exists,
-                the required documents to submit include:<br>
-                1. A personal indemnity letter from the customer signed and stamped at the High court.<br>
-                2. Sworn affidavit for missing certificate with the registration number boldly written.<br>
-                3. NSITF Transfer form<br>
-                4. Means of identification ( International Passport, Driver License, National ID and Employer’s ID).<br>
-                5. NSITF (Trust fund) statement of accounts/evidence of contribution.<br>
-                6. Passport<br>
-                <i>NB:</i> For organizations that still exist, the indemnity letter should be written on the organization’s letter headed paper.</p>
-            </div>
-            <div class="col-12 col-md-9 fade tab-pane" role="tabpanel" id="pms">
-                <p>The SMS Request Service will enable customers send in requests via SMS and receive feedback on the
-                Phone number registered on our database.</p>
-                <h4 class="hidden-sm-down text-center">Our SMS Request services</h4>
-                <h5 class="hidden-md-up text-center">Our SMS Request services</h5>
-                <div class="row">
-                    <div class="col-md-6">
-
-                    </div>
-                    <div class="col-md-6 text-center">
-                        <div class="img-box mx-auto">
-                            <img class="img-fluid" src="images/slider-phone.png">
-                            <!--<div id="sms-slide" class="carousel slide" data-ride="carousel" data-aos="fade">
-                            <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item active" id="1">
-                                    <div class="carousel-caption d-md-block">
-                                        <h3>Balance Enquiry</h3>
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item" id="2">
-                                    <div class="carousel-caption d-md-block">
-                                        <h3>Statement Enquiry</h3>
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item" id="3">
-                                    <div class="carousel-caption d-md-block">
-                                        <h3>Get PIN</h3>
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item" id="4">
-                                    <div class="carousel-caption d-md-block">
-                                        <h3>HELP</h3>
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#sms-slide" role="button" data-slide="prev">
-                                <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#sms-slide" role="button" data-slide="next">
-                                <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <ul class="hidden-sm-down col-md-3 nav flex-column" role="tablist" id="prod-list">
-                <li class="nav-item show">
-                    <a class="nav-link active" data-toggle="tab" href="#rsa" role="tab">Retirement Savings Account</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#avc" role="tab"><div>Additional Voluntary Contribution</div></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#mf" role="tab">Managed Funds</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#cbs" role="tab">Cross Border Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#nst" role="tab">NSTIF</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#pms" role="tab">Personal Messaging Services</a>
-                </li>
-            </ul>
-        </div>
+    <div class="container-fluid">
     </div>
     <!-- Footer of page -->
     <footer class="container-fluid">
@@ -470,96 +307,7 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/595a40d350fd5105d0c83b06/default';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
     <script src="js/index.js"></script>
-    <script>
-        $(document).ready(function() {
-
-            $('#prod-list a:first').tab('show'); // Select first tab
-            $('#prod-list a[href="'+ window.location.hash+ '"]').tab('show'); // Select tab by name if provided in location hash
-
-            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                window.scrollTo(0,0);
-                e.preventDefault();
-                e.stopPropagation();
-                $(this).closest('ul').find('.show').removeClass('show');
-                $(this).parent().addClass('show');
-            });
-
-            function myProduct() {
-                var x = document.getElementById("prod");
-                var i = x.selectedIndex;
-
-                if(i == 0){
-                    $('#prod-list a[href="#rsa"]').tab('show');
-                }else if(i == 1){
-                    $('#prod-list a[href="#avc"]').tab('show');
-                }else if(i == 2){
-                    $('#prod-list a[href="#mf"]').tab('show');
-                }else if(i == 4){
-                    $('#prod-list a[href="#nst"]').tab('show');
-                }else if(i == 5) {
-                    $('#prod-list a[href="#pms"]').tab('show');
-                }
-            }
-
-            $(".dropdown-menu.ps a:first-child").click(function(){
-                $('#prod-list a[href="#rsa"]').tab('show');
-                $('body,html').animate({
-                    scrollTop : 0
-                }, 800);
-            });
-
-            $(".dropdown-menu.ps a:nth-child(2)").click(function(){
-                $('#prod-list a[href="#avc"]').tab('show');
-                $('body,html').animate({
-                    scrollTop : 0
-                }, 800);
-            });
-
-            $(".dropdown-menu.ps a:nth-child(4)").click(function(){
-                $('#prod-list a[href="#mf"]').tab('show');
-                $('body,html').animate({
-                    scrollTop : 0
-                }, 800);
-            });
-
-            $(".dropdown-menu.ps a:nth-child(5)").click(function(){
-                $('#prod-list a[href="#nst"]').tab('show');
-                $('body,html').animate({
-                    scrollTop : 0
-                }, 800);
-            });
-
-            $(".dropdown-menu.ps a:nth-child(6)").click(function(){
-                $('#prod-list a[href="#pms"]').tab('show');
-                $('body,html').animate({
-                    scrollTop : 0
-                }, 800);
-            });
-
-            //Resize container based on desktop or mobile viewport.
-            var size = screen.width;
-            if (size <= 991) {
-                document.getElementById("m-top").setAttribute("class", "container-fluid");
-            } else {
-                document.getElementById("m-top").setAttribute("class", "container");
-            }
-        });
-    </script>
 </body>
 </html>
