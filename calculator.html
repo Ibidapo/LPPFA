@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Leadway Pensure PFA | Calculator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Register with the leading pensions company in Nigeria. Open an RSA account right now to get started">
+    <!-- Bootstrap and Custom CSS files-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/docs.css">
+    <link rel="stylesheet" href="css/design.css">
+    <!--Google Fonts and Fonts Awesome links -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Hotjar Tracking Code for lppfa.inspireleadership.biz -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:536413,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+</head>
+<body>
+    <!-- Mobile navigation -->
+    <nav class="m-style navbar fixed-top hidden-lg-up">
+        <div class="button_container" id="toggle">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+        </div>
+        <a href="#" class="m-logo navbar-brand">
+            <img src="images/logo-alt.png" class="img-responsive"  width="85" alt="">
+        </a>
+        <form class="form-inline mob-search">
+            <input class="form-control" type="text" placeholder="Search">
+        </form>
+        <div class="overlay text-center" id="overlay">
+            <ul class="menu">
+                <li><a data-toggle="collapse" href="#log" aria-expanded="false" aria-controls="log">Login <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                    <ul class="sub-menu collapse" id="log">
+                        <li><a href="#">Client login</a></li>
+                        <li><a href="#">Employer login</a></li>
+                    </ul>
+                </li>
+                <li><a href="company.html">Our Company</a></li>
+                <li><a href="services.html">Products & Services</a></li>
+                <li><a href="benefits.html">Benefits</a></li>
+                <li><a href="investment.html">Investments</a></li>
+                <li><a href="career.html">Careers</a></li>
+                <li><a href="#">Media</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a data-toggle="collapse" href="#lang" aria-expanded="false" aria-controls="lang">Select Language <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                    <ul class="sub-menu collapse" id="lang">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Yoruba</a></li>
+                        <li><a href="#">Igbo</a></li>
+                        <li><a href="#">Hausa</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Desktop navigation -->
+    <nav class="navbar fixed-top hidden-md-down pOff">
+        <!-- desktop price charts start -->
+        <table class="table table-responsive mOff">
+            <tbody>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <select class="form-control language">
+                            <option>English</option>
+                            <option>Yoruba</option>
+                            <option>Hausa</option>
+                            <option>Igbo</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i> 0800-Pesnure</span>
+                </td>
+                <td>
+                    <span class="head-td"> RSA FUNDS</span><br>
+                    <span>&#8358;2.3433 <img src="images/pos.png" alt=""></span>
+                </td>
+                <td>
+                    <span class="head-td">RETIREE FUNDS</span><br>
+                    <span> &#8358;2.3433 <img src="images/neg.png" alt=""></span>
+                </td>
+                <td>
+                    <span class="head-td">RSA ACCOUNTS </span><br>
+                    <span> 500,000 </span>
+                </td>
+                <td>
+                    <a href="calculator.html" class="nav-calc"> <img src="images/calc.png"> <span>Calculator</span></a>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS </button>
+                </td>
+                <td>
+                    <span id="date"></span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <!-- Navbar -->
+        <div class="navStyle2">
+            <ul class="nav nav-fill mr-auto">
+                <form class="form-inline search">
+                    <input class="form-control" type="text" placeholder="Search">
+                </form>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="javascript:" id="ps" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products & Services</a>
+                    <div class="dropdown-menu ps" aria-labelledby="ps">
+                        <a class="dropdown-item" href="services.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Retirement Savings Account</a>
+                        <a class="dropdown-item" href="services.html#avc"><i class="fa fa-chevron-right" aria-hidden="true"></i> Additional Voluntary Contribution</a>
+                        <a class="dropdown-item" href="services.html#cbs"><i class="fa fa-chevron-right" aria-hidden="true"></i> Cross-Border Services</a>
+                        <a class="dropdown-item" href="services.html#mf"><i class="fa fa-chevron-right" aria-hidden="true"></i> Managed Funds</a>
+                        <a class="dropdown-item" href="services.html#nst"><i class="fa fa-chevron-right" aria-hidden="true"></i> NSITF</a>
+                        <a class="dropdown-item" href="services.html#pms"><i class="fa fa-chevron-right" aria-hidden="true"></i> SMS Services</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="company.html" id="oc" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Company</a>
+                    <div class="dropdown-menu oc" aria-labelledby="oc">
+                        <a class="dropdown-item" href="company.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Meet Leadway Pensure</a>
+                        <a class="dropdown-item" href="company.html#lead"><i class="fa fa-chevron-right" aria-hidden="true"></i> Leadership</a>
+                        <a class="dropdown-item" href="company.html#f-rep"><i class="fa fa-chevron-right" aria-hidden="true"></i> Financial Reports</a>
+                        <a class="dropdown-item" href="company.html#csr"><i class="fa fa-chevron-right" aria-hidden="true"></i> C.S.R</a>
+                        <a class="dropdown-item" href="career.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Careers</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="javascript:" id="in" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Investments</a>
+                    <div class="dropdown-menu in" aria-labelledby="in">
+                        <a class="dropdown-item" href="investment.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Financial Markets</a>
+                        <a class="dropdown-item" href="investment.html#w-plan"><i class="fa fa-chevron-right" aria-hidden="true"></i> Wealth Planning</a>
+                        <a class="dropdown-item" href="investment.html#r-plan"><i class="fa fa-chevron-right" aria-hidden="true"></i> Retirement Planning</a>
+                        <a class="dropdown-item" href="investment.html#p-fund"><i class="fa fa-chevron-right" aria-hidden="true"></i> Performance Fund</a>
+                        <a class="dropdown-item" href="investment.html#pod"><i class="fa fa-chevron-right" aria-hidden="true"></i> Podcast</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="bnf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Benefits</a>
+                    <div class="dropdown-menu bnf" aria-labelledby="bnf">
+                        <a class="dropdown-item" href="benefits.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> About to Retire?</a>
+                        <a class="dropdown-item" href="benefits.html#pay-grnd"><i class="fa fa-chevron-right" aria-hidden="true"></i> Grounds to Retirement</a>
+                        <a class="dropdown-item" href="benefits.html#pay-type"><i class="fa fa-chevron-right" aria-hidden="true"></i> Payment Types</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media</a>
+                    <div class="dropdown-menu dropdown-menu-right md" aria-labelledby="md">
+                        <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> News & Events</a>
+                        <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Calender</a>
+                        <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Gallery</a>
+                        <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Social</a>
+                        <a class="dropdown-item" href="downloads.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Downloads</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="javascript:" id="co" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Us</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="co">
+                        <a class="dropdown-item" href="contact.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Branch Network</a>
+                        <a class="dropdown-item" href="faq.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> FAQs</a>
+                    </div>
+                </li>
+                <a class="navbar-brand" href="index.html"><img class="logo" src="images/logo.png" alt="Leadway Logo"></a>
+            </ul>
+        </div>
+    </nav>
+    <!-- Body of Disclaimer  -->
+    <div class="container-fluid" id="disclaim-overlay">
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 text-center">
+                <h4 class="hidden-sm-down">COMPOUND INTEREST CALCULATOR</h4>
+                <h5 class="hidden-md-up">COMPOUND INTEREST CALCULATOR</h5>
+                <p>Use our compound interest calculator to plan your resources over time.</p>
+                <ul style="list-style-type: none">
+                    <li>Input values to activate dynamic graph <img src="images/calc-list1.png"/></li>
+                    <li>Review graphs to analyze wealth valuation <img src="images/calc-list2.png"/></li>
+                    <li>Enroll for Pension Plan immediately <img src="images/calc-list3.png"/></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 text-center">
+                <h4 class="hidden-sm-down">DISCLAIMER</h4>
+                <h5 class="hidden-md-up">DISCLAIMER</h5>
+                <p>The Calculator on this page is indicating and strictly for information purposes. Leadway Pensure PFA's obligations
+                with respect to its services on this page are governed solely by the agreements under which they are provided and
+                nothing hereof should be construed to alter such 'Service' agreements".</p>
+                <div><a href="#" class="btn btn-outline-white" id="agree">I agree</a>
+                    <a href="index.html" class="btn btn-outline-white">I do not agree</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Body of Calculator Page -->
+    <div class="container" id="calc-page">
+        <div class="row" style="margin-top: 1rem">
+            <div class="hidden-sm-down col-12 text-center"><h3>LEADWAY CALCULATOR</h3></div>
+            <div class="hidden-md-up col-12 text-center"><h5>LEADWAY CALCULATOR</h5></div>
+            <div class="col-12" style="position: relative">
+                <a class="btn btn-outline-blue-sm hidden-sm-down d-claim" data-toggle="collapse" href="#d-claim" aria-expanded="false" aria-controls="d-claim">Disclaimer</a>
+                <div class="collapse" id="d-claim">
+                    <div class="row" style="margin-top: 1rem">
+                        <div class="col-md-6" style="border-right: 1px solid">
+                            <p class="text-center">This is a Pension projection calculator that would help you to know:</p>
+                            <ol>
+                                <li>How much you need to contribute to get your desired pension and;</li>
+                                <li>Based on your current contributions, how much will you be getting when you are retired.</li>
+                            </ol>
+                            <p>Based on what you get from your calculations, you can decide to make Additional Voluntary Contributions
+                                (AVC), if your current contribution does not meet your desired pension.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="text-center">This calculator is based on the following assumptions: </p>
+                            <ol>
+                                <li>Pension contribution is constant over the period.</li>
+                                <li>The return on these contributions are constant over the period.</li>
+                                <li>A retirement pension plan is purchased with the total RSA amount upon retirement.</li>
+                                <li>The return on the investment remains the same as that over the period of contribution.</li>
+                                <li>No tax effect.</li>
+                                <li>For payouts, the balances are reinvested monthly at same rates.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center"><h5>How much do I need to contribute monthly to get my desired Pension?</h5></div>
+            <div class="col-md-6" id="des-monthly">
+                <form>
+                    <div class="form-group row">
+                        <label for="des-col" class="col-6 col-md-7 col-form-label">Desired Monthly Pension payment after retirement(₦)</label>
+                        <div class="col-6 col-md-5">
+                            <input class="form-control" type="number" id="des-col" placeholder="e.g. 100000">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="des-ret" class="col-6 col-md-7 col-form-label">How long do you have to retirement?(Yr)</label>
+                        <div class="col-6 col-md-5">
+                            <input class="form-control" type="number" id="des-ret" placeholder="e.g. 15">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="des-int" class="col-6 col-md-7 col-form-label">Desired interest rate on your pensions(%)</label>
+                        <div class="col-6 col-md-5">
+                            <input class="form-control" type="number" id="des-int" placeholder="e.g. 8">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="des-pen" class="col-6 col-md-7 col-form-label">For how long will you collect pension?(Yr)</label>
+                        <div class="col-6 col-md-5">
+                            <input class="form-control" type="number" id="des-pen" placeholder="e.g. 10">
+                        </div>
+                    </div>
+                    <fieldset disabled>
+                        <div class="form-group row">
+                            <label for="req-rsa" class="col-6 col-md-7 col-form-label">Your required RSA balance is:</label>
+                            <div class="col-6 col-md-5">
+                                <input class="form-control" type="text" id="req-rsa" placeholder="Result displays here">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="monthly-contr" class="col-6 col-md-7 col-form-label">Your required Monthly contribution is:</label>
+                            <div class="col-6 col-md-5">
+                                <input class="form-control" type="text" id="monthly-contr" placeholder="Result displays here">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="text-center">
+                    <button class="btn btn-primary" id="des-calc">Calculate</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="des-chart"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center"><h5>Based on my current contributions, how much can I collect when I retire?</h5></div>
+            <div class="col-md-6" id="pro-monthly">
+                <form>
+                    <div class="form-group row">
+                        <label for="lump" class="col-6 col-md-7 col-form-label">Lump Sum initial amount(if any)?(₦)</label>
+                        <div class="col-6 col-md-5">
+                            <input class="form-control" type="number" id="lump" placeholder="e.g. 2500000">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="mon-cont" class="col-6 col-md-7 col-form-label">How much do you contribute monthly?(₦)</label>
+                        <div class="col-6 col-md-5">
+                            <input class="form-control" type="number" id="mon-cont" placeholder="e.g. 100000">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="yr-ret" class="col-6 col-md-7 col-form-label">How many years do you have to retirement?(Yr)</label>
+                        <div class="col-6 col-md-5">
+                            <input class="form-control" type="number" id="yr-ret" placeholder="e.g. 15">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="pen-int" class="col-6 col-md-7 col-form-label">Desired interest rate on your pensions (%)</label>
+                        <div class="col-6 col-md-5">
+                            <input class="form-control" type="number" id="pen-int" placeholder="e.g. 8">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="yr-col" class="col-6 col-md-7 col-form-label">For how long will you collect pension?(Yr)</label>
+                        <div class="col-6 col-md-5">
+                            <input class="form-control" type="number" id="yr-col" placeholder="e.g. 10">
+                        </div>
+                    </div>
+                    <fieldset disabled>
+                        <div class="form-group row">
+                            <label for="closing-rsa" class="col-6 col-md-7 col-form-label">Your closing RSA balance is:</label>
+                            <div class="col-6 col-md-5">
+                                <input class="form-control" type="text" id="closing-rsa" placeholder="Result displays here">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="monthly-pen" class="col-6 col-md-7 col-form-label">Your monthly Pension allowance is:</label>
+                            <div class="col-6 col-md-5">
+                                <input class="form-control" type="text" id="monthly-pen" placeholder="Result displays here">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="text-center">
+                    <button class="btn btn-primary" id="calc">Calculate</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="pen-chart"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 calc-nb"><span>Disclaimer</span>: The Calculator on this page is indicating
+            and strictly for information purposes. Leadway Pensure PFA's obligations with respect to its services on this page are
+            governed solely by the agreements under which they are provided and nothing hereof should be construed to alter such agreements.</div>
+        </div>
+    </div>
+    <!-- Footer of page -->
+    <footer class="container-fluid">
+        <hr class="hr-red">
+        <div class="row">
+            <div class="col-12 col-md-6 align-self-center newsHeader">
+                <h1>LATEST NEWS</h1>
+            </div>
+            <div class="col-12 col-md-6 newsFeed">
+                <ul class="list-unstyled">
+                    <li  class="media">
+                        <img class="d-flex align-self-center mr-3" src="images/vas.png" alt="" height=50 width=50>
+                        <div class="media-body">
+                            <h5 class="mt-0">Leadway unveils value added services</h5>
+                            <p>Following our master-plan to become a consumer oriented brand we have implemented... <a href="#">Read more</a></p>
+                        </div>
+                    </li>
+                    <li class="media">
+                        <img class="d-flex align-self-center mr-3" src="images/vas.png" alt="" height=50 width=50>
+                        <div class="media-body">
+                            <h5 class="mt-0">Leadway unveils Mobile App</h5>
+                            <p>Following our master-plan to become a consumer oriented brand we have implemented... <a href="#">Read more</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 10px">
+            <a class="col-12 col-md-6 btn-red" data-toggle="collapse" href="#sign" aria-expanded="false" aria-controls="sign">Sign-Up for News Letter</a>
+            <a class="col-12 col-md-6 btn-red" data-toggle="collapse" data-target="#feed" aria-expanded="false" aria-controls="feed">Give us your Feedback</a>
+        </div>
+        <div class="row justify-content-around" style="margin-bottom: 10px">
+            <div class="col-10 col-sm-8 col-md-4 col-lg-3 collapse" id="sign">
+                <form>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="E-mail" required>
+                    </div>
+                    <div class="text-center"><button type="button" class="btn btn-outline-red">Sign Up</button></div>
+                </form>
+            </div>
+            <div class="col-10 col-sm-8 col-md-4 col-lg-3 collapse" id="feed">
+                <form>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" cols="inherit" placeholder="Please write here" required></textarea>
+                    </div>
+                    <div class="text-center"><button type="button" class="btn btn-outline-red">Post Feedback</button></div>
+                </form>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Regulatory Requirements</h6>
+                <nav class="nav flex-column">
+                    <a class="nav-link active" href="#">Regulatory Information</a>
+                    <a class="nav-link" href="#">Pension Reform Act</a>
+                    <a class="nav-link" href="#"> Whistle Blowing</a>
+                    <a class="nav-link" href="#">Code of Ethics and Conduct</a>
+                    <a class="nav-link" href="#">Retired and Terminal Benefits</a>
+                </nav>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6>Quick Links</h6>
+                <nav class="nav flex-column">
+                    <a class="nav-link active" href="#">Blog</a>
+                    <a class="nav-link" href="#">Enroll Now</a>
+                    <a class="nav-link" href="#">Benefits</a>
+                    <a class="nav-link" href="#">Our Philosophy</a>
+                    <a class="nav-link" href="#">Branch Network</a>
+                </nav>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 app">
+                <h6>Our Mobile App</h6>
+                <img src="images/hand.png" alt="">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h6> Our Game Board</h6>
+                <table class="table table-striped text-left mx-auto">
+                    <thead>
+                    <tr>
+                        <th> #</th>
+                        <th> Name </th>
+                        <th> Score </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>1.</th>
+                        <td> Ayo Thomas </td>
+                        <td> 10,000 </td>
+                    </tr>
+                    <tr>
+                        <th>2.</th>
+                        <td> Kemi Juba </td>
+                        <td> 9,432 </td>
+                    </tr>
+                    <tr>
+                        <th>3.</th>
+                        <td> Chinenye Dike </td>
+                        <td> 9,010 </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav justify-content-center" style="margin-top: 15px">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Site Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Legal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Terms & Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row signature">
+            <div class="col-12 col-md-4 align-self-center text-center "><img src="images/pencom.png" height="90" width="90" alt=""/></div>
+            <div class="col-12 col-md-4 align-self-center text-center">&copy; Leadway Pensure 2017</div>
+            <div class="col-12 col-md-4 align-self-center text-center">Web Design & Digital by iNspire</div>
+        </div>
+        <a id="share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+        <a id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
+        <a href="javascript:" id="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    </footer>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="js/accounting.min.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/595a40d350fd5105d0c83b06/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <script src="js/index.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('#agree').click(function () {
+                $('#disclaim-overlay').fadeOut();
+            });
+
+            function roundToTwo(num) {
+                return +(Math.round(num + "e+2") + "e-2");
+            }
+
+            accounting.settings = {
+                currency: {
+                    symbol : "₦",   // default currency symbol is '$'
+                    format: "%s%v", // controls output: %s = symbol, %v = value/number (can be object: see below)
+                    decimal : ".",  // decimal point separator
+                    thousand: ",",  // thousands separator
+                    precision : 2   // decimal places
+                },
+                number: {
+                    precision : 2,  // default precision on numbers is 0
+                    thousand: ",",
+                    decimal : "."
+                }
+            };
+
+            var penChart =  Highcharts.chart('pen-chart', {
+
+                chart: {
+                    type: 'column'
+                },
+
+                title: {
+                    text: 'RSA Balance Projection'
+                },
+
+                xAxis: {
+                    type: 'linear',
+                    tickInterval: 1
+                },
+
+                yAxis: {
+                    title: {
+                        text: 'Money Value'
+                    }
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                },
+
+                plotOptions: {
+                    series: {
+                        pointStart: (new Date()).getFullYear()
+                    }
+                },
+
+                series: [{
+                    name: 'Yearly Balance',
+                    data: []
+                }]
+
+            });
+            var desChart = Highcharts.chart('des-chart', {
+
+                chart: {
+                    type: 'column'
+                },
+
+                title: {
+                    text: 'RSA Balance Projection'
+                },
+
+                xAxis: {
+                    type: 'linear',
+                    tickInterval: 1
+                },
+
+                yAxis: {
+                    title: {
+                        text: 'Money Value'
+                    }
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                },
+
+                plotOptions: {
+                    series: {
+                        pointStart: (new Date()).getFullYear()
+                    }
+                },
+
+                series: [{
+                    name: 'Yearly Balance',
+                    data: []
+                }]
+
+            });
+
+            $('#des-calc').click(function(){
+
+                var isValid = true;
+                $('#des-monthly input[type="number"]').each(function() {
+                    if ($.trim($(this).val()) == '') {
+                        isValid = false;
+                        $(this).css({"background": "#FFCECE"}).attr("placeholder", "*Field is required*");
+                    } else {
+                        $(this).css({"background": ""});
+                    }
+                });
+
+                if (isValid == false) {
+                    event.preventDefault();
+                } else {
+
+                    var smallC = Number($('input[id=des-col]').val());
+                    var yrsRetire = Number($('input[id=des-ret]').val());
+                    var return1 = Number($('input[id=des-int]').val());
+                    var tenor1 = Number($('input[id=des-pen]').val());
+                    var years = 12;
+
+                    var contrmonth = yrsRetire * 12;
+                    var rtt = return1 / 100;
+                    var rateret = rtt / 12;
+                    var bbb = Math.pow((1 + rateret), years);
+                    var bigC = smallC * ((1 / rateret) - (1 / (rateret * bbb)));
+                    var ccc = Math.pow((1 + rtt), tenor1);
+                    var fv = bigC * ((1 / rtt) - (1 / (rtt * ccc)));
+                    var ddd = Math.pow((1 + rateret), contrmonth);
+                    var pmt = fv / ((ddd - 1) / rateret);
+
+                    var fvShow = accounting.formatMoney(fv);
+                    var pmtShow = accounting.formatMoney(pmt);
+                    pmt = roundToTwo(pmt);
+
+                    $("#req-rsa").val(fvShow);
+                    $("#monthly-contr").val(pmtShow);
+
+                    var desData = [];
+                    var yrContr = pmt * 12;
+                    var newYrContr = roundToTwo(yrContr);
+
+                    for (var i = 0; i < yrsRetire; i++){
+                        desData.push(newYrContr);
+                        newYrContr += yrContr;
+                        newYrContr = roundToTwo(newYrContr);
+                    }
+
+                    desChart.series[0].setData(desData);
+                }
+            });
+
+            $('#calc').click(function(){
+
+                var isValid = true;
+                $('#pro-monthly input[type="number"]').each(function() {
+                    if ($.trim($(this).val()) == '') {
+                        isValid = false;
+                        $(this).css({"background": "#FFCECE"}).attr("placeholder", "*Field is Required*");
+                    } else {
+                        $(this).css({"background": ""});
+                    }
+                });
+
+                if (isValid == false) {
+                    event.preventDefault();
+                } else {
+
+                    var n2 = Number($('input[id=yr-ret]').val());
+                    var r2 = Number($('input[id=pen-int]').val());
+                    var openbal = Number($('input[id=lump]').val());
+                    var pmt1 = Number($('input[id=mon-cont]').val());
+                    var T2 = Number($('input[id=yr-col]').val());
+                    var smallt = 1;
+
+                    var N = n2 * 12;
+                    var rtt1 = r2 / 100;
+                    var rateret2 = rtt1 / 12;
+                    var eee = Math.pow((1 + rateret2), smallt);
+                    var ans = (1 / rateret2) - (1 / (rateret2 * eee));
+                    var fff = Math.pow((1 + rateret2), N);
+                    var fv1 = (openbal * fff) + (pmt1 * ((fff - 1) / rateret2));
+                    var hhh = Math.pow((1 + rtt1), T2);
+                    var C1 = fv1 / ((1 / rtt1) - (1 / (rtt1 * hhh)));
+                    var tc = C1 / ans;
+                    var contr = tc / 12;
+
+                    fv1 = accounting.formatMoney(fv1);
+                    contr = accounting.formatMoney(contr);
+
+                    $("#closing-rsa").val(fv1);
+                    $("#monthly-pen").val(contr);
+
+                    var data = [];
+                    var yrContr = (pmt1 * 12) + ((pmt1 * 12 * r2) / 100);
+                    var openBalance = openbal + yrContr;
+                    openBalance = roundToTwo(openBalance);
+
+                    for (var i = 0; i < n2; i++) {
+                        data.push(openBalance);
+                        openBalance += yrContr;
+                        openBalance = roundToTwo(openBalance);
+                    }
+
+                    penChart.series[0].setData(data);
+                }
+            });
+
+            //Resize container based on desktop or mobile viewport.
+            var size = window.innerWidth;
+            if (size <= 991) {
+                document.getElementById("calc-page").setAttribute("class", "container-fluid");
+            } else {
+                document.getElementById("calc-page").setAttribute("class", "container");
+            }
+        });
+    </script>
+</body>
+</html>

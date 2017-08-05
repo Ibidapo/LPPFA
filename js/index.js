@@ -38,14 +38,13 @@ $(document).ready(function(){
     $('#scroll-btn').click(function() {
         $('body,html').animate({
             scrollTop : 500
-        }, 500);
+        }, 800);
     });
 
     $('.mob-search input').blur(function() {
         setTimeout(function(){
         $('.m-logo').css('display','block')}, 500);
-    })
-    .focus(function() {
+    }).focus(function() {
         $('.m-logo').css('display','none');
     });
 
