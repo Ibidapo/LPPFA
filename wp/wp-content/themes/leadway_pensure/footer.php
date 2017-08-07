@@ -175,7 +175,7 @@
     })();
 </script>
 <!--End of Tawk.to Script-->
-<script src="js/index.js"></script>
+<script src="<?php echo get_bloginfo('template_directory'); ?>/js/index.js"></script>
 <script>
     $(window).scroll(function () {
         if ($(document).scrollTop() > 5) {

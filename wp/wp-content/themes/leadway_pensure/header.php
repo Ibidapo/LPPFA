@@ -1,3 +1,6 @@
+<?php
+$options = get_option('theme_options');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,7 +102,9 @@
                 </div>
             </td>
             <td>
-                <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i> 0800-Pesnure</span>
+                <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i>
+                    <?= $options['phone_number']; ?>
+                </span>
             </td>
             <td>
                 <span class="head-td"> RSA FUNDS</span><br>
