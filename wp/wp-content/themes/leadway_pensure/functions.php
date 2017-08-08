@@ -36,4 +36,14 @@ function theme_options_validate($input) {
     return $options;
 }
 
+function ddd()
+{
+    echo "<pre>";
+    foreach (func_get_args() as $arg){
+        print_r($arg);
+        echo "<br>";
+    }
+    exit;
+}
+
 
