@@ -1025,5 +1025,14 @@
     </script>
     <!--End of Tawk.to Script-->
     <script src="js/index.js"></script>
+    <script>
+        //Resize container based on desktop or mobile viewport.
+        var size = window.innerWidth;
+        if (size <= 991) {
+            $("#m-top").attr("class", "container-fluid");
+        } else {
+            $("m-top").attr("class", "container");
+        }
+    </script>
 </body>
 </html>

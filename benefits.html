@@ -232,8 +232,10 @@
                 </form>
             </div>
         </div>
+    </div>
+    <div class="container">
         <div class="row tab-content">
-            <div class="tab-pane fade show active col-lg-10 offset-lg-1" role="tabpanel" id="ab-ret">
+            <div class="tab-pane fade show active col-12" role="tabpanel" id="ab-ret">
                 <div class="row hidden-sm-down">
                     <div class="col-12 text-center">
                         <ul class="nav nav-tabs justify-content-center" role="tablist">
@@ -251,7 +253,7 @@
                 </div>
                 <div class="tab-content row">
                     <div class="col-md-3 text-center">
-                        <img src="images/retire-tips.png" alt="retirement tips">
+                        <img class="v-align" src="images/retire-tips.png" alt="retirement tips">
                     </div>
                     <div class="tab-pane fade show active col-md-9" id="gen-app" role="tabpanel">
                         <p>An employee may access his/her RSA when he/she ceases to make further contributions into the RSA as a result
@@ -288,7 +290,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade col-lg-10 offset-lg-1" role="tabpanel" id="pay-grnd">
+            <div class="tab-pane fade col-12" role="tabpanel" id="pay-grnd">
                 <div class="row hidden-sm-down">
                     <div class="col-12 text-center">
                         <ul class="nav nav-tabs justify-content-center" role="tablist">
@@ -312,7 +314,7 @@
                 </div>
                 <div class="tab-content row">
                     <div class="col-md-3 text-center">
-                        <img src="images/retire-grnds.png" alt="retirement grounds"/>
+                        <img class="v-align" src="images/retire-grnds.png" alt="retirement grounds"/>
                     </div>
                     <div class="tab-pane fade show active col-md-9" id="man-ret" role="tabpanel">
                         <p>This ground for withdrawal is specifically for employees who disengage from employment upon attaining the
@@ -346,7 +348,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade col-lg-10 offset-lg-1" role="tabpanel" id="pay-type">
+            <div class="tab-pane fade col-12" role="tabpanel" id="pay-type">
                 <div class="row hidden-sm-down">
                     <div class="col-12 text-center">
                         <ul class="nav nav-tabs justify-content-center" role="tablist">
@@ -379,7 +381,7 @@
                 </div>
                 <div class="tab-content row">
                     <div class="col-md-3 text-center">
-                        <img src="images/pay-type.png" height="200" width="200"/>
+                        <img class="v-align" src="images/pay-type.png" height="200" width="200"/>
                     </div>
                     <div class="tab-pane fade show active col-md-9" id="l-sum" role="tabpanel">
                         <p>The documents required to be provided (for customers from different sectors) are shown below:</p>
@@ -633,6 +635,12 @@
     <script src="js/index.js"></script>
     <script>
         $(document).ready(function() {
+            //Resize container based on desktop or mobile viewport.
+            var size = window.innerWidth;
+            if (size <= 991) {
+                $(".container").attr("class", "container-fluid");
+            }
+
             $('#benefitsTab a[href="' + window.location.hash + '"]').tab('show'); // Select tab by name if provided in location hash
 
             $('#benefitsTab a[data-toggle="tab"]').on('shown.bs.tab', function () {

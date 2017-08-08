@@ -217,10 +217,12 @@
                 </form>
             </div>
         </div>
+    </div>
+    <div class="container">
         <div class="row tab-content">
             <div class="tab-pane fade show active col-12" role="tabpanel" id="vac">
                 <div class="row">
-                    <div class="col-md-7 col-lg-6 offset-lg-1 text-center">
+                    <div class="col-12 col-md-7 ext-center">
                         <h1 class="hidden-sm-down vac-hd">We are Hiring!</h1>
                         <h3 class="hidden-md-up vac-hd">We are Hiring!</h3>
                         <span>Choose your preferred designation to get started</span>
@@ -331,7 +333,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5 col-lg-4">
+                    <div class="col-12 col-md-5">
                         <div class="hanger"></div>
                         <div class="hanged">
                             <div class="sub-box text-center">
@@ -350,31 +352,31 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 col-lg-10 offset-lg-1 career-cult-hd">
+                    <div class="col-12 career-cult-hd">
                         <h3 class="hidden-sm-down">Learn more about our culture</h3>
                         <h4 class="hidden-md-up">Learn more about our culture</h4>
                     </div>
-                    <div class="col-md-12 col-lg-10 offset-lg-1 career-cult-box">
+                    <div class="col-12 career-cult-box">
                         <div class="row">
                             <div class="col-sm-6 col-md-4 cult-box1">
-                                <p>Our people are at the core of our success, hence the attention to ensuring both mental and physical
-                                fitness of our team all the time.<br> <a href="#" class="btn btn-outline-white-sm">Learn more</a></p>
+                                <p class="v-align">Our people are at the core of our success, hence the attention to ensuring both mental and
+                                physical fitness of our team all the time.<br> <a href="#" class="btn btn-outline-white-sm">Learn more</a></p>
                             </div>
                             <div class="col-sm-6 col-md-4 cult-box2">
-                                <h3>Hangouts & Retreats</h3>
+                                <h3 class="v-align">Hangouts & Retreats</h3>
                             </div>
                             <div class="col-sm-6 col-md-4 cult-box3">
-                                <h3>Training</h3>
+                                <h3 class="v-align">Training</h3>
                             </div>
                             <div class="col-sm-6 col-md-4 cult-box4">
-                                <h3>Our Squeezed Sheet Theory</h3>
+                                <h3 class="v-align">Our Squeezed Sheet Theory</h3>
                             </div>
                             <div class="col-sm-6 col-md-4 cult-box5">
-                                <h3>Ready to Apply?</h3>
+                                <h3 class="v-align">Ready to Apply?</h3>
                             </div>
                             <div class="col-sm-6 col-md-4 cult-box6">
-                                <p>Head over now to our blog section for tips on how to assemble your CV and other relevant documents<br>
-                                <a href="#" class="btn btn-outline-white-sm">Learn more</a></p>
+                                <p class="v-align">Head over now to our blog section for tips on how to assemble your CV and other relevant
+                                documents<br><a href="#" class="btn btn-outline-white-sm">Learn more</a></p>
                             </div>
                         </div>
                     </div>
@@ -383,7 +385,7 @@
             <div class="tab-pane fade col-12" role="tabpanel" id="cv">
                 <form>
                     <div class="row">
-                        <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 text-center">
+                        <div class="col-xs-10 offset-xs-1 col-md-12 text-center">
                             <h4>Personal Information</h4><hr>
                             <div class="row">
                                 <div class="col-md-4">
@@ -447,7 +449,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 text-center">
+                        <div class="col-xs-10 offset-xs-1 col-md-12 text-center">
                             <h4>Educational Qualification</h4><hr>
                             <div class="row">
                                 <div class="col-md-8">
@@ -890,7 +892,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 text-center">
+                        <div class="col-xs-10 offset-xs-1 col-md-12 text-center">
                             <h4>Professional Qualification</h4><hr>
                             <div class="row">
                                 <div class="col-md-6">
@@ -1241,7 +1243,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 text-center">
+                        <div class="col-xs-10 offset-xs-1 col-md-12 text-center">
                             <h4>Working Experience</h4><hr>
                             <div class="row">
                                 <div class="col-md-8">
@@ -1627,7 +1629,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 text-center">
+                        <div class="col-xs-10 offset-xs-1 col-md-12 text-center">
                             <h4>Upload Curriculum Vitae(CV)</h4><hr>
                             <div class="row">
                                 <div class="col-md-12">
@@ -1804,6 +1806,12 @@
     <!--End of Tawk.to Script-->
     <script src="js/index.js"></script>
     <script>
+        //Resize container based on desktop or mobile viewport.
+        var size = window.innerWidth;
+        if (size <= 991) {
+            $(".container").attr("class", "container-fluid");
+        }
+
         $("#m-careerTab").change(function (){
             var i = $(this).val();
 

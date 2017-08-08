@@ -188,7 +188,7 @@
                     <p>Leadway Pensure PFA Limited is a Pension Fund Administration company, that provides a range of retirement
                     support services to our numerous clients in every part of Nigeria. These services include enrolment, investment,
                     benefit payment, publications, news bulletins and general client awareness of products and services.<br>
-                    <a href="#" class="btn btn-outline-white">Read more</a></p>
+                    <a href="services.html" class="btn btn-outline-white">Read more</a></p>
                 </div>
             </div>
         </div>
@@ -220,19 +220,19 @@
                 </form>
             </div>
         </div>
+    </div>
+    <div class="container">
         <div class="row tab-content">
-            <div class="tab-pane fade show active col-lg-10 offset-lg-1" role="tabpanel" id="meet">
-                <div class="row">
-                    <div class="col-12 comp-prof">
-                        <form>
-                            <div class="form-group row">
-                                <label for="c-prof" class="col-12 col-md-7 col-form-label text-center">Receive a copy of our company profile today!</label>
-                                <div class="col-8 col-md-3">
-                                    <input type="text" id="c-prof" class="form-control"  placeholder="E-mail" aria-describedby="c-prof">
-                                </div>
-                                <div class="col-4 col-md-2">
-                                    <a class="btn btn-outline-purple" role="button" type="submit">Submit</a>
-                                </div>
+            <div class="tab-pane fade show active col-12" role="tabpanel" id="meet">
+                <div class="row comp-prof">
+                    <div class="col-12 col-md-7 text-center">
+                        <p class="prof-label v-align">Receive a copy of our company profile today!</p>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <form class="form-inline v-align">
+                            <div class="form-group mx-auto text-center">
+                                <input type="text" class="form-control" placeholder="E-mail">
+                                <a class="btn btn-outline-purple" role="button" type="submit">Submit</a>
                             </div>
                         </form>
                     </div>
@@ -360,8 +360,8 @@
                 <div class="row comps">
                     <div class="vr hidden-sm-down"></div>
                     <div class="col-md-4 text-center">
-                        <h1 class="hidden-md-down">Our Companies</h1>
-                        <h3 class="hidden-lg-up">Our Companies</h3>
+                        <h1 class="hidden-md-down v-align">Our Companies</h1>
+                        <h3 class="hidden-lg-up v-align">Our Companies</h3>
                     </div>
                     <div class="col-md-8">
                         <div id="comps-slide" class="carousel slide" data-ride="carousel" data-interval="10000">
@@ -374,7 +374,7 @@
                                             Leadway Assurance offers a full range of insurance and allied financial products and services.
                                             The company is reputed for its progressive and professional business ethics and corporate governance,
                                             which are driven by the unflinching level of integrity of its Directors and Shareholders.</p>
-                                            <div class="text-center"><a href="#" class="btn btn-outline-purple">Visit site</a></div>
+                                            <div class="text-center"><a href="http://www.leadway.com/" class="btn btn-outline-purple">Visit site</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -386,7 +386,7 @@
                                             with offices nationwide. Primed with over 65 years of undisputed insurance services, and a commitment
                                             to create long-term value for its clients and stakeholders through strong business fundamentals,
                                             consistent with our mission guided by our vision and directed by our company's core values.</p>
-                                            <div class="text-center"><a href="#" class="btn btn-outline-purple">Visit site</a></div>
+                                            <div class="text-center"><a href="http://prestigeassuranceplc.com/" class="btn btn-outline-purple">Visit site</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -399,7 +399,7 @@
                                             as a reputable stock broking house and has a commanding presence in the secondary market of the Nigerian
                                             Capital Market, with premium clientele spanning Portfolio Managers, Institutional Investors and High Net
                                             worth individual.</p>
-                                            <div class="text-center"><a href="#" class="btn btn-outline-purple">Visit site</a></div>
+                                            <div class="text-center"><a href="http://www.mbcgroup.com.ng/" class="btn btn-outline-purple">Visit site</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -455,7 +455,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade col-lg-10 offset-lg-1" role="tabpanel" id="lead">
+            <div class="tab-pane fade col-12" role="tabpanel" id="lead">
                 <div class="row">
                     <div class="col-12 board-mgt text-center">
                         <ul class="nav nav-tabs justify-content-center" role="tablist">
@@ -1181,6 +1181,13 @@
     <script src="js/index.js"></script>
     <script>
         $(document).ready(function() {
+
+            //Resize container based on desktop or mobile viewport.
+            var size = window.innerWidth;
+            if (size <= 991) {
+                $(".container").attr("class", "container-fluid");
+            }
+
             $('#compTab a[href="'+ window.location.hash+ '"]').tab('show'); // Select tab by name if provided in location hash
 
             $('#compTab a[data-toggle="tab"], #board-dir a[data-toggle="tab"], #mgt-team a[data-toggle="tab"]').on('shown.bs.tab', function() {

@@ -1331,6 +1331,14 @@
     <script src="js/index.js"></script>
     <script>
         $(document).ready(function() {
+            //Resize container based on desktop or mobile viewport.
+            var size = window.innerWidth;
+            if (size <= 991) {
+                $("#m-top").attr("class", "container-fluid");
+            } else {
+                $("m-top").attr("class", "container");
+            }
+
             $("#regions").change(function (){
                 var i = $(this).val();
 
@@ -1345,13 +1353,6 @@
                 }
             });
 
-            //Resize container based on desktop or mobile viewport.
-            var size = window.innerWidth;
-            if (size <= 991) {
-                document.getElementById("m-top").setAttribute("class", "container-fluid");
-            } else {
-                document.getElementById("m-top").setAttribute("class", "container");
-            }
         });
     </script>
 </body>
