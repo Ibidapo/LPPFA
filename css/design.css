@@ -47,13 +47,13 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .btn-outline-blue, .btn-outline-blue-sm{
     -webkit-appearance: none !important;
     background-color: transparent;
-    border-radius: 25px;
+    border-radius: 25px !important;
     padding: 8px 15px;
     cursor: pointer;
     font-size: 0.85rem;
 }
 .btn-outline-red{
-    border:1px solid red;
+    border:1px solid red !important;
     color: red;
 }
 .btn-outline-red:hover{
