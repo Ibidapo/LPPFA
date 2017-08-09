@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Leadway Pensure PFA | Products and Services</title>
+    <title>Leadway Pensure PFA | Products & Services</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,6 +15,17 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Hotjar Tracking Code for lppfa.inspireleadership.biz -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:536413,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
 </head>
 <body>
     <!-- Mobile navigation -->
@@ -24,9 +35,37 @@
             <span class="middle"></span>
             <span class="bottom"></span>
         </div>
-        <a href="#" class="m-logo row navbar-brand" data-toggle="tooltip" title="Home" data-placement="bottom">
+        <a href="#" class="m-logo navbar-brand">
             <img src="images/logo-alt.png" class="img-responsive"  width="85" alt="">
         </a>
+        <form class="form-inline mob-search">
+            <input class="form-control" type="text" placeholder="Search">
+        </form>
+        <div class="overlay text-center" id="overlay">
+            <ul class="menu">
+                <li><a data-toggle="collapse" href="#log" aria-expanded="false" aria-controls="log">Login <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                    <ul class="sub-menu collapse" id="log">
+                        <li><a href="#">Client login</a></li>
+                        <li><a href="#">Employer login</a></li>
+                    </ul>
+                </li>
+                <li><a href="company.html">Our Company</a></li>
+                <li><a href="services.html">Products & Services</a></li>
+                <li><a href="benefits.html">Benefits</a></li>
+                <li><a href="investment.html">Investments</a></li>
+                <li><a href="career.html">Careers</a></li>
+                <li><a href="#">Media</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a data-toggle="collapse" href="#lang" aria-expanded="false" aria-controls="lang">Select Language <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                    <ul class="sub-menu collapse" id="lang">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Yoruba</a></li>
+                        <li><a href="#">Igbo</a></li>
+                        <li><a href="#">Hausa</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </nav>
     <!-- Desktop navigation -->
     <nav class="navbar fixed-top hidden-md-down pOff">
@@ -56,11 +95,11 @@
                     <span> &#8358;2.3433 <img src="images/neg.png" alt=""></span>
                 </td>
                 <td>
-                    <span class="head-td">RSA ADMIN FEE</span><br>
-                    <span> &#8358;100 </span>
+                    <span class="head-td">RSA ACCOUNTS </span><br>
+                    <span> 500,000 </span>
                 </td>
                 <td>
-                    <img src="images/calc.png"><span>Calculator</span>
+                    <a href="calculator.html" class="nav-calc"> <img src="images/calc.png"> <span>Calculator</span></a>
                 </td>
                 <td>
                     <button type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS </button>
@@ -78,61 +117,62 @@
                     <input class="form-control" type="text" placeholder="Search">
                 </form>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="javascript:" id="ps" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Products & Services </a>
+                    <a class="nav-link dropdown-toggle" href="javascript:" id="ps" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products & Services</a>
                     <div class="dropdown-menu ps" aria-labelledby="ps">
-                        <a class="dropdown-item" href="services.html#rsa"><i class="fa fa-chevron-right" aria-hidden="true"></i> Retirement Savings Account</a>
+                        <a class="dropdown-item" href="services.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Retirement Savings Account</a>
                         <a class="dropdown-item" href="services.html#avc"><i class="fa fa-chevron-right" aria-hidden="true"></i> Additional Voluntary Contribution</a>
-                        <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Cross-Border Benefits</a>
+                        <a class="dropdown-item" href="services.html#cbs"><i class="fa fa-chevron-right" aria-hidden="true"></i> Cross-Border Services</a>
                         <a class="dropdown-item" href="services.html#mf"><i class="fa fa-chevron-right" aria-hidden="true"></i> Managed Funds</a>
                         <a class="dropdown-item" href="services.html#nst"><i class="fa fa-chevron-right" aria-hidden="true"></i> NSITF</a>
                         <a class="dropdown-item" href="services.html#pms"><i class="fa fa-chevron-right" aria-hidden="true"></i> SMS Services</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="oc" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Company</a>
+                    <a class="nav-link dropdown-toggle" href="company.html" id="oc" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Company</a>
                     <div class="dropdown-menu oc" aria-labelledby="oc">
-                        <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Meet Leadway Pensure</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Leadership</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Why Leadway Pensure?</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Financial Reports</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> C.S.R</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="in" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Investment</a>
-                    <div class="dropdown-menu in" aria-labelledby="in">
-                        <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Financial Markets</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Wealth Planning</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Retirement Planning</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Performance Fund</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Podcasts</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="ne" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News | Events</a>
-                    <div class="dropdown-menu" aria-labelledby="ne">
+                        <a class="dropdown-item" href="company.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Meet Leadway Pensure</a>
+                        <a class="dropdown-item" href="company.html#lead"><i class="fa fa-chevron-right" aria-hidden="true"></i> Leadership</a>
+                        <a class="dropdown-item" href="company.html#f-rep"><i class="fa fa-chevron-right" aria-hidden="true"></i> Financial Reports</a>
+                        <a class="dropdown-item" href="company.html#csr"><i class="fa fa-chevron-right" aria-hidden="true"></i> C.S.R</a>
                         <a class="dropdown-item" href="career.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Careers</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Calendar</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Gallery</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dl" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Downloads</a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dl">
-                        <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Regulatory Information </a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Retired & Terminal Benefits</a>
-                        <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Corporate Governance</a>
+                    <a class="nav-link dropdown-toggle" href="javascript:" id="in" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Investments</a>
+                    <div class="dropdown-menu in" aria-labelledby="in">
+                        <a class="dropdown-item" href="investment.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Financial Markets</a>
+                        <a class="dropdown-item" href="investment.html#w-plan"><i class="fa fa-chevron-right" aria-hidden="true"></i> Wealth Planning</a>
+                        <a class="dropdown-item" href="investment.html#r-plan"><i class="fa fa-chevron-right" aria-hidden="true"></i> Retirement Planning</a>
+                        <a class="dropdown-item" href="investment.html#p-fund"><i class="fa fa-chevron-right" aria-hidden="true"></i> Performance Fund</a>
+                        <a class="dropdown-item" href="investment.html#pod"><i class="fa fa-chevron-right" aria-hidden="true"></i> Podcast</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="javascript:" id="co" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="bnf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Benefits</a>
+                    <div class="dropdown-menu bnf" aria-labelledby="bnf">
+                        <a class="dropdown-item" href="benefits.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> About to Retire?</a>
+                        <a class="dropdown-item" href="benefits.html#pay-grnd"><i class="fa fa-chevron-right" aria-hidden="true"></i> Grounds to Retirement</a>
+                        <a class="dropdown-item" href="benefits.html#pay-type"><i class="fa fa-chevron-right" aria-hidden="true"></i> Payment Types</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media</a>
+                    <div class="dropdown-menu dropdown-menu-right md" aria-labelledby="md">
+                        <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> News & Events</a>
+                        <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Calender</a>
+                        <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Gallery</a>
+                        <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Social</a>
+                        <a class="dropdown-item" href="downloads.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Downloads</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="javascript:" id="co" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Us</a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="co">
                         <a class="dropdown-item" href="contact.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Branch Network</a>
-                        <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Help Desk</a>
-                        <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> FAQ's</a>
+                        <a class="dropdown-item" href="faq.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> FAQs</a>
                     </div>
                 </li>
-                <a class="navbar-brand" href="index.html"><img class="logo" src="images/logo.png" alt=""></a>
+                <a class="navbar-brand" href="index.html"><img class="logo" src="images/logo.png" alt="Leadway Logo"></a>
             </ul>
         </div>
     </nav>
@@ -142,14 +182,14 @@
             <div class="hidden-md-up col-12 m-prod-list">
                 <form class="mx-auto">
                     <div class="form-group text-center">
-                        <label for="prod">Our Services</label>
-                        <select class="form-control" id="prod" onchange="myProduct()" data-aos="fade">
-                            <option>Retirement Savings Account</option>
-                            <option>Additional Voluntary Contribution</option>
-                            <option>Managed Funds</option>
-                            <option class="disabled">Cross Border Services</option>
-                            <option>NSTIF</option>
-                            <option>Personal Messaging Services</option>
+                        <label for="s-prod">Our Services</label>
+                        <select class="form-control" id="s-prod" data-aos="fade">
+                            <option value="0">Retirement Savings Account</option>
+                            <option value="1">Additional Voluntary Contribution</option>
+                            <option value="2">Managed Funds</option>
+                            <option value="3">Cross Border Services</option>
+                            <option value="4">NSITF</option>
+                            <option value="5">Personal Messaging Services</option>
                         </select>
                     </div>
                 </form>
@@ -157,7 +197,12 @@
         </div>
         <div class="row">
             <div class="col-12 prod-banner">
-                <img src="images/pba.png">
+                <img src="images/RSA.jpg" class="rsa-img">
+                <img src="images/Avc.jpg" class="avc-img">
+                <img src="images/m-fund.jpg" class="mf-img">
+                <img src="images/cbs.jpg" class="cbs-img">
+                <img src="images/nsitf.jpg" class="nst-img">
+                <img src="images/sms.jpg" class="sms-img">
             </div>
         </div>
         <div class="row tab-content">
@@ -238,6 +283,9 @@
                 which were privately invested by an organization for or its authorized agents on behalf of its workers before the
                 Pension Reform Act 2004. They are usually treated as separate funds from the normal mandatory contributions.</p>
             </div>
+            <div class="col-12 col-md-9 fade tab-pane text-center" role="tabpanel" id="cbs">
+                <h1>Coming Soon!</h1>
+            </div>
             <div class="col-12 col-md-9 fade tab-pane" role="tabpanel" id="nst">
                 <p class="text-justify">The Pension Reform Act (PRA) 2004 made provision for contributions in the National
                 Provident Fund (NPF) and its successor scheme the National Social Insurance Trust Fund (NSITF) referred to
@@ -262,51 +310,51 @@
             <div class="col-12 col-md-9 fade tab-pane" role="tabpanel" id="pms">
                 <p>The SMS Request Service will enable customers send in requests via SMS and receive feedback on the
                 Phone number registered on our database.</p>
+                <p>Interact with the LPPFA Smartphone to explore all the SMS services at your fingertips.</p>
                 <h4 class="hidden-sm-down text-center">Our SMS Request services</h4>
                 <h5 class="hidden-md-up text-center">Our SMS Request services</h5>
-                <div class="row">
+                <div class="row" id="sms-area">
                     <div class="col-md-6">
-
+                        <div class="pin-txt">
+                            <h6 class="text-center">Want to retrieve your PIN?</h6>
+                        </div>
+                        <div class="bal-txt">
+                            <h6 class="text-center">How to make a BALANCE enquiry?</h6>
+                        </div>
+                        <div class="stm-txt">
+                            <h6 class="text-center">Need to see your STATEMENT of account?</h6>
+                        </div>
+                        <div class="help-txt">
+                            <h6 class="text-center">Need some HELP with a pension scheme?</h6>
+                        </div>
                     </div>
                     <div class="col-md-6 text-center">
                         <div class="img-box mx-auto">
                             <img class="img-fluid" src="images/slider-phone.png">
-                            <!--<div id="sms-slide" class="carousel slide" data-ride="carousel" data-aos="fade">
-                            <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item active" id="1">
-                                    <div class="carousel-caption d-md-block">
-                                        <h3>Balance Enquiry</h3>
-                                        <p>...</p>
+                            <div id="sms-slide" class="carousel slide" data-ride="carousel" data-interval="10000" data-aos="fade">
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active" id="1">
+                                        <img src="images/getpin.jpg">
+                                    </div>
+                                    <div class="carousel-item" id="2">
+                                        <img src="images/bal.jpg">
+                                    </div>
+                                    <div class="carousel-item" id="3">
+                                        <img src="images/stm.jpg">
+                                    </div>
+                                    <div class="carousel-item" id="4">
+                                        <img src="images/help.jpg">
                                     </div>
                                 </div>
-                                <div class="carousel-item" id="2">
-                                    <div class="carousel-caption d-md-block">
-                                        <h3>Statement Enquiry</h3>
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item" id="3">
-                                    <div class="carousel-caption d-md-block">
-                                        <h3>Get PIN</h3>
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item" id="4">
-                                    <div class="carousel-caption d-md-block">
-                                        <h3>HELP</h3>
-                                        <p>...</p>
-                                    </div>
-                                </div>
+                                <a class="carousel-control-prev" href="#sms-slide" role="button" data-slide="prev">
+                                    <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#sms-slide" role="button" data-slide="next">
+                                    <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+                                    <span class="sr-only">Next</span>
+                                </a>
                             </div>
-                            <a class="carousel-control-prev" href="#sms-slide" role="button" data-slide="prev">
-                                <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#sms-slide" role="button" data-slide="next">
-                                <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>-->
                         </div>
                     </div>
                 </div>
@@ -316,7 +364,7 @@
                     <a class="nav-link active" data-toggle="tab" href="#rsa" role="tab">Retirement Savings Account</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#avc" role="tab"><div>Additional Voluntary Contribution</div></a>
+                    <a class="nav-link" data-toggle="tab" href="#avc" role="tab">Additional Voluntary Contribution</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#mf" role="tab">Managed Funds</a>
@@ -325,7 +373,7 @@
                     <a class="nav-link" data-toggle="tab" href="#cbs" role="tab">Cross Border Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#nst" role="tab">NSTIF</a>
+                    <a class="nav-link" data-toggle="tab" href="#nst" role="tab">NSITF</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#pms" role="tab">Personal Messaging Services</a>
@@ -346,14 +394,14 @@
                         <img class="d-flex align-self-center mr-3" src="images/vas.png" alt="" height=50 width=50>
                         <div class="media-body">
                             <h5 class="mt-0">Leadway unveils value added services</h5>
-                            <p>Following our masterplan to becoma a consumer oriented brand we have implemented... <a href="#">Read more</a></p>
+                            <p>Following our master-plan to become a consumer oriented brand we have implemented... <a href="#">Read more</a></p>
                         </div>
                     </li>
                     <li class="media">
                         <img class="d-flex align-self-center mr-3" src="images/vas.png" alt="" height=50 width=50>
                         <div class="media-body">
-                            <h5 class="mt-0">Leadway unveils value added services</h5>
-                            <p>Following our masterplan to becoma a consumer oriented brand we have implemented... <a href="#">Read more</a></p>
+                            <h5 class="mt-0">Leadway unveils Mobile App</h5>
+                            <p>Following our master-plan to become a consumer oriented brand we have implemented... <a href="#">Read more</a></p>
                         </div>
                     </li>
                 </ul>
@@ -364,23 +412,23 @@
             <a class="col-12 col-md-6 btn-red" data-toggle="collapse" data-target="#feed" aria-expanded="false" aria-controls="feed">Give us your Feedback</a>
         </div>
         <div class="row justify-content-around" style="margin-bottom: 10px">
-            <div class="col-12 col-md-4 collapse" id="sign">
+            <div class="col-10 col-sm-8 col-md-4 col-lg-3 collapse" id="sign">
                 <form>
                     <div class="form-group">
-                        <input class="form-control form-control-sm" type="text" placeholder="E-mail Address" required>
+                        <input class="form-control" type="text" placeholder="E-mail" required>
                     </div>
-                    <div class="text-center"><button type="button" class="btn btn-outline-red btn-sm">Sign Up</button></div>
+                    <div class="text-center"><button type="button" class="btn btn-outline-red">Sign Up</button></div>
                 </form>
             </div>
-            <div class="col-12 col-md-4 collapse" id="feed">
+            <div class="col-10 col-sm-8 col-md-4 col-lg-3 collapse" id="feed">
                 <form>
                     <div class="form-group">
-                        <input class="form-control form-control-sm" type="text" placeholder="E-mail Address" required>
+                        <input class="form-control" type="text" placeholder="E-mail" required>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control form-control-sm" rows="3" cols="inherit" placeholder="Please write here" required></textarea>
+                        <textarea class="form-control" rows="3" cols="inherit" placeholder="Please write here" required></textarea>
                     </div>
-                    <div class="text-center"><button type="button" class="btn btn-outline-red btn-sm">Post Feedback</button></div>
+                    <div class="text-center"><button type="button" class="btn btn-outline-red">Post Feedback</button></div>
                 </form>
             </div>
         </div>
@@ -489,76 +537,130 @@
     <script>
         $(document).ready(function() {
 
-            $('#prod-list a:first').tab('show'); // Select first tab
+            //Resize container based on desktop or mobile viewport.
+            var size = window.innerWidth;
+            if (size <= 991) {
+                $("#m-top").attr("class", "container-fluid");
+            } else {
+                $("m-top").attr("class", "container");
+            }
+
             $('#prod-list a[href="'+ window.location.hash+ '"]').tab('show'); // Select tab by name if provided in location hash
 
             $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                window.scrollTo(0,0);
                 e.preventDefault();
                 e.stopPropagation();
                 $(this).closest('ul').find('.show').removeClass('show');
                 $(this).parent().addClass('show');
-            });
-
-            function myProduct() {
-                var x = document.getElementById("prod");
-                var i = x.selectedIndex;
-
-                if(i == 0){
-                    $('#prod-list a[href="#rsa"]').tab('show');
-                }else if(i == 1){
-                    $('#prod-list a[href="#avc"]').tab('show');
-                }else if(i == 2){
-                    $('#prod-list a[href="#mf"]').tab('show');
-                }else if(i == 4){
-                    $('#prod-list a[href="#nst"]').tab('show');
-                }else if(i == 5) {
-                    $('#prod-list a[href="#pms"]').tab('show');
-                }
-            }
-
-            $(".dropdown-menu.ps a:first-child").click(function(){
-                $('#prod-list a[href="#rsa"]').tab('show');
                 $('body,html').animate({
                     scrollTop : 0
-                }, 800);
+                }, 500);
+            });
+
+            $('a[href="#rsa"]').on('shown.bs.tab', function() {
+                $('.rsa-img').css('display','block');
+                $('.avc-img, .sms-img, .cbs-img, .nst-img, .mf-img').css('display','none');
+            });
+
+            $('a[href="#avc"]').on('shown.bs.tab', function() {
+                $('.avc-img').css('display','block');
+                $('.rsa-img, .sms-img, .cbs-img, .nst-img, .mf-img').css('display','none');
+            });
+
+            $('a[href="#cbs"]').on('shown.bs.tab', function() {
+                $('.cbs-img').css('display','block');
+                $('.rsa-img, .avc-img, .sms-img, .nst-img, .mf-img').css('display','none');
+            });
+
+            $('a[href="#pms"]').on('shown.bs.tab', function() {
+                $('.sms-img').css('display','block');
+                $('.rsa-img, .avc-img, .cbs-img, .nst-img, .mf-img').css('display','none');
+            });
+
+            $('a[href="#nst"]').on('shown.bs.tab', function() {
+                $('.nst-img').css('display','block');
+                $('.rsa-img, .avc-img, .cbs-img, .sms-img, .mf-img').css('display','none');
+            });
+
+            $('a[href="#mf"]').on('shown.bs.tab', function() {
+                $('.mf-img').css('display','block');
+                $('.rsa-img, .avc-img, .cbs-img, .sms-img, .nst-img').css('display','none');
+            });
+
+            $("#s-prod").change(function (){
+                var i = $(this).val();
+
+                if(i == 0){
+                    $('a[href="#rsa"]').tab('show');
+                }else if(i == 1){
+                    $('a[href="#avc"]').tab('show');
+                }else if(i == 2){
+                    $('a[href="#mf"]').tab('show');
+                }else if(i == 3){
+                    $('a[href="#cbs"]').tab('show');
+                }else if(i == 4){
+                    $('a[href="#nst"]').tab('show');
+                }else if(i == 5) {
+                    $('a[href="#pms"]').tab('show');
+                }
+            });
+
+            $(".dropdown-menu.ps a:first-child").click(function(){
+                $('a[href="#rsa"]').tab('show');
             });
 
             $(".dropdown-menu.ps a:nth-child(2)").click(function(){
-                $('#prod-list a[href="#avc"]').tab('show');
-                $('body,html').animate({
-                    scrollTop : 0
-                }, 800);
+                $('a[href="#avc"]').tab('show');
             });
 
             $(".dropdown-menu.ps a:nth-child(4)").click(function(){
-                $('#prod-list a[href="#mf"]').tab('show');
-                $('body,html').animate({
-                    scrollTop : 0
-                }, 800);
+                $('a[href="#mf"]').tab('show');
             });
 
             $(".dropdown-menu.ps a:nth-child(5)").click(function(){
-                $('#prod-list a[href="#nst"]').tab('show');
-                $('body,html').animate({
-                    scrollTop : 0
-                }, 800);
+                $('a[href="#nst"]').tab('show');
             });
 
             $(".dropdown-menu.ps a:nth-child(6)").click(function(){
-                $('#prod-list a[href="#pms"]').tab('show');
-                $('body,html').animate({
-                    scrollTop : 0
-                }, 800);
+                $('a[href="#pms"]').tab('show');
             });
 
-            //Resize container based on desktop or mobile viewport.
-            var size = screen.width;
-            if (size <= 991) {
-                document.getElementById("m-top").setAttribute("class", "container-fluid");
-            } else {
-                document.getElementById("m-top").setAttribute("class", "container");
-            }
+            $('#sms-slide').on('slide.bs.carousel', function (e){
+                var id = e.relatedTarget.id;
+                id = parseInt(id);
+                switch (id) {
+                    case 1:
+                        $('.bal-txt, .stm-txt, .help-txt').hide();
+                        $('.pin-txt').show();
+                        break;
+                    case 2:
+                        $('.pin-txt, .stm-txt, .help-txt').hide();
+                        $('.bal-txt').show();
+                        break;
+                    case 3:
+                        $('.pin-txt, .bal-txt, .help-txt').hide();
+                        $('.stm-txt').show();
+                        break;
+                    case 4:
+                        $('.stm-txt, .pin-txt, .bal-txt').hide();
+                        $('.help-txt').show();
+                        break;
+                    default:
+                        document.write("Not working");
+                }
+            });
+
+            $('#sms-area').mouseenter(function(){
+                if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+                    $('#sms-slide').carousel('pause');
+                    $('#sms-slide .carousel-control-next, #sms-slide .carousel-control-prev').css('display', 'flex');
+                }
+            }).mouseleave(function(){
+                if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+                    $('#sms-slide').carousel('cycle');
+                    $('#sms-slide .carousel-control-next, #sms-slide .carousel-control-prev').css('display', 'none');
+                }
+            });
         });
     </script>
 </body>
