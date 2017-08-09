@@ -673,6 +673,14 @@ input[type="text"].language::-webkit-input-placeholder {
   color: #fff;
 }
 
+#mc_embed_signup form {
+    padding: 10px 3% 10px 3% !important;
+}
+
+#mc-embedded-subscribe{
+    margin: 0px !important;
+}
+
 .m-logo{
     width: inherit !important;
     padding: 0;
