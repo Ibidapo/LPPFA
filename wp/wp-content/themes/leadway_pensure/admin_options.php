@@ -22,11 +22,13 @@ function theme_options_page()
         <form action="options.php" method="post">
 
             <?php
+
             if ($active_tab == 'main_options') {
                 settings_fields('theme_options');
                 do_settings_sections('theme');
             } else {
-
+                settings_fields('theme_social_options');
+                do_settings_sections('theme_socials');
             }
             ?>
 

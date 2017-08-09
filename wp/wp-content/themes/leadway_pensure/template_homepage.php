@@ -7,7 +7,7 @@ $hero_nav_items = [array_splice($hero_nav_items, 0, 2), array_splice($hero_nav_i
 $faq_items = get_field("faq_items");
 $customer_testimonials = get_field("customer_testimonials");
 
-//ddd($customer_testimonials);
+$social_options = get_option('theme_social_options');
 
 ?>
 <?php get_header(); ?>
@@ -20,7 +20,7 @@ $customer_testimonials = get_field("customer_testimonials");
             <div id="top-slide" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <?php foreach ($slider_images as $key => $image) { ?>
-                        <div class="carousel-item <?php if ($key === 0) echo 'active'?>">
+                        <div class="carousel-item <?php if ($key === 0) echo 'active' ?>">
                             <img src="<?php echo $image['url']; ?>" alt="Third slide">
 
                             <div class="carousel-caption d-none d-md-block">
@@ -83,7 +83,7 @@ $customer_testimonials = get_field("customer_testimonials");
                         <a class="nav-link" href="#"> Login </a>
                     </li>
                     <li class="nav-item">
-                        <a class="navbar-brand mOff pOf logo" href="<?php echo get_bloginfo( 'wpurl' );?>"><img
+                        <a class="navbar-brand mOff pOf logo" href="<?php echo get_bloginfo('wpurl'); ?>"><img
                                 src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" width="85"
                                 alt=""></a>
                     </li>
@@ -114,111 +114,114 @@ $customer_testimonials = get_field("customer_testimonials");
         </div>
     </div>
 
-    <?php if( $faq_items ): ?>
+    <?php if ($faq_items): ?>
 
-    <div class="row message-box-container">
-        <div class="col-12 col-md-5 col-lg-4 offset-lg-1 message-box text-center">
-            <p class="message-box" data-aos="fade-right">
-                <?= get_field("faq_text") ?>
-            </p>
-        </div>
-        <div class="col-12 col-md-7 col-lg-6 solutions hidden-sm-down text-center">
-            <h5> Some frequently asked questions </h5>
-
-            <div class="row">
-                <?php foreach ($faq_items as $key => $item) { ?>
-                <div class="col-12 col-sm-4">
-                    <p>
-                        <a href="<?= $item['link'] ?>"><i class="fa fa-chevron-right" aria-hidden="true"></i> <?= $item['title'] ?></a>
-                    </p>
-                </div>
-                <?php } ?>
-                <!--<div class="col-12 col-sm-4">
-                    <p><i class="fa fa-chevron-right" aria-hidden="true"></i> When to claim benefits?</p>
-                </div>
-                <div class="col-12 col-sm-4">
-                    <p><i class="fa fa-chevron-right " aria-hidden="true"></i> How to retrieve lost pin?</p>
-                </div>-->
+        <div class="row message-box-container">
+            <div class="col-12 col-md-5 col-lg-4 offset-lg-1 message-box text-center">
+                <p class="message-box" data-aos="fade-right">
+                    <?= get_field("faq_text") ?>
+                </p>
             </div>
-        </div>
-        <div class="col-12 solutions1 hidden-md-up text-center">
-            <h5> Some frequently asked questions </h5>
+            <div class="col-12 col-md-7 col-lg-6 solutions hidden-sm-down text-center">
+                <h5> Some frequently asked questions </h5>
 
-            <div class="row">
-                <?php foreach ($faq_items as $key => $item) { ?>
-                    <div class="col-12 col-sm-4">
-                        <figure>
-                            <img src="<?= $item['image']['url'] ?>" class="" alt="<?= $item['image']['alt'] ?>">
-                            <figcaption class="FAQ"> <?= $item['title'] ?></figcaption>
-                        </figure>
-                        <a href="<?= $item['link'] ?>" type="button" class="btn btn-outline-white space"> Read more</a>
+                <div class="row">
+                    <?php foreach ($faq_items as $key => $item) { ?>
+                        <div class="col-12 col-sm-4">
+                            <p>
+                                <a href="<?= $item['link'] ?>"><i class="fa fa-chevron-right"
+                                                                  aria-hidden="true"></i> <?= $item['title'] ?></a>
+                            </p>
+                        </div>
+                    <?php } ?>
+                    <!--<div class="col-12 col-sm-4">
+                        <p><i class="fa fa-chevron-right" aria-hidden="true"></i> When to claim benefits?</p>
                     </div>
-                <?php } ?>
+                    <div class="col-12 col-sm-4">
+                        <p><i class="fa fa-chevron-right " aria-hidden="true"></i> How to retrieve lost pin?</p>
+                    </div>-->
+                </div>
+            </div>
+            <div class="col-12 solutions1 hidden-md-up text-center">
+                <h5> Some frequently asked questions </h5>
+
+                <div class="row">
+                    <?php foreach ($faq_items as $key => $item) { ?>
+                        <div class="col-12 col-sm-4">
+                            <figure>
+                                <img src="<?= $item['image']['url'] ?>" class="" alt="<?= $item['image']['alt'] ?>">
+                                <figcaption class="FAQ"> <?= $item['title'] ?></figcaption>
+                            </figure>
+                            <a href="<?= $item['link'] ?>" type="button" class="btn btn-outline-white space"> Read
+                                more</a>
+                        </div>
+                    <?php } ?>
+                </div>
             </div>
         </div>
-    </div>
 
     <?php endif; ?>
 
 
     <!-- Customer Testimonials? -->
-    <?php if( $customer_testimonials ): ?>
-    <div class="row" style="position: relative">
-        <div class="customer-intro">We celebrate every customer !</div>
-        <div class="hidden-sm-down col-md-8 col-lg-7 offset-lg-1 customer-txt">
-            <?php foreach ($customer_testimonials as $key => $item) { ?>
-                <div id="<?= $key == 0 ? "grad-txt" : ($key == 1 ? "emp-txt" : "retr-txt") ?>">
-                    <?= $item['content'] ?>
-                </div>
-            <?php } ?>
-        </div>
-        <div class="hidden-sm-down col-md-4 col-lg-3 customer-pic">
-            <div id="customer-slide" class="carousel slide" data-ride="carousel" data-aos="fade-left">
-                <div class="carousel-inner" role="listbox">
-                    <?php foreach ($customer_testimonials as $key => $item) { ?>
-                        <div class="carousel-item <?= $key == 0 ? "active" : ""?>" id="<?= ++$key ?>">
-                            <img class="d-block mx-auto"
-                                 src="<?= $item['image']['url'] ?>"
-                                 alt="<?= $item['image']['alt'] ?>">
-                        </div>
-                    <?php } ?>
-                </div>
-                <a class="carousel-control-prev" href="#customer-slide" role="button" data-slide="prev">
-                    <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#customer-slide" role="button" data-slide="next">
-                    <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
-                    <span class="sr-only">Next</span>
-                </a>
+    <?php if ($customer_testimonials): ?>
+        <div class="row" style="position: relative">
+            <div class="customer-intro">We celebrate every customer !</div>
+            <div class="hidden-sm-down col-md-8 col-lg-7 offset-lg-1 customer-txt">
+                <?php foreach ($customer_testimonials as $key => $item) { ?>
+                    <div id="<?= $key == 0 ? "grad-txt" : ($key == 1 ? "emp-txt" : "retr-txt") ?>">
+                        <?= $item['content'] ?>
+                    </div>
+                <?php } ?>
             </div>
-        </div>
-        <div class="hidden-md-up col-12 customer-txt">
-            <div id="mob-customer-slide" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <?php foreach ($customer_testimonials as $key => $item) { ?>
-                        <div class="carousel-item <?= $key == 0 ? "active" : ""?>">
-                            <div class="card">
-                                <img class="card-img-top" src="<?= $item['image']['url'] ?>" alt="<?= $item['image']['alt'] ?>"/>
+            <div class="hidden-sm-down col-md-4 col-lg-3 customer-pic">
+                <div id="customer-slide" class="carousel slide" data-ride="carousel" data-aos="fade-left">
+                    <div class="carousel-inner" role="listbox">
+                        <?php foreach ($customer_testimonials as $key => $item) { ?>
+                            <div class="carousel-item <?= $key == 0 ? "active" : "" ?>" id="<?= ++$key ?>">
+                                <img class="d-block mx-auto"
+                                     src="<?= $item['image']['url'] ?>"
+                                     alt="<?= $item['image']['alt'] ?>">
+                            </div>
+                        <?php } ?>
+                    </div>
+                    <a class="carousel-control-prev" href="#customer-slide" role="button" data-slide="prev">
+                        <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#customer-slide" role="button" data-slide="next">
+                        <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hidden-md-up col-12 customer-txt">
+                <div id="mob-customer-slide" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <?php foreach ($customer_testimonials as $key => $item) { ?>
+                            <div class="carousel-item <?= $key == 0 ? "active" : "" ?>">
+                                <div class="card">
+                                    <img class="card-img-top" src="<?= $item['image']['url'] ?>"
+                                         alt="<?= $item['image']['alt'] ?>"/>
 
-                                <div class="card-block">
-                                    <?= $item['content'] ?>
+                                    <div class="card-block">
+                                        <?= $item['content'] ?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php } ?>
+                        <?php } ?>
+                    </div>
+                    <a class="carousel-control-prev" href="#mob-customer-slide" role="button" data-slide="prev">
+                        <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#mob-customer-slide" role="button" data-slide="next">
+                        <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-                <a class="carousel-control-prev" href="#mob-customer-slide" role="button" data-slide="prev">
-                    <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#mob-customer-slide" role="button" data-slide="next">
-                    <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
         </div>
-    </div>
     <?php endif; ?>
     <!-- /testimonials   -->
 
@@ -231,23 +234,33 @@ $customer_testimonials = get_field("customer_testimonials");
                     <div class="vids-txt">
                         <?= get_field("digital_section_content") ?>
                         <ul class="nav nav-justified hidden-sm-down">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-instagram fa-3x"
-                                                                aria-hidden="true"></i></a>
-                            </li>
+                            <?php if (isset($social_options['facebook'])): ?>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?= $social_options['facebook'] ?>"><i
+                                            class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+                                </li>
+                            <?php endif ?>
+                            <?php if (isset($social_options['twitter'])): ?>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?= $social_options['twitter'] ?>">
+                                        <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            <?php endif ?>
+                            <?php if (isset($social_options['instagram'])): ?>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?= $social_options['instagram'] ?>">
+                                        <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            <?php endif ?>
                         </ul>
                     </div>
                 </div>
                 <div class="col-12 col-md-7">
                     <div class="owl-carousel owl-theme">
                         <?php foreach (get_field('digital_section_videos') as $key => $item) { ?>
-                            <div class="item-video" data-merge="<?= ++$key?>">
+                            <div class="item-video" data-merge="<?= ++$key ?>">
                                 <a class="owl-video" href="<?= $item['youtube_link'] ?>"></a>
                             </div>
                         <?php } ?>
@@ -260,24 +273,14 @@ $customer_testimonials = get_field("customer_testimonials");
     <div class="row">
         <div class="col-12 col-lg-10 offset-lg-1 invest-bg">
             <div class="invest-txt" data-aos="fade-right">
-                <blockquote class="blockquote blockquote-reverse">
-                    <p class="mb-0">"If you're saving, you're<br> succeeding."</p>
-                    <footer class="blockquote-footer"><cite title="Source Title">Steve Burkholder</cite></footer>
-                </blockquote>
-                <p>A successful financial plan creates the neccessary foundation for future wealth creation and
-                    sustenance.</p>
-                <a href="#" class="btn btn-outline-white float-sm-right">Learn More</a>
+                <?= get_field("info_section_1") ?>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-md-5 col-lg-4 offset-lg-1 benefit-txt text-center">
             <div data-aos="fade-up">
-                <h3 class="hidden-md-down">Pensure Benefits</h3>
-                <h5 class="hidden-lg-up">Pensure Benefits</h5>
-
-                <p>Learn more about payment options and grounds for payment available to you.</p>
-                <a href="#" class="btn btn-outline-purple">Explore Benefits</a>
+                <?= get_field("info_section_2") ?>
             </div>
         </div>
         <div class="hidden-sm-down col-md-7 col-lg-6 benefit-bg">
@@ -289,42 +292,21 @@ $customer_testimonials = get_field("customer_testimonials");
             <div class="hidden-sm-down culture-pic"><img
                     src="<?php echo get_bloginfo('template_directory'); ?>/images/bulb.jpg" alt=""></div>
             <div class="culture-txt float-right">
-                <h3 class="hidden-md-down">Cultivating a culture of success</h3>
-                <h5 class="hidden-lg-up text-center">Cultivating a culture of success</h5>
-
-                <p>We've grown from strength to strength over the last decade, rewarding customers with higher
-                    interest rates and benefits for their benefits</p>
-
-                <div class="text-center text-md-right"><a href="" class="btn btn-outline-white">Download Financial
-                        Reports</a></div>
+                <?= get_field("info_section_3") ?>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="hidden-sm-down col-lg-11 call-s8 mx-auto">
             <div class="s8-txt">
-                <h4 class="text-center">No matter who you are or where you may be, we have a plan for you !</h4>
-
-                <p class="text-justify">Are you graduating, employed, about to retire? or retired, Our four tier
-                    solutions strategy ensures
-                    we can appeal to every consumer segment within the market place. Let's walk you through a plan </p>
-
-                <div class="text-center"><a href="" class="btn btn-outline-white" role="button" aria-pressed="true">Talk
-                        to Leadway</a></div>
+                <?= get_field("info_section_4") ?>
             </div>
             <div class="hidden-sm-down" id="s8-pic" data-aos="fade-left"><img
                     src="<?php echo get_bloginfo('template_directory'); ?>/images/mobile.png" alt=""></div>
         </div>
         <div class="hidden-md-up col-12 call-s8">
             <div class="s8-txt">
-                <h6 class="text-center">No matter who you are or where you may be, we have a plan for you !</h6>
-
-                <p class="text-justify">Are you graduating, employed, about to retire? or retired, Our four tier
-                    solutions strategy ensures
-                    we can appeal to every consumer segment within the market place. Let's walk you through a plan </p>
-
-                <div class="text-center"><a href="" class="btn btn-outline-white" role="button" aria-pressed="true">Talk
-                        to Leadway</a></div>
+                <?= get_field("info_section_4") ?>
             </div>
         </div>
     </div>
@@ -333,11 +315,9 @@ $customer_testimonials = get_field("customer_testimonials");
             <div class="hidden-sm-down reg-pic float-left" data-aos="fade"><img
                     src="<?php echo get_bloginfo('template_directory'); ?>/images/jar.png" alt=""></div>
             <div class="reg-txt float-right">
-                <p class="text-center">Need a pension account today?<br>
-                    Register with the <span style="color: #2068a6;">Leading</span> PFA today</p>
-
-                <div class="hidden-md-up text-center"><a href="#" class="btn btn-outline-blue">Get Started</a></div>
-                <span class="hidden-sm-down reg-btn"><a href="#" class="btn btn-outline-blue">Get Started</a></span>
+                <?= get_field("info_section_5") ?>
+                <div class="hidden-md-up text-center"><a class="btn btn-outline-blue" href="#">Get Started</a></div>
+                <span class="hidden-sm-down reg-btn"><a class="btn btn-outline-blue" href="#">Get Started</a></span>
             </div>
         </div>
     </div>

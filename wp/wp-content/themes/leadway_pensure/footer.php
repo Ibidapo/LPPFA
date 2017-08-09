@@ -1,3 +1,6 @@
+<?php
+$recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
+?>
 <!-- Footer of page -->
 <footer class="container-fluid">
     <hr class="hr-red">
@@ -7,30 +10,21 @@
         </div>
         <div class="col-12 col-md-6 newsFeed">
             <ul class="list-unstyled">
-                <li class="media">
-                    <img class="d-flex align-self-center mr-3"
-                         src="<?php echo get_bloginfo('template_directory'); ?>/images/vas.png" alt="" height=50
-                         width=50>
+                <?php foreach ($recent_news as $news) { ?>
+                    <li class="media">
+                        <img class="d-flex align-self-center mr-3"
+                             src="<?= get_the_post_thumbnail_url($news->ID); ?>" alt="" height="50">
 
-                    <div class="media-body">
-                        <h5 class="mt-0">Leadway unveils value added services</h5>
+                        <div class="media-body">
+                            <h5 class="mt-0"><?= $news->post_title ?></h5>
 
-                        <p>Following our masterplan to becoma a consumer oriented brand we have implemented... <a
-                                href="#">Read more</a></p>
-                    </div>
-                </li>
-                <li class="media">
-                    <img class="d-flex align-self-center mr-3"
-                         src="<?php echo get_bloginfo('template_directory'); ?>/images/vas.png" alt="" height=50
-                         width=50>
-
-                    <div class="media-body">
-                        <h5 class="mt-0">Leadway unveils value added services</h5>
-
-                        <p>Following our masterplan to becoma a consumer oriented brand we have implemented... <a
-                                href="#">Read more</a></p>
-                    </div>
-                </li>
+                            <p>
+                                <?= summary($news->post_content, 100) ?>
+                                <a style="color: black" href="<?= get_permalink($news) ?>">Read more</a>
+                            </p>
+                        </div>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
     </div>
@@ -67,59 +61,13 @@
         </div>
     </div>
     <div class="row text-center">
-        <div class="col-12 col-md-6 col-lg-3">
-            <h6>Regulatory Requirements</h6>
-            <nav class="nav flex-column">
-                <a class="nav-link active" href="#">Regulatory Information</a>
-                <a class="nav-link" href="#">Pension Reform Act</a>
-                <a class="nav-link" href="#"> Whistle Blowing</a>
-                <a class="nav-link" href="#">Code of Ethics and Conduct</a>
-                <a class="nav-link" href="#">Retired and Terminal Benefits</a>
-            </nav>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-            <h6>Quick Links</h6>
-            <nav class="nav flex-column">
-                <a class="nav-link active" href="#">Blog</a>
-                <a class="nav-link" href="#">Enroll Now</a>
-                <a class="nav-link" href="#">Benefits</a>
-                <a class="nav-link" href="#">Our Philosophy</a>
-                <a class="nav-link" href="#">Branch Network</a>
-            </nav>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 app">
-            <h6>Our Mobile App</h6>
-            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/hand.png" alt="">
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-            <h6> Our Game Board</h6>
-            <table class="table table-striped text-left mx-auto">
-                <thead>
-                <tr>
-                    <th> #</th>
-                    <th> Name</th>
-                    <th> Score</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>1.</th>
-                    <td> Ayo Thomas</td>
-                    <td> 10,000</td>
-                </tr>
-                <tr>
-                    <th>2.</th>
-                    <td> Kemi Juba</td>
-                    <td> 9,432</td>
-                </tr>
-                <tr>
-                    <th>3.</th>
-                    <td> Chinenye Dike</td>
-                    <td> 9,010</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+        <?php for ($i = 1; $i <= 4; $i++): ?>
+            <?php if (is_active_sidebar("footer_column_$i")) : ?>
+                <div class="col-12 col-md-6 col-lg-3 <?= $i == 3 ? 'app' : '' ?>">
+                    <?php strip_tags(dynamic_sidebar("footer_column_$i")) ?>
+                </div>
+            <?php endif; ?>
+        <?php endfor; ?>
     </div>
     <div class="row">
         <div class="col-12">

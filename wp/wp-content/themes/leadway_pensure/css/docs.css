@@ -493,3 +493,7 @@ div.intro-box{
 margin-top: 0;
 }
 }
+
+footer .textwidget ul {
+    padding-left: 0;
+}
