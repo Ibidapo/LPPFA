@@ -49,14 +49,18 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .btn-outline-blue, .btn-outline-blue-sm{
     -webkit-appearance: none !important;
     background-color: transparent;
-    border-radius: 25px;
+    border-radius: 25px !important;
     padding: 8px 15px;
     cursor: pointer;
     font-size: 0.85rem;
 }
 .btn-outline-red{
+<<<<<<< HEAD
+    border:1px solid red !important;
+=======
     border:2px solid red;
     padding: 5px 10px;
+>>>>>>> 703a4156ceab2eb627b58ba3ec2ed743477f5f31
     color: red;
 }
 .btn-outline-red:hover{
