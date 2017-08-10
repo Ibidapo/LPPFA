@@ -48,14 +48,14 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .btn-outline-red, .btn-outline-purple, .btn-outline-loc, .btn-subc, .btn-purple, .btn-outline-white, .btn-outline-white-sm,
 .btn-outline-blue, .btn-outline-blue-sm{
     -webkit-appearance: none !important;
-    background-color: transparent;
-    border-radius: 25px;
+    background-color: transparent !important;
+    border-radius: 25px !important;
     padding: 8px 15px;
     cursor: pointer;
     font-size: 0.85rem;
 }
 .btn-outline-red{
-    border:2px solid red;
+    border:2px solid red !important;
     padding: 5px 10px;
     color: red;
 }

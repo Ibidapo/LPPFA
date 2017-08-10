@@ -1,6 +1,9 @@
+figcaption{
+color: #7c7a7d !important;
+}
 #slider-icon figcaption{
  color: #7c7a7d !important;
-margin-top: 5px;
+ margin-top: 5px;
 }
 figcaption.FAQ{
 color: #9789ad !important;
@@ -17,8 +20,204 @@ margin:0 !important;
 }
 #wrapper {
 margin-top:3% !important;
--webkit-transform: translateZ(0px) !important;
+-webkit-transform: translateZ(0) !important;
 }
+.l-digest{
+border-radius: 17px !important;
+border: 1px solid red !important;
+}
+.l-height{
+height: 84px !important;
+}
+.f-height{
+    height: 100%;
+}
+#background{
+background: url(../images/eroll.jpg) no-repeat;
+background-size:cover;
+object-fit:contain;
+height:550px;
+box-shadow: 0 1px 7px #333;
+}
+.e-fields{
+border-radius:30px;
+}
+.form-control[readonly] {
+background: transparent;
+}
+#ad-text{
+font-size: 34px;
+color: white;
+font-weight: 100;
+}
+figcaption.back {
+color: white !important;
+}
+
+div.back {
+position: absolute;
+top: 56px;
+left: 67px;
+text-align: center;
+font-size: 9px;
+color:white !important;
+}
+
+.social-strip{
+width:80%;
+border:1px solid #b39fc2;
+margin:auto;
+}
+
+.chimp {
+ background: #ebebeb !important;
+ border: none !important;
+ border-radius: 20px !important;
+ padding: 5px !important;
+}
+
+#chimp-button {
+background:transparent !important;
+border:1px solid red !important;
+}
+#mc_embed_signup .mc-field-group{
+    width: 100% !important;
+}
+
+#mc_embed_signup{
+    background: transparent !important;
+}
+
+.ctips-button{
+margin-top: 10px !important;
+}
+
+#enroll-cont{
+padding-bottom: 120px;
+margin-bottom: 51px;
+}
+#token-form{
+background-color: rgba(139, 178, 210, 0.7);
+width: 71%;
+margin: auto;
+box-shadow: #333 0px -2px 21px;
+border-top-right-radius: 20px;
+border-top-left-radius: 20px;
+border: 1px solid #1f69a6;
+position: absolute;
+bottom: 23px;
+left: 101px;
+}
+
+.token-entry{
+background: #1f69a6;
+padding:2%;
+border-bottom-right-radius:40px;
+border-bottom-left-radius:40px;
+box-shadow: 0 1px 2px #333;
+position:absolute;
+left: 98px;
+}
+
+.form-pad{
+padding:14px;
+}
+
+.dz-remove{
+color: wheat !important;
+}
+
+.dropzone .dz-preview.dz-image-preview{
+ background: transparent !important;
+}
+
+.form-label{
+color: #fff ;
+font-size:.8em !important;
+}
+.enroll-tab{
+background: #1f69a6;
+z-index: 1;
+color: white;
+border-top-right-radius: 20px;
+border-top-left-radius: 20px;
+border: 1px solid white;
+padding:5px;
+}
+#req-tab{
+position: absolute;
+bottom: 1px;
+left: 25%;
+cursor:pointer;
+}
+#requ-tab{
+position: absolute;
+bottom: 1px;
+left: 50%;
+cursor:pointer;
+}
+#v-mob{
+font-size:.8em;
+position:absolute;
+top: 67%;
+left: 90px;
+}
+#requirement{
+  display: none;
+}
+#enroll-bg{
+    background: url(../images/e-bg.jpg) no-repeat;
+    background-size: cover;
+    color:white;
+    font-weight: 400;
+    font-family: Lato;
+}
+.p-id{
+ font-size:11px;
+}
+.p-id, .p-details {
+  margin-top: 8%;
+}
+.p-det-head{
+padding:1%;
+}
+#upload {
+background: transparent;
+border: 2px dashed #fff;
+min-width: 150px;
+}
+#confirm-view-height{
+height: 324px;
+overflow: scroll;
+}  
+#social{
+background-color: rgba(35, 60, 109, 0.74);
+margin-top: 14%;
+}
+.d-color{
+border: 1px solid white !important;
+width: 100% !important;
+margin-top: 0;
+}
+
+.f-space{
+margin-top: 50px;
+margin-bottom:50px;
+}
+
+.dz-image{
+    width:144px !important;
+    height:144px !important;
+}
+
+::-webkit-scrollbar{ 
+    background-color: rgba(4, 6, 5, 0.3); 
+}
+
+#kin, #kin-head,#kin-form, #kin-button, #employer, #employer-head,#employer-form, #employer-button,#biometrics,#biometrics-head,#biometrics-form,#biometrics-button,#confirm,#confirm-head,#confirm-form,#confirm-button{
+display: none;
+}
+
 nav.navbar table.table{
     display: inherit;
     background: rgba(0, 0, 0, .65);
@@ -79,20 +278,21 @@ table .form-group{
 .v-trends span{
     font-size: .8125rem;
 }
-select.language {
+select.language, input.language {
     background: transparent;
     font-size: 13px;
     padding: .25rem;
     border: none;
     color: white;
     cursor: pointer;
+    height: calc(2.25rem + 2px);
 }
 .navStyle2{
-    background: white;
-    box-shadow: 0 0 10px #333;
-    border-bottom-left-radius: 30px;
-    width: 100%;
-    height: 93px;
+background:#ffffff;
+border-bottom-left-radius: 30px;
+width: 100%;
+height: 93px;
+box-shadow: 0 0 10px #333;
 }
 .navStyle2 li:hover{
 background: #afc4dd;
@@ -203,6 +403,9 @@ text-align:center;
 color: #7f7f7f;
     margin-bottom: 2.5%;
 }
+#confirm-form{
+height: 324px;
+}
 .intro-box h3{
     margin-top: 10%;
 }
@@ -277,6 +480,78 @@ width: 30px;
 cursor: pointer;
 transition: opacity .25s ease;
 }
+.social-tab{
+    width:56% !important;
+    cursor: pointer;
+}
+.social-img{
+    width:56% !important;
+}
+.social-pane{
+    width:82%;
+    margin:auto;
+    background-color:#ffffff;
+    box-shadow:#333 1px 5px 7px ;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+ul.g-instruct{
+    background: rgba(254, 255, 240, 0.14);
+}
+a.g-instruct{
+    color:white !important;
+}
+
+.g-instruct.active{
+    background: #ed2124 !important;
+    border: 1px solid #1e68a5 !important;
+}
+
+#phone{
+top:60px;
+position:absolute;
+}
+
+#g-instruct{
+padding-left: 4%;
+padding-right: 4%;
+padding-top: 4%;
+color:white;
+}
+.social-feed{
+  padding:30px;
+}
+
+.game{
+    background: url(../images/hockey.png) no-repeat;
+    background-size: cover;
+    height:444px;
+}
+
+.social-heading{
+    color:white;
+    padding:14px;
+    font-size:3.5rem;
+    position: relative;
+    top: 8px;
+}
+
+.f-width{
+    float:left;
+}
+
+.parsley-required {
+    color: red !important;
+    font-size:9px !important;
+}
+
+.nav-tabs .nav-link.active{
+background: #1e68a5;
+box-shadow: #333 0px -3px 9px -1px;
+}
+.nav-tabs{
+    border:none;
+}
 .button_container.active .top {
     transform: translateY(10px) translateX(0) rotate(45deg);
 }
@@ -301,6 +576,38 @@ transition: opacity .25s ease;
 }
 .button_container span:nth-child(3) {
     top: 16px;
+}
+#sms-msg{
+position: absolute;
+top: 87px;
+left: 89px;
+}
+#enroll-msg{
+position: absolute;
+bottom: -20px;
+}
+.field-text{
+font-weight: 300;
+}
+.field-label{
+font-weight: 100;
+}
+.float{
+float: left;
+}
+.tab-content{
+    width:100%;
+}
+
+#feed{
+color:#1d69a6;
+top:40px;
+}
+.form-no{
+    border-radius:50%;
+    border:1px solid white;
+    padding:15%;
+    font-size:2em;
 }
 .overlay {
     display: none;
@@ -365,6 +672,19 @@ transition: opacity .25s ease;
 .overlay.open {
     display: block;
 }
+
+input[type="text"].language::-webkit-input-placeholder {
+  color: #fff;
+}
+
+#mc_embed_signup form {
+    padding: 10px 3% 10px 3% !important;
+}
+
+.news-button {
+    margin: 0 !important;
+}
+
 .m-logo{
     width: inherit !important;
     padding: 0;
@@ -387,10 +707,131 @@ transition: opacity .25s ease;
     width: calc(100% - 75px);
 }
 
+/*form styles*/
+#msform {
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+    /*stacking fieldsets above each other*/
+    position: absolute;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+    width: 100px;
+    background: #27AE60;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+#progressbar li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+}
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: white;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+    background: #27AE60;
+    color: white;
+}
+
+@media (max-width: 1700px){
+    .form-no{
+     font-size: 2.5em;
+    }
+}
 
 @media (max-width: 1300px){
     .navStyle2 ul .dropdown-menu.ps{
         left: -50% !important;
+    }
+     .form-no{
+     font-size: 2.5em;
     }
 }
 @media (max-width: 1200px){
@@ -406,7 +847,16 @@ transition: opacity .25s ease;
 }
 @media (max-width: 1100px){
     nav.navbar table.table td {
-        padding: 0 1rem;
+        padding: 0 0.85rem;
+    }
+    /* #requ-tab{
+        left: 53%;
+    }
+    #req-tab{
+        left:28%;
+    } */
+    .enroll-heading{
+      font-size: 0.8em;
     }
 }
 @media (max-width: 1100px) and (min-height: 1365px) {
@@ -417,13 +867,91 @@ transition: opacity .25s ease;
         margin-top: 5vh;
     }
 }
+
+@media(max-width:1147px) and (min-width: 992px) {
+ .enroll-tab {
+ font-size: 12px
+}
+}
+
+@media(max-width:1024px) {
+    .social-heading {
+       top:0;
+    }
+    .form-head-main{
+       font-size: 1.5em;
+    }
+    .form-head-sub{
+        font-size:.2em;
+    }
+    .form-no{
+        font-size: 1.5em;
+    }
+    .social-tab {
+        margin-top:14%;
+    }
+}
 @media (max-width: 991px){
+    .game{
+    height:390px;
+    }
     img.connect {
         width: 45%;
     }
     nav.m-style{
         height: 83px;
         background-color: #223e71;
+    }
+    div.back{
+     top: 86px;
+     left: 39px;
+    }
+    #ad-text{
+     font-size:27px;
+    }
+    #sms-msg{
+    top: 98px;
+    left: 52px;
+    font-size:25px;
+    }
+    #requ-tab, #req-tab{
+        font-size:11px;
+    }
+    /* #requ-tab{
+        left:56%;
+    }
+    #req-tab{
+        left:31%;
+    } */
+    .enroll-heading{
+        font-size:0.65em;
+    }
+    #enroll-msg{
+    left: 42px;
+    }
+    .form-pad{
+     padding: 11px;
+    }
+    #phone{
+    top:54px;
+    right: 10px;
+    }
+}
+@media(max-width:926px){
+    #v-mob{
+        font-size:0.3em !important;
+        left: 88px !important;
+    }
+}
+
+@media(max-width:850px){
+    div.back{
+        left: 10px;
+    }
+}
+@media(max-width:768px){
+    .intro-box {
+        margin-top: 2%;
     }
     .mob-search input:focus {
         width: calc(50% - 75px) !important;
@@ -433,26 +961,64 @@ transition: opacity .25s ease;
     }
 }
 @media(max-width:767px){
-.intro-box p{
-    font-size: 0.85rem;
-}
+    .intro-box p{
+        font-size: 0.85rem;
+    }
     .message-box{
         padding: 15px 30px;
     }
-p.message-box{
-font-size: 0.85rem;
-}
+    p.message-box{
+    font-size: 0.85rem;
+    }
     div.message-box-container{
         margin-bottom: 0 !important;
     }
-div.solutions{
-height: 33% !important;
-}
-button.b-style{
-font-size: 10px;
-}
+    div.solutions{
+    height: 33% !important;
+    }
+    button.b-style{
+    font-size: 10px;
+    }
     .solutions1 figure img{
         height: 80px;
+    }
+    .token-entry{
+        left: 70px;
+    }
+    div.back{
+        top: 3px;
+    }
+    #requ-tab{
+        left: 49%;
+    }
+    #req-tab{
+        left:16%;
+    }
+    .p-det-head {
+        padding-top: 0;
+    }
+    .form-no{
+        font-size: 1em;
+    }
+    .g-instruct{
+        font-size: 10px ;
+    }
+    #game{
+        height:373px;
+    }
+    #g-instruct {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    #game{
+        height:329px;
+    }
+    #phone{
+        top:11px;
+        right: 12px
+    }
+    .social-tab {
+        margin-top:32%;
     }
     .mob-search input:focus {
         width: calc(70% - 75px) !important;
@@ -460,20 +1026,28 @@ font-size: 10px;
 }
 @media(max-width:736px){
     h6.solutions, p.solutions{
-font-size: .5em! important;
-}
-button.FAQ{
-font-size: 10px
-}
-ul.style4{
-position: relative;
-top: 20px;
-}
-}
-@media(max-width:667px){
-
+        font-size: .5em !important;
+    }
+    button.FAQ{
+    font-size: 10px
+    }
+    ul.style4{
+    position: relative;
+    top: 20px;
+    }
+    #game{
+        height:304px;
+    }
+    #phone{
+        top:13px;
+        right: 10px
+    }
 }
 @media (max-width: 575px){
+    #social{
+     text-align: center; 
+     margin-top: 28%;   
+    }
     button.space1 {
         margin-bottom: 25%;
     }
@@ -483,9 +1057,95 @@ top: 20px;
     .solutions1 figure img {
         height: 64px;
     }
+
+    #enroll-cont{
+    padding-bottom: 234px;
+    }
+    .token{
+    right: 0;
+    }
+    #token-form{
+    width:78%;
+    left: 58px;
+    bottom:123px
+    }
+    .token-entry{
+    left:45px;
+    }
+    .form-pad {
+        padding: 8px;
+    }
+    .email-field,.token-field{
+     padding: 5%;
+    }
+    div.back{
+        top: 1px;
+        left: 224px;
+        font-size: 6px;
+    }
+    .back-logo{
+     width: 14%;
+    }
+    #requ-tab, #req-tab{
+        font-size:12px;
+    }
+    .enroll-heading {
+        font-size: 0.6em;
+}
+    #req-tab {
+    left: 8%;
+        }
+    .form-no{
+    padding: 32%;
+    }
+    .social-tab{
+    margin-top: 0;
+    }
+    .p-det-head {
+        padding: 4%;
+    }
+    .progressbar__label{
+        margin-top: 17px !important;
+    }
+    #a-name, #a-token, #progress-text{
+        font-size: 8px;
+    }
     .mob-search input:focus {
         width: calc(100% - 80px) !important;
     }
+    #g-instruct{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    .social-pane{
+        width: 96%;
+    }
+    #game{
+         height: initial;
+    }
+    #phone{
+         position: relative;
+         top: 0;
+         right: 0;
+         left: 0;
+    }
+}
+@media(max-width:425px){
+    #token-form{
+        left: 47px;
+    }
+    .token-entry{
+        left: 36px;
+    }
+    div.back{
+        left:139px;
+    }
+/* #requ-tab{
+        left: 50%;
+    }
+#req-tab{
+        left:17%;
+    }*/
 }
 @media(max-width:414px){
 .navbar-brand{
@@ -497,4 +1157,67 @@ font-size: .8rem;
 p.message-box{
 text-align: center;
 }
+li.style4{
+width:100%;
 }
+div.intro-box{
+margin-top: 0;
+}
+#ad-text{
+font-size: 24px;
+text-align: center;
+}
+#sms-msg{
+margin-top: 27%;
+}
+.enroll{
+  top:17%;
+  position:relative;
+}
+.token-entry{
+  left: 33px;
+}
+#token-form{
+ left: 42px
+}
+/* #requ-tab{
+        left: 50%;
+    }
+#req-tab{
+        left:17%;
+    }*/
+}
+@media(max-width:320px){
+#token-form{
+left: 36px;
+bottom: 79px;
+}
+.token-entry{
+left: 27px;
+}
+#enroll-cont {
+padding-bottom: 183px;
+}
+div.back{
+left:113px;
+}
+.progressbar__label{
+margin-top: 15px !important;
+}
+.form-head-main {
+    font-size: 1.2em;
+}
+.form-no {
+    padding: 24%;
+}
+.p-det-head {
+    padding: 3%;
+}
+/* #req-tab{
+left:17.5%;
+}
+ #requ-tab{
+ left:50.5%;
+}*/
+}
+
