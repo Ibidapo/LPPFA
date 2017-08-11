@@ -48,20 +48,21 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .btn-outline-red, .btn-outline-purple, .btn-outline-loc, .btn-subc, .btn-purple, .btn-outline-white, .btn-outline-white-sm,
 .btn-outline-blue, .btn-outline-blue-sm{
     -webkit-appearance: none !important;
-    background-color: transparent !important;
+    background-color: transparent;
     border-radius: 25px !important;
     padding: 8px 15px;
     cursor: pointer;
     font-size: 0.85rem;
 }
 .btn-outline-red{
+    background-color: transparent !important;
     border:2px solid red !important;
     padding: 5px 10px;
     color: red;
 }
 .btn-outline-red:hover{
     color: white;
-    background-color: red;
+    background-color: red !important;
 }
 .btn-outline-purple, .btn-outline-purple:hover, .btn-outline-purple:active, .btn-outline-loc:focus , .btn-outline-loc{
     font-size: 1rem;
@@ -1455,6 +1456,14 @@ footer .table td, .table th {
 }
 #share{
     bottom: 115px;
+}
+
+/*Styling for Mail Chimp*/
+#mc-embedded-subscribe {
+    display: inline-block !important;
+}
+#mc_embed_signup .mc-field-group input {
+    outline: none !important;
 }
 
 /*Styling for Body Section of Downloads Page*/
