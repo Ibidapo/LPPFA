@@ -125,6 +125,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 #scroll-btn{
     position: absolute;
     bottom: 40%;
+    left: 50%;
     width: 30px;
     height: 45px;
     margin-left: -15px;
