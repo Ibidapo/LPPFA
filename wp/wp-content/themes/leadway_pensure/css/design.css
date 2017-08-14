@@ -9,26 +9,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*Styling default Bootstrap classes*/
-.container-fluid, .container{
-    overflow: hidden;
-}
-.container-fluid{
-    padding-bottom: 10px;
-}
-.container{
-    box-shadow: 3px 0 5px -2px rgba(41, 43, 44, 0.37), -3px 0 5px -2px rgba(41, 43, 44, 0.37);
-}
 #m-top{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    margin-top: 143px;
+    overflow: hidden;
+    box-shadow: 3px 0 5px -2px rgba(41, 43, 44, 0.37), -3px 0 5px -2px rgba(41, 43, 44, 0.37);
 }
 .media-body {
-    color: grey !important;
+    color: #838080 !important;
 }
 footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-link:visited{
-    color: grey;
+    color: #838080;
     text-decoration: none;
     padding: .5em 2em;
+}
+.v-align{
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 
@@ -53,7 +55,8 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     font-size: 0.85rem;
 }
 .btn-outline-red{
-    border:1px solid red;
+    border:2px solid red;
+    padding: 5px 10px;
     color: red;
 }
 .btn-outline-red:hover{
@@ -117,7 +120,6 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 #scroll-btn{
     position: absolute;
     bottom: 40%;
-    left: 50%;
     width: 30px;
     height: 45px;
     margin-left: -15px;
@@ -133,11 +135,10 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 #scroll-btn div::before {
     position: absolute;
     top: 20%;
-    left: 53%;
+    left: calc(50% - 3px);
     content: '';
     width: 5px;
     height: 5px;
-    margin-left: -3px;
     background-color: white;
     border-radius: 50%;
     box-sizing: border-box;
@@ -183,12 +184,11 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
         opacity: 0;
     }
 }
-.customer-intro {
+.client-intro {
     position: absolute;
     top: -60px;
     width: 33%;
     height: 60px;
-    margin-left: 8.333333%;
     background-color: #bfd3ec;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
@@ -198,35 +198,47 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     padding: 15px 10px;
     text-align: center;
 }
-.customer-txt, .customer-pic{
+#client-area, .client-pic{
+    position: relative;
+    z-index: 1;
+}
+#client-area{
+    box-shadow: -4px -2px 9px -2px rgba(70, 74, 76, 0.15), 4px -2px 9px -2px rgba(70, 74, 76, 0.15);
+}
+.client-txt, .client-pic{
     background-color: #f7f7f9;
     color: #171616;
-    height:280px;
-    padding: 30px;
-    font-size: 1rem;
     font-weight: 300;
+    font-size: 1rem;
+    padding: 30px;
 }
-.customer-txt h3{
+.client-txt h3{
     margin-bottom: 15px;
 }
-.customer-pic{
-    position: relative;
+#customer-slide{
+    position: absolute;
+    top: -25px;
+    left: calc(50% - 88px);
+    width: 175px;
+}
+#customer-slide .carousel-item{
+    background-color: transparent;
+    height: 100%;
 }
 #customer-slide .carousel-item  img{
     object-fit: contain;
     width: 100%;
+    height: inherit !important;
 }
-#customer-slide .carousel-inner {
-    width: 85% ;
-    left: 15%;
+#customer-slide .carousel-control-next, #customer-slide .carousel-control-prev {
+    display: none;
+    color: rgba(0, 0, 0, 0.75);
 }
 #customer-slide .carousel-control-next{
-    right: -17%;
+    right: -40px;
 }
-#customer-slide{
-    position: absolute;
-    top: -35%;
-    right: 15%;
+#customer-slide .carousel-control-prev{
+    left: -40px;
 }
 #emp-txt, #retr-txt{
     display: none;
@@ -234,6 +246,9 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .vids-bg{
     background: url(../images/360.jpg) no-repeat center;
     background-size: cover;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    box-shadow: -4px 0 9px -2px rgba(70, 74, 76, 0.15), 4px 0 9px -2px rgba(70, 74, 76, 0.15);
 }
 .vids-txt{
     margin: 15% 0 0 15%;
@@ -262,6 +277,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     background-size: cover;
     height:400px;
     color: white;
+    box-shadow: -4px 0 9px -2px rgba(70, 74, 76, 0.15), 4px 0 9px -2px rgba(70, 74, 76, 0.15);
 }
 .blockquote-footer, .invest-txt blockquote{
     color: white;
@@ -284,6 +300,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     font-weight: 300;
     font-size: 1.25rem;
     padding-bottom: 25px;
+    box-shadow: -4px 0 9px -2px rgba(70, 74, 76, 0.15);
 }
 .benefit-txt h3, .benefit-txt h5{
     margin-top: 15%;
@@ -292,24 +309,24 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     padding: 15px;
 }
 .benefit-bg{
+    background: url(../images/Benefits.png) no-repeat center;
+    background-size: cover;
+    height: 400px;
     padding: 0;
-}
-.benefit-bg img{
-    object-fit: contain;
-    width: 100%;
+    box-shadow: 4px 0 9px -2px rgba(70, 74, 76, 0.15);
 }
 .culture{
     position: relative;
     padding: 0;
     height: 380px;
     background-color: #a890ba;
-    box-shadow: 9px 0 17px -7px rgba(70, 74, 76, 0.32), -6px 0 23px -4px rgba(41, 43, 44, 0.37);
+    box-shadow: -4px 0 9px -2px rgba(70, 74, 76, 0.15), 4px 0 9px -2px rgba(70, 74, 76, 0.15);
 }
 .culture-pic{
     position: absolute;
     width: 45%;
     top: -30%;
-    box-shadow: 9px 0 17px -7px rgba(70, 74, 76, 0.32), -6px 0 23px -4px rgba(41, 43, 44, 0.37);
+    box-shadow: 4px -4px 4px rgba(70, 74, 76, 0.15);
 }
 .culture img{
     object-fit: contain;
@@ -324,8 +341,16 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     font-size: 1.25rem;
     font-weight: 100;
 }
+.call-s8, .reg {
+    top: -10px;
+    left: -2.5%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 105%;
+    -ms-flex: 0 0 105%;
+    flex: 0 0 105%;
+    max-width: 105%;
+}
 .call-s8{
-    position: relative;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     background: linear-gradient(to bottom, #2068a6 0%, #a5a8d9 100%);
@@ -333,8 +358,8 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 #s8-pic{
     position: absolute;
-    width: 15%;
-    top: -15%;
+    width: 12%;
+    top: -20px;
     right: 7%;
 }
 #s8-pic img{
@@ -342,8 +367,8 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     width: 100%;
 }
 .s8-txt{
-    margin: 10% auto 5% 7%;
-    width: 67%;
+    margin: 7.5% auto 5% 7%;
+    width: 70%;
     color: white;
     font-size: 1.25rem;
     font-weight: 200;
@@ -355,8 +380,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     padding: 0;
 }
 .reg-pic{
-    position: relative;
-    width: 35%;
+    width: 30%;
 }
 .reg-pic img{
     object-fit: contain;
@@ -365,36 +389,39 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 .reg-txt{
     position: relative;
-    width: 65%;
-    font-size: 1.8rem;
+    width: 70%;
+    height: 100%;
+    font-size: 1.75rem;
     font-weight: 300;
     color: black;
 }
 .reg-txt p{
-    margin-top: 8%;
-    width: 68%;
+    position: relative;
+    width: 70%;
 }
 .reg-btn {
     position: absolute;
-    top: 50%;
     right: 0;
-    width: 32%;
+    width: 27%;
 }
 
 /*Styling for Body Section of Product & Services page*/
-.prod-banner{
+.prod-banner, .banner-dl{
     padding: 0;
-    margin-top: 143px;
 }
-.prod-banner img{
+.rsa-img, .avc-img, .sms-img, .cbs-img, .nst-img, .mf-img{
     object-fit: contain;
     width: 101%;
+    display: none;
+}
+.rsa-img{
+    display: block;
 }
 #rsa, #avc, #nst, #mf, #pms{
     background: url("../images/products-bg.jpg") no-repeat center;
     background-size: cover;
 }
-#rsa p, #avc p, #nst p, #mf p, #pms p{
+#rsa p, #avc p, #nst p, #mf p, #cbs p, #pms p{
     margin: 35px 20px;
 }
 #rsa p i, #avc p i, #nst p i, #mf p i{
@@ -423,10 +450,10 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     border-bottom-right-radius: 20px;
 }
 #prod-list li {
-    display: table;
-    height: 16.9%;
+    height: 16.8%;
     width: 101%;
     border-bottom: 1px solid #1f6aa4;
+    padding: 0 10px;
 }
 #prod-list li:last-child{
     border-bottom: none;
@@ -435,45 +462,64 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     background-color: #1f6aa4;
 }
 #prod-list li a{
-     display: table-cell;
-     vertical-align: middle;
-     width: 100%;
-    color: #9a89b3;
-     padding: 0;
-     font-weight: 500;
+    position: relative;
+    top: 50%;
+    color: #1f6aa4;
+    padding: 1rem;
+    font-weight: 500;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
-#prod-list li.show a{
-    color: white;
+#prod-list li a:hover{
+    text-decoration: underline;
+}
+#prod-list li.show a, #prod-list li.show a:hover {
+     color: white;
+    text-decoration: none;
 }
 .img-box {
     position: relative;
     width: 75%;
 }
-.img-box img{
+.img-box > img{
     width: 75%;
 }
 #sms-slide{
     position: absolute;
-    top: 15.55%;
-    left: 17%;
+    top: 15%;
+    left: 19%;
+    width: 63%;
 }
 #sms-slide .carousel-item{
-    background-color: white;
-    height: 357px;
-    width: 218px;
+    background-color: transparent;
+    height: 100%;
+}
+#sms-slide .carousel-item img{
+    object-fit: contain;
+    width: 100%;
+    height: inherit;
+}
+#sms-slide .carousel-control-next, #sms-slide .carousel-control-prev {
+    display: none;
+    color: rgba(0, 0, 0, 0.75);
 }
 #sms-slide .carousel-control-prev {
     left: -50px;
 }
 #sms-slide .carousel-control-next {
-    right: -50px;
+    right: -48px;
 }
-#sms-slide .carousel-caption{
-    top: 20px;
-    left: 10px;
-    right: 10px;
-    bottom: 0;
-    color: #2466a2;
+.pin-txt, .bal-txt, .stm-txt, .help-txt{
+    display: none;
+    height: 100%;
+    width: 100%;
+    padding: 20px 0;
+}
+.pin-txt{
+    display: block;
 }
 
 /* Styling for Body Section of Contact Us page */
@@ -484,7 +530,6 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     font-weight: 300;
     height: 100px;
     padding-top: 25px;
-    margin-top: 143px;
 }
 .contact-bg{
     padding: 0;
@@ -520,53 +565,67 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     background-color: #e1e1e1;
 }
 .location{
-    background-color: #a9bcdc;
+    background-color: rgba(56, 125, 194, .8);
 }
 .location h1, .location h3{
     margin: 25px 0;
     font-weight: 300;
     color: white;
 }
-.location .nav-link {
+.location .nav-link , .know .nav-link {
     color: white !important;
     border: none;
 }
-.location a.nav-link::after {
+.know .nav-link {
+    color: #2067a5 !important;
+}
+.location a.nav-link::after, .know a.nav-link::after {
     content: '';
     display: block;
     width: 0;
     height: 4px;
-    background: #e1e1e1;
+    background: white;
     transition: width .3s;
     position: relative;
-    top: 7px;
+    top: 8px;
 }
-.location a.nav-link.active::after, .location a.nav-link:hover::after, .location a.nav-link:focus::after {
+.know a.nav-link::after {
+    background: #2067a5;
+    height: 3px;
+}
+.location a.nav-link.active::after, .location a.nav-link:hover::after, .location a.nav-link:focus::after,
+.know a.nav-link.active::after, .know a.nav-link:hover::after, .know a.nav-link:focus::after {
     width: 100%;
 }
-.location .nav-tabs {
+.location .nav-tabs, .know .nav-tabs {
+    position: relative;
+    bottom: 1px;
     border-bottom: 0;
 }
-.location .nav-tabs .nav-item.show .nav-link, .location .nav-tabs .nav-link.active {
+.location .nav-tabs .nav-item.show .nav-link, .location .nav-tabs .nav-link.active{
     background-color: transparent !important;
 }
 /*Note:Accordion5 is for career page*/
-#accordion1, #accordion2, #accordion3, #accordion4, #acordion5{
+#accordion1, #accordion2, #accordion3, #accordion4, #accordion5, #accordion6, #accordion7, #accordion8, #accordion9, #accordion10 {
     margin: 25px auto;
     width: 90%;
 }
-#accordion1 .card, #accordion2 .card, #accordion3 .card, #accordion4 .card,  #accordion5 .card{
+#accordion1 .card, #accordion2 .card, #accordion3 .card, #accordion4 .card, #accordion5 .card, #accordion7 .card, #accordion8 .card,
+#accordion9 .card, #accordion10 .card {
     background: transparent;
     margin: 10px auto;
     border: 2px solid #4c4648;
     border-radius: 25px;
 }
-#accordion1 .card .card-header, #accordion2 .card .card-header, #accordion3 .card .card-header, #accordion4 .card .card-header, #accordion5 .card .card-header{
+#accordion1 .card .card-header, #accordion2 .card .card-header, #accordion3 .card .card-header, #accordion4 .card .card-header,
+#accordion5 .card .card-header, #accordion6 .card .card-header, #accordion7 .card .card-header, #accordion8 .card .card-header,
+#accordion9 .card .card-header, #accordion10 .card .card-header{
      background: transparent;
      border-bottom: none;
      text-align: center;
  }
-#accordion1 a, #accordion2 a, #accordion3 a, #accordion4 a, #accordion5 a {
+#accordion1 a, #accordion2 a, #accordion3 a, #accordion4 a, #accordion5 a, #accordion7 a, #accordion8 a, #accordion9 a,
+#accordion10 a{
     color: #4c4648;
     text-decoration: none;
 }
@@ -611,14 +670,16 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 
 /*Styling for Body Section of Career Page*/
-.career-bg{
+.career-bg, .investment-bg, .company-bg, .benefits-bg{
     position: relative;
     height: 550px;
-    background: url(../images/career-bg.jpg);
     background-size: cover;
     margin-top: 100px;
     padding: 0;
     color: white;
+}
+.career-bg{
+    background: url(../images/career-bg.jpg);
 }
 .bg-head{
     position: absolute;
@@ -633,7 +694,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .bg-txt{
     position: absolute;
     bottom: 0;
-    background-color: rgba(168, 144, 186, .8);
+    background-color: rgba(32, 104, 164, .7);;
     font-size: 1.125rem;
     font-weight: 300;
 }
@@ -644,18 +705,18 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .bg-txt p a{
     margin-top: 15px;
 }
-.career-tab{
+.career-tab, .company-tab, .benefits-tab{
     background-color: #4b78af;
     box-shadow: 0 5px 5px -5px #333;
     z-index: 99;
 }
-.career-tab .nav-link {
+.career-tab .nav-link, .company-tab .nav-link, .board .nav-link, .benefits-tab .nav-link {
     color: white !important;
     border: none;
     padding: 1rem;
     font-weight: 300;
 }
-.career-tab a.nav-link::before {
+.career-tab a.nav-link::before, .company-tab a.nav-link::before, .benefits-tab a.nav-link::before {
     position: relative;
     top: -16px;
     content: '';
@@ -666,13 +727,18 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     transition: width .3s;
     margin: auto;
 }
-.career-tab a.nav-link.active::before, .career-tab a.nav-link:hover::before, .career-tab a.nav-link:focus::before {
+.career-tab a.nav-link.active::before, .career-tab a.nav-link:hover::before, .career-tab a.nav-link:focus::before,
+.company-tab a.nav-link.active::before, .company-tab a.nav-link:hover::before, .company-tab a.nav-link:focus::before,
+.benefits-tab a.nav-link.active::before, .benefits-tab a.nav-link:hover::before, .benefits-tab a.nav-link:focus::before{
     width: 55%;
 }
-.career-tab .nav-tabs {
+.career-tab .nav-tabs, .company-tab .nav-tabs, .board, .benefits-tab .nav-tabs {
     border-bottom: 0;
 }
-.career-tab .nav-tabs .nav-item.show .nav-link, .career-tab .nav-tabs .nav-link.active {
+.career-tab .nav-tabs .nav-item.show .nav-link, .career-tab .nav-tabs .nav-link.active,
+.company-tab .nav-tabs .nav-item.show .nav-link, .company-tab .nav-tabs .nav-link.active,
+.board .nav-link.show, .board .nav-link.active, .benefits-tab .nav-tabs .nav-item.show .nav-link,
+.benefits-tab .nav-tabs .nav-link.active {
     background-color: transparent !important;
 }
 #vac{
@@ -687,17 +753,16 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     color: #4b78af;
     font-weight: 300;
 }
-#vac #accordion5 h6{
+#vac #accordion5 h6 {
     color: #a990ba;
 }
-#cv, #alm{
+#alm, #cbs, #csr, #f-rep {
     height: 500px;
+
 }
-#cv{
-    background-color: #869791;
-}
-#alm{
-    background-color: #464a4c;
+#alm > h1, #cbs > h1, #csr > h1, #f-rep > h1 {
+    color: #4b78af;
+    margin-top: 206px;
 }
 .hanger{
     position: relative;
@@ -725,10 +790,6 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     width: 80%;
     margin-bottom: 10px;
 }
-.sub-box input{
-    border: 2px solid #e2e2e0;
-    border-radius: 25px;
-}
 .pen-calc-bg{
     height: 300px;
     background: url(../images/pen-calc.jpg);
@@ -752,12 +813,10 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     font-weight: 300;
 }
 .cult-box1, .cult-box2, .cult-box3, .cult-box4, .cult-box5, .cult-box6{
-    display: table;
     height: 240px;
 }
 .career-cult-box p, .career-cult-box h3{
-    display: table-cell;
-    vertical-align: middle;
+    position: relative;
     color: white;
 }
 .cult-box1{
@@ -781,6 +840,451 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 .cult-box6{
     background-color: #c0d4ec;
+}
+#cv h4{
+    margin-top: 30px;
+}
+#cv label{
+    margin-bottom: 0;
+}
+#cv input, #sign input, #feed input, .sub-box input, .comp-prof input, #calc-page input{
+    background: #ebebeb;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    padding: .25rem .75rem;
+}
+#cv textarea, #cv select, #feed textarea {
+    background: #ebebeb !important;
+    border: none !important;
+    border-radius: 20px !important;
+}
+#cv select{
+    height: 30px;
+    padding: .25rem .75rem;
+}
+#cv input:focus, #sign input:focus, #feed input:focus, #feed textarea:focus, #cv textarea:focus, #cv select:focus, .sub-box input:focus,
+.comp-prof input:focus, #calc-page input:focus{
+    background-color: #ebebeb;
+    box-shadow: 0 0 5px #333;
+    padding: .25rem .75rem;
+}
+#cv .custom-file {
+    width: 75%;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 20px;
+}
+#cv .custom-file input {
+    position: absolute;
+    left: -114px;
+    width: 100%;
+}
+#cv .custom-file input, #cv .custom-file-control{
+    opacity: 1;
+    height: inherit;
+    background: none;
+    outline: none;
+    box-shadow: none;
+}
+#cv .custom-file-control{
+    border: none;
+}
+.custom-file-control:lang(en)::after {
+    content: " " !important;
+}
+.fileNB{
+    display: block;
+    color: red !important;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+.career-tab form, .company-tab form, .benefits-tab form{
+    margin-top: 1rem;
+}
+
+/*Styling for Body Section of Investment Page*/
+.investment-bg{
+    background: url(../images/investment-bg.jpg) no-repeat center;
+    background-size: cover;
+}
+.invest-calc, .multi-fund, .invest-rep, .invest-chart {
+    height: 400px;
+    color: white;
+}
+.invest-calc{
+    background: url(../images/invest-calc.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+.invest-calc-txt, .invest-chart-txt{
+    position: absolute;
+    bottom: 30px;
+}
+.invest-calc-txt{
+    right: 30px;
+}
+.multi-fund{
+    background-color: #7f7f7f;
+    padding: 0 30px;
+}
+.multi-fund-txt, .invest-rep-txt, .comp-prof form, .prof-label, .dir-img figure{
+    position: relative;
+}
+.multi-fund-txt img{
+    width: 120px;
+    margin-bottom: 10px;
+}
+.invest-rep{
+    background-color: #2067a5;
+    padding-left:  5%;
+    padding-right: 5%;
+}
+.invest-rep-txt > p {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.invest-rep-txt > ul, #downld ul{
+    list-style-type: none;
+    padding: 0;
+}
+.invest-rep-txt > ul > li {
+    border-bottom: 2px solid white;
+    padding: 5px;
+}
+.invest-rep-txt > ul > li > .fa-chevron-right::before {
+    position: relative;
+    font-size: 12px;
+    color: white;
+    top: -2px;
+}
+.invest-rep-txt > ul > li > a {
+    color: white;
+    font-weight: 300;
+}
+.invest-chart{
+    background: url(../images/invest-chart.jpg) no-repeat center;
+    background-size: cover;
+}
+.invest-chart-txt{
+    right: 90px;
+}
+.know{
+    box-shadow: 0 4px 5px -5px #333;
+}
+.know > h1 {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    color: #2067a5;
+}
+#f-mkt, #w-plan, #r-plan, #p-fund, #pod{
+    height: 400px;
+    padding-top: 170px;
+    background-color: rgba(32, 103, 165, 0);
+}
+
+/*Styling for Body Section of Company Page*/
+.company-bg{
+    background: url(../images/company-bg.jpg);
+    background-size: cover;
+}
+#compTab img, #benefitsTab img{
+    height: 60px;
+    width: 60px;
+}
+#meet, #lead{
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    -webkit-box-shadow:  10px 0 10px -10px rgba(41, 43, 44, 0.5), -10px 0 10px -10px rgba(41, 43, 44, 0.5), 0 10px 10px -10px rgba(41, 43, 44, 0.5);
+    -moz-box-shadow:  10px 0 10px -10px rgba(41, 43, 44, 0.5), -10px 0 10px -10px rgba(41, 43, 44, 0.5), 0 10px 10px -10px rgba(41, 43, 44, 0.5);
+    box-shadow: 10px 0 10px -10px rgba(41, 43, 44, 0.5), -10px 0 10px -10px rgba(41, 43, 44, 0.5), 0 10px 10px -10px rgba(41, 43, 44, 0.5);
+}
+.comp-prof, .board{
+    background-color: #223e70;
+}
+.comp-prof{
+    height: 100px;
+}
+.prof-label{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.comp-prof .btn{
+    padding: 5px 10px;
+    color: white !important;
+    margin-left: 1rem;
+}
+.mission {
+    position: relative;
+    background-color: #e2e2e0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.vr{
+    position: absolute;
+    border-right: 1px solid #796b78;
+}
+.mission > .vr{
+    top: 15%;
+    left: calc(50% - 1px);
+    height: 70%;
+}
+.mission p {
+    margin: 0 20px;
+}
+#accordion6 .card{
+    background: white;
+    margin: 5px auto;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.875rem;
+}
+#accordion6 .card .card-header {
+    padding: 10px;
+}
+#accordion6 a {
+    color: #796b78;
+    text-decoration: none;
+}
+.comps{
+    position: relative;
+    background: #c0d4ec;
+    height: 450px;
+}
+.comps > .vr{
+    top: 30%;
+    left: calc(33.33% - 1px);
+    height: 40%;
+    border-right: 1px solid white;
+}
+.comps h1, .comps h3{
+    position: relative;
+    color: white;
+    font-weight: 300;
+}
+#comps-slide {
+    padding-top: 10px;
+}
+#comps-slide .carousel-inner .card {
+    background-color: transparent;
+    border: none;
+}
+#comps-slide .carousel-control-next, #comps-slide .carousel-control-prev{
+    padding-top: 30px;
+    bottom: 50%;
+    color: rgba(0, 0, 0, 0.75);
+}
+.custodian{
+    padding: 15px;
+}
+.custodian h3{
+    margin: 20px;
+}
+.custodian .card {
+    border: none;
+    background-color: transparent;
+}
+.custodian .card-block {
+    font-size: 0.875rem;
+}
+.board{
+    position: relative;
+}
+.board-mgt .nav-tabs{
+     border-bottom: 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.board-mgt .nav-link, #ab-ret .nav-link, #pay-grnd .nav-link, #pay-type .nav-link{
+    padding: 0 1rem;
+    font-size: 1.375rem;
+    color: #464a4c;
+}
+.board-mgt .nav-tabs .nav-item.show .nav-link, .board-mgt .nav-tabs .nav-link.active, .board-mgt .nav-tabs .nav-link:focus,
+.board-mgt .nav-tabs .nav-link:hover, #ab-ret .nav-tabs .nav-item.show .nav-link, #ab-ret .nav-tabs .nav-link.active,
+#ab-ret .nav-tabs .nav-link:focus, #ab-ret .nav-tabs .nav-link:hover, #pay-grnd .nav-tabs .nav-item.show .nav-link,
+#pay-grnd .nav-tabs .nav-link.active,  #pay-grnd .nav-tabs .nav-link:focus, #pay-grnd .nav-tabs .nav-link:hover,
+#pay-type .nav-tabs .nav-item.show .nav-link, #pay-type .nav-tabs .nav-link.active, #pay-type .nav-tabs .nav-link:focus,
+#pay-type .nav-tabs .nav-link:hover{
+    color: #4b78af;
+    border: 1px solid white;
+}
+.board-mgt .nav-tabs .nav-item.show .nav-link, .board-mgt .nav-tabs .nav-link.active, #ab-ret .nav-tabs .nav-item.show .nav-link,
+#ab-ret .nav-tabs .nav-link.active, #pay-grnd .nav-tabs .nav-item.show .nav-link, #pay-grnd .nav-tabs .nav-link.active,
+#pay-type .nav-tabs .nav-item.show .nav-link, #pay-type .nav-tabs .nav-link.active{
+    text-decoration: underline;
+}
+.board-mgt .nav-tabs .nav-item:nth-child(1){
+    border-right: 1px solid #464a4c;
+}
+.board-mgt .nav-tabs .nav-item:nth-child(2){
+    border-left: 1px solid #464a4c;
+}
+.board .designation {
+    font-size: 0.875rem;
+}
+.board .nav-link.active, .designation {
+    font-weight: 500;
+}
+.board .nav-link.active .designation {
+    font-weight: 400;
+}
+.tag{
+    position: absolute;
+    height: 60px;
+    top: -60px;
+    width: 30%;
+    left: 35%;
+    font-size: 1.75rem;
+    color: white;
+    padding: 10px;
+    font-weight: 300;
+    background-color: #c0d4ec;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+#dir1, #dir2, #dir3, #dir4, #dir5, #dir6, #dir7, #dir8, #dir9, #mgt1, #mgt2, #mgt3, #mgt4, #mgt5, #mgt6, #mgt7, #mgt8 {
+    margin-bottom: 50px;
+    padding: 25px 0;
+}
+#dir1 p, #dir2 p, #dir3 p, #dir4 p, #dir5 p, #dir6 p, #dir7 p, #dir8 p, #dir9 p,
+#mgt1 p, #mgt2 p, #mgt3 p, #mgt4 p, #mgt5 p, #mgt6 p, #mgt7 p, #mgt8 p{
+    padding: 0 25px;
+}
+.dir-img figure{
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.dir-img figure img{
+    width: 70%;
+}
+.dir-img figcaption{
+    font-size: 1.25rem;
+    color: #4b78af;
+}
+
+/*Styling for Body Section of Benefits Page*/
+.benefits-bg {
+    background: url(../images/gift.jpg) no-repeat center;
+    background-size: cover;
+}
+.benefits-bg .bg-txt {
+    background-color: transparent;
+    bottom: 20%;
+    left: 5%;
+    width: 40%;
+}
+.benefits-bg > .bg-txt > p{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    width: unset;
+ }
+.benefits-bg > .bg-txt > h1 > span, .benefits-bg > .bg-txt > h2 > span{
+    color: #37afc0;
+    font-weight: 600;
+}
+#ab-ret .nav-tabs, #pay-grnd .nav-tabs, #pay-type .nav-tabs {
+    border-bottom: 0;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+#ab-ret .nav-tabs .nav-link, #pay-grnd .nav-tabs .nav-link, #pay-type .nav-tabs .nav-link{
+    font-size: 1rem;
+}
+#ab-ret .nav-tabs .nav-item, #pay-grnd .nav-tabs .nav-item, #pay-type .nav-tabs .nav-item{
+    border-right: 1px solid #4b78af;
+}
+#ab-ret .nav-tabs .nav-item:last-child, #pay-grnd .nav-tabs .nav-item:last-child, #pay-type .nav-tabs .nav-item:last-child{
+    border-right: none;
+}
+#ab-ret img, #pay-grnd img, #pay-type img {
+    position: relative;
+    object-fit: contain;
+    width: 80%;
+}
+
+/*Styling for Body section of Calculator page*/
+#calc-page{
+    margin-top: 143px;
+    box-shadow: none;
+}
+#calc-page h5, #calc-page h3 {
+    margin: 1.5rem 0 1rem 0;
+    color: #2068a4;
+}
+#calc-page .d-claim{
+    position: absolute;
+    top: -52px;
+    right: 15px;
+}
+#calc-page form{
+    margin-top: 1rem
+}
+#calc-page input {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#calc-page label {
+    font-size: 0.85rem;
+}
+#calc-page fieldset label, #calc-page fieldset input{
+    color: #2068a4;
+    font-weight: 500;
+}
+.calc-nb {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #2068a4
+}
+.calc-nb span {
+    font-weight: 500;
+}
+#des-monthly, #pro-monthly {
+    margin-bottom: 1rem;
+}
+#disclaim-overlay{
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+    color: white !important;
+    background-color: rgba(63, 69, 117, .9);
+    z-index: 9;
+}
+#disclaim-overlay li{
+    margin-bottom: .5rem;
+}
+#agree{
+    margin-right: 30px;
+}
+#blue-vr{
+    border-right: 1px solid #2068a4;
+    margin-bottom: 1rem;
+}
+
+/*Styling for Body Section of FAQs page*/
+#faq h3 {
+    margin: 2rem 0 1rem 0;
+    color: #2068a4
+}
+#accordion7 .card, #accordion8 .card, #accordion8 .card, #accordion9 .card, #accordion10 .card{
+     border: 2px solid #e2e2e0;
+     text-align: center;
+}
+#accordion7 .card .card-header, #accordion8 .card .card-header, #accordion9 .card .card-header, #accordion10 .card .card-header {
+    background: #e2e2e0;
+    border-radius: 23px;
 }
 
 /*Styling for Footer Section*/
@@ -814,13 +1318,10 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     padding:0;
     -webkit-user-select: none;
 }
-.newsFeed ul li { margin-bottom:40px; }
+.newsFeed ul li { margin-bottom:35px; }
 .newsFeed ul li a {
-    color: #fff;
+    color: red;
     text-decoration: none;
-    font: 14px Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -webkit-user-select: none
 }
 .newsFeed ul:hover { animation-play-state: paused }
 footer form{
@@ -828,12 +1329,14 @@ footer form{
 }
 footer .nav .nav-link{
     font-size: 0.85rem;
+    font-weight: 300;
     padding: .25em 2em;
 }
 footer h6{
     font-weight: 500;
     color: #838080;
     margin-top: 25px;
+    text-decoration: underline;
 }
 footer .table td, .table th {
     padding: 4px;
@@ -851,7 +1354,7 @@ footer .table td, .table th {
 #back-top, #share, #print{
     position: fixed;
     display: none;
-    right: 30px;
+    right: 15px;
     background-color: #a890ba;
     color: white;
     text-align: center;
@@ -861,6 +1364,8 @@ footer .table td, .table th {
     border-radius: 50%;
     font-size: 20px;
     box-shadow: 0 4px 5px -1px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 4px 5px -1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 4px 5px -1px rgba(0,0,0,0.5);
     cursor: pointer;
     z-index: 999;
 }
@@ -868,22 +1373,58 @@ footer .table td, .table th {
     box-shadow: 0 2px 2px -1px rgba(0,0,0,0.5);
 }
 #back-top{
-    bottom: 20px;
+    bottom: 15px;
 }
 #print{
-    bottom: 70px;
+    bottom: 65px;
 }
 #share{
-    bottom: 120px;
+    bottom: 115px;
+}
+
+/*Styling for Body Section of Downloads Page*/
+.banner-dl img{
+    object-fit: contain;
+    width: 100%;
+}
+#downld{
+    margin-bottom: 2rem;
+}
+#downld h4 {
+    color: #2068a4;
+}
+#downld > div {
+    margin-top: 5%;
+    padding-left: calc(10% - 15px);
+}
+#downld ul li a{
+    color: #2068a4 !important;
+}
+
+/*Styling for Body Section of Terms & Condition and Privacy Policy Page*/
+.terms {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+.terms h3, .terms h4, .terms h5 {
+    color: #2068a4;
+}
+.terms h3 {
+    margin: 2rem 0 1rem 0;
+}
+.terms h4{
+    margin: 1.5rem 0 1rem 0;
+}
+.terms h5{
+    margin: 1rem 0;
 }
 
 /*Styling for Font Awesome Icons*/
-.fa-chevron-left:before, .fa-chevron-right:before{
-    color: black;
+.solutions .fa-chevron-right::before ,#downld .fa-chevron-right::before  {
+    color: #a890ba !important;
 }
-.solutions .fa-chevron-right:before {
-    color: #1f69a5;
-    font-weight: 100;
+.solution .fa-chevron-right::before{
     font-size: smaller;
 }
 
@@ -898,13 +1439,70 @@ footer .table td, .table th {
     width: 100%;
 }
 #slider-icon{
-    padding: 0;
+    padding: 0 5%;
     height: 15vh;
     margin-top: 5vh;
     overflow: hidden;
 }
 
 /* Media Queries */
+@media (min-width: 1400px) {
+    .s8-txt {
+        width: 72%;
+    }
+    .reg-pic {
+        width: 25%;
+    }
+    .reg-txt {
+        width: 75%;
+    }
+    img.connect {
+        width: 75%;
+    }
+    .benefit-bg {
+        height: 430px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .s8-txt {
+        width: 73%;
+    }
+    img.connect {
+        width: 60%;
+    }
+    .benefit-bg {
+        height: 450px;
+    }
+    .navStyle2 ul .dropdown-menu.in {
+        left: -100% !important;
+    }
+}
+
+@media (min-width: 1600px) {
+    .reg-pic {
+        width: 22.5%;
+    }
+    .reg-txt {
+        width: 77.5%;
+    }
+    #ab-ret img, #pay-grnd img, #pay-type img {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1800px) {
+    .reg-pic {
+        width: 20%;
+    }
+    .reg-txt {
+        width: 80%;
+    }
+    .benefit-bg {
+        height: 500px;
+    }
+}
+
 @media (max-width: 1300px) {
     .culture-pic {
         top: -20%;
@@ -912,9 +1510,6 @@ footer .table td, .table th {
 }
 
 @media (max-width: 1200px) {
-    #customer-slide {
-        top: -30%;
-    }
     .invest-bg{
         height: 350px;
     }
@@ -926,6 +1521,11 @@ footer .table td, .table th {
     }
     .culture-pic {
         top: -15%;
+    }
+
+    /*Styling for Company Page*/
+    .company-tab a.nav-link.active::before, .company-tab a.nav-link:hover::before, .company-tab a.nav-link:focus::before {
+        width: 70%;
     }
 }
 
@@ -945,18 +1545,14 @@ footer .table td, .table th {
 }
 
 @media (max-width: 1100px) {
-    .customer-intro {
+    .client-intro {
         font-size: 1.25rem;
     }
-    .customer-txt, .customer-pic {
-        height: 250px;
+    .client-txt, .client-pic {
         font-size: 0.875rem;
     }
-    #customer-slide {
-        top: -35%;
-    }
-    .culture-pic {
-        top: -10%;
+    .benefit-bg {
+        height: 350px;
     }
     .benefit-txt, .culture-txt {
         font-size: 1rem;
@@ -964,14 +1560,20 @@ footer .table td, .table th {
     .culture{
         height: 330px;
     }
+    .culture-pic {
+         top: -10%;
+     }
     .s8-txt{
         font-size: 1rem;
     }
-    #s8-pic {
-        top: -10%;
-    }
     .reg-txt {
         font-size: 1.5rem;
+    }
+    .prof-label{
+        font-size: 1.375rem;
+    }
+    .benefits-bg .bg-txt {
+        width: 45%;
     }
 }
 
@@ -982,6 +1584,7 @@ footer .table td, .table th {
     #m-top{
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+        margin-top: 83px;
     }
 
     /*Styling Body of Home page*/
@@ -997,19 +1600,20 @@ footer .table td, .table th {
         padding: 0;
         overflow: hidden;
     }
-    .customer-intro {
+    .client-intro {
         width: 41.6667%;
         margin-left: 1%;
         font-weight: 500;
         font-size: 1.25rem;
         padding: 20px 10px;
     }
-    .customer-txt, .customer-pic {
-        height: 250px;
+    .client-txt {
         font-size: 0.85rem;
     }
     #customer-slide {
-        top: -45%;
+        top: 0;
+        left: calc(50% - 75px);
+        width: 150px;
     }
     .vids-txt {
         margin: 15% 10px 0 10px;
@@ -1045,20 +1649,28 @@ footer .table td, .table th {
         font-weight: 100;
         margin-top: 2%;
     }
+    .call-s8, .reg {
+        top: 0;
+        left: 0;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
     .call-s8{
         border-top-left-radius: 0;
         border-top-right-radius: 0;
     }
     .s8-txt{
         margin-top: 5%;
-        margin-left: 1%;
+        margin-left: calc(5% - 15px);;
         width: 75%;
         font-size: 0.85rem;
     }
     #s8-pic{
         position: absolute;
-        width: 15%;
-        top: -20%;
+        width: 11%;
         right: 5%;
     }
     .reg{
@@ -1066,7 +1678,7 @@ footer .table td, .table th {
         box-shadow: none;
     }
     .reg-txt {
-        font-size: 1rem;
+        font-size: 1.25rem;
         font-weight: 300;
     }
     .reg-btn{
@@ -1077,12 +1689,6 @@ footer .table td, .table th {
     }
 
     /*Styling for Products and Services*/
-    .prod-banner{
-        margin-top: 0;
-    }
-    .m-prod-list {
-        margin-top: 83px;
-    }
     #prod-list{
         font-size: 0.75rem;
         border-bottom-right-radius: 0;
@@ -1094,13 +1700,15 @@ footer .table td, .table th {
     .info-icon span {
         width: 90%;
     }
+    #sms-slide .carousel-control-next, #sms-slide .carousel-control-prev {
+        display: flex;
+    }
 
     /*Styling for Contact page*/
     .csr{
         font-size: 1.5rem;
         height: 75px;
         padding-top: 15px;
-        margin-top: 83px;
     }
     .contact-bg img {
         height: 260px;
@@ -1118,16 +1726,82 @@ footer .table td, .table th {
     }
 
     /*Styling for Career Page*/
-    .career-bg {
+    .career-bg, .investment-bg, .company-bg, .benefits-bg {
         margin-top: 83px;
-        height: 450px;
+        height: 460px;
     }
     .bg-txt{
         font-size: 1rem;
     }
+    .career-tab a.nav-link.active::before, .career-tab a.nav-link:hover::before, .career-tab a.nav-link:focus::before,
+    .company-tab a.nav-link.active::before, .company-tab a.nav-link:hover::before, .company-tab a.nav-link:focus::before {
+        width: 85%;
+    }
     .cult-box1, .cult-box2, .cult-box3, .cult-box4, .cult-box5, .cult-box6 {
         font-size: 0.875rem;
         height: 200px;
+    }
+
+    /*Styling for Investment Page*/
+    .invest-rep-txt > p {
+        font-size: 1rem;
+    }
+    .invest-chart-txt {
+        right: 30px;
+    }
+    .multi-fund {
+        padding: 0 20px;
+    }
+    .multi-fund-txt img {
+        width: 90px;
+    }
+    .know .nav-link {
+        font-size: 0.875rem;
+    }
+
+    /*Styling for Company Page*/
+    #compTab img, #benefitsTab img {
+        height: 40px;
+        width: 40px;
+    }
+    .prof-label{
+        font-size: 1.125rem;
+    }
+    #comps-slide {
+        padding-top: 20px;
+    }
+    #comps-slide .card-img-top {
+        width: 45%;
+    }
+    .tag {
+        height: 50px;
+        top: -50px;
+        font-size: 1.5rem;
+    }
+    .dir-img figcaption {
+        font-size: 1.125rem;
+    }
+
+    /*Styling for Benefits Page*/
+    .benefits-bg .bg-txt {
+        bottom: 15%;
+        width: 50%;
+    }
+    .benefits-bg > .bg-txt > p {
+        font-size: 1.25rem;
+        text-align: left;
+    }
+    .benefits-tab a.nav-link.active::before, .benefits-tab a.nav-link:hover::before, .benefits-tab a.nav-link:focus::before {
+        width: 75%;
+    }
+
+    /*Styling for Body of Calculator Page*/
+    #calc-page {
+        margin-top: 83px;
+    }
+    #disclaim-overlay{
+        top: 83px;
+        padding-top: 35px;
     }
 
     /*Styling Button*/
@@ -1160,22 +1834,25 @@ footer .table td, .table th {
 @media (max-width: 767px){
 
     /*Styling for HomePage*/
-    .customer-intro{
+    .client-intro{
         width: 50%;
         margin-left: 25%;
     }
-    .customer-txt{
-        height: 530px;
+    .client-txt{
         font-size: 0.85rem;
     }
-    .card img{
+    #mob-customer-slide .card img{
         object-fit: contain;
-        width: 35%;
-        margin-left: 33%;
+        width: 30%;
+        margin-left: 35%;
     }
-    .carousel-inner .card{
-        background-color: #f7f7f9;
+    #mob-customer-slide .carousel-inner .card{
+        background-color: transparent;
         border: none;
+    }
+    #mob-customer-slide .carousel-control-next, #mob-customer-slide .carousel-control-prev {
+        bottom: 50%;
+        color: rgba(0, 0, 0, 0.75);
     }
     .vids-txt {
         margin: 15% 25px 0 25px;
@@ -1218,8 +1895,14 @@ footer .table td, .table th {
         font-weight: 500;
     }
     .reg-txt p {
-        margin-top: 10%;
+        top: 0;
+        margin-top: 7.5%;
         width: 100%;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
     }
     .s8-txt{
         margin: 0;
@@ -1228,17 +1911,23 @@ footer .table td, .table th {
         width: 100%;
     }
 
-    /*Styling for Products and Services*/
+    /*Styling for Products & Services*/
     .m-prod-list {
         background-color: #e1e1e1;
     }
-    .m-prod-list form{
+    .m-prod-list form, .location form, .career-tab form, .know form, .company-tab form, .benefits-tab form{
         width: 60%;
     }
     .m-prod-list label{
         margin-top: 15px;
        font-size: 20px;
         font-weight: 400;
+    }
+    .info-icon{
+        padding: 15px 0;
+    }
+    .img-box {
+        width: 50%;
     }
 
     /*Styling for Contact Page*/
@@ -1270,9 +1959,88 @@ footer .table td, .table th {
         height: 250px;
     }
 
+    /*Styling for Investment Page*/
+    .invest-calc {
+        height: 300px;
+    }
+    .know {
+       background-color: #2067a5;
+    }
+    .know > h3 {
+        margin-top: 30px;
+        margin-bottom: 15px;
+        color: white;
+    }
+
+    /*Styling for Company Page*/
+    .comp-prof {
+        height: 115px;
+    }
+    .prof-label {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+    .comps {
+        height: 530px;
+    }
+    .comps h3 {
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    #comps-slide {
+        padding-top: 0;
+    }
+    #comps-slide .carousel-control-next, #comps-slide .carousel-control-prev{
+        padding-top: 0;
+    }
+    .board-mgt .nav-link {
+        font-size: 1.25rem;
+    }
+
+    /*Styling for Benfits Page*/
+    .benefits-bg .bg-txt {
+        bottom: 20%;
+        width: 90%;
+    }
+    #ab-ret, #pay-grnd, #pay-type {
+        padding-top: 30px;
+    }
+
+    /*Styling for Calculator Page*/
+    #calc-page h5 {
+        margin: 1rem 0 0.5rem 0;
+    }
+    #calc-page .d-claim {
+        position: relative;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #disclaim-overlay{
+        font-size: 0.875rem;
+    }
+    #disclaim-overlay ul img{
+        height: 30px;
+    }
+    #blue-vr{
+        border-right: none;
+    }
+
+    /*Styling for Terms & Conditions and Privacy Policy page*/
+    .terms {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
     /*Styling for Button*/
-    .btn-outline-blue {
+    .btn-outline-blue, .btn-outline-blue-sm {
         margin-bottom: 5%;
+    }
+
+    /*Styling for Footer*/
+    .newsFeed {
+        margin: 15px 0;
+        height: 90px;
     }
 }
 
@@ -1280,7 +2048,7 @@ footer .table td, .table th {
 @media (max-width: 575px) {
 
     /*Styling for Home page*/
-    .customer-intro {
+    .client-intro {
         top: -59px;
         width: 95%;
         right: 2.5%;
@@ -1288,18 +2056,15 @@ footer .table td, .table th {
         font-size: 1.25rem;
         box-shadow: -1px -1px 6px rgba(70, 74, 76, 0.332);
     }
-    .customer-txt{
+    .client-txt{
         height: initial;
     }
-    .card img{
+    #mob-customer-slide .card img{
         object-fit: contain;
-        width: 70%;
-        margin-left: 15%;
+        width: 55%;
+        margin-left: 22.5%;
     }
-    .carousel-control-next, .carousel-control-prev{
-        bottom: 50%;
-    }
-    .carousel-item .card-block {
+    #mob-customer-slide .carousel-item .card-block {
         padding: 1.25rem 0;
     }
     .invest-bg{
@@ -1350,13 +2115,16 @@ footer .table td, .table th {
     .divide {
         height: 15px;
     }
-    #accordion1, #accordion2, #accordion3, #accordion4, #accordion5 {
+    #accordion1, #accordion2, #accordion3, #accordion4, #accordion5, #accordion6, #accordion7, #accordion8, #accordion9,
+    #accordion10 {
         width: 100%;
     }
 
-    /*Styling for Career*/
-    .career-bg {
+    /*Styling for Career Page*/
+    .career-bg, .investment-bg, .company-bg, .benefits-bg {
         height: 400px;
+    }
+    .career-bg {
         background: url(../images/career-bg-mob.jpg) no-repeat;
         background-size: cover;
     }
@@ -1392,19 +2160,61 @@ footer .table td, .table th {
     }
     .career-cult-box p{
         width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #cv .custom-file {
+        width: 100%;
     }
 
     /*Styling for Products and Styling*/
-    .m-prod-list form{
-        margin-left: 0;
+    .m-prod-list form, .location form, .career-tab form, .know form, .company-tab form, .benefits-tab form{
         width: 80%;
+    }
+    .img-box {
+        width: 60%;
+    }
+    #sms-slide .carousel-control-next, #sms-slide .carousel-control-prev {
+        bottom: 0;
+    }
+
+    /*Styling for Investment Page*/
+
+    /*Styling for Company Page*/
+    .comp-prof .btn {
+        margin-top: .5rem;
+        margin-left: 0;
+    }
+    .prof-label {
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+    }
+    #comps-slide .carousel-control-next, #comps-slide .carousel-control-prev{
+        bottom: 70%;
+    }
+    .board-mgt .nav-link {
+        font-size: 1rem;
+    }
+    .board-mgt .vr {
+        top: 3rem;
+    }
+    .tag {
+        width: 50%;
+        left: 25%;
+        font-size: 1.375rem;
+    }
+
+    /*Styling for Benefits Page*/
+    .benefits-bg .bg-txt {
+        bottom: 15%;
+    }
+
+    /*Styling for Calculator Page*/
+    #disclaim-overlay ul img{
+        display: none;
     }
 
     /*Styling for footer*/
-    .newsFeed {
-        margin: 15px 0;
-        height: 150px;
-    }
     footer .table{
         width: 75%;
     }
@@ -1422,10 +2232,6 @@ footer .table td, .table th {
     }
     .btn-outline-blue, .btn-outline-blue-sm {
         margin-bottom: 5%;
-    }
-    .btn-outline-blue{
-        background-color: #2068a6;
-        color: white;
         font-weight: 500;
     }
 }
