@@ -20,7 +20,7 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
 
                             <p>
                                 <?= summary($news->post_content, 100) ?>
-                                <a style="color: black" href="<?= get_permalink($news) ?>">Read more</a>
+                                <a href="<?= get_permalink($news) ?>">Read more</a>
                             </p>
                         </div>
                     </li>
@@ -124,68 +124,5 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
 </script>
 <!--End of Tawk.to Script-->
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/index.js"></script>
-<script>
-    $(window).scroll(function () {
-        if ($(document).scrollTop() > 5) {
-            $('.scroll-btn').hide();
-        } else {
-            $('.scroll-btn').show();
-        }
 
-        if ($(document).scrollTop() > 100) {
-            $('#slider-icon, .style3').fadeOut(800);
-            $('.navStyle2').fadeIn(1000);
-        } else {
-            $('.style3, #slider-icon').fadeIn(1000);
-            $('.navStyle2').fadeOut(800);
-        }
-    });
-
-    $('#customer-slide, #mob-customer-slide').carousel({
-        interval: 15000
-    });
-
-    $('#customer-slide').on('slide.bs.carousel', function (ev) {
-        var id = ev.relatedTarget.id;
-        id = parseInt(id);
-        switch (id) {
-            case 1:
-                $('#emp-txt, #retr-txt').hide();
-                $('#grad-txt').show();
-                break;
-            case 2:
-                $('#grad-txt, #retr-txt').hide();
-                $('#emp-txt').show();
-                break;
-            case 3:
-                $('#emp-txt, #grad-txt').hide();
-                $('#retr-txt').show();
-                break;
-            default:
-                document.write("Not working");
-        }
-    });
-
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        merge: true,
-        margin: 10,
-        video: true,
-        videoHeight: 360,
-        videoWidth: 480,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        }
-    });
-</script>
 <?php wp_footer(); ?>
-</body>
-</html>

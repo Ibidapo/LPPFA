@@ -36,10 +36,10 @@ $social_options = get_option('theme_social_options');
         <!-- /slider -->
 
         <div class="col-12 hidden-md-down" id="slider-icon">
-            <ul class="style4 pOff ">
+            <ul class="nav nav-justified mr-auto">
                 <?php foreach ($hero_nav_items[0] as $key => $item) { ?>
-                    <li class="nav-item m-nav style4">
-                        <a class="nav-link style3" href="<?= $item['nav_link'] ?>">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $item['nav_link'] ?>">
                             <figure>
                                 <img src="<?= $item['nav_image']['url'] ?>" height="60"
                                      width="45" alt="">
@@ -54,8 +54,8 @@ $social_options = get_option('theme_social_options');
                     </a>
                 </li>
                 <?php foreach ($hero_nav_items[1] as $key => $item) { ?>
-                    <li class="nav-item m-nav style4">
-                        <a class="nav-link style3" href="<?= $item['nav_link'] ?>">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $item['nav_link'] ?>">
                             <figure>
                                 <img src="<?= $item['nav_image']['url'] ?>" height="60"
                                      width="45" alt="">
@@ -71,7 +71,7 @@ $social_options = get_option('theme_social_options');
             <div class="navStyle3 mx-auto">
                 <ul class="nav nav-fill mOff">
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">Products & Services</a>
+                        <a class="nav-link" href="/services">Products & Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"> Benefits </a>
@@ -103,13 +103,15 @@ $social_options = get_option('theme_social_options');
             </div>
         </nav>
     </div>
+</div>
+<div class="container">
     <div class="row row-margin">
-        <div class="col-12 col-lg-5 offset-lg-1 intro-box text-center" id="about">
+        <div class="col-12 col-lg-6 intro-box text-center" id="about">
             <h5 class="hidden-lg-up"><?= get_field("about_us_image")['caption'] ?></h5>
             <img class="connect" src="<?= get_field("about_us_image")['url'] ?>" alt="">
         </div>
         <!-- intro-box start -->
-        <div class="col-12 col-lg-5 intro-box text-center">
+        <div class="col-12 col-lg-6 intro-box text-center">
             <?= get_field("about_us_content") ?>
         </div>
     </div>
@@ -117,30 +119,22 @@ $social_options = get_option('theme_social_options');
     <?php if ($faq_items): ?>
 
         <div class="row message-box-container">
-            <div class="col-12 col-md-5 col-lg-4 offset-lg-1 message-box text-center">
+            <div class="col-12 col-md-5  message-box text-center">
                 <p class="message-box" data-aos="fade-right">
                     <?= get_field("faq_text") ?>
                 </p>
             </div>
-            <div class="col-12 col-md-7 col-lg-6 solutions hidden-sm-down text-center">
+            <div class="col-12 col-md-7 solutions hidden-sm-down text-center">
                 <h5> Some frequently asked questions </h5>
-
-                <div class="row">
+                <ul class="nav nav-fill">
                     <?php foreach ($faq_items as $key => $item) { ?>
-                        <div class="col-12 col-sm-4">
-                            <p>
-                                <a href="<?= $item['link'] ?>"><i class="fa fa-chevron-right"
-                                                                  aria-hidden="true"></i> <?= $item['title'] ?></a>
-                            </p>
-                        </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= $item['link'] ?>"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                <?= $item['title'] ?>
+                            </a>
+                        </li>
                     <?php } ?>
-                    <!--<div class="col-12 col-sm-4">
-                        <p><i class="fa fa-chevron-right" aria-hidden="true"></i> When to claim benefits?</p>
-                    </div>
-                    <div class="col-12 col-sm-4">
-                        <p><i class="fa fa-chevron-right " aria-hidden="true"></i> How to retrieve lost pin?</p>
-                    </div>-->
-                </div>
+                </ul>
             </div>
             <div class="col-12 solutions1 hidden-md-up text-center">
                 <h5> Some frequently asked questions </h5>
@@ -165,16 +159,16 @@ $social_options = get_option('theme_social_options');
 
     <!-- Customer Testimonials? -->
     <?php if ($customer_testimonials): ?>
-        <div class="row" style="position: relative">
-            <div class="customer-intro">We celebrate every customer !</div>
-            <div class="hidden-sm-down col-md-8 col-lg-7 offset-lg-1 customer-txt">
+        <div class="row" id="client-area">
+            <div class="client-intro">We celebrate every customer !</div>
+            <div class="hidden-sm-down col-md-8 client-txt">
                 <?php foreach ($customer_testimonials as $key => $item) { ?>
                     <div id="<?= $key == 0 ? "grad-txt" : ($key == 1 ? "emp-txt" : "retr-txt") ?>">
                         <?= $item['content'] ?>
                     </div>
                 <?php } ?>
             </div>
-            <div class="hidden-sm-down col-md-4 col-lg-3 customer-pic">
+            <div class="hidden-sm-down col-md-4 client-pic">
                 <div id="customer-slide" class="carousel slide" data-ride="carousel" data-aos="fade-left">
                     <div class="carousel-inner" role="listbox">
                         <?php foreach ($customer_testimonials as $key => $item) { ?>
@@ -195,7 +189,7 @@ $social_options = get_option('theme_social_options');
                     </a>
                 </div>
             </div>
-            <div class="hidden-md-up col-12 customer-txt">
+            <div class="hidden-md-up col-12 client-txt">
                 <div id="mob-customer-slide" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         <?php foreach ($customer_testimonials as $key => $item) { ?>
@@ -228,8 +222,8 @@ $social_options = get_option('theme_social_options');
 
     <!-- Digital Section -->
     <div class="row">
-        <div class="col-12 col-lg-10 offset-lg-1 vids-bg">
-            <div class="row" style="padding-top: 3%;padding-bottom: 3%">
+        <div class="col-12 vids-bg">
+            <div class="row">
                 <div class="col-12 col-md-5 ">
                     <div class="vids-txt">
                         <?= get_field("digital_section_content") ?>
@@ -271,24 +265,24 @@ $social_options = get_option('theme_social_options');
     </div>
     <!--  /digital  -->
     <div class="row">
-        <div class="col-12 col-lg-10 offset-lg-1 invest-bg">
+        <div class="col-12 invest-bg">
             <div class="invest-txt" data-aos="fade-right">
                 <?= get_field("info_section_1") ?>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-md-5 col-lg-4 offset-lg-1 benefit-txt text-center">
+        <div class="col-12 col-md-5 benefit-txt text-center">
             <div data-aos="fade-up">
                 <?= get_field("info_section_2") ?>
             </div>
         </div>
-        <div class="hidden-sm-down col-md-7 col-lg-6 benefit-bg">
-            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/Benefits.png" alt=""/>
+        <div class="hidden-sm-down col-md-7 benefit-bg">
+<!--            <img src="--><?php //echo get_bloginfo('template_directory'); ?><!--/images/Benefits.png" alt=""/>-->
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-md-12 col-lg-10 offset-lg-1 culture">
+        <div class="col-12 col-md-12 culture">
             <div class="hidden-sm-down culture-pic"><img
                     src="<?php echo get_bloginfo('template_directory'); ?>/images/bulb.jpg" alt=""></div>
             <div class="culture-txt float-right">
@@ -313,7 +307,8 @@ $social_options = get_option('theme_social_options');
     <div class="row">
         <div class="col-lg-11 reg mx-auto">
             <div class="hidden-sm-down reg-pic float-left" data-aos="fade"><img
-                    src="<?php echo get_bloginfo('template_directory'); ?>/images/jar.png" alt=""></div>
+                    src="<?php echo get_bloginfo('template_directory'); ?>/images/jar.png" alt="">
+            </div>
             <div class="reg-txt float-right">
                 <?= get_field("info_section_5") ?>
                 <div class="hidden-md-up text-center"><a class="btn btn-outline-blue" href="#">Get Started</a></div>
@@ -323,5 +318,70 @@ $social_options = get_option('theme_social_options');
     </div>
 </div>
 <?php get_footer(); ?>
+<!--<script src="--><?php //echo get_bloginfo('template_directory'); ?><!--/js/index.js"></script>-->
+<script>
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > 5) {
+            $('.scroll-btn').hide();
+        } else {
+            $('.scroll-btn').show();
+        }
 
+        if ($(document).scrollTop() > 100) {
+            $('#slider-icon, .style3').fadeOut(800);
+            $('.navStyle2').fadeIn(1000);
+        } else {
+            $('.style3, #slider-icon').fadeIn(1000);
+            $('.navStyle2').fadeOut(800);
+        }
+    });
+
+    $('#customer-slide, #mob-customer-slide').carousel({
+        interval: 15000
+    });
+
+    $('#customer-slide').on('slide.bs.carousel', function (ev) {
+        var id = ev.relatedTarget.id;
+        id = parseInt(id);
+        switch (id) {
+            case 1:
+                $('#emp-txt, #retr-txt').hide();
+                $('#grad-txt').show();
+                break;
+            case 2:
+                $('#grad-txt, #retr-txt').hide();
+                $('#emp-txt').show();
+                break;
+            case 3:
+                $('#emp-txt, #grad-txt').hide();
+                $('#retr-txt').show();
+                break;
+            default:
+                document.write("Not working");
+        }
+    });
+
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        merge: true,
+        margin: 10,
+        video: true,
+        videoHeight: 360,
+        videoWidth: 480,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
 

@@ -65,7 +65,7 @@ $options = get_option('theme_options');
                     <li><a href="#">Hausa</a></li>
                 </ul>
             </li>
-            <li><a href="#">Our Company</a></li>
+            <li><a href="/company">Our Company</a></li>
             <li><a data-toggle="collapse" href="#prod" aria-expanded="false" aria-controls="prod">Products & Services <i
                         class="fa fa-chevron-down" aria-hidden="true"></i></a>
                 <ul class="sub-menu collapse" id="prod">
@@ -119,11 +119,10 @@ $options = get_option('theme_options');
                 <span> &#8358;100 </span>
             </td>
             <td>
-                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png"><span>Calculator</span>
+                <a href="#" class="nav-calc"> <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png"> <span>Calculator</span></a>
             </td>
             <td>
-                <button type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS
-                </button>
+                <button type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS </button>
             </td>
             <td>
                 <span id="date"></span>
@@ -132,34 +131,34 @@ $options = get_option('theme_options');
         </tbody>
     </table>
     <!-- Navbar -->
-    <div class="navStyle2" style="display: none;">
+    <div class="navStyle2" <?= (is_page_template('template_homepage.php') ? 'style="display: none;"': '')?>>
         <ul class="nav nav-fill mr-auto">
             <form class="form-inline search">
                 <input class="form-control" type="text" placeholder="Search">
             </form>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="javascript:" id="ps" data-toggle="dropdown"
+                <a class="nav-link dropdown-toggle" href="/services" id="ps" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false"> Products & Services </a>
 
                 <div class="dropdown-menu ps" aria-labelledby="ps">
-                    <a class="dropdown-item" href="services.html#rsa"><i class="fa fa-chevron-right"
+                    <a class="dropdown-item" href="/services#rsa"><i class="fa fa-chevron-right"
                                                                          aria-hidden="true"></i> Retirement Savings
                         Account</a>
-                    <a class="dropdown-item" href="services.html#avc"><i class="fa fa-chevron-right"
+                    <a class="dropdown-item" href="/services#avc"><i class="fa fa-chevron-right"
                                                                          aria-hidden="true"></i> Additional Voluntary
                         Contribution</a>
                     <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i>
                         Cross-Border Benefits</a>
-                    <a class="dropdown-item" href="services.html#mf"><i class="fa fa-chevron-right"
+                    <a class="dropdown-item" href="/services#mf"><i class="fa fa-chevron-right"
                                                                         aria-hidden="true"></i> Managed Funds</a>
-                    <a class="dropdown-item" href="services.html#nst"><i class="fa fa-chevron-right"
+                    <a class="dropdown-item" href="/services#nst"><i class="fa fa-chevron-right"
                                                                          aria-hidden="true"></i> NSITF</a>
-                    <a class="dropdown-item" href="services.html#pms"><i class="fa fa-chevron-right"
+                    <a class="dropdown-item" href="/services#pms"><i class="fa fa-chevron-right"
                                                                          aria-hidden="true"></i> SMS Services</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="oc" data-toggle="dropdown" aria-haspopup="true"
+                <a class="nav-link dropdown-toggle" href="/company" id="oc" data-toggle="dropdown" aria-haspopup="true"
                    aria-expanded="false">Our Company</a>
 
                 <div class="dropdown-menu oc" aria-labelledby="oc">
@@ -195,7 +194,7 @@ $options = get_option('theme_options');
                    aria-expanded="false">News | Events</a>
 
                 <div class="dropdown-menu" aria-labelledby="ne">
-                    <a class="dropdown-item" href="career.html"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <a class="dropdown-item" href="/careers"><i class="fa fa-chevron-right" aria-hidden="true"></i>
                         Careers</a>
                     <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i>
                         Calendar</a>
