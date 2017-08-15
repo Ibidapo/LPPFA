@@ -25,7 +25,7 @@ $services = get_field('services');
     <div class="row">
         <div class="col-12 prod-banner">
             <?php foreach ($services as $key => $service): ?>
-                <img src="<?= $service['image']['url'] ?>" class="<?= strtolower($service['image']['title']) ?>-img">
+                <img src="<?= $service['image']['url'] ?>" class="<?= $slug = strtolower($service['image']['title']) ?>-img <?= $slug == "pms" ? "sms-img" : ''?>">
             <?php endforeach ?>
         </div>
     </div>
@@ -374,4 +374,3 @@ $services = get_field('services');
 
 </body>
 </html>
-
