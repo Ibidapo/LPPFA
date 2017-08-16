@@ -104,7 +104,7 @@ margin-bottom: 51px;
 background-color: rgba(139, 178, 210, 0.7);
 width: 71%;
 margin: auto;
-box-shadow: #333 0px -2px 21px;
+box-shadow: #333 0 -2px 21px;
 border-top-right-radius: 20px;
 border-top-left-radius: 20px;
 border: 1px solid #1f69a6;
@@ -174,7 +174,7 @@ left: 90px;
     background-size: cover;
     color:white;
     font-weight: 400;
-    font-family: Lato;
+    font-family: Lato, sans-serif;
 }
 .p-id{
  font-size:11px;
@@ -740,7 +740,7 @@ input[type="text"].language::-webkit-input-placeholder {
     margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
-    font-family: montserrat;
+    font-family: montserrat, sans-serif;
     color: #2C3E50;
     font-size: 13px;
 }

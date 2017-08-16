@@ -69,14 +69,6 @@
                         <li><a href="faq.html">FAQs</a></li>
                     </ul>
                 </li>
-                <li><a data-toggle="collapse" href="#lang" aria-expanded="false" aria-controls="lang">Select Language <i class="fa fa-chevron-down"></i></a>
-                    <ul class="sub-menu collapse" id="lang">
-                        <li><a href="#">English</a></li>
-                        <li><a href="#">Yoruba</a></li>
-                        <li><a href="#">Igbo</a></li>
-                        <li><a href="#">Hausa</a></li>
-                    </ul>
-                </li>
             </ul>
         </div>
     </nav>
@@ -88,12 +80,7 @@
             <tr>
                 <td>
                     <div class="form-group">
-                        <select class="form-control language">
-                            <option>English</option>
-                            <option>Yoruba</option>
-                            <option>Hausa</option>
-                            <option>Igbo</option>
-                        </select>
+                        <div id="google_translate_element"></div>
                     </div>
                 </td>
                 <td>
@@ -272,6 +259,12 @@
                              to stay updated on our events, recent news and 
                              peer 2 peer competitions!  </h5>
                        <div class="fb-like col-12 " data-href="https://www.facebook.com/leadwaypensure/" data-width="80px" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+                       <h5 class="col-12 text-center" style="color:darkgrey; padding: 16px">  Browse our timeline on facebook. Follow our page
+                             to stay updated on our events, recent news and 
+                             peer 2 peer competitions!  </h5>
+                       <div class="fb-like col-12 text-center" data-href="https://www.facebook.com/leadwaypensure/" data-width="80px" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
                        </div>
   
                     </div>
@@ -460,6 +453,11 @@
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
     <script src="js/index.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ha,ig,yo', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="js/instafeed.min.js"></script>
     <script type="text/javascript">
         var feed = new Instafeed({
