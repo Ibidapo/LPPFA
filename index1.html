@@ -31,16 +31,6 @@
             r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
             a.appendChild(r);
         })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-
-        (function() {
-            var cx = '015604166637208106886:5l_cufedmty';
-            var gcse = document.createElement('script');
-            gcse.type = 'text/javascript';
-            gcse.async = true;
-            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(gcse, s);
-        })();
     </script>
     <script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script type='text/javascript'>
@@ -89,12 +79,9 @@
                     </ul>
                 </li>
                 <li><a data-toggle="collapse" href="#lang" aria-expanded="false" aria-controls="lang">Select Language <i class="fa fa-chevron-down"></i></a>
-                    <ul class="sub-menu collapse" id="lang">
-                        <li><a href="#">English</a></li>
-                        <li><a href="#">Yoruba</a></li>
-                        <li><a href="#">Igbo</a></li>
-                        <li><a href="#">Hausa</a></li>
-                    </ul>
+                    <div class="sub-menu collapse" id="lang">
+
+                    </div>
                 </li>
             </ul>
         </div>
@@ -106,14 +93,7 @@
             <tbody>
             <tr>
                 <td>
-                    <div class="form-group">
-                        <select class="form-control language">
-                            <option>English</option>
-                            <option>Yoruba</option>
-                            <option>Hausa</option>
-                            <option>Igbo</option>
-                        </select>
-                    </div>
+                    <div id="google_translate_element"></div>
                 </td>
                 <td>
                     <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i> 080-Pensure</span>
@@ -207,7 +187,6 @@
                 <a class="navbar-brand" href="index.html"><img class="logo" src="images/logo.png" alt="Leadway Logo"></a>
             </ul>
         </div>
-        <gcse:search></gcse:search>
     </nav>
     <!-- Body and Main Content of page -->
     <div class="container-fluid">
@@ -745,6 +724,12 @@
         })();
     </script>
     <!--End of Tawk.to Script-->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ha,ig,yo'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="js/index.js"></script>
     <script>
         //Resize container based on desktop or mobile viewport.

@@ -116,7 +116,17 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     border-radius: 25px;
 }
 
-/*Styling for Body Section of Home page*/
+/*Styling for Google Translate*/
+.goog-te-combo {
+    background: transparent;
+    color: white;
+    border: none;
+}
+.goog-te-combo option{
+    color: black;
+}
+
+    /*Styling for Body Section of Home page*/
 .landing {
     position: relative;
     height: 100vh;
