@@ -63,6 +63,10 @@ font-size: 9px;
 color:white !important;
 }
 
+.fb_iframe_widget {
+  padding: 52px;
+}
+
 .social-strip{
 width:80%;
 border:1px solid #b39fc2;
