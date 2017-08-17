@@ -311,8 +311,8 @@ $social_options = get_option('theme_social_options');
             </div>
             <div class="reg-txt float-right">
                 <?= get_field("info_section_5") ?>
-                <div class="hidden-md-up text-center"><a class="btn btn-outline-blue" href="#">Get Started</a></div>
-                <span class="hidden-sm-down reg-btn"><a class="btn btn-outline-blue" href="#">Get Started</a></span>
+                <div class="hidden-md-up text-center"><a href="enroll.html" class="btn btn-outline-blue">Get Started</a></div>
+                <span class="hidden-sm-down reg-btn v-align"><a href="enroll.html" class="btn btn-outline-blue">Get Started</a></span>
             </div>
         </div>
     </div>

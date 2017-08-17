@@ -36,17 +36,18 @@
             <span class="bottom"></span>
         </div>
         <a href="index.html" class="m-logo navbar-brand">
-            <img src="images/logo-alt.png" class="img-responsive"  width="85" alt="">
+            <img src="images/logo-alt.png" class="img-responsive"  width="85" alt="Leadway Alternate Logo">
         </a>
         <form class="form-inline mob-search">
             <input class="form-control" type="text" placeholder="Search">
         </form>
         <div class="overlay text-center" id="overlay">
             <ul class="menu">
-                <li><a data-toggle="collapse" href="#log" aria-expanded="false" aria-controls="log">Login <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <li><a data-toggle="collapse" href="#log" aria-expanded="false" aria-controls="log">Login / Register <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                     <ul class="sub-menu collapse" id="log">
-                        <li><a href="#">Client login</a></li>
+                        <li><a href="login.html">Client login</a></li>
                         <li><a href="#">Employer login</a></li>
+                        <li><a href="enroll.html">Register</a></li>
                     </ul>
                 </li>
                 <li><a href="company.html">Our Company</a></li>
@@ -54,9 +55,20 @@
                 <li><a href="benefits.html">Benefits</a></li>
                 <li><a href="investment.html">Investments</a></li>
                 <li><a href="career.html">Careers</a></li>
-                <li><a href="#">Media</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a data-toggle="collapse" href="#lang" aria-expanded="false" aria-controls="lang">Select Language <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <li><a data-toggle="collapse" href="#med" aria-expanded="false" aria-controls="med">Media <i class="fa fa-chevron-down"></i></a>
+                    <ul class="sub-menu collapse" id="med">
+                        <li><a href="news.html">News & Events</a></li>
+                        <li><a href="social.html">Social</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
+                    </ul>
+                </li>
+                <li><a data-toggle="collapse" href="#cont" aria-expanded="false" aria-controls="cont">Contact Us <i class="fa fa-chevron-down"></i></a>
+                    <ul class="sub-menu collapse" id="cont">
+                        <li><a href="contact.html">Branch Network</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </li>
+                <li><a data-toggle="collapse" href="#lang" aria-expanded="false" aria-controls="lang">Select Language <i class="fa fa-chevron-down"></i></a>
                     <ul class="sub-menu collapse" id="lang">
                         <li><a href="#">English</a></li>
                         <li><a href="#">Yoruba</a></li>
@@ -158,10 +170,10 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media</a>
                     <div class="dropdown-menu dropdown-menu-right md" aria-labelledby="md">
-                        <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> News & Events</a>
-                        <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Calender</a>
-                        <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Gallery</a>
-                        <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Social</a>
+                        <a class="dropdown-item" href="news.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> News & Events</a>
+                        <a class="dropdown-item" href="news.html#cald"><i class="fa fa-chevron-right" aria-hidden="true"></i> Calender</a>
+                        <a class="dropdown-item" href="news.html#gall"><i class="fa fa-chevron-right" aria-hidden="true"></i> Gallery</a>
+                        <a class="dropdown-item" href="social.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Social</a>
                         <a class="dropdown-item" href="downloads.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Downloads</a>
                     </div>
                 </li>
@@ -425,15 +437,15 @@
                     <li  class="media">
                         <img class="d-flex align-self-center mr-3" src="images/vas.png" alt="" height=50 width=50>
                         <div class="media-body">
-                            <h5 class="mt-0">Leadway unveils value added services</h5>
-                            <p>Following our masterplan to becoma a consumer oriented brand we have implemented... <a href="#">Read more</a></p>
+                            <h5 class="mt-0">Leadway unveils Value Added Services</h5>
+                            <p>Following our master-plan to become a consumer oriented brand we have implemented... <a href="#">Read more</a></p>
                         </div>
                     </li>
                     <li class="media">
                         <img class="d-flex align-self-center mr-3" src="images/vas.png" alt="" height=50 width=50>
                         <div class="media-body">
-                            <h5 class="mt-0">Leadway unveils value added services</h5>
-                            <p>Following our masterplan to becoma a consumer oriented brand we have implemented... <a href="#">Read more</a></p>
+                            <h5 class="mt-0">Leadway unveils Mobile App</h5>
+                            <p>Following our master-plan to become a consumer oriented brand we have implemented... <a href="#">Read more</a></p>
                         </div>
                     </li>
                 </ul>
@@ -444,17 +456,14 @@
             <a class="col-12 col-md-6 btn-red" data-toggle="collapse" data-target="#feed" aria-expanded="false" aria-controls="feed">Give us your Feedback</a>
         </div>
         <div class="row justify-content-around" style="margin-bottom: 10px">
-            <div class="col-12 col-md-4 collapse" id="sign">
+            <div class="col-sm-10 col-md-4 collapse" id="sign">
                 <!-- Begin MailChimp Signup Form -->
                 <div id="mc_embed_signup" class="text-center">
                     <form action="//leadway-pensure.us10.list-manage.com/subscribe/post?u=a7d286c921166498a0b699255&amp;id=c1b945e29f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll text-center">
-                            <h2 style="color:#1d69a6"> Subscribe and receive the Leading digest monthly! </h2>
+                        <div id="mc_embed_signup_scroll" class="text-center">
+                            <h5 style="color:#1d69a6"> Subscribe and receive the Leading digest monthly! </h5>
                             <div class="mc-field-group">
                                 <input type="text" value="" name="FNAME" class="required chimp text-center" id="mce-FNAME" placeholder="First Name">
-                            </div>
-                            <div class="mc-field-group">
-                                <input type="text" value="" name="LNAME" class="required chimp text-center" id="mce-LNAME" placeholder="Last Name">
                             </div>
                             <div class="mc-field-group">
                                 <input type="email" value="" name="EMAIL" class="required email chimp text-center" id="mce-EMAIL" placeholder="E-mail Address">
@@ -470,8 +479,8 @@
                 </div>
                 <!--End mc_embed_signup-->
             </div>
-            <div class="col-12 col-md-4 collapse" id="feed">
-                <h2 class="text-center" style="font-size:1.4em"> We'd love to hear from you </h2>
+            <div class="col-sm-10 col-md-4 collapse" id="feed">
+                <h5 class="text-center"> We'd love to hear from you </h5>
                 <form>
                     <div class="form-group">
                         <input class="form-control form-control-sm chimp text-center" type="text" placeholder="E-mail Address" required>
@@ -488,20 +497,20 @@
                 <h6>Regulatory Requirements</h6>
                 <nav class="nav flex-column">
                     <a class="nav-link active" href="#">Regulatory Information</a>
-                    <a class="nav-link" href="#">Pension Reform Act</a>
-                    <a class="nav-link" href="#"> Whistle Blowing</a>
-                    <a class="nav-link" href="#">Code of Ethics and Conduct</a>
-                    <a class="nav-link" href="#">Retired and Terminal Benefits</a>
+                    <a class="nav-link" href="document/LegalPensionReformAct2014.pdf" target="_blank">Pension Reform Act</a>
+                    <a class="nav-link" href="document/WhistleBlowingGuidelines.pdf" target="_blank"> Whistle Blowing</a>
+                    <a class="nav-link" href="document/Code_of_Ethics_and_Business_Practices_for_Licensed_Operators.pdf" target="_blank">Code of Ethics and Conduct</a>
+                    <a class="nav-link" href="document/ApprovedRegulationonAdministrationofRetirementandTerminalBenefits.pdf" target="_blank">Retired and Terminal Benefits</a>
                 </nav>
             </div>
             <div class="col-12 col-md-6 col-lg-3">
                 <h6>Quick Links</h6>
                 <nav class="nav flex-column">
                     <a class="nav-link active" href="#">Blog</a>
-                    <a class="nav-link" href="#">Enroll Now</a>
-                    <a class="nav-link" href="#">Benefits</a>
-                    <a class="nav-link" href="#">Our Philosophy</a>
-                    <a class="nav-link" href="#">Branch Network</a>
+                    <a class="nav-link" href="enroll.html">Enroll Now</a>
+                    <a class="nav-link" href="benefits.html">Benefits</a>
+                    <a class="nav-link" href="investment.html">Our Philosophy</a>
+                    <a class="nav-link" href="contact.html">Branch Network</a>
                 </nav>
             </div>
             <div class="col-12 col-md-6 col-lg-3 app">
@@ -545,13 +554,10 @@
                         <a class="nav-link" href="#">Site Map</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Privacy Policy</a>
+                        <a class="nav-link" href="privacy.html">Privacy Policy</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Legal</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Terms & Conditions</a>
+                        <a class="nav-link" href="terms.html">Terms & Conditions</a>
                     </li>
                 </ul>
             </div>

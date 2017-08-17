@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     box-shadow: 3px 0 5px -2px rgba(41, 43, 44, 0.37), -3px 0 5px -2px rgba(41, 43, 44, 0.37);
 }
-.media-body {
+footer .media-body {
     color: #838080 !important;
 }
 footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-link:visited{
@@ -32,7 +32,6 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-
 
 /*Styling for Buttons*/
 .btn-red, .btn-red:hover, .btn-red:active, .btn-purple {
@@ -676,7 +675,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 
 /*Styling for Body Section of Career Page*/
-.career-bg, .investment-bg, .company-bg, .benefits-bg{
+.career-bg, .investment-bg, .company-bg, .benefits-bg, .news-bg{
     position: relative;
     height: 550px;
     background-size: cover;
@@ -711,18 +710,18 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .bg-txt p a{
     margin-top: 15px;
 }
-.career-tab, .company-tab, .benefits-tab{
+.career-tab, .company-tab, .benefits-tab, .news-tab{
     background-color: #4b78af;
     box-shadow: 0 5px 5px -5px #333;
     z-index: 99;
 }
-.career-tab .nav-link, .company-tab .nav-link, .board .nav-link, .benefits-tab .nav-link {
+.career-tab .nav-link, .company-tab .nav-link, .board .nav-link, .benefits-tab .nav-link, .news-tab .nav-link{
     color: white !important;
     border: none;
     padding: 1rem;
     font-weight: 300;
 }
-.career-tab a.nav-link::before, .company-tab a.nav-link::before, .benefits-tab a.nav-link::before {
+.career-tab a.nav-link::before, .company-tab a.nav-link::before, .benefits-tab a.nav-link::before, .news-tab a.nav-link::before{
     position: relative;
     top: -16px;
     content: '';
@@ -735,16 +734,17 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 .career-tab a.nav-link.active::before, .career-tab a.nav-link:hover::before, .career-tab a.nav-link:focus::before,
 .company-tab a.nav-link.active::before, .company-tab a.nav-link:hover::before, .company-tab a.nav-link:focus::before,
-.benefits-tab a.nav-link.active::before, .benefits-tab a.nav-link:hover::before, .benefits-tab a.nav-link:focus::before{
+.benefits-tab a.nav-link.active::before, .benefits-tab a.nav-link:hover::before, .benefits-tab a.nav-link:focus::before,
+.news-tab a.nav-link.active::before{
     width: 55%;
 }
-.career-tab .nav-tabs, .company-tab .nav-tabs, .board, .benefits-tab .nav-tabs {
+.career-tab .nav-tabs, .company-tab .nav-tabs, .board, .benefits-tab .nav-tabs, .news-tab .nav-tabs {
     border-bottom: 0;
 }
-.career-tab .nav-tabs .nav-item.show .nav-link, .career-tab .nav-tabs .nav-link.active,
-.company-tab .nav-tabs .nav-item.show .nav-link, .company-tab .nav-tabs .nav-link.active,
-.board .nav-link.show, .board .nav-link.active, .benefits-tab .nav-tabs .nav-item.show .nav-link,
-.benefits-tab .nav-tabs .nav-link.active {
+.career-tab .nav-tabs .nav-item.show .nav-link, .career-tab .nav-tabs .nav-link.active, .company-tab .nav-tabs .nav-item.show
+.nav-link, .company-tab .nav-tabs .nav-link.active, .board .nav-link.show, .board .nav-link.active, .benefits-tab .nav-tabs
+.nav-item.show .nav-link, .benefits-tab .nav-tabs .nav-link.active, .news-tab .nav-tabs .nav-item.show .nav-link, .news-tab
+.nav-tabs .nav-link.active {
     background-color: transparent !important;
 }
 #vac{
@@ -762,7 +762,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 #vac #accordion5 h6 {
     color: #a990ba;
 }
-#alm, #cbs, #csr {
+#alm, #cbs, #csr, #m_news, #gall, #cald {
     height: 500px;
 }
 #f-rep{
@@ -779,7 +779,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 #f-rep img {
     width: 250px;
 }
-#alm > h1, #cbs > h1, #csr > h1 {
+#alm > h1, #cbs > h1, #csr > h1, #m_news > h1, #gall > h1, #cald > h1 {
     color: #4b78af;
     margin-top: 206px;
 }
@@ -866,7 +866,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 #cv label{
     margin-bottom: 0;
 }
-#cv input, #sign input, #feed input, .sub-box input, .comp-prof input, #calc-page input, #login-page input{
+#cv input, #sign input, #feed input, .sub-box input, .comp-prof input, #calc-page input, #login-page input, .news-sub input{
     background: #ebebeb;
     height: 30px;
     border: none;
@@ -883,7 +883,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     padding: .25rem .75rem;
 }
 #cv input:focus, #sign input:focus, #feed input:focus, #feed textarea:focus, #cv textarea:focus, #cv select:focus, .sub-box input:focus,
-.comp-prof input:focus, #calc-page input:focus, #login-page input:focus{
+.comp-prof input:focus, #calc-page input:focus, #login-page input:focus, .news-sub input:focus{
     background-color: #ebebeb;
     box-shadow: 0 0 5px #333;
     padding: .25rem .75rem;
@@ -918,7 +918,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     font-size: 0.85rem;
     margin-bottom: 1rem;
 }
-.career-tab form, .company-tab form, .benefits-tab form{
+.career-tab form, .company-tab form, .benefits-tab form, .news-tab form{
     margin-top: 1rem;
 }
 
@@ -1362,6 +1362,73 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     width: 100%;
     bottom: 2rem;
     display: none;
+}
+
+/*Styling for Body section of News Page*/
+.news-bg{
+    background: url(../images/news-bg.png) no-repeat center;
+    background-size: cover;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: unset;
+}
+.news-bg h1{
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+.news1{
+    height: 300px;
+    width: calc(100% + 15px);
+    margin-left: -15px;
+    background-color: white;
+    border-top-right-radius: 15%;
+    border-bottom-right-radius: 15%;
+}
+.other-news{
+    padding-top: 6%;
+}
+.news-bg img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    -o-object-fit: cover;
+}
+.news-bg .media {
+    margin: 10px 0;
+}
+.news-bg .media-body{
+    font-size: 0.75rem;
+    color: white !important;
+}
+.news-bg .media-body h6,.news-bg .media-body a, .news-bg .media-body a:hover{
+    font-weight: 500;
+    color: white !important;
+}
+.news-sub {
+    margin: 20px 0;
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.news-sub input{
+    margin-right: 20px;
+}
+.news-sub .btn-outline-purple {
+    color: white !important;
+    font-size: 0.875rem !important;
+    padding: 5px 10px;
+}
+#m-news{
+    padding-top: 50px;
+}
+#m-news .media{
+    margin: 25px 0;
+}
+#m-news img{
+    height: 125px;
+    width: 200px;
+    margin-right: 35px;
+    object-fit: cover;
+    -o-object-fit: cover;
 }
 
 /*Styling for Footer Section*/
@@ -1819,7 +1886,8 @@ footer .table td, .table th {
         font-size: 1rem;
     }
     .career-tab a.nav-link.active::before, .career-tab a.nav-link:hover::before, .career-tab a.nav-link:focus::before,
-    .company-tab a.nav-link.active::before, .company-tab a.nav-link:hover::before, .company-tab a.nav-link:focus::before {
+    .company-tab a.nav-link.active::before, .company-tab a.nav-link:hover::before, .company-tab a.nav-link:focus::before,
+    .news-tab a.nav-link.active::before{
         width: 85%;
     }
     .cult-box1, .cult-box2, .cult-box3, .cult-box4, .cult-box5, .cult-box6 {
@@ -1898,6 +1966,31 @@ footer .table td, .table th {
         width: 70%;
         left: 15%;
         font-size: 1.125rem;
+    }
+
+    /*Styling for News & Events Page*/
+    .news-bg {
+        margin-top: 83px;
+    }
+    .news-bg h1 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .news1{
+        height: 200px;
+        width: 100%;
+        margin-left: 0;
+        border-radius: 20px;
+    }
+    .other-news {
+        padding-top: 3%;
+    }
+    .news-bg img {
+        width: 60px;
+        height: 60px;
+    }
+    .news-sub {
+        font-size: 1rem;
     }
 
     /*Styling Button*/
@@ -2011,7 +2104,7 @@ footer .table td, .table th {
     .m-prod-list {
         background-color: #e1e1e1;
     }
-    .m-prod-list form, .location form, .career-tab form, .know form, .company-tab form, .benefits-tab form{
+    .m-prod-list form, .location form, .career-tab form, .know form, .company-tab form, .benefits-tab form, .news-tab form{
         width: 60%;
     }
     .m-prod-list label{
@@ -2269,7 +2362,7 @@ footer .table td, .table th {
     }
 
     /*Styling for Products and Styling*/
-    .m-prod-list form, .location form, .career-tab form, .know form, .company-tab form, .benefits-tab form{
+    .m-prod-list form, .location form, .career-tab form, .know form, .company-tab form, .benefits-tab form, .news-tab form{
         width: 80%;
     }
     .img-box {
@@ -2293,6 +2386,13 @@ footer .table td, .table th {
     #comps-slide .carousel-control-next, #comps-slide .carousel-control-prev{
         bottom: 70%;
     }
+    .comps {
+        height: 550px;
+    }
+    .comps h3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
     .board-mgt .nav-link {
         font-size: 1rem;
     }
@@ -2313,6 +2413,12 @@ footer .table td, .table th {
     /*Styling for Calculator Page*/
     #disclaim-overlay ul img{
         display: none;
+    }
+
+    /*Styling for News & Events Page*/
+    .news-sub input {
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
     /*Styling for footer*/
