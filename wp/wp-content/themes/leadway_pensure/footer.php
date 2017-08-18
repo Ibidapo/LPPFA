@@ -28,35 +28,44 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
             </ul>
         </div>
     </div>
-    <div class="row" style="margin-bottom: 10px">
-        <a class="col-12 col-md-6 btn-red" data-toggle="collapse" href="#sign" aria-expanded="false"
-           aria-controls="sign">Sign-Up for News Letter</a>
-        <a class="col-12 col-md-6 btn-red" data-toggle="collapse" data-target="#feed" aria-expanded="false"
-           aria-controls="feed">Give us your Feedback</a>
+    <div class="row" style="margin-bottom:10px">
+        <a class="col-12 col-md-6 btn-red" data-toggle="collapse" href="#sign" aria-expanded="false" aria-controls="sign">Sign-Up for News Letter</a>
+        <a class="col-12 col-md-6 btn-red" data-toggle="collapse" data-target="#feed" aria-expanded="false" aria-controls="feed">Give us your Feedback</a>
     </div>
     <div class="row justify-content-around" style="margin-bottom: 10px">
-        <div class="col-12 col-md-4 collapse" id="sign">
-            <form>
-                <div class="form-group">
-                    <input class="form-control form-control-sm" type="text" placeholder="E-mail Address" required>
-                </div>
-                <div class="text-center">
-                    <button type="button" class="btn btn-outline-red btn-sm">Sign Up</button>
-                </div>
-            </form>
+        <div class="col-sm-10 col-md-4 collapse" id="sign">
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup" class="text-center">
+                <form action="//leadway-pensure.us10.list-manage.com/subscribe/post?u=a7d286c921166498a0b699255&amp;id=c1b945e29f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll" class="text-center">
+                        <h5 style="color:#1d69a6"> Subscribe and receive the Leading digest monthly! </h5>
+                        <div class="mc-field-group">
+                            <input type="text" value="" name="FNAME" class="required chimp text-center" id="mce-FNAME" placeholder="First Name">
+                        </div>
+                        <div class="mc-field-group">
+                            <input type="email" value="" name="EMAIL" class="required email chimp text-center" id="mce-EMAIL" placeholder="E-mail Address">
+                        </div>
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a7d286c921166498a0b699255_c1b945e29f" tabindex="-1" value=""></div>
+                        <div class="clear"><input type="submit" value="Subscribe Today" name="subscribe" id="mc-embedded-subscribe" class="btn btn-outline-red btn-sm news-button"></div>
+                    </div>
+                </form>
+            </div>
+            <!--End mc_embed_signup-->
         </div>
-        <div class="col-12 col-md-4 collapse" id="feed">
+        <div class="col-sm-10 col-md-4 collapse" id="feed">
+            <h5 class="text-center"> We'd love to hear from you </h5>
             <form>
                 <div class="form-group">
-                    <input class="form-control form-control-sm" type="text" placeholder="E-mail Address" required>
+                    <input class="form-control form-control-sm chimp text-center" type="text" placeholder="E-mail Address" required>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control form-control-sm" rows="3" cols="inherit"
-                              placeholder="Please write here" required></textarea>
+                    <textarea class="form-control form-control-sm chimp text-center" rows="3" cols="inherit" placeholder="Please write here" required></textarea>
                 </div>
-                <div class="text-center">
-                    <button type="button" class="btn btn-outline-red btn-sm">Post Feedback</button>
-                </div>
+                <div class="text-center"><input type="submit" class="btn btn-outline-red btn-sm" value="Post feedback"></div>
             </form>
         </div>
     </div>

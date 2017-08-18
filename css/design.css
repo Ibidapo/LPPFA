@@ -116,6 +116,16 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     border-radius: 25px;
 }
 
+/*Styling for Google Translate*/
+.goog-te-combo, .goog-te-gadget-simple, .goog-te-gadget-simple .goog-te-menu-value {
+    background: transparent !important;
+    color: white !important;
+    border: none !important;
+}
+.goog-te-combo option{
+    color: black;
+}
+
 /*Styling for Body Section of Home page*/
 .landing {
     position: relative;

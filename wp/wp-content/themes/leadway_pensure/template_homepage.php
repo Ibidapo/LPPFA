@@ -77,27 +77,27 @@ $social_options = get_option('theme_social_options');
                         <a class="nav-link" href="/benefits"> Benefits </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/investment"> Investments </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/login"> Login </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navbar-brand mOff pOf logo" href="<?php echo get_bloginfo('wpurl'); ?>"><img
-                                src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" width="85"
-                                alt=""></a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="/company"> Our Company </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/career"> Careers </a>
+                        <a class="nav-link"  href="/career"> Careers </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/news"> News | Events </a>
+                        <a class="navbar-brand mOff pOf logo" href="<?php echo get_bloginfo('wpurl'); ?>">
+                            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" width="85" alt="Leadway Logo">
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact"> Contact </a>
+                        <a class="nav-link" href="/investment"> Investments </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/news"> News & Events </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/social">  Social </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact"> Contact Us </a>
                     </li>
                 </ul>
             </div>

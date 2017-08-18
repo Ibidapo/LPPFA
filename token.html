@@ -28,17 +28,10 @@
                 <tbody>
                 <tr>
                     <td>
-                        <div class="form-group">
-                            <select class="form-control language">
-                                <option>English</option>
-                                <option>Yoruba</option>
-                                <option>Hausa</option>
-                                <option>Igbo</option>
-                            </select>
-                        </div>
+                        <div id="google_translate_element"></div>
                     </td>
                     <td>
-                        <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i> 0800-Pesnure</span>
+                        <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i> 0800-Pensure</span>
                     </td>
                     <td>
                         <span class="head-td"> RSA FUNDS</span><br>
@@ -312,6 +305,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ha,ig,yo', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+    </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="js/index.js"></script>
     <script src="js/parsley.min.js"></script>
     <script>
