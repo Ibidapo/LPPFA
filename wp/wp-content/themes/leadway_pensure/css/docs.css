@@ -176,7 +176,7 @@ left: 90px;
  font-size:11px;
 }
 .p-id, .p-details {
-  margin-top: 8%;
+  padding-top: 70px;
 }
 .p-det-head{
 padding:1%;
@@ -544,10 +544,9 @@ color:white;
     color: red !important;
     font-size:9px !important;
 }
-
-.nav-tabs .nav-link.active{
+#social .nav-tabs .nav-link.active{
 background: #1e68a5;
-box-shadow: #333 0px -3px 9px -1px;
+box-shadow: #333 0 -3px 9px -1px;
 }
 .nav-tabs{
     border:none;
@@ -1217,9 +1216,5 @@ left:17.5%;
  #requ-tab{
  left:50.5%;
 }*/
-}
-
-footer .textwidget ul {
-    padding-left: 0;
 }
 

@@ -49,15 +49,40 @@ $options = get_option('theme_options');
         <span class="middle"></span>
         <span class="bottom"></span>
     </div>
-    <a href="<?php echo get_bloginfo( 'wpurl' );?>" class="m-logo row navbar-brand" data-toggle="tooltip" title="Home" data-placement="bottom">
-        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" class="img-responsive"
-             width="85" alt="">
+    <a href="<?php echo get_bloginfo( 'wpurl' );?>" class="m-logo navbar-brand">
+        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" class="img-responsive"  width="85" alt="Leadway Alternate Logo">
     </a>
-
+    <form class="form-inline mob-search">
+        <input class="form-control" type="text" placeholder="Search">
+    </form>
     <div class="overlay text-center" id="overlay">
         <ul class="menu">
-            <li><a data-toggle="collapse" href="#lang" aria-expanded="false" aria-controls="lang">Select Language <i
-                        class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            <li><a data-toggle="collapse" href="#log" aria-expanded="false" aria-controls="log">Login / Register <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <ul class="sub-menu collapse" id="log">
+                    <li><a href="#">Client login</a></li>
+                    <li><a href="#">Employer login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </li>
+            <li><a href="/company">Our Company</a></li>
+            <li><a href="/services">Products & Services</a></li>
+            <li><a href="/benefits">Benefits</a></li>
+            <li><a href="/investment">Investments</a></li>
+            <li><a href="/career">Careers</a></li>
+            <li><a data-toggle="collapse" href="#med" aria-expanded="false" aria-controls="med">Media <i class="fa fa-chevron-down"></i></a>
+                <ul class="sub-menu collapse" id="med">
+                    <li><a href="/news">News & Events</a></li>
+                    <li><a href="/social">Social</a></li>
+                    <li><a href="/downloads">Downloads</a></li>
+                </ul>
+            </li>
+            <li><a data-toggle="collapse" href="#cont" aria-expanded="false" aria-controls="cont">Contact Us <i class="fa fa-chevron-down"></i></a>
+                <ul class="sub-menu collapse" id="cont">
+                    <li><a href="/contact">Branch Network</a></li>
+                    <li><a href="/faq">FAQs</a></li>
+                </ul>
+            </li>
+            <li><a data-toggle="collapse" href="#lang" aria-expanded="false" aria-controls="lang">Select Language <i class="fa fa-chevron-down"></i></a>
                 <ul class="sub-menu collapse" id="lang">
                     <li><a href="#">English</a></li>
                     <li><a href="#">Yoruba</a></li>
@@ -65,23 +90,6 @@ $options = get_option('theme_options');
                     <li><a href="#">Hausa</a></li>
                 </ul>
             </li>
-            <li><a href="/company">Our Company</a></li>
-            <li><a data-toggle="collapse" href="#prod" aria-expanded="false" aria-controls="prod">Products & Services <i
-                        class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                <ul class="sub-menu collapse" id="prod">
-                    <li><a href="#">Retire Savings Account</a></li>
-                    <li><a href="#">Additional Voluntary Contribution</a></li>
-                    <li><a href="#">Managed Funds</a></li>
-                    <li><a href="#">Cross-Border Services</a></li>
-                    <li><a href="#">NSITF</a></li>
-                    <li><a href="#">SMS Services</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Benefits</a></li>
-            <li><a href="#">Investment</a></li>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Login</a></li>
         </ul>
     </div>
 </nav>
@@ -103,7 +111,7 @@ $options = get_option('theme_options');
             </td>
             <td>
                 <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i>
-                    <?= $options['phone_number']; ?>
+                <?= $options['phone_number'] ?>
                 </span>
             </td>
             <td>
@@ -115,11 +123,11 @@ $options = get_option('theme_options');
                 <span> &#8358;2.3433 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png" alt=""></span>
             </td>
             <td>
-                <span class="head-td">RSA ADMIN FEE</span><br>
-                <span> &#8358;100 </span>
+                <span class="head-td">RSA ACCOUNTS </span><br>
+                <span> 500,000 </span>
             </td>
             <td>
-                <a href="#" class="nav-calc"> <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png"> <span>Calculator</span></a>
+                <a href="calculator.html" class="nav-calc"> <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png"> <span>Calculator</span></a>
             </td>
             <td>
                 <button type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS </button>
@@ -137,99 +145,62 @@ $options = get_option('theme_options');
                 <input class="form-control" type="text" placeholder="Search">
             </form>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="/services" id="ps" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false"> Products & Services </a>
-
+                <a class="nav-link dropdown-toggle" href="javascript:" id="ps" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products & Services</a>
                 <div class="dropdown-menu ps" aria-labelledby="ps">
-                    <a class="dropdown-item" href="/services#rsa"><i class="fa fa-chevron-right"
-                                                                         aria-hidden="true"></i> Retirement Savings
-                        Account</a>
-                    <a class="dropdown-item" href="/services#avc"><i class="fa fa-chevron-right"
-                                                                         aria-hidden="true"></i> Additional Voluntary
-                        Contribution</a>
-                    <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i>
-                        Cross-Border Benefits</a>
-                    <a class="dropdown-item" href="/services#mf"><i class="fa fa-chevron-right"
-                                                                        aria-hidden="true"></i> Managed Funds</a>
-                    <a class="dropdown-item" href="/services#nst"><i class="fa fa-chevron-right"
-                                                                         aria-hidden="true"></i> NSITF</a>
-                    <a class="dropdown-item" href="/services#pms"><i class="fa fa-chevron-right"
-                                                                         aria-hidden="true"></i> SMS Services</a>
+                    <a class="dropdown-item" href="/services"><i class="fa fa-chevron-right" aria-hidden="true"></i> Retirement Savings Account</a>
+                    <a class="dropdown-item" href="/services#avc"><i class="fa fa-chevron-right" aria-hidden="true"></i> Additional Voluntary Contribution</a>
+                    <a class="dropdown-item" href="/services#cbs"><i class="fa fa-chevron-right" aria-hidden="true"></i> Cross-Border Services</a>
+                    <a class="dropdown-item" href="/services#mf"><i class="fa fa-chevron-right" aria-hidden="true"></i> Managed Funds</a>
+                    <a class="dropdown-item" href="/services#nst"><i class="fa fa-chevron-right" aria-hidden="true"></i> NSITF</a>
+                    <a class="dropdown-item" href="/services#pms"><i class="fa fa-chevron-right" aria-hidden="true"></i> SMS Services</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="/company" id="oc" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">Our Company</a>
-
+                <a class="nav-link dropdown-toggle" href="/company" id="oc" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Company</a>
                 <div class="dropdown-menu oc" aria-labelledby="oc">
-                    <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Meet
-                        Leadway Pensure</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Leadership</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Why Leadway
-                        Pensure?</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Financial
-                        Reports</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> C.S.R</a>
+                    <a class="dropdown-item" href="/company"><i class="fa fa-chevron-right" aria-hidden="true"></i> Meet Leadway Pensure</a>
+                    <a class="dropdown-item" href="/company#lead"><i class="fa fa-chevron-right" aria-hidden="true"></i> Leadership</a>
+                    <a class="dropdown-item" href="/company#f-rep"><i class="fa fa-chevron-right" aria-hidden="true"></i> Financial Reports</a>
+                    <a class="dropdown-item" href="/company#csr"><i class="fa fa-chevron-right" aria-hidden="true"></i> C.S.R</a>
+                    <a class="dropdown-item" href="/career"><i class="fa fa-chevron-right" aria-hidden="true"></i> Careers</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="in" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">Investment</a>
-
+                <a class="nav-link dropdown-toggle" href="javascript:" id="in" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Investments</a>
                 <div class="dropdown-menu in" aria-labelledby="in">
-                    <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Financial
-                        Markets</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Wealth
-                        Planning</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Retirement
-                        Planning</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Performance
-                        Fund</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i>
-                        Podcasts</a>
+                    <a class="dropdown-item" href="/investment"><i class="fa fa-chevron-right" aria-hidden="true"></i> Financial Markets</a>
+                    <a class="dropdown-item" href="/investment#w-plan"><i class="fa fa-chevron-right" aria-hidden="true"></i> Wealth Planning</a>
+                    <a class="dropdown-item" href="/investment#r-plan"><i class="fa fa-chevron-right" aria-hidden="true"></i> Retirement Planning</a>
+                    <a class="dropdown-item" href="/investment#p-fund"><i class="fa fa-chevron-right" aria-hidden="true"></i> Performance Fund</a>
+                    <a class="dropdown-item" href="/investment#pod"><i class="fa fa-chevron-right" aria-hidden="true"></i> Podcast</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="ne" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">News | Events</a>
-
-                <div class="dropdown-menu" aria-labelledby="ne">
-                    <a class="dropdown-item" href="/careers"><i class="fa fa-chevron-right" aria-hidden="true"></i>
-                        Careers</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i>
-                        Calendar</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Gallery</a>
+                <a class="nav-link dropdown-toggle" href="#" id="bnf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Benefits</a>
+                <div class="dropdown-menu bnf" aria-labelledby="bnf">
+                    <a class="dropdown-item" href="/benefits"><i class="fa fa-chevron-right" aria-hidden="true"></i> About to Retire?</a>
+                    <a class="dropdown-item" href="/benefits#pay-grnd"><i class="fa fa-chevron-right" aria-hidden="true"></i> Grounds to Retirement</a>
+                    <a class="dropdown-item" href="/benefits#pay-type"><i class="fa fa-chevron-right" aria-hidden="true"></i> Payment Types</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dl" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">Downloads</a>
-
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dl">
-                    <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Regulatory
-                        Information </a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Retired &
-                        Terminal Benefits</a>
-                    <a class="dropdown-item" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> Corporate
-                        Governance</a>
+                <a class="nav-link dropdown-toggle" href="#" id="md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media</a>
+                <div class="dropdown-menu dropdown-menu-right md" aria-labelledby="md">
+                    <a class="dropdown-item" href="/news"><i class="fa fa-chevron-right" aria-hidden="true"></i> News & Events</a>
+                    <a class="dropdown-item" href="/news#cald"><i class="fa fa-chevron-right" aria-hidden="true"></i> Calender</a>
+                    <a class="dropdown-item" href="/news#gall"><i class="fa fa-chevron-right" aria-hidden="true"></i> Gallery</a>
+                    <a class="dropdown-item" href="/social"><i class="fa fa-chevron-right" aria-hidden="true"></i> Social</a>
+                    <a class="dropdown-item" href="/downloads"><i class="fa fa-chevron-right" aria-hidden="true"></i> Downloads</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="javascript:" id="co" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">Contact</a>
-
+                <a class="nav-link dropdown-toggle" href="javascript:" id="co" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Us</a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="co">
-                    <a class="dropdown-item" href="contact.html"><i class="fa fa-chevron-right" aria-hidden="true"></i>
-                        Branch Network</a>
-                    <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i>
-                        Help Desk</a>
-                    <a class="dropdown-item disabled" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i>
-                        FAQ's</a>
+                    <a class="dropdown-item" href="/contact"><i class="fa fa-chevron-right" aria-hidden="true"></i> Branch Network</a>
+                    <a class="dropdown-item" href="/faq"><i class="fa fa-chevron-right" aria-hidden="true"></i> FAQs</a>
                 </div>
             </li>
-            <a class="navbar-brand" href="index.html"><img class="logo"
-                                                           src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.png"
-                                                           alt=""></a>
+            <a class="navbar-brand" href="/"><img class="logo" src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.png" alt="Leadway Logo"></a>
         </ul>
     </div>
 </nav>
