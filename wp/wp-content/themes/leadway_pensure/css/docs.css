@@ -1218,3 +1218,6 @@ left:17.5%;
 }*/
 }
 
+footer .textwidget ul {
+    padding-left: 0;
+}

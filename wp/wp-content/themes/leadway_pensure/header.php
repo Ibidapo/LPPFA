@@ -42,6 +42,7 @@ $options = get_option('theme_options');
 
 </head>
 <body>
+<?php if(!is_page_template("template_enroll.php")): ?>
 <!-- Mobile navigation -->
 <nav class="m-style navbar fixed-top hidden-lg-up">
     <div class="button_container" id="toggle">
@@ -127,7 +128,7 @@ $options = get_option('theme_options');
                 <span> 500,000 </span>
             </td>
             <td>
-                <a href="calculator.html" class="nav-calc"> <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png"> <span>Calculator</span></a>
+                <a href="/calculator" class="nav-calc"> <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png"> <span>Calculator</span></a>
             </td>
             <td>
                 <button type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS </button>
@@ -204,3 +205,4 @@ $options = get_option('theme_options');
         </ul>
     </div>
 </nav>
+<?php endif ?>

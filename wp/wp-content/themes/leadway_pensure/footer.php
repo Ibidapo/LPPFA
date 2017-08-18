@@ -76,13 +76,13 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
                     <a class="nav-link" href="#">Site Map</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Privacy Policy</a>
+                    <a class="nav-link" href="/privacy">Privacy Policy</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Legal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Terms & Conditions</a>
+                    <a class="nav-link" href="/terms">Terms & Conditions</a>
                 </li>
             </ul>
         </div>

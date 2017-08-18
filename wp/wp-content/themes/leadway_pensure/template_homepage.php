@@ -74,13 +74,13 @@ $social_options = get_option('theme_social_options');
                         <a class="nav-link" href="/services">Products & Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Benefits </a>
+                        <a class="nav-link" href="/benefits"> Benefits </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Investments </a>
+                        <a class="nav-link" href="/investment"> Investments </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Login </a>
+                        <a class="nav-link" href="/login"> Login </a>
                     </li>
                     <li class="nav-item">
                         <a class="navbar-brand mOff pOf logo" href="<?php echo get_bloginfo('wpurl'); ?>"><img
@@ -88,16 +88,16 @@ $social_options = get_option('theme_social_options');
                                 alt=""></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Our Company </a>
+                        <a class="nav-link" href="/company"> Our Company </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="career.html"> Careers </a>
+                        <a class="nav-link" href="/career"> Careers </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> News | Events </a>
+                        <a class="nav-link" href="/news"> News | Events </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html"> Contact </a>
+                        <a class="nav-link" href="/contact"> Contact </a>
                     </li>
                 </ul>
             </div>
