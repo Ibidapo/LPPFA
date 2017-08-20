@@ -132,6 +132,11 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
     })();
 </script>
 <!--End of Tawk.to Script-->
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ha,ig,yo', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/index.js"></script>
 
 <?php wp_footer(); ?>

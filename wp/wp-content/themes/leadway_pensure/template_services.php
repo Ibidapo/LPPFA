@@ -353,8 +353,6 @@ $services = get_field('services');
                     $('.stm-txt, .pin-txt, .bal-txt').hide();
                     $('.help-txt').show();
                     break;
-                default:
-                    document.write("Not working");
             }
         });
 

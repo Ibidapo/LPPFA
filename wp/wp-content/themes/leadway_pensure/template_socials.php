@@ -1,10 +1,11 @@
 <?php /* Template Name: Socials */ ?>
 
 <?php
-
+$social_options = get_option('theme_social_options');
 ?>
 
 <?php get_header(); ?>
+<!-- Body and Main Content of page -->
 <!-- Body and Main Content of page -->
 <div class="container-fluid" style="padding-bottom:92px">
     <div class="row">
@@ -19,7 +20,9 @@
                             <a class="nav-link active f-height" data-toggle="tab" href="#game"> <img class="social-tab" src=<?php echo get_bloginfo('template_directory'); ?>/images/g-pad.png alt=""> </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link f-height" data-toggle="tab" href="#facebook">  <img class="social-tab" src=<?php echo get_bloginfo('template_directory'); ?>/images/facebook.png alt="">    </a>
+                            <a class="nav-link f-height" data-toggle="tab" href="#facebook">
+                                <img class="social-tab" src=<?php echo get_bloginfo('template_directory'); ?>/images/facebook.png alt="">
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link f-height" data-toggle="tab" href="#insta"> <img class="social-tab" src=<?php echo get_bloginfo('template_directory'); ?>/images/instagram.png alt=""> </a>
@@ -73,12 +76,31 @@
             </div>
 
             <div class="tab-pane social-pane" id="facebook" role="tabpanel">
+                <div class=row>
+                    <div class="fb-page col-12 col-sm-6" data-href="https://www.facebook.com/iNspireleaership.productivity/" data-tabs="timeline,messages,events" data-width="700px" data-height="500px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/iNspireleaership.productivity/" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/iNspireleaership.productivity/">iNspire Leadership</a>
+                        </blockquote>
+                    </div>
 
-                <div class="fb-page" data-href="https://www.facebook.com/iNspireleaership.productivity/" data-tabs="timeline,messages,events" data-width="700px" data-height="500px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/iNspireleaership.productivity/" class="fb-xfbml-parse-ignore">
-                        <a href="https://www.facebook.com/iNspireleaership.productivity/">iNspire Leadership</a>
-                    </blockquote>
+                    <div class="col-12 col-sm-6">
+                        <div class=row>
+                            <div class= col-12 style="padding:70px;top:62px;">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/facebook-1.png" class='img-fluid'>
+                            </div>
+                            <h5 class="col-12 text-center" style="color:darkgrey; padding:16px">  Browse our timeline on facebook. Follow our page
+                                to stay updated on our events, recent news and
+                                peer 2 peer competitions!  </h5>
+                            <div class="fb-like col-12 " data-href="https://www.facebook.com/leadwaypensure/" data-width="80px" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+                            <h5 class="col-12 text-center" style="color:darkgrey; padding: 16px">  Browse our timeline on facebook. Follow our page
+                                to stay updated on our events, recent news and
+                                peer 2 peer competitions!  </h5>
+                            <div class="fb-like col-12 text-center" data-href="https://www.facebook.com/leadwaypensure/" data-width="80px" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+                        </div>
+
+                    </div>
                 </div>
-
             </div>
             <div class="tab-pane social-pane text-center" id="insta" role="tabpanel">
                 <div class="row">
@@ -112,6 +134,21 @@
 </div>
 
 <?php get_footer(); ?>
+<script src="<?php echo get_bloginfo('template_directory'); ?>/js/instafeed.min.js"></script>
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'user',
+        userId: '5841177351',
+        accessToken: '5841177351.1677ed0.1de19abc5aad4ec69d45cf394c997311',
+        clientId: 'fbc60c6a8fc5453caaafd62d806b23ed',
+        resolution: 'low_resolution'
+
+    });
+    feed.run();
+</script>
+<script src="http://s7.addthis.com/js/300/addthis_widget.js" type="text/javascript"></script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59878ab10d303b8d"></script>
 
 </body>
 </html>

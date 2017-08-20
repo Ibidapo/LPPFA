@@ -160,7 +160,7 @@ $social_options = get_option('theme_social_options');
     <!-- Customer Testimonials? -->
     <?php if ($customer_testimonials): ?>
         <div class="row" id="client-area">
-            <div class="client-intro">We celebrate every customer !</div>
+            <div class="client-intro">We celebrate every client!</div>
             <div class="hidden-sm-down col-md-8 client-txt">
                 <?php foreach ($customer_testimonials as $key => $item) { ?>
                     <div id="<?= $key == 0 ? "grad-txt" : ($key == 1 ? "emp-txt" : "retr-txt") ?>">
@@ -169,10 +169,10 @@ $social_options = get_option('theme_social_options');
                 <?php } ?>
             </div>
             <div class="hidden-sm-down col-md-4 client-pic">
-                <div id="customer-slide" class="carousel slide" data-ride="carousel" data-aos="fade-left">
+                <div id="customer-slide" class="carousel slide" data-ride="carousel" data-interval="10000" data-aos="fade-left">
                     <div class="carousel-inner" role="listbox">
                         <?php foreach ($customer_testimonials as $key => $item) { ?>
-                            <div class="carousel-item <?= $key == 0 ? "active" : "" ?>" id="<?= ++$key ?>">
+                            <div class="carousel-item <?= $key == 0 ? "active" : "" ?>" id="<?= $key + 1 ?>">
                                 <img class="d-block mx-auto"
                                      src="<?= $item['image']['url'] ?>"
                                      alt="<?= $item['image']['alt'] ?>">
@@ -190,7 +190,7 @@ $social_options = get_option('theme_social_options');
                 </div>
             </div>
             <div class="hidden-md-up col-12 client-txt">
-                <div id="mob-customer-slide" class="carousel slide" data-ride="carousel">
+                <div id="mob-customer-slide" class="carousel slide" data-ride="carousel" data-interval="10000">
                     <div class="carousel-inner" role="listbox">
                         <?php foreach ($customer_testimonials as $key => $item) { ?>
                             <div class="carousel-item <?= $key == 0 ? "active" : "" ?>">
@@ -340,6 +340,15 @@ $social_options = get_option('theme_social_options');
         interval: 15000
     });
 
+    $('#client-area').mouseenter(function(){
+        $('#customer-slide').carousel('pause');
+        $('#customer-slide .carousel-control-next, #customer-slide .carousel-control-prev').css('display', 'flex');
+    }).mouseleave(function(){
+        $('#customer-slide').carousel('cycle');
+        $('#customer-slide .carousel-control-next, #customer-slide .carousel-control-prev').css('display', 'none');
+    });
+
+
     $('#customer-slide').on('slide.bs.carousel', function (ev) {
         var id = ev.relatedTarget.id;
         id = parseInt(id);
@@ -356,8 +365,6 @@ $social_options = get_option('theme_social_options');
                 $('#emp-txt, #grad-txt').hide();
                 $('#retr-txt').show();
                 break;
-            default:
-                document.write("Not working");
         }
     });
 

@@ -20,6 +20,8 @@ $options = get_option('theme_options');
           href="<?php echo get_bloginfo('template_directory'); ?>/owlcarousel/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/docs.css">
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/design.css">
+    <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/dropzone.css">
+    <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/parsley.css">
     <!--Google Fonts and Fonts Awesome links -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
@@ -43,6 +45,20 @@ $options = get_option('theme_options');
 
 </head>
 <body>
+<?php if (is_page_template("template_socials.php")): ?>
+    <!-- fb plugin -->
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+<?php endif ?>
 <?php if(!is_page_template("template_enroll.php")): ?>
 <!-- Mobile navigation -->
 <nav class="m-style navbar fixed-top hidden-lg-up">
@@ -102,14 +118,7 @@ $options = get_option('theme_options');
         <tbody>
         <tr>
             <td>
-                <div class="form-group">
-                    <select class="form-control language">
-                        <option>English</option>
-                        <option>Yoruba</option>
-                        <option>Hausa</option>
-                        <option>Igbo</option>
-                    </select>
-                </div>
+                <div id="google_translate_element"></div>
             </td>
             <td>
                 <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i>
