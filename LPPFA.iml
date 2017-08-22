@@ -13,5 +13,6 @@
     <orderEntry type="library" name="chartist" level="application" />
     <orderEntry type="library" name="highcharts" level="application" />
     <orderEntry type="library" name="exporting" level="application" />
+    <orderEntry type="library" name="masonry.pkgd" level="application" />
   </component>
 </module>

@@ -2,6 +2,6 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$/faq.html" libraries="{WebGL}" />
-    <file url="PROJECT" libraries="{aos, bootstrap, bootstrap-select, chartist, exporting, highcharts, jquery-3.1.1, moment, tether}" />
+    <file url="PROJECT" libraries="{aos, bootstrap, bootstrap-select, chartist, exporting, highcharts, jquery-3.1.1, masonry.pkgd, moment, tether}" />
   </component>
 </project>

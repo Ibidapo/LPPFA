@@ -138,8 +138,8 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     width: 30px;
     height: 45px;
     margin-left: -15px;
-    background: #a890ba;
-    border: 2px solid #a890ba;
+    background: #ffb81c;
+    border: 2px solid #ffb81c;
     border-radius: 50px;
     box-sizing: border-box;
     cursor: pointer;
@@ -165,8 +165,8 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     width: 15px;
     height: 15px;
     margin-left: -8px;
-    border-left: 2px solid #a890ba;
-    border-bottom: 2px solid #a890ba;
+    border-left: 2px solid #ffb81c;
+    border-bottom: 2px solid #ffb81c;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     -webkit-animation: sdb05 1.5s infinite;
@@ -594,7 +594,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .know .nav-link {
     color: #2067a5 !important;
 }
-.location a.nav-link::after, .know a.nav-link::after {
+.location a.nav-link::after, .know a.nav-link::after, #blogTab a.nav-link::after {
     content: '';
     display: block;
     width: 0;
@@ -609,7 +609,8 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     height: 3px;
 }
 .location a.nav-link.active::after, .location a.nav-link:hover::after, .location a.nav-link:focus::after,
-.know a.nav-link.active::after, .know a.nav-link:hover::after, .know a.nav-link:focus::after {
+.know a.nav-link.active::after, .know a.nav-link:hover::after, .know a.nav-link:focus::after, #blogTab a.nav-link.active::after,
+#blogTab a.nav-link:hover::after, #blogTab a.nav-link:focus::after{
     width: 100%;
 }
 .location .nav-tabs, .know .nav-tabs {
@@ -619,6 +620,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 .location .nav-tabs .nav-item.show .nav-link, .location .nav-tabs .nav-link.active{
     background-color: transparent !important;
+    font-weight: 500;
 }
 /*Note:Accordion5 is for career page*/
 #accordion1, #accordion2, #accordion3, #accordion4, #accordion5, #accordion6, #accordion7, #accordion8, #accordion9, #accordion10 {
@@ -725,7 +727,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     box-shadow: 0 5px 5px -5px #333;
     z-index: 99;
 }
-.career-tab .nav-link, .company-tab .nav-link, .board .nav-link, .benefits-tab .nav-link, .news-tab .nav-link{
+.career-tab .nav-link, .company-tab .nav-link, .board .nav-link, .benefits-tab .nav-link, .news-tab .nav-link, #blogTab .nav-link{
     color: white !important;
     border: none;
     padding: 1rem;
@@ -745,17 +747,18 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .career-tab a.nav-link.active::before, .career-tab a.nav-link:hover::before, .career-tab a.nav-link:focus::before,
 .company-tab a.nav-link.active::before, .company-tab a.nav-link:hover::before, .company-tab a.nav-link:focus::before,
 .benefits-tab a.nav-link.active::before, .benefits-tab a.nav-link:hover::before, .benefits-tab a.nav-link:focus::before,
-.news-tab a.nav-link.active::before{
+.news-tab a.nav-link.active::before, .news-tab a.nav-link:hover::before, .news-tab a.nav-link:focus::before {
     width: 55%;
 }
-.career-tab .nav-tabs, .company-tab .nav-tabs, .board, .benefits-tab .nav-tabs, .news-tab .nav-tabs {
+.career-tab .nav-tabs, .company-tab .nav-tabs, .board, .benefits-tab .nav-tabs, .news-tab .nav-tabs, #blogTab {
     border-bottom: 0;
 }
 .career-tab .nav-tabs .nav-item.show .nav-link, .career-tab .nav-tabs .nav-link.active, .company-tab .nav-tabs .nav-item.show
 .nav-link, .company-tab .nav-tabs .nav-link.active, .board .nav-link.show, .board .nav-link.active, .benefits-tab .nav-tabs
 .nav-item.show .nav-link, .benefits-tab .nav-tabs .nav-link.active, .news-tab .nav-tabs .nav-item.show .nav-link, .news-tab
-.nav-tabs .nav-link.active {
+.nav-tabs .nav-link.active, #blogTab .nav-item.show .nav-link, #blogTab .nav-link.active {
     background-color: transparent !important;
+    font-weight: 400;
 }
 #vac{
     text-align: center;
@@ -1212,7 +1215,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .benefits-bg > .bg-txt > p{
     font-size: 1.5rem;
     margin: 1rem 0;
-    width: unset;
+    width: 100%;
  }
 .benefits-bg > .bg-txt > h1 > span, .benefits-bg > .bg-txt > h2 > span{
     color: #37afc0;
@@ -1380,37 +1383,47 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     background-size: cover;
     padding-left: 15px;
     padding-right: 15px;
-    height: unset;
+    height: inherit;
 }
 .news-bg h1{
     margin-top: 80px;
     margin-bottom: 30px;
 }
 .news1{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../images/forex.jpg) no-repeat center;
     height: 300px;
     width: calc(100% + 15px);
     margin-left: -15px;
-    background-color: white;
-    border-top-right-radius: 15%;
-    border-bottom-right-radius: 15%;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+.news1-txt {
+    position: absolute;
+    bottom: 10%;
+    width: 90%;
+    text-align: right;
+}
+.news1-txt p{
+    font-size: 1.375rem;
+    font-weight: 500;
 }
 .other-news{
     padding-top: 6%;
 }
-.news-bg img {
+.other-news img {
     width: 85px;
     height: 85px;
     object-fit: cover;
     -o-object-fit: cover;
 }
-.news-bg .media {
+.other-news .media {
     margin: 10px 0;
 }
-.news-bg .media-body{
+.other-news .media-body{
     font-size: 0.75rem;
     color: white !important;
 }
-.news-bg .media-body h6,.news-bg .media-body a, .news-bg .media-body a:hover{
+.other-news .media-body h6, .other-news .media-body a, .other-news .media-body a:hover{
     font-weight: 500;
     color: white !important;
 }
@@ -1427,18 +1440,187 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     font-size: 0.875rem !important;
     padding: 5px 10px;
 }
-#m-news{
-    padding-top: 50px;
+
+/*Styling Body Section of Blog Page*/
+#blogPage {
+    margin-top: 130px;
 }
-#m-news .media{
-    margin: 25px 0;
+#blogPage .tab-content {
+    margin-bottom: 3rem;
 }
-#m-news img{
-    height: 125px;
-    width: 200px;
-    margin-right: 35px;
+.navBlog{
+    background-color: #223e70;
+    box-shadow: 0 5px 5px -5px #333;
+    z-index: 99;
+}
+#blogTab, .navBlog, #blogTab a.nav-link{
+    height: 80px;
+}
+#blogTab .nav-item:first-child a.nav-link::after, #blogTab .nav-item:last-child a.nav-link::after {
+    display: none;
+}
+#blogTab a.nav-link{
+    padding: 1.7rem 1rem;
+}
+#blogTab .nav-item:first-child a.nav-link{
+    color: #cccfd2 !important;
+    font-size: 2.25rem;
+    font-weight: 500;
+    padding: 1rem;
+}
+#blogTab .nav-item:last-child a.nav-link{
+   padding: 0 1rem;
+}
+#blogTab .nav-item:first-child a.nav-link:hover, #blogTab .nav-item:first-child a.nav-link.active{
+    color: white !important;
+}
+#blogTab a.nav-link::after {
+    top: 25px;
+}
+#series1{
+    height: 450px;
+    padding: 0;
+}
+#series1 img{
     object-fit: cover;
     -o-object-fit: cover;
+    width: 100%;
+    height: inherit;
+}
+.seriesCap{
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.cap-color{
+    font-weight: 700;
+    color: #1e69a5;
+}
+.seriesCap p {
+    font-size: 0.875rem;
+    color: #1e69a5;
+}
+.otherSeries{
+    padding-top: 10px;
+    font-size: 0.875rem;
+}
+.otherSeries .col-12 h5, .otherSeries .col-12 h6{
+    color: #1e69a5;
+    text-align: center;
+}
+.otherSeries .col-11{
+    height: 103px;
+    overflow: hidden;
+}
+.otherSeries .media img{
+    object-fit: cover;
+    -o-object-fit: cover;
+    height: 100px;
+    width: 100px;
+}
+.blog-com, .blog-vid, .blog-tip {
+    height: 280px;
+    padding: 0;
+}
+.blog-vid {
+    background: url(../images/b3.png) no-repeat center;
+    background-size: cover;
+}
+.blog-com {
+    background: url(../images/b2.png) no-repeat center;
+    background-size: cover;
+}
+.blog-tip {
+    background: url(../images/b4.png) no-repeat center;
+    background-size: cover;
+}
+.blogCap {
+    background-color: rgba(255, 255, 255, .5);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 15px 0 15px;
+    font-weight: 500;
+}
+.sm-plug {
+    height: 300px;
+    background-color: rgba(31, 106, 164, .5);
+}
+#blog-Ft {
+    background-color: #1f6aa4;
+    height: 60px;
+    color: white;
+    font-size: 0.75rem;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+#blog-Ft img{
+    height: 40px;
+    margin-right: 5%;
+}
+.topSeries {
+    background-color: grey;
+    box-shadow: 0 2px 7px 2px #333;
+    height: 325px;
+}
+.topSeries .story {
+    padding: 40px 30px 20px;
+    color: white;
+}
+.topSeries .story h2{
+    margin-bottom: 25px;
+    margin-right: 25px;
+}
+.topSeries .story h4{
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+.topSeries .story p{
+    font-weight: 300;
+}
+.topSeries .story img{
+    height: 1.75rem;
+    margin-right: 5%;
+}
+.topSeries .story .link,  .topSeries .story .link a{
+    font-size: 1.25rem;
+    color: white;
+    vertical-align: middle;
+    font-weight: 300;
+}
+.topSeries .story-pic img{
+    position: relative;
+    object-fit: cover;
+    width: 80%;
+    height: 300px;
+    left: 10%;
+    bottom: -25px;
+}
+.recent {
+    padding-top: 2rem;
+}
+.recent h2{
+    color: grey;
+    margin-bottom: 25px;
+    margin-left: 25px;
+}
+.recent figure {
+    width: 100%;
+    margin: 0 0 1.5rem;
+}
+.recent figure figcaption {
+    margin-top: 10px;
+    color: #1f6aa4 !important;
+}
+.recent figure img {
+    object-fit: cover;
+    -o-object-fit:  cover;
+    width: 100%;
+    height: 250px;
 }
 
 /*Styling for Footer Section*/
@@ -1509,7 +1691,7 @@ footer .table td, .table th {
     position: fixed;
     display: none;
     right: 15px;
-    background-color: #a890ba;
+    background-color: #ffb81c;
     color: white;
     text-align: center;
     height: 40px;
@@ -1689,6 +1871,12 @@ footer .table td, .table th {
     .company-tab a.nav-link.active::before, .company-tab a.nav-link:hover::before, .company-tab a.nav-link:focus::before {
         width: 70%;
     }
+
+    /*Styling for Blog Page*/
+    .otherSeries .media img {
+        height: 80px;
+        width: 80px;
+    }
 }
 
 /*Styling for Ipad Pro*/
@@ -1751,7 +1939,7 @@ footer .table td, .table th {
 
     /*Styling Body of Home page*/
     .landing {
-        height: unset;
+        height: inherit;
         margin-bottom: 35px;
     }
     #slider{
@@ -1897,7 +2085,7 @@ footer .table td, .table th {
     }
     .career-tab a.nav-link.active::before, .career-tab a.nav-link:hover::before, .career-tab a.nav-link:focus::before,
     .company-tab a.nav-link.active::before, .company-tab a.nav-link:hover::before, .company-tab a.nav-link:focus::before,
-    .news-tab a.nav-link.active::before{
+    .news-tab a.nav-link.active::before,  .news-tab a.nav-link:hover::before, .news-tab a.nav-link:focus::before {
         width: 85%;
     }
     .cult-box1, .cult-box2, .cult-box3, .cult-box4, .cult-box5, .cult-box6 {
@@ -1959,7 +2147,7 @@ footer .table td, .table th {
     }
 
     /*Styling for Body of Calculator Page*/
-    #calc-page, #login-page {
+    #calc-page, #login-page, .news-bg, #blogPage {
         margin-top: 83px;
     }
     #disclaim-overlay{
@@ -1979,9 +2167,6 @@ footer .table td, .table th {
     }
 
     /*Styling for News & Events Page*/
-    .news-bg {
-        margin-top: 83px;
-    }
     .news-bg h1 {
         margin-top: 40px;
         margin-bottom: 20px;
@@ -2002,6 +2187,32 @@ footer .table td, .table th {
     .news-sub {
         font-size: 1rem;
     }
+
+    /*Styling for Blog Page*/
+    .seriesCap {
+        right: 2.5%;
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+    .seriesCap p, .otherSeries {
+        font-size: 0.75rem;
+    }
+    #blog-Ft {
+        height: inherit;
+        color: white;
+        font-size: 0.75rem;
+        margin: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .topSeries .story-pic img {
+        width: 100%;
+        left: 0;
+    }
+    .recent figure img {
+        height: 200px;
+    }
+
 
     /*Styling Button*/
     .btn-outline-white, .btn-outline-white:hover, .btn-outline-white:active, .btn-outline-white:focus, .btn-outline-red,
@@ -2236,6 +2447,32 @@ footer .table td, .table th {
         padding-top: 50px;
     }
 
+    /*Styling for News & Events page*/
+    .grid-sizer, .grid-item, .grid-item-1 {
+        width: 50%;
+    }
+
+    /*Styling for Blog*/
+    .topSeries{
+        height: inherit;
+        padding-top: 20px;
+    }
+    .topSeries .story-pic img{
+        width: 50%;
+        height: 150px;
+        left: 25%;
+        bottom: 0;
+    }
+    .topSeries .story {
+        padding: 40px 20% 20px;
+    }
+    #blog-Ft .col-12{
+        margin-top: 10px;
+    }
+    #blog-Ft img {
+        height: 32px;
+    }
+
     /*Styling for Button*/
     .btn-outline-blue, .btn-outline-blue-sm {
         margin-bottom: 5%;
@@ -2429,6 +2666,15 @@ footer .table td, .table th {
     .news-sub input {
         margin-right: 0;
         margin-bottom: 10px;
+    }
+
+    /*Styling for Blog Page*/
+    .topSeries .story-pic img{
+        width: 80%;
+        left: 10%;
+    }
+    .topSeries .story {
+        padding: 40px 5% 20px;
     }
 
     /*Styling for footer*/
