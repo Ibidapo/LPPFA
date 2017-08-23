@@ -117,79 +117,57 @@
             </tbody>
         </table>
         <!-- Navbar -->
-        <div class="navStyle2">
-            <ul class="nav nav-fill mr-auto">
-                <form class="form-inline search">
-                    <input class="form-control" type="text" placeholder="Search">
-                </form>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="javascript:" id="ps" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products & Services</a>
-                    <div class="dropdown-menu ps" aria-labelledby="ps">
-                        <a class="dropdown-item" href="services.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Retirement Savings Account</a>
-                        <a class="dropdown-item" href="services.html#avc"><i class="fa fa-chevron-right" aria-hidden="true"></i> Additional Voluntary Contribution</a>
-                        <a class="dropdown-item" href="services.html#cbs"><i class="fa fa-chevron-right" aria-hidden="true"></i> Cross-Border Services</a>
-                        <a class="dropdown-item" href="services.html#mf"><i class="fa fa-chevron-right" aria-hidden="true"></i> Managed Funds</a>
-                        <a class="dropdown-item" href="services.html#nst"><i class="fa fa-chevron-right" aria-hidden="true"></i> NSITF</a>
-                        <a class="dropdown-item" href="services.html#pms"><i class="fa fa-chevron-right" aria-hidden="true"></i> SMS Services</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="company.html" id="oc" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Company</a>
-                    <div class="dropdown-menu oc" aria-labelledby="oc">
-                        <a class="dropdown-item" href="company.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Meet Leadway Pensure</a>
-                        <a class="dropdown-item" href="company.html#lead"><i class="fa fa-chevron-right" aria-hidden="true"></i> Leadership</a>
-                        <a class="dropdown-item" href="company.html#f-rep"><i class="fa fa-chevron-right" aria-hidden="true"></i> Financial Reports</a>
-                        <a class="dropdown-item" href="company.html#csr"><i class="fa fa-chevron-right" aria-hidden="true"></i> C.S.R</a>
-                        <a class="dropdown-item" href="career.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Careers</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="javascript:" id="in" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Investments</a>
-                    <div class="dropdown-menu in" aria-labelledby="in">
-                        <a class="dropdown-item" href="investment.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Financial Markets</a>
-                        <a class="dropdown-item" href="investment.html#w-plan"><i class="fa fa-chevron-right" aria-hidden="true"></i> Wealth Planning</a>
-                        <a class="dropdown-item" href="investment.html#r-plan"><i class="fa fa-chevron-right" aria-hidden="true"></i> Retirement Planning</a>
-                        <a class="dropdown-item" href="investment.html#p-fund"><i class="fa fa-chevron-right" aria-hidden="true"></i> Performance Fund</a>
-                        <a class="dropdown-item" href="investment.html#pod"><i class="fa fa-chevron-right" aria-hidden="true"></i> Podcast</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="bnf" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Benefits</a>
-                    <div class="dropdown-menu bnf" aria-labelledby="bnf">
-                        <a class="dropdown-item" href="benefits.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> About to Retire?</a>
-                        <a class="dropdown-item" href="benefits.html#pay-grnd"><i class="fa fa-chevron-right" aria-hidden="true"></i> Grounds to Retirement</a>
-                        <a class="dropdown-item" href="benefits.html#pay-type"><i class="fa fa-chevron-right" aria-hidden="true"></i> Payment Types</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media</a>
-                    <div class="dropdown-menu dropdown-menu-right md" aria-labelledby="md">
-                        <a class="dropdown-item" href="news.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> News & Events</a>
-                        <a class="dropdown-item" href="news.html#cald"><i class="fa fa-chevron-right" aria-hidden="true"></i> Calender</a>
-                        <a class="dropdown-item" href="news.html#gall"><i class="fa fa-chevron-right" aria-hidden="true"></i> Gallery</a>
-                        <a class="dropdown-item" href="social.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Social</a>
-                        <a class="dropdown-item" href="blog.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Blog</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="javascript:" id="co" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact Us</a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="co">
-                        <a class="dropdown-item" href="contact.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Branch Network</a>
-                        <a class="dropdown-item" href="faq.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> FAQs</a>
-                        <a class="dropdown-item" href="downloads.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Downloads</a>
-                    </div>
-                </li>
-                <a class="navbar-brand" href="index.html"><img class="logo" src="images/logo.png" alt="Leadway Logo"></a>
-            </ul>
+        <div class="navBlog">
+            <div class="col-md-12">
+                <ul class="hidden-sm-down nav nav-fill nav-tabs" id="blogTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#blogHome" role="tab">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#blogInvest" role="tab">Investment Series</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#comic" role="tab">Comic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#blogVids" role="tab">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#careerTip" role="tab">Career Tips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><img src="images/logo-alt.png" height="80"></a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <!-- Body and Main Content of page -->
     <div class="container" id="blogPage">
+        <!-- Mobile Blog tab selection -->
+        <div class="row hidden-lg-up">
+            <div class="col-12 m-blogTab">
+                <form class="mx-auto">
+                    <div class="form-group text-center">
+                        <label class="text-center" for="m-blogTab">Our Blog</label>
+                        <select class="form-control" id="m-blogTab" data-aos="fade">
+                            <option value="0">Recent releases</option>
+                            <option value="1">Investment Series</option>
+                            <option value="2">Comic</option>
+                            <option value="3">Videos</option>
+                            <option value="4">Career Tips</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Main Content of Page -->
         <div class="row tab-content">
-            <div class="tab-pane fade col-12" role="tabpanel" id="blogHome">
+            <div class="tab-pane fade show active col-12" role="tabpanel" id="blogHome">
                 <div class="row">
                     <div class="col-md-7" id="series1">
                         <img src="images/b1.png"/>
+                        <span class="badge badge-primary">Investment Series</span>
                         <div class="seriesCap">
                             <span class="cap-color">Confident</span> because<br>my finances are<br><span class="cap-color">pensure</span>
                             <p>It's all in our investment methodologies</p>
@@ -291,14 +269,15 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade show active col-12" role="tabpanel" id="blogInvest">
+            <div class="tab-pane fade col-12" role="tabpanel" id="blogInvest">
                 <div class="row topSeries">
                     <div class="col-12 col-md-5 col-lg-6 story-pic">
                         <img src="images/sheet.jpg">
                     </div>
                     <div class="col-12 col-md-7 col-lg-6 story">
-                        <h2 class="hidden-md-down text-right">Top Story</h2>
-                        <h4 class="hidden-sm-down hidden-lg-up text-center">Top Story</h4>
+                        <h3 class="hidden-md-down text-right"><span class="badge badge-primary">Investment Series</span></h3>
+                        <h5 class="hidden-lg-up text-right"><span class="badge badge-primary">Investment Series</span></h5>
+                        <span class="news-date">21st Aug, 2017</span>
                         <h5>Building an efficient self-management system</h5>
                         <p>Self-management is a key skill that will help you throughout your life. It involves setting goals
                         and managing your time. Developing your motivation and concentration skills will help you to overcome
@@ -316,36 +295,48 @@
                         <h2>Recent releases</h2>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-primary">Investment Series</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-primary">Investment Series</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-primary">Investment Series</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-primary">Investment Series</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-primary">Investment Series</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-primary">Investment Series</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
@@ -359,8 +350,9 @@
                         <img src="images/sheet.jpg">
                     </div>
                     <div class="col-12 col-md-7 col-lg-6 story">
-                        <h2 class="hidden-md-down text-right">Top Story</h2>
-                        <h4 class="hidden-sm-down hidden-lg-up text-center">Top Story</h4>
+                        <h3 class="hidden-md-down text-right"><span class="badge badge-success">Comics</span></h3>
+                        <h5 class="hidden-lg-up text-right"><span class="badge badge-success">Comics</span></h5>
+                        <span class="news-date">21st Aug, 2017</span>
                         <h5>Building an efficient self-management system</h5>
                         <p>Self-management is a key skill that will help you throughout your life. It involves setting goals
                             and managing your time. Developing your motivation and concentration skills will help you to overcome
@@ -378,36 +370,48 @@
                         <h2>Recent releases</h2>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-success">Comics</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-success">Comics</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-success">Comics</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-success">Comics</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-success">Comics</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-success">Comics</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
@@ -421,8 +425,9 @@
                         <img src="images/sheet.jpg">
                     </div>
                     <div class="col-12 col-md-7 col-lg-6 story">
-                        <h2 class="hidden-md-down text-right">Top Story</h2>
-                        <h4 class="hidden-sm-down hidden-lg-up text-center">Top Story</h4>
+                        <h3 class="hidden-md-down text-right"><span class="badge badge-warning">Videos</span></h3>
+                        <h5 class="hidden-lg-up text-right"><span class="badge badge-warning">Videos</span></h5>
+                        <span class="news-date">21st Aug, 2017</span>
                         <h5>Building an efficient self-management system</h5>
                         <p>Self-management is a key skill that will help you throughout your life. It involves setting goals
                             and managing your time. Developing your motivation and concentration skills will help you to overcome
@@ -440,36 +445,48 @@
                         <h2>Recent releases</h2>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-warning">Videos</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-warning">Videos</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-warning">Videos</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-warning">Videos</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-warning">Videos</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-warning">Videos</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
@@ -483,8 +500,9 @@
                         <img src="images/sheet.jpg">
                     </div>
                     <div class="col-12 col-md-7 col-lg-6 story">
-                        <h2 class="hidden-md-down text-right">Top Story</h2>
-                        <h4 class="hidden-sm-down hidden-lg-up text-center">Top Story</h4>
+                        <h3 class="hidden-md-down text-right"><span class="badge badge-danger">Career Tips</span></h3>
+                        <h5 class="hidden-lg-up text-right"><span class="badge badge-danger">Career Tips</span></h5>
+                        <span class="news-date">21st Aug, 2017</span>
                         <h5>Building an efficient self-management system</h5>
                         <p>Self-management is a key skill that will help you throughout your life. It involves setting goals
                             and managing your time. Developing your motivation and concentration skills will help you to overcome
@@ -502,36 +520,48 @@
                         <h2>Recent releases</h2>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-danger">Career Tips</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-danger">Career Tips</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-danger">Career Tips</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-danger">Career Tips</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-danger">Career Tips</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
                         </figure>
                     </div>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-danger">Career Tips</span>
+                        <span class="news-date">21st Aug, 2017</span>
                         <figure>
                             <img src="images/sheet.jpg"/>
                             <figcaption><h5>Building an efficient self-management system</h5></figcaption>
@@ -598,6 +628,21 @@
                 $(".container").attr("class", "container-fluid");
             }
 
+            $("#m-blogTab").change(function (){
+                var i = $(this).val();
+
+                if(i == 0){
+                    $('a[href="#blogHome"]').tab('show');
+                }else if(i == 1){
+                    $('a[href="#blogInvest"]').tab('show');
+                }else if(i == 2) {
+                    $('a[href="#comic"]').tab('show');
+                }else if(i == 3) {
+                    $('a[href="#blogVids"]').tab('show');
+                }else if(i == 4) {
+                    $('a[href="#careerTip"]').tab('show');
+                }
+            });
 
         });
     </script>

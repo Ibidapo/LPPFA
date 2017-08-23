@@ -722,7 +722,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .bg-txt p a{
     margin-top: 15px;
 }
-.career-tab, .company-tab, .benefits-tab, .news-tab{
+.career-tab, .company-tab, .benefits-tab, .news-tab, .m-blogTab{
     background-color: #4b78af;
     box-shadow: 0 5px 5px -5px #333;
     z-index: 99;
@@ -931,7 +931,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     font-size: 0.85rem;
     margin-bottom: 1rem;
 }
-.career-tab form, .company-tab form, .benefits-tab form, .news-tab form{
+.career-tab form, .company-tab form, .benefits-tab form, .news-tab form, .m-blogTab form{
     margin-top: 1rem;
 }
 
@@ -1391,6 +1391,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 .news1{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../images/forex.jpg) no-repeat center;
+    background-size: cover;
     height: 300px;
     width: calc(100% + 15px);
     margin-left: -15px;
@@ -1408,7 +1409,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     font-weight: 500;
 }
 .other-news{
-    padding-top: 6%;
+    padding-top: 3%;
 }
 .other-news img {
     width: 85px;
@@ -1420,7 +1421,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     margin: 10px 0;
 }
 .other-news .media-body{
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: white !important;
 }
 .other-news .media-body h6, .other-news .media-body a, .other-news .media-body a:hover{
@@ -1440,6 +1441,18 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     font-size: 0.875rem !important;
     padding: 5px 10px;
 }
+.news-bg .news-date, .recent .news-date{
+    position: absolute;
+    font-size: 0.75rem;
+    left: 10%;
+}
+.news-bg .news-date{
+    bottom: 10%;
+}
+.recent .news-date{
+    top: 17%;
+    color: white;
+}
 
 /*Styling Body Section of Blog Page*/
 #blogPage {
@@ -1453,7 +1466,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     box-shadow: 0 5px 5px -5px #333;
     z-index: 99;
 }
-#blogTab, .navBlog, #blogTab a.nav-link{
+#blogTab, #blogTab a.nav-link{
     height: 80px;
 }
 #blogTab .nav-item:first-child a.nav-link::after, #blogTab .nav-item:last-child a.nav-link::after {
@@ -1486,6 +1499,13 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     -o-object-fit: cover;
     width: 100%;
     height: inherit;
+}
+#series1 span.badge, .news-bg span.badge, .recent span.badge{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-weight: 300;
+    font-size: 0.75rem;
 }
 .seriesCap{
     position: absolute;
@@ -1571,13 +1591,13 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     padding: 40px 30px 20px;
     color: white;
 }
-.topSeries .story h2{
-    margin-bottom: 25px;
-    margin-right: 25px;
-}
-.topSeries .story h4{
+.topSeries .story h3 span.badge{
     margin-bottom: 15px;
     margin-right: 15px;
+}
+.topSeries .story h5 span.badge{
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 .topSeries .story p{
     font-weight: 300;
@@ -1585,6 +1605,11 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .topSeries .story img{
     height: 1.75rem;
     margin-right: 5%;
+}
+.topSeries .story .news-date{
+    position: absolute;
+    top: 45px;
+    left: 30px;
 }
 .topSeries .story .link,  .topSeries .story .link a{
     font-size: 1.25rem;
@@ -1919,7 +1944,7 @@ footer .table td, .table th {
     .reg-txt {
         font-size: 1.5rem;
     }
-    .prof-label{
+    .prof-label, .m-blogTab form label{
         font-size: 1.375rem;
     }
     .benefits-bg .bg-txt {
@@ -2189,6 +2214,10 @@ footer .table td, .table th {
     }
 
     /*Styling for Blog Page*/
+    .m-blogTab form{
+        width: 35%;
+        color: white;
+    }
     .seriesCap {
         right: 2.5%;
         font-size: 1.25rem;
@@ -2197,14 +2226,6 @@ footer .table td, .table th {
     .seriesCap p, .otherSeries {
         font-size: 0.75rem;
     }
-    #blog-Ft {
-        height: inherit;
-        color: white;
-        font-size: 0.75rem;
-        margin: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
     .topSeries .story-pic img {
         width: 100%;
         left: 0;
@@ -2212,7 +2233,15 @@ footer .table td, .table th {
     .recent figure img {
         height: 200px;
     }
-
+    #blog-Ft {
+        height: inherit;
+        color: white;
+        font-size: 0.75rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 
     /*Styling Button*/
     .btn-outline-white, .btn-outline-white:hover, .btn-outline-white:active, .btn-outline-white:focus, .btn-outline-red,
@@ -2325,12 +2354,13 @@ footer .table td, .table th {
     .m-prod-list {
         background-color: #e1e1e1;
     }
-    .m-prod-list form, .location form, .career-tab form, .know form, .company-tab form, .benefits-tab form, .news-tab form{
+    .m-prod-list form, .location form, .career-tab form, .know form, .company-tab form, .benefits-tab form, .news-tab form,
+    .m-blogTab form{
         width: 60%;
     }
     .m-prod-list label{
         margin-top: 15px;
-       font-size: 20px;
+        font-size: 20px;
         font-weight: 400;
     }
     .info-icon{
@@ -2407,7 +2437,7 @@ footer .table td, .table th {
         font-size: 1.25rem;
     }
 
-    /*Styling for Benfits Page*/
+    /*Styling for Benefits Page*/
     .benefits-bg .bg-txt {
         bottom: 20%;
         width: 90%;
@@ -2453,6 +2483,9 @@ footer .table td, .table th {
     }
 
     /*Styling for Blog*/
+    #series1 {
+        height: 350px;
+    }
     .topSeries{
         height: inherit;
         padding-top: 20px;
@@ -2465,6 +2498,9 @@ footer .table td, .table th {
     }
     .topSeries .story {
         padding: 40px 20% 20px;
+    }
+    .topSeries .story .news-date {
+        left: 20%;
     }
     #blog-Ft .col-12{
         margin-top: 10px;
@@ -2609,7 +2645,8 @@ footer .table td, .table th {
     }
 
     /*Styling for Products and Styling*/
-    .m-prod-list form, .location form, .career-tab form, .know form, .company-tab form, .benefits-tab form, .news-tab form{
+    .m-prod-list form, .location form, .career-tab form, .know form, .company-tab form, .benefits-tab form, .news-tab form,
+    .m-blogTab form{
         width: 80%;
     }
     .img-box {

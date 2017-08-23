@@ -683,19 +683,16 @@ color:#1d69a6;
 input[type="text"].language::-webkit-input-placeholder {
   color: #fff;
 }
-
 #mc_embed_signup form {
     padding: 10px 3% 10px 3% !important;
 }
-
 .news-button {
     margin: 0 !important;
 }
-
 .m-logo{
-    width: inherit !important;
+    width: 50% !important;
     padding: 0;
-    margin: 0;
+    margin: auto;
     text-align: center;
 }
 .mob-search input{
