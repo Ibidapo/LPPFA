@@ -30,6 +30,17 @@
             a.appendChild(r);
         })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
+        <!-- google analytics tracking snippet --> 
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105192236-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
     <script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script type='text/javascript'>
         (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
@@ -67,13 +78,14 @@
                     <ul class="sub-menu collapse" id="med">
                         <li><a href="news.html">News & Events</a></li>
                         <li><a href="social.html">Social</a></li>
-                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </li>
                 <li><a data-toggle="collapse" href="#cont" aria-expanded="false" aria-controls="cont">Contact Us <i class="fa fa-chevron-down"></i></a>
                     <ul class="sub-menu collapse" id="cont">
                         <li><a href="contact.html">Branch Network</a></li>
                         <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
                     </ul>
                 </li>
             </ul>
@@ -167,7 +179,7 @@
                         <a class="dropdown-item" href="news.html#cald"><i class="fa fa-chevron-right" aria-hidden="true"></i> Calender</a>
                         <a class="dropdown-item" href="news.html#gall"><i class="fa fa-chevron-right" aria-hidden="true"></i> Gallery</a>
                         <a class="dropdown-item" href="social.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Social</a>
-                        <a class="dropdown-item" href="downloads.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Downloads</a>
+                        <a class="dropdown-item" href="blog.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Blog</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -175,6 +187,7 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="co">
                         <a class="dropdown-item" href="contact.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Branch Network</a>
                         <a class="dropdown-item" href="faq.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> FAQs</a>
+                        <a class="dropdown-item" href="downloads.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Downloads</a>
                     </div>
                 </li>
                 <a class="navbar-brand" href="index.html"><img class="logo" src="images/logo.png" alt="Leadway Logo"></a>
@@ -187,12 +200,17 @@
             <div class="col-12 news-bg">
                 <h1 class="text-center">What's New!</h1>
                 <div class="row">
-                    <div class="col-12 col-md-5 col-lg-4">
+                    <div class="col-12 col-sm-10 col-md-5 col-lg-4 mx-auto">
+                        <span class="badge badge-info">News & Events</span>
                         <div class="news1">
-
+                            <div class="news1-txt">
+                                <p>Forex Trading for dummies</p>
+                                <a href="#" class="btn btn-primary">Learn more</a>
+                            </div>
                         </div>
+                        <span class="news-date">21st Aug, 2017</span>
                     </div>
-                    <div class=" col-12 col-md-7 col-lg-8">
+                    <div class="col-12 col-sm-11 col-md-7 col-lg-8 mx-auto">
                         <div class="row other-news">
                             <div class="col-12 col-lg-6">
                                 <div class="media">
@@ -252,13 +270,13 @@
                     <div class="col-md-12 news-tab">
                         <ul class="hidden-sm-down nav nav-fill nav-tabs" id="newsTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#m-news" role="tab"> Recent Stories</a>
+                                <a class="nav-link active" data-toggle="tab" href="#m-news" role="tab"><img src="images/news.png"/> Recent Stories</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#gall" role="tab"> Gallery </a>
+                                <a class="nav-link" data-toggle="tab" href="#gall" role="tab"><img src="images/gallery.png"/> Gallery</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#cald" role="tab"> Calendar </a>
+                                <a class="nav-link" data-toggle="tab" href="#cald" role="tab"><img src="images/calendar.png"/> Calendar</a>
                             </li>
                         </ul>
                         <form class="hidden-md-up mx-auto">
@@ -278,31 +296,62 @@
     <div class="container">
         <div class="row tab-content">
             <div class="tab-pane fade col-12 active show" role="tabpanel" id="m-news" aria-expanded="true">
-                <div class="row">
+                <div class="row recent">
                     <div class="col-12">
-                        <div class="media">
-                            <img  class="d-flex align-self-center" src="images/hand.png" alt="leadway Pensure News"/>
-                            <div class="media-body">
-                                <h4 class="mt-0">Leadway unveils Mobile App</h4>
-                                <p>Following our master-plan to become a client-oriented brand. We have implemented...
-                                <a href="#">Read More</a></p>
-                            </div>
-                        </div>
+                        <h2>Recent releases</h2>
                     </div>
-                    <div class="col-12">
-                        <div class="media">
-                            <img  class="d-flex align-self-center" src="images/vas.png" alt="leadway Pensure News"/>
-                            <div class="media-body">
-                                <h4 class="mt-0">Leadway unveils Value Added Services</h4>
-                                <p>Following our master-plan to become a client-oriented brand. We have implemented...
-                                <a href="#">Read More</a></p>
-                            </div>
-                        </div>
+                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-info">News & Events</span>
+                        <span class="news-date">21st Aug, 2017</span>
+                        <figure>
+                            <img src="images/sheet.jpg"/>
+                            <figcaption><h5>Building an efficient self-management system</h5></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-info">News & Events</span>
+                        <span class="news-date">21st Aug, 2017</span>
+                        <figure>
+                            <img src="images/sheet.jpg"/>
+                            <figcaption><h5>Building an efficient self-management system</h5></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-info">News & Events</span>
+                        <span class="news-date">21st Aug, 2017</span>
+                        <figure>
+                            <img src="images/sheet.jpg"/>
+                            <figcaption><h5>Building an efficient self-management system</h5></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-info">News & Events</span>
+                        <span class="news-date">21st Aug, 2017</span>
+                        <figure>
+                            <img src="images/sheet.jpg"/>
+                            <figcaption><h5>Building an efficient self-management system</h5></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-info">News & Events</span>
+                        <span class="news-date">21st Aug, 2017</span>
+                        <figure>
+                            <img src="images/sheet.jpg"/>
+                            <figcaption><h5>Building an efficient self-management system</h5></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-info">News & Events</span>
+                        <span class="news-date">21st Aug, 2017</span>
+                        <figure>
+                            <img src="images/sheet.jpg"/>
+                            <figcaption><h5>Building an efficient self-management system</h5></figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade col-12" role="tabpanel" id="gall" aria-expanded="false">
-                <h1 class="text-center">Gallery Coming Soon!</h1>
+            <div class="tab-pane fade col-12 mx-auto" role="tabpanel" id="gall" aria-expanded="false">
+               <h1 class="text-center">Gallery Coming Soon</h1>
             </div>
             <div class="tab-pane fade col-12 text-center" role="tabpanel" id="cald" aria-expanded="false">
                 <h1 class="text-center">Calendar Coming Soon!</h1>
@@ -497,7 +546,7 @@
                     }, 1000);
                 }else if (size <= 767) {
                     $('body,html').animate({
-                        scrollTop :650
+                        scrollTop :500
                     }, 1000);
                 } else {
                     $('body,html').animate({

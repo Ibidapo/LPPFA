@@ -8,5 +8,13 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="aos" level="application" />
     <orderEntry type="library" name="moment" level="application" />
+<<<<<<< HEAD
+=======
+    <orderEntry type="library" name="bootstrap-select" level="application" />
+    <orderEntry type="library" name="chartist" level="application" />
+    <orderEntry type="library" name="highcharts" level="application" />
+    <orderEntry type="library" name="exporting" level="application" />
+    <orderEntry type="library" name="masonry.pkgd" level="application" />
+>>>>>>> afa9b9613014fa3c3927b0679ece95dfb6b0bfa1
   </component>
 </module>
