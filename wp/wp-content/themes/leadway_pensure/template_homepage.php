@@ -348,8 +348,7 @@ $social_options = get_option('theme_social_options');
         $('#customer-slide .carousel-control-next, #customer-slide .carousel-control-prev').css('display', 'none');
     });
 
-
-    $('#customer-slide').on('slide.bs.carousel', function (ev) {
+    $('#customer-slide').on('slide.bs.carousel', function (ev){
         var id = ev.relatedTarget.id;
         id = parseInt(id);
         switch (id) {
@@ -367,6 +366,7 @@ $social_options = get_option('theme_social_options');
                 break;
         }
     });
+
 
     $('.owl-carousel').owlCarousel({
         loop: true,

@@ -1,7 +1,17 @@
 <?php /* Template Name: Socials */ ?>
 
 <?php
+
+function getGameTabInfo($key) {
+    return $key == 0 ? ["participate", "white"] : ($key == 1 ? ["live", "blue"] : ["leaderboard", "darkgrey"]);
+}
+
 $social_options = get_option('theme_social_options');
+
+$game_tab_title_image = get_field("game_tab_title_image");
+$game_tab_phone_image = get_field("game_tab_phone_image");
+$game_tab_content = get_field("game_tab_content");
+
 ?>
 
 <?php get_header(); ?>
@@ -17,21 +27,30 @@ $social_options = get_option('theme_social_options');
                 <div class="col-12 col-md-8">
                     <ul class="nav nav-tabs nav-fill text-center f-height">
                         <li class="nav-item ">
-                            <a class="nav-link active f-height" data-toggle="tab" href="#game"> <img class="social-tab" src=<?php echo get_bloginfo('template_directory'); ?>/images/g-pad.png alt=""> </a>
+                            <a class="nav-link active f-height" data-toggle="tab" href="#game"> <img class="social-tab"
+                                                                                                     src=<?php echo get_bloginfo('template_directory'); ?>/images/g-pad.png
+                                                                                                     alt=""> </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link f-height" data-toggle="tab" href="#facebook">
-                                <img class="social-tab" src=<?php echo get_bloginfo('template_directory'); ?>/images/facebook.png alt="">
+                                <img class="social-tab"
+                                     src=<?php echo get_bloginfo('template_directory'); ?>/images/facebook.png alt="">
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link f-height" data-toggle="tab" href="#insta"> <img class="social-tab" src=<?php echo get_bloginfo('template_directory'); ?>/images/instagram.png alt=""> </a>
+                            <a class="nav-link f-height" data-toggle="tab" href="#insta"> <img class="social-tab"
+                                                                                               src=<?php echo get_bloginfo('template_directory'); ?>/images/instagram.png
+                                                                                               alt=""> </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link f-height" data-toggle="tab" href="#twitter"><img class="social-tab" src=<?php echo get_bloginfo('template_directory'); ?>/images/twitter.png alt=""> </a>
+                            <a class="nav-link f-height" data-toggle="tab" href="#twitter"><img class="social-tab"
+                                                                                                src=<?php echo get_bloginfo('template_directory'); ?>/images/twitter.png
+                                                                                                alt=""> </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link f-height" data-toggle="tab" href="#lin"><img class="social-tab" src=<?php echo get_bloginfo('template_directory'); ?>/images/linkedin.png alt=""> </a>
+                            <a class="nav-link f-height" data-toggle="tab" href="#lin"><img class="social-tab"
+                                                                                            src=<?php echo get_bloginfo('template_directory'); ?>/images/linkedin.png
+                                                                                            alt=""> </a>
                         </li>
                     </ul>
                 </div>
@@ -45,31 +64,36 @@ $social_options = get_option('theme_social_options');
                     <div class="col-12 col-sm-8">
                         <div class=>
                             <div class="col-12 text-center">
-                                <img class=img-fluid src="<?php echo get_bloginfo('template_directory'); ?>/images/livew.png" style="margin-top:15%" alt="">
+                                <img class=img-fluid src="<?= $game_tab_title_image['url'] ?>"
+                                     style="margin-top:15%" alt="<?= $game_tab_title_image['alt'] ?>">
                             </div>
                             <div class="col-sm-12" id=g-instruct>
                                 <ul class="nav nav-tabs nav-fill text-center g-instruct">
-                                    <li class="nav-item  ">
-                                        <a class="nav-link active g-instruct" data-toggle="tab" href="#participate"> How to participate </a>
-                                    </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link  g-instruct" data-toggle="tab" href="#live">  The Live community </a>
-                                    </li>
-                                    <li class="nav-item  ">
-                                        <a class="nav-link g-instruct one" data-toggle="tab" href="#leaderboard"> Leaderboards </a>
-                                    </li>
+                                    <?php foreach ($game_tab_content as $key => $tab): list($id, $bg_color) = getGameTabInfo($key); ?>
+                                        <li class="nav-item  ">
+                                            <a class="nav-link g-instruct <?= $key == 0 ? "active" : ($key == 2 ? "go" : "") ?>"
+                                               data-toggle="tab" href="#<?= $id ?>">
+                                                <?= $tab['title'] ?>
+                                            </a>
+                                        </li>
+                                    <?php endforeach ?>
                                 </ul>
                             </div>
                             <div class="col-12 tab-content text-center">
-                                <div class="tab-pane active social-pane" id="participate" role="tabpanel" style="height:100px"> </div>
-                                <div class="tab-pane social-pane" id="live" role="tabpanel" style="height:100px;background-color:blue"> </div>
-                                <div class="tab-pane social-pane" id="leaderboard" role="tabpanel" style="height:100px;background-color:darkgrey"> </div>
+                                <?php foreach ($game_tab_content as $key => $tab): list($id, $bg_color) = getGameTabInfo($key); ?>
+                                    <div class="tab-pane social-pane <?= $key == 0 ? "active" : ($key == 2 ? "go" : "") ?>"
+                                         id="<?= $id ?>" role="tabpanel"
+                                         style="height:100px;background-color:<?= $bg_color ?>">
+                                        <?= $tab['body'] ?>
+                                    </div>
+                                <?php endforeach ?>
                             </div>
                         </div>
 
                     </div>
                     <div class="col-12 col-sm-4 text-center">
-                        <img class=img-fluid src="<?php echo get_bloginfo('template_directory'); ?>/images/screen.png" id=phone alt="">
+                        <img class=img-fluid src="<?= $game_tab_phone_image['url'] ?>" id=phone
+                             alt="<?= $game_tab_phone_image['alt'] ?>">
                     </div>
                 </div>
 
@@ -77,26 +101,33 @@ $social_options = get_option('theme_social_options');
 
             <div class="tab-pane social-pane" id="facebook" role="tabpanel">
                 <div class=row>
-                    <div class="fb-page col-12 col-sm-6" data-href="https://www.facebook.com/iNspireleaership.productivity/" data-tabs="timeline,messages,events" data-width="700px" data-height="500px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/iNspireleaership.productivity/" class="fb-xfbml-parse-ignore">
-                            <a href="https://www.facebook.com/iNspireleaership.productivity/">iNspire Leadership</a>
+                    <?php if(get_field("show_facebook_feed")): ?>
+                    <div class="fb-page col-12 col-sm-6"
+                         data-href="<?= $social_options['facebook'] ?>"
+                         data-tabs="timeline,messages,events" data-width="700px" data-height="500px"
+                         data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+                         data-show-facepile="true">
+                        <blockquote cite="<?= $social_options['facebook'] ?>"
+                                    class="fb-xfbml-parse-ignore">
+                            <a href="<?= $social_options['facebook'] ?>">iNspire Leadership</a>
                         </blockquote>
                     </div>
+                    <?php endif ?>
 
                     <div class="col-12 col-sm-6">
                         <div class=row>
-                            <div class= col-12 style="padding:70px;top:62px;">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/facebook-1.png" class='img-fluid'>
+                            <div class=col-12 style="padding:70px;top:62px;">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/facebook-1.png"
+                                     class='img-fluid'>
                             </div>
-                            <h5 class="col-12 text-center" style="color:darkgrey; padding:16px">  Browse our timeline on facebook. Follow our page
-                                to stay updated on our events, recent news and
-                                peer 2 peer competitions!  </h5>
-                            <div class="fb-like col-12 " data-href="https://www.facebook.com/leadwaypensure/" data-width="80px" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+                            <h5 class="col-12 text-center" style="color:darkgrey; padding:16px">
+                                <?= get_field("facebook_tab_description") ?>
+                            </h5>
 
-                            <h5 class="col-12 text-center" style="color:darkgrey; padding: 16px">  Browse our timeline on facebook. Follow our page
-                                to stay updated on our events, recent news and
-                                peer 2 peer competitions!  </h5>
-                            <div class="fb-like col-12 text-center" data-href="https://www.facebook.com/leadwaypensure/" data-width="80px" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
-
+                            <div class="fb-like text-center col-12 "
+                                 data-href="<?= $social_options['facebook'] ?>" data-width="80px"
+                                 data-layout="standard" data-action="like" data-size="large" data-show-faces="true"
+                                 data-share="true"></div>
                         </div>
 
                     </div>
@@ -105,23 +136,25 @@ $social_options = get_option('theme_social_options');
             <div class="tab-pane social-pane text-center" id="insta" role="tabpanel">
                 <div class="row">
                     <div class="col-12">
-                        <img src=<?php echo get_bloginfo('template_directory'); ?>/images/insta.gif alt="" class="social-img" style="padding:10px">
-                        <h5 style="color:darkgrey"> Hi there, you too can follow our story. Review our timeline below to get started!  </h5>
+                        <img src=<?php echo get_bloginfo('template_directory'); ?>/images/insta.gif alt=""
+                             class="social-img" style="padding:10px">
+                        <?= get_field("instagram_tab_description") ?>
                         <hr class="social-strip">
                     </div>
                 </div>
-                <div class=social-feed id=instafeed > </div>
+                <div class=social-feed id=instafeed></div>
             </div>
             <div class="tab-pane text-center social-pane" id="twitter" role="tabpanel">
                 <div class="col-12">
-                    <img src=<?php echo get_bloginfo('template_directory'); ?>/images/twit.png alt="" class="social-img" style="padding:10px">
-                    <h5 style="color:darkgrey"> Hi there, you too can follow our story. Review our timeline below to get started!  </h5>
-                    <a class="twitter-follow-button text-center" href="https://twitter.com/LeadwayPensure">
-                        Follow @LeadwayPensurePFA</a>
+                    <img src=<?php echo get_bloginfo('template_directory'); ?>/images/twit.png alt="" class="social-img"
+                         style="padding:10px">
+                    <?= get_field("twitter_tab_description") ?>
                     <hr class="social-strip">
                 </div>
                 <div class=social-feed id=twitfeed>
-                    <a class="twitter-grid" data-lang="en" data-limit="9" data-partner="tweetdeck" href="https://twitter.com/OAOD_iNspire/timelines/894512301486870529">leadway test </a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <a class="twitter-grid" data-lang="en" data-limit="9" data-partner="tweetdeck"
+                       href="https://twitter.com/OAOD_iNspire/timelines/894512301486870529">leadway test </a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
             <div class="tab-pane social-pane" id="lin" role="tabpanel">
