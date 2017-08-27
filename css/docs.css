@@ -7,6 +7,7 @@ figcaption.FAQ{
 color: #9789ad !important;
 font-size: 0.85rem;
 }
+
 div.FAQ{
 margin-top: 5%;
 }
@@ -86,8 +87,16 @@ border:1px solid red !important;
     width: 100% !important;
 }
 
-#mc_embed_signup{
+.news-bg{
     background: transparent !important;
+}
+
+.mailbg{
+    background: url(../images/Graduate.jpg) no-repeat !important;
+    background-size: cover;
+    color: white;
+    font-size: 10px;
+
 }
 
 .ctips-button{

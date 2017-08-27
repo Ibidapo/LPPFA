@@ -48,6 +48,16 @@
     </script>
 </head>
 <body>
+ <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!-- Mobile navigation -->
     <nav class="m-style navbar fixed-top hidden-lg-up">
         <div class="button_container" id="toggle">
@@ -587,9 +597,24 @@
                 <h2 class="hidden-sm-down text-center">Join the Conversation</h2>
                 <h4 class="hidden-md-up text-center">Join the Conversation</h4>
             </div>
-            <div class="col-md-4 sm-plug"></div>
-            <div class="col-md-4 sm-plug"></div>
-            <div class="col-md-4 sm-plug"></div>
+            <div class="col-md-6">
+
+            <div class="fb-page" data-href="https://www.facebook.com/iNspireleaership.productivity/" data-tabs="timeline,messages,events" data-width="300px" data-height="300px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/iNspireleaership.productivity/" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/iNspireleaership.productivity/">iNspire Leadership</a>
+                    </blockquote>
+                    </div>
+                
+            </div>
+            <div class="col-md-6">
+             <div class=social-feed id=instafeed > </div>
+            </div>
+            <div class="col-md-6 sm-plug">
+                
+            </div>
+             <div class="col-md-6 sm-plug">
+                
+            </div>
+
         </div>
     </div>
     <!-- Footer for Blog Page -->
@@ -659,6 +684,18 @@
                 }
             });
         });
+    </script>
+     <script src="js/instafeed.min.js"></script>
+    <script type="text/javascript">
+        var feed = new Instafeed({
+            get: 'user',
+            userId: '5841177351',
+            accessToken: '5841177351.1677ed0.1de19abc5aad4ec69d45cf394c997311',
+            clientId: 'fbc60c6a8fc5453caaafd62d806b23ed',
+            resolution: 'thumbnail'
+
+        });
+        feed.run();
     </script>
 </body>
 </html>
