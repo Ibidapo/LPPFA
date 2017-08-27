@@ -72,7 +72,10 @@ $options = get_option('theme_options');
     </head>
 <body>
 
-<?php if (is_page_template("template_socials.php")): ?>
+<?php if (
+    is_page_template("template_socials.php") ||
+    is_page_template("template_blog.php")
+): ?>
     <!-- fb plugin -->
     <div id="fb-root"></div>
     <script>
@@ -87,7 +90,10 @@ $options = get_option('theme_options');
     </script>
 <?php endif ?>
 
-<?php if (!is_page_template("template_enroll.php") && !is_page_template("template_login.php")): ?>
+<?php if (
+    !is_page_template("template_enroll.php") &&
+    !is_page_template("template_login.php")
+): ?>
     <!-- Mobile navigation -->
     <nav class="m-style navbar fixed-top hidden-lg-up">
         <div class="button_container" id="toggle">
@@ -145,8 +151,12 @@ $options = get_option('theme_options');
             </ul>
         </div>
     </nav>
-    <!-- Desktop navigation -->
-    <nav class="navbar fixed-top hidden-md-down pOff">
+
+    <?php if (
+        !is_page_template("template_blog.php")
+    ): ?>
+        <!-- Desktop navigation -->
+        <nav class="navbar fixed-top hidden-md-down pOff">
         <!-- desktop price charts start -->
         <table class="table table-responsive mOff">
             <tbody>
@@ -299,4 +309,5 @@ $options = get_option('theme_options');
             </ul>
         </div>
     </nav>
+    <?php endif ?>
 <?php endif ?>

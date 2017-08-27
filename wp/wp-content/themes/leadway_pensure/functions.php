@@ -148,4 +148,8 @@ function summary($str, $limit=100, $strip = true) {
     return trim($str);
 }
 
+function asset($path = false) {
+    return get_bloginfo('template_directory') . ($path ? "/$path": "");
+}
+
 
