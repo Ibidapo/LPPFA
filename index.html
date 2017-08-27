@@ -32,17 +32,17 @@
             a.appendChild(r);
         })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
-        <!-- google analytics tracking snippet --> 
+    <!-- google analytics tracking snippet -->
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-105192236-1', 'auto');
-  ga('send', 'pageview');
+        ga('create', 'UA-105192236-1', 'auto');
+        ga('send', 'pageview');
 
-</script>
+    </script>
     <script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script type='text/javascript'>
         (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
@@ -133,7 +133,7 @@
         <div class="navStyle2" style="display: none;">
             <ul class="nav nav-fill mr-auto">
                 <form class="form-inline search">
-                    <input class="form-control" type="text" placeholder="Search">
+                    <input class="form-control" type="text" placeholder="Search" id="search-index">
                 </form>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="javascript:" id="ps" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products & Services</a>
@@ -259,7 +259,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="javascript:" id="search-landing">
                             <figure>
                                 <img src="images/search.png" alt="search">
                                 <figcaption> Search </figcaption>
@@ -330,10 +330,10 @@
                 <h5> Some frequently asked questions </h5>
                 <ul class="nav nav-fill">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> How to open my RSA account?</a>
+                        <a class="nav-link" href="services.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> How to open my RSA account?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> When to claim benefits?</a>
+                        <a class="nav-link" href="benefits.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> When to claim benefits?</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-chevron-right " aria-hidden="true"></i> How to retrieve lost pin?</a>
@@ -598,7 +598,6 @@
         </div>
         <div class="row justify-content-around" style="margin-bottom: 10px">
             <div class="col-sm-10 col-md-4 collapse" id="sign">
-
                 <!-- Begin MailChimp Signup Form -->
                 <div id="mc_embed_signup">
                     <form action="https://leadway-pensure.us10.list-manage.com/subscribe/post" method="POST">
@@ -628,9 +627,7 @@
                         </div>
                     </form>
                 </div>
-
                 <!--End mc_embed_signup-->
-
             </div>
             <div class="col-sm-10 col-md-4 collapse" id="feed">
                 <h5 class="text-center"> We'd love to hear from you </h5>
@@ -662,7 +659,7 @@
             <div class="col-12 col-md-6 col-lg-3">
                 <h6>Quick Links</h6>
                 <nav class="nav flex-column">
-                    <a class="nav-link active" href="#">Blog</a>
+                    <a class="nav-link active" href="blog.html">Blog</a>
                     <a class="nav-link" href="enroll.html">Enroll Now</a>
                     <a class="nav-link" href="benefits.html">Benefits</a>
                     <a class="nav-link" href="investment.html">Our Philosophy</a>
@@ -671,7 +668,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-3 app">
                 <h6>Our Mobile App</h6>
-                <img src="images/hand.png" alt="">
+                <img src="images/hand.png" alt="Leadway Pensure Mobile App">
             </div>
             <div class="col-12 col-md-6 col-lg-3">
                 <h6> Our Game Board</h6>
@@ -724,7 +721,7 @@
             <div class="col-12 col-md-4 align-self-center text-center">Web Design & Digital by iNspire</div>
         </div>
         <a id="share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
-        <a id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
+        <a href="javascript:window.print()" id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
         <a href="javascript:" id="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
     </footer>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -771,9 +768,16 @@
                 $('#slider-icon, .style3').fadeOut(800);
                 $('.navStyle2').fadeIn(1000);
             }else{
-                $('.style3, #slider-icon').fadeIn(1000);
-                $('.navStyle2').fadeOut(800);
+                $('.style3, #slider-icon').fadeIn(800);
+                $('.navStyle2').fadeOut(500);
             }
+        });
+
+        $('#search-landing').click(function(){
+            $('#scroll-btn').trigger('click');
+            setTimeout(function(){
+                $('#search-index').focus();
+            }, 800)
         });
 
         $('#client-area').mouseenter(function(){
@@ -827,27 +831,3 @@
     </script>
 </body>
 </html>
-
-
-<!-- Begin MailChimp Signup Form -->
-<!--
- <div id="mc_embed_signup" class="text-center">
-     <form action="//leadway-pensure.us10.list-manage.com/subscribe/post?u=a7d286c921166498a0b699255&amp;id=c1b945e29f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-         <div id="mc_embed_signup_scroll" class="text-center">
-             <h5 style="color:#1d69a6"> Subscribe and receive the Leading digest monthly! </h5>
-             <div class="mc-field-group">
-                 <input type="text" value="" name="FNAME" class="required chimp text-center" id="mce-FNAME" placeholder="First Name">
-             </div>
-             <div class="mc-field-group">
-                 <input type="email" value="" name="EMAIL" class="required email chimp text-center" id="mce-EMAIL" placeholder="E-mail Address">
-             </div>
-             <div id="mce-responses" class="clear">
-                 <div class="response" id="mce-error-response" style="display:none"></div>
-                 <div class="response" id="mce-success-response" style="display:none"></div>
-             </div>
-             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a7d286c921166498a0b699255_c1b945e29f" tabindex="-1" value=""></div>
-             <div class="clear"><input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-outline-red btn-sm news-button"></div>
-         </div>
-     </form>
- </div>
- <!--End mc_embed_signup-->
