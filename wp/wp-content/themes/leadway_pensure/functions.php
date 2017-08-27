@@ -24,6 +24,7 @@ function theme_admin_init(){
     add_settings_field('theme_setting_string', 'Phone number', 'theme_setting_string', 'theme', 'theme_main');
     add_settings_field('theme_setting_custom_css', 'Custom CSS', 'theme_setting_custom_css_input', 'theme', 'theme_main');
     add_settings_field('theme_setting_custom_js', 'Custom JS', 'theme_setting_custom_js_input', 'theme', 'theme_main');
+    add_settings_field('theme_setting_custom_footer_area', 'Custom Footer Area', 'theme_setting_custom_footer_area_input', 'theme', 'theme_main');
 
     register_setting( 'theme_social_options', 'theme_social_options', 'theme_social_options_validate' );
     add_settings_section('theme_social', 'Socials Settings', function() { echo '<p> Social network settings for website.</p>'; }, 'theme_socials');
@@ -53,6 +54,12 @@ function theme_setting_custom_js_input() {
     echo "<textarea rows='6' cols='100' id='theme_setting_custom_js' name='theme_options[custom_js]'/>{$value}</textarea>";
 }
 
+function theme_setting_custom_footer_area_input() {
+    $options = get_option('theme_options');
+    $value = &$options['custom_footer_area'];
+    echo "<textarea rows='6' cols='100' id='theme_setting_custom_footer_area' name='theme_options[custom_footer_area]'/>{$value}</textarea>";
+}
+
 function theme_socials_twitter_input() {
     $options = get_option('theme_social_options');
     $value = &$options['twitter'];
@@ -76,6 +83,7 @@ function theme_options_validate($input) {
     $options['phone_number'] = trim(sanitize_text_field($input['phone_number']));
     $options['custom_css'] = sanitize_textarea_field($input['custom_css']);
     $options['custom_js'] = sanitize_textarea_field($input['custom_js']);
+    $options['custom_footer_area'] = $input['custom_footer_area'];
     /*if (!preg_match('/^[a-z0-9]{32}$/i', $options['text_string'])) {
         $options['text_string'] = '';
     }*/
@@ -105,6 +113,17 @@ function leadway_widgets_init() {
     }
 }
 add_action( 'widgets_init', 'leadway_widgets_init' );
+
+
+// ==========================
+// Register Navigation Menus
+// ==========================
+function register_main_menu() {
+    register_nav_menu( 'primary-header-menu', __( 'Primary Header Menu' ) );
+}
+add_action( 'init', 'register_main_menu' );
+
+
 
 
 // ==========================
