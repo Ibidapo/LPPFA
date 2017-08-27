@@ -776,7 +776,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     color: #a990ba;
 }
 #alm, #cbs, #csr, #m_news, #gall, #cald {
-    height: 500px;
+    min-height: 500px;
 }
 #f-rep{
     padding-top: 50px;
