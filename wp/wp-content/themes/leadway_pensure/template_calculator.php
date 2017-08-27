@@ -160,9 +160,9 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 calc-nb"><span>Disclaimer</span>: The Calculator on this page is indicating
-            and strictly for information purposes. Leadway Pensure PFA's obligations with respect to its services on this page are
-            governed solely by the agreements under which they are provided and nothing hereof should be construed to alter such agreements.</div>
+        <div class="col-12 calc-nb">
+            <span>Disclaimer</span>: <?= get_field("disclaimer_bottom_text") ?>
+        </div>
     </div>
 </div>
 

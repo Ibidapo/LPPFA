@@ -101,7 +101,7 @@ $options = get_option('theme_options');
         </a>
 
         <form class="form-inline mob-search">
-            <input class="form-control" type="text" placeholder="Search">
+            <input name="s" class="form-control" type="text" placeholder="Search">
         </form>
         <div class="overlay text-center" id="overlay">
             <ul class="menu">
@@ -191,8 +191,8 @@ $options = get_option('theme_options');
         <!-- Navbar -->
         <div class="navStyle2" <?= (is_page_template('template_homepage.php') ? 'style="display: none;"' : '') ?>>
             <ul class="nav nav-fill mr-auto">
-                <form class="form-inline search">
-                    <input class="form-control" type="text" placeholder="Search">
+                <form class="form-inline search" action="<?= home_url() ?>">
+                    <input name="s" class="form-control" type="text" placeholder="Search">
                 </form>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="javascript:" id="ps" data-toggle="dropdown"
