@@ -41,8 +41,7 @@ $social_options = get_option('theme_social_options');
                     <li class="nav-item">
                         <a class="nav-link" href="<?= $item['nav_link'] ?>">
                             <figure>
-                                <img src="<?= $item['nav_image']['url'] ?>" height="60"
-                                     width="45" alt="">
+                                <img src="<?= $item['nav_image']['url'] ?>" alt="<?= $item['nav_image']['alt'] ?>">
                                 <figcaption> <?= $item['nav_title'] ?></figcaption>
                             </figure>
                         </a>
@@ -57,8 +56,7 @@ $social_options = get_option('theme_social_options');
                     <li class="nav-item">
                         <a class="nav-link" href="<?= $item['nav_link'] ?>">
                             <figure>
-                                <img src="<?= $item['nav_image']['url'] ?>" height="60"
-                                     width="45" alt="">
+                                <img src="<?= $item['nav_image']['url'] ?>" alt="<?= $item['nav_image']['alt'] ?>">
                                 <figcaption> <?= $item['nav_title'] ?></figcaption>
                             </figure>
                         </a>

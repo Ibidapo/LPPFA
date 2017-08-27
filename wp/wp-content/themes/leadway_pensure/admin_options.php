@@ -6,10 +6,10 @@ function theme_options_page()
 
         <div id="icon-themes" class="icon32"></div>
         <h2>Leadway Pensure Custom Settings</h2>
-        <?php settings_errors(); ?>
 
         <?php
         $active_tab = isset($_GET['tab']) ? $_GET['tab'] : 'main_options';
+        settings_errors();
         ?>
 
         <h2 class="nav-tab-wrapper">

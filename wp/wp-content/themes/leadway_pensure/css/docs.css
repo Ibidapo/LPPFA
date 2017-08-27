@@ -1,14 +1,13 @@
-figcaption{
-color: #7c7a7d !important;
-}
 #slider-icon figcaption{
- color: #7c7a7d !important;
- margin-top: 5px;
+    color:  #223e70 !important;
+    font-size: 0.875rem;
+    margin-top: 5px;
 }
 figcaption.FAQ{
 color: #9789ad !important;
 font-size: 0.85rem;
 }
+
 div.FAQ{
 margin-top: 5%;
 }
@@ -88,8 +87,16 @@ border:1px solid red !important;
     width: 100% !important;
 }
 
-#mc_embed_signup{
+.news-bg{
     background: transparent !important;
+}
+
+.mailbg{
+    background: url(../images/Graduate.jpg) no-repeat !important;
+    background-size: cover;
+    color: white;
+    font-size: 10px;
+
 }
 
 .ctips-button{
@@ -344,8 +351,15 @@ background: #afc4dd;
 .navStyle2 ul .dropdown-item{
     display: inline;
     margin: 0.25rem !important;
-    font-size: 0.75rem !important;
+    font-size: 0.8rem !important;
     font-weight: 400;
+}
+.navStyle2 ul .dropdown-item:hover{
+    color: #223d70;
+    font-weight: 500;
+}
+.navStyle2 ul .dropdown-item.active, .navStyle2 ul .dropdown-item:active{
+    background-color: #ebebeb;
 }
 .navStyle2 ul .dropdown-item .fa-chevron-right:before{
     color: #a890ba;
@@ -355,10 +369,10 @@ background: #afc4dd;
     left: -75% !important;
 }
 .navStyle2 ul .dropdown-menu.in{
-    left: -150% !important;
+    left: -175% !important;
 }
 .navStyle2 ul .dropdown-menu.bnf{
-       left: -100% !important;
+       left: -125% !important;
 }
 .navStyle2 ul .dropdown-menu.md{
       right: -100% !important;
@@ -678,19 +692,16 @@ color:#1d69a6;
 input[type="text"].language::-webkit-input-placeholder {
   color: #fff;
 }
-
 #mc_embed_signup form {
     padding: 10px 3% 10px 3% !important;
 }
-
 .news-button {
     margin: 0 !important;
 }
-
 .m-logo{
-    width: inherit !important;
+    width: 50% !important;
     padding: 0;
-    margin: 0;
+    margin: auto;
     text-align: center;
 }
 .mob-search input{
@@ -830,7 +841,7 @@ input[type="text"].language::-webkit-input-placeholder {
 
 @media (max-width: 1300px){
     .navStyle2 ul .dropdown-menu.ps{
-        left: -50% !important;
+        left: -80% !important;
     }
      .form-no{
      font-size: 2.5em;
@@ -838,7 +849,7 @@ input[type="text"].language::-webkit-input-placeholder {
 }
 @media (max-width: 1200px){
     nav.navbar table.table td {
-        padding: 0 1.5rem;
+        padding: 0 1rem;
     }
     .search {
         width: 15%;
@@ -849,7 +860,12 @@ input[type="text"].language::-webkit-input-placeholder {
 }
 @media (max-width: 1100px){
     nav.navbar table.table td {
-        padding: 0 0.85rem;
+        padding: 0 0.75rem;
+    }
+    nav.navbar table.table td:last-child {
+        right: 0;
+        padding: 1rem 0.75rem;
+        font-size: 0.875rem;
     }
     /* #requ-tab{
         left: 53%;
@@ -1222,4 +1238,7 @@ left:17.5%;
  left:50.5%;
 }*/
 }
+
+
+
 
