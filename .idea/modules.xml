@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LPPFA.iml" filepath="$PROJECT_DIR$/LPPFA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LPPFA/LPPFA.iml" filepath="$PROJECT_DIR$/LPPFA/LPPFA.iml" />
     </modules>
   </component>
 </project>

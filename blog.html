@@ -149,7 +149,7 @@
                         <a class="nav-link" data-toggle="tab" href="#blogInvest" role="tab">Investment Series</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#comic" role="tab">Comic</a>
+                        <a class="nav-link" data-toggle="tab" href="#comic" role="tab">Comics</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#blogVids" role="tab">Videos</a>
@@ -305,10 +305,10 @@
                             and managing your time. Developing your motivation and concentration skills will help you to overcome
                             the lure of procrastination.</p>
                         <span>
-                                <img src="images/facebook.png">
-                                <img src="images/instagram.png">
-                                <img src="images/twitter.png">
-                            </span>
+                            <img src="images/facebook.png">
+                            <img src="images/instagram.png">
+                            <img src="images/twitter.png">
+                        </span>
                         <span class="float-right link">&rarr; <a href="#">Read More</a></span>
                     </div>
                 </div>
@@ -380,10 +380,10 @@
                             and managing your time. Developing your motivation and concentration skills will help you to overcome
                             the lure of procrastination.</p>
                         <span>
-                                <img src="images/facebook.png">
-                                <img src="images/instagram.png">
-                                <img src="images/twitter.png">
-                            </span>
+                                    <img src="images/facebook.png">
+                                    <img src="images/instagram.png">
+                                    <img src="images/twitter.png">
+                                </span>
                         <span class="float-right link">&rarr; <a href="#">Read More</a></span>
                     </div>
                 </div>
@@ -455,10 +455,10 @@
                             and managing your time. Developing your motivation and concentration skills will help you to overcome
                             the lure of procrastination.</p>
                         <span>
-                                <img src="images/facebook.png">
-                                <img src="images/instagram.png">
-                                <img src="images/twitter.png">
-                            </span>
+                                    <img src="images/facebook.png">
+                                    <img src="images/instagram.png">
+                                    <img src="images/twitter.png">
+                                </span>
                         <span class="float-right link">&rarr; <a href="#">Read More</a></span>
                     </div>
                 </div>
@@ -530,10 +530,10 @@
                             and managing your time. Developing your motivation and concentration skills will help you to overcome
                             the lure of procrastination.</p>
                         <span>
-                                <img src="images/facebook.png">
-                                <img src="images/instagram.png">
-                                <img src="images/twitter.png">
-                            </span>
+                                    <img src="images/facebook.png">
+                                    <img src="images/instagram.png">
+                                    <img src="images/twitter.png">
+                                </span>
                         <span class="float-right link">&rarr; <a href="#">Read More</a></span>
                     </div>
                 </div>
@@ -620,6 +620,7 @@
 
         </div>
     </div>
+    <!-- Footer for Blog Page -->
     <footer class="container" id="blog-Ft">
         <div class="row">
             <div class="col-12 col-md-4 align-self-center text-center text-md-left">
@@ -667,6 +668,8 @@
             if (size <= 991) {
                 $(".container").attr("class", "container-fluid");
             }
+
+            $('#blogTab a[href="'+ window.location.hash+ '"]').tab('show'); // Select tab by name if provided in location hash
 
             $("#m-blogTab").change(function (){
                 var i = $(this).val();
