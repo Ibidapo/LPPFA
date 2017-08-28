@@ -123,7 +123,7 @@ $branches = array_map("array_values", $branches);
                                         </div>
                                         <div class="col-11 col-sm-6 col-md-5 col-lg-4 loc-person">
                                             <h6>Key Personnel</h6>
-<!--                                            <i class="fa fa-user" aria-hidden="true"></i> --><?//= $branch->MapSearchName ?><!--<br>-->
+                                            <!--<i class="fa fa-user" aria-hidden="true"></i> --><?//= $branch->MapSearchName ?><!--<br>-->
                                             <i class="fa fa-envelope" aria-hidden="true"></i> <?= $branch->EmailAddress ?><br>
                                             <i class="fa fa-phone" aria-hidden="true"></i> <?= $branch->PhoneNo ?><br>
                                         </div>

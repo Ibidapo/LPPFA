@@ -157,4 +157,11 @@ function slugify($str, $delimiter = '-'){
     return $slug;
 }
 
+function array_get($data, $key, $default = null) {
+    if (!is_array($data)) {
+        return $default;
+    }
+    return isset($data[$key]) ? $data[$key]: $default;
+}
+
 

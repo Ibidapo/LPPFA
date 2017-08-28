@@ -189,7 +189,7 @@ $options = get_option('theme_options');
                         <span>Calculator</span></a>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS
+                    <button onclick="location='/trends'" type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS
                     </button>
                 </td>
                 <td>

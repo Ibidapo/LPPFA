@@ -145,7 +145,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                                     <div class="media-body">
                                         <h6 class="mt-0"><?= $news->post_title ?></h6>
                                         <p>
-                                            <?= summary($news->post_content, 100) ?>
+                                            <?= get_the_excerpt($news) ?>
                                             <a href="<?= get_permalink($news) ?>">Read More</a>
                                         </p>
                                     </div>
