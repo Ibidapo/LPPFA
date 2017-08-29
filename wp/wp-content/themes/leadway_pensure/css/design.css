@@ -22,7 +22,6 @@ footer .media-body {
 footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-link:visited{
     color: #838080;
     text-decoration: none;
-    padding: .5em 2em;
 }
 .v-align{
     top: 50%;
@@ -776,7 +775,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     color: #a990ba;
 }
 #alm, #cbs, #csr, #m_news, #gall, #cald {
-    min-height: 500px;
+    height: 500px;
 }
 #f-rep{
     padding-top: 50px;
@@ -1242,7 +1241,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 
 /*Styling for Body section of Calculator page*/
-#calc-page{
+#calc-page, #blog-pg{
     margin-top: 143px;
     box-shadow: none;
 }
@@ -1641,11 +1640,45 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     margin-top: 10px;
     color: #1f6aa4 !important;
 }
-.recent figure img {
+.recent figure img, .blog-img img {
     object-fit: cover;
     -o-object-fit:  cover;
     width: 100%;
+}
+.recent figure img {
     height: 250px;
+}
+.blog-img img {
+    height: 300px
+}
+.blog-note p{
+    margin: 1rem .75rem;
+}
+.blog-note table td:first-child{
+    width: 100%;
+}
+.blog-note table td {
+    padding: .5rem .75rem;
+}
+.blog-note .news-date{
+    padding-left: .75rem;
+    font-size: .875rem;
+}
+.blog-link {
+    padding-top: 1rem;
+    font-size: 0.875rem;
+}
+.blog-link h6 {
+    color: #1f6aa4;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+.blog-share {
+    margin-top: 2rem;
+    text-align: center;
+}
+.blog-share .fa-facebook:before, .blog-share .fa-instagram:before, .blog-share .fa-twitter:before {
+    color: #1f6aa4;
 }
 
 /*Styling for Footer Section*/
@@ -1692,6 +1725,9 @@ footer .nav .nav-link{
     font-size: 0.85rem;
     font-weight: 300;
     padding: .25em 2em;
+}
+footer .nav .nav-link:hover{
+    font-weight: 400;
 }
 footer h6{
     font-weight: 500;
@@ -1766,7 +1802,7 @@ footer .table td, .table th {
     margin-top: 5%;
     padding-left: calc(10% - 15px);
 }
-#downld ul li a{
+#downld ul li a, ul.ben-downld li a{
     color: #2068a4 !important;
 }
 
@@ -1790,8 +1826,8 @@ footer .table td, .table th {
 }
 
 /*Styling for Font Awesome Icons*/
-.solutions .fa-chevron-right::before ,#downld .fa-chevron-right::before  {
-    color: #a890ba !important;
+.solutions .fa-chevron-right::before ,#downld .fa-chevron-right::before, .blog-link .fa-chevron-right::before  {
+    color: #ffb81c !important;
 }
 .solution .fa-chevron-right::before{
     font-size: smaller;
@@ -1803,8 +1839,9 @@ footer .table td, .table th {
     padding: 0;
     overflow: hidden;
 }
-#slider img{
+#slider img {
     object-fit: cover;
+    -o-object-fit: cover;
     width: 100%;
 }
 #slider-icon{
@@ -2172,7 +2209,7 @@ footer .table td, .table th {
     }
 
     /*Styling for Body of Calculator Page*/
-    #calc-page, #login-page, .news-bg, #blogPage {
+    #calc-page, #login-page, .news-bg, #blogPage, #blog-pg {
         margin-top: 83px;
     }
     #disclaim-overlay{
@@ -2241,6 +2278,9 @@ footer .table td, .table th {
         margin-bottom: 0;
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+    .blog-img img {
+        height: 250px;
     }
 
     /*Styling Button*/
@@ -2507,6 +2547,9 @@ footer .table td, .table th {
     }
     #blog-Ft img {
         height: 32px;
+    }
+    .blog-img img {
+        height: 200px;
     }
 
     /*Styling for Button*/

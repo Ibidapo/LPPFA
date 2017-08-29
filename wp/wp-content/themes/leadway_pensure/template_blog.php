@@ -125,7 +125,9 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                         <?php endforeach ?>
 
                         <div class="seriesCap">
-                            <?= $firstInvNews->post_title ?>
+                            <span class="cap-color">
+                                Confident</span> because<br>my finances are<br><span class="cap-color">pensure
+                            </span>
                             <p><?= summary($firstInvNews->post_content, 100) ?></p>
                             <a href="<?= get_permalink($firstInvNews) ?>" class="btn btn-primary">Learn more</a>
                         </div>
@@ -438,8 +440,10 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
         <div class="col-md-6">
             <div class=social-feed id=instafeed > </div>
         </div>
-        <div class="col-md-6 sm-plug">
-
+        <div class="col-md-6">
+            <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+            <script type="IN/FollowCompany" data-id="7110418" data-counter="top"></script>
+            <script type="IN/CompanyProfile" data-id="7110418" data-format="inline" data-related="false"></script>
         </div>
         <div class="col-md-6 sm-plug">
 
