@@ -1,14 +1,13 @@
-figcaption{
-color: #7c7a7d !important;
-}
 #slider-icon figcaption{
- color: #7c7a7d !important;
- margin-top: 5px;
+    color:  #223e70 !important;
+    font-size: 0.875rem;
+    margin-top: 5px;
 }
 figcaption.FAQ{
 color: #9789ad !important;
 font-size: 0.85rem;
 }
+
 div.FAQ{
 margin-top: 5%;
 }
@@ -88,8 +87,16 @@ border:1px solid red !important;
     width: 100% !important;
 }
 
-#mc_embed_signup{
+.news-bg{
     background: transparent !important;
+}
+
+.mailbg{
+    background: url(../images/Graduate.jpg) no-repeat !important;
+    background-size: cover;
+    color: white;
+    font-size: 10px;
+
 }
 
 .ctips-button{
@@ -342,23 +349,30 @@ background: #afc4dd;
     display: none;
 }
 .navStyle2 ul .dropdown-item{
-    display: inline;
+    display: table-cell;
     margin: 0.25rem !important;
-    font-size: 0.75rem !important;
+    font-size: 0.8rem !important;
     font-weight: 400;
+    width: inherit !important;
+}
+.navStyle2 ul .dropdown-item:hover{
+    color: #223d70;
+}
+.navStyle2 ul .dropdown-item.active, .navStyle2 ul .dropdown-item:active{
+    background-color: #ebebeb;
 }
 .navStyle2 ul .dropdown-item .fa-chevron-right:before{
-    color: #a890ba;
+    color: #ffb81c;
     font-size: 0.75rem;
 }
 .navStyle2 ul .dropdown-menu.oc{
     left: -75% !important;
 }
 .navStyle2 ul .dropdown-menu.in{
-    left: -150% !important;
+    left: -175% !important;
 }
 .navStyle2 ul .dropdown-menu.bnf{
-       left: -100% !important;
+       left: -125% !important;
 }
 .navStyle2 ul .dropdown-menu.md{
       right: -100% !important;
@@ -397,7 +411,7 @@ div.navStyle3 ul li a{
     padding: 0;
 }
 div.navStyle3 ul li a:hover{
-    color:#a07eab;
+    color: #ffb81c;
     transition: 1s ease-in-out
 }
 a.logo{
@@ -450,6 +464,9 @@ color: #1f69a5;
 }
 .solutions li a{
     color: #1f69a5;
+}
+.solutions li a:hover{
+    font-weight: 500;
 }
 img.connect{
 width: 85%;
@@ -623,7 +640,7 @@ color:#1d69a6;
     z-index: 99;
     transition: all 1s ease;
 }
-.overlay ul{
+.overlay ul, .blog-link ul{
     list-style-type: none;
     padding: 0;
 }
@@ -678,19 +695,16 @@ color:#1d69a6;
 input[type="text"].language::-webkit-input-placeholder {
   color: #fff;
 }
-
 #mc_embed_signup form {
     padding: 10px 3% 10px 3% !important;
 }
-
 .news-button {
     margin: 0 !important;
 }
-
 .m-logo{
-    width: inherit !important;
+    width: 50% !important;
     padding: 0;
-    margin: 0;
+    margin: auto;
     text-align: center;
 }
 .mob-search input{
@@ -830,7 +844,7 @@ input[type="text"].language::-webkit-input-placeholder {
 
 @media (max-width: 1300px){
     .navStyle2 ul .dropdown-menu.ps{
-        left: -50% !important;
+        left: -80% !important;
     }
      .form-no{
      font-size: 2.5em;
@@ -838,7 +852,7 @@ input[type="text"].language::-webkit-input-placeholder {
 }
 @media (max-width: 1200px){
     nav.navbar table.table td {
-        padding: 0 1.5rem;
+        padding: 0 1rem;
     }
     .search {
         width: 15%;
@@ -849,7 +863,12 @@ input[type="text"].language::-webkit-input-placeholder {
 }
 @media (max-width: 1100px){
     nav.navbar table.table td {
-        padding: 0 0.85rem;
+        padding: 0 0.75rem;
+    }
+    nav.navbar table.table td:last-child {
+        right: 0;
+        padding: 1rem 0.75rem;
+        font-size: 0.875rem;
     }
     /* #requ-tab{
         left: 53%;

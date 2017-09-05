@@ -19,7 +19,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
     <style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
     </style>
     <!-- Hotjar Tracking Code for lppfa.inspireleadership.biz -->
     <script>
@@ -32,12 +32,23 @@
             a.appendChild(r);
         })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
+    <!-- google analytics tracking snippet -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-105192236-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
     <script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script type='text/javascript'>
         (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
-   </script>
+    </script>
 </head>
-<body>
+<body style="overflow-x: hidden">
     <!-- Mobile navigation -->
     <nav class="m-style navbar fixed-top hidden-lg-up">
         <div class="button_container" id="toggle">
@@ -69,13 +80,14 @@
                     <ul class="sub-menu collapse" id="med">
                         <li><a href="news.html">News & Events</a></li>
                         <li><a href="social.html">Social</a></li>
-                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </li>
                 <li><a data-toggle="collapse" href="#cont" aria-expanded="false" aria-controls="cont">Contact Us <i class="fa fa-chevron-down"></i></a>
                     <ul class="sub-menu collapse" id="cont">
                         <li><a href="contact.html">Branch Network</a></li>
                         <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
                     </ul>
                 </li>
             </ul>
@@ -106,7 +118,7 @@
                     <span> 500,000 </span>
                 </td>
                 <td>
-                   <a href="calculator.html" class="nav-calc"> <img src="images/calc.png"> <span>Calculator</span></a>
+                    <a href="calculator.html" class="nav-calc"> <img src="images/calc.png"> <span>Calculator</span></a>
                 </td>
                 <td>
                     <button type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS </button>
@@ -121,7 +133,7 @@
         <div class="navStyle2" style="display: none;">
             <ul class="nav nav-fill mr-auto">
                 <form class="form-inline search">
-                    <input class="form-control" type="text" placeholder="Search">
+                    <input class="form-control" type="text" placeholder="Search" id="search-index">
                 </form>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="javascript:" id="ps" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products & Services</a>
@@ -169,7 +181,7 @@
                         <a class="dropdown-item" href="news.html#cald"><i class="fa fa-chevron-right" aria-hidden="true"></i> Calender</a>
                         <a class="dropdown-item" href="news.html#gall"><i class="fa fa-chevron-right" aria-hidden="true"></i> Gallery</a>
                         <a class="dropdown-item" href="social.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Social</a>
-                        <a class="dropdown-item" href="downloads.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Downloads</a>
+                        <a class="dropdown-item" href="blog.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Blog</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -177,6 +189,7 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="co">
                         <a class="dropdown-item" href="contact.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Branch Network</a>
                         <a class="dropdown-item" href="faq.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> FAQs</a>
+                        <a class="dropdown-item" href="downloads.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Downloads</a>
                     </div>
                 </li>
                 <a class="navbar-brand" href="index.html"><img class="logo" src="images/logo.png" alt="Leadway Logo"></a>
@@ -219,7 +232,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="login.html">
                             <figure>
-                                <img src="images/c-login.png" height="60" width="45" alt="">
+                                <img src="images/c-login.png" alt="client login">
                                 <figcaption> Client login </figcaption>
                             </figure>
                         </a>
@@ -227,7 +240,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             <figure>
-                                <img src="images/office-block.png"  height="60" width="45" alt="">
+                                <img src="images/e-login.png" alt="employer login">
                                 <figcaption> Employer login </figcaption>
                             </figure>
                         </a>
@@ -238,17 +251,17 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="enroll.html">
                             <figure>
-                                <img src="images/t-form.png" height="60" width="45" alt="">
+                                <img src="images/t-form.png" alt="transfer form">
                                 <figcaption> Expression of interest </figcaption>
                             </figure>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="javascript:" id="search-landing">
                             <figure>
-                                <img src="images/search.png" height="60" width="45" alt="">
+                                <img src="images/search.png" alt="search">
                                 <figcaption> Search </figcaption>
                             </figure>
                         </a>
@@ -301,26 +314,26 @@
             <div class="col-12 col-lg-6 intro-box text-center">
                 <h3 class="hidden-md-down"> Leadway Pensure PFA is...</h3>
                 <p> ...totally committed to ensuring we provide that value. We pride
-                ourselves on the fact that we will generate enviable investment returns,
-                making sure that your retirement nest egg grows within the boundaries
-                of our economy. Our commitment to value means that we are also
-                committed to providing excellent service to you at all times </p>
+                    ourselves on the fact that we will generate enviable investment returns,
+                    making sure that your retirement nest egg grows within the boundaries
+                    of our economy. Our commitment to value means that we are also
+                    committed to providing excellent service to you at all times </p>
                 <a href="company.html" class="btn btn-outline-blue-sm"> About us </a>
             </div>
         </div>
         <div class="row message-box-container">
             <div class="col-12 col-md-5  message-box text-center">
                 <p class="message-box">Over the last decade, we’ve spread to over 25 branches nationwide
-                servicing over 500,000 RSA accounts.</p>
+                    servicing over 500,000 RSA accounts.</p>
             </div>
             <div class="col-12 col-md-7 solutions hidden-sm-down text-center">
                 <h5> Some frequently asked questions </h5>
                 <ul class="nav nav-fill">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> How to open my RSA account?</a>
+                        <a class="nav-link" href="services.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> How to open my RSA account?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i> When to claim benefits?</a>
+                        <a class="nav-link" href="benefits.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> When to claim benefits?</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-chevron-right " aria-hidden="true"></i> How to retrieve lost pin?</a>
@@ -354,6 +367,48 @@
                 </div>
             </div>
         </div>
+         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    
+                  <!-- Begin MailChimp Signup Form -->
+</style>
+<div id="mc_embed_signup" class=mailbg>
+
+<form action="https://leadway-pensure.us10.list-manage.com/subscribe/post" method="POST">
+    <input type="hidden" name="u" value="a7d286c921166498a0b699255">
+    <input type="hidden" name="id" value="38e9091d3c">
+
+    <div id="mc_embed_signup_scroll" class=text-center>
+    <h2>Subscribe to our mailing list</h2>
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+    <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group">
+    <label for="mce-FNAME">First Name </label>
+    <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+</div>
+<div class="mc-field-group">
+    <label for="mce-LNAME">Last Name </label>
+    <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+</div>
+    <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a7d286c921166498a0b699255_38e9091d3c" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<!--End mc_embed_signup-->
+
+                   </div>
+                       </div>
+                         </div>
         <!-- Default -->
         <div class="row" id="client-area">
             <div class="client-intro">We celebrate every client!</div>
@@ -365,24 +420,24 @@
                         We will partner with you from this moment till you retire. Our bond with you continues even
                         after retirement. Kindly apply for the available vacancy and LPPFA wishes you success at your job
                         interview. Remember to open your RSA with us, when you secure the job.</p>
-                    <a href="#" class="btn btn-purple">Subscribe</a>
-                </div>
+                        <button class="btn btn-purple" type="button" data-toggle="modal" data-target=".bd-example-modal-lg"> Subscribe </button>
+            </div>
                 <div id="emp-txt">
                     <h3 class="hidden-md-down">"I am at the peak of my career."</h3>
                     <h5 class="hidden-lg-up">"I am at the peak of my career."</h5>
                     <p class="text-justify">Enroll today for a pension plan with Leadway Pensure PFA where you will be
-                    guaranteed high quality services, enviable returns on investment and the opportunity to engage with
-                    our very experienced customer relationship managers. Don't forget to visit our investment page for
-                    tips on wealth creation, sustenance and more.</p>
+                        guaranteed high quality services, enviable returns on investment and the opportunity to engage with
+                        our very experienced customer relationship managers. Don't forget to visit our investment page for
+                        tips on wealth creation, sustenance and more.</p>
                     <a href="#" class="btn btn-purple">Enroll Now</a>
                 </div>
                 <div id="retr-txt">
                     <h3 class="hidden-md-down">"About to retire?"</h3>
                     <h5 class="hidden-lg-up">"About to retire?"</h5>
                     <p class="text-justify">If you are considering retirement or accessing your benefits, Leadway Pensure
-                    can help make the process seamless and stress free. We will work with you from the point of application
-                    through all necessary approvals until final payments are made, ensuring prompt payment and real-time
-                    notification of the status of your application throughout the process.</p>
+                        can help make the process seamless and stress free. We will work with you from the point of application
+                        through all necessary approvals until final payments are made, ensuring prompt payment and real-time
+                        notification of the status of your application throughout the process.</p>
                     <a href="services.html" class="btn btn-purple">Learn more</a>
                 </div>
             </div>
@@ -469,8 +524,8 @@
                             <h3 class="hidden-md-down text-center">360&deg; Digital</h3>
                             <h5 class="hidden-lg-up text-center">360&deg; Digital</h5>
                             <p class="text-justify">Enjoy exciting content and keep customers update through our social channels. Engage customer care for
-                            more information on our products and services or catch up with live programmes featuring our seasoned professionals
-                            on how to tackle everyday financial problems.</p>
+                                more information on our products and services or catch up with live programmes featuring our seasoned professionals
+                                on how to tackle everyday financial problems.</p>
                             <ul class="nav nav-justified hidden-sm-down">
                                 <li class="nav-item">
                                     <a class="nav-link" href="#"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
@@ -535,7 +590,7 @@
                     <h5 class="hidden-md-down text-center">No matter who you are or where you may be, we have a plan for you !</h5>
                     <h6 class="hidden-lg-up text-center">No matter who you are or where you may be, we have a plan for you !</h6>
                     <p class="text-justify">Are you graduating, employed, about to retire? or retired, Our four tier solutions strategy ensures
-                    we can appeal to every consumer segment within the market place. Let's walk you through a plan </p>
+                        we can appeal to every consumer segment within the market place. Let's walk you through a plan </p>
                     <div class="text-center"><a href="contact.html" class="btn btn-outline-white">Talk to Leadway</a></div>
                 </div>
                 <div class="hidden-sm-down" id="s8-pic" data-aos="fade-left"><img src="images/mobile.png" alt=""></div>
@@ -546,7 +601,7 @@
                 <div class="hidden-sm-down reg-pic float-left"  data-aos="fade"><img src="images/jar.png" alt=""></div>
                 <div class="reg-txt float-right">
                     <p class="v-align text-center">Need a pension account today?<br>
-                    Register with the <span style="color: #2068a6;">Leading</span> PFA today</p>
+                        Register with the <span style="color: #2068a6;">Leading</span> PFA today</p>
                     <div class="hidden-md-up text-center"><a href="enroll.html" class="btn btn-outline-blue">Get Started</a></div>
                     <span class="hidden-sm-down reg-btn v-align"><a href="enroll.html" class="btn btn-outline-blue">Get Started</a></span>
                 </div>
@@ -585,6 +640,7 @@
         </div>
         <div class="row justify-content-around" style="margin-bottom: 10px">
             <div class="col-sm-10 col-md-4 collapse" id="sign">
+<<<<<<< HEAD
 
                    <!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
@@ -619,22 +675,53 @@
 
 <!--End mc_embed_signup-->
 
+=======
+                <!-- Begin MailChimp Signup Form -->
+                <div id="mc_embed_signup">
+                    <form action="https://leadway-pensure.us10.list-manage.com/subscribe/post" method="POST">
+                        <input type="hidden" name="u" value="a7d286c921166498a0b699255">
+                        <input type="hidden" name="id" value="c1b945e29f">
+                        <div id="mc_embed_signup_scroll" class="text-center">
+                            <h2>Subscribe to our mailing list</h2>
+                            <div class="mc-field-group">
+                                <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                                </label>
+                                <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="" class="chimp">
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-FNAME">First Name </label>
+                                <input type="text" name="MERGE1" id="MERGE1" size="25" value="" class="chimp">
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-LNAME">Last Name </label>
+                                <input type="text" name="MERGE2" id="MERGE2" size="25" value="" class="chimp">
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a7d286c921166498a0b699255_c1b945e29f" tabindex="-1" value=""></div>
+                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-outline-red btn-sm "></div>
+                        </div>
+                    </form>
+                </div>
+                <!--End mc_embed_signup-->
+>>>>>>> 94932231afe808fa9bfe6bbbdcc683f3632bbbc3
             </div>
             <div class="col-sm-10 col-md-4 collapse" id="feed">
                 <h5 class="text-center"> We'd love to hear from you </h5>
                 <form action="https://leadway-pensure.us10.list-manage.com/subscribe/post" method="POST">
-                      <input type="hidden" name="u" value="a7d286c921166498a0b699255">
-                      <input type="hidden" name="id" value="acab34fb55">
-    
+                    <input type="hidden" name="u" value="a7d286c921166498a0b699255">
+                    <input type="hidden" name="id" value="acab34fb55">
 
                     <div class="form-group">
-                       <input class="form-control form-control-sm chimp text-center" type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="" placeholder="Email Address">
+                        <input class="form-control form-control-sm chimp text-center" type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="" placeholder="Email Address">
                     </div>
                     <div class="form-group">
                         <textarea class="form-control form-control-sm chimp text-center" rows="3" cols="inherit" placeholder="Please write here" required></textarea>
                     </div>
                     <div class="text-center"><input type="submit" class="btn btn-outline-red btn-sm" value="Post feedback"></div>
-                </form> 
+                </form>
             </div>
         </div>
         <div class="row text-center">
@@ -651,7 +738,7 @@
             <div class="col-12 col-md-6 col-lg-3">
                 <h6>Quick Links</h6>
                 <nav class="nav flex-column">
-                    <a class="nav-link active" href="#">Blog</a>
+                    <a class="nav-link active" href="blog.html">Blog</a>
                     <a class="nav-link" href="enroll.html">Enroll Now</a>
                     <a class="nav-link" href="benefits.html">Benefits</a>
                     <a class="nav-link" href="investment.html">Our Philosophy</a>
@@ -660,7 +747,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-3 app">
                 <h6>Our Mobile App</h6>
-                <img src="images/hand.png" alt="">
+                <img src="images/hand.png" alt="Leadway Pensure Mobile App">
             </div>
             <div class="col-12 col-md-6 col-lg-3">
                 <h6> Our Game Board</h6>
@@ -713,7 +800,7 @@
             <div class="col-12 col-md-4 align-self-center text-center">Web Design & Digital by iNspire</div>
         </div>
         <a id="share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
-        <a id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
+        <a href="javascript:window.print()" id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
         <a href="javascript:" id="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
     </footer>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -760,9 +847,16 @@
                 $('#slider-icon, .style3').fadeOut(800);
                 $('.navStyle2').fadeIn(1000);
             }else{
-                $('.style3, #slider-icon').fadeIn(1000);
-                $('.navStyle2').fadeOut(800);
+                $('.style3, #slider-icon').fadeIn(800);
+                $('.navStyle2').fadeOut(500);
             }
+        });
+
+        $('#search-landing').click(function(){
+            $('#scroll-btn').trigger('click');
+            setTimeout(function(){
+                $('#search-index').focus();
+            }, 800)
         });
 
         $('#client-area').mouseenter(function(){
@@ -816,27 +910,3 @@
     </script>
 </body>
 </html>
-
-
-                <!-- Begin MailChimp Signup Form -->
-               <!--
-                <div id="mc_embed_signup" class="text-center">
-                    <form action="//leadway-pensure.us10.list-manage.com/subscribe/post?u=a7d286c921166498a0b699255&amp;id=c1b945e29f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll" class="text-center">
-                            <h5 style="color:#1d69a6"> Subscribe and receive the Leading digest monthly! </h5>
-                            <div class="mc-field-group">
-                                <input type="text" value="" name="FNAME" class="required chimp text-center" id="mce-FNAME" placeholder="First Name">
-                            </div>
-                            <div class="mc-field-group">
-                                <input type="email" value="" name="EMAIL" class="required email chimp text-center" id="mce-EMAIL" placeholder="E-mail Address">
-                            </div>
-                            <div id="mce-responses" class="clear">
-                                <div class="response" id="mce-error-response" style="display:none"></div>
-                                <div class="response" id="mce-success-response" style="display:none"></div>
-                            </div>    
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a7d286c921166498a0b699255_c1b945e29f" tabindex="-1" value=""></div>
-                            <div class="clear"><input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-outline-red btn-sm news-button"></div>
-                        </div>
-                    </form>
-                </div> 
-                <!--End mc_embed_signup-->

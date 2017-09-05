@@ -30,6 +30,17 @@
             a.appendChild(r);
         })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
+        <!-- google analytics tracking snippet --> 
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105192236-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
     <script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script type='text/javascript'>
         (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
@@ -67,13 +78,14 @@
                     <ul class="sub-menu collapse" id="med">
                         <li><a href="news.html">News & Events</a></li>
                         <li><a href="social.html">Social</a></li>
-                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </li>
                 <li><a data-toggle="collapse" href="#cont" aria-expanded="false" aria-controls="cont">Contact Us <i class="fa fa-chevron-down"></i></a>
                     <ul class="sub-menu collapse" id="cont">
                         <li><a href="contact.html">Branch Network</a></li>
                         <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="downloads.html">Downloads</a></li>
                     </ul>
                 </li>
             </ul>
@@ -167,7 +179,7 @@
                         <a class="dropdown-item" href="news.html#cald"><i class="fa fa-chevron-right" aria-hidden="true"></i> Calender</a>
                         <a class="dropdown-item" href="news.html#gall"><i class="fa fa-chevron-right" aria-hidden="true"></i> Gallery</a>
                         <a class="dropdown-item" href="social.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Social</a>
-                        <a class="dropdown-item" href="downloads.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Downloads</a>
+                        <a class="dropdown-item" href="blog.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Blog</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -175,6 +187,7 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="co">
                         <a class="dropdown-item" href="contact.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Branch Network</a>
                         <a class="dropdown-item" href="faq.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> FAQs</a>
+                        <a class="dropdown-item" href="downloads.html"><i class="fa fa-chevron-right" aria-hidden="true"></i> Downloads</a>
                     </div>
                 </li>
                 <a class="navbar-brand" href="index.html"><img class="logo" src="images/logo.png" alt="Leadway Logo"></a>
@@ -187,12 +200,17 @@
             <div class="col-12 news-bg">
                 <h1 class="text-center">What's New!</h1>
                 <div class="row">
-                    <div class="col-12 col-md-5 col-lg-4">
+                    <div class="col-12 col-sm-10 col-md-5 col-lg-4 mx-auto">
+                        <span class="badge badge-info">News & Events</span>
                         <div class="news1">
-
+                            <div class="news1-txt">
+                                <p>Forex Trading for dummies</p>
+                                <a href="#" class="btn btn-primary">Learn more</a>
+                            </div>
                         </div>
+                        <span class="news-date">21st Aug, 2017</span>
                     </div>
-                    <div class=" col-12 col-md-7 col-lg-8">
+                    <div class="col-12 col-sm-11 col-md-7 col-lg-8 mx-auto">
                         <div class="row other-news">
                             <div class="col-12 col-lg-6">
                                 <div class="media">
@@ -252,13 +270,13 @@
                     <div class="col-md-12 news-tab">
                         <ul class="hidden-sm-down nav nav-fill nav-tabs" id="newsTab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#m-news" role="tab"> Recent Stories</a>
+                                <a class="nav-link active" data-toggle="tab" href="#m-news" role="tab"><img src="images/news.png"/> Recent Stories</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#gall" role="tab"> Gallery </a>
+                                <a class="nav-link" data-toggle="tab" href="#gall" role="tab"><img src="images/gallery.png"/> Gallery</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#cald" role="tab"> Calendar </a>
+                                <a class="nav-link" data-toggle="tab" href="#cald" role="tab"><img src="images/calendar.png"/> Calendar</a>
                             </li>
                         </ul>
                         <form class="hidden-md-up mx-auto">
@@ -278,31 +296,62 @@
     <div class="container">
         <div class="row tab-content">
             <div class="tab-pane fade col-12 active show" role="tabpanel" id="m-news" aria-expanded="true">
-                <div class="row">
+                <div class="row recent">
                     <div class="col-12">
-                        <div class="media">
-                            <img  class="d-flex align-self-center" src="images/hand.png" alt="leadway Pensure News"/>
-                            <div class="media-body">
-                                <h4 class="mt-0">Leadway unveils Mobile App</h4>
-                                <p>Following our master-plan to become a client-oriented brand. We have implemented...
-                                <a href="#">Read More</a></p>
-                            </div>
-                        </div>
+                        <h2>Recent releases</h2>
                     </div>
-                    <div class="col-12">
-                        <div class="media">
-                            <img  class="d-flex align-self-center" src="images/vas.png" alt="leadway Pensure News"/>
-                            <div class="media-body">
-                                <h4 class="mt-0">Leadway unveils Value Added Services</h4>
-                                <p>Following our master-plan to become a client-oriented brand. We have implemented...
-                                <a href="#">Read More</a></p>
-                            </div>
-                        </div>
+                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-info">News & Events</span>
+                        <span class="news-date">21st Aug, 2017</span>
+                        <figure>
+                            <img src="images/sheet.jpg"/>
+                            <figcaption><h5>Building an efficient self-management system</h5></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-info">News & Events</span>
+                        <span class="news-date">21st Aug, 2017</span>
+                        <figure>
+                            <img src="images/sheet.jpg"/>
+                            <figcaption><h5>Building an efficient self-management system</h5></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-info">News & Events</span>
+                        <span class="news-date">21st Aug, 2017</span>
+                        <figure>
+                            <img src="images/sheet.jpg"/>
+                            <figcaption><h5>Building an efficient self-management system</h5></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-info">News & Events</span>
+                        <span class="news-date">21st Aug, 2017</span>
+                        <figure>
+                            <img src="images/sheet.jpg"/>
+                            <figcaption><h5>Building an efficient self-management system</h5></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-info">News & Events</span>
+                        <span class="news-date">21st Aug, 2017</span>
+                        <figure>
+                            <img src="images/sheet.jpg"/>
+                            <figcaption><h5>Building an efficient self-management system</h5></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <span class="badge badge-info">News & Events</span>
+                        <span class="news-date">21st Aug, 2017</span>
+                        <figure>
+                            <img src="images/sheet.jpg"/>
+                            <figcaption><h5>Building an efficient self-management system</h5></figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade col-12" role="tabpanel" id="gall" aria-expanded="false">
-                <h1 class="text-center">Gallery Coming Soon!</h1>
+            <div class="tab-pane fade col-12 mx-auto" role="tabpanel" id="gall" aria-expanded="false">
+               <h1 class="text-center">Gallery Coming Soon</h1>
             </div>
             <div class="tab-pane fade col-12 text-center" role="tabpanel" id="cald" aria-expanded="false">
                 <h1 class="text-center">Calendar Coming Soon!</h1>
@@ -342,22 +391,31 @@
         <div class="row justify-content-around" style="margin-bottom: 10px">
             <div class="col-sm-10 col-md-4 collapse" id="sign">
                 <!-- Begin MailChimp Signup Form -->
-                <div id="mc_embed_signup" class="text-center">
-                    <form action="//leadway-pensure.us10.list-manage.com/subscribe/post?u=a7d286c921166498a0b699255&amp;id=c1b945e29f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll" class="text-center">
-                            <h5 style="color:#1d69a6"> Subscribe and receive the Leading digest monthly! </h5>
+                <div id="mc_embed_signup">
+                    <form action="https://leadway-pensure.us10.list-manage.com/subscribe/post" method="POST">
+                        <input type="hidden" name="u" value="a7d286c921166498a0b699255">
+                        <input type="hidden" name="id" value="c1b945e29f">
+                        <div id="mc_embed_signup_scroll">
+                            <h2>Subscribe to our mailing list</h2>
                             <div class="mc-field-group">
-                                <input type="text" value="" name="FNAME" class="required chimp text-center" id="mce-FNAME" placeholder="First Name">
+                                <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                                </label>
+                                <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="" class="chimp">
                             </div>
                             <div class="mc-field-group">
-                                <input type="email" value="" name="EMAIL" class="required email chimp text-center" id="mce-EMAIL" placeholder="E-mail Address">
+                                <label for="mce-FNAME">First Name </label>
+                                <input type="text" name="MERGE1" id="MERGE1" size="25" value="" class="chimp">
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-LNAME">Last Name </label>
+                                <input type="text" name="MERGE2" id="MERGE2" size="25" value="" class="chimp">
                             </div>
                             <div id="mce-responses" class="clear">
                                 <div class="response" id="mce-error-response" style="display:none"></div>
                                 <div class="response" id="mce-success-response" style="display:none"></div>
                             </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a7d286c921166498a0b699255_c1b945e29f" tabindex="-1" value=""></div>
-                            <div class="clear"><input type="submit" value="Subscribe Today" name="subscribe" id="mc-embedded-subscribe" class="btn btn-outline-red btn-sm news-button"></div>
+                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
                         </div>
                     </form>
                 </div>
@@ -365,9 +423,12 @@
             </div>
             <div class="col-sm-10 col-md-4 collapse" id="feed">
                 <h5 class="text-center"> We'd love to hear from you </h5>
-                <form>
+                <form action="https://leadway-pensure.us10.list-manage.com/subscribe/post" method="POST">
+                    <input type="hidden" name="u" value="a7d286c921166498a0b699255">
+                    <input type="hidden" name="id" value="acab34fb55">
+
                     <div class="form-group">
-                        <input class="form-control form-control-sm chimp text-center" type="text" placeholder="E-mail Address" required>
+                        <input class="form-control form-control-sm chimp text-center" type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="" placeholder="Email Address">
                     </div>
                     <div class="form-group">
                         <textarea class="form-control form-control-sm chimp text-center" rows="3" cols="inherit" placeholder="Please write here" required></textarea>
@@ -390,7 +451,7 @@
             <div class="col-12 col-md-6 col-lg-3">
                 <h6>Quick Links</h6>
                 <nav class="nav flex-column">
-                    <a class="nav-link active" href="#">Blog</a>
+                    <a class="nav-link active" href="blog.html">Blog</a>
                     <a class="nav-link" href="enroll.html">Enroll Now</a>
                     <a class="nav-link" href="benefits.html">Benefits</a>
                     <a class="nav-link" href="investment.html">Our Philosophy</a>
@@ -399,7 +460,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-3 app">
                 <h6>Our Mobile App</h6>
-                <img src="images/hand.png" alt="">
+                <img src="images/hand.png" alt="Leadway Pensure Mobile App">
             </div>
             <div class="col-12 col-md-6 col-lg-3">
                 <h6> Our Game Board</h6>
@@ -452,7 +513,7 @@
             <div class="col-12 col-md-4 align-self-center text-center">Web Design & Digital by iNspire</div>
         </div>
         <a id="share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
-        <a id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
+        <a href="javascript:window.print()" id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
         <a href="javascript:" id="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
     </footer>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -497,7 +558,7 @@
                     }, 1000);
                 }else if (size <= 767) {
                     $('body,html').animate({
-                        scrollTop :650
+                        scrollTop :500
                     }, 1000);
                 } else {
                     $('body,html').animate({
