@@ -11,6 +11,10 @@ $custodians = get_field("custodians");
 
 ?>
 
+<?php
+include_once 'mail/company.php';
+?>
+
 <?php get_header(); ?>
 <!-- Body and Main Content of Page -->
 <div class="container-fluid">
@@ -69,9 +73,10 @@ $custodians = get_field("custodians");
                     </p>
                 </div>
                 <div class="col-12 col-md-5">
-                    <form class="form-inline v-align">
+                    <form class="form-inline v-align" action="<?php the_permalink(); ?>" method="post">
+                        <input type="hidden" name="company_submitted" value="1">
                         <div class="form-group mx-auto text-center">
-                            <input type="text" class="form-control" placeholder="E-mail">
+                            <input name="email" type="email" class="form-control" placeholder="E-mail">
                             <a class="btn btn-outline-purple" role="button" type="submit">Submit</a>
                         </div>
                     </form>

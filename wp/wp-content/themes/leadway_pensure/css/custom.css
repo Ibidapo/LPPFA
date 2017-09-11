@@ -127,3 +127,20 @@
 #main__header-menu li:nth-child(6) .dropdown-menu {
     left: -55% !important;
 }
+
+.archives li {
+    display: block;
+    padding: .1em 1em;
+}
+
+.news-bg {
+    background: url(../images/news-bg.png) no-repeat center !important;
+    background-size: cover !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: inherit;
+}
+
+#alm, #cbs, #csr, #m_news, #gall, #cald {
+    min-height: 600px !important;
+}

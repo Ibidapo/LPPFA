@@ -133,12 +133,15 @@ add_action('widgets_init', 'leadway_widgets_init');
 // ==========================
 // Register Navigation Menus
 // ==========================
-function register_main_menu()
-{
-    register_nav_menu('primary-header-menu', __('Primary Header Menu'));
+function register_my_menus() {
+    register_nav_menus(
+        array(
+            'primary-header-menu' => __('Primary Header Menu'),
+            'homepage-sub-menu' => __( 'Homepage Submenu' )
+        )
+    );
 }
-
-add_action('init', 'register_main_menu');
+add_action( 'init', 'register_my_menus' );
 
 add_filter('nav_menu_link_attributes', function ($atts, $item, $args) {
     if (in_array('menu-item-has-children',$item->classes)) {

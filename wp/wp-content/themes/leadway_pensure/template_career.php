@@ -1,7 +1,7 @@
 <?php /* Template Name: Career */ ?>
 
 <?php
-
+include_once 'mail/career.php';
 ?>
 
 <?php get_header(); ?>
@@ -34,14 +34,17 @@
         <div class="col-md-12 career-tab">
             <ul class="hidden-sm-down nav nav-fill nav-tabs" id="careerTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#vac" role="tab"><img src="images/vacancy.png">
+                    <a class="nav-link active" data-toggle="tab" href="#vac" role="tab">
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/vacancy.png">
                         Explore Vacancies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#cv" role="tab"><img src="images/CV.png"> Upload CV</a>
+                    <a class="nav-link" data-toggle="tab" href="#cv" role="tab">
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/CV.png"> Upload CV</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#alm" role="tab"><img src="images/alumni.png"> Alumni
+                    <a class="nav-link" data-toggle="tab" href="#alm" role="tab">
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/alumni.png"> Alumni
                         Network</a>
                 </li>
             </ul>
@@ -281,7 +284,8 @@
             </div>
         </div>
         <div class="tab-pane fade col-12" role="tabpanel" id="cv">
-            <form>
+            <form enctype="multipart/form-data" action="<?php the_permalink(); ?>#cv" method="post">
+                <input type="hidden" name="career_submitted" value="1"/>
                 <div class="row">
                     <div class="col-xs-10 offset-xs-1 col-md-12 text-center">
                         <h4>Personal Information</h4>
@@ -290,54 +294,54 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="s-name">Surname</label>
-                                    <input type="text" class="form-control" id="s-name">
+                                    <input required name="surname" type="text" class="form-control" id="s-name" value="<?= array_get($_POST, 'surname')?>">
                                 </div>
                             </div>
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <label for="o-name">Other Names</label>
-                                    <input type="text" class="form-control" id="o-name">
+                                    <input name="other_names" type="text" class="form-control" id="o-name" value="<?= array_get($_POST, 'other_names')?>">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="mail">E-mail</label>
-                                    <input type="email" class="form-control" id="mail">
+                                    <input name="email" type="email" class="form-control" id="mail" required value="<?= array_get($_POST, 'email')?>">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="p-no">Phone No</label>
-                                    <input type="tel" class="form-control" id="p-no">
+                                    <input required name="phone_number" type="tel" class="form-control" id="p-no" value="<?= array_get($_POST, 'phone_number')?>">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="d-o-b">Date of Birth</label>
-                                    <input type="date" class="form-control" id="d-o-b">
+                                    <input name="date_of_birth" type="date" class="form-control" id="d-o-b" value="<?= array_get($_POST, 'date_of_birth')?>">
                                 </div>
                             </div>
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <label for="address">Address</label>
-                                    <textarea class="form-control" id="address" rows="4"></textarea>
+                                    <textarea name="address" class="form-control" id="address" rows="4"><?= array_get($_POST, 'address')?></textarea>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="app">Applicant Type</label>
-                                    <select class="form-control" id="app">
-                                        <option>Please select</option>
-                                        <option value="1">Young graduate</option>
-                                        <option value="2">Experienced</option>
-                                        <option value="3">Global talent</option>
-                                        <option value="4">Executive</option>
+                                    <select name="applicant_type" class="form-control" id="app">
+                                        <option disabled>Please select</option>
+                                        <option>Young graduate</option>
+                                        <option>Experienced</option>
+                                        <option>Global talent</option>
+                                        <option>Executive</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="gen">Gender</label>
-                                    <select class="form-control" id="gen">
-                                        <option>Please select</option>
+                                    <select name="gender" class="form-control" id="gen">
+                                        <option disabled>Please select</option>
                                         <option>Female</option>
                                         <option>Male</option>
                                         <option>Other</option>
@@ -355,8 +359,8 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <label for="i-name">Institutional Name</label>
-                                    <select class="form-control" id="i-name">
-                                        <option value="">Please select</option>
+                                    <select name="institution_name" class="form-control" id="i-name">
+                                        <option disabled>Please select</option>
                                         <option value="28">Abia state University</option>
                                         <option value="1">Abubakar Tafawa Belewa University, Bauchi</option>
                                         <option value="64">Achievers University, Owo</option>
@@ -482,7 +486,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="edu-qlt">Qualification</label>
-                                    <select class="form-control" id="edu-qlt">
+                                    <select name="qualification" class="form-control" id="edu-qlt">
                                         <option>Please select</option>
                                         <option value="8">Bachelor of Applied Science (BASc)</option>
                                         <option value="9">Bachelor of Architecture (BArch)</option>
@@ -518,7 +522,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="deg">Class of Degree</label>
-                                    <select class="form-control" id="deg">
+                                    <select name="class_of_degree" class="form-control" id="deg">
                                         <option value="">Please select</option>
                                         <option value="First Class">First Class</option>
                                         <option value="Second Class Upper">Second Class Upper</option>
@@ -536,13 +540,13 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="yr-qlt">Year Completed</label>
-                                    <input type="text" class="form-control" id="yr-qlt">
+                                    <input name="year_completed" type="text" class="form-control" id="yr-qlt">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="cont">Country Obtained</label>
-                                    <select class="form-control" id="cont">
+                                    <select name="country_obtained" class="form-control" id="cont">
                                         <option>Please select</option>
                                         <option value="Afghanistan">Afghanistan</option>
                                         <option value="Aland Islands">Aland Islands</option>
@@ -815,7 +819,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="prof-qlt">Qualification</label>
-                                    <select class="form-control" id="prof-qlt">
+                                    <select name="professional_qualification" class="form-control" id="prof-qlt">
                                         <option value="">Please select</option>
                                         <option value="19">Advertising Practioners Council of Nigeria (APCON)</option>
                                         <option value="22">African Institute for Applied Economics (AIAE)</option>
@@ -927,7 +931,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="cont-prof">Country Obtained</label>
-                                    <select class="form-control" id="cont-prof">
+                                    <select name="professional_qualification_country_obtained" class="form-control" id="cont-prof">
                                         <option>Please select</option>
                                         <option value="Afghanistan">Afghanistan</option>
                                         <option value="Aland Islands">Aland Islands</option>
@@ -1192,7 +1196,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="yr-prof">Year Completed</label>
-                                    <input type="text" class="form-control" id="yr-prof">
+                                    <input name="professional_qualification_year_completed" type="text" class="form-control" id="yr-prof">
                                 </div>
                             </div>
                         </div>
@@ -1206,13 +1210,13 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <label for="c-name">Company Name</label>
-                                    <input type="text" class="form-control" id="c-name">
+                                    <input name="work_experience_company" type="text" class="form-control" id="c-name">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="ind">Industry</label>
-                                    <select class="form-control" id="ind">
+                                    <select name="work_experience_industry" class="form-control" id="ind">
                                         <option value="">Please select</option>
                                         <option value="13">Aviation</option>
                                         <option value="2">Banking</option>
@@ -1253,13 +1257,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="job">Job Title</label>
-                                    <input type="text" class="form-control" id="job">
+                                    <input name="work_experience_job_title" type="text" class="form-control" id="job">
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="spec">Specialization</label>
-                                    <select class="form-control" id="spec">
+                                    <select name="work_experience_specialization" class="form-control" id="spec">
                                         <option class="disabled">Please select</option>
                                         <option value="4">Accounting</option>
                                         <option value="41">Actuarial Science</option>
@@ -1314,7 +1318,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="w-cont">Country Obtained</label>
-                                    <select class="form-control" id="w-cont">
+                                    <select name="work_experience_country_obtained" class="form-control" id="w-cont">
                                         <option>Please select</option>
                                         <option value="Afghanistan">Afghanistan</option>
                                         <option value="Aland Islands">Aland Islands</option>
@@ -1579,17 +1583,17 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     <label for="desc">Job Description</label>
-                                    <textarea class="form-control" id="desc" rows="4"></textarea>
+                                    <textarea name="work_experience_job_description" class="form-control" id="desc" rows="4"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="f-date">From Date</label>
-                                    <input type="date" class="form-control" id="f-date">
+                                    <input name="work_experience_from_date" type="date" class="form-control" id="f-date">
                                 </div>
                                 <div class="form-group">
                                     <label for="t-date">To Date</label>
-                                    <input type="date" class="form-control" id="t-date">
+                                    <input name="work_experience_end_date" type="date" class="form-control" id="t-date">
                                 </div>
                             </div>
                         </div>
@@ -1602,7 +1606,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <label class="custom-file">
-                                    <input type="file" id="file" class="custom-file-input">
+                                    <input name="cv" type="file" id="file" class="custom-file-input">
                                     <span class="custom-file-control"></span>
                                 </label>
                                 <span class="fileNB">File should be less than 1MB (and of type; jpg, jpeg, png, doc or docx)</span>
@@ -1624,13 +1628,24 @@
 
 <?php get_footer(); ?>
 
-<script src="js/index.js"></script>
+<?php if(!empty($response)):?>
+    <script>
+        swal({
+            title: "<?= ucfirst(array_get($response, 'type', 'error')); ?>!",
+            text: "<?= array_get($response, 'message') ?>",
+            type: "<?= array_get($response, 'type', 'error') ?>"
+        });
+    </script>
+<?php endif ?>
+
 <script>
     //Resize container based on desktop or mobile viewport.
     var size = window.innerWidth;
     if (size <= 991) {
         $(".container").attr("class", "container-fluid");
     }
+
+    $('#careerTab a[href="' + window.location.hash + '"]').tab('show');
 
     $("#m-careerTab").change(function () {
         var i = $(this).val();

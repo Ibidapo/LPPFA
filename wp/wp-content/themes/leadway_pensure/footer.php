@@ -2,7 +2,9 @@
 !is_page_template("template_blog.php")
 ):
     $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
+    include_once 'mail/feedback.php';
     ?>
+
     <!-- Footer of page -->
     <footer class="container-fluid">
         <hr class="hr-red">
@@ -15,7 +17,8 @@
                     <?php foreach ($recent_news as $news) { ?>
                         <li class="media">
                             <img class="d-flex align-self-center mr-3"
-                                 src="<?= get_the_post_thumbnail_url($news->ID); ?>" alt="<?= $news->post_title ?>" height="50">
+                                 src="<?= get_the_post_thumbnail_url($news->ID); ?>" alt="<?= $news->post_title ?>"
+                                 height="50">
 
                             <div class="media-body">
                                 <h5 class="mt-0"><?= $news->post_title ?></h5>
@@ -31,28 +34,42 @@
             </div>
         </div>
         <div class="row" style="margin-bottom:10px">
-            <a class="col-12 col-md-6 btn-red" data-toggle="collapse" href="#sign" aria-expanded="false" aria-controls="sign">Sign-Up for News Letter</a>
-            <a class="col-12 col-md-6 btn-red" data-toggle="collapse" data-target="#feed" aria-expanded="false" aria-controls="feed">Give us your Feedback</a>
+            <a class="col-12 col-md-6 btn-red" data-toggle="collapse" href="#sign" aria-expanded="false"
+               aria-controls="sign">Sign-Up for News Letter</a>
+            <a class="col-12 col-md-6 btn-red" data-toggle="collapse" data-target="#feed" aria-expanded="false"
+               aria-controls="feed">Give us your Feedback</a>
         </div>
         <div class="row justify-content-around" style="margin-bottom: 10px">
             <div class="col-sm-10 col-md-4 collapse" id="sign">
                 <!-- Begin MailChimp Signup Form -->
                 <div id="mc_embed_signup" class="text-center">
-                    <form action="//leadway-pensure.us10.list-manage.com/subscribe/post?u=a7d286c921166498a0b699255&amp;id=c1b945e29f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <form
+                        action="//leadway-pensure.us10.list-manage.com/subscribe/post?u=a7d286c921166498a0b699255&amp;id=c1b945e29f"
+                        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                        target="_blank" novalidate>
                         <div id="mc_embed_signup_scroll" class="text-center">
                             <h5 style="color:#1d69a6"> Subscribe and receive the Leading digest monthly! </h5>
+
                             <div class="mc-field-group">
-                                <input type="text" value="" name="FNAME" class="required chimp text-center" id="mce-FNAME" placeholder="First Name">
+                                <input type="text" value="" name="FNAME" class="required chimp text-center"
+                                       id="mce-FNAME" placeholder="First Name">
                             </div>
                             <div class="mc-field-group">
-                                <input type="email" value="" name="EMAIL" class="required email chimp text-center" id="mce-EMAIL" placeholder="E-mail Address">
+                                <input type="email" value="" name="EMAIL" class="required email chimp text-center"
+                                       id="mce-EMAIL" placeholder="E-mail Address">
                             </div>
                             <div id="mce-responses" class="clear">
                                 <div class="response" id="mce-error-response" style="display:none"></div>
                                 <div class="response" id="mce-success-response" style="display:none"></div>
-                            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a7d286c921166498a0b699255_c1b945e29f" tabindex="-1" value=""></div>
-                            <div class="clear"><input type="submit" value="Subscribe Today" name="subscribe" id="mc-embedded-subscribe" class="btn btn-outline-red btn-sm news-button"></div>
+                            </div>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                                                                                      name="b_a7d286c921166498a0b699255_c1b945e29f"
+                                                                                                      tabindex="-1"
+                                                                                                      value=""></div>
+                            <div class="clear"><input type="submit" value="Subscribe Today" name="subscribe"
+                                                      id="mc-embedded-subscribe"
+                                                      class="btn btn-outline-red btn-sm news-button"></div>
                         </div>
                     </form>
                 </div>
@@ -60,14 +77,19 @@
             </div>
             <div class="col-sm-10 col-md-4 collapse" id="feed">
                 <h5 class="text-center"> We'd love to hear from you </h5>
-                <form>
+
+                <form action="<?php the_permalink(); ?>" method="post">
                     <div class="form-group">
-                        <input class="form-control form-control-sm chimp text-center" type="text" placeholder="E-mail Address" required>
+                        <input name="email" class="form-control form-control-sm chimp text-center" type="email"
+                               placeholder="E-mail Address" required>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control form-control-sm chimp text-center" rows="3" cols="inherit" placeholder="Please write here" required></textarea>
+                        <textarea name="feedback" class="form-control form-control-sm chimp text-center" rows="3"
+                                  cols="inherit" placeholder="Please write here" required></textarea>
                     </div>
-                    <div class="text-center"><input type="submit" class="btn btn-outline-red btn-sm" value="Post feedback"></div>
+                    <div class="text-center"><input type="submit" class="btn btn-outline-red btn-sm"
+                                                    value="Post feedback"></div>
+                    <input type="hidden" name="submitted" value="1">
                 </form>
             </div>
         </div>
@@ -123,6 +145,18 @@
 <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/owlcarousel/owl.carousel.js"></script>
+<script src="<?php echo get_bloginfo('template_directory'); ?>/vendors/sweetalert/sweetalert.min.js"></script>
+
+<?php if(!empty($response)):?>
+    <script>
+        swal({
+            title: "<?= ucfirst(array_get($response, 'type', 'error')); ?>!",
+            text: "<?= array_get($response, 'message') ?>",
+            type: "<?= array_get($response, 'type', 'error') ?>"
+        });
+    </script>
+<?php endif ?>
+
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
@@ -138,9 +172,15 @@
 <!--End of Tawk.to Script-->
 <script type="text/javascript">
     function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ha,ig,yo', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,ha,ig,yo',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
     }
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</script>
+<script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/index.js"></script>
 
 <?php wp_footer(); ?>

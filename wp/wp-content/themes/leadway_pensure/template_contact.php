@@ -100,8 +100,9 @@ $branches = array_map("array_values", $branches);
         </div>
     </div>
     <div class="row tab-content" data-aos="fade">
-        <!-- Western Region -->
-        <?php foreach($branches as $key => $region): ?>
+        <!-- Regions -->
+        <?php if ($branches): ?>
+            <?php foreach($branches as $key => $region): ?>
             <div class="tab-pane fade col-12 <?= $key == 'west' ? "show active": ""?>" role="tabpanel" id="<?= $key ?>">
                 <div id="accordion1" role="tablist" aria-multiselectable="true">
                     <?php foreach($region as $bKey => $branch) { ?>
@@ -138,6 +139,7 @@ $branches = array_map("array_values", $branches);
                 </div>
             </div>
         <?php endforeach ?>
+        <?php endif ?>
     </div>
 </div>
 

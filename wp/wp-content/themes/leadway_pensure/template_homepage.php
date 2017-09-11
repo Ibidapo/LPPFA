@@ -1,16 +1,21 @@
-<?php /* Template Name: Homepage */ ?>
-
 <?php
+/* Template Name: Homepage */
+
+$social_options = get_option('theme_social_options');
+
 $slider_images = get_field('homepage_slider_images');
 $hero_nav_items = get_field("homepage_hero_nav");
 $hero_nav_items = [array_splice($hero_nav_items, 0, 2), array_splice($hero_nav_items, 0, 2)];
 $faq_items = get_field("faq_items");
 $customer_testimonials = get_field("customer_testimonials");
 
-$social_options = get_option('theme_social_options');
+$subMenuId = array_get(get_nav_menu_locations(), 'homepage-sub-menu', 11);
+$subMenuItems = wp_get_nav_menu_items($subMenuId);
+$subMenuItems = [array_splice($subMenuItems, 0,4), array_splice($subMenuItems, 0,4)];
+
+get_header();
 
 ?>
-<?php get_header(); ?>
 <!-- Body and Main Content of page -->
 <div class="container-fluid">
     <div class="row landing">
@@ -68,35 +73,24 @@ $social_options = get_option('theme_social_options');
         <nav class="navbar hidden-md-down pOff style3">
             <div class="navStyle3 mx-auto">
                 <ul class="nav nav-fill mOff">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/services">Products & Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/benefits"> Benefits </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/company"> Our Company </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link"  href="/career"> Careers </a>
-                    </li>
+                    <?php
+                    foreach ($subMenuItems[0] as $item) {
+                        $itemClasses = implode(" ", $item->classes);
+                        echo "<li class='nav-item {$itemClasses}'><a class='nav-link' href='{$item->url}'>{$item->title}</a></li>";
+                    }
+                    ?>
                     <li class="nav-item">
                         <a class="navbar-brand mOff pOf logo" href="<?php echo get_bloginfo('wpurl'); ?>">
-                            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" width="85" alt="Leadway Logo">
+                            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" width="85"
+                                 alt="Leadway Logo">
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/investment"> Investments </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/news"> News & Events </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/social">  Social </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact"> Contact Us </a>
-                    </li>
+                    <?php
+                    foreach ($subMenuItems[1] as $item) {
+                        $itemClasses = implode(" ", $item->classes);
+                        echo "<li class='nav-item {$itemClasses}'><a class='nav-link' href='{$item->url}'>{$item->title}</a></li>";
+                    }
+                    ?>
                 </ul>
             </div>
         </nav>
@@ -127,7 +121,8 @@ $social_options = get_option('theme_social_options');
                 <ul class="nav nav-fill">
                     <?php foreach ($faq_items as $key => $item) { ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= $item['link'] ?>"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            <a class="nav-link" href="<?= $item['link'] ?>"><i class="fa fa-chevron-right"
+                                                                               aria-hidden="true"></i>
                                 <?= $item['title'] ?>
                             </a>
                         </li>
@@ -167,7 +162,8 @@ $social_options = get_option('theme_social_options');
                 <?php } ?>
             </div>
             <div class="hidden-sm-down col-md-4 client-pic">
-                <div id="customer-slide" class="carousel slide" data-ride="carousel" data-interval="10000" data-aos="fade-left">
+                <div id="customer-slide" class="carousel slide" data-ride="carousel" data-interval="10000"
+                     data-aos="fade-left">
                     <div class="carousel-inner" role="listbox">
                         <?php foreach ($customer_testimonials as $key => $item) { ?>
                             <div class="carousel-item <?= $key == 0 ? "active" : "" ?>" id="<?= $key + 1 ?>">
@@ -263,7 +259,8 @@ $social_options = get_option('theme_social_options');
     </div>
     <!--  /digital  -->
     <div class="row">
-        <div class="col-12 invest-bg">
+        <div class="col-12 invest-bg"
+             style="background: url(<?= array_get(get_field("info_section_1_image"), 'url') ?>) no-repeat center;">
             <div class="invest-txt" data-aos="fade-right">
                 <?= get_field("info_section_1") ?>
             </div>
@@ -275,14 +272,17 @@ $social_options = get_option('theme_social_options');
                 <?= get_field("info_section_2") ?>
             </div>
         </div>
-        <div class="hidden-sm-down col-md-7 benefit-bg">
-<!--            <img src="--><?php //echo get_bloginfo('template_directory'); ?><!--/images/Benefits.png" alt=""/>-->
+        <div class="hidden-sm-down col-md-7 benefit-bg"
+             style="background: url(<?= array_get(get_field("info_section_2_image"), 'url') ?>) no-repeat center;">
+            <!--            <img src="-->
+            <?php //echo get_bloginfo('template_directory'); ?><!--/images/Benefits.png" alt=""/>-->
         </div>
     </div>
     <div class="row">
         <div class="col-12 col-md-12 culture">
             <div class="hidden-sm-down culture-pic"><img
-                    src="<?php echo get_bloginfo('template_directory'); ?>/images/bulb.jpg" alt=""></div>
+                    src="<?= array_get(get_field("info_section_3_image"), 'url') ?>"
+                    alt="<?= array_get(get_field("info_section_3_image"), 'url') ?>"></div>
             <div class="culture-txt float-right">
                 <?= get_field("info_section_3") ?>
             </div>
@@ -309,14 +309,17 @@ $social_options = get_option('theme_social_options');
             </div>
             <div class="reg-txt float-right">
                 <?= get_field("info_section_5") ?>
-                <div class="hidden-md-up text-center"><a href="enroll.html" class="btn btn-outline-blue">Get Started</a></div>
-                <span class="hidden-sm-down reg-btn v-align"><a href="enroll.html" class="btn btn-outline-blue">Get Started</a></span>
+                <div class="hidden-md-up text-center"><a href="enroll.html" class="btn btn-outline-blue">Get Started</a>
+                </div>
+                <span class="hidden-sm-down reg-btn v-align"><a href="enroll.html" class="btn btn-outline-blue">Get
+                        Started</a></span>
             </div>
         </div>
     </div>
 </div>
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <!-- Begin MailChimp Signup Form -->
@@ -327,9 +330,10 @@ $social_options = get_option('theme_social_options');
 
                     <div id="mc_embed_signup_scroll" class=text-center>
                         <h2>Subscribe to our mailing list</h2>
+
                         <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
                         <div class="mc-field-group">
-                            <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+                            <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
                             </label>
                             <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
                         </div>
@@ -344,9 +348,14 @@ $social_options = get_option('theme_social_options');
                         <div id="mce-responses" class="clear">
                             <div class="response" id="mce-error-response" style="display:none"></div>
                             <div class="response" id="mce-success-response" style="display:none"></div>
-                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a7d286c921166498a0b699255_38e9091d3c" tabindex="-1" value=""></div>
-                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                        </div>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                                                                                  name="b_a7d286c921166498a0b699255_38e9091d3c"
+                                                                                                  tabindex="-1"
+                                                                                                  value=""></div>
+                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe"
+                                                  id="mc-embedded-subscribe" class="button"></div>
                     </div>
                 </form>
             </div>
@@ -378,15 +387,15 @@ $social_options = get_option('theme_social_options');
         interval: 15000
     });
 
-    $('#client-area').mouseenter(function(){
+    $('#client-area').mouseenter(function () {
         $('#customer-slide').carousel('pause');
         $('#customer-slide .carousel-control-next, #customer-slide .carousel-control-prev').css('display', 'flex');
-    }).mouseleave(function(){
+    }).mouseleave(function () {
         $('#customer-slide').carousel('cycle');
         $('#customer-slide .carousel-control-next, #customer-slide .carousel-control-prev').css('display', 'none');
     });
 
-    $('#customer-slide').on('slide.bs.carousel', function (ev){
+    $('#customer-slide').on('slide.bs.carousel', function (ev) {
         var id = ev.relatedTarget.id;
         id = parseInt(id);
         switch (id) {

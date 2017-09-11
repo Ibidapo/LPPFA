@@ -1,5 +1,30 @@
 <?php
 $options = get_option('theme_options');
+
+$params = [
+    "RSAFund" => true,
+    "RetireeFund" => true,
+    "duration" => 0
+];
+$json_params = json_encode($params);
+$cacheKey = "leadway_rsa_rf_info-" . md5($json_params);
+$rsa_rf = get_transient($cacheKey);
+
+if (!$rsa_rf) {
+    $rsa_rf = wp_remote_post("https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/Chart", [
+        'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
+        'body' => json_encode($params),
+        'method' => 'POST'
+    ]);
+    if (is_array($rsa_rf) && isset($rsa_rf['body'])) {
+        $rsa_rf_json = json_decode($rsa_rf['body']);
+        $rsa_rf = $rsa_rf_json->Data;
+        set_transient($cacheKey, $rsa_rf, DAY_IN_SECONDS);
+    } else {
+        $rsa_rf = false;
+    }
+}
+
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -25,6 +50,11 @@ $options = get_option('theme_options');
         <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/dropzone.css">
         <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/parsley.css">
         <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/custom.css">
+
+        <!-- sweet alerts -->
+        <link rel="stylesheet" type="text/css"
+              href="<?php echo get_bloginfo('template_directory'); ?>/vendors/sweetalert/sweetalert.css">
+
         <!--Google Fonts and Fonts Awesome links -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
@@ -45,10 +75,17 @@ $options = get_option('theme_options');
         </script>
 
         <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
             ga('create', 'UA-105192236-1', 'auto');
             ga('send', 'pageview');
@@ -108,7 +145,7 @@ $options = get_option('theme_options');
         </a>
 
         <form class="form-inline mob-search">
-            <input name="s" class="form-control" type="text" placeholder="Search">
+            <input name="s" class="form-control" type="text" placeholder="Search" value="<?= get_search_query() ?>">
         </form>
         <div class="overlay text-center" id="overlay">
             <ul class="menu">
@@ -154,68 +191,76 @@ $options = get_option('theme_options');
     </nav>
 
     <?php if (
-        !is_page_template("template_blog.php")
-    ): ?>
+        !is_page_template("template_blog.php") &&
+        !is_single()
+    ) { ?>
         <!-- Desktop navigation -->
         <nav class="navbar fixed-top hidden-md-down pOff">
-        <!-- desktop price charts start -->
-        <table class="table table-responsive mOff">
-            <tbody>
-            <tr>
-                <td>
-                    <div id="google_translate_element"></div>
-                </td>
-                <td>
-                <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i>
-                    <?= $options['phone_number'] ?>
-                </span>
-                </td>
-                <td>
-                    <span class="head-td"> RSA FUNDS</span><br>
-                    <span>&#8358;2.3433 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png"
-                                             alt=""></span>
-                </td>
-                <td>
-                    <span class="head-td">RETIREE FUNDS</span><br>
-                    <span> &#8358;2.3433 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png"
-                                              alt=""></span>
-                </td>
-                <td>
-                    <span class="head-td">RSA ACCOUNTS </span><br>
-                    <span> 500,000 </span>
-                </td>
-                <td>
-                    <a href="/calculator" class="nav-calc"> <img
-                            src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png">
-                        <span>Calculator</span></a>
-                </td>
-                <td>
-                    <button onclick="location='/trends'" type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS
-                    </button>
-                </td>
-                <td>
-                    <span id="date"></span>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <!-- Navbar -->
-        <div class="navStyle2" <?= (is_page_template('template_homepage.php') ? 'style="display: none;"' : '') ?>>
-            <div class="nav nav-fill mr-auto">
-                <form class="form-inline search">
-                    <input class="form-control" type="text" placeholder="Search" id="search-index">
-                </form>
+            <!-- desktop price charts start -->
+            <table class="table table-responsive mOff">
+                <tbody>
+                <tr>
+                    <td>
+                        <div id="google_translate_element"></div>
+                    </td>
+                    <td>
+                        <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i>
+                            <?= $options['phone_number'] ?>
+                        </span>
+                    </td>
+                    <?php if ($rsa_rf) { ?>
+                        <td>
+                            <span class="head-td"> RSA FUNDS</span><br>
+                            <span>&#8358;<?= array_get($rsa_rf->values, 0) ?>
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png" alt="">
+                            </span>
+                        </td>
+                        <td>
+                            <span class="head-td">RETIREE FUNDS</span><br>
+                            <span> &#8358;<?= array_get($rsa_rf->values, 0) ?>
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png" alt="">
+                            </span>
+                        </td>
+                    <?php } ?>
+                    <td>
+                        <span class="head-td">RSA ACCOUNTS </span><br>
+                        <span> 500,000 </span>
+                    </td>
+                    <td>
+                        <a href="/calculator" class="nav-calc"> <img
+                                src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png">
+                            <span>Calculator</span></a>
+                    </td>
+                    <td>
+                        <button onclick="location='/trends'" type="button" class="btn btn-outline-secondary v-trends">
+                            <span>&#8594;</span> VIEW TRENDS
+                        </button>
+                    </td>
+                    <td>
+                        <span id="date"></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- Navbar -->
+            <div class="navStyle2" <?= (is_page_template('template_homepage.php') ? 'style="display: none;"' : '') ?>>
+                <div class="nav nav-fill mr-auto">
+                    <form class="form-inline search" action="/">
+                        <input name="s" class="form-control" type="text" placeholder="Search" id="search-index"
+                               value="<?= get_search_query() ?>">
+                    </form>
 
-                <?php wp_nav_menu( array(
-                    'theme_location' => 'primary-header-menu',
-                    'menu_id' => 'main__header-menu',
-                    'menu_class' => "nav-fill",
-                    'walker' => new My_Walker_Nav_Menu()
-                ) ); ?>
+                    <?php wp_nav_menu(array(
+                        'theme_location' => 'primary-header-menu',
+                        'menu_id' => 'main__header-menu',
+                        'menu_class' => "nav-fill",
+                        'walker' => new My_Walker_Nav_Menu()
+                    )); ?>
 
-                <a class="navbar-brand" href="/"><img class="logo" src="<?= asset() ?>/images/logo.png" alt="Leadway Logo"></a>
+                    <a class="navbar-brand" href="/"><img class="logo" src="<?= asset() ?>/images/logo.png"
+                                                          alt="Leadway Logo"></a>
+                </div>
             </div>
-        </div>
-    </nav>
-    <?php endif ?>
+        </nav>
+    <?php } ?>
 <?php endif ?>
