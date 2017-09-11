@@ -29,7 +29,7 @@ if (!$rsa_rf) {
     <!DOCTYPE html>
     <html lang="en">
     <head>
-        <title><?php echo get_bloginfo('name'); ?></title>
+        <title><?php echo get_the_title() ." - ". get_bloginfo('name'); ?></title>
         <!-- Hotjar Tracking Code for lppfa.inspireleadership.biz -->
         <!-- Required meta tags -->
         <meta charset="utf-8">
