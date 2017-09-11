@@ -87,9 +87,9 @@ border:1px solid red !important;
     width: 100% !important;
 }
 
-.news-bg{
+/*.news-bg{
     background: transparent !important;
-}
+}*/
 
 .mailbg{
     background: url(../images/Graduate.jpg) no-repeat !important;
@@ -241,7 +241,7 @@ nav.navbar table.table td {
     border-top: none;
     vertical-align: middle;
     font-size: 0.85rem;
-    padding: 0 2rem;
+    padding: 0 1.25rem;
     height: 50px;
     color: white;
     border-left: 2px solid white;
@@ -281,13 +281,10 @@ table .form-group{
 }
 .v-trends {
     font-size: 0.75rem;
-    padding: .5rem;
-    border-radius: 10px;
+    padding: .5rem 0.75rem;
+    border-radius: 20px;
     color: white;
     border: 1px solid white;
-}
-.v-trends span{
-    font-size: .8125rem;
 }
 select.language, input.language {
     background: transparent;
@@ -419,7 +416,7 @@ text-align:center;
 }
 .intro-box {
 color: #7f7f7f;
-    margin-bottom: 2.5%;
+    margin-bottom: 20px;
 }
 #confirm-form{
 height: 324px;
@@ -430,19 +427,17 @@ height: 324px;
 .intro-box p{
 font-weight:300
 }
-div.message-box{
-background: #1f69a5;
-box-shadow: rgba(41, 43, 59, 0.65) 1px 3px 6px;
-position:relative;
-z-index:1;
+.message-box{
+    background: #1f69a5;
+    padding: 0;
+    z-index:1;
+    box-shadow: rgba(41, 43, 59, 0.65) 1px 3px 6px;
 }
 .message-box p{
-    position: relative;
-    top: 50%;
+    position: absolute;
     font-weight: 100;
     color: white;
     padding: 0 5%;
-    transform: translateY(-50%) !important;
 }
 .solutions, .solutions1{
 background-color: #e1e1e1;
@@ -452,7 +447,7 @@ color: #1f69a5;
     padding-bottom: 70px;
 }
 .solutions {
-    margin: .7% 0;
+    margin: 5px 0;
     font-size: 0.85rem;
     padding-bottom: 10px;
 }
@@ -986,7 +981,7 @@ input[type="text"].language::-webkit-input-placeholder {
         font-size: 0.85rem;
     }
     .message-box{
-        padding: 15px 30px;
+        height: 100px;
     }
     p.message-box{
     font-size: 0.85rem;

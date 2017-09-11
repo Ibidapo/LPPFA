@@ -108,7 +108,7 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group">
                                 <label class="field-label"> Gender </label>
-                                <select class="form-control language col-sm-7 mx-auto" id=gender  style="border: 1px solid white" data-parsley-group="block1" required="">
+                                <select name=pid[Gender] class="form-control language col-sm-7 mx-auto" id=gender  style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value="" id="default">Select gender</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
@@ -119,7 +119,7 @@
 
                             <div class="form-group ">
                                 <label class="field-label"> Status </label>
-                                <select class="form-control language col-sm-7 mx-auto" id=status  style="border: 1px solid white" data-parsley-group="block1" required="">
+                                <select name=pid[relationship-status]  class="form-control language col-sm-7 mx-auto" id=status  style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value="" id="default">Select status</option>
                                     <option value="Married">Married</option>
                                     <option value="Single">Single</option>
@@ -130,7 +130,7 @@
 
                             <div class="form-group ">
                                 <label class="field-label"> Birthday </label>
-                                <input type="date" class="form-control language col-sm-7 mx-auto text-center" id=birthday  data-parsley-group="block1" style="border: 1px solid white" required="" >
+                                <input name=pid[birthday] type="date" class="form-control language col-sm-7 mx-auto text-center" id=birthday  data-parsley-group="block1" style="border: 1px solid white" required="" >
                             </div>
                         </div>
 
@@ -141,7 +141,7 @@
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> State of origin </label>
-                                <select class="form-control language col-sm-7 mx-auto" id=soo  style="border: 1px solid white" data-parsley-group="block1" required="">
+                                <select name=pid[state-of-origin] class="form-control language col-sm-7 mx-auto" id=soo  style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value="">Select State </option>
                                     <option value="Abia">Abia</option>
                                     <option value="Abuja">Abuja</option>
@@ -187,13 +187,13 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> LGA </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=lga placeholder="local government area" style="border: 1px solid white" minlength="3" minlength-message="Confirm local government area" data-parsley-group="block1" required="">
+                                <input name=pid[LGA] type="text" class="form-control col-sm-7 language mx-auto text-center" id=lga placeholder="local government area" style="border: 1px solid white" minlength="3" minlength-message="Confirm local government area" data-parsley-group="block1" required="">
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Nationality </label>
-                                <select class="form-control language col-sm-7 mx-auto" id=nation  style="border: 1px solid white" data-parsley-group="block1" required="">
+                                <select name=pid[nationality]  class="form-control language col-sm-7 mx-auto" id=nation  style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value=""> select your nationality </option>
                                     <option value="Afghanistan">Afghanistan</option>
                                     <option value="Aland Islands">Aland Islands</option>
@@ -453,7 +453,7 @@
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> ID type </label>
-                                <select class="form-control language col-sm-7 mx-auto" id=idt style="border: 1px solid white" data-parsley-group="block1" required="">
+                                <select name=pid[Identification-mode] class="form-control language col-sm-7 mx-auto" id=idt style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value="">Select ID</option>
                                     <option value= "Drivers License"> Drivers License </option>
                                     <option value= "National ID"> National ID card </option>
@@ -465,13 +465,13 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Email </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-email placeholder="local government area" style="border: 1px solid white" readonly>
+                                <input name=pid[Email] type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-email placeholder="local government area" style="border: 1px solid white" readonly>
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Mobile No </label>
-                                <input type="" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-mno placeholder="local government area" style="border: 1px solid white" readonly>
+                                <input name=pid[Mobile-no] type="" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-mno placeholder="local government area" style="border: 1px solid white" readonly>
                             </div>
                         </div>
                     </div>
@@ -509,19 +509,19 @@
                     <div class="row">
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <label class="field-label"> Name of organization </label>
-                            <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="org" placeholder="Organization" style="border: 1px solid white" required="" data-parsley-group="block2">
+                            <input name=Employment-details[Organization] type="text" class="form-control language col-sm-7 mx-auto text-center" id="org" placeholder="Organization" style="border: 1px solid white" required="" data-parsley-group="block2">
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group">
                                 <label class="field-label"> Address </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgAdd" placeholder="Address" style="border: 1px solid white" required="" data-parsley-group="block2">
+                                <input name=Employment-details[Address] type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgAdd" placeholder="Address" style="border: 1px solid white" required="" data-parsley-group="block2">
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
 
                             <div class="form-group">
                                 <label class="field-label"> LGA </label>
-                                <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="orgLga" placeholder="Local Government Area" style="border: 1px solid white" required="" data-parsley-group="block2">
+                                <input name=Employment-details[LGA] type="text" class="form-control language col-sm-7 mx-auto text-center" id="orgLga" placeholder="Local Government Area" style="border: 1px solid white" required="" data-parsley-group="block2">
                             </div>
                         </div>
 
@@ -532,7 +532,7 @@
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> State </label>
-                                <select class="form-control language col-sm-7 mx-auto" id="orgState" style="border: 1px solid white" required="" data-parsley-group="block2">
+                                <select name=Employment-details[state] class="form-control language col-sm-7 mx-auto" id="orgState" style="border: 1px solid white" required="" data-parsley-group="block2">
                                     <option value="Select State of Origin" id="default">Select State </option>
                                     <option value="Abia">Abia</option>
                                     <option value="Abuja">Abuja</option>
@@ -577,13 +577,13 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> File No/Service No </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgNo" placeholder="File or service number" style="border: 1px solid white" data-parsley-group="block2">
+                                <input name=Employment-details[file/service-no] type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgNo" placeholder="File or service number" style="border: 1px solid white" data-parsley-group="block2">
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Date of employment </label>
-                                <input type="date" class="form-control col-sm-7 language mx-auto text-center" id="doe" placeholder="Address" style="border: 1px solid white" required="" data-parsley-group="block2">
+                                <input name=Employment-details[date-of-employment] type="date" class="form-control col-sm-7 language mx-auto text-center" id="doe" placeholder="Address" style="border: 1px solid white" required="" data-parsley-group="block2">
                             </div>
                         </div>
 
@@ -594,7 +594,7 @@
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group">
                                 <label class="field-label"> State of posting </label>
-                                <select class="form-control language col-sm-7 mx-auto" id="sop" style="border: 1px solid white" data-parsley-group="block2">
+                                <select name=Employment-details[state-of-posting] class="form-control language col-sm-7 mx-auto" id="sop" style="border: 1px solid white" data-parsley-group="block2">
                                     <option value="Select State of Origin" id="default">Select State </option>
                                     <option value="Abia">Abia</option>
                                     <option value="Abuja">Abuja</option>
@@ -639,7 +639,7 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Current PFA </label>
-                                <select class="form-control language col-sm-7 mx-auto" id="cpfa" style="border: 1px solid white" required="" data-parsley-group="block2">
+                                <select name=Employment-details[current-PFA] class="form-control language col-sm-7 mx-auto" id="cpfa" style="border: 1px solid white" required="" data-parsley-group="block2">
                                     <option value="" id="default"> Select Provider</option>
                                     <option value="Not registered"> Not registered </option>
                                     <option value="AIICO pension Managers"> AIICO pension Managers </option>
@@ -668,7 +668,7 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Pin number </label>
-                                <input type="number" class="form-control col-sm-7 language mx-auto text-center" id="pin" placeholder="Mobile number" style="border: 1px solid white" >
+                                <input name=Employment-details[pin] type="number" class="form-control col-sm-7 language mx-auto text-center" id="pin" placeholder="Mobile number" style="border: 1px solid white" >
                             </div>
                         </div>
                     </div>
@@ -707,7 +707,7 @@
                     <div class="row">
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <label class="field-label"> Title </label>
-                            <select class="form-control language col-sm-7 mx-auto" id="k-title" style="border: 1px solid white" data-parsley-group="block3" required="">
+                            <select name="kin-details[title]" class="form-control language col-sm-7 mx-auto" id="k-title" style="border: 1px solid white" data-parsley-group="block3" required="">
                                 <option value="" id="default"> Select title </option>
                                 <option value="Mr"> Mr. </option>
                                 <option value="Miss"> Miss. </option>
@@ -720,14 +720,14 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group">
                                 <label class="field-label"> Last name </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="k-lname" placeholder="Address" style="border: 1px solid white" data-parsley-group="block3" required="">
+                                <input name=kin-details[last-name] type="text" class="form-control col-sm-7 language mx-auto text-center" id="k-lname" placeholder="Address" style="border: 1px solid white" data-parsley-group="block3" required="">
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
 
                             <div class="form-group">
                                 <label class="field-label"> First name </label>
-                                <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="k-fname" style="border: 1px solid white" data-parsley-group="block3" required="">
+                                <input name=kin-details[first-name] type="text" class="form-control language col-sm-7 mx-auto text-center" id="k-fname" style="border: 1px solid white" data-parsley-group="block3" required="">
                             </div>
                         </div>
 
@@ -738,7 +738,7 @@
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Relationship </label>
-                                <select class="form-control language col-sm-7 mx-auto" id="relationship" style="border: 1px solid white" data-parsley-group="block3" required="">
+                                <select name= kin-details[relationship] class="form-control language col-sm-7 mx-auto" id="relationship" style="border: 1px solid white" data-parsley-group="block3" required="">
                                     <option value="" id="default"> Choose type </option>
                                     <option value="spouse"> Spouse </option>
                                     <option value="relative"> Relative </option>
@@ -751,7 +751,7 @@
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group">
                                 <label class="field-label"> Gender </label>
-                                <select class="form-control language col-sm-7 mx-auto" id="k-gender" style="border: 1px solid white" data-parsley-group="block3" required="">
+                                <select name=kin-details[Gender] class="form-control language col-sm-7 mx-auto" id="k-gender" style="border: 1px solid white" data-parsley-group="block3" required="">
                                     <option value="" id="default"> Select Gender </option>
                                     <option value="Male"> Male </option>
                                     <option value="Male"> Female </option>
@@ -761,7 +761,7 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Address </label>
-                                <input type="date" class="form-control col-sm-7 language mx-auto text-center" id="k-add" placeholder="Address" style="border: 1px solid white" data-parsley-group="block3" required="">
+                                <input name=kin-details[Address]  type="text" class="form-control col-sm-7 language mx-auto text-center" id="k-add" placeholder="Address" style="border: 1px solid white" data-parsley-group="block3" required="">
                             </div>
                         </div>
 
@@ -772,7 +772,7 @@
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group">
                                 <label class="field-label"> State of origin </label>
-                                <select class="form-control language col-sm-7 mx-auto" id="k-soo" style="border: 1px solid white" data-parsley-group="block3" required="">
+                                <select name= kin-details[state] class="form-control language col-sm-7 mx-auto" id="k-soo" style="border: 1px solid white" data-parsley-group="block3" required="">
                                     <option value="" id="default">Select State </option>
                                     <option value="Abia">Abia</option>
                                     <option value="Abuja">Abuja</option>
@@ -817,13 +817,13 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> LGA </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="k-lga" placeholder="Mobile number" style="border: 1px solid white" data-parsley-group="block3" required="">
+                                <input name=kin-detail[LGA] type="text" class="form-control col-sm-7 language mx-auto text-center" id="k-lga" placeholder="Mobile number" style="border: 1px solid white" data-parsley-group="block3" required="">
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Mobile no </label>
-                                <input type="number" class="form-control col-sm-7 language mx-auto text-center" id="k-mno" placeholder="Mobile number" style="border: 1px solid white" type="number" data-parsley-group="block3" required="">
+                                <input name=kin-details[Mobile-no]  type="number" class="form-control col-sm-7 language mx-auto text-center" id="k-mno" placeholder="Mobile number" style="border: 1px solid white" type="number" data-parsley-group="block3" required="">
                             </div>
                         </div>
                     </div>
@@ -1467,6 +1467,24 @@
         //});
 
     </script>
+
+    <script> 
+
+    function convertFormToJSON(form){
+
+        var array =  jQuery(form).serializeArray();
+        var json = {};
+
+        jQuery.each(array, function(){ 
+              json[this.name] = this.value || '' ;
+        });
+    return json
+
+    }
+
+
+    </script>
+    
     <script>
         $(document).ready(function(){
 
@@ -1729,6 +1747,12 @@
 
             $("#4c").click(function(){
 
+                var form = document.getElementById('enroll-form')
+
+                 var json = convertFormToJSON(form)
+
+                 console.log(json);
+
                 if (document.querySelector('.dz-image-preview') !== null){
                     $("#biometrics, #biometrics-head, #biometrics-form, #biometrics-button").fadeOut(300, function(){
                         $("#confirm, #confirm-head, #confirm-form, #confirm-button").fadeIn(500, progressbar.animate(0.8, {
@@ -1738,6 +1762,9 @@
                         }, progressbar.setText('80%')));
                         $('#progress-text').html(" Just checking we crossed our t's and dotted our i's! ")
                     });
+
+
+                    
 
                     $("#5b").click(function(){
                         $("#confirm, #confirm-head, #confirm-form, #confirm-button").fadeOut(300, function(){
@@ -1773,9 +1800,16 @@
                 maxFiles: '1',
                 paramName: "file", // The name that will be used to transfer the file
                 maxFilesize: 2, // MB
-                accept: function(file, done) {
-                    console.log("uploaded");
-                    done();
+                accept: function(file, done){
+                reader = new FileReader();
+                reader.onload = handleReaderLoad;
+                reader.readAsDataURL(file);
+                form = $('#upload');
+            $.ajax({
+                type: "POST", 
+                url: "/upload",
+                data: form.serialize(),
+            });
                 },
                 init: function() {
                     this.on("addedfile", function() {
@@ -1787,5 +1821,7 @@
             })
         });
     </script>
+
+
 </body>
 </html>
