@@ -143,16 +143,16 @@
                                 <label class="field-label"> State of origin </label>
                                 <select name=pid[state-of-origin] class="form-control language col-sm-7 mx-auto" id=soo  style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value="">Select State </option>
-                                    <option value="Abia">Abia</option>
-                                    <option value="Abuja">Abuja</option>
-                                    <option value="Adamawa">Adamawa</option>
-                                    <option value="Akwa Ibom">Akwa Ibom</option>
-                                    <option value="Anambra">Anambra</option>
-                                    <option value="Bauchi">Bauchi</option>
-                                    <option value="Bayelsa">Bayelsa</option>
-                                    <option value="Benue">Benue</option>
-                                    <option value="Borno">Borno</option>
-                                    <option value="Cross River">Cross River</option>
+                                    <option value="abia">Abia</option>
+                                    <option value="abuja">Abuja</option>
+                                    <option value="adamawa">Adamawa</option>
+                                    <option value="akwa Ibom">Akwa Ibom</option>
+                                    <option value="anambra">Anambra</option>
+                                    <option value="bauchi">Bauchi</option>
+                                    <option value="bayelsa">Bayelsa</option>
+                                    <option value="benue">Benue</option>
+                                    <option value="borno">Borno</option>
+                                    <option value="cross River">Cross River</option>
                                     <option value="Delta">Delta</option>
                                     <option value="Ebonyi">Ebonyi</option>
                                     <option value="Edo">Edo</option>
@@ -185,9 +185,12 @@
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
-                            <div class="form-group ">
-                                <label class="field-label"> LGA </label>
-                                <input name=pid[LGA] type="text" class="form-control col-sm-7 language mx-auto text-center" id=lga placeholder="local government area" style="border: 1px solid white" minlength="3" minlength-message="Confirm local government area" data-parsley-group="block1" required="">
+                            <div class="form-group" id=lgaholder>
+                                <label class="field-label" id="lga-label"> LGA </label>
+                                <select name=pid[LGA]  class="form-control language col-sm-7 mx-auto" id=lga  style="border: 1px solid white" data-parsley-group="block1" required="">
+                                    <option value=""> select your local government </option>    
+                                </select>
+
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
@@ -519,8 +522,8 @@
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
 
-                            <div class="form-group">
-                                <label class="field-label"> LGA </label>
+                            <div class="form-group" id="orgLgaHolder">
+                                <label class="field-label" id="orgLgaLabel"> LGA </label>
                                 <input name=Employment-details[LGA] type="text" class="form-control language col-sm-7 mx-auto text-center" id="orgLga" placeholder="Local Government Area" style="border: 1px solid white" required="" data-parsley-group="block2">
                             </div>
                         </div>
@@ -581,7 +584,7 @@
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
-                            <div class="form-group ">
+                            <div class="form-group">
                                 <label class="field-label"> Date of employment </label>
                                 <input name=Employment-details[date-of-employment] type="date" class="form-control col-sm-7 language mx-auto text-center" id="doe" placeholder="Address" style="border: 1px solid white" required="" data-parsley-group="block2">
                             </div>
@@ -774,14 +777,14 @@
                                 <label class="field-label"> State of origin </label>
                                 <select name= kin-details[state] class="form-control language col-sm-7 mx-auto" id="k-soo" style="border: 1px solid white" data-parsley-group="block3" required="">
                                     <option value="" id="default">Select State </option>
-                                    <option value="Abia">Abia</option>
-                                    <option value="Abuja">Abuja</option>
-                                    <option value="Adamawa">Adamawa</option>
-                                    <option value="Akwa Ibom">Akwa Ibom</option>
-                                    <option value="Anambra">Anambra</option>
-                                    <option value="Bauchi">Bauchi</option>
-                                    <option value="Bayelsa">Bayelsa</option>
-                                    <option value="Benue">Benue</option>
+                                    <option value="abia">Abia</option>
+                                    <option value="abuja">Abuja</option>
+                                    <option value="adamawa">Adamawa</option>
+                                    <option value="akwa Ibom">Akwa Ibom</option>
+                                    <option value="anambra">Anambra</option>
+                                    <option value="bauchi">Bauchi</option>
+                                    <option value="bayelsa">Bayelsa</option>
+                                    <option value="benue">Benue</option>
                                     <option value="Borno">Borno</option>
                                     <option value="Cross River">Cross River</option>
                                     <option value="Delta">Delta</option>
@@ -1618,7 +1621,169 @@
                 }
             }
 
+            // parsing local goverment html|values based on selected state for pid section
 
+              $('#soo').change(function(){
+
+
+                var state = document.getElementById('soo').value; 
+                console.log(state);
+                var lga = document.getElementById('lga');
+                var lgalabel = document.getElementById('lga-label');
+                lga.parentNode.removeChild(lga);
+                lgalabel.parentNode.removeChild(lgalabel);
+                var newSelectBox = document.createElement('select');
+                newSelectBox.id = 'lga';
+                newSelectBox.setAttribute( 'class', 'form-control language col-sm-7 mx-auto' ); 
+                newSelectBox.style = 'border: 1px solid white';
+                newSelectBox.name = 'pid[LGA]';
+                var newLabel = document.createElement('label');
+                newLabel.class ='field-label';
+                newLabel.id = "lga-label";                 
+                var newLabelText = document.createTextNode('LGA');
+                var selectHolder = document.getElementById('lgaholder');
+                selectHolder.appendChild(newLabel); 
+                newLabel.appendChild(newLabelText);
+                selectHolder.appendChild(newSelectBox);
+                var lga = document.getElementById('lga');
+
+                
+                
+                if (state === "abia"){
+
+                    lgaArray = [ "Aba North|a", "Aba South|b", "Arochukwu|c", "Bende|d", "Ikwuano|e", "Isiala-Ngwa North |f", "Isiala-Ngwa South |b", "Isuikwato|c", "Obi Nwa|d", "Ohafia|e", "Osisioma |f","Ngwa|g", "Ugwunagbo|g", "Ukwa East|g", "Ukwa West|g","Umuahia North|g","Umuahia South|g", "Umu-Neochi|h" ];
+                   
+
+
+                }else if (state === "abuja"){
+                    lgaArray =  [ "Gwagwalada|g", "Kuje|h", "Abaji|i", "Abuja Municipal|j", "Bwari|k", "Kwali|i" ];
+
+                }else 
+
+                 return false 
+
+                 for (var lgaOption in lgaArray){
+                  var selectedLga = lgaArray[lgaOption].split("|");
+                  var optionsFeed =  document.createElement("option"); 
+                  optionsFeed.value = selectedLga[1]; 
+                  optionsFeed.innerHTML = selectedLga[0];
+                 console.log(selectedLga)
+                 lga.appendChild(optionsFeed)
+                //$(div.lga).find(select).appendChild()
+
+                 }
+
+            }); 
+
+
+
+               // parsing local goverment html|values based on selected state for employment section
+
+              $('#orgState').change(function(){
+
+
+                var state = document.getElementById('orgState').value; 
+                console.log(state);
+                var lga = document.getElementById('orgLga');
+                var lgalabel = document.getElementById('orgLgaLabel');
+                lga.parentNode.removeChild(lga);
+                lgalabel.parentNode.removeChild(lgalabel);
+                var newSelectBox = document.createElement('select');
+                newSelectBox.id = 'orgLga';
+                newSelectBox.setAttribute( 'class', 'form-control language col-sm-7 mx-auto' ); 
+                newSelectBox.style = 'border: 1px solid white';
+                newSelectBox.name = 'Employment-details[LGA]';
+                var newLabel = document.createElement('label');
+                newLabel.setAttribute('class', 'field-label');
+                newLabel.id = "orgLgaLabel";                 
+                var newLabelText = document.createTextNode('LGA');
+                var selectHolder = document.getElementById('orgLgaHolder');
+                selectHolder.appendChild(newLabel); 
+                newLabel.appendChild(newLabelText);
+                selectHolder.appendChild(newSelectBox);
+                var lga = document.getElementById('orgLga');
+
+                
+                
+                if (state === "abia"){
+
+                    lgaArray = [ "Aba North|a", "Aba South|b", "Arochukwu|c", "Bende|d", "Ikwuano|e", "Isiala-Ngwa North |f", "Isiala-Ngwa South |b", "Isuikwato|c", "Obi Nwa|d", "Ohafia|e", "Osisioma |f","Ngwa|g", "Ugwunagbo|g", "Ukwa East|g", "Ukwa West|g","Umuahia North|g","Umuahia South|g", "Umu-Neochi|h" ];
+                   
+
+
+                }else if (state === "abuja"){
+                    lgaArray =  [ "Gwagwalada|g", "Kuje|h", "Abaji|i", "Abuja Municipal|j", "Bwari|k", "Kwali|i" ];
+
+                }else 
+
+                 return false 
+
+                 for (var lgaOption in lgaArray){
+                  var selectedLga = lgaArray[lgaOption].split("|");
+                  var optionsFeed =  document.createElement("option"); 
+                  optionsFeed.value = selectedLga[1]; 
+                  optionsFeed.innerHTML = selectedLga[0];
+                 console.log(selectedLga)
+                 lga.appendChild(optionsFeed)
+
+                 }
+
+            }); 
+
+
+               // parsing local goverment html|values based on selected state for next of kin section
+
+              $('#orgState').change(function(){
+
+
+                var state = document.getElementById('soo').value; 
+                console.log(state);
+                var lga = document.getElementById('lga');
+                var lgalabel = document.getElementById('lga-label');
+                lga.parentNode.removeChild(lga);
+                lgalabel.parentNode.removeChild(lgalabel);
+                var newSelectBox = document.createElement('select');
+                newSelectBox.id = 'lga';
+                newSelectBox.setAttribute( 'class', 'form-control language col-sm-7 mx-auto' ); 
+                newSelectBox.style = 'border: 1px solid white';
+                newSelectBox.name = 'pid[LGA]';
+                var newLabel = document.createElement('label');
+                newLabel.class ='field-label';
+                newLabel.id = "lga-label";                 
+                var newLabelText = document.createTextNode('LGA');
+                var selectHolder = document.getElementById('lgaholder');
+                selectHolder.appendChild(newLabel); 
+                newLabel.appendChild(newLabelText);
+                selectHolder.appendChild(newSelectBox);
+                var lga = document.getElementById('lga');
+
+                
+                
+                if (state === "abia"){
+
+                    lgaArray = [ "Aba North|a", "Aba South|b", "Arochukwu|c", "Bende|d", "Ikwuano|e", "Isiala-Ngwa North |f", "Isiala-Ngwa South |b", "Isuikwato|c", "Obi Nwa|d", "Ohafia|e", "Osisioma |f","Ngwa|g", "Ugwunagbo|g", "Ukwa East|g", "Ukwa West|g","Umuahia North|g","Umuahia South|g", "Umu-Neochi|h" ];
+                   
+
+
+                }else if (state === "abuja"){
+                    lgaArray =  [ "Gwagwalada|g", "Kuje|h", "Abaji|i", "Abuja Municipal|j", "Bwari|k", "Kwali|i" ];
+
+                }else 
+
+                 return false 
+
+                 for (var lgaOption in lgaArray){
+                  var selectedLga = lgaArray[lgaOption].split("|");
+                  var optionsFeed =  document.createElement("option"); 
+                  optionsFeed.value = selectedLga[1]; 
+                  optionsFeed.innerHTML = selectedLga[0];
+                 console.log(selectedLga)
+                 lga.appendChild(optionsFeed)
+                //$(div.lga).find(select).appendChild()
+
+                 }
+
+            }); 
 
             //setting initial progress-text content
             $('#progress-text').html("The journey of a thousand miles begins with one step, here it begins with four!")
