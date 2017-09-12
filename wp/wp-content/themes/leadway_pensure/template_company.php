@@ -196,39 +196,16 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/dir1-img.png"
-                                             class="figure-img img-fluid rounded" alt="Oye Hassan-Odukale">
+                                        <img src="<?= array_get(get_field('chairman_photo'), 'url') ?>"
+                                             class="figure-img img-fluid rounded" alt="<?= array_get(get_field('chairman_photo'), 'alt')?>">
                                         <figcaption class="figure-caption text-center">
-                                            Oye Hassan-Odukale<br>
+                                            <?= get_field('chairman_name')?><br>
                                             <span class="designation">Charmain</span>
                                         </figcaption>
                                     </figure>
                                 </div>
                                 <div class="col-md-8 dir-history">
-                                    <p>Apart from being the Managing Director/ Chief Executive Officer of Leadway
-                                        Assurance Group, Oye Hassan-Odukale
-                                        is now the Chairman of Leadway Pensure PFA. He is a product of Mayflower School,
-                                        Ikenne, Ogun State. He graduated
-                                        from University of Houston, Texas from where he obtained both Bachelors and
-                                        Masters Degrees in Business
-                                        Administration, specializing in Finance.</p>
-
-                                    <p>He started his career in insurance with SCIB & Company Insurance Brokers (an
-                                        affiliate of Segwicks
-                                        Insurance Brokers) in 1980 and joined Leadway Assurance Company Limited in 1981,
-                                        becoming Managing Director
-                                        and Chief Executive Officer of the company in 1994. He is a Munich Re scholar,
-                                        being the First West African
-                                        recipient of Munich Re and Georgia State University International Visiting
-                                        Fellows insurance Program. He is
-                                        accredited by the Securities and Exchange Commission as an Investment Manager
-                                        and Portfolio Adviser.</p>
-
-                                    <p>Oye Hassan-Odukale is on the Board of a number of reputable companies such as
-                                        First Bank of Nigeria, and the
-                                        immediate past Chairman, Nigeria Insurance Association. He is also Member of the
-                                        Order of the Federal
-                                        Republic (MFR).</p>
+                                    <?= get_field('chairman_description') ?>
                                 </div>
                             </div>
                         </div>
@@ -868,45 +845,19 @@ include_once 'mail/company.php';
             </div>
             <div class="row custodian text-center">
                 <div class="col-12"><h3>Custodians</h3></div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top mx-auto" src="images/uba.png" alt="UBA Custodian">
-
-                        <div class="card-block">
-                            <p class="card-text">
-                                22B, Idowu Taylor Street,<br>
-                                Victoria Island,<br>
-                                Lagos.
-                            </p>
+                <?php foreach ($custodians as $custodian): ?>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top mx-auto" src="<?= $custodian['logo']['url'] ?>"
+                                 alt="<?= $custodian['logo']['alt'] ?>">
+                            <div class="card-block">
+                                <p class="card-text">
+                                    <?= $custodian['address'] ?>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top mx-auto" src="images/firstbank.png" alt="First Pension Custodian">
-
-                        <div class="card-block">
-                            <p class="card-text">
-                                6, Maduike Street,<br>
-                                Ikoyi,<br>
-                                Lagos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top mx-auto" src="images/zenith.png" alt="Zenith Pension Custodian">
-
-                        <div class="card-block">
-                            <p class="card-text">
-                                22, Akin Adesola Street,<br>
-                                Victoria Island,<br>
-                                Lagos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach ?>
             </div>
         </div>
         <div class="tab-pane fade col-12" role="tabpanel" id="f-rep">
