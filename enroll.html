@@ -78,7 +78,7 @@
             </div>
             <div class="col-3 offset-2 col-md-3 offset-md-2">
                 <div class="row">
-                    <div class=col-12> Client: <span id="a-name"> Otaru Daudu </span> </div>
+                    <div class=col-12> Client: <span id="a-name"> </span> </div>
                     <div class=col-12> Token no: <span id="a-token"> 3458893i2 </span> </div>
                 </div>
             </div>
@@ -1136,11 +1136,21 @@
             <div class="row" id="confirm-button">
                 <div class="col-12 continue text-center">
                     <div class="col-4 col-lg-1 btn btn-purple" name="back" id="5b"> Back </div>
-                    <div class="col-4 col-lg-1 btn btn-purple" name="continue" id="5c"> Submit </div>
+                    <div class="col-4 col-lg-1 btn btn-purple" type="submit" name="continue" id="5c"> Submit </div>
                 </div>
             </div>
             <!-- Confirmation page end -->
         </form>
+
+        <div class=row id='thankyou' style="display:none;"> 
+        <div class='col-12'> 
+        
+         <p class=text-center> 
+           Some thank you message!  
+         </p>
+
+        </div>
+        </div>
         <div class=row>
             <div class="col-12">
                 <a class="" href="/index.html">
@@ -1152,6 +1162,17 @@
             </div>
         </div>
     </div>
+
+ <!-- error modal --> 
+
+ <div class="modal fade enroll-error" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+       Some error content
+    </div>
+  </div>
+</div>
+
     <!-- Footer of page -->
     <footer class="container-fluid">
         <hr class="hr-red">
@@ -1195,21 +1216,20 @@
                                 <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
                                 </label>
                                 <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="" class="chimp">
-<<<<<<< HEAD
                             </div>
                             <div class="mc-field-group">
                                 <label for="mce-FNAME">First Name </label>
                                 <input type="text" name="MERGE1" id="MERGE1" size="25" value="" class="chimp">
                             </div>
                             <div class="mc-field-group">
-=======
+
                             </div>
                             <div class="mc-field-group">
                                 <label for="mce-FNAME">First Name </label>
                                 <input type="text" name="MERGE1" id="MERGE1" size="25" value="" class="chimp">
                             </div>
                             <div class="mc-field-group">
->>>>>>> 362ec26f6f0451650f15cfbb56b05f41bf23f613
+
                                 <label for="mce-LNAME">Last Name </label>
                                 <input type="text" name="MERGE2" id="MERGE2" size="25" value="" class="chimp">
                             </div>
@@ -1336,6 +1356,13 @@
             new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ha,ig,yo', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
         }
     </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script> 
+
+     $('.enroll-error').modal({
+      show: false
+     });
+
+    </script>
     <script>
         var progressbar = new ProgressBar.Line('#progressMark', {
             // Stroke color.
@@ -1481,7 +1508,6 @@
     return json
 
     }
-
 
     </script>
     
@@ -1786,7 +1812,46 @@
                 }
             });
 
-        });
+     $('#5c').click(function() { 
+
+    //getting my form id 
+    var form = document.getElementById('enroll-form')
+
+     // binding the submit action to ajax push  
+    jQuery(form).bind('submit', function(event){
+        event.preventDefault();
+        var form = this;
+        var json = ConvertFormToJSON(form);
+
+        $.ajax({
+            type: "POST",
+            url: "submit.php",
+            data: json,
+            dataType: "json",
+        }).done(function(){
+   $("#confirm, #confirm-head, #confirm-form, #confirm-button").fadeOut(300, function(){
+    //pass in thank you view
+                        $('#thankyou').fadeIn(500, progressbar.animate(1, {
+                            duration: 800,
+                            from: { color: '#2068a4' },
+                            to: { color: '#233d70' },
+                        }, progressbar.setText('100%')));
+                        $('#progress-text').html(" Welcome onboard the leading team ")
+                    });
+
+               
+        }).fail(function(){
+
+            //codeblock for activating modal programmatically
+            $('.enroll-error').modal('show')
+        })
+
+        })
+   });
+
+});
+
+    
     </script>
     <script>
         Dropzone.options.upload = false
@@ -1804,12 +1869,16 @@
                 reader = new FileReader();
                 reader.onload = handleReaderLoad;
                 reader.readAsDataURL(file);
+                function handleReaderLoad(evt) {
+                document.getElementById("9")
+                    .setAttribute('value', evt.target.result);
                 form = $('#upload');
             $.ajax({
                 type: "POST", 
                 url: "/upload",
                 data: form.serialize(),
             });
+               }
                 },
                 init: function() {
                     this.on("addedfile", function() {
