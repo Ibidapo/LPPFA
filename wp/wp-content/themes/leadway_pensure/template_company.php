@@ -196,38 +196,20 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
+<<<<<<< HEAD
                                         <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Oye Hassan-Odukale">
+=======
+                                        <img src="<?= array_get(get_field('chairman_photo'), 'url') ?>"
+                                             class="figure-img img-fluid rounded" alt="<?= array_get(get_field('chairman_photo'), 'alt')?>">
+>>>>>>> 601e92fa431567547f1f31aa60c3cc42d8cb7b57
                                         <figcaption class="figure-caption text-center">
-                                            Oye Hassan-Odukale<br>
+                                            <?= get_field('chairman_name')?><br>
                                             <span class="designation">Charmain</span>
                                         </figcaption>
                                     </figure>
                                 </div>
                                 <div class="col-md-8 dir-history">
-                                    <p>Apart from being the Managing Director/ Chief Executive Officer of Leadway
-                                        Assurance Group, Oye Hassan-Odukale
-                                        is now the Chairman of Leadway Pensure PFA. He is a product of Mayflower School,
-                                        Ikenne, Ogun State. He graduated
-                                        from University of Houston, Texas from where he obtained both Bachelors and
-                                        Masters Degrees in Business
-                                        Administration, specializing in Finance.</p>
-
-                                    <p>He started his career in insurance with SCIB & Company Insurance Brokers (an
-                                        affiliate of Segwicks
-                                        Insurance Brokers) in 1980 and joined Leadway Assurance Company Limited in 1981,
-                                        becoming Managing Director
-                                        and Chief Executive Officer of the company in 1994. He is a Munich Re scholar,
-                                        being the First West African
-                                        recipient of Munich Re and Georgia State University International Visiting
-                                        Fellows insurance Program. He is
-                                        accredited by the Securities and Exchange Commission as an Investment Manager
-                                        and Portfolio Adviser.</p>
-
-                                    <p>Oye Hassan-Odukale is on the Board of a number of reputable companies such as
-                                        First Bank of Nigeria, and the
-                                        immediate past Chairman, Nigeria Insurance Association. He is also Member of the
-                                        Order of the Federal
-                                        Republic (MFR).</p>
+                                    <?= get_field('chairman_description') ?>
                                 </div>
                             </div>
                         </div>
