@@ -143,18 +143,16 @@ if (!$rsa_rf) {
             <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" class="img-responsive"
                  width="85" alt="Leadway Alternate Logo">
         </a>
-
         <form class="form-inline mob-search">
             <input name="s" class="form-control" type="text" placeholder="Search" value="<?= get_search_query() ?>">
         </form>
         <div class="overlay text-center" id="overlay">
             <ul class="menu">
-                <li><a data-toggle="collapse" href="#log" aria-expanded="false" aria-controls="log">Login / Register <i
-                            class="fa fa-chevron-down" aria-hidden="true"></i></a>
+                <li><a data-toggle="collapse" href="#log" aria-expanded="false" aria-controls="log">Login / Register <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                     <ul class="sub-menu collapse" id="log">
-                        <li><a href="#">Client login</a></li>
+                        <li><a href="/login">Client login</a></li>
                         <li><a href="#">Employer login</a></li>
-                        <li><a href="#">Register</a></li>
+                        <li><a href="/enroll">Register</a></li>
                     </ul>
                 </li>
                 <li><a href="/company">Our Company</a></li>
@@ -162,28 +160,18 @@ if (!$rsa_rf) {
                 <li><a href="/benefits">Benefits</a></li>
                 <li><a href="/investment">Investments</a></li>
                 <li><a href="/career">Careers</a></li>
-                <li><a data-toggle="collapse" href="#med" aria-expanded="false" aria-controls="med">Media <i
-                            class="fa fa-chevron-down"></i></a>
+                <li><a data-toggle="collapse" href="#med" aria-expanded="false" aria-controls="med">Media <i class="fa fa-chevron-down"></i></a>
                     <ul class="sub-menu collapse" id="med">
                         <li><a href="/news">News & Events</a></li>
                         <li><a href="/social">Social</a></li>
-                        <li><a href="/downloads">Downloads</a></li>
+                        <li><a href="/blog">Blog</a></li>
                     </ul>
                 </li>
-                <li><a data-toggle="collapse" href="#cont" aria-expanded="false" aria-controls="cont">Contact Us <i
-                            class="fa fa-chevron-down"></i></a>
+                <li><a data-toggle="collapse" href="#cont" aria-expanded="false" aria-controls="cont">Contact Us <i class="fa fa-chevron-down"></i></a>
                     <ul class="sub-menu collapse" id="cont">
                         <li><a href="/contact">Branch Network</a></li>
                         <li><a href="/faq">FAQs</a></li>
-                    </ul>
-                </li>
-                <li><a data-toggle="collapse" href="#lang" aria-expanded="false" aria-controls="lang">Select Language <i
-                            class="fa fa-chevron-down"></i></a>
-                    <ul class="sub-menu collapse" id="lang">
-                        <li><a href="#">English</a></li>
-                        <li><a href="#">Yoruba</a></li>
-                        <li><a href="#">Igbo</a></li>
-                        <li><a href="#">Hausa</a></li>
+                        <li><a href="/downloads">Downloads</a></li>
                     </ul>
                 </li>
             </ul>
@@ -223,8 +211,7 @@ if (!$rsa_rf) {
                         </td>
                     <?php } ?>
                     <td>
-                        <span class="head-td">RSA ACCOUNTS </span><br>
-                        <span> 500,000 </span>
+                        <a href="/login" style="color: white; font-weight: 500"> LOGIN</a>
                     </td>
                     <td>
                         <a href="/calculator" class="nav-calc"> <img
@@ -233,7 +220,7 @@ if (!$rsa_rf) {
                     </td>
                     <td>
                         <button onclick="location='/trends'" type="button" class="btn btn-outline-secondary v-trends">
-                            <span>&#8594;</span> VIEW TRENDS
+                            VIEW TRENDS
                         </button>
                     </td>
                     <td>

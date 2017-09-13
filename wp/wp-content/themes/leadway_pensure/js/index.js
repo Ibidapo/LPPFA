@@ -8,7 +8,7 @@ $(document).ready(function(){
     });
 
     $(".dropdown").hover(function() {
-            $('.dropdown-menu', this).stop( true, true ).fadeIn("normal").css('display', 'inline-flex');
+            $('.dropdown-menu', this).stop( true, true ).fadeIn("normal").css('display', 'inline-table');
             $(this).toggleClass('open');
         },
         function() {
