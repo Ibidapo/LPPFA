@@ -62,8 +62,8 @@
         </div>
         <div class="col-3 offset-2 col-md-3 offset-md-2">
             <div class="row">
-                <div class=col-12> Client: <span id="a-name"> Otaru Daudu </span> </div>
-                <div class=col-12> Token no: <span id="a-token"> 3458893i2 </span> </div>
+                <div class=col-12> Client: <span id="a-name"> </span></div>
+                <div class=col-12> Token no: <span id="a-token"> 3458893i2 </span></div>
             </div>
         </div>
     </div>
@@ -89,32 +89,36 @@
             <div class="col-12 field-text">
                 <!-- line 1 start -->
                 <div class="row">
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group">
                             <label class="field-label"> Gender </label>
-                            <select class="form-control language col-sm-7 mx-auto" id=gender  style="border: 1px solid white" data-parsley-group="block1" required="">
+                            <select name=pid[Gender] class="form-control language col-sm-7 mx-auto" id=gender
+                                    style="border: 1px solid white" data-parsley-group="block1" required="">
                                 <option value="" id="default">Select gender</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
 
                         <div class="form-group ">
                             <label class="field-label"> Status </label>
-                            <select class="form-control language col-sm-7 mx-auto" id=status  style="border: 1px solid white" data-parsley-group="block1" required="">
+                            <select name=pid[relationship-status] class="form-control language col-sm-7 mx-auto"
+                                    id=status style="border: 1px solid white" data-parsley-group="block1" required="">
                                 <option value="" id="default">Select status</option>
                                 <option value="Married">Married</option>
                                 <option value="Single">Single</option>
                             </select>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
 
                         <div class="form-group ">
                             <label class="field-label"> Birthday </label>
-                            <input type="date" class="form-control language col-sm-7 mx-auto text-center" id=birthday  data-parsley-group="block1" style="border: 1px solid white" required="" >
+                            <input name=pid[birthday] type="date"
+                                   class="form-control language col-sm-7 mx-auto text-center" id=birthday
+                                   data-parsley-group="block1" style="border: 1px solid white" required="">
                         </div>
                     </div>
 
@@ -122,21 +126,22 @@
 
                     <!-- line 2 start -->
 
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group ">
                             <label class="field-label"> State of origin </label>
-                            <select class="form-control language col-sm-7 mx-auto" id=soo  style="border: 1px solid white" data-parsley-group="block1" required="">
-                                <option value="">Select State </option>
-                                <option value="Abia">Abia</option>
-                                <option value="Abuja">Abuja</option>
-                                <option value="Adamawa">Adamawa</option>
-                                <option value="Akwa Ibom">Akwa Ibom</option>
-                                <option value="Anambra">Anambra</option>
-                                <option value="Bauchi">Bauchi</option>
-                                <option value="Bayelsa">Bayelsa</option>
-                                <option value="Benue">Benue</option>
-                                <option value="Borno">Borno</option>
-                                <option value="Cross River">Cross River</option>
+                            <select name=pid[state-of-origin] class="form-control language col-sm-7 mx-auto" id=soo
+                                    style="border: 1px solid white" data-parsley-group="block1" required="">
+                                <option value="">Select State</option>
+                                <option value="abia">Abia</option>
+                                <option value="abuja">Abuja</option>
+                                <option value="adamawa">Adamawa</option>
+                                <option value="akwa Ibom">Akwa Ibom</option>
+                                <option value="anambra">Anambra</option>
+                                <option value="bauchi">Bauchi</option>
+                                <option value="bayelsa">Bayelsa</option>
+                                <option value="benue">Benue</option>
+                                <option value="borno">Borno</option>
+                                <option value="cross River">Cross River</option>
                                 <option value="Delta">Delta</option>
                                 <option value="Ebonyi">Ebonyi</option>
                                 <option value="Edo">Edo</option>
@@ -168,17 +173,22 @@
                             </select>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
-                        <div class="form-group ">
-                            <label class="field-label"> LGA </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=lga placeholder="local government area" style="border: 1px solid white" minlength="3" minlength-message="Confirm local government area" data-parsley-group="block1" required="">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
+                        <div class="form-group" id=lgaholder>
+                            <label class="field-label" id="lga-label"> LGA </label>
+                            <select name=pid[LGA] class="form-control language col-sm-7 mx-auto" id=lga
+                                    style="border: 1px solid white" data-parsley-group="block1" required="">
+                                <option value=""> select your local government</option>
+                            </select>
+
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group ">
                             <label class="field-label"> Nationality </label>
-                            <select class="form-control language col-sm-7 mx-auto" id=nation  style="border: 1px solid white" data-parsley-group="block1" required="">
-                                <option value=""> select your nationality </option>
+                            <select name=pid[nationality] class="form-control language col-sm-7 mx-auto" id=nation
+                                    style="border: 1px solid white" data-parsley-group="block1" required="">
+                                <option value=""> select your nationality</option>
                                 <option value="Afghanistan">Afghanistan</option>
                                 <option value="Aland Islands">Aland Islands</option>
                                 <option value="Albania">Albania</option>
@@ -274,7 +284,8 @@
                                 <option value="Guinea-Bissau">Guinea-Bissau</option>
                                 <option value="Guyana">Guyana</option>
                                 <option value="Haiti">Haiti</option>
-                                <option value="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
+                                <option value="Heard Island and McDonald Islands">Heard Island and McDonald Islands
+                                </option>
                                 <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
                                 <option value="Honduras">Honduras</option>
                                 <option value="Hong Kong">Hong Kong</option>
@@ -365,7 +376,8 @@
                                 <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
                                 <option value="Saint Lucia">Saint Lucia</option>
                                 <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
-                                <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                                <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines
+                                </option>
                                 <option value="Samoa">Samoa</option>
                                 <option value="San Marino">San Marino</option>
                                 <option value="Sao Tome and Principe">Sao Tome and Principe</option>
@@ -411,7 +423,9 @@
                                 <option value="United Arab Emirates">United Arab Emirates</option>
                                 <option value="United Kingdom">United Kingdom</option>
                                 <option value="United States of America">United States of America</option>
-                                <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                                <option value="United States Minor Outlying Islands">United States Minor Outlying
+                                    Islands
+                                </option>
                                 <option value="Uruguay">Uruguay</option>
                                 <option value="Uzbekistan">Uzbekistan</option>
                                 <option value="Vanuatu">Vanuatu</option>
@@ -434,28 +448,35 @@
                     <!-- end of line 2 -->
                     <!-- line 3 start -->
 
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group ">
                             <label class="field-label"> ID type </label>
-                            <select class="form-control language col-sm-7 mx-auto" id=idt style="border: 1px solid white" data-parsley-group="block1" required="">
+                            <select name=pid[Identification-mode] class="form-control language col-sm-7 mx-auto" id=idt
+                                    style="border: 1px solid white" data-parsley-group="block1" required="">
                                 <option value="">Select ID</option>
-                                <option value= "Drivers License"> Drivers License </option>
-                                <option value= "National ID"> National ID card </option>
-                                <option value= "International passport"> International passport </option>
-                                <option value= "Voters card"> Voters card </option>
+                                <option value="Drivers License"> Drivers License</option>
+                                <option value="National ID"> National ID card</option>
+                                <option value="International passport"> International passport</option>
+                                <option value="Voters card"> Voters card</option>
                             </select>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group ">
                             <label class="field-label"> Email </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-email placeholder="local government area" style="border: 1px solid white" readonly>
+                            <input name=pid[Email] type="text"
+                                   class="form-control col-sm-7 language mx-auto text-center"
+                                   data-parsley-group="block1" id=p-email placeholder="local government area"
+                                   style="border: 1px solid white" readonly>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group ">
                             <label class="field-label"> Mobile No </label>
-                            <input type="" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-mno placeholder="local government area" style="border: 1px solid white" readonly>
+                            <input name=pid[Mobile-no] type=""
+                                   class="form-control col-sm-7 language mx-auto text-center"
+                                   data-parsley-group="block1" id=p-mno placeholder="local government area"
+                                   style="border: 1px solid white" readonly>
                         </div>
                     </div>
                 </div>
@@ -487,25 +508,34 @@
             </div>
 
         </div>
-        <div class="row p-form"  id="employer-form">
-            <div class="col-12 field-text f-width">
+        <div class="row p-form" id="employer-form">
+            <div class="col-12 field-text">
                 <!-- line 1 start -->
                 <div class="row">
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center">
                         <label class="field-label"> Name of organization </label>
-                        <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="org" placeholder="Organization" style="border: 1px solid white" required="" data-parsley-group="block2">
+                        <input name=Employment-details[Organization] type="text"
+                               class="form-control language col-sm-7 mx-auto text-center" id="org"
+                               placeholder="Organization" style="border: 1px solid white" required=""
+                               data-parsley-group="block2">
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group">
                             <label class="field-label"> Address </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgAdd" placeholder="Address" style="border: 1px solid white" required="" data-parsley-group="block2">
+                            <input name=Employment-details[Address] type="text"
+                                   class="form-control col-sm-7 language mx-auto text-center" id="orgAdd"
+                                   placeholder="Address" style="border: 1px solid white" required=""
+                                   data-parsley-group="block2">
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
 
-                        <div class="form-group">
-                            <label class="field-label"> LGA </label>
-                            <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="orgLga" placeholder="Local Government Area" style="border: 1px solid white" required="" data-parsley-group="block2">
+                        <div class="form-group" id="orgLgaHolder">
+                            <label class="field-label" id="orgLgaLabel"> LGA </label>
+                            <input name=Employment-details[LGA] type="text"
+                                   class="form-control language col-sm-7 mx-auto text-center" id="orgLga"
+                                   placeholder="Local Government Area" style="border: 1px solid white" required=""
+                                   data-parsley-group="block2">
                         </div>
                     </div>
 
@@ -513,11 +543,13 @@
 
                     <!-- line 2 start -->
 
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group ">
                             <label class="field-label"> State </label>
-                            <select class="form-control language col-sm-7 mx-auto" id="orgState" style="border: 1px solid white" required="" data-parsley-group="block2">
-                                <option value="Select State of Origin" id="default">Select State </option>
+                            <select name=Employment-details[state] class="form-control language col-sm-7 mx-auto"
+                                    id="orgState" style="border: 1px solid white" required=""
+                                    data-parsley-group="block2">
+                                <option value="Select State of Origin" id="default">Select State</option>
                                 <option value="Abia">Abia</option>
                                 <option value="Abuja">Abuja</option>
                                 <option value="Adamawa">Adamawa</option>
@@ -558,16 +590,22 @@
                             </select>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group ">
                             <label class="field-label"> File No/Service No </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgNo" placeholder="File or service number" style="border: 1px solid white" data-parsley-group="block2">
+                            <input name=Employment-details[file/service-no] type="text"
+                                   class="form-control col-sm-7 language mx-auto text-center" id="orgNo"
+                                   placeholder="File or service number" style="border: 1px solid white"
+                                   data-parsley-group="block2">
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
-                        <div class="form-group ">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
+                        <div class="form-group">
                             <label class="field-label"> Date of employment </label>
-                            <input type="date" class="form-control col-sm-7 language mx-auto text-center" id="doe" placeholder="Address" style="border: 1px solid white" required="" data-parsley-group="block2">
+                            <input name=Employment-details[date-of-employment] type="date"
+                                   class="form-control col-sm-7 language mx-auto text-center" id="doe"
+                                   placeholder="Address" style="border: 1px solid white" required=""
+                                   data-parsley-group="block2">
                         </div>
                     </div>
 
@@ -575,11 +613,13 @@
                     <!-- end of line 2 -->
                     <!-- line 3 start -->
 
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group">
                             <label class="field-label"> State of posting </label>
-                            <select class="form-control language col-sm-7 mx-auto" id="sop" style="border: 1px solid white" data-parsley-group="block2">
-                                <option value="Select State of Origin" id="default">Select State </option>
+                            <select name=Employment-details[state-of-posting]
+                                    class="form-control language col-sm-7 mx-auto" id="sop"
+                                    style="border: 1px solid white" data-parsley-group="block2">
+                                <option value="Select State of Origin" id="default">Select State</option>
                                 <option value="Abia">Abia</option>
                                 <option value="Abuja">Abuja</option>
                                 <option value="Adamawa">Adamawa</option>
@@ -620,47 +660,63 @@
                             </select>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group ">
                             <label class="field-label"> Current PFA </label>
-                            <select class="form-control language col-sm-7 mx-auto" id="cpfa" style="border: 1px solid white" required="" data-parsley-group="block2">
+                            <select name=Employment-details[current-PFA] class="form-control language col-sm-7 mx-auto"
+                                    id="cpfa" style="border: 1px solid white" required="" data-parsley-group="block2">
                                 <option value="" id="default"> Select Provider</option>
-                                <option value="Not registered"> Not registered </option>
-                                <option value="AIICO pension Managers"> AIICO pension Managers </option>
-                                <option value="APT Pension Managers Limited"> APT Pension Managers Limited </option>
-                                <option value="ARM Pension Fund Managers Limited"> ARM Pension Fund Managers Limited </option>
-                                <option value="AXA MANSARD pension"> AXA MANSARD pension </option>
-                                <option value="Crusader sterling pensions Limited"> Crusader sterling pensions Limited </option>
-                                <option value="Fidelity Pension Managers"> Fidelity Pension Managers </option>
-                                <option value="First Guarantee Pension Limited"> First Guarantee Pension Limited </option>
-                                <option value="Future Unity Glanvils Pensions Limited"> Future Unity Glanvils Pensions Limited </option>
-                                <option value="Investment one pension manahers Limited"> Investment one pension manahers Limited </option>
-                                <option value="IEI-Anchor pension managers Limited"> IEI-Anchor pension managers Limited </option>
-                                <option value="IGI Pension fund managers Limited"> IGI Pension fund managers Limited </option>
-                                <option value="Legacy pension managers Limited"> Legacy pension managers Limited </option>
-                                <option value="NLPC pension fund administrators Limited"> NLPC pension fund administrators Limited </option>
-                                <option value="NPF pensions Limited"> NPF pensions Limited </option>
-                                <option value="OAK Pensions Limited"> OAK Pensions Limited </option>
+                                <option value="Not registered"> Not registered</option>
+                                <option value="AIICO pension Managers"> AIICO pension Managers</option>
+                                <option value="APT Pension Managers Limited"> APT Pension Managers Limited</option>
+                                <option value="ARM Pension Fund Managers Limited"> ARM Pension Fund Managers Limited
+                                </option>
+                                <option value="AXA MANSARD pension"> AXA MANSARD pension</option>
+                                <option value="Crusader sterling pensions Limited"> Crusader sterling pensions Limited
+                                </option>
+                                <option value="Fidelity Pension Managers"> Fidelity Pension Managers</option>
+                                <option value="First Guarantee Pension Limited"> First Guarantee Pension Limited
+                                </option>
+                                <option value="Future Unity Glanvils Pensions Limited"> Future Unity Glanvils Pensions
+                                    Limited
+                                </option>
+                                <option value="Investment one pension manahers Limited"> Investment one pension manahers
+                                    Limited
+                                </option>
+                                <option value="IEI-Anchor pension managers Limited"> IEI-Anchor pension managers
+                                    Limited
+                                </option>
+                                <option value="IGI Pension fund managers Limited"> IGI Pension fund managers Limited
+                                </option>
+                                <option value="Legacy pension managers Limited"> Legacy pension managers Limited
+                                </option>
+                                <option value="NLPC pension fund administrators Limited"> NLPC pension fund
+                                    administrators Limited
+                                </option>
+                                <option value="NPF pensions Limited"> NPF pensions Limited</option>
+                                <option value="OAK Pensions Limited"> OAK Pensions Limited</option>
                                 <option value="Pensions Alliance Limited"> Pensions Alliance Limited</option>
-                                <option value="Premium pension Limited"> Premium pension Limited </option>
-                                <option value="Sigma Pensions Limited"> Sigma Pensions Limited </option>
-                                <option value="Stanbic IBTC Pension Managers"> Stanbic IBTC Pension Managers </option>
-                                <option value="Trustfund Pensions PLC"> Trustfund Pensions PLC </option>
+                                <option value="Premium pension Limited"> Premium pension Limited</option>
+                                <option value="Sigma Pensions Limited"> Sigma Pensions Limited</option>
+                                <option value="Stanbic IBTC Pension Managers"> Stanbic IBTC Pension Managers</option>
+                                <option value="Trustfund Pensions PLC"> Trustfund Pensions PLC</option>
                             </select>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group ">
                             <label class="field-label"> Pin number </label>
-                            <input type="number" class="form-control col-sm-7 language mx-auto text-center" id="pin" placeholder="Mobile number" style="border: 1px solid white" >
+                            <input name=Employment-details[pin] type="number"
+                                   class="form-control col-sm-7 language mx-auto text-center" id="pin"
+                                   placeholder="Mobile number" style="border: 1px solid white">
                         </div>
                     </div>
                 </div>
                 <!-- end of line 3 -->
                 <div class="row" id="employer-button">
                     <div class="col-12 continue text-center">
-                        <div class="col-4 col-lg-1 btn btn-purple" name="continue" id="2b"> back </div>
-                        <div class="col-4 col-lg-1 btn btn-purple" name="continue" id="2c"> continue </div>
+                        <div class="col-4 col-lg-1 btn btn-purple" name="continue" id="2b"> back</div>
+                        <div class="col-4 col-lg-1 btn btn-purple" name="continue" id="2c"> continue</div>
                     </div>
                 </div>
 
@@ -685,33 +741,39 @@
             </div>
 
         </div>
-        <div class="row p-form"  id="kin-form">
-            <div class="col-12 field-text f-width">
+        <div class="row p-form" id="kin-form">
+            <div class="col-12 field-text">
                 <!-- line 1 start -->
                 <div class="row">
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center">
                         <label class="field-label"> Title </label>
-                        <select class="form-control language col-sm-7 mx-auto" id="k-title" style="border: 1px solid white" data-parsley-group="block3" required="">
-                            <option value="" id="default"> Select title </option>
-                            <option value="Mr"> Mr. </option>
-                            <option value="Miss"> Miss. </option>
-                            <option value="Mrs"> Mrs. </option>
-                            <option value="Dr"> Dr. </option>
-                            <option value="Eng"> Eng. </option>
-                            <option value="Rev"> Rev. </option>
+                        <select name="kin-details[title]" class="form-control language col-sm-7 mx-auto" id="k-title"
+                                style="border: 1px solid white" data-parsley-group="block3" required="">
+                            <option value="" id="default"> Select title</option>
+                            <option value="Mr"> Mr.</option>
+                            <option value="Miss"> Miss.</option>
+                            <option value="Mrs"> Mrs.</option>
+                            <option value="Dr"> Dr.</option>
+                            <option value="Eng"> Eng.</option>
+                            <option value="Rev"> Rev.</option>
                         </select>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group">
                             <label class="field-label"> Last name </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="k-lname" placeholder="Address" style="border: 1px solid white" data-parsley-group="block3" required="">
+                            <input name=kin-details[last-name] type="text"
+                                   class="form-control col-sm-7 language mx-auto text-center" id="k-lname"
+                                   placeholder="Address" style="border: 1px solid white" data-parsley-group="block3"
+                                   required="">
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
 
                         <div class="form-group">
                             <label class="field-label"> First name </label>
-                            <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="k-fname" style="border: 1px solid white" data-parsley-group="block3" required="">
+                            <input name=kin-details[first-name] type="text"
+                                   class="form-control language col-sm-7 mx-auto text-center" id="k-fname"
+                                   style="border: 1px solid white" data-parsley-group="block3" required="">
                         </div>
                     </div>
 
@@ -719,33 +781,40 @@
 
                     <!-- line 2 start -->
 
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group ">
                             <label class="field-label"> Relationship </label>
-                            <select class="form-control language col-sm-7 mx-auto" id="relationship" style="border: 1px solid white" data-parsley-group="block3" required="">
-                                <option value="" id="default"> Choose type </option>
-                                <option value="spouse"> Spouse </option>
-                                <option value="relative"> Relative </option>
-                                <option value="parent"> Parent </option>
-                                <option value="acquaintance"> Acquaintance </option>
-                                <option value="child"> Child </option>
+                            <select name=kin-details[relationship] class="form-control language col-sm-7 mx-auto"
+                                    id="relationship" style="border: 1px solid white" data-parsley-group="block3"
+                                    required="">
+                                <option value="" id="default"> Choose type</option>
+                                <option value="spouse"> Spouse</option>
+                                <option value="relative"> Relative</option>
+                                <option value="parent"> Parent</option>
+                                <option value="acquaintance"> Acquaintance</option>
+                                <option value="child"> Child</option>
                             </select>
                         </div>
                     </div>
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group">
                             <label class="field-label"> Gender </label>
-                            <select class="form-control language col-sm-7 mx-auto" id="k-gender" style="border: 1px solid white" data-parsley-group="block3" required="">
-                                <option value="" id="default"> Select Gender </option>
-                                <option value="Male"> Male </option>
-                                <option value="Male"> Female </option>
+                            <select name=kin-details[Gender] class="form-control language col-sm-7 mx-auto"
+                                    id="k-gender" style="border: 1px solid white" data-parsley-group="block3"
+                                    required="">
+                                <option value="" id="default"> Select Gender</option>
+                                <option value="Male"> Male</option>
+                                <option value="Male"> Female</option>
                             </select>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group ">
                             <label class="field-label"> Address </label>
-                            <input type="date" class="form-control col-sm-7 language mx-auto text-center" id="k-add" placeholder="Address" style="border: 1px solid white" data-parsley-group="block3" required="">
+                            <input name=kin-details[Address] type="text"
+                                   class="form-control col-sm-7 language mx-auto text-center" id="k-add"
+                                   placeholder="Address" style="border: 1px solid white" data-parsley-group="block3"
+                                   required="">
                         </div>
                     </div>
 
@@ -753,19 +822,20 @@
                     <!-- end of line 2 -->
                     <!-- line 3 start -->
 
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group">
                             <label class="field-label"> State of origin </label>
-                            <select class="form-control language col-sm-7 mx-auto" id="k-soo" style="border: 1px solid white" data-parsley-group="block3" required="">
-                                <option value="" id="default">Select State </option>
-                                <option value="Abia">Abia</option>
-                                <option value="Abuja">Abuja</option>
-                                <option value="Adamawa">Adamawa</option>
-                                <option value="Akwa Ibom">Akwa Ibom</option>
-                                <option value="Anambra">Anambra</option>
-                                <option value="Bauchi">Bauchi</option>
-                                <option value="Bayelsa">Bayelsa</option>
-                                <option value="Benue">Benue</option>
+                            <select name=kin-details[state] class="form-control language col-sm-7 mx-auto" id="k-soo"
+                                    style="border: 1px solid white" data-parsley-group="block3" required="">
+                                <option value="" id="default">Select State</option>
+                                <option value="abia">Abia</option>
+                                <option value="abuja">Abuja</option>
+                                <option value="adamawa">Adamawa</option>
+                                <option value="akwa Ibom">Akwa Ibom</option>
+                                <option value="anambra">Anambra</option>
+                                <option value="bauchi">Bauchi</option>
+                                <option value="bayelsa">Bayelsa</option>
+                                <option value="benue">Benue</option>
                                 <option value="Borno">Borno</option>
                                 <option value="Cross River">Cross River</option>
                                 <option value="Delta">Delta</option>
@@ -798,24 +868,30 @@
                             </select>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group ">
                             <label class="field-label"> LGA </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="k-lga" placeholder="Mobile number" style="border: 1px solid white" data-parsley-group="block3" required="">
+                            <input name=kin-detail[LGA] type="text"
+                                   class="form-control col-sm-7 language mx-auto text-center" id="k-lga"
+                                   placeholder="Mobile number" style="border: 1px solid white"
+                                   data-parsley-group="block3" required="">
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center">
+                    <div class="col-12 col-sm-6 col-md-4 text-center">
                         <div class="form-group ">
                             <label class="field-label"> Mobile no </label>
-                            <input type="number" class="form-control col-sm-7 language mx-auto text-center" id="k-mno" placeholder="Mobile number" style="border: 1px solid white" type="number" data-parsley-group="block3" required="">
+                            <input name=kin-details[Mobile-no] type="number"
+                                   class="form-control col-sm-7 language mx-auto text-center" id="k-mno"
+                                   placeholder="Mobile number" style="border: 1px solid white" type="number"
+                                   data-parsley-group="block3" required="">
                         </div>
                     </div>
                 </div>
                 <!-- end of line 3 -->
                 <div class="row" id="kin-button">
                     <div class="col-12 continue text-center">
-                        <div class="col-4 col-lg-1 btn btn-purple" name="continue" id="3b"> back </div>
-                        <div class="col-4 col-lg-1 btn btn-purple" name="continue" id="3c"> continue </div>
+                        <div class="col-4 col-lg-1 btn btn-purple" name="continue" id="3b"> back</div>
+                        <div class="col-4 col-lg-1 btn btn-purple" name="continue" id="3c"> continue</div>
                     </div>
                 </div>
 
@@ -842,13 +918,11 @@
 
         </div>
         <div class="row p-form" style="height:324px" id="biometrics-form">
-            <div class="col-12 field-text f-width">
+            <div class="col-12 field-text">
                 <!-- line 1 start -->
                 <div class="row">
-                    <div class= "col-12 text-center">
-                        <div class="dropzone col-5 mx-auto" id="upload">
-
-                        </div>
+                    <div class="col-12 text-center">
+                        <input type="file" id="user-image" class="form-control"/>
                     </div>
                     <div class="col-12 text-center" style="padding-bottom:2%">
                         Upload your avatar
@@ -858,8 +932,8 @@
 
                 <div class="row" id="biometrics-button">
                     <div class="col-12 continue text-center">
-                        <div class="col-4 col-lg-1 btn btn-purple" name="continue" id="4b"> back </div>
-                        <div class="col-4 col-lg-1 btn btn-purple" name="continue" id="4c"> continue </div>
+                        <div class="col-4 col-lg-1 btn btn-purple" name="continue" id="4b"> back</div>
+                        <div class="col-4 col-lg-1 btn btn-purple" name="continue" id="4c"> continue</div>
                     </div>
                 </div>
 
@@ -878,33 +952,36 @@
             </div>
             <div class="col-9 col-sm-6 p-det-head" id="confirm-head">
                 <h2 class="mOff form-head-main"> Confirmation </h2>
-                <h6 class="form-head-sub" style="font-weight:300"> Scroll through and confirm your information below </h6>
+                <h6 class="form-head-sub" style="font-weight:300"> Scroll through and confirm your information
+                    below </h6>
             </div>
 
         </div>
-        <div class="row p-form"  id="confirm-form">
+        <div class="row p-form" id="confirm-form">
             <div class="col-12 field-text confirm-view-height" id="confirm-view-height">
 
                 <h5 class="text-center f-space"> 1. Personal Information </h5>
                 <!-- line 1 start -->
                 <div class="row">
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group">
                             <label class="field-label"> Gender </label>
                             <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dGender>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group">
                             <label class="field-label"> Status </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dStatus readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dStatus
+                                   readonly>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
 
                         <div class="form-group">
                             <label class="field-label"> Birthday </label>
-                            <input type="text" class="form-control language col-sm-7 mx-auto text-center" id=dBirthday readonly>
+                            <input type="text" class="form-control language col-sm-7 mx-auto text-center" id=dBirthday
+                                   readonly>
                         </div>
                     </div>
 
@@ -912,22 +989,25 @@
                     <hr class="d-color">
                     <!-- line 2 start -->
 
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group ">
                             <label class="field-label"> State of Origin </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dSoo readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dSoo
+                                   readonly>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group ">
                             <label class="field-label"> Local Government Area </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dLga readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dLga
+                                   readonly>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group ">
                             <label class="field-label"> Nationality </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dNation readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dNation
+                                   readonly>
                         </div>
                     </div>
 
@@ -936,24 +1016,27 @@
                     <hr class="d-color">
                     <!-- line 3 start -->
 
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group">
                             <label class="field-label"> ID type </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dIdt readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dIdt
+                                   readonly>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group ">
-                            <label class="field-label"> Email  </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dp-email readonly>
+                            <label class="field-label"> Email </label>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dp-email
+                                   readonly>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group ">
                             <label class="field-label"> Mobile no
 
                             </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dp-mno placeholder="" readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dp-mno
+                                   placeholder="" readonly>
                         </div>
                     </div>
                 </div>
@@ -964,21 +1047,24 @@
                 <h5 class="text-center f-space"> 2. Employment Details </h5>
                 <!-- line 1 start -->
                 <div class="row">
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff" readonly>
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff" readonly>
                         <label class="field-label"> Name of organization </label>
-                        <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dOrg" readonly>
+                        <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dOrg"
+                               readonly>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group">
                             <label class="field-label"> Address </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dOrgAdd" readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dOrgAdd"
+                                   readonly>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
 
                         <div class="form-group">
                             <label class="field-label"> LGA </label>
-                            <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dOrgLga" readonly>
+                            <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dOrgLga"
+                                   readonly>
                         </div>
                     </div>
 
@@ -987,22 +1073,25 @@
 
                     <!-- line 2 start -->
 
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group ">
                             <label class="field-label"> State of origin </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dOrgState" readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dOrgState"
+                                   readonly>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group ">
                             <label class="field-label"> File No/Service No </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dOrgNo" readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dOrgNo"
+                                   readonly>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group ">
                             <label class="field-label"> Date of employment </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dDoe" readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dDoe"
+                                   readonly>
                         </div>
                     </div>
 
@@ -1012,22 +1101,25 @@
                     <hr class="d-color">
                     <!-- line 3 start -->
 
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group">
                             <label class="field-label"> State of posting </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dSop" readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dSop"
+                                   readonly>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group ">
-                            <label class="field-label"> Current PFA  </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dcpfa" readonly>
+                            <label class="field-label"> Current PFA </label>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dcpfa"
+                                   readonly>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group ">
-                            <label class="field-label"> Pin number  </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dpin" readonly>
+                            <label class="field-label"> Pin number </label>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dpin"
+                                   readonly>
                         </div>
                     </div>
                 </div>
@@ -1041,21 +1133,24 @@
                 <h5 class="text-center f-space"> 3. Next of Kin </h5>
                 <!-- line 1 start -->
                 <div class="row">
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
                         <label class="field-label"> Title </label>
-                        <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dk-title" readonly>
+                        <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dk-title"
+                               readonly>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group">
                             <label class="field-label"> Last name </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dk-lname" readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dk-lname"
+                                   readonly>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
 
                         <div class="form-group">
                             <label class="field-label"> First name </label>
-                            <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dk-fname" readonly>
+                            <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dk-fname"
+                                   readonly>
                         </div>
                     </div>
 
@@ -1065,20 +1160,23 @@
 
                     <!-- line 2 start -->
 
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group ">
                             <label class="field-label"> Relationship </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="drelationship" readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center"
+                                   id="drelationship" readonly>
                         </div>
                     </div>
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
                         <label class="field-label"> Gender </label>
-                        <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dkgender" readonly>
+                        <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dkgender"
+                               readonly>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group ">
                             <label class="field-label"> Address </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dkadd" readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dkadd"
+                                   readonly>
                         </div>
                     </div>
 
@@ -1089,22 +1187,25 @@
 
                     <!-- line 3 start -->
 
-                    <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group">
                             <label class="field-label"> State of origin </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dksoo" readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dksoo"
+                                   readonly>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group ">
                             <label class="field-label"> LGA </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dklga" readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dklga"
+                                   readonly>
                         </div>
                     </div>
-                    <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                         <div class="form-group ">
                             <label class="field-label"> Mobile no </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dkmno" readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dkmno"
+                                   readonly>
                         </div>
                     </div>
                 </div>
@@ -1114,25 +1215,43 @@
             </div>
 
 
-
-
         </div>
         <div class="row" id="confirm-button">
             <div class="col-12 continue text-center">
-                <div class="col-4 col-lg-1 btn btn-purple" name="back" id="5b"> Back </div>
-                <div class="col-4 col-lg-1 btn btn-purple" name="continue" id="5c"> Submit </div>
+                <div class="col-4 col-lg-1 btn btn-purple" name="back" id="5b"> Back</div>
+                <button class="col-4 col-lg-1 btn btn-purple" type="submit" name="continue" id="5c"> Submit</button>
             </div>
         </div>
         <!-- Confirmation page end -->
     </form>
+
+    <div class=row id='thankyou' style="display:none;">
+        <div class='col-12'>
+
+            <p class=text-center>
+                Some thank you message!
+            </p>
+
+        </div>
+    </div>
     <div class=row>
         <div class="col-12">
             <a class="" href="/">
                 <figure>
                     <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" alt="" class="img-fluid back-logo">
-                    <figcaption class="back" style="font-size:10px"> <i class="fa fa-arrow-left" aria-hidden="true"></i> back to Leadway-Pensure.com </figcaption>
+                    <figcaption class="back" style="font-size:10px"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+                        back to Leadway-Pensure.com
+                    </figcaption>
                 </figure>
             </a>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade enroll-error" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            Some error content
         </div>
     </div>
 </div>
@@ -1141,6 +1260,13 @@
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/progressbar.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/dropzone.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/parsley.min.js"></script>
+<script>
+
+    $('.enroll-error').modal({
+        show: false
+    });
+
+</script>
 <script>
     var progressbar = new ProgressBar.Line('#progressMark', {
         // Stroke color.
@@ -1251,9 +1377,9 @@
         // See #custom-animations section
         // Built-in shape passes reference to itself and a custom attachment
         // object to step function
-        from: { color: '#2068a4' },
-        to: { color: '#233d70' },
-        step: function(state, circle, attachment) {
+        from: {color: '#2068a4'},
+        to: {color: '#233d70'},
+        step: function (state, circle, attachment) {
             circle.path.setAttribute('stroke', state.color);
         },
 
@@ -1272,25 +1398,66 @@
     //});
 
 </script>
-<script>
-    $(document).ready(function(){
 
-        function _(x){
+<script>
+
+    function convertFormToJSON(form) {
+
+        var array = jQuery(form).serializeArray();
+        var json = {};
+
+        jQuery.each(array, function () {
+            json[this.name] = this.value || '';
+        });
+        return json
+
+    }
+
+    function base64ToBlob(base64, mime)
+    {
+        mime = mime || '';
+        var sliceSize = 1024;
+        var byteChars = window.atob(base64);
+        var byteArrays = [];
+
+        for (var offset = 0, len = byteChars.length; offset < len; offset += sliceSize) {
+            var slice = byteChars.slice(offset, offset + sliceSize);
+
+            var byteNumbers = new Array(slice.length);
+            for (var i = 0; i < slice.length; i++) {
+                byteNumbers[i] = slice.charCodeAt(i);
+            }
+
+            var byteArray = new Uint8Array(byteNumbers);
+
+            byteArrays.push(byteArray);
+        }
+
+        return new Blob(byteArrays, {type: mime});
+    }
+
+</script>
+
+<script>
+    $(document).ready(function () {
+
+        function _(x) {
             return document.getElementById(x).value;
         }
-        function __(x){
+
+        function __(x) {
             return document.getElementById(x);
         }
 
-        function parse(a,b,c) {
-            for(; a < b.length; a++) {
+        function parse(a, b, c) {
+            for (; a < b.length; a++) {
                 $(b[a]).val(c[a]);
             }
         }
 
         var accessed = 0
         //test block for _(x)
-        function show(response){
+        function show(response) {
             alert(response);
         };
 
@@ -1365,34 +1532,188 @@
         var displayZ = __('dklga');
         var displayA1 = __('dkmno');
 
-        var responseArray1 = [responseA, responseB, responseC, responseD, responseE, responseF, responseG, responseH, responseI ] ;
-        var displayArray1 = [displayA, displayB, displayC, displayD, displayE, displayF, displayG, displayH, displayI ] ;
+        var responseArray1 = [responseA, responseB, responseC, responseD, responseE, responseF, responseG, responseH, responseI];
+        var displayArray1 = [displayA, displayB, displayC, displayD, displayE, displayF, displayG, displayH, displayI];
 
 
-        function validateemail(x)
-        {
-            var atposition=x.indexOf("@");
-            var dotposition=x.lastIndexOf(".");
-            if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){
-                alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);
+        function validateemail(x) {
+            var atposition = x.indexOf("@");
+            var dotposition = x.lastIndexOf(".");
+            if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+                alert("Please enter a valid e-mail address \n atpostion:" + atposition + "\n dotposition:" + dotposition);
                 return false;
             }
         }
 
+        // parsing local goverment html|values based on selected state for pid section
 
+        $('#soo').change(function () {
+
+
+            var state = document.getElementById('soo').value;
+            console.log(state);
+            var lga = document.getElementById('lga');
+            var lgalabel = document.getElementById('lga-label');
+            lga.parentNode.removeChild(lga);
+            lgalabel.parentNode.removeChild(lgalabel);
+            var newSelectBox = document.createElement('select');
+            newSelectBox.id = 'lga';
+            newSelectBox.setAttribute('class', 'form-control language col-sm-7 mx-auto');
+            newSelectBox.style = 'border: 1px solid white';
+            newSelectBox.name = 'pid[LGA]';
+            var newLabel = document.createElement('label');
+            newLabel.class = 'field-label';
+            newLabel.id = "lga-label";
+            var newLabelText = document.createTextNode('LGA');
+            var selectHolder = document.getElementById('lgaholder');
+            selectHolder.appendChild(newLabel);
+            newLabel.appendChild(newLabelText);
+            selectHolder.appendChild(newSelectBox);
+            var lga = document.getElementById('lga');
+
+
+            if (state === "abia") {
+
+                lgaArray = ["Aba North|a", "Aba South|b", "Arochukwu|c", "Bende|d", "Ikwuano|e", "Isiala-Ngwa North |f", "Isiala-Ngwa South |b", "Isuikwato|c", "Obi Nwa|d", "Ohafia|e", "Osisioma |f", "Ngwa|g", "Ugwunagbo|g", "Ukwa East|g", "Ukwa West|g", "Umuahia North|g", "Umuahia South|g", "Umu-Neochi|h"];
+
+
+            } else if (state === "abuja") {
+                lgaArray = ["Gwagwalada|g", "Kuje|h", "Abaji|i", "Abuja Municipal|j", "Bwari|k", "Kwali|i"];
+
+            } else
+
+                return false
+
+            for (var lgaOption in lgaArray) {
+                var selectedLga = lgaArray[lgaOption].split("|");
+                var optionsFeed = document.createElement("option");
+                optionsFeed.value = selectedLga[1];
+                optionsFeed.innerHTML = selectedLga[0];
+                console.log(selectedLga)
+                lga.appendChild(optionsFeed)
+                //$(div.lga).find(select).appendChild()
+
+            }
+
+        });
+
+
+        // parsing local goverment html|values based on selected state for employment section
+
+        $('#orgState').change(function () {
+
+
+            var state = document.getElementById('orgState').value;
+            console.log(state);
+            var lga = document.getElementById('orgLga');
+            var lgalabel = document.getElementById('orgLgaLabel');
+            lga.parentNode.removeChild(lga);
+            lgalabel.parentNode.removeChild(lgalabel);
+            var newSelectBox = document.createElement('select');
+            newSelectBox.id = 'orgLga';
+            newSelectBox.setAttribute('class', 'form-control language col-sm-7 mx-auto');
+            newSelectBox.style = 'border: 1px solid white';
+            newSelectBox.name = 'Employment-details[LGA]';
+            var newLabel = document.createElement('label');
+            newLabel.setAttribute('class', 'field-label');
+            newLabel.id = "orgLgaLabel";
+            var newLabelText = document.createTextNode('LGA');
+            var selectHolder = document.getElementById('orgLgaHolder');
+            selectHolder.appendChild(newLabel);
+            newLabel.appendChild(newLabelText);
+            selectHolder.appendChild(newSelectBox);
+            var lga = document.getElementById('orgLga');
+
+
+            if (state === "abia") {
+
+                lgaArray = ["Aba North|a", "Aba South|b", "Arochukwu|c", "Bende|d", "Ikwuano|e", "Isiala-Ngwa North |f", "Isiala-Ngwa South |b", "Isuikwato|c", "Obi Nwa|d", "Ohafia|e", "Osisioma |f", "Ngwa|g", "Ugwunagbo|g", "Ukwa East|g", "Ukwa West|g", "Umuahia North|g", "Umuahia South|g", "Umu-Neochi|h"];
+
+
+            } else if (state === "abuja") {
+                lgaArray = ["Gwagwalada|g", "Kuje|h", "Abaji|i", "Abuja Municipal|j", "Bwari|k", "Kwali|i"];
+
+            } else
+
+                return false
+
+            for (var lgaOption in lgaArray) {
+                var selectedLga = lgaArray[lgaOption].split("|");
+                var optionsFeed = document.createElement("option");
+                optionsFeed.value = selectedLga[1];
+                optionsFeed.innerHTML = selectedLga[0];
+                console.log(selectedLga)
+                lga.appendChild(optionsFeed)
+
+            }
+
+        });
+
+
+        // parsing local goverment html|values based on selected state for next of kin section
+
+        $('#orgState').change(function () {
+
+
+            var state = document.getElementById('soo').value;
+            console.log(state);
+            var lga = document.getElementById('lga');
+            var lgalabel = document.getElementById('lga-label');
+            lga.parentNode.removeChild(lga);
+            lgalabel.parentNode.removeChild(lgalabel);
+            var newSelectBox = document.createElement('select');
+            newSelectBox.id = 'lga';
+            newSelectBox.setAttribute('class', 'form-control language col-sm-7 mx-auto');
+            newSelectBox.style = 'border: 1px solid white';
+            newSelectBox.name = 'pid[LGA]';
+            var newLabel = document.createElement('label');
+            newLabel.class = 'field-label';
+            newLabel.id = "lga-label";
+            var newLabelText = document.createTextNode('LGA');
+            var selectHolder = document.getElementById('lgaholder');
+            selectHolder.appendChild(newLabel);
+            newLabel.appendChild(newLabelText);
+            selectHolder.appendChild(newSelectBox);
+            var lga = document.getElementById('lga');
+
+
+            if (state === "abia") {
+
+                lgaArray = ["Aba North|a", "Aba South|b", "Arochukwu|c", "Bende|d", "Ikwuano|e", "Isiala-Ngwa North |f", "Isiala-Ngwa South |b", "Isuikwato|c", "Obi Nwa|d", "Ohafia|e", "Osisioma |f", "Ngwa|g", "Ugwunagbo|g", "Ukwa East|g", "Ukwa West|g", "Umuahia North|g", "Umuahia South|g", "Umu-Neochi|h"];
+
+
+            } else if (state === "abuja") {
+                lgaArray = ["Gwagwalada|g", "Kuje|h", "Abaji|i", "Abuja Municipal|j", "Bwari|k", "Kwali|i"];
+
+            } else
+
+                return false
+
+            for (var lgaOption in lgaArray) {
+                var selectedLga = lgaArray[lgaOption].split("|");
+                var optionsFeed = document.createElement("option");
+                optionsFeed.value = selectedLga[1];
+                optionsFeed.innerHTML = selectedLga[0];
+                console.log(selectedLga)
+                lga.appendChild(optionsFeed)
+                //$(div.lga).find(select).appendChild()
+
+            }
+
+        });
 
         //setting initial progress-text content
         $('#progress-text').html("The journey of a thousand miles begins with one step, here it begins with four!")
 
         var formInstance = $('.demo-form');
-        $('.form-navigation .next').click(function() {
+        $('.form-navigation .next').click(function () {
 
         });
 
         // switch screen function on click
-        $("#1c").click(function(){
+        $("#1c").click(function () {
 
-            if ($('.demo-form').parsley().validate({group: 'block1', force: true })){
+            if ($('.demo-form').parsley().validate({group: 'block1', force: true})) {
                 alert("validated")
                 //updating values of personal information form fields
                 responseA = _('gender');
@@ -1410,12 +1731,11 @@
                 displayArray1 = [displayA, displayB, displayC, displayD, displayE, displayF, displayG, displayH, displayI];
 
 
-
-                $("#pid, #pid-head, #pid-form, #pid-button").fadeOut(300, function(){
+                $("#pid, #pid-head, #pid-form, #pid-button").fadeOut(300, function () {
                     $("#employer, #employer-head, #employer-form, #employer-button").fadeIn(500, progressbar.animate(0.2, {
                         duration: 800,
-                        from: { color: '#2068a4' },
-                        to: { color: '#233d70' },
+                        from: {color: '#2068a4'},
+                        to: {color: '#233d70'},
                     }, progressbar.setText('20%')));
 
                     //setting progress-text
@@ -1423,26 +1743,26 @@
                 });
 
 
-                $("#2b").click(function(){
-                    $("#employer, #employer-head, #employer-form, #employer-button").fadeOut(300, function(){
+                $("#2b").click(function () {
+                    $("#employer, #employer-head, #employer-form, #employer-button").fadeOut(300, function () {
                         $("#pid, #pid-head, #pid-form, #pid-button").fadeIn(500, progressbar.animate(0, {
                             duration: 800,
-                            from: { color: '#2068a4' },
-                            to: { color: '#233d70' },
+                            from: {color: '#2068a4'},
+                            to: {color: '#233d70'},
                         }, progressbar.setText('0%')));
                         $('#progress-text').html("The journey of a thousand miles begins with one step, here it begins with four!")
                     });
                 });
 
-            }else {
+            } else {
                 return false;
             }
 
         });
 
 
-        $("#2c").click(function(){
-            if ($('.demo-form').parsley().validate({group: 'block2'})){
+        $("#2c").click(function () {
+            if ($('.demo-form').parsley().validate({group: 'block2'})) {
                 alert("block2 validated")
                 // updating values for employment responses
                 responseJ = _('org');
@@ -1457,35 +1777,35 @@
 
 
                 // grouping response and display areas
-                responseArray2 = [responseJ, responseK, responseL, responseM, responseN, responseO, responseP, responseQ, responseR] ;
-                displayArray2 =  [displayJ, displayK, displayL, displayM, displayN, displayO, displayP, displayQ, displayR] ;
+                responseArray2 = [responseJ, responseK, responseL, responseM, responseN, responseO, responseP, responseQ, responseR];
+                displayArray2 = [displayJ, displayK, displayL, displayM, displayN, displayO, displayP, displayQ, displayR];
 
-                $("#employer, #employer-head, #employer-form, #employer-button").fadeOut(300, function(){
+                $("#employer, #employer-head, #employer-form, #employer-button").fadeOut(300, function () {
                     $("#kin, #kin-head, #kin-form, #kin-button").fadeIn(500, progressbar.animate(0.4, {
                         duration: 800,
-                        from: { color: '#2068a4' },
-                        to: { color: '#233d70' },
+                        from: {color: '#2068a4'},
+                        to: {color: '#233d70'},
                     }, progressbar.setText('40%')));
                     $('#progress-text').html("If you can't give them your atm pin, they don't qualify :p")
                 });
 
-                $("#3b").click(function(){
-                    $("#kin, #kin-head, #kin-form, #kin-button").fadeOut(300, function(){
+                $("#3b").click(function () {
+                    $("#kin, #kin-head, #kin-form, #kin-button").fadeOut(300, function () {
                         $("#employer, #employer-head, #employer-form, #employer-button").fadeIn(500, progressbar.animate(0.2, {
                             duration: 800,
-                            from: { color: '#2068a4' },
-                            to: { color: '#233d70' },
+                            from: {color: '#2068a4'},
+                            to: {color: '#233d70'},
                         }, progressbar.setText('20%')));
                         $('#progress-text').html("We know you should do it for the passion, doing it for the money isn't bad too...")
                     });
                 });
-            }else{
+            } else {
                 return false;
             }
         });
-        $("#3c").click(function(){
+        $("#3c").click(function () {
 
-            if ($('.demo-form').parsley().validate({group: 'block3'})){
+            if ($('.demo-form').parsley().validate({group: 'block3'})) {
                 alert("block3 validated")
 
                 // updating values for employment responses
@@ -1502,73 +1822,145 @@
 
                 // grouping response and display areas
                 responseArray3 = [responseS, responseT, responseU, responseV, responseW, responseX, responseY, responseZ, responseA1];
-                displayArray3 =  [displayS, displayT, displayU, displayV, displayW, displayX, displayY, displayZ, displayA1];
+                displayArray3 = [displayS, displayT, displayU, displayV, displayW, displayX, displayY, displayZ, displayA1];
 
 
-                $("#kin, #kin-head, #kin-form, #kin-button").fadeOut(300, function(){
+                $("#kin, #kin-head, #kin-form, #kin-button").fadeOut(300, function () {
                     $("#biometrics, #biometrics-head, #biometrics-form, #biometrics-button").fadeIn(500, progressbar.animate(0.6, {
                         duration: 800,
-                        from: { color: '#2068a4' },
-                        to: { color: '#233d70' },
+                        from: {color: '#2068a4'},
+                        to: {color: '#233d70'},
                     }, progressbar.setText('60%')));
                     $('#progress-text').html(" It's about time we saw that pretty face :)")
                 });
 
 
-                $("#4b").click(function(){
-                    $("#biometrics, #biometrics-head, #biometrics-form, #biometrics-button").fadeOut(300, function(){
+                $("#4b").click(function () {
+                    $("#biometrics, #biometrics-head, #biometrics-form, #biometrics-button").fadeOut(300, function () {
                         $("#kin, #kin-head, #kin-form, #kin-button").fadeIn(500, progressbar.animate(0.4, {
                             duration: 800,
-                            from: { color: '#2068a4' },
-                            to: { color: '#233d70' },
+                            from: {color: '#2068a4'},
+                            to: {color: '#233d70'},
                         }, progressbar.setText('40%')));
                         $('#progress-text').html("If you can't give them your atm pin, they don't qualify :p")
                     });
 
                 });
-            }else{
+            } else {
                 return false;
             }
         });
 
 
-        $("#4c").click(function(){
+        $("#4c").click(function () {
 
-            if (document.querySelector('.dz-image-preview') !== null){
-                $("#biometrics, #biometrics-head, #biometrics-form, #biometrics-button").fadeOut(300, function(){
+            var form = document.getElementById('enroll-form')
+
+            var json = convertFormToJSON(form);
+
+            console.log(json, $("#user-image").val());
+
+            if (document.querySelector('.dz-image-preview') !== null || $("#user-image").val() !== null) {
+                $("#biometrics, #biometrics-head, #biometrics-form, #biometrics-button").fadeOut(300, function () {
                     $("#confirm, #confirm-head, #confirm-form, #confirm-button").fadeIn(500, progressbar.animate(0.8, {
                         duration: 800,
-                        from: { color: '#2068a4' },
-                        to: { color: '#233d70' },
+                        from: {color: '#2068a4'},
+                        to: {color: '#233d70'},
                     }, progressbar.setText('80%')));
                     $('#progress-text').html(" Just checking we crossed our t's and dotted our i's! ")
                 });
 
-                $("#5b").click(function(){
-                    $("#confirm, #confirm-head, #confirm-form, #confirm-button").fadeOut(300, function(){
+
+                $("#5b").click(function () {
+                    $("#confirm, #confirm-head, #confirm-form, #confirm-button").fadeOut(300, function () {
                         $("#biometrics, #biometrics-head, #biometrics-form, #biometrics-button").fadeIn(500, progressbar.animate(0.6, {
                             duration: 800,
-                            from: { color: '#2068a4' },
-                            to: { color: '#233d70' },
+                            from: {color: '#2068a4'},
+                            to: {color: '#233d70'},
                         }, progressbar.setText('60%')));
                         $('#progress-text').html(" It's about time we saw that pretty face :)")
                     });
                 });
-                parse(accessed,displayArray1,responseArray1);
-                parse(accessed,displayArray2,responseArray2);
-                parse(accessed,displayArray3,responseArray3);
+                parse(accessed, displayArray1, responseArray1);
+                parse(accessed, displayArray2, responseArray2);
+                parse(accessed, displayArray3, responseArray3);
 
-            } else{
+            } else {
                 alert("Upload your image to continue")
                 return false
             }
         });
 
+        function uint8ToString(buf) {
+            var i, length, out = '';
+            for (i = 0, length = buf.length; i < length; i += 1) {
+                out += String.fromCharCode(buf[i]);
+            }
+            return out;
+        }
+
+        $('#5c').click(function () {
+
+            //getting my form id
+            var form = document.getElementById('enroll-form')
+
+            // binding the submit action to ajax push
+            jQuery(form).bind('submit', function (event) {
+                event.preventDefault();
+                var form = this;
+                var json = convertFormToJSON(form);
+
+                if($('#user-image').val() == null) {
+                    alert ("please enter an image")
+                    return;
+                }
+
+                var image = $('#user-image').prop('files')[0];
+
+                var reader = new FileReader();
+                reader.readAsBinaryString(image);
+
+                var blob;
+                reader.onload = function() {
+                    blob = btoa(reader.result);
+                    json['image'] = blob;
+
+                    console.log(json);
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/submit.php",
+                        data: json,
+                        dataType: "json",
+                    }).done(function () {
+                        $("#confirm, #confirm-head, #confirm-form, #confirm-button").fadeOut(300, function () {
+                            //pass in thank you view
+                            $('#thankyou').fadeIn(500, progressbar.animate(1, {
+                                duration: 800,
+                                from: {color: '#2068a4'},
+                                to: {color: '#233d70'},
+                            }, progressbar.setText('100%')));
+                            $('#progress-text').html(" Welcome onboard the leading team ")
+                        });
+
+
+                    }).fail(function () {
+
+                        //codeblock for activating modal programmatically
+                        $('.enroll-error').modal('show')
+                    })
+                };
+
+            })
+        });
+
     });
+
+
 </script>
 <script>
     Dropzone.options.upload = false
-    $(document).ready(function(){
+    $(document).ready(function () {
         $("#upload").dropzone({
             url: "/uploads",
             dictDefaultMessage: ' Click or drag a passport sized photograph',
@@ -1578,13 +1970,24 @@
             maxFiles: '1',
             paramName: "file", // The name that will be used to transfer the file
             maxFilesize: 2, // MB
-            accept: function(file, done) {
-                console.log("uploaded");
-                done();
+            accept: function (file, done) {
+                reader = new FileReader();
+                reader.onload = handleReaderLoad;
+                reader.readAsDataURL(file);
+                function handleReaderLoad(evt) {
+                    document.getElementById("9")
+                        .setAttribute('value', evt.target.result);
+                    form = $('#upload');
+                    $.ajax({
+                        type: "POST",
+                        url: "/upload",
+                        data: form.serialize(),
+                    });
+                }
             },
-            init: function() {
-                this.on("addedfile", function() {
-                    if (this.files[1]!=null){
+            init: function () {
+                this.on("addedfile", function () {
+                    if (this.files[1] != null) {
                         this.removeFile(this.files[0]);
                     }
                 });
