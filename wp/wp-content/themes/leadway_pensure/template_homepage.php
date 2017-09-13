@@ -111,8 +111,8 @@ get_header();
     <?php if ($faq_items): ?>
 
         <div class="row message-box-container">
-            <div class="col-12 col-md-5  message-box text-center">
-                <p class="message-box" data-aos="fade-right">
+            <div class="col-12 col-md-5 message-box text-center">
+                <p class="v-align">
                     <?= get_field("faq_text") ?>
                 </p>
             </div>
@@ -289,25 +289,20 @@ get_header();
         </div>
     </div>
     <div class="row">
-        <div class="hidden-sm-down col-lg-11 call-s8 mx-auto">
+        <div class="col-12 call-s8">
             <div class="s8-txt">
                 <?= get_field("info_section_4") ?>
             </div>
             <div class="hidden-sm-down" id="s8-pic" data-aos="fade-left"><img
                     src="<?php echo get_bloginfo('template_directory'); ?>/images/mobile.png" alt=""></div>
         </div>
-        <div class="hidden-md-up col-12 call-s8">
-            <div class="s8-txt">
-                <?= get_field("info_section_4") ?>
-            </div>
-        </div>
     </div>
     <div class="row">
-        <div class="col-lg-11 reg mx-auto">
+        <div class="col-12 reg">
             <div class="hidden-sm-down reg-pic float-left" data-aos="fade"><img
                     src="<?php echo get_bloginfo('template_directory'); ?>/images/jar.png" alt="">
             </div>
-            <div class="reg-txt float-right">
+            <div class="reg-txt">
                 <?= get_field("info_section_5") ?>
                 <div class="hidden-md-up text-center"><a href="enroll.html" class="btn btn-outline-blue">Get Started</a>
                 </div>
@@ -367,72 +362,82 @@ get_header();
 <?php get_footer(); ?>
 <!--<script src="--><?php //echo get_bloginfo('template_directory'); ?><!--/js/index.js"></script>-->
 <script>
-    $(window).scroll(function () {
-        if ($(document).scrollTop() > 5) {
-            $('.scroll-btn').hide();
-        } else {
-            $('.scroll-btn').show();
+    $(document).ready(function(){
+        //Resize container based on desktop or mobile viewport.
+        var size = window.innerWidth;
+        if (size <= 991) {
+            $(".container").attr("class", "container-fluid").css("overflow","hidden");
         }
 
-        if ($(document).scrollTop() > 100) {
-            $('#slider-icon, .style3').fadeOut(800);
-            $('.navStyle2').fadeIn(1000);
-        } else {
-            $('.style3, #slider-icon').fadeIn(1000);
-            $('.navStyle2').fadeOut(800);
-        }
-    });
-
-    $('#customer-slide, #mob-customer-slide').carousel({
-        interval: 15000
-    });
-
-    $('#client-area').mouseenter(function () {
-        $('#customer-slide').carousel('pause');
-        $('#customer-slide .carousel-control-next, #customer-slide .carousel-control-prev').css('display', 'flex');
-    }).mouseleave(function () {
-        $('#customer-slide').carousel('cycle');
-        $('#customer-slide .carousel-control-next, #customer-slide .carousel-control-prev').css('display', 'none');
-    });
-
-    $('#customer-slide').on('slide.bs.carousel', function (ev) {
-        var id = ev.relatedTarget.id;
-        id = parseInt(id);
-        switch (id) {
-            case 1:
-                $('#emp-txt, #retr-txt').hide();
-                $('#grad-txt').show();
-                break;
-            case 2:
-                $('#grad-txt, #retr-txt').hide();
-                $('#emp-txt').show();
-                break;
-            case 3:
-                $('#emp-txt, #grad-txt').hide();
-                $('#retr-txt').show();
-                break;
-        }
-    });
-
-
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        merge: true,
-        margin: 10,
-        video: true,
-        videoHeight: 360,
-        videoWidth: 480,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 5) {
+                $('.scroll-btn').hide();
+            }else{
+                $('.scroll-btn').show();
             }
-        }
+
+            if ($(document).scrollTop() > 100 ){
+                $('#slider-icon, .style3').fadeOut(800);
+                $('.navStyle2').fadeIn(1000);
+            }else{
+                $('.style3, #slider-icon').fadeIn(800);
+                $('.navStyle2').fadeOut(500);
+            }
+        });
+
+        $('#search-landing').click(function(){
+            $('#scroll-btn').trigger('click');
+            setTimeout(function(){
+                $('#search-index').focus();
+            }, 800)
+        });
+
+        $('#client-area').mouseenter(function(){
+            $('#customer-slide').carousel('pause');
+            $('#customer-slide .carousel-control-next, #customer-slide .carousel-control-prev').css('display', 'flex');
+        }).mouseleave(function(){
+            $('#customer-slide').carousel('cycle');
+            $('#customer-slide .carousel-control-next, #customer-slide .carousel-control-prev').css('display', 'none');
+        });
+
+        $('#customer-slide').on('slide.bs.carousel', function (ev){
+            var id = ev.relatedTarget.id;
+            id = parseInt(id);
+            switch (id) {
+                case 1:
+                    $('#emp-txt, #retr-txt').hide();
+                    $('#grad-txt').show();
+                    break;
+                case 2:
+                    $('#grad-txt, #retr-txt').hide();
+                    $('#emp-txt').show();
+                    break;
+                case 3:
+                    $('#emp-txt, #grad-txt').hide();
+                    $('#retr-txt').show();
+                    break;
+            }
+        });
+
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            merge: true,
+            margin:10,
+            video: true,
+            videoHeight: 360,
+            videoWidth: 480,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        });
     });
 </script>
 

@@ -18,13 +18,18 @@
     flex: 1 1 auto;
 }
 
-#main__header-menu li {
+#main__header-menu > li {
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     text-align: center;
 }
+
+#main__header-menu .dropdown-menu li {
+    display: table-cell;
+}
+
 #main__header-menu .menu-item-has-children {
     position: relative;
 }

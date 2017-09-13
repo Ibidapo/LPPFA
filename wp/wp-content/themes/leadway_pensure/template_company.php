@@ -196,8 +196,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/dir1-img.png"
-                                             class="figure-img img-fluid rounded" alt="Oye Hassan-Odukale">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Oye Hassan-Odukale">
                                         <figcaption class="figure-caption text-center">
                                             Oye Hassan-Odukale<br>
                                             <span class="designation">Charmain</span>
@@ -236,7 +235,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Adedeji Aderonke">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/female.png" class="figure-img img-fluid rounded" alt="Adedeji Aderonke">
                                         <figcaption class="figure-caption text-center">
                                             Aderonke Adedeji<br>
                                             <span class="designation">Managing Director</span>
@@ -266,7 +265,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Balla Swamy">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Balla Swamy">
                                         <figcaption class="figure-caption text-center">
                                             Dr. Balla Swamy<br>
                                             <span class="designation">Director</span>
@@ -339,7 +338,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Kofo Majekodunmi">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Kofo Majekodunmi">
                                         <figcaption class="figure-caption text-center">
                                             Kofo Majekodunmi<br>
                                             <span class="designation">Director</span>
@@ -367,7 +366,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Ike Osakwe">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Ike Osakwe">
                                         <figcaption class="figure-caption text-center">
                                             Ike Osakwe<br>
                                             <span class="designation">Director</span>
@@ -404,7 +403,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Tunde Hassan-Odukale">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Tunde Hassan-Odukale">
                                         <figcaption class="figure-caption text-center">
                                             Tunde Hassan-Odukale<br>
                                             <span class="designation">Director</span>
@@ -438,7 +437,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Ibrahim Waziri">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Ibrahim Waziri">
                                         <figcaption class="figure-caption text-center">
                                             Ibrahim Waziri<br>
                                             <span class="designation">Director</span>
@@ -474,7 +473,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Lanre Idris">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Lanre Idris">
                                         <figcaption class="figure-caption text-center">
                                             Lanre Idris<br>
                                             <span class="designation">ED, Operations</span>
@@ -509,7 +508,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Olusakin Labeodan">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Olusakin Labeodan">
                                         <figcaption class="figure-caption text-center">
                                             Olusakin Labeodan<br>
                                             <span class="designation">ED, Sales & Marketing</span>
@@ -593,7 +592,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Abayomi Adesope">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Abayomi Adesope">
                                         <figcaption class="figure-caption text-center">
                                             Abayomi Adesope<br>
                                             <span class="designation">Chief Financial Officer</span>
@@ -614,7 +613,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Adesegun Akadiri">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Adesegun Akadiri">
                                         <figcaption class="figure-caption text-center">
                                             Adesegun Akadiri<br>
                                             <span class="designation">Head, Internal Audit & Control</span>
@@ -638,7 +637,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Osarhieme Osaghae">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Osarhieme Osaghae">
                                         <figcaption class="figure-caption text-center">
                                             Osarhieme Osaghae<br>
                                             <span class="designation">Head, Business Development</span>
@@ -658,7 +657,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Titilola Bashorun">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/female.png" class="figure-img img-fluid rounded" alt="Titilola Bashorun">
                                         <figcaption class="figure-caption text-center">
                                             Titilola Bashorun<br>
                                             <span class="designation">Head, Human Resources</span>
@@ -693,7 +692,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Akindele Fayombo">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Akindele Fayombo">
                                         <figcaption class="figure-caption text-center">
                                             Akindele O. Fayombo<br>
                                             <span class="designation">Head, Compliance</span>
@@ -731,7 +730,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Olusola Ayodele">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Olusola Ayodele">
                                         <figcaption class="figure-caption text-center">
                                             Olusola Ayodele<br>
                                             <span class="designation">Head, Customer Relationship Management</span>
@@ -757,7 +756,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Sunkanmi Shuaib">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Sunkanmi Shuaib">
                                         <figcaption class="figure-caption text-center">
                                             Sunkanmi Shuaib<br>
                                             <span class="designation">Head, Information Technology</span>
@@ -793,7 +792,7 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-                                        <img src="..." class="figure-img img-fluid rounded" alt="Austin Okoje">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Austin Okoje">
                                         <figcaption class="figure-caption text-center">
                                             Austin Okoje<br>
                                             <span class="designation">Head, Risk Management/Strategy</span>
@@ -868,45 +867,19 @@ include_once 'mail/company.php';
             </div>
             <div class="row custodian text-center">
                 <div class="col-12"><h3>Custodians</h3></div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top mx-auto" src="images/uba.png" alt="UBA Custodian">
-
-                        <div class="card-block">
-                            <p class="card-text">
-                                22B, Idowu Taylor Street,<br>
-                                Victoria Island,<br>
-                                Lagos.
-                            </p>
+                <?php foreach ($custodians as $custodian): ?>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top mx-auto" src="<?= $custodian['logo']['url'] ?>"
+                                 alt="<?= $custodian['logo']['alt'] ?>">
+                            <div class="card-block">
+                                <p class="card-text">
+                                    <?= $custodian['address'] ?>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top mx-auto" src="images/firstbank.png" alt="First Pension Custodian">
-
-                        <div class="card-block">
-                            <p class="card-text">
-                                6, Maduike Street,<br>
-                                Ikoyi,<br>
-                                Lagos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img class="card-img-top mx-auto" src="images/zenith.png" alt="Zenith Pension Custodian">
-
-                        <div class="card-block">
-                            <p class="card-text">
-                                22, Akin Adesola Street,<br>
-                                Victoria Island,<br>
-                                Lagos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach ?>
             </div>
         </div>
         <div class="tab-pane fade col-12" role="tabpanel" id="f-rep">
