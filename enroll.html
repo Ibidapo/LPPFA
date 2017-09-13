@@ -108,7 +108,7 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group">
                                 <label class="field-label"> Gender </label>
-                                <select name=pid[Gender] class="form-control language col-sm-7 mx-auto" id=gender  style="border: 1px solid white" data-parsley-group="block1" required="">
+                                <select name=pidgender class="form-control language col-sm-7 mx-auto" id=gender  style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value="" id="default">Select gender</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
@@ -119,7 +119,7 @@
 
                             <div class="form-group ">
                                 <label class="field-label"> Status </label>
-                                <select name=pid[relationship-status]  class="form-control language col-sm-7 mx-auto" id=status  style="border: 1px solid white" data-parsley-group="block1" required="">
+                                <select name=pidrelationshipstatus  class="form-control language col-sm-7 mx-auto" id=status  style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value="" id="default">Select status</option>
                                     <option value="Married">Married</option>
                                     <option value="Single">Single</option>
@@ -130,7 +130,7 @@
 
                             <div class="form-group ">
                                 <label class="field-label"> Birthday </label>
-                                <input name=pid[birthday] type="date" class="form-control language col-sm-7 mx-auto text-center" id=birthday  data-parsley-group="block1" style="border: 1px solid white" required="" >
+                                <input name=pidbirthday type="date" class="form-control language col-sm-7 mx-auto text-center" id=birthday  data-parsley-group="block1" style="border: 1px solid white" required="" >
                             </div>
                         </div>
 
@@ -141,7 +141,7 @@
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> State of origin </label>
-                                <select name=pid[state-of-origin] class="form-control language col-sm-7 mx-auto" id=soo  style="border: 1px solid white" data-parsley-group="block1" required="">
+                                <select name=pidstateoforigin class="form-control language col-sm-7 mx-auto" id=soo  style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value="">Select State </option>
                                     <option value="abia">Abia</option>
                                     <option value="abuja">Abuja</option>
@@ -187,7 +187,7 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group" id=lgaholder>
                                 <label class="field-label" id="lga-label"> LGA </label>
-                                <select name=pid[LGA]  class="form-control language col-sm-7 mx-auto" id=lga  style="border: 1px solid white" data-parsley-group="block1" required="">
+                                <select name=pidlga  class="form-control language col-sm-7 mx-auto" id=lga  style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value=""> select your local government </option>    
                                 </select>
 
@@ -196,7 +196,7 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Nationality </label>
-                                <select name=pid[nationality]  class="form-control language col-sm-7 mx-auto" id=nation  style="border: 1px solid white" data-parsley-group="block1" required="">
+                                <select name=pidnationality  class="form-control language col-sm-7 mx-auto" id=nation  style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value=""> select your nationality </option>
                                     <option value="Afghanistan">Afghanistan</option>
                                     <option value="Aland Islands">Aland Islands</option>
@@ -456,7 +456,7 @@
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> ID type </label>
-                                <select name=pid[Identification-mode] class="form-control language col-sm-7 mx-auto" id=idt style="border: 1px solid white" data-parsley-group="block1" required="">
+                                <select name=pididentificationmode class="form-control language col-sm-7 mx-auto" id=idt style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value="">Select ID</option>
                                     <option value= "Drivers License"> Drivers License </option>
                                     <option value= "National ID"> National ID card </option>
@@ -468,13 +468,13 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Email </label>
-                                <input name=pid[Email] type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-email placeholder="local government area" style="border: 1px solid white" readonly>
+                                <input name=pidemail type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-email placeholder="local government area" style="border: 1px solid white" readonly>
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Mobile No </label>
-                                <input name=pid[Mobile-no] type="" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-mno placeholder="local government area" style="border: 1px solid white" readonly>
+                                <input name=pidmobileno type="" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-mno placeholder="local government area" style="border: 1px solid white" readonly>
                             </div>
                         </div>
                     </div>
@@ -512,19 +512,21 @@
                     <div class="row">
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <label class="field-label"> Name of organization </label>
-                            <input name=Employment-details[Organization] type="text" class="form-control language col-sm-7 mx-auto text-center" id="org" placeholder="Organization" style="border: 1px solid white" required="" data-parsley-group="block2">
+                            <input name=organization type="text" class="form-control language col-sm-7 mx-auto text-center" id="org" placeholder="Organization" style="border: 1px solid white" required="" data-parsley-group="block2">
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group">
                                 <label class="field-label"> Address </label>
-                                <input name=Employment-details[Address] type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgAdd" placeholder="Address" style="border: 1px solid white" required="" data-parsley-group="block2">
+                                <input name=organisationaddress type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgAdd" placeholder="Address" style="border: 1px solid white" required="" data-parsley-group="block2">
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
 
                             <div class="form-group" id="orgLgaHolder">
                                 <label class="field-label" id="orgLgaLabel"> LGA </label>
-                                <input name=Employment-details[LGA] type="text" class="form-control language col-sm-7 mx-auto text-center" id="orgLga" placeholder="Local Government Area" style="border: 1px solid white" required="" data-parsley-group="block2">
+                                <select name=organisationlga type="text" class="form-control language col-sm-7 mx-auto text-center" id="orgLga" placeholder="Local Government Area" style="border: 1px solid white" required="" data-parsley-group="block2">
+                                <option> Select local government area </option>s
+                                </select>
                             </div>
                         </div>
 
@@ -535,58 +537,58 @@
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> State </label>
-                                <select name=Employment-details[state] class="form-control language col-sm-7 mx-auto" id="orgState" style="border: 1px solid white" required="" data-parsley-group="block2">
+                                <select name=organisationstate class="form-control language col-sm-7 mx-auto" id="orgState" style="border: 1px solid white" required="" data-parsley-group="block2">
                                     <option value="Select State of Origin" id="default">Select State </option>
-                                    <option value="Abia">Abia</option>
-                                    <option value="Abuja">Abuja</option>
-                                    <option value="Adamawa">Adamawa</option>
-                                    <option value="Akwa Ibom">Akwa Ibom</option>
-                                    <option value="Anambra">Anambra</option>
-                                    <option value="Bauchi">Bauchi</option>
-                                    <option value="Bayelsa">Bayelsa</option>
-                                    <option value="Benue">Benue</option>
-                                    <option value="Borno">Borno</option>
-                                    <option value="Cross River">Cross River</option>
-                                    <option value="Delta">Delta</option>
-                                    <option value="Ebonyi">Ebonyi</option>
-                                    <option value="Edo">Edo</option>
-                                    <option value="Ekiti">Ekiti</option>
-                                    <option value="Enugu">Enugu</option>
-                                    <option value="Gombe">Gombe</option>
-                                    <option value="Imo">Imo</option>
-                                    <option value="Jigawa">Jigawa</option>
-                                    <option value="Kaduna">Kaduna</option>
-                                    <option value="Kano">Kano</option>
-                                    <option value="Katsina">Katsina</option>
-                                    <option value="Kebbi">Kebbi</option>
-                                    <option value="Kogi">Kogi</option>
-                                    <option value="Kwara">Kwara</option>
-                                    <option value="Lagos">Lagos</option>
-                                    <option value="Nasarawa">Nasarawa</option>
-                                    <option value="Niger">Niger</option>
-                                    <option value="Ogun">Ogun</option>
-                                    <option value="Ondo">Ondo</option>
-                                    <option value="Osun">Osun</option>
-                                    <option value="Oyo">Oyo</option>
-                                    <option value="Plateau">Plateau</option>
-                                    <option value="Rivers">Rivers</option>
-                                    <option value="Sokoto">Sokoto</option>
-                                    <option value="Taraba">Taraba</option>
-                                    <option value="Yobe">Yobe</option>
-                                    <option value="Zamfara">Zamfara</option>
+                                    <option value="abia">Abia</option>
+                                    <option value="abuja">Abuja</option>
+                                    <option value="adamawa">Adamawa</option>
+                                    <option value="akwa Ibom">Akwa Ibom</option>
+                                    <option value="anambra">Anambra</option>
+                                    <option value="bauchi">Bauchi</option>
+                                    <option value="bayelsa">Bayelsa</option>
+                                    <option value="benue">Benue</option>
+                                    <option value="borno">Borno</option>
+                                    <option value="cross River">Cross River</option>
+                                    <option value="delta">Delta</option>
+                                    <option value="ebonyi">Ebonyi</option>
+                                    <option value="edo">Edo</option>
+                                    <option value="ekiti">Ekiti</option>
+                                    <option value="enugu">Enugu</option>
+                                    <option value="gombe">Gombe</option>
+                                    <option value="imo">Imo</option>
+                                    <option value="jigawa">Jigawa</option>
+                                    <option value="kaduna">Kaduna</option>
+                                    <option value="kano">Kano</option>
+                                    <option value="katsina">Katsina</option>
+                                    <option value="kebbi">Kebbi</option>
+                                    <option value="kogi">Kogi</option>
+                                    <option value="kwara">Kwara</option>
+                                    <option value="lagos">Lagos</option>
+                                    <option value="nasarawa">Nasarawa</option>
+                                    <option value="niger">Niger</option>
+                                    <option value="ogun">Ogun</option>
+                                    <option value="ondo">Ondo</option>
+                                    <option value="osun">Osun</option>
+                                    <option value="oyo">Oyo</option>
+                                    <option value="plateau">Plateau</option>
+                                    <option value="rivers">Rivers</option>
+                                    <option value="sokoto">Sokoto</option>
+                                    <option value="taraba">Taraba</option>
+                                    <option value="yobe">Yobe</option>
+                                    <option value="zamfara">Zamfara</option>
                                 </select>
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> File No/Service No </label>
-                                <input name=Employment-details[file/service-no] type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgNo" placeholder="File or service number" style="border: 1px solid white" data-parsley-group="block2">
+                                <input name=organisationfile/service-no type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgNo" placeholder="File or service number" style="border: 1px solid white" data-parsley-group="block2">
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group">
                                 <label class="field-label"> Date of employment </label>
-                                <input name=Employment-details[date-of-employment] type="date" class="form-control col-sm-7 language mx-auto text-center" id="doe" placeholder="Address" style="border: 1px solid white" required="" data-parsley-group="block2">
+                                <input name=dateofemployment type="date" class="form-control col-sm-7 language mx-auto text-center" id="doe" placeholder="Address" style="border: 1px solid white" required="" data-parsley-group="block2">
                             </div>
                         </div>
 
@@ -597,7 +599,7 @@
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group">
                                 <label class="field-label"> State of posting </label>
-                                <select name=Employment-details[state-of-posting] class="form-control language col-sm-7 mx-auto" id="sop" style="border: 1px solid white" data-parsley-group="block2">
+                                <select name=stateofposting class="form-control language col-sm-7 mx-auto" id="sop" style="border: 1px solid white" data-parsley-group="block2">
                                     <option value="Select State of Origin" id="default">Select State </option>
                                     <option value="Abia">Abia</option>
                                     <option value="Abuja">Abuja</option>
@@ -642,7 +644,7 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Current PFA </label>
-                                <select name=Employment-details[current-PFA] class="form-control language col-sm-7 mx-auto" id="cpfa" style="border: 1px solid white" required="" data-parsley-group="block2">
+                                <select name=currentpfa class="form-control language col-sm-7 mx-auto" id="cpfa" style="border: 1px solid white" required="" data-parsley-group="block2">
                                     <option value="" id="default"> Select Provider</option>
                                     <option value="Not registered"> Not registered </option>
                                     <option value="AIICO pension Managers"> AIICO pension Managers </option>
@@ -671,7 +673,7 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Pin number </label>
-                                <input name=Employment-details[pin] type="number" class="form-control col-sm-7 language mx-auto text-center" id="pin" placeholder="Mobile number" style="border: 1px solid white" >
+                                <input name=employmentdetailspin type="number" class="form-control col-sm-7 language mx-auto text-center" id="pin" placeholder="Mobile number" style="border: 1px solid white" >
                             </div>
                         </div>
                     </div>
@@ -710,7 +712,7 @@
                     <div class="row">
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <label class="field-label"> Title </label>
-                            <select name="kin-details[title]" class="form-control language col-sm-7 mx-auto" id="k-title" style="border: 1px solid white" data-parsley-group="block3" required="">
+                            <select name="kintitle" class="form-control language col-sm-7 mx-auto" id="k-title" style="border: 1px solid white" data-parsley-group="block3" required="">
                                 <option value="" id="default"> Select title </option>
                                 <option value="Mr"> Mr. </option>
                                 <option value="Miss"> Miss. </option>
@@ -723,14 +725,14 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group">
                                 <label class="field-label"> Last name </label>
-                                <input name=kin-details[last-name] type="text" class="form-control col-sm-7 language mx-auto text-center" id="k-lname" placeholder="Address" style="border: 1px solid white" data-parsley-group="block3" required="">
+                                <input name=kinlastname type="text" class="form-control col-sm-7 language mx-auto text-center" id="k-lname" placeholder="Address" style="border: 1px solid white" data-parsley-group="block3" required="">
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
 
                             <div class="form-group">
                                 <label class="field-label"> First name </label>
-                                <input name=kin-details[first-name] type="text" class="form-control language col-sm-7 mx-auto text-center" id="k-fname" style="border: 1px solid white" data-parsley-group="block3" required="">
+                                <input name=kinfirstname type="text" class="form-control language col-sm-7 mx-auto text-center" id="k-fname" style="border: 1px solid white" data-parsley-group="block3" required="">
                             </div>
                         </div>
 
@@ -741,7 +743,7 @@
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Relationship </label>
-                                <select name= kin-details[relationship] class="form-control language col-sm-7 mx-auto" id="relationship" style="border: 1px solid white" data-parsley-group="block3" required="">
+                                <select name= kinrelationship class="form-control language col-sm-7 mx-auto" id="relationship" style="border: 1px solid white" data-parsley-group="block3" required="">
                                     <option value="" id="default"> Choose type </option>
                                     <option value="spouse"> Spouse </option>
                                     <option value="relative"> Relative </option>
@@ -754,7 +756,7 @@
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group">
                                 <label class="field-label"> Gender </label>
-                                <select name=kin-details[Gender] class="form-control language col-sm-7 mx-auto" id="k-gender" style="border: 1px solid white" data-parsley-group="block3" required="">
+                                <select name=kingender class="form-control language col-sm-7 mx-auto" id="k-gender" style="border: 1px solid white" data-parsley-group="block3" required="">
                                     <option value="" id="default"> Select Gender </option>
                                     <option value="Male"> Male </option>
                                     <option value="Male"> Female </option>
@@ -764,7 +766,7 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Address </label>
-                                <input name=kin-details[Address]  type="text" class="form-control col-sm-7 language mx-auto text-center" id="k-add" placeholder="Address" style="border: 1px solid white" data-parsley-group="block3" required="">
+                                <input name=kinaddress  type="text" class="form-control col-sm-7 language mx-auto text-center" id="k-add" placeholder="Address" style="border: 1px solid white" data-parsley-group="block3" required="">
                             </div>
                         </div>
 
@@ -775,7 +777,7 @@
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group">
                                 <label class="field-label"> State of origin </label>
-                                <select name= kin-details[state] class="form-control language col-sm-7 mx-auto" id="k-soo" style="border: 1px solid white" data-parsley-group="block3" required="">
+                                <select name="kinstate" class="form-control language col-sm-7 mx-auto" id="k-soo" style="border: 1px solid white" data-parsley-group="block3" required="">
                                     <option value="" id="default">Select State </option>
                                     <option value="abia">Abia</option>
                                     <option value="abuja">Abuja</option>
@@ -818,15 +820,17 @@
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
-                            <div class="form-group ">
-                                <label class="field-label"> LGA </label>
-                                <input name=kin-detail[LGA] type="text" class="form-control col-sm-7 language mx-auto text-center" id="k-lga" placeholder="Mobile number" style="border: 1px solid white" data-parsley-group="block3" required="">
+                            <div class="form-group " id="k-lga-holder">
+                                <label class="field-label" id="k-lga-label"> LGA </label>
+                                <select name=kinlga type="text" class="form-control col-sm-7 language mx-auto text-center" id="k-lga" placeholder="Mobile number" style="border: 1px solid white" data-parsley-group="block3" required="">
+                                <option> Select local government area </option>
+                                </select>
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Mobile no </label>
-                                <input name=kin-details[Mobile-no]  type="number" class="form-control col-sm-7 language mx-auto text-center" id="k-mno" placeholder="Mobile number" style="border: 1px solid white" type="number" data-parsley-group="block3" required="">
+                                <input name=kinmobileno  type="number" class="form-control col-sm-7 language mx-auto text-center" id="k-mno" placeholder="Mobile number" style="border: 1px solid white" type="number" data-parsley-group="block3" required="">
                             </div>
                         </div>
                     </div>
@@ -1636,7 +1640,7 @@
                 newSelectBox.id = 'lga';
                 newSelectBox.setAttribute( 'class', 'form-control language col-sm-7 mx-auto' ); 
                 newSelectBox.style = 'border: 1px solid white';
-                newSelectBox.name = 'pid[LGA]';
+                newSelectBox.name = 'pidlga';
                 var newLabel = document.createElement('label');
                 newLabel.class ='field-label';
                 newLabel.id = "lga-label";                 
@@ -1651,16 +1655,90 @@
                 
                 if (state === "abia"){
 
-                    lgaArray = [ "Aba North|a", "Aba South|b", "Arochukwu|c", "Bende|d", "Ikwuano|e", "Isiala-Ngwa North |f", "Isiala-Ngwa South |b", "Isuikwato|c", "Obi Nwa|d", "Ohafia|e", "Osisioma |f","Ngwa|g", "Ugwunagbo|g", "Ukwa East|g", "Ukwa West|g","Umuahia North|g","Umuahia South|g", "Umu-Neochi|h" ];
+                    lgaArray = [ "Aba North| aba north", "Aba South| aba south", "Arochukwu| Arochukwu", "Bende|bende", "Ikwuano| ikwuano", "Isiala-Ngwa North | isiala-ngwa north", "Isiala-Ngwa South | isiala-ngwa south", "Isuikwato| isuikwato", "Obi Nwa| obi nwa", "Ohafia| ohafia", "Osisioma | osisioma","Ngwa| ngwa", "Ugwunagbo| ugwunagbo", "Ukwa East| ukwa", "Ukwa West| ukwa west","Umuahia North| umuahia north","Umuahia South| umuahia south", "Umu-Neochi| umu-neochi" ];
                    
 
 
                 }else if (state === "abuja"){
-                    lgaArray =  [ "Gwagwalada|g", "Kuje|h", "Abaji|i", "Abuja Municipal|j", "Bwari|k", "Kwali|i" ];
+                    lgaArray =  [ "Gwagwalada|gwagwalada", "Kuje| kuje", "Abaji| abaji", "Abuja Municipal| Abuja municipal", "Bwari| bwari", "Kwali|kwali" ];
 
-                }else 
+                }else if (state === "adamawa"){
+                    lgaArray  = ["Demsa|demsa", "Fufore|fufore", "Ganaye|ganaye", "Gireri|gireri", "Gombi|gombi", "Guyuk|guyuk", "Hong|hong", "Jada|jada", "Lamurde|lamurde", "Madagali|madagali", "Maiha|maiha", "Mayo-Belwa|mayo-belwa", "Michika|michika", "Mubi North|mubi north", "Mubi South| mubi south", "Numan|numan", "Shelleng|shelleng", "Song|song", "Toungo|toungo", "Yola North| yola north", "Yola South|yola south"];
+
+                }else if (state === "akwaibom"){
+                    lgaArray = ["Abak|abak", "Eastern Obolo|eastern obolo", "Eket|eket","Esit Eket|esit eket","Essien Udim|essien udim", "Etim Ekpo|etim ekpo", "Etinan|etinan", "Ibeno|ibeno", "Ibeskipo Asutan|ibeskipo asutan","Ibiono Ibom|ibiono ibom","ika|ika","ikono|ikono", "Ikot Abasi|ikot abasi","Ikot Ekpene|ikot ekpene", "Ini|ini","Itu|itu","Mbo|mbo","Mkpat Enin|mkpat enin","Nsit Atai|nsit atai","Nsit Ibom|nsit ibom", "Nsit Ubium|nsit ubium","Obot Akara|obot akara","Okobo|okobo","Onna | onna","Oron|oron","Oruk Anam| oruk anam", "Udung Uko | udung uko", "ukanafun|ukanafun", "Uruan|uruan", "Urue-Offong/Oruko| urue-offong/oruko"];
+                }else if (state === "anambra"){
+                    lgaArray = ["Aguata|aguata", "Anambra East | anambra east", "Anambra West|anambra west", "Anaocha|anaocha", "Awka North|awka north", "Ayamelum|ayamelum", "Dunukofia|dunukofia", "Ekwusigo|ekwusigo", "Idemili North | idemili north", "Ihiala|ihiala", "Njikoka|njikoka", "Nnewi north| nnewi north", "nnewi south| nnewi south", "Ogbaru|ogbaru", "Onitsha north|onitsha north", "Onitsha south | onitsha south", "Orumba North|orumba north", "Oyi|oyi"];
+                }else if (state === "bauchi"){
+                    lgaArray = ["Alkaleri|alkaleri", "Bauchi|bauchi", "Bogoro|bogoro", "Damban|damban", "Darazo|darazo", "Dass|dass", "Ganjuwa|ganjuwa","Giade|giade", "Itas/Gadau|itas/gadau","Jama'are|jama'are","Katagum|katagum", "Kirfi|kirfi", "Misau|misau", "Ningi|ningi", "Shira|shira", "Tafawa-Balewa|tafawa-balewa","Toro|toro","Warji|warji","Zaki|zaki"];, 
+                }else if(state === "bayelsa"){
+                    lgaArray = ["Brass|brass", "Ekeremor|ekeremor","Kolokuma/Opokuma|Kolokuma/Opokuma","Nembe|nembe","Ogbia|ogbia","Sagbama|sagbama","Southern Jaw|southern jaw", "yenegoa"] 
+                }else if(state === "benue"){
+                    lgaArray = ["Ado|ado", "Agatu|agatu", "Apa|apa", "Buruku|buruku", "Gboko|gboko", "Guma|guma", "Gwer East|gwer east", "Gwer West|gwer west","Kastina-Ala|kastina-ala","Kwande|kwande","Logo|logo","Makurdi|makurdi", "Obi|obi","Ogbadibo|ogbadibo","Oju|oju","Okpokwu|okpokwu","Ohimini|ohimini","Oturkpo|oturkpo","Tarka|tarka","Ukum|ukum","Ushongo|ushongo","Vandeikya|vandeikya"];
+                }else if(state === "bornu"){
+                    lgaArray = ["Abadam|abadam", "Askira|askira", "Bama|bama", "Bayo|bayo", "Biu| biu", "Chibok|chibok", "Damboa|damboa", "Dikwa|dikwa", "Gubio|gubio", "Guzamala|guzamala", "Gwoza|gwoza", "Hawul|hawul", "Jere|jere", "Kaga|kaga","Kala/Balge|kala/balge","Kondua|kondua","Kukuwa|kukuwa","Kwaya Kusar|Kwaya kusar", "Mafa|mafa","Magumeri|magumeri","Maiduguri|maiduguri","Marte|marte","Mobbar|mobbar","Monguno|monguno","Ngala|ngala","Nganzai|nganzai","Shani|shani"];
+                }else if(state === "cross-river"){
+                    Akpabuyo 
+
+                    lgaArray = ["Akpabuyo|akpabuyo", "Odukpani|Odukpani","Akamkpa|Akamkpa","Biase|Biase","Abi|Abi","Ikom|Ikom", "Yarkur|Yakur", "Odubra|Odubra", "Boki|boki", "Ogoja|Ogoja", "Boki|Boki", "Ogoja|Ogoja", "Yala|yala", "Obanliku|Obanliku", "Obudu|Obudu","Calabar South |Calabar South", "Etung|Etung", "Bekwara|Bekwara", "Bakassi|Bakassi", "Calabar Municipality| Calabar Municipality"];
+                }else if(state === "delta"){
+                    lgaArray = [ "Asaba Oshimili| Asaba Oshimili", "Aniocha|Aniocha", "Aniocha south| Aniocha south", "Ika South|Ika South", "Ika North-East| Ika North-East", "Ndokwa West| Ndokwa West", "Ndokwa East|Ndokwa East", "Isoko south| Isoko South","Isoko North| Isoko North", "Bomadi|Bomadi", "Burutu|Burutu", "Ughelli South| Ughelli South", "Ughelli North| Ughelli North", "Ethiope West | Ethiope West", "Ethiope East| Ethiope East", "Sapele| Sapele", "Okpe|Okpe", "Warri North|Warri North", "Warri South|Warri South", "Uvwie|Uvwie", "Udu|Udu", "Warri Central|Warri Central", "Ukwani|Ukwani","Oshimili North|Oshimili North", "Patani|Patani"];
+                }else if (state === "ebonyi"){
+                    lgaArray = ["Afikpo South| Afikpo South", "Afikpo North|Afikpo North", "Onicha|Onicha","Ohaozara|Ohaozara","Abakaliki|Abakaliki","Ishielu|Ishielu","lkwo|lkwo","Ezza|Ezza","Ezza South| Ezza South","Ohaukwu|Ohaukwu","Ebonyi|Ebonyi","Ivo|Ivo"];
+                }else if (state === "edo"){
+                    lgaArray = [];
+                }else if (state === "ekiti"){
+                    lgaArray = [];
+                }else if (state === "enugu"){
+                    lgaArray = [];
+                }else if (state === "gombe"){
+                    lgaArray = [];
+                }else if (state === "imo"){
+                    lgaArray = [];
+                }else if (state === "jigawa"){
+                    lgaArray = [];
+                }else if (state === "kaduna"){
+                    lgaArray = [];
+                }else if (state === "kano"){
+                    lgaArray = [];
+                }else if (state === "kastina"){
+                    lgaArray = [];
+                }else if (state === "kebbi"){
+                    lgaArray = [];
+                }else if (state === "kogi"){
+                     lgaArray = [];
+                }else if (state === "kwara"){
+                    lgaArray = [];
+                }else if (state === "lagos"){
+                    lgaArray = [];
+                }else if (state === "nasarawa"){
+                   lgaArray = [];
+                }else if ( state === "niger"){
+                   lgaArray = [];
+                }else if ( state === "ogun"){
+                    lgaArray = [];
+                }else if (state === "ondo"){
+                    lgaArray = [];
+                }else if (state === "osun"){
+                    lgaArray = [];
+                }else if (state === "oyo"){
+                    lgaArray = [];
+                }else if (state === "plateau"){
+                    lgaArray = [];
+                }else if (state === "rivers"){
+                    lgaArray = [];
+                }else if (state === "sokoto"){
+                     lgaArray = [];
+                }else if (state === "taraba"){
+                    lgaArray = [];
+                }else if (state === "yobe"){
+                    lgaArray = [];
+                }else if (state === "zamfara"){
+                    lgaArray = [];
+                }else{
 
                  return false 
+                };
 
                  for (var lgaOption in lgaArray){
                   var selectedLga = lgaArray[lgaOption].split("|");
@@ -1692,7 +1770,7 @@
                 newSelectBox.id = 'orgLga';
                 newSelectBox.setAttribute( 'class', 'form-control language col-sm-7 mx-auto' ); 
                 newSelectBox.style = 'border: 1px solid white';
-                newSelectBox.name = 'Employment-details[LGA]';
+                newSelectBox.name = 'organisationlga';
                 var newLabel = document.createElement('label');
                 newLabel.setAttribute('class', 'field-label');
                 newLabel.id = "orgLgaLabel";                 
@@ -1733,29 +1811,29 @@
 
                // parsing local goverment html|values based on selected state for next of kin section
 
-              $('#orgState').change(function(){
+              $('#k-soo').change(function(){
 
 
-                var state = document.getElementById('soo').value; 
+                var state = document.getElementById('k-soo').value; 
                 console.log(state);
-                var lga = document.getElementById('lga');
-                var lgalabel = document.getElementById('lga-label');
+                var lga = document.getElementById('k-lga');
+                var lgalabel = document.getElementById('k-lga-label');
                 lga.parentNode.removeChild(lga);
                 lgalabel.parentNode.removeChild(lgalabel);
                 var newSelectBox = document.createElement('select');
-                newSelectBox.id = 'lga';
+                newSelectBox.id = 'k-lga';
                 newSelectBox.setAttribute( 'class', 'form-control language col-sm-7 mx-auto' ); 
                 newSelectBox.style = 'border: 1px solid white';
-                newSelectBox.name = 'pid[LGA]';
+                newSelectBox.name = 'kinlga';
                 var newLabel = document.createElement('label');
-                newLabel.class ='field-label';
-                newLabel.id = "lga-label";                 
+                newLabel.setAttribute('class','field-label');
+                newLabel.id = "k-lga-label";                 
                 var newLabelText = document.createTextNode('LGA');
-                var selectHolder = document.getElementById('lgaholder');
+                var selectHolder = document.getElementById('k-lga-holder');
                 selectHolder.appendChild(newLabel); 
                 newLabel.appendChild(newLabelText);
                 selectHolder.appendChild(newSelectBox);
-                var lga = document.getElementById('lga');
+                var lga = document.getElementById('k-lga');
 
                 
                 
@@ -1938,11 +2016,15 @@
 
             $("#4c").click(function(){
 
-                var form = document.getElementById('enroll-form')
+                var form = document.getElementById('enroll-form');
+
+
+
 
                  var json = convertFormToJSON(form)
 
                  console.log(json);
+                 console.log(JSON.stringify(json));
 
                 if (document.querySelector('.dz-image-preview') !== null){
                     $("#biometrics, #biometrics-head, #biometrics-form, #biometrics-button").fadeOut(300, function(){
