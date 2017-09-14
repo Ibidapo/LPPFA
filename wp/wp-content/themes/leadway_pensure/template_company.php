@@ -196,20 +196,29 @@ include_once 'mail/company.php';
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
-<<<<<<< HEAD
                                         <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/male.png" class="figure-img img-fluid rounded" alt="Oye Hassan-Odukale">
-=======
-                                        <img src="<?= array_get(get_field('chairman_photo'), 'url') ?>"
-                                             class="figure-img img-fluid rounded" alt="<?= array_get(get_field('chairman_photo'), 'alt')?>">
->>>>>>> 601e92fa431567547f1f31aa60c3cc42d8cb7b57
                                         <figcaption class="figure-caption text-center">
-                                            <?= get_field('chairman_name')?><br>
+                                           <!-- <?= get_field('chairman_name')?> -->
+                                            Oye Hassan-Odukale<br>
                                             <span class="designation">Charmain</span>
                                         </figcaption>
                                     </figure>
                                 </div>
                                 <div class="col-md-8 dir-history">
-                                    <?= get_field('chairman_description') ?>
+                                    <!-- <?= get_field('chairman_description') ?> -->
+                                    <p>Apart from being the Managing Director/ Chief Executive Officer of Leadway Assurance Group,
+                                    Oye Hassan-Odukale is now the Chairman of Leadway Pensure PFA. He is a product of Mayflower School,
+                                    Ikenne, Ogun State. He graduated from University of Houston, Texas from where he obtained both Bachelors
+                                    and Masters Degrees in Business Administration, specializing in Finance.</p>
+                                    <p>He started his career in insurance with SCIB & Company Insurance Brokers (an affiliate of Segwicks
+                                    Insurance Brokers) in 1980 and joined Leadway Assurance Company Limited in 1981, becoming Managing
+                                    Director and Chief Executive Officer of the company in 1994. He is a Munich Re scholar, being the First
+                                    West African recipient of Munich Re and Georgia State University International Visiting Fellows insurance
+                                    Program. He is accredited by the Securities and Exchange Commission as an Investment Manager and Portfolio
+                                    Adviser.</p>
+                                    <p>Oye Hassan-Odukale is on the Board of a number of reputable companies such as First Bank of Nigeria,
+                                    and the immediate past Chairman, Nigeria Insurance Association. He is also Member of the Order of the
+                                    Federal Republic (MFR).</p>
                                 </div>
                             </div>
                         </div>
@@ -570,7 +579,7 @@ include_once 'mail/company.php';
                 </div>
                 <div class="tab-pane fade col-12" id="mgt-team" role="tabpanel">
                     <div class="tab-content">
-                        <div class="tab-pane fade show active" id="mgt1" role="tabpanel">
+                        <div class="tab-pane fade" id="mgt1" role="tabpanel">
                             <div class="row">
                                 <div class="col-md-4 dir-img text-center">
                                     <figure class="figure">
@@ -809,10 +818,40 @@ include_once 'mail/company.php';
                                 </div>
                             </div>
                         </div>
+                        <div class="tab-pane fade show active" id="mgt9" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-4 dir-img text-center">
+                                    <figure class="figure">
+                                        <img src="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/female.png" class="figure-img img-fluid rounded" alt="Adedeji Aderonke">
+                                        <figcaption class="figure-caption text-center">
+                                            Aderonke Adedeji<br>
+                                            <span class="designation">Managing Director</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-md-8 dir-history">
+                                    <p>Presently the Managing Director of Leadway Pensure PFA, Mrs Adedeji was formerly
+                                        Executive Director at LPPFA.
+                                        Prior to that she was an Executive Director of both MBC International Bank
+                                        Limited and MBC Securities Limited.
+                                        She is an Associate member of The Institute of Chartered Accountant of Nigeria
+                                        (ACA) and a Fellow of Chartered
+                                        Association of Certified Accountants, UK (FCCA).</p>
+
+                                    <p>She was Head of Capital Issues Division of ICON Limited (Merchant Bankers) for 7
+                                        years from where she moved to
+                                        MBC International Bank in 1993. She was appointed an Executive Director at MBC
+                                        International Bank in 2001. Her
+                                        experience covers Retail Banking, Corporate Banking, Private Banking, Investment
+                                        Banking, Corporate Services and
+                                        Securities.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <nav class="nav nav-tabs row text-center board" role="tablist">
                         <div class="tag">Members</div>
-                        <a class="nav-link active col-md-3" data-toggle="tab" href="#mgt1" role="tab">
+                        <a class="nav-link col-md-3" data-toggle="tab" href="#mgt1" role="tab">
                             Abayomi Adesope<br>
                             <span class="designation">Chief Financial Officer</span>
                         </a>
@@ -843,6 +882,10 @@ include_once 'mail/company.php';
                         <a class="nav-link col-md-3" data-toggle="tab" href="#mgt8" role="tab">
                             Austin Okoje<br>
                             <span class="designation">Head, Risk Management/Strategy</span>
+                        </a>
+                        <a class="nav-link col-sm-6 col-md-3 mx-auto active" data-toggle="tab" href="#mgt9" role="tab">
+                            Aderonke Adedeji<br>
+                            <span class="designation">Managing Director</span>
                         </a>
                     </nav>
                 </div>

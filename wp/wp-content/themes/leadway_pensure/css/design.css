@@ -1190,12 +1190,12 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
 }
-#dir1, #dir2, #dir3, #dir4, #dir5, #dir6, #dir7, #dir8, #dir9, #mgt1, #mgt2, #mgt3, #mgt4, #mgt5, #mgt6, #mgt7, #mgt8 {
+#dir1, #dir2, #dir3, #dir4, #dir5, #dir6, #dir7, #dir8, #dir9, #mgt1, #mgt2, #mgt3, #mgt4, #mgt5, #mgt6, #mgt7, #mgt8, #mgt9 {
     margin-bottom: 50px;
     padding: 25px 0;
 }
 #dir1 p, #dir2 p, #dir3 p, #dir4 p, #dir5 p, #dir6 p, #dir7 p, #dir8 p, #dir9 p,
-#mgt1 p, #mgt2 p, #mgt3 p, #mgt4 p, #mgt5 p, #mgt6 p, #mgt7 p, #mgt8 p{
+#mgt1 p, #mgt2 p, #mgt3 p, #mgt4 p, #mgt5 p, #mgt6 p, #mgt7 p, #mgt8 p, #mgt9 p {
     padding: 0 25px;
 }
 .dir-img figure{
@@ -2512,7 +2512,7 @@ footer .table td, .table th {
 		-o-transform: translate(-50% , -50%);
 		transform: translate(-50%, -50%);
 	}
-	#dir1, #dir2, #dir3, #dir4, #dir5, #dir6, #dir7, #dir8, #dir9, #mgt1, #mgt2, #mgt3, #mgt4, #mgt5, #mgt6, #mgt7, #mgt8 {
+	#dir1, #dir2, #dir3, #dir4, #dir5, #dir6, #dir7, #dir8, #dir9, #mgt1, #mgt2, #mgt3, #mgt4, #mgt5, #mgt6, #mgt7, #mgt8, #mgt9 {
 		margin-bottom: 50px;
 		padding: 0 0 25px;
 	}
