@@ -1,24 +1,35 @@
 <?php
 $options = get_option('theme_options');
 
-$params = [
-    "RSAFund" => true,
-    "RetireeFund" => true,
-    "duration" => 0
-];
-$json_params = json_encode($params);
-$cacheKey = "leadway_rsa_rf_info-" . md5($json_params);
+$results = [];
+$cacheKey = "leadway_rsa_rf_info";
 $rsa_rf = get_transient($cacheKey);
 
 if (!$rsa_rf) {
-    $rsa_rf = wp_remote_post("https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/Chart", [
+    $rsa_rf['rsa'] = wp_remote_post("https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/Chart", [
         'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
-        'body' => json_encode($params),
+        'body' => json_encode([
+            "RSAFund" => true,
+            "duration" => 0
+        ]),
         'method' => 'POST'
     ]);
-    if (is_array($rsa_rf) && isset($rsa_rf['body'])) {
-        $rsa_rf_json = json_decode($rsa_rf['body']);
-        $rsa_rf = $rsa_rf_json->Data;
+    $rsa_rf['rf'] = wp_remote_post("https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/Chart", [
+        'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
+        'body' => json_encode([
+            "RetireeFund" => true,
+            "duration" => 0
+        ]),
+        'method' => 'POST'
+    ]);
+    if (
+        is_array($rsa_rf['rsa']) && isset($rsa_rf['rsa']['body']) &&
+        is_array($rsa_rf['rf']) && isset($rsa_rf['rf']['body'])
+    ) {
+        $rsa_json = json_decode($rsa_rf['rsa']['body']);
+        $rf_json = json_decode($rsa_rf['rf']['body']);
+        $rsa_rf['rsa'] = $rsa_json->Data;
+        $rsa_rf['rf'] = $rf_json->Data;
         set_transient($cacheKey, $rsa_rf, DAY_IN_SECONDS);
     } else {
         $rsa_rf = false;
@@ -108,7 +119,7 @@ if (!$rsa_rf) {
         <?php wp_head(); ?>
 
     </head>
-<body>
+<body style="overflow-x: hidden;">
 
 <?php if (
     is_page_template("template_socials.php") ||
@@ -130,7 +141,8 @@ if (!$rsa_rf) {
 
 <?php if (
     !is_page_template("template_enroll.php") &&
-    !is_page_template("template_login.php")
+    !is_page_template("template_login.php") &&
+    !is_page_template("template_token.php")
 ): ?>
     <!-- Mobile navigation -->
     <nav class="m-style navbar fixed-top hidden-lg-up">
@@ -198,20 +210,20 @@ if (!$rsa_rf) {
                     </td>
                     <?php if ($rsa_rf) { ?>
                         <td>
-                            <span class="head-td"> RSA FUNDS</span><br>
-                            <span>&#8358;<?= array_get($rsa_rf->values, 0) ?>
+                            <span class="head-td"> RSA FUND</span><br>
+                            <span>&#8358;<?= array_get($rsa_rf['rsa']->values, 0) ?>
                                 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png" alt="">
                             </span>
                         </td>
                         <td>
-                            <span class="head-td">RETIREE FUNDS</span><br>
-                            <span> &#8358;<?= array_get($rsa_rf->values, 0) ?>
+                            <span class="head-td">RETIREE FUND</span><br>
+                            <span> &#8358;<?= array_get($rsa_rf['rf']->values, 0) ?>
                                 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png" alt="">
                             </span>
                         </td>
                     <?php } ?>
                     <td>
-                        <a href="/login" style="color: white; font-weight: 500"> LOGIN</a>
+                        <a href="/login" style="color: white; font-weight: 500">LOGIN</a>
                     </td>
                     <td>
                         <a href="/calculator" class="nav-calc"> <img
