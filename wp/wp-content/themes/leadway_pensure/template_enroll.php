@@ -114,7 +114,7 @@
 
                             <div class="form-group ">
                                 <label class="field-label"> Birthday </label>
-                                <input name=pidbirthday type="date" class="form-control language col-sm-7 mx-auto text-center" id=birthday  data-parsley-group="block1" style="border: 1px solid white" required="" >
+                                <input name=pidbirthday type="date" class="form-control language col-sm-7 mx-auto text-center" id=birthday data-parsley-group="block1" style="border: 1px solid white" required="" >
                             </div>
                         </div>
 
@@ -451,8 +451,17 @@
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
-                                <label class="field-label"> Email </label>
-                                <input name=pidemail type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-email placeholder="local government area" style="border: 1px solid white" readonly>
+                                <label class="field-label"> Title </label>
+                                <select name=title type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-email placeholder="local government area" style="border: 1px solid white" readonly>
+<option> Select a title </option> 
+<option> Mr. </option> 
+<option> Miss. </option> 
+<option> Mrs. </option> 
+<option> Dr. </option> 
+<option> Engr. </option>
+<option> Mallam. </option> 
+<option> Archbishop. </option> 
+</select> 
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
@@ -505,21 +514,7 @@
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
-
-                            <div class="form-group" id="orgLgaHolder">
-                                <label class="field-label" id="orgLgaLabel"> LGA </label>
-                                <select name=organisationlga type="text" class="form-control language col-sm-7 mx-auto text-center" id="orgLga" placeholder="Local Government Area" style="border: 1px solid white" required="" data-parsley-group="block2">
-                                <option> Select local government area </option>s
-                                </select>
-                            </div>
-                        </div>
-
-                        <!--end of line 1 -->
-
-                        <!-- line 2 start -->
-
-                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
-                            <div class="form-group ">
+ <div class="form-group ">
                                 <label class="field-label"> State </label>
                                 <select name=organisationstate class="form-control language col-sm-7 mx-auto" id="orgState" style="border: 1px solid white" required="" data-parsley-group="block2">
                                     <option value="Select State of Origin" id="default">Select State </option>
@@ -561,12 +556,25 @@
                                     <option value="yobe">Yobe</option>
                                     <option value="zamfara">Zamfara</option>
                                 </select>
+                            </div>               
+                        </div>
+
+                        <!--end of line 1 -->
+
+                        <!-- line 2 start -->
+
+                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
+                            <div class="form-group" id="orgLgaHolder">
+                                <label class="field-label" id="orgLgaLabel"> LGA </label>
+                                <select name=organisationlga type="text" class="form-control language col-sm-7 mx-auto text-center" id="orgLga" placeholder="Local Government Area" style="border: 1px solid white" required="" data-parsley-group="block2">
+                                <option> Select local government area </option>s
+                                </select>
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> File No/Service No </label>
-                                <input name=organisationfile/service-no type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgNo" placeholder="File or service number" style="border: 1px solid white" data-parsley-group="block2">
+                                <input name=organisationfile type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgNo" placeholder="File or service number" style="border: 1px solid white" data-parsley-group="block2">
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
@@ -814,7 +822,7 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Mobile no </label>
-                                <input name=kinmobileno  type="number" class="form-control col-sm-7 language mx-auto text-center" id="k-mno" placeholder="Mobile number" style="border: 1px solid white" type="number" data-parsley-group="block3" required="">
+                                <input name=kinmobileno  type="number" class="form-control col-sm-7 language mx-auto text-center" id="k-mno" placeholder="Mobile number" data-parsley-minlength="11" data-parsley-maxlength="15" style="border: 1px solid white" type="number" data-parsley-group="block3" required="">
                             </div>
                         </div>
                     </div>
@@ -851,17 +859,15 @@
             <div class="row p-form" style="height:324px" id="biometrics-form">
                 <div class="col-12 field-text">
                     <!-- line 1 start -->
-                    <div class="row">
-                        <div class= "col-12 text-center">
-                            <div class="dropzone col-5 mx-auto" id="upload">
-
-                            </div>
-                        </div>
-                        <div class="col-12 text-center" style="padding-bottom:2%">
-                            Upload your avatar
-                        </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <input type="file" id="user-image" class="form-control"/>
                     </div>
-                    <!--end of line 1 -->
+                    <div class="col-12 text-center" style="padding-bottom:2%">
+                        Upload your avatar
+                    </div>
+                </div>
+                <!--end of line 1 -->
 
                     <div class="row" id="biometrics-button">
                         <div class="col-12 continue text-center">
@@ -1127,7 +1133,7 @@
             <div class="row" id="confirm-button">
                 <div class="col-12 continue text-center">
                     <div class="col-4 col-lg-1 btn btn-purple" name="back" id="5b"> Back </div>
-                    <div class="col-4 col-lg-1 btn btn-purple" type="submit" name="continue" id="5c"> Submit </div>
+                    <button class="col-4 col-lg-1 btn btn-purple" type="submit" name="continue" id="5c"> Submit </button>
                 </div>
             </div>
             <!-- Confirmation page end -->
@@ -1499,7 +1505,7 @@
                 }else if (state === "anambra"){
                     lgaArray = ["Aguata|aguata", "Anambra East | anambra east", "Anambra West|anambra west", "Anaocha|anaocha", "Awka North|awka north", "Ayamelum|ayamelum", "Dunukofia|dunukofia", "Ekwusigo|ekwusigo", "Idemili North | idemili north", "Ihiala|ihiala", "Njikoka|njikoka", "Nnewi north| nnewi north", "nnewi south| nnewi south", "Ogbaru|ogbaru", "Onitsha north|onitsha north", "Onitsha south | onitsha south", "Orumba North|orumba north", "Oyi|oyi"];
                 }else if (state === "bauchi"){
-                    lgaArray = ["Alkaleri|alkaleri", "Bauchi|bauchi", "Bogoro|bogoro", "Damban|damban", "Darazo|darazo", "Dass|dass", "Ganjuwa|ganjuwa","Giade|giade", "Itas/Gadau|itas/gadau","Jama'are|jama'are","Katagum|katagum", "Kirfi|kirfi", "Misau|misau", "Ningi|ningi", "Shira|shira", "Tafawa-Balewa|tafawa-balewa","Toro|toro","Warji|warji","Zaki|zaki"];, 
+                    lgaArray = ["Alkaleri|alkaleri", "Bauchi|bauchi", "Bogoro|bogoro", "Damban|damban", "Darazo|darazo", "Dass|dass", "Ganjuwa|ganjuwa","Giade|giade", "Itas/Gadau|itas/gadau","Jama'are|jama'are","Katagum|katagum", "Kirfi|kirfi", "Misau|misau", "Ningi|ningi", "Shira|shira", "Tafawa-Balewa|tafawa-balewa","Toro|toro","Warji|warji","Zaki|zaki"]; 
                 }else if(state === "bayelsa"){
                     lgaArray = ["Brass|brass", "Ekeremor|ekeremor","Kolokuma/Opokuma|Kolokuma/Opokuma","Nembe|nembe","Ogbia|ogbia","Sagbama|sagbama","Southern Jaw|southern jaw", "yenegoa"] 
                 }else if(state === "benue"){
@@ -1847,7 +1853,17 @@
 
                 var form = document.getElementById('enroll-form');
                 var json = convertFormToJSON(form)
+                var image = $('#user-image').prop('files')[0];
+
+                var reader = new FileReader();
+                reader.readAsBinaryString(image);
+
+                var blob;
+                reader.onload = function() {
+                    blob = btoa(reader.result);
+                    json['image'] = blob;
                 console.log(JSON.stringify(json));
+               }
 
             if (document.querySelector('.dz-image-preview') !== null || $("#user-image").val() !== null) {
                 $("#biometrics, #biometrics-head, #biometrics-form, #biometrics-button").fadeOut(300, function () {
@@ -1915,6 +1931,7 @@
                 reader.onload = function() {
                     blob = btoa(reader.result);
                     json['image'] = blob;
+                    json['client id'] = '********';
                     console.log(JSON.stringify(json))
 
         //Converting JSON object to string format
@@ -1925,7 +1942,7 @@
                     $.ajax({
                         type: "POST",
                         url: "/submit.php",
-                        data: myJSON,
+                        data: json,
                         dataType: "json",
                     }).done(function () {
                         $("#confirm, #confirm-head, #confirm-form, #confirm-button").fadeOut(300, function () {
@@ -1950,7 +1967,7 @@
         });
 
     });
-  console.log(myJSON)
+
 
 </script>
 <script>

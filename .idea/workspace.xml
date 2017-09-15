@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fd84639-60eb-4cea-a122-9108511ebd63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/images/company-bg.jpg" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/images/company-bg.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/images/logo-alt.png" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/images/logo-alt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/images/logo.png" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/images/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/submit.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/css/design.css" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/css/design.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/header.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_blog.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_blog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_calculator.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_calculator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_career.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_career.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_company.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_company.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_login.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/enroll.html" afterPath="$PROJECT_DIR$/enroll.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_enroll.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_enroll.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_services.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_services.php" />
     </list>
     <ignored path="LPPFA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,11 +48,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="design.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="design.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/css/design.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="363">
               <caret line="1029" column="37" selection-start-line="1029" selection-start-column="37" selection-end-line="1029" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -139,6 +143,7 @@
         <option value="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_calculator.php" />
         <option value="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_company.php" />
         <option value="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/css/design.css" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -320,6 +325,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LPPFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LPPFA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -860,12 +879,12 @@
       <workItem from="1505297562450" duration="3479000" />
       <workItem from="1505314856222" duration="5780000" />
       <workItem from="1505385485541" duration="8749000" />
-      <workItem from="1505469066357" duration="4458000" />
+      <workItem from="1505469066357" duration="4831000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="316462000" />
+    <option name="totallyTimeSpent" value="316835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -933,13 +952,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/blog-post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="142" column="80" selection-start-line="142" selection-start-column="80" selection-end-line="142" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/calculator.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -1283,6 +1295,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
           <caret line="1029" column="37" selection-start-line="1029" selection-start-column="37" selection-end-line="1029" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
