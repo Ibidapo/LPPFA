@@ -7,10 +7,10 @@
 get_header(); ?>
 
     <!-- Body and Main Content of page -->
-    <div class="container-fluid" id="m-top">
+    <div class="container" id="m-top">
         <br/>
 
-        <header class="page-header">
+        <header class="page-header text-center">
             <?php if (have_posts()) : ?>
                 <h1 class="page-title"><?php printf(__('Search Results for: "%s"', 'leadwaypensure'), '<span>' . get_search_query() . '</span>'); ?></h1>
             <?php else : ?>
@@ -19,7 +19,7 @@ get_header(); ?>
         </header>
         <!-- .page-header -->
 
-        <div id="primary" class="content-area">
+        <div id="primary" class="content-area text-center">
             <main id="main" class="site-main" role="main">
 
                 <?php
@@ -67,6 +67,7 @@ get_header(); ?>
             <!-- #main -->
         </div>
         <!-- #primary -->
+        <br/>
     </div><!-- .wrap -->
 
 <?php get_footer();

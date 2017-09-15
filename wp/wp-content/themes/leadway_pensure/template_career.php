@@ -251,18 +251,21 @@ include_once 'mail/career.php';
                 <div class="col-12 career-cult-box">
                     <div class="row">
                         <div class="col-sm-6 cult-box1">
-                            <p class="v-align">Our people are at the core of our success, hence the attention to ensuring
-                            both mental and physical fitness of our team all the time.<br>
+                            <p class="v-align">We are one team that is passionate about the future of our customers. Our values
+                            captures and articulates the way we work and do business.</p>
                         </div>
                         <div class="col-sm-6 cult-box2">
                             <h3 class="v-align">Hangouts & Retreats</h3>
+                            <p class="v-align">Our people are at the core of our success, hence the attention to ensuring both mental and physical
+                            fitness of our team all the time. We work hard, and also play harder.</p>
                         </div>
                         <div class="col-sm-6 cult-box3">
                             <h3 class="v-align">Learning & Development</h3>
+                            <p class="v-align">We care about the growth and development of our people, our customers and our community.</p>
                         </div>
-                        <div class="col-sm-6 cult-box6">
+                        <div class="col-sm-6 cult-box4">
                             <p class="v-align">Head over now to our blog section for tips on how to assemble your CV and
-                                other relevant documents<br><a href="#" class="btn btn-outline-white-sm">Learn more</a></p>
+                            other relevant documents<br><a href="#" class="btn btn-outline-white-sm">Learn more</a></p>
                         </div>
                     </div>
                 </div>
@@ -1652,6 +1655,14 @@ include_once 'mail/career.php';
         $('input[type="file"]').change(function (e) {
             var fileName = e.target.files[0].name;
             $('.custom-file-control').append(fileName);
+        });
+
+        $('.cult-box2, .cult-box3').mouseenter(function(){
+            $(this).children('h3').fadeOut('slow');
+            $(this).children('p').fadeIn('slow');
+        }).mouseleave(function(){
+            $(this).children('h3').fadeIn('slow');
+            $(this).children('p').fadeOut('slow');
         });
     });
 </script>

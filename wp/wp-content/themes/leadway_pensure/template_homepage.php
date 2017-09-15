@@ -304,9 +304,9 @@ get_header();
             </div>
             <div class="reg-txt">
                 <?= get_field("info_section_5") ?>
-                <div class="hidden-md-up text-center"><a href="enroll.html" class="btn btn-outline-blue">Get Started</a>
+                <div class="hidden-md-up text-center"><a href="/enroll" class="btn btn-outline-blue">Get Started</a>
                 </div>
-                <span class="hidden-sm-down reg-btn v-align"><a href="enroll.html" class="btn btn-outline-blue">Get
+                <span class="hidden-sm-down reg-btn v-align"><a href="/enroll" class="btn btn-outline-blue">Get
                         Started</a></span>
             </div>
         </div>
