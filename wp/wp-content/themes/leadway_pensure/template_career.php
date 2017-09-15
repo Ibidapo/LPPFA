@@ -6,11 +6,6 @@ include_once 'mail/career.php';
 
 <?php get_header(); ?>
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 <script type='text/javascript'>
     (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
@@ -65,10 +60,10 @@ include_once 'mail/career.php';
         <div class="tab-pane fade show active col-12" role="tabpanel" id="vac">
             <div class="row">
                 <div class="col-12 col-md-7 ext-center">
-                    <h1 class="hidden-sm-down vac-hd">We are Hiring!</h1>
+                    <h2 class="hidden-sm-down vac-hd">Join our Team</h2>
 
-                    <h3 class="hidden-md-up vac-hd">We are Hiring!</h3>
-                    <span>Choose your preferred designation to get started</span>
+                    <h4 class="hidden-md-up vac-hd">Join our Team</h4>
+                    <span>Be part of a great mission, make your next career move.</span>
 
                     <div id="accordion5" role="tablist" aria-multiselectable="true">
                         <div class="card">
@@ -213,7 +208,7 @@ include_once 'mail/career.php';
                             <div id="mc_embed_signup">
                                 <form action="//leadway-pensure.us10.list-manage.com/subscribe/post?u=a7d286c921166498a0b699255&amp;id=47a1abe4d1"
                                       method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                                      class="validate" target="_blank" novalidate>
+                                      class="validate  text-center" target="_blank" novalidate>
                                     <div id="mc_embed_signup_scroll">
                                         <div class="mc-field-group">
                                             <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
@@ -263,7 +258,7 @@ include_once 'mail/career.php';
                             <h3 class="v-align">Hangouts & Retreats</h3>
                         </div>
                         <div class="col-sm-6 cult-box3">
-                            <h3 class="v-align">Training</h3>
+                            <h3 class="v-align">Learning & Development</h3>
                         </div>
                         <div class="col-sm-6 cult-box6">
                             <p class="v-align">Head over now to our blog section for tips on how to assemble your CV and
@@ -1629,24 +1624,35 @@ include_once 'mail/career.php';
 <?php endif ?>
 
 <script>
-    //Resize container based on desktop or mobile viewport.
-    var size = window.innerWidth;
-    if (size <= 991) {
-        $(".container").attr("class", "container-fluid");
-    }
-
-    $('#careerTab a[href="' + window.location.hash + '"]').tab('show');
-
-    $("#m-careerTab").change(function () {
-        var i = $(this).val();
-
-        if (i == 0) {
-            $('a[href="#vac"]').tab('show');
-        } else if (i == 1) {
-            $('a[href="#cv"]').tab('show');
-        } else if (i == 2) {
-            $('a[href="#alm"]').tab('show');
+    $(document).ready(function() {
+        //Resize container based on desktop or mobile viewport.
+        var size = window.innerWidth;
+        if (size <= 991) {
+            $(".container").attr("class", "container-fluid");
         }
+
+        $('#careerTab a[data-toggle="tab"]').on('shown.bs.tab', function () {
+            $('body,html').animate({
+                scrollTop: 480
+            }, 800);
+        });
+
+        $("#m-careerTab").change(function () {
+            var i = $(this).val();
+
+            if (i == 0) {
+                $('a[href="#vac"]').tab('show');
+            } else if (i == 1) {
+                $('a[href="#cv"]').tab('show');
+            } else if (i == 2) {
+                $('a[href="#alm"]').tab('show');
+            }
+        });
+
+        $('input[type="file"]').change(function (e) {
+            var fileName = e.target.files[0].name;
+            $('.custom-file-control').append(fileName);
+        });
     });
 </script>
 

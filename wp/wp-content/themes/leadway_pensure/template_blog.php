@@ -31,23 +31,26 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                 <div id="google_translate_element"></div>
             </td>
             <td>
-                <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i>
-                    <?= $options['phone_number'] ?>
-                </span>
+                        <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i>
+                            <?= $options['phone_number'] ?>
+                        </span>
             </td>
+            <?php if ($rsa_rf) { ?>
+                <td>
+                    <span class="head-td"> RSA FUNDS</span><br>
+                    <span>&#8358;<?= array_get($rsa_rf->values, 0) ?>
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png" alt="">
+                            </span>
+                </td>
+                <td>
+                    <span class="head-td">RETIREE FUNDS</span><br>
+                    <span> &#8358;<?= array_get($rsa_rf->values, 0) ?>
+                        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png" alt="">
+                            </span>
+                </td>
+            <?php } ?>
             <td>
-                <span class="head-td"> RSA FUNDS</span><br>
-                    <span>&#8358;2.3433 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png"
-                                             alt=""></span>
-            </td>
-            <td>
-                <span class="head-td">RETIREE FUNDS</span><br>
-                    <span> &#8358;2.3433 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png"
-                                              alt=""></span>
-            </td>
-            <td>
-                <span class="head-td">RSA ACCOUNTS </span><br>
-                <span> 500,000 </span>
+                <a href="/login" style="color: white; font-weight: 500"> LOGIN</a>
             </td>
             <td>
                 <a href="/calculator" class="nav-calc"> <img
@@ -55,7 +58,8 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                     <span>Calculator</span></a>
             </td>
             <td>
-                <button type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS
+                <button onclick="location='/trends'" type="button" class="btn btn-outline-secondary v-trends">
+                    VIEW TRENDS
                 </button>
             </td>
             <td>
@@ -84,6 +88,9 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                     <a class="nav-link" data-toggle="tab" href="#careerTip" role="tab">Career Tips</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#articles" role="tab">Articles</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/"><img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" height="80"></a>
                 </li>
             </ul>
@@ -104,6 +111,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                         <option value="2">Comic</option>
                         <option value="3">Videos</option>
                         <option value="4">Career Tips</option>
+                        <option value="5">Articles</option>
                     </select>
                 </div>
             </form>
@@ -366,6 +374,59 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
             </div>
         </div>
         <div class="tab-pane fade col-12" role="tabpanel" id="careerTip">
+            <?php if ($firstCTNews) : $categories = get_the_category($firstCTNews->ID); ?>
+                <div class="row topSeries">
+                    <div class="col-12 col-md-5 col-lg-6 story-pic">
+                        <img src="<?= get_the_post_thumbnail_url($firstCTNews->ID); ?>">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-6 story">
+                        <?php foreach($categories as $category): ?>
+                            <h3 class="hidden-md-down text-right"><span class="badge badge-primary"><?= $category->name ?></span></h3>
+                            <h5 class="hidden-lg-up text-right"><span class="badge badge-primary"><?= $category->name ?></span></h5>
+                        <?php endforeach ?>
+
+                        <span class="news-date">
+                            <?= date ( "F j, Y", strtotime($firstCTNews->post_date) ) ?>
+                        </span>
+                        <h5><?= $firstCTNews->post_title ?></h5>
+                        <p><?= summary($firstCTNews->post_content, 100) ?></p>
+                        <span>
+                                <img src="<?= asset() ?>/images/facebook.png">
+                                <img src="<?= asset() ?>/images/instagram.png">
+                                <img src="<?= asset() ?>/images/twitter.png">
+                            </span>
+                        <span class="float-right link">&rarr; <a href="<?= get_permalink($firstCTNews) ?>">Read More</a></span>
+                    </div>
+                </div>
+            <?php endif ?>
+            <div class="row recent">
+                <div class="col-12">
+                    <h2>Recent releases</h2>
+                </div>
+                <? foreach ($career_tips as $news) { $categories = get_the_category($news->ID); ?>
+                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                        <?php foreach($categories as $category): ?>
+                            <span class="badge badge-success"><?= $category->name ?></span>
+                        <?php endforeach ?>
+
+                        <span class="news-date">
+                            <?= date ( "F j, Y", strtotime($news->post_date) ) ?>
+                        </span>
+                        <a href="<?= get_permalink($news) ?>">
+                            <figure>
+                                <img src="<?= get_the_post_thumbnail_url($news->ID); ?>" alt="<?= $news->post_title ?>"/>
+                                <figcaption>
+                                    <h5>
+                                        <?= $news->post_title ?>
+                                    </h5>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                <? } ?>
+            </div>
+        </div>
+        <div class="tab-pane fade col-12" role="tabpanel" id="articles">
             <?php if ($firstCTNews) : $categories = get_the_category($firstCTNews->ID); ?>
                 <div class="row topSeries">
                     <div class="col-12 col-md-5 col-lg-6 story-pic">

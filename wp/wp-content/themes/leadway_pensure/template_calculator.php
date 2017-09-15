@@ -9,18 +9,6 @@
 <div class="container-fluid" id="disclaim-overlay">
     <div class="row">
         <div class="col-12 col-md-10 offset-md-1 text-center">
-            <h4 class="hidden-sm-down">DISCLAIMER</h4>
-            <h5 class="hidden-md-up">DISCLAIMER</h5>
-            <p>The Calculator on this page is indicating and strictly for information purposes. Leadway Pensure PFA's obligations
-                with respect to its services on this page are governed solely by the agreements under which they are provided and
-                nothing hereof should be construed to alter such 'Service' agreements".</p>
-            <div><a href="#" class="btn btn-outline-white" id="agree">I agree</a>
-                <a href="/" class="btn btn-outline-white">I do not agree</a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 text-center">
             <h4 class="hidden-sm-down">COMPOUND INTEREST CALCULATOR</h4>
             <h5 class="hidden-md-up">COMPOUND INTEREST CALCULATOR</h5>
             <p>Use our compound interest calculator to plan your resources over time.</p>
@@ -29,6 +17,18 @@
                 <li>Review graphs to analyze wealth valuation <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc-list2.png"/></li>
                 <li>Enroll for Pension Plan immediately <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc-list3.png"/></li>
             </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1 text-center">
+            <h4 class="hidden-sm-down">DISCLAIMER</h4>
+            <h5 class="hidden-md-up">DISCLAIMER</h5>
+            <p>The Calculator on this page is indicating and strictly for information purposes. Leadway Pensure PFA's obligations
+                with respect to its services on this page are governed solely by the agreements under which they are provided and
+                nothing hereof should be construed to alter such 'Service' agreements".</p>
+            <div><a href="#" class="btn btn-outline-white" id="agree">I agree</a>
+                <a href="/" class="btn btn-outline-white">I do not agree</a>
+            </div>
         </div>
     </div>
 </div>

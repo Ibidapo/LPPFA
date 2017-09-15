@@ -108,7 +108,7 @@ if (!$rsa_rf) {
         <?php wp_head(); ?>
 
     </head>
-<body>
+<body style="overflow-x: hidden;">
 
 <?php if (
     is_page_template("template_socials.php") ||
@@ -198,20 +198,20 @@ if (!$rsa_rf) {
                     </td>
                     <?php if ($rsa_rf) { ?>
                         <td>
-                            <span class="head-td"> RSA FUNDS</span><br>
+                            <span class="head-td"> RSA FUND</span><br>
                             <span>&#8358;<?= array_get($rsa_rf->values, 0) ?>
                                 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png" alt="">
                             </span>
                         </td>
                         <td>
-                            <span class="head-td">RETIREE FUNDS</span><br>
+                            <span class="head-td">RETIREE FUND</span><br>
                             <span> &#8358;<?= array_get($rsa_rf->values, 0) ?>
                                 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png" alt="">
                             </span>
                         </td>
                     <?php } ?>
                     <td>
-                        <a href="/login" style="color: white; font-weight: 500"> LOGIN</a>
+                        <a href="/login" style="color: white; font-weight: 500">LOGIN</a>
                     </td>
                     <td>
                         <a href="/calculator" class="nav-calc"> <img

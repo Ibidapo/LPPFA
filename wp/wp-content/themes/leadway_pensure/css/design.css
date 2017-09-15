@@ -583,7 +583,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .location{
     background-color: rgba(56, 125, 194, .8);
 }
-.location h1, .location h3{
+.location h1, .location h3, .company-tab h3 {
     margin: 25px 0;
     font-weight: 300;
     color: white;
@@ -1018,7 +1018,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 
 /*Styling for Body Section of Company Page*/
 .company-bg{
-    background: url(../images/company-bg.jpg);
+    background: url(../images/company-bg.jpg) no-repeat center;
     background-size: cover;
 }
 #compTab img, #benefitsTab img{
