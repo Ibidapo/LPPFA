@@ -9,18 +9,6 @@
 <div class="container-fluid" id="disclaim-overlay">
     <div class="row">
         <div class="col-12 col-md-10 offset-md-1 text-center">
-            <h4 class="hidden-sm-down">COMPOUND INTEREST CALCULATOR</h4>
-            <h5 class="hidden-md-up">COMPOUND INTEREST CALCULATOR</h5>
-            <p>Use our compound interest calculator to plan your resources over time.</p>
-            <ul style="list-style-type: none">
-                <li>Input values to activate dynamic graph <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc-list1.png"/></li>
-                <li>Review graphs to analyze wealth valuation <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc-list2.png"/></li>
-                <li>Enroll for Pension Plan immediately <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc-list3.png"/></li>
-            </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 text-center">
             <h4 class="hidden-sm-down">DISCLAIMER</h4>
             <h5 class="hidden-md-up">DISCLAIMER</h5>
             <p>The Calculator on this page is indicating and strictly for information purposes. Leadway Pensure PFA's obligations
@@ -31,12 +19,24 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1 text-center">
+            <h4 class="hidden-sm-down">COMPOUND INTEREST CALCULATOR</h4>
+            <h5 class="hidden-md-up">COMPOUND INTEREST CALCULATOR</h5>
+            <p>Use our compound interest calculator to plan your resources over time.</p>
+            <ul style="list-style-type: none">
+                <li>Input values to activate dynamic graph <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc-list1.png"/></li>
+                <li>Review graphs to analyze wealth valuation <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc-list2.png"/></li>
+                <li>Enroll for Pension Plan immediately <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc-list3.png"/></li>
+            </ul>
+        </div>
+    </div>
 </div>
 <!-- Body of Calculator Page -->
 <div class="container" id="calc-page">
     <div class="row" style="margin-top: 1rem">
-        <div class="hidden-sm-down col-12 text-center"><h3>LEADWAY CALCULATOR</h3></div>
-        <div class="hidden-md-up col-12 text-center"><h5>LEADWAY CALCULATOR</h5></div>
+        <div class="hidden-sm-down col-12 text-center"><h3>PENSURE CALCULATOR</h3></div>
+        <div class="hidden-md-up col-12 text-center"><h5>PENSURE CALCULATOR</h5></div>
         <div class="col-12">
             <a class="btn btn-outline-blue-sm d-claim" data-toggle="collapse" href="#d-claim" aria-expanded="false" aria-controls="d-claim">Disclaimer</a>
             <div class="collapse" id="d-claim">

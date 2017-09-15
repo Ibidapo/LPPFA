@@ -402,8 +402,9 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     border-bottom-left-radius: 40px;
 }
 .reg-txt{
-    position: relative;
+    position: absolute;
     width: 70%;
+    right: 0;
     height: 100%;
     font-size: 1.75rem;
     font-weight: 300;
@@ -435,7 +436,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     background: url("../images/products-bg.jpg") no-repeat center;
     background-size: cover;
 }
-#rsa p, #avc p, #nst p, #mf p, #cbs p, #pms p{
+#rsa > p, #avc > p, #nst > p, #mf > p, #cbs > p, #pms > p{
     margin: 35px 20px;
 }
 #rsa p i, #avc p i, #nst p i, #mf p i{
@@ -464,10 +465,10 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     border-bottom-right-radius: 20px;
 }
 #prod-list li {
-    height: 16.8%;
-    width: 101%;
+    position: relative;
+    flex: 1;
+    width: 100%;
     border-bottom: 1px solid #1f6aa4;
-    padding: 0 10px;
 }
 #prod-list li:last-child{
     border-bottom: none;
@@ -476,9 +477,10 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     background-color: #1f6aa4;
 }
 #prod-list li a{
-    position: relative;
+    position: absolute;
     top: 50%;
     color: #1f6aa4;
+	width: 100%;
     padding: 1rem;
     font-weight: 500;
     -webkit-transform: translateY(-50%);
@@ -498,7 +500,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     position: relative;
     width: 75%;
 }
-.img-box > img{
+.img-box > p > img{
     width: 75%;
 }
 #sms-slide{
@@ -774,12 +776,16 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 #vac #accordion5 h6 {
     color: #a990ba;
 }
-#alm, #cbs, #csr, #m_news, #gall, #cald {
+#alm, #csr, #m_news, #gall, #cald {
     height: 500px;
 }
 #f-rep{
     padding-top: 50px;
     padding-bottom: 50px;
+}
+#f-rep .col-md-6 {
+    padding-left: 5%;
+    padding-right: 5%;
 }
 #f-rep h2, #f-rep ul li a, #f-rep ul li .fa-chevron-right::before {
     color: #4b78af;
@@ -905,21 +911,16 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     overflow: hidden;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: 20px;
+	text-align: left;
 }
-#cv .custom-file input {
-    position: absolute;
-    left: -114px;
-    width: 100%;
-}
-#cv .custom-file input, #cv .custom-file-control{
-    opacity: 1;
-    height: inherit;
+#cv .custom-file-control{
     background: none;
     outline: none;
     box-shadow: none;
+	border: none;
 }
-#cv .custom-file-control{
-    border: none;
+#cv .custom-file input {
+	display: none;
 }
 .custom-file-control:lang(en)::after {
     content: " " !important;
@@ -959,40 +960,40 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     background-color: #7f7f7f;
     padding: 0 30px;
 }
-.multi-fund-txt, .invest-rep-txt, .comp-prof form, .prof-label, .dir-img figure{
-    position: relative;
-}
-.multi-fund-txt img{
-    width: 120px;
-    margin-bottom: 10px;
+.multi-fund > .v-align, .invest-rep > .v-align, .comp-prof form, .prof-label, .dir-img figure{
+    position: absolute;
 }
 .invest-rep{
     background-color: #2067a5;
     padding-left:  5%;
     padding-right: 5%;
 }
-.invest-rep-txt > p, #f-rep p {
+.invest-rep > .v-align > p, #f-rep p {
     font-size: 1.25rem;
 }
-.invest-rep-txt > p {
+.invest-rep > .v-align > p {
     font-weight: 300;
 }
-.invest-rep-txt > ul, #downld ul, #f-rep ul{
+.invest-rep > .v-align  > ul, #downld ul, #f-rep ul{
     list-style-type: none;
     padding: 0;
 }
-.invest-rep-txt > ul > li {
+.invest-rep > .v-align  > ul > li {
     border-bottom: 2px solid white;
     padding: 5px;
 }
-.invest-rep-txt > ul > li > .fa-chevron-right::before, #f-rep ul li .fa-chevron-right::before {
+.invest-rep > .v-align  > ul > li > .fa-chevron-right::before, #f-rep ul li .fa-chevron-right::before {
     position: relative;
     font-size: 12px;
     top: -2px;
 }
-.invest-rep-txt > ul > li > a, .invest-rep-txt > ul > li > .fa-chevron-right::before {
+.invest-rep > .v-align  > ul > li > a, .invest-rep-txt > ul > li > .fa-chevron-right::before {
     color: white;
     font-weight: 300;
+}
+.multi-fund > .v-align, .invest-rep > .v-align {
+    width: 90%;
+    left: 5%;
 }
 .invest-chart{
     background: url(../images/invest-chart.jpg) no-repeat center;
@@ -1042,6 +1043,12 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     font-size: 1.5rem;
     font-weight: 300;
 }
+.comp-prof > .col-12, .comps > .col-md-4 {
+    padding: 0;
+}
+.comp-prof form, .prof-label, .comps h1, .comps h3 {
+    width: 100%;
+}
 .comp-prof .btn{
     padding: 5px 10px;
     color: white !important;
@@ -1086,21 +1093,25 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 .comps > .vr{
     top: 30%;
-    left: calc(33.33% - 1px);
+    left: 33%;
     height: 40%;
     border-right: 1px solid white;
 }
 .comps h1, .comps h3{
-    position: relative;
+    position: absolute;
     color: white;
     font-weight: 300;
 }
 #comps-slide {
     padding-top: 10px;
 }
-#comps-slide .carousel-inner .card {
+#comps-slide .card img {
+    width: 250px;
+}
+#comps-slide .carousel-inner .card, .custodian .card  {
     background-color: transparent;
     border: none;
+    width: 100%;
 }
 #comps-slide .carousel-control-next, #comps-slide .carousel-control-prev{
     padding-top: 30px;
@@ -1113,9 +1124,8 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .custodian h3{
     margin: 20px;
 }
-.custodian .card {
-    border: none;
-    background-color: transparent;
+.custodian .card img {
+    width: 150px;
 }
 .custodian .card-block {
     font-size: 0.875rem;
@@ -1162,6 +1172,10 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .board .nav-link.active .designation {
     font-weight: 400;
 }
+.board .nav-link.active, .board .nav-link:hover {
+    color: #ffb81c !important;
+    transition: 1s ease-in-out;
+}
 .tag{
     position: absolute;
     height: 60px;
@@ -1176,15 +1190,16 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
 }
-#dir1, #dir2, #dir3, #dir4, #dir5, #dir6, #dir7, #dir8, #dir9, #mgt1, #mgt2, #mgt3, #mgt4, #mgt5, #mgt6, #mgt7, #mgt8 {
+#dir1, #dir2, #dir3, #dir4, #dir5, #dir6, #dir7, #dir8, #dir9, #mgt1, #mgt2, #mgt3, #mgt4, #mgt5, #mgt6, #mgt7, #mgt8, #mgt9 {
     margin-bottom: 50px;
     padding: 25px 0;
 }
 #dir1 p, #dir2 p, #dir3 p, #dir4 p, #dir5 p, #dir6 p, #dir7 p, #dir8 p, #dir9 p,
-#mgt1 p, #mgt2 p, #mgt3 p, #mgt4 p, #mgt5 p, #mgt6 p, #mgt7 p, #mgt8 p{
+#mgt1 p, #mgt2 p, #mgt3 p, #mgt4 p, #mgt5 p, #mgt6 p, #mgt7 p, #mgt8 p, #mgt9 p {
     padding: 0 25px;
 }
 .dir-img figure{
+	display: block;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -1193,11 +1208,14 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     transform: translateY(-50%);
 }
 .dir-img figure img{
-    width: 70%;
+    width: 50%;
 }
 .dir-img figcaption{
     font-size: 1.25rem;
     color: #4b78af;
+}
+.dir-history {
+    min-height: 250px;
 }
 
 /*Styling for Body Section of Benefits Page*/
@@ -1228,6 +1246,9 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 #ab-ret .nav-tabs .nav-link, #pay-grnd .nav-tabs .nav-link, #pay-type .nav-tabs .nav-link{
     font-size: 1rem;
 }
+#ab-ret .tab-pane, #pay-grnd .tab-pane, #pay-type .tab-pane {
+    min-height: 250px;
+}
 #ab-ret .nav-tabs .nav-item, #pay-grnd .nav-tabs .nav-item, #pay-type .nav-tabs .nav-item{
     border-right: 1px solid #4b78af;
 }
@@ -1235,9 +1256,15 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     border-right: none;
 }
 #ab-ret img, #pay-grnd img, #pay-type img {
-    position: relative;
-    object-fit: contain;
-    width: 80%;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+    transform: translate(-50% , -50%);
 }
 
 /*Styling for Body section of Calculator page*/
@@ -1748,7 +1775,7 @@ footer .table td, .table th {
     object-fit: contain;
     width: 155px;
 }
-#back-top, #share, #print{
+#back-top, #print{
     position: fixed;
     display: none;
     right: 15px;
@@ -1766,7 +1793,7 @@ footer .table td, .table th {
     cursor: pointer;
     z-index: 999;
 }
-#back-top:hover, #share:hover, #print:hover{
+#back-top:hover, #print:hover{
     box-shadow: 0 2px 2px -1px rgba(0,0,0,0.5);
 }
 #back-top{
@@ -1774,9 +1801,6 @@ footer .table td, .table th {
 }
 #print{
     bottom: 65px;
-}
-#share{
-    bottom: 115px;
 }
 
 /*Styling for Mail Chimp*/
@@ -2180,11 +2204,11 @@ footer .table td, .table th {
     .prof-label{
         font-size: 1.125rem;
     }
+	.comps {
+		height: 485px;
+	}
     #comps-slide {
         padding-top: 20px;
-    }
-    #comps-slide .card-img-top {
-        width: 45%;
     }
     .tag {
         height: 50px;
@@ -2194,6 +2218,7 @@ footer .table td, .table th {
     .dir-img figcaption {
         font-size: 1.125rem;
     }
+	
 
     /*Styling for Benefits Page*/
     .benefits-bg .bg-txt {
@@ -2464,8 +2489,7 @@ footer .table td, .table th {
         height: 530px;
     }
     .comps h3 {
-        margin-top: 30px;
-        margin-bottom: 15px;
+        margin-top: 10px;
     }
     #comps-slide {
         padding-top: 0;
@@ -2473,9 +2497,25 @@ footer .table td, .table th {
     #comps-slide .carousel-control-next, #comps-slide .carousel-control-prev{
         padding-top: 0;
     }
+	.dir-img {
+		height: 225px;
+	}
     .board-mgt .nav-link {
         font-size: 1.25rem;
     }
+	.dir-img figure {
+		left: 50%;
+		width: 200px;
+		-webkit-transform: translate(-50% , -50%);
+		-moz-transform: translate(-50% , -50%);
+		-ms-transform: translate(-50% , -50%);
+		-o-transform: translate(-50% , -50%);
+		transform: translate(-50%, -50%);
+	}
+	#dir1, #dir2, #dir3, #dir4, #dir5, #dir6, #dir7, #dir8, #dir9, #mgt1, #mgt2, #mgt3, #mgt4, #mgt5, #mgt6, #mgt7, #mgt8, #mgt9 {
+		margin-bottom: 50px;
+		padding: 0 0 25px;
+	}
 
     /*Styling for Benefits Page*/
     .benefits-bg .bg-txt {
@@ -2485,6 +2525,9 @@ footer .table td, .table th {
     #ab-ret, #pay-grnd, #pay-type {
         padding-top: 30px;
     }
+	#ab-ret .col-md-3, #pay-grnd .col-md-3, #pay-type .col-md-3 {
+    height: 250px;
+	}
 
     /*Styling for Calculator Page*/
     #calc-page h5 {
@@ -2710,16 +2753,26 @@ footer .table td, .table th {
         font-size: 0.875rem;
         margin-bottom: 1rem;
     }
-    #comps-slide .carousel-control-next, #comps-slide .carousel-control-prev{
-        bottom: 70%;
-    }
     .comps {
-        height: 550px;
+        height: 530px;
     }
     .comps h3 {
         margin-top: 10px;
         margin-bottom: 10px;
     }
+	.comps > .col-md-4 {
+		height: 50px;
+	}
+	#comps-slide .card img {
+		width: 200px;
+	}
+	#comps-slide .carousel-control-next, #comps-slide .carousel-control-prev{
+        bottom: 70%;
+    }
+	#comps-slide .card .card-text {
+		font-size: 0.875rem;
+	}
+
     .board-mgt .nav-link {
         font-size: 1rem;
     }

@@ -255,29 +255,19 @@ include_once 'mail/career.php';
                 </div>
                 <div class="col-12 career-cult-box">
                     <div class="row">
-                        <div class="col-sm-6 col-md-4 cult-box1">
-                            <p class="v-align">Our people are at the core of our success, hence the attention to
-                                ensuring both mental and
-                                physical fitness of our team all the time.<br> <a href="#"
-                                                                                  class="btn btn-outline-white-sm">Learn
-                                    more</a></p>
+                        <div class="col-sm-6 cult-box1">
+                            <p class="v-align">Our people are at the core of our success, hence the attention to ensuring
+                            both mental and physical fitness of our team all the time.<br>
                         </div>
-                        <div class="col-sm-6 col-md-4 cult-box2">
+                        <div class="col-sm-6 cult-box2">
                             <h3 class="v-align">Hangouts & Retreats</h3>
                         </div>
-                        <div class="col-sm-6 col-md-4 cult-box3">
+                        <div class="col-sm-6 cult-box3">
                             <h3 class="v-align">Training</h3>
                         </div>
-                        <div class="col-sm-6 col-md-4 cult-box4">
-                            <h3 class="v-align">Our Squeezed Sheet Theory</h3>
-                        </div>
-                        <div class="col-sm-6 col-md-4 cult-box5">
-                            <h3 class="v-align">Ready to Apply?</h3>
-                        </div>
-                        <div class="col-sm-6 col-md-4 cult-box6">
+                        <div class="col-sm-6 cult-box6">
                             <p class="v-align">Head over now to our blog section for tips on how to assemble your CV and
-                                other relevant
-                                documents<br><a href="#" class="btn btn-outline-white-sm">Learn more</a></p>
+                                other relevant documents<br><a href="#" class="btn btn-outline-white-sm">Learn more</a></p>
                         </div>
                     </div>
                 </div>

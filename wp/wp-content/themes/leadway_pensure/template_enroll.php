@@ -114,7 +114,7 @@
 
                             <div class="form-group ">
                                 <label class="field-label"> Birthday </label>
-                                <input name=pidbirthday type="date" class="form-control language col-sm-7 mx-auto text-center" id=birthday  data-parsley-group="block1" style="border: 1px solid white" required="" >
+                                <input name=pidbirthday type="date" class="form-control language col-sm-7 mx-auto text-center" id=birthday data-parsley-group="block1" style="border: 1px solid white" required="" >
                             </div>
                         </div>
 
@@ -451,8 +451,17 @@
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
-                                <label class="field-label"> Email </label>
-                                <input name=pidemail type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-email placeholder="local government area" style="border: 1px solid white" readonly>
+                                <label class="field-label"> Title </label>
+                                <select name=title type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-email placeholder="local government area" style="border: 1px solid white" readonly>
+<option> Select a title </option> 
+<option> Mr. </option> 
+<option> Miss. </option> 
+<option> Mrs. </option> 
+<option> Dr. </option> 
+<option> Engr. </option>
+<option> Mallam. </option> 
+<option> Archbishop. </option> 
+</select> 
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
@@ -505,21 +514,7 @@
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
-
-                            <div class="form-group" id="orgLgaHolder">
-                                <label class="field-label" id="orgLgaLabel"> LGA </label>
-                                <select name=organisationlga type="text" class="form-control language col-sm-7 mx-auto text-center" id="orgLga" placeholder="Local Government Area" style="border: 1px solid white" required="" data-parsley-group="block2">
-                                <option> Select local government area </option>s
-                                </select>
-                            </div>
-                        </div>
-
-                        <!--end of line 1 -->
-
-                        <!-- line 2 start -->
-
-                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
-                            <div class="form-group ">
+ <div class="form-group ">
                                 <label class="field-label"> State </label>
                                 <select name=organisationstate class="form-control language col-sm-7 mx-auto" id="orgState" style="border: 1px solid white" required="" data-parsley-group="block2">
                                     <option value="Select State of Origin" id="default">Select State </option>
@@ -561,12 +556,25 @@
                                     <option value="yobe">Yobe</option>
                                     <option value="zamfara">Zamfara</option>
                                 </select>
+                            </div>               
+                        </div>
+
+                        <!--end of line 1 -->
+
+                        <!-- line 2 start -->
+
+                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
+                            <div class="form-group" id="orgLgaHolder">
+                                <label class="field-label" id="orgLgaLabel"> LGA </label>
+                                <select name=organisationlga type="text" class="form-control language col-sm-7 mx-auto text-center" id="orgLga" placeholder="Local Government Area" style="border: 1px solid white" required="" data-parsley-group="block2">
+                                <option> Select local government area </option>s
+                                </select>
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> File No/Service No </label>
-                                <input name=organisationfile/service-no type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgNo" placeholder="File or service number" style="border: 1px solid white" data-parsley-group="block2">
+                                <input name=organisationfile type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgNo" placeholder="File or service number" style="border: 1px solid white" data-parsley-group="block2">
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
@@ -814,7 +822,7 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Mobile no </label>
-                                <input name=kinmobileno  type="number" class="form-control col-sm-7 language mx-auto text-center" id="k-mno" placeholder="Mobile number" style="border: 1px solid white" type="number" data-parsley-group="block3" required="">
+                                <input name=kinmobileno  type="number" class="form-control col-sm-7 language mx-auto text-center" id="k-mno" placeholder="Mobile number" data-parsley-minlength="11" data-parsley-maxlength="15" style="border: 1px solid white" type="number" data-parsley-group="block3" required="">
                             </div>
                         </div>
                     </div>
@@ -1923,15 +1931,18 @@
                 reader.onload = function() {
                     blob = btoa(reader.result);
                     json['image'] = blob;
-                    console.log(JSON.stringify(json));
+                    json['client id'] = '********';
+                    console.log(JSON.stringify(json))
 
-                    //Converting JSON object to string format
+        //Converting JSON object to string format
                     var myJSON = JSON.stringify(json);
+
+                  
 
                     $.ajax({
                         type: "POST",
                         url: "/submit.php",
-                        data: myJSON,
+                        data: json,
                         dataType: "json",
                     }).done(function () {
                         $("#confirm, #confirm-head, #confirm-form, #confirm-button").fadeOut(300, function () {
