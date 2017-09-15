@@ -427,19 +427,22 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .rsa-img, .avc-img, .sms-img, .cbs-img, .nst-img, .mf-img{
     object-fit: contain;
     width: 101%;
-    display: none;
 }
 .rsa-img{
     display: block;
+}
+.avc-img, .sms-img, .cbs-img, .nst-img, .mf-img {
+    display: none;
 }
 #rsa, #avc, #nst, #mf, #pms{
     background: url("../images/products-bg.jpg") no-repeat center;
     background-size: cover;
 }
-#rsa > p, #avc > p, #nst > p, #mf > p, #cbs > p, #pms > p{
-    margin: 35px 20px;
+#retirement-savings-account-0 > p, #additional-voluntary-contribution-1 > p, #nsitf-4 > p, #managed-funds-2 > p,
+#cross-border-services-3 > p, #personal-messaging-services-5 > p{
+    margin: 20px 10px;
 }
-#rsa p i, #avc p i, #nst p i, #mf p i{
+#retirement-savings-account-0 p i, #additional-voluntary-contribution-1 p i, #nsitf-4 p i, #managed-funds-2 p i{
     font-weight: 500;
 }
 .info-icon{
@@ -583,7 +586,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .location{
     background-color: rgba(56, 125, 194, .8);
 }
-.location h1, .location h3{
+.location h1, .location h3, .company-tab h3 {
     margin: 25px 0;
     font-weight: 300;
     color: white;
@@ -848,12 +851,16 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 .career-cult-box h3{
     font-weight: 300;
+    width: 100%;
 }
-.cult-box1, .cult-box2, .cult-box3, .cult-box4, .cult-box5, .cult-box6{
+.cult-box1, .cult-box2, .cult-box3, .cult-box4{
     height: 240px;
+    padding: 0;
 }
 .career-cult-box p, .career-cult-box h3{
-    position: relative;
+    position: absolute;
+    left: 5%;
+    width: 90%;
     color: white;
 }
 .cult-box1{
@@ -868,15 +875,10 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     background-size: cover;
 }
 .cult-box4{
-    background: url(../images/sheet.jpg) no-repeat center center;
-    background-size: cover;
-}
-.cult-box5{
-    background: url(../images/crayon.jpg) no-repeat center center;
-    background-size: cover;
-}
-.cult-box6{
     background-color: #c0d4ec;
+}
+.cult-box2 p, .cult-box3 p {
+    display: none;
 }
 #cv h4{
     margin-top: 30px;
@@ -1018,7 +1020,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 
 /*Styling for Body Section of Company Page*/
 .company-bg{
-    background: url(../images/company-bg.jpg);
+    background: url(../images/company-bg.jpg) no-repeat center;
     background-size: cover;
 }
 #compTab img, #benefitsTab img{
@@ -2174,7 +2176,7 @@ footer .table td, .table th {
     .news-tab a.nav-link.active::before,  .news-tab a.nav-link:hover::before, .news-tab a.nav-link:focus::before {
         width: 85%;
     }
-    .cult-box1, .cult-box2, .cult-box3, .cult-box4, .cult-box5, .cult-box6 {
+    .cult-box1, .cult-box2, .cult-box3, .cult-box4 {
         font-size: 0.875rem;
         height: 200px;
     }
@@ -2656,6 +2658,7 @@ footer .table td, .table th {
     }
     .reg {
         background-size: 100% 100%;
+        height: 175px;
     }
 
     /*Styling for Contact Page*/
@@ -2718,7 +2721,7 @@ footer .table td, .table th {
     .sub-box, .pen-calc-bg {
         font-size: 0.85rem;
     }
-    .cult-box1, .cult-box2, .cult-box3, .cult-box4, .cult-box5, .cult-box6 {
+    .cult-box1, .cult-box2, .cult-box3, .cult-box4 {
         height: 180px;
     }
     .career-cult-box p{

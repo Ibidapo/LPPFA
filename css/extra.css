@@ -1,0 +1,34 @@
+#s-map .col-12{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 5%;
+    color: #2068a4;
+}
+#s-map .col-12 h3, #s-map .col-12 h4{
+    font-weight: 500;
+}
+#s-map .col-12 .nav-link, #s-map .col-12 .h5 {
+    padding: .5rem 0;
+}
+#s-map .col-12 .nav-link .fa-chevron-right::before {
+    color: #ffb81c !important;
+}
+
+#accordion11 {
+    margin: 25px auto;
+    width: 90%;
+}
+#accordion11 > .card {
+    background: transparent;
+    margin: 10px auto;
+    border: 2px solid #e2e2e0;
+    border-radius: 25px;
+}
+#accordion11 .card .card-header {
+    background: #e2e2e0;
+    border-radius: 23px;
+}
+#accordion11 a {
+    color: #4c4648;
+    text-decoration: none;
+}

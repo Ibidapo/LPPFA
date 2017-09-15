@@ -50,6 +50,7 @@ include_once 'mail/company.php';
                             src="<?php echo get_bloginfo('template_directory'); ?>/images/village.png"> C.S.R</a>
                 </li>
             </ul>
+            <h3 class="hidden-md-up text-center" data-aos="fade">Our Company</h3>
             <form class="hidden-md-up mx-auto">
                 <div class="form-group text-center">
                     <select class="form-control" id="m-compTab" data-aos="fade">
@@ -909,7 +910,7 @@ include_once 'mail/company.php';
         </div>
         <div class="tab-pane fade col-12" role="tabpanel" id="f-rep">
             <div class="row">
-                <div class="col-12 col-md-6" style="padding-left: calc(10% - 15px)">
+                <div class="col-12 col-md-6">
                     <h2>Reports</h2>
 
                     <p>Download and review our fund performance over the years</p>
