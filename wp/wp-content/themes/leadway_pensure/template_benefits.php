@@ -55,16 +55,16 @@ function getId($aKey, $bKey)
                 $id = "dth-ben2";
                 break;
             case 4:
-                $id = "#frgn2";
+                $id = "frgn2";
                 break;
             case 5:
-                $id = "#nst2";
+                $id = "nst2";
                 break;
             case 6:
-                $id = "#leg-app";
+                $id = "leg-app";
                 break;
             case 7:
-                $id = "#avc-app";
+                $id = "avc-app";
                 break;
         }
     }

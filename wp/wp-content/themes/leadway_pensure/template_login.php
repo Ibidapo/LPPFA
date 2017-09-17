@@ -113,12 +113,12 @@ $slider_images = get_field("slider_images");
                 </div>
                 <div class="form-group">
                     <label for="pass">Password</label>
-                    <input type="text" class="form-control" id="pass">
+                    <input type="password" class="form-control" id="pass">
                 </div>
                 <button class="btn btn-primary" type="submit">Login</button>
             </form>
             <div class="login-links">
-                <a href="#">Forgot Username or Password?</a><br/><a href="#">Not registered with Leadway Pensure? Enroll now</a>
+                <a href="#">Forgot Username or Password?</a><br/><a href="/enroll">Not registered with Leadway Pensure? Enroll now</a>
             </div>
         </div>
         <div class="hidden-sm-down col-md-7">
