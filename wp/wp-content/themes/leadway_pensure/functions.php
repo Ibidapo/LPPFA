@@ -267,4 +267,35 @@ function array_get($data, $key, $default = null)
     return isset($data[$key]) ? $data[$key] : $default;
 }
 
+/**
+ * @param $response
+ * @return bool
+ */
+function getResponse($response)
+{
+    if (is_array($response) && isset($response['body'])) {
+        $response_json = json_decode($response['body']);
+        return $response_json;
+    } else {
+        $response = false;
+        return $response;
+    }
+}
+
+// timeout issue
+
+add_filter('http_request_args', 'bal_http_request_args', 100, 1);
+function bal_http_request_args($r) //called on line 237
+{
+    $r['timeout'] = 15;
+    return $r;
+}
+
+add_action('http_api_curl', 'bal_http_api_curl', 100, 1);
+function bal_http_api_curl($handle) //called on line 1315
+{
+    curl_setopt( $handle, CURLOPT_CONNECTTIMEOUT, 15 );
+    curl_setopt( $handle, CURLOPT_TIMEOUT, 15 );
+}
+
 
