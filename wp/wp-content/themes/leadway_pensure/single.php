@@ -1,51 +1,13 @@
 <?php
 get_header();
-$options = get_option('theme_options');
 $social_options = get_option('theme_social_options');
 ?>
 <!-- Desktop navigation -->
 <nav class="navbar fixed-top hidden-md-down pOff">
-    <!-- desktop price charts start -->
-    <table class="table table-responsive mOff">
-        <tbody>
-        <tr>
-            <td>
-                <div id="google_translate_element"></div>
-            </td>
-            <td>
-                <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i>
-                    <?= $options['phone_number'] ?>
-                </span>
-            </td>
-            <td>
-                <span class="head-td"> RSA FUNDS</span><br>
-                    <span>&#8358;2.3433 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png"
-                                             alt=""></span>
-            </td>
-            <td>
-                <span class="head-td">RETIREE FUNDS</span><br>
-                    <span> &#8358;2.3433 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png"
-                                              alt=""></span>
-            </td>
-            <td>
-                <span class="head-td">RSA ACCOUNTS </span><br>
-                <span> 500,000 </span>
-            </td>
-            <td>
-                <a href="/calculator" class="nav-calc"> <img
-                        src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png">
-                    <span>Calculator</span></a>
-            </td>
-            <td>
-                <button type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS
-                </button>
-            </td>
-            <td>
-                <span id="date"></span>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+    
+     <!-- chart header -->
+     <?php include_once('partials/chart-table.php') ?>
+    
     <!-- Navbar -->
     <div class="navBlog">
         <div class="col-md-12">

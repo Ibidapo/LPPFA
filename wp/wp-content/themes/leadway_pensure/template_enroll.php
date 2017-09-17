@@ -22,54 +22,9 @@ if(isset($_POST['token'])) {
 <?php get_header(); ?>
 <!-- Body and Main Content of page -->
 <div class="container-fluid" id="enroll-bg">
-    <!-- Desktop navigation -->
-    <!-- Navbar -->
-    <nav class="navbar hidden-sm-down pOff fixed-top">
-        <!-- desktop price charts start -->
-        <table class="table table-responsive mOff">
-            <tbody>
-            <tr>
-                <td>
-                    <form>
-                        <div class="form-group">
-                            <select class="form-control language">
-                                <option>English</option>
-                                <option>Yoruba</option>
-                                <option>Hausa</option>
-                                <option>Igbo</option>
-                            </select>
-                        </div>
-                    </form>
-
-                </td>
-                <td>
-                    <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i> 0800-Pesnure</span>
-                </td>
-                <td>
-                    <span class="head-td"> RSA FUNDS</span><br>
-                    <span>&#8358;2.3433 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png" alt=""></span>
-                </td>
-                <td>
-                    <span class="head-td">RETIREE FUNDS</span><br>
-                    <span> &#8358;2.3433 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png" alt=""></span>
-                </td>
-                <td>
-                    <span class="head-td">RSA ADMIN FEE</span><br>
-                    <span> &#8358;100 </span>
-                </td>
-                <td>
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png"><span>Calculator</span>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS </button>
-                </td>
-                <td>
-                    <span id="date"></span>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </nav>
+    
+    <!-- chart header -->
+    <?php include_once('partials/chart-header.php') ?>
 
     <div class="row p-id" id="test">
         <div id="progressMark" class="col-7">
