@@ -553,6 +553,18 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                 $('a[href="#careerTip"]').tab('show');
             }
         });
+
+        $('.blog-com').click(function(){
+            $('a[href="#comic"]').tab('show');
+        });
+
+        $('.blog-vid').click(function(){
+            $('a[href="#blogVids"]').tab('show');
+        });
+
+        $('.blog-tip').click(function(){
+            $('a[href="#careerTip"]').tab('show');
+        });
     });
 </script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/instafeed.min.js"></script>
