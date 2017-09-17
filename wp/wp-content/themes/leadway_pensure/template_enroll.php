@@ -17,43 +17,6 @@ if(isset($_POST['token'])) {
     header("Location: /token");
 }
 
-$options = get_option('theme_options');
-
-$results = [];
-$cacheKey = "leadway_rsa_rf_info";
-$rsa_rf = get_transient($cacheKey);
-
-if (!$rsa_rf) {
-    $rsa_rf['rsa'] = wp_remote_post("https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/Chart", [
-        'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
-        'body' => json_encode([
-            "RSAFund" => true,
-            "duration" => 0
-        ]),
-        'method' => 'POST'
-    ]);
-    $rsa_rf['rf'] = wp_remote_post("https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/Chart", [
-        'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
-        'body' => json_encode([
-            "RetireeFund" => true,
-            "duration" => 0
-        ]),
-        'method' => 'POST'
-    ]);
-    if (
-        is_array($rsa_rf['rsa']) && isset($rsa_rf['rsa']['body']) &&
-        is_array($rsa_rf['rf']) && isset($rsa_rf['rf']['body'])
-    ) {
-        $rsa_json = json_decode($rsa_rf['rsa']['body']);
-        $rf_json = json_decode($rsa_rf['rf']['body']);
-        $rsa_rf['rsa'] = $rsa_json->Data;
-        $rsa_rf['rf'] = $rf_json->Data;
-        set_transient($cacheKey, $rsa_rf, DAY_IN_SECONDS);
-    } else {
-        $rsa_rf = false;
-    }
-}
-
 ?>
 
 <?php get_header(); ?>
@@ -67,39 +30,38 @@ if (!$rsa_rf) {
             <tbody>
             <tr>
                 <td>
-                    <div id="google_translate_element"></div>
+                    <form>
+                        <div class="form-group">
+                            <select class="form-control language">
+                                <option>English</option>
+                                <option>Yoruba</option>
+                                <option>Hausa</option>
+                                <option>Igbo</option>
+                            </select>
+                        </div>
+                    </form>
+
                 </td>
                 <td>
-                        <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i>
-                            <?= $options['phone_number'] ?>
-                        </span>
-                </td>
-                <?php if ($rsa_rf) { ?>
-                    <td>
-                        <span class="head-td"> RSA FUND</span><br>
-                            <span>&#8358;<?= array_get($rsa_rf['rsa']->values, 0) ?>
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png" alt="">
-                            </span>
-                    </td>
-                    <td>
-                        <span class="head-td">RETIREE FUND</span><br>
-                            <span> &#8358;<?= array_get($rsa_rf['rf']->values, 0) ?>
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png" alt="">
-                            </span>
-                    </td>
-                <?php } ?>
-                <td>
-                    <a href="/login" style="color: white; font-weight: 500">LOGIN</a>
+                    <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i> 0800-Pesnure</span>
                 </td>
                 <td>
-                    <a href="/calculator" class="nav-calc"> <img
-                            src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png">
-                        <span>Calculator</span></a>
+                    <span class="head-td"> RSA FUNDS</span><br>
+                    <span>&#8358;2.3433 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png" alt=""></span>
                 </td>
                 <td>
-                    <button onclick="location='/trends'" type="button" class="btn btn-outline-secondary v-trends">
-                        VIEW TRENDS
-                    </button>
+                    <span class="head-td">RETIREE FUNDS</span><br>
+                    <span> &#8358;2.3433 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png" alt=""></span>
+                </td>
+                <td>
+                    <span class="head-td">RSA ADMIN FEE</span><br>
+                    <span> &#8358;100 </span>
+                </td>
+                <td>
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png"><span>Calculator</span>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS </button>
                 </td>
                 <td>
                     <span id="date"></span>
@@ -973,14 +935,15 @@ if (!$rsa_rf) {
                     <!-- line 1 start -->
                     <div class="row">
                         <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
-                             <!-- space for title --> 
+                             <label class="field-label"> Title </label>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dp-email">
                             
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
 
                             <div class="form-group">
                                 <label class="field-label"> Gender </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dGender>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dGender">
                             </div>
 
                         </div>
@@ -990,7 +953,7 @@ if (!$rsa_rf) {
                                  <label class="field-label"> Mobile no
 
                                 </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dp-mno placeholder="" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dp-mno" placeholder="" readonly>
                             </div>
                         </div>
 
@@ -1001,20 +964,20 @@ if (!$rsa_rf) {
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group">
                                 <label class="field-label"> Status </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dStatus readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dStatus" readonly>
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
  <div class="form-group">
                                 <label class="field-label"> Birthday </label>
-                                <input type="text" class="form-control language col-sm-7 mx-auto text-center" id=dBirthday readonly>
+                                <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dBirthday" readonly>
                             </div>
                            
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
 <div class="form-group ">
                                 <label class="field-label"> State of Origin </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dSoo readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dSoo" readonly>
                             </div>
                         </div>
 
@@ -1026,20 +989,20 @@ if (!$rsa_rf) {
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group">
                                 <label class="field-label"> Local Government Area </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dLga readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dLga" readonly>
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
                            <div class="form-group">
                                 <label class="field-label"> Nationality </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dNation readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dNation" readonly>
                             </div>
            
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center mOff">    
                                <div class="form-group">
                                 <label class="field-label"> ID type </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dIdt readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dIdt" readonly>
                             </div>
                         </div>
                     </div>
@@ -1791,7 +1754,7 @@ if (!$rsa_rf) {
             var birthday = document.getElementById('birthday').value;
       
              console.log(birthday)
-              var leadwayMinAgeBracket = '1996-01-01';
+              var leadwayMinAgeBracket = '2002-01-01';
               var userBirthday = moment(birthday);
               var minAge = moment(leadwayMinAgeBracket);
               console.log(userBirthday);
@@ -1874,6 +1837,8 @@ if (!$rsa_rf) {
                 pinNumber.readOnly = true;
 
             }else{
+
+               pinNumber.readOnly = false;
 
               return false;
 

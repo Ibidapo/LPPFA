@@ -76,7 +76,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                     <a class="nav-link active" data-toggle="tab" href="#blogHome" role="tab">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#blogInvest" role="tab">Investment Series</a>
+                    <a class="nav-link" data-toggle="tab" href="#blogInvest" role="tab"> Articles </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#comic" role="tab">Comic</a>
@@ -87,9 +87,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#careerTip" role="tab">Career Tips</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#articles" role="tab">Articles</a>
-                </li>
+     
                 <li class="nav-item">
                     <a class="nav-link" href="/"><img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" height="80"></a>
                 </li>
@@ -525,9 +523,8 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
         <div class="col-12 col-md-4 align-self-center text-center">&copy; Leadway Pensure 2017</div>
         <div class="col-12 col-md-4 align-self-center text-center text-md-right">Web Design & Digital by iNspire</div>
     </div>
-    <a id="share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
-    <a id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
-    <a href="javascript:" id="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    <a  href="javascript:window.print()" data-toggle="tooltip" title="Print" data-placement="left" id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
+    <a href="javascript:" data-toggle="tooltip" title="Back to Top" data-placement="left" id="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
 </footer>
 <?php get_footer(); ?>
 <script>

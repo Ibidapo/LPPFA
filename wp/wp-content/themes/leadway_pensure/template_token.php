@@ -142,7 +142,7 @@ if (!$rsa_rf) {
                 <div class="row" id="ad-text">
 
                     <div class="col-sm-6 col-md-5 hidden-xs-down" id="sms-msg">
-                        Receive your token via SMS today to get started
+                        Receive your token via EMAIL today to get started
                     </div>
                     <div class="col-sm-3 offset-sm-9 col-md-3 offset-md-9 back">
                         <a class="" href="#">
@@ -183,22 +183,31 @@ if (!$rsa_rf) {
                                 <input type="hidden" name="formName" value="token-form"/>
                                 <div class="row ">
                                     <div class="col-12 col-sm-6 text-center form-pad">
-                                        <label class="form-label"> First name </label>
-                                        <input name= firstname class="form-control e-fields text-center" type="text" placeholder="John" required="" id='f-name'>
+                                        <label class="form-label"> First Name </label>
+                                        <input name= firstname class="form-control e-fields text-center" type="text" placeholder="stark" required="" id='f-name'>
                                     </div>
                                     <div class="col-12 col-sm-6 text-center form-pad">
-                                        <label class="form-label"> Last name </label>
-                                        <input name=lastname class="form-control e-fields text-center" type="text" placeholder="Snow" required="" id='l-name'>
+                                        <label class="form-label"> Middle Name </label>
+                                        <input name=middlename class="form-control e-fields text-center" type="text" placeholder="snow" required="" id='l-name'>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12 col-sm-6 text-center form-pad">
-                                        <label class="form-label"> Mobile no </label>
-                                        <input name=mobileno class="form-control e-fields text-center" type="number" placeholder="080xxxxxxx" data-parsley-minlength="11" data-parsley-maxlength="15">
+                                        <label class="form-label"> Surname </label>
+                                        <input name=surname class="form-control e-fields text-center" type="text" placeholder="John" data-parsley-minlength="11" data-parsley-maxlength="15" required="">
                                     </div>
                                     <div class="col-12 col-sm-6 text-center form-pad">
                                         <label class="form-label"> Email </label>
                                         <input name=emailaddress class="form-control e-fields text-center" type="text" placeholder="Johnsnow@xxxxxxx" required="">
+                                    </div>
+                                </div>
+<div class="row">
+                                    <div class="col-12 col-sm-6 text-center form-pad">
+                                        <label class="form-label"> Mobile no </label>
+                                        <input name=mobileno class="form-control e-fields text-center" type="number" placeholder="080xxxxxxx" data-parsley-minlength="11" data-parsley-maxlength="15" required="">
+                                    </div>
+                                    <div class="col-12 col-sm-6 text-center form-pad">
+                                        
                                     </div>
                                 </div>
                                 <div class="row">
@@ -243,7 +252,7 @@ if (!$rsa_rf) {
                         <input name="token" class="form-control e-fields"  type="text" placeholder="Token no" required="">
                     </div>
                     <div class="col-12 col-sm-3 text-center">
-                        <input type=submit class="btn btn-purple" value="Enroll now">
+                        <input type=submit class="btn btn-purple" value="Enroll now" id="call-json">
                     </div>
                 </div>
             </form>
@@ -264,6 +273,31 @@ if (!$rsa_rf) {
             $('#requirement').fadeOut(100, function(){ $('#r-token').fadeIn(200)});
         });
     });
+
+
+        function convertFormToJSON(form){
+
+        var array =  jQuery(form).serializeArray();
+        var json = {};
+
+        json['clientID'] = '9dy8earw04r09wjefsdp90zsjs';
+        jQuery.each(array, function(){ 
+              json[this.name] = this.value || '' ;
+        });
+    return json;
+
+    }
+
+     //sample string generation block 
+
+    $('#call-json').click(function(){
+     
+       var form = document.getElementById('token-data');
+       var json= convertFormToJSON(form);
+      
+       console.log(JSON.stringify(json))
+    });
+
 
     var form = $("#token-data");
     form.bind('submit', function (event) {

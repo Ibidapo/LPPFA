@@ -50,7 +50,6 @@ include_once 'mail/company.php';
                             src="<?php echo get_bloginfo('template_directory'); ?>/images/village.png"> C.S.R</a>
                 </li>
             </ul>
-            <h3 class="hidden-md-up text-center" data-aos="fade">Our Company</h3>
             <form class="hidden-md-up mx-auto">
                 <div class="form-group text-center">
                     <select class="form-control" id="m-compTab" data-aos="fade">
@@ -207,19 +206,23 @@ include_once 'mail/company.php';
                                 </div>
                                 <div class="col-md-8 dir-history">
                                     <!-- <?= get_field('chairman_description') ?> -->
-                                    <p>Apart from being the Managing Director/ Chief Executive Officer of Leadway Assurance Group,
-                                    Oye Hassan-Odukale is now the Chairman of Leadway Pensure PFA. He is a product of Mayflower School,
-                                    Ikenne, Ogun State. He graduated from University of Houston, Texas from where he obtained both Bachelors
-                                    and Masters Degrees in Business Administration, specializing in Finance.</p>
-                                    <p>He started his career in insurance with SCIB & Company Insurance Brokers (an affiliate of Segwicks
-                                    Insurance Brokers) in 1980 and joined Leadway Assurance Company Limited in 1981, becoming Managing
-                                    Director and Chief Executive Officer of the company in 1994. He is a Munich Re scholar, being the First
-                                    West African recipient of Munich Re and Georgia State University International Visiting Fellows insurance
-                                    Program. He is accredited by the Securities and Exchange Commission as an Investment Manager and Portfolio
-                                    Adviser.</p>
-                                    <p>Oye Hassan-Odukale is on the Board of a number of reputable companies such as First Bank of Nigeria,
-                                    and the immediate past Chairman, Nigeria Insurance Association. He is also Member of the Order of the
-                                    Federal Republic (MFR).</p>
+        <p> Mr Hassan-Odukale is the Managing Director/ Chief Executive Officer of Leadway
+Assurance Group. Apart from being a Director of Leadway Pensure PFA. He graduated
+from University of Houston, Texas from where he obtained both Bachelors and Masters
+Degrees in Business Administration, specializing in Finance. </p>
+<p> He started his career in insurance with SCIB & Company Insurance Brokers (an
+affiliate of Segwicks Insurance Brokers) in 1980 and joined Leadway Assurance
+Company Limited in 1981, becoming Managing Director and Chief Executive Officer of
+the company in 1994. He is a Munich Re scholar, being the First West African
+recipient of Munich Re and Georgia State University International Visiting Fellows
+insurance Program. He is accredited by the Securities and Exchange Commission as an
+Investment Manager and Portfolio Adviser. </p>
+<p> He currently serves on the Executive Committee of the African Insurance
+Organization, and is the current Chairman of both the Franco Nigeria Chamber of
+Commerce (FNCC) and the Lagos State Security Trust Fund (LSSTF). He also sits on the
+boards of FBN Holdings PLC FBN (UK) Ltd, the Infrastructure Bank PLC and the Special
+Olympics of Nigeria (SON). He is a Member of the Order of the Federal Republic
+(MFR). </p>
                                 </div>
                             </div>
                         </div>
@@ -235,21 +238,22 @@ include_once 'mail/company.php';
                                     </figure>
                                 </div>
                                 <div class="col-md-8 dir-history">
-                                    <p>Presently the Managing Director of Leadway Pensure PFA, Mrs Adedeji was formerly
-                                        Executive Director at LPPFA.
-                                        Prior to that she was an Executive Director of both MBC International Bank
-                                        Limited and MBC Securities Limited.
-                                        She is an Associate member of The Institute of Chartered Accountant of Nigeria
-                                        (ACA) and a Fellow of Chartered
-                                        Association of Certified Accountants, UK (FCCA).</p>
+                           <p> Prior to her appointment as Managing Director of Leadway Pensure PFA in 2007, she
+was an Executive Director of Leadway Pensure PFA. She was also an Executive Director
+of both MBC International Bank Limited and MBC Securities Limited. Ronke is a Fellow
+of The Institute of Chartered Accountant of Nigeria, Chartered Institute of Taxation
+and a Fellow of Chartered Association of Accountants, UK.  She was Head of Capital
+Issues Division of ICON Limited (Merchant Bankers) for 7 years from where she moved
+to MBC International Bank in 1993. She was appointed an Executive Director at MBC
+International Bank in 2001. </p>
+<p> Her experience covers Investment Banking, Retail Banking, Corporate Banking,
+Treasury, Corporate Services, Capital Markets and Securities.  She has attended
+various courses internationally and locally including the Chief Executive’s Program
+at the Lagos Business School and IESE in Barcelona, Spain. </p>
 
-                                    <p>She was Head of Capital Issues Division of ICON Limited (Merchant Bankers) for 7
-                                        years from where she moved to
-                                        MBC International Bank in 1993. She was appointed an Executive Director at MBC
-                                        International Bank in 2001. Her
-                                        experience covers Retail Banking, Corporate Banking, Private Banking, Investment
-                                        Banking, Corporate Services and
-                                        Securities.</p>
+<p> Ronke Adedeji is also a fellow of the Certified Pension Institute of Nigeria (CPIN)
+and the Association of Pension Funds of Nigeria (APFN).
+</p>
                                 </div>
                             </div>
                         </div>
@@ -265,64 +269,21 @@ include_once 'mail/company.php';
                                     </figure>
                                 </div>
                                 <div class="col-md-8 dir-history">
-                                    <p>Dr. Balla Swamy is a Veterinary Graduate (B.V.Sc) from Andhra Pradesh
-                                        Agricultural University,
-                                        Hyderabad and Post-graduate in Business Administration (M.B.A Marketing) from
-                                        Dr. B.R. Ambedkar Open
-                                        University, Hyderabad, India. He is also Associate of the Insurance Institute of
-                                        India and attended
-                                        various training programmes at national and international levels on Insurance,
-                                        Reinsurance and Management
-                                        studies including Corporate Governance.</p>
+                                    <p>Dr. Swamy is the Current Chief Executive and managing Director, Prestige Assurance
+Plc. He holds a degree in  Veterinary Science (B.V.Sc) from Andhra Pradesh
+Agricultural University, Hyderabad and Post-graduate in Business Administration
+(M.B.A Marketing) from Dr. B.R. Ambedkar Open University, Hyderabad, India.  With an
+experience of two years in Rural India, he joined The New India Assurance Company
+(Wholly Owned by the Govt. of India and Largest General Insurance Company with
+A-Excellent Rating given by A.M. Best Company, U.S.A, an indication that the Company
+has the highest degree of financial strength to honor its Policyholders obligations)
+as Direct Recruit Specialist Officer in 1985. Dr. Swamy is recognized as Specialist
+in Agriculture and Rural Insurance business in Andhra Pradesh serving in several
+capacities in India and the Philippines.</p>
 
-                                    <p>With an experience of two years in Rural India, joined as Direct Recruit
-                                        Specialist Officer in 1985, The
-                                        New India Assurance Co Ltd, Mumbai, (Wholly Owned by the Govt. of India) and
-                                        Largest General Insurance Company
-                                        with A- Excellent Rating given by A.M. Best Company, U.S.A. rated A-(Excellent –
-                                        Stable outlook) by AM Best.
-                                        indicating that the Company has the Highest degree of Financial strength to
-                                        honor its Policyholders obligations.</p>
-
-                                    <p>He worked in various Offices and attained Administrative and Underwriting skills
-                                        in ranks of Assistant
-                                        Administrative Officer, Assistant Manager for a period of twelve years in
-                                        handling major catastrophic losses
-                                        and Rural Mass Insurance Programmes. He is recognized as Specialist for
-                                        Agriculture and Rural Insurance business
-                                        in Andhra Pradesh.</p>
-
-                                    <p>He assumed the marketing activities from 1997 to 2004 as Divisional Manager and
-                                        Senior Divisional Manager in
-                                        Andhra Pradesh and serviced Major Divisional Office at Vishalkaptnam. His
-                                        services were recognized and deputed to
-                                        Philippines to head the operations of 78 years old Branch Office of The New
-                                        India Assurance Co Ltd, in Manila.
-                                        The office grew with two branch offices and two general agencies, resulting in
-                                        premium growth and profitability
-                                        out of expansion of reinsurance support from the corporate office and remained
-                                        as major player in Philippines from
-                                        the year 2004 to 2007.</p>
-
-                                    <p>In the year 2008, he was elevated to Chief Manager and posted as Head of
-                                        Reinsurance Department of The New India
-                                        Assurance Co Ltd, at Head Office, Mumbai up to the year 2010. Subsequently, he
-                                        was recognized to handle the Health
-                                        Insurance Department of The New India Assurance Co Ltd, the largest Health
-                                        Insurer in India. To his credit,
-                                        successful implementation of Health Insurance Module in centralized web based
-                                        Insurance Systems and centralized
-                                        payment of all the claims to the customers and hospitals directly through
-                                        electronic payment, resulting in the
-                                        bagging of Award of Best Health Insurer by Outlook Express Magazine. The New
-                                        India Assurance Co Ltd also instituted
-                                        the Health Achievers Award in coordination with Times of India to recognize the
-                                        services of the best doctors,
-                                        hospitals and innovations in the field of Health Management Services.</p>
-
-                                    <p>He was deputed to Prestige Assurance Plc as its Managing Director in November
-                                        2014 subsequent to his elevation
-                                        to the exalted position of Deputy General Manager in the same year.</p>
+<p> Dr. Swamy is an Associate of the Insurance Institute of India and has attended
+various training programmes at national and international levels on Insurance,
+Reinsurance and Management studies and Corporate Governance.</p>
                                 </div>
                             </div>
                         </div>
@@ -338,19 +299,15 @@ include_once 'mail/company.php';
                                     </figure>
                                 </div>
                                 <div class="col-md-8 dir-history">
-                                    <p>He is an Executive Director of FBN Capital. Prior to this, he was the Deputy
-                                        Managing Director
-                                        of MBC International Bank Limited with general management oversight. He attended
-                                        Cranleigh School, Surrey,
-                                        England after which he proceeded to The London School of Economics & Political
-                                        Science where he obtained a
-                                        law degree and was called to The Nigerian Bar in 1988. He later obtained his MBA
-                                        from the Lagos Business School.
-                                        He headed various Departments and Divisions in the Bank before his appointment
-                                        as the Executive Director of MBC
-                                        in 2000. He has attended development programmes in Paris, Australia and others.
-                                        He is a member of the Nigerian
-                                        Economic Summit and Institute of Directors.</p>
+                                    <p>Mr Majekodunni is the Managing Director of MBC Securities Limited. Prior to this, he
+was Executive director of FBN Capital Ltd. Before which he was the Deputy Managing
+Director of MBC International Bank Limited with general management oversight. He
+attended Cranleigh School, Surrey, England after which he proceeded to The London
+School of Economics & Political Science where he obtained a law degree and was
+called to The Nigerian Bar in 1988. He later obtained his MBA from the Lagos
+Business School. He headed various Departments and Divisions in the Bank before his
+appointment as the Executive Director of MBC in 2000 and Executive Director of FBN
+Capital in January 2006. Kofo is a member of the Nigerian Economic Summit and Institute of Directors.</p>
                                 </div>
                             </div>
                         </div>
@@ -366,28 +323,22 @@ include_once 'mail/company.php';
                                     </figure>
                                 </div>
                                 <div class="col-md-8 dir-history">
-                                    <p>Mr. Ike Osakwe is a Chartered Accountant and practicing Management Consultant.
-                                        Educated in England,
-                                        he holds degrees in Chemistry from the University of Oxford and has served
-                                        Articles in the London offices
-                                        of KPMG Audit. Qualifying in 1980, as a member of the Institute of Chartered
-                                        Accountants for England and Wales,
-                                        he returned to Nigeria to work as an expatriate for ITT.</p>
+                                    <p>Ike Osakwe is a Chartered Accountant and practicing Management Consultant.  Educated
+in England, he holds degrees in Chemistry from the University of Oxford and has
+served Articles in the London offices of KPMG Audit. Qualifying in 1980, as a member
+of the Institute of Chartered Accountants for England and Wales, he returned to
+Nigeria to work as an expatriate for ITT.  He now serves as the Managing Director of
+GRID Consulting Ltd., a company that specialises in the planning and implementation
+of change processes and systems for Commerce, Industry, Government and NGOs.</p>
 
-                                    <p>He now serves as the Managing Director of GRID Consulting Ltd., a company that
-                                        specialises in the planning and
-                                        implementation of change processes and systems for Commerce, Industry,
-                                        Government and NGOs.</p>
 
-                                    <p>Mr. Osakwe has over 28 years' experience in financial, strategic and corporate
-                                        planning, as well as
-                                        organisational and financial management systems development, both in Nigeria and
-                                        internationally. He has brought
-                                        his vast experience in the dynamics of most major industrial sectors to bear in
-                                        his work on corporate governance.
-                                        He has held several government and Board appointments and currently serves on
-                                        the Boards of Oando Plc., Thomas Wyatt
-                                        Nig. Plc. and FedEx Red Star Nig Ltd.</p>
+<p> Mr Osakwe has over 28 years experience in financial, strategic and corporate
+planning, as well as organisational and financial management systems development,
+both in Nigeria and internationally. He has brought his vast experience in the
+dynamics of most major industrial sectors to bear in his work on corporate
+governance.  He has held several government and board appointments and currently
+serves on the Boards of Oando Plc., Thomas Wyatt Nig. Plc. and FedEx Red Star Nig
+Ltd.</p>
                                 </div>
                             </div>
                         </div>
@@ -403,25 +354,18 @@ include_once 'mail/company.php';
                                     </figure>
                                 </div>
                                 <div class="col-md-8 dir-history">
-                                    <p>Presently the Executive Director in charge of Investments and Management Systems
-                                        at Leadway Assurance Group.
-                                        Formerly the Managing Director of Leadway Pensure PFA. He is a graduate of the
-                                        University of London and City
-                                        University, London. He holds a Bachelors Degree in Pure Mathematics and a
-                                        postgraduate Diploma in Actuarial Science.
-                                        He attended The Advanced Management Program of Lagos Business School and is an
-                                        ordinary member of both the Royal
-                                        Society of Mathematics and Pensions Management Institute.</p>
+                                    <p> He is the Executive Director in charge of Investments and Management Systems at
+Leadway Assurance Group. He is accredited by the Securities and Exchange Commission
+as an Investment Adviser and Portfolio Manager. Mr Hassan-Odukale a graduate of the
+University of London and City University, London, holds a Bachelors degree in Pure
+Mathematics and a postgraduate diploma in Actuarial Science. Apart from his finance
+background, Mr. Hassan-Odukale has a strong bias for Information Technology. He is
+an ordinary member of both the Royal Society of Mathematics and Pensions Management
+Institute. He has attended The Advanced Management Program of Lagos Business School
+and several courses on Investment Management and Portfolio design.</p>
 
-                                    <p>He is accredited by the Securities and Exchange Commission as an Investment
-                                        Adviser and Portfolio Manager.
-                                        He has attended several courses locally and abroad on Investment Management and
-                                        Portfolio design. He is a Director
-                                        of Stanbic Bank Nigeria Limited, Union Assurance Limited (Subsidiary of Union
-                                        Bank of Nigeria) and Total Health
-                                        Trust Limited, a health Management Company. Apart from his finance background,
-                                        Mr. Hassan-Odukale has a strong bias
-                                        for Information Technology.</p>
+<p> He currently serves on the board of First Bank Nigeria Limited, Leadway Assurance
+    Company Limited and Digital Jewels Limited.</p>
                                 </div>
                             </div>
                         </div>
@@ -437,27 +381,17 @@ include_once 'mail/company.php';
                                     </figure>
                                 </div>
                                 <div class="col-md-8 dir-history">
-                                    <p>Mallam Ibrahim Dahiru Waziri possesses broad educational qualifications in
-                                        diverse disciplines including
-                                        Accounting, Economics, Banking & Finance, Oil & Gas, and Power, Business
-                                        Management and Human Resource.</p>
-
-                                    <p>He has over 30 years post-graduation experience in Academics, Public
-                                        Administration, Banking and Oil & Gas
-                                        Industries with particular strengths and interest in Gas resource development
-                                        and management, Corporate Governance,
-                                        Human Capital, Leading Change/ Organizational renewal Corporate Finance, and
-                                        Relationship Management. He is a Fellow
-                                        of the Institute of Directors and a former member of Nigeria’s Federal House of
-                                        Representative.</p>
-
-                                    <p>He is currently the Chairman of the Board of Directors, Transmission Company of
-                                        Nigeria (TCN); a Non-Executive
-                                        Director of First Bank of Nigeria; FBNBank, UK; First Exploration and Petroleum
-                                        Development Company Limited amongst
-                                        other Company Directorships. He has also served on the board of several
-                                        Companies, with vast and diverse experience
-                                        in Corporate Management & Governance.</p>
+                                    <p>Mallam Waziri has over 35 years’ professional experience in the public service,
+banking and oil and gas businesses. Mallam Waziri currently serves on the board of
+multiple companies amongst which are First Bank Nigeria, First Bank UK and First
+Exploration and Production PLC. Mallam Waziri has held several key management
+positions including Executive Director Nigeria Gas Company, Executive Director, PPMC
+Ltd, Deputy Managing Director of Nigeria LNG Ltd and  Group Executive Director NNPC
+in April 2009 He also served as the Deputy Managing Director, Nigeria LNG Limited.
+Mallam Waziri, a former member of the House of Representatives is currently the
+Managing Partner, Gulf of Guinea Petroleum Consulting Limited.</p>
+<p> He is a fellow of the Institute of Directors (IoD) and his experience cuts across
+several industries are brought to bear in his Board contributions.</p>
                                 </div>
                             </div>
                         </div>
@@ -473,26 +407,30 @@ include_once 'mail/company.php';
                                     </figure>
                                 </div>
                                 <div class="col-md-8 dir-history">
-                                    <p>Prior to his appointment as an Executive Director of Leadway Pensure PFA Ltd., he
-                                        had previously been the Chief
-                                        Operating Officer of the company. He was formerly the Chief Technology Officer,
-                                        Prestel Communications Ltd., Benin
-                                        and Tehila Communications Ltd., Lagos. He has extensive experience in
-                                        information systems and operations management,
-                                        and has attended many local and international seminars. He is an alumnus of the
-                                        Obafemi Awolowo University, Ile-Ife,
-                                        where he obtained a honors degree in Electrical and Electronic Engineering, and
-                                        the Lagos Business School, Lekki
-                                        Lagos, where he took the Senior Management program.</p>
+                                    <p>Prior to his appointment as Executive Director, Lanre Idris served as the Chief
+Operating Officer of the company. He was formerly the Chief Technology Officer,
+Prestel Communications Ltd., Benin and Tehila Communications Ltd., Lagos. He has
+extensive experience in information systems, Governance, Risk and Business Process
+management, and has participated in many local and international seminars in those
+subject areas. He is an alumnus of the Obafemi Awolowo University, Ile-Ife and the
+University of Liverpool, from where he obtained a degree in Electrical and
+Electronic Engineering and Postgraduate diploma in Information Systems Management
+respectively. Lanre has undergone several certificate and executive education
+courses at the Lagos Business School, London School of Economics and The Wharton
+College of the University of Pennsylvania.</p>
 
-                                    <p>He is a member of the Information Systems Audit & Control Association, the
-                                        British Computer Society and the
-                                        International Institute for Business Analysis. He is an ardent technocrat with
-                                        over 22 years of ornate service
-                                        experience and over 12 years of which has been in senior management and
-                                        executive rank. He a strategic thinker,
-                                        with a mix of technology and business skills. He is passionate about nature
-                                        conservation and sustainable environment.</p>
+
+
+<p> He is a member of the Information Systems Audit & Control Association, Institute for
+Operational Excellence, the British Computer Society and the International Institute
+for Business Analysis. He is an ardent technocrat with over 22 years of ornate
+service experience and over 12 years of which have been in senior management and
+executive ranks. </p>
+
+
+
+<p>He is a lifelong fellow of the Nigerian Conservation Foundation.
+</p>
                                 </div>
                             </div>
                         </div>
@@ -508,32 +446,30 @@ include_once 'mail/company.php';
                                     </figure>
                                 </div>
                                 <div class="col-md-8 dir-history">
-                                    <p>Presently an Executive Director with the Leadway Pensure PFA Ltd, Lagos, Nigeria.
-                                        Prior to his appointment
-                                        as an Executive Director of Leadway Pensure PFA Ltd., Mr. Olusakin Labeodan
-                                        served as the Chief Marketing Officer
-                                        as well as the Group Head, Distribution of the Company. He holds a Bachelors
-                                        Degree in Statistics from the University
-                                        of Ibadan and an MBA (Strategic Management) from Milpark Business.</p>
+                                    <p>Olusakin Labeodan – Executive Director (Sales & Marketing)
+Prior to his appointment as an Executive Director of Leadway Pensure PFA Ltd., Mr.
+Olusakin Labeodan served as the Chief Marketing Officer as well as the Group Head,
+Distribution of the Company. He holds a Bachelors Degree in Statistics from the
+University of Ibadan and an MBA (Strategic Management) from Milpark Business School,
+Johannesburg, South Africa, with distinctions in Strategic Marketing and Strategic
+Operations Management.</p>
 
-                                    <p>Olusakin's consistent and successful career experience in Public, Private and
-                                        International Organisations continue
-                                        to enrich his leadership capabilities especially in the areas of Sales and
-                                        Marketing, Business Development, Customer
-                                        Services, Finance & Investments, Research, Information & Communication
-                                        Technology (ICT), Private Banking and Pension
-                                        Fund Administration.</p>
-
-                                    <p>He has attended several advanced local and international seminars and trainings,
-                                        which includes High Performance
-                                        & Creative Negotiator, Senior Management Program (SMP43), Mastering Strategy and
-                                        Commerce Web Development at IESE
-                                        Business School, Barcelona, Spain; Lagos Business School (LBS) Lagos and
-                                        Nigeria; Dimension Data Learning Solutions,
-                                        Johannesburg, South Africa. He is a Full Member, South African Institute of
-                                        Management (SAIM) and the Computer Society
-                                        of South Africa (CSSA), now Institute of Information Technology Professionals
-                                        South Africa (IITPSA).</p>
+<p>He bagged the Top MBA Award in Strategic Operations Management (1998) by Stocks &
+Stocks Leisure Development (Pty) Limited, South Africa. Olusakin’s consistent and
+successful career experience in Public, Private and International Organisations
+continue to enrich his leadership capabilities especially in the areas of Sales and
+Marketing, Business Development, Customer Services, Finance & Investments, Research,
+Information & Communication Technology, Private Banking and Pension Fund
+Administration.</p>
+<p> Olusakin has attended several advanced local and international seminars and
+trainings, which includes Creating and Implementing Strategy for Competitive
+Advantage, High Performance & Creative Negotiator, Developing Leadership
+Competencies, Senior Management Program (SMP43), Mastering Strategy and Commerce Web
+Development at Wharton University, Pennsylvania, IESE Business School, Barcelona,
+Spain; Lagos Business School; Dimension Data Learning Solutions, Johannesburg, South
+Africa. He is a Full Member, South African Institute of Management (SAIM) and the
+Computer Society of South Africa (CSSA), now Institute of Information Technology
+Professionals South Africa (IITPSA).</p>
                                 </div>
                             </div>
                         </div>
@@ -910,7 +846,7 @@ include_once 'mail/company.php';
         </div>
         <div class="tab-pane fade col-12" role="tabpanel" id="f-rep">
             <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6" style="padding-left: calc(10% - 15px)">
                     <h2>Reports</h2>
 
                     <p>Download and review our fund performance over the years</p>

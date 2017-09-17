@@ -79,50 +79,7 @@ function getId($key)
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-12 know text-center">
-            <h1 class="hidden-sm-down" data-aos="fade">Knowledge Center</h1>
-            <h3 class="hidden-md-up" data-aos="fade">Knowledge Center</h3>
-            <ul class="hidden-sm-down nav nav-fill nav-tabs" id="knowTab" role="tablist">
-                <?php
-                $items = get_field("knowledge_centre_items");
-                foreach($items as $key => $item):
-                    $id = getId($key)
-                    ?>
-                    <li class="nav-item">
-                        <a class="nav-link <?= $key == 0 ? "active" : ""?>" data-toggle="tab" href="#<?= $id ?>" role="tab" data-aos="fade-right">
-                            <?= $item['title'] ?>
-                        </a>
-                    </li>
-                <?php endforeach ?>
-            </ul>
-            <form class="hidden-md-up mx-auto">
-                <div class="form-group text-center">
-                    <select class="form-control" id="m-knowTab" data-aos="fade">
-                        <?php
-                        $items = get_field("knowledge_centre_items");
-                        foreach($items as $key => $item): $id = getId($key)
-                            ?>
-                            <option value="<?= $key ?>"><?= $item['title'] ?></option>
-                        <?php endforeach ?>
-                    </select>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="row tab-content text-center" data-aos="fade">
-        <?php
-        $items = get_field("knowledge_centre_items");
-        foreach($items as $key => $item):
-            $id = getId($key);
-            ?>
-            <div class="tab-pane fade <?= $key == 0 ? "show active" : ""?> col-12" role="tabpanel" id="<?= $id ?>">
-                <?= $item['content'] ?>
-            </div>
-        <?php endforeach ?>
-    </div>
-</div>
+
 
 
 <?php get_footer(); ?>
