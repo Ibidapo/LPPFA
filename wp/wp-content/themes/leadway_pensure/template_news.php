@@ -59,18 +59,7 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 news-sub">
-                    <p class="text-center"><?= get_field("subscribe_text") ?></p>
 
-                    <form class="form-inline">
-                        <div class="form-group mx-auto text-center">
-                            <input type="text" class="form-control" placeholder="E-mail">
-                            <a class="btn btn-outline-purple" role="button" type="submit">Submit</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-md-12 news-tab">
                     <ul class="hidden-sm-down nav nav-fill nav-tabs" id="newsTab" role="tablist">
@@ -84,18 +73,12 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
                                 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/gallery.png"/>
                                 Gallery</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#cald" role="tab">
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calendar.png"/>
-                                Calendar</a>
-                        </li>
                     </ul>
                     <form class="hidden-md-up mx-auto">
                         <div class="form-group text-center">
                             <select class="form-control" id="m-newsTab" data-aos="fade">
                                 <option value="0">Recent Stories</option>
                                 <option value="1">Gallery</option>
-                                <option value="2">Calender</option>
                             </select>
                         </div>
                     </form>
@@ -129,9 +112,6 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
         </div>
         <div class="tab-pane fade col-12" role="tabpanel" id="gall" aria-expanded="false">
            <?= get_field("gallery") ?>
-        </div>
-        <div class="tab-pane fade col-12 text-center" role="tabpanel" id="cald" aria-expanded="false">
-            <?= get_field("calendar") ?>
         </div>
     </div>
 </div>

@@ -69,7 +69,11 @@ $services = get_field('services');
             $("m-top").attr("class", "container");
         }
 
-        $('#prod-list a[href="'+ window.location.hash+ '"]').tab('show'); // Select tab by name if provided in location hash
+        $('#prod-list a[href="'+ window.location.hash+ '"]').tab('show', function(){
+            $('body,html').animate({
+                scrollTop : 0
+            }, 500);
+        }); // Select tab by name if provided in location hash
 
         $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
             e.preventDefault();
@@ -97,24 +101,28 @@ $services = get_field('services');
         });
 
         $(".dropdown-menu.ps a:first-child").click(function(){
-            $('a[href="#rsa"]').tab('show');
+            $('a[href="#retirement-savings-account-0"]').tab('show');
         });
 
         $(".dropdown-menu.ps a:nth-child(2)").click(function(){
-            $('a[href="#avc"]').tab('show');
+            $('a[href="#additional-voluntary-contribution-1"]').tab('show');
+        });
+
+        $(".dropdown-menu.ps a:nth-child(3)").click(function(){
+            $('a[href="#cross-border-services-3"]').tab('show');
         });
 
         $(".dropdown-menu.ps a:nth-child(4)").click(function(){
-            $('a[href="#mf"]').tab('show');
+            $('a[href="#managed-funds-2"]').tab('show');
         });
 
         $(".dropdown-menu.ps a:nth-child(5)").click(function(){
-            $('a[href="#nst"]').tab('show');
+            $('a[href="#nsitf-4"]').tab('show');
         });
 
         $(".dropdown-menu.ps a:nth-child(6)").click(function(){
-            $('a[href="#pms"]').tab('show');
-        });
+            $('a[href="#personal-messaging-services-5"]').tab('show');
+    });
 
         $('#sms-slide').on('slide.bs.carousel', function (e){
             var id = e.relatedTarget.id;

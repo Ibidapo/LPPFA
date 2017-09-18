@@ -525,9 +525,8 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
         <div class="col-12 col-md-4 align-self-center text-center">&copy; Leadway Pensure 2017</div>
         <div class="col-12 col-md-4 align-self-center text-center text-md-right">Web Design & Digital by iNspire</div>
     </div>
-    <a id="share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
-    <a id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
-    <a href="javascript:" id="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    <a  href="javascript:window.print()" data-toggle="tooltip" title="Print" data-placement="left" id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
+    <a href="javascript:" data-toggle="tooltip" title="Back to Top" data-placement="left" id="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
 </footer>
 <?php get_footer(); ?>
 <script>
@@ -537,6 +536,8 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
         if (size <= 991) {
             $(".container").attr("class", "container-fluid");
         }
+
+        $('#blogTab a[href="'+ window.location.hash+ '"]').tab('show'); // Select tab by name if provided in location hash
 
         $("#m-blogTab").change(function (){
             var i = $(this).val();
@@ -551,6 +552,8 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                 $('a[href="#blogVids"]').tab('show');
             }else if(i == 4) {
                 $('a[href="#careerTip"]').tab('show');
+            }else if(i == 4) {
+                $('a[href="#articles"]').tab('show');
             }
         });
 

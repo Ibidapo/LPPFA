@@ -174,7 +174,7 @@ if (!$rsa_rf) {
                 <li><a href="/career">Careers</a></li>
                 <li><a data-toggle="collapse" href="#med" aria-expanded="false" aria-controls="med">Media <i class="fa fa-chevron-down"></i></a>
                     <ul class="sub-menu collapse" id="med">
-                        <li><a href="/news">News & Events</a></li>
+                        <li><a href="/news">News & Gallery</a></li>
                         <li><a href="/social">Social</a></li>
                         <li><a href="/blog">Blog</a></li>
                     </ul>
