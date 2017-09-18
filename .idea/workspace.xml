@@ -2,15 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fd84639-60eb-4cea-a122-9108511ebd63" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/images/dir1-img.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/images/facebook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/images/instagram.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/images/linkedin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/images/office-block.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/images/twitter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/uploads/2017/08/female-150x150.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/uploads/2017/08/female-300x300.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/uploads/2017/08/female.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/uploads/2017/08/male-150x150.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/uploads/2017/08/male-300x300.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/uploads/2017/08/male.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/uploads/2017/08/yearly-fin-rep-150x150.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/uploads/2017/08/yearly-fin-rep-210x300.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/uploads/2017/08/yearly-fin-rep.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/company.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/images/eroll.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/partials/chart-header.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/partials/chart-table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_sitemap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/images/company-bg.jpg" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/images/company-bg.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/css/design.css" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/css/design.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/header.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/css/docs.css" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/css/docs.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/search.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/search.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/single.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/single.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_blog.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_blog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_career.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_career.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_contact.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_contact.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_company.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_company.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_enroll.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_enroll.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_investment.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_investment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_login.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_news.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_news.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_services.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_services.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_token.php" afterPath="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_token.php" />
     </list>
     <ignored path="LPPFA.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,13 +59,16 @@
         <entry file="file://$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_blog.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1074">
-              <caret line="563" column="40" selection-start-line="563" selection-start-column="40" selection-end-line="563" selection-end-column="40" />
+              <caret line="520" column="40" selection-start-line="520" selection-start-column="40" selection-end-line="520" selection-end-column="40" />
               <folding>
                 <element signature="n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#div#1;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#3;n#div#1;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#4;n#div#1;n#div#0;n#!!top" expanded="false" />
+                <marker date="1505739790237" expanded="true" signature="2070:2294" ph="..." />
+                <marker date="1505739790237" expanded="true" signature="2070:2309" ph="..." />
+                <marker date="1505739790237" expanded="true" signature="2070:2320" ph="..." />
               </folding>
             </state>
           </provider>
@@ -58,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template_news.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="template_news.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_news.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="887">
-              <caret line="114" column="14" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="14" />
+            <state relative-caret-position="1317">
+              <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -78,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template_services.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="template_services.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_services.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="81" column="2" selection-start-line="81" selection-start-column="2" selection-end-line="81" selection-end-column="2" />
+            <state relative-caret-position="103">
+              <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -160,11 +186,11 @@
         <option value="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_blog.php" />
         <option value="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/single.php" />
         <option value="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_career.php" />
-        <option value="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_news.php" />
         <option value="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_contact.php" />
         <option value="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/css/design.css" />
         <option value="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/header.php" />
         <option value="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_services.php" />
+        <option value="$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_news.php" />
       </list>
     </option>
   </component>
@@ -868,12 +894,12 @@
       <workItem from="1505591527540" duration="4918000" />
       <workItem from="1505634356807" duration="1981000" />
       <workItem from="1505636658549" duration="422000" />
-      <workItem from="1505729458651" duration="10137000" />
+      <workItem from="1505729458651" duration="10297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354747000" />
+    <option name="totallyTimeSpent" value="354907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1226,14 +1252,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_news.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="887">
-          <caret line="114" column="14" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_career.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1736">
@@ -1250,13 +1268,16 @@
     <entry file="file://$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_blog.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1074">
-          <caret line="563" column="40" selection-start-line="563" selection-start-column="40" selection-end-line="563" selection-end-column="40" />
+          <caret line="520" column="40" selection-start-line="520" selection-start-column="40" selection-end-line="520" selection-end-column="40" />
           <folding>
             <element signature="n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#div#1;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#4;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <marker date="1505739790237" expanded="true" signature="2070:2294" ph="..." />
+            <marker date="1505739790237" expanded="true" signature="2070:2309" ph="..." />
+            <marker date="1505739790237" expanded="true" signature="2070:2320" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1303,8 +1324,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_services.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="81" column="2" selection-start-line="81" selection-start-column="2" selection-end-line="81" selection-end-column="2" />
+        <state relative-caret-position="103">
+          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp/wp-content/themes/leadway_pensure/template_news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1317">
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
           <folding />
         </state>
       </provider>

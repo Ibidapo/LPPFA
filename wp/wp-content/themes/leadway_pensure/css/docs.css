@@ -7,6 +7,10 @@ figcaption.FAQ{
 color: #9789ad !important;
 font-size: 0.85rem;
 }
+.requirementHolder{
+  color : white; 
+  padding :20px ;
+}
 
 div.FAQ{
 margin-top: 5%;
@@ -108,7 +112,7 @@ padding-bottom: 120px;
 margin-bottom: 51px;
 }
 #token-form{
-background-color: rgba(139, 178, 210, 0.7);
+background-color: rgba(34, 106, 165, 0.7);
 width: 71%;
 margin: auto;
 box-shadow: #333 0 -2px 21px;

@@ -59,7 +59,6 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
                     </div>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-md-12 news-tab">
                     <ul class="hidden-sm-down nav nav-fill nav-tabs" id="newsTab" role="tablist">

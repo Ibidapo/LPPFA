@@ -23,51 +23,10 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
 <?php get_header(); ?>
 <!-- Desktop navigation -->
 <nav class="navbar fixed-top hidden-md-down pOff">
-    <!-- desktop price charts start -->
-    <table class="table table-responsive mOff">
-        <tbody>
-        <tr>
-            <td>
-                <div id="google_translate_element"></div>
-            </td>
-            <td>
-                        <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i>
-                            <?= $options['phone_number'] ?>
-                        </span>
-            </td>
-            <?php if ($rsa_rf) { ?>
-                <td>
-                    <span class="head-td"> RSA FUNDS</span><br>
-                    <span>&#8358;<?= array_get($rsa_rf->values, 0) ?>
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png" alt="">
-                            </span>
-                </td>
-                <td>
-                    <span class="head-td">RETIREE FUNDS</span><br>
-                    <span> &#8358;<?= array_get($rsa_rf->values, 0) ?>
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png" alt="">
-                            </span>
-                </td>
-            <?php } ?>
-            <td>
-                <a href="/login" style="color: white; font-weight: 500"> LOGIN</a>
-            </td>
-            <td>
-                <a href="/calculator" class="nav-calc"> <img
-                        src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png">
-                    <span>Calculator</span></a>
-            </td>
-            <td>
-                <button onclick="location='/trends'" type="button" class="btn btn-outline-secondary v-trends">
-                    VIEW TRENDS
-                </button>
-            </td>
-            <td>
-                <span id="date"></span>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+    
+    <!-- chart header -->
+    <?php include_once('partials/chart-table.php') ?>
+
     <!-- Navbar -->
     <div class="navBlog">
         <div class="col-md-12">
@@ -76,7 +35,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                     <a class="nav-link active" data-toggle="tab" href="#blogHome" role="tab">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#blogInvest" role="tab">Investment Series</a>
+                    <a class="nav-link" data-toggle="tab" href="#blogInvest" role="tab"> Articles </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#comic" role="tab">Comic</a>
@@ -87,9 +46,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#careerTip" role="tab">Career Tips</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#articles" role="tab">Articles</a>
-                </li>
+     
                 <li class="nav-item">
                     <a class="nav-link" href="/"><img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" height="80"></a>
                 </li>
