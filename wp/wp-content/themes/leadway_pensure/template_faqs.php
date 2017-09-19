@@ -103,6 +103,13 @@ $retiree_funds_faqs = get_field("retiree_funds_faqs");
 </div>
 
 <?php get_footer(); ?>
+<script>
+    //Resize container based on desktop or mobile viewport.
+    var size = window.innerWidth;
+    if (size <= 991) {
+        $("#m-top").attr("class", "container-fluid");
+    }
+</script>
 
 </body>
 </html>

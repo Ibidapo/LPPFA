@@ -143,6 +143,30 @@ $branches = array_map("array_values", $branches);
 
 
 <?php get_footer(); ?>
+<script>
+    $(document).ready(function() {
+        //Resize container based on desktop or mobile viewport.
+        var size = window.innerWidth;
+        if (size <= 991) {
+            $("#m-top").attr("class", "container-fluid");
+        }
+
+        $("#regions").change(function (){
+            var i = $(this).val();
+
+            if(i == 0){
+                $('a[href="#west"]').tab('show');
+            }else if(i == 1){
+                $('a[href="#east"]').tab('show');
+            }else if(i == 2){
+                $('a[href="#north"]').tab('show');
+            }else if(i == 3){
+                $('a[href="#south"]').tab('show');
+            }
+        });
+
+    });
+</script>
 
 </body>
 </html>

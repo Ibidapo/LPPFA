@@ -60,22 +60,15 @@ $services = get_field('services');
 <?php get_footer(); ?>
 <script>
     $(document).ready(function() {
-
         //Resize container based on desktop or mobile viewport.
         var size = window.innerWidth;
         if (size <= 991) {
             $("#m-top").attr("class", "container-fluid");
-        } else {
-            $("m-top").attr("class", "container");
         }
 
-        $('#prod-list a[href="'+ window.location.hash+ '"]').tab('show', function(){
-            $('body,html').animate({
-                scrollTop : 0
-            }, 500);
-        }); // Select tab by name if provided in location hash
+        $('#prod-list a[href="'+ window.location.hash+ '"]').tab('show'); // Select tab by name if provided in location hash
 
-        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        $('#prod-list a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
             e.preventDefault();
             e.stopPropagation();
             $(this).closest('ul').find('.show').removeClass('show');
@@ -159,6 +152,12 @@ $services = get_field('services');
             }
         });
     });
+
+    $(window).on("load", function(){
+        $('body,html').animate({
+            scrollTop : 0
+        }, 500);
+    })
 </script>
 
 </body>

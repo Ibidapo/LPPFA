@@ -935,7 +935,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .career-tab form, .company-tab form, .benefits-tab form, .news-tab form, .m-blogTab form{
     margin-top: 1rem;
 }
-a[target="_blank"]{
+#vac a[target="_blank"]{
     color: #4b78af !important;
 }
 .apply {
@@ -1833,6 +1833,7 @@ footer .table td, .table th {
 }
 #downld{
     margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 #downld h4 {
     color: #2068a4;
@@ -2071,7 +2072,7 @@ footer .table td, .table th {
         margin: 15% 10px 0 10px;
     }
     .invest-bg{
-        height: 310px;
+        height: 325px;
     }
     .invest-txt {
         width: 50%;
