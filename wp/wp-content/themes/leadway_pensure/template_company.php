@@ -28,7 +28,9 @@ include_once 'mail/company.php';
 
                     <h3 class="hidden-md-up"><?= $intro_title ?></h3>
                 </div>
-                <?= $intro_content ?>
+                <div class="company-txt">
+                    <?= $intro_content ?>
+                </div>
             </div>
         </div>
     </div>
@@ -379,6 +381,12 @@ include_once 'mail/company.php';
             }, 800);
         });
 
+        $('#read').on('shown.bs.collapse', function(){
+            $('a[href="#read"]').text('Read less')
+        }).on('hidden.bs.collapse',function(){
+            $('a[href="#read"]').text('Read more')
+        });
+
         $(".dropdown-menu.oc a:first-child").click(function () {
             $('a[href="#meet"]').tab('show');
         });
@@ -410,6 +418,18 @@ include_once 'mail/company.php';
         });
     });
 </script>
+
+<!--Leadway Pensure PFA Limited (“Leadway Pensure”) was incorporated on the 25th day of August, 2004 as a Pension Fund A in accordance with the provisions of the Pension Reforms Act 2004. Formed by a consortium of three (3) major financial service companies, Leadway Pensure is one of the most capitalized PFA’s in the Nigeria with an authorized share capital of N2.0 Billion. Our shareholder’s fund is in excess of N4.0 Billion, unimpaired by losses. Since inception we have positioned ourselves as one of Nigeria’s foremost Pension Fund Administrators.
+<div id="read" class="collapse">
+<div class="card card-block mx-auto">
+
+Leadway Pensure boasts of an extensive national coverage as well as an in-depth experience in pension administration and fund management for prominent corporate organizations, states and federal government Institutions.Our shareholders have a combined experience of over 125 years in the delivery of professional fund management service.
+
+Our outstanding experience, expertise, technology, and transparency positions us to deliver on our promise of providing you simple, coherent, efficient and exceptional quality service. Leadway Pensure PFA is reputed for her professional business ethics and corporate governance, which are driven by the unflinching level of integrity of its Directors and Shareholders.
+
+</div>
+</div>
+<a class="btn btn-outline-white" href="#read" data-toggle="collapse" aria-expanded="false" aria-controls="read">Read more</a> -->
 
 </body>
 </html>

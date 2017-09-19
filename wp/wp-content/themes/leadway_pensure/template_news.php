@@ -39,7 +39,7 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
                 <div class=" col-12 col-md-7 col-lg-8">
                     <div class="row other-news">
                         <?php foreach ($featured_news as $key => $news) { ?>
-                            <div class="col-12 col-sm-10 col-lg-6 mx-auto <?= $key > 1 ? "hidden-md-down" : "" ?>">
+                            <div class="offset-sm-1 col-sm-10 offset-md-0 col-md-12 col-lg-6 <?= $key > 1 ? "hidden-md-down" : "" ?>">
                                 <div class="media">
                                     <img class="d-flex align-self-center mr-3"
                                          src="<?= get_the_post_thumbnail_url($news->ID); ?>"
@@ -146,7 +146,7 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
             var i = $(this).val();
 
             if (i == 0) {
-                $('a[href="#m_news"]').tab('show');
+                $('a[href="#m-news"]').tab('show');
             } else if (i == 1) {
                 $('a[href="#gall"]').tab('show');
             }
