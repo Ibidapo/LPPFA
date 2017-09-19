@@ -494,6 +494,8 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
             $(".container").attr("class", "container-fluid");
         }
 
+        $('#blogTab a[href="'+ window.location.hash+ '"]').tab('show'); // Select tab by name if provided in location hash
+
         $("#m-blogTab").change(function (){
             var i = $(this).val();
 
@@ -507,6 +509,8 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                 $('a[href="#blogVids"]').tab('show');
             }else if(i == 4) {
                 $('a[href="#careerTip"]').tab('show');
+            }else if(i == 4) {
+                $('a[href="#articles"]').tab('show');
             }
         });
 

@@ -118,19 +118,17 @@ $branches = array_map("array_values", $branches);
                                 <div class="card-block">
                                     <div class="row justify-content-around">
                                         <div class="col-11 col-sm-6 col-md-5 col-lg-4 loc-add">
-                                            <h6><?= $branch->MapSearchName ?></h6>
                                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                                             <span><?= $branch->OfficeAddress ?>.</span><br>
                                         </div>
                                         <div class="col-11 col-sm-6 col-md-5 col-lg-4 loc-person">
-                                            <h6>Key Personnel</h6>
                                             <!--<i class="fa fa-user" aria-hidden="true"></i> --><?//= $branch->MapSearchName ?><!--<br>-->
                                             <i class="fa fa-envelope" aria-hidden="true"></i> <?= $branch->EmailAddress ?><br>
                                             <i class="fa fa-phone" aria-hidden="true"></i> <?= $branch->PhoneNo ?><br>
                                         </div>
-                                        <div class="col-10 text-center">
+                                       <!-- <div class="col-10 text-center">
                                             <a type="button" class="btn btn-outline-loc">Get Directions</a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>

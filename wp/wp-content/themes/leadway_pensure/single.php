@@ -13,23 +13,25 @@ $social_options = get_option('theme_social_options');
         <div class="col-md-12">
             <ul class="hidden-sm-down nav nav-fill nav-tabs" id="blogTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="/blog#blogHome" role="tab">Blog</a>
+                    <a class="nav-link active" data-toggle="tab" href="#blogHome" role="tab">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="/blog#blogInvest" role="tab">Investment Series</a>
+                    <a class="nav-link" data-toggle="tab" href="#blogInvest" role="tab">Investment Series</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="/blog#comic" role="tab">Comic</a>
+                    <a class="nav-link" data-toggle="tab" href="#comic" role="tab">Comic</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="/blog#blogVids" role="tab">Videos</a>
+                    <a class="nav-link" data-toggle="tab" href="#blogVids" role="tab">Videos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="/blog#careerTip" role="tab">Career Tips</a>
+                    <a class="nav-link" data-toggle="tab" href="#careerTip" role="tab">Career Tips</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/"><img
-                            src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" height="80"></a>
+                    <a class="nav-link" data-toggle="tab" href="#articles" role="tab">Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" height="80"></a>
                 </li>
             </ul>
         </div>
@@ -37,6 +39,24 @@ $social_options = get_option('theme_social_options');
 </nav>
 <!-- Body and Main content of Page -->
 <div class="container" id="blog-pg">
+    <!-- Mobile Blog tab selection -->
+    <div class="row hidden-lg-up">
+        <div class="col-12 m-blogTab">
+            <form class="mx-auto">
+                <div class="form-group text-center">
+                    <label class="text-center" for="m-blogTab">Our Blog</label>
+                    <select class="form-control" id="m-blogTab" data-aos="fade">
+                        <option value="0">Recent releases</option>
+                        <option value="1">Investment Series</option>
+                        <option value="2">Comic</option>
+                        <option value="3">Videos</option>
+                        <option value="4">Career Tips</option>
+                        <option value="5">Articles</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
     <div class="row">
         <?php
         // TO SHOW THE PAGE CONTENTS
@@ -151,6 +171,57 @@ $social_options = get_option('theme_social_options');
 </div>
 
 <?php get_footer(); ?>
+<script>
+    $(document).ready(function(){
+        //Resize container based on desktop or mobile viewport.
+        var size = window.innerWidth;
+        if (size <= 991) {
+            $(".container").attr("class", "container-fluid");
+        }
+
+        $('a[href="#blogHome"]').click(function(){
+            $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#blogHome');
+        });
+
+        $('a[href="#blogInvest"]').click(function(){
+            $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#blogInvest');
+        });
+
+        $('a[href="#comic"]').click(function(){
+            $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#comic');
+        });
+
+        $('a[href="#blogVids"]').click(function(){
+            $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#blogVids');
+        });
+
+        $('a[href="#careerTip"]').click(function(){
+            $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#careerTip');
+        });
+
+        $('a[href="#articles"]').click(function(){
+            $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#articles');
+        });
+
+        $("#m-blogTab").change(function (){
+            var i = $(this).val();
+
+            if(i == 0){
+                $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#blogHome');
+            }else if(i == 1){
+                $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#blogInvest');
+            }else if(i == 2) {
+                $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#comic');
+            }else if(i == 3) {
+                $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#blogVids');
+            }else if(i == 4) {
+                $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#careerTip');
+            }else if(i == 5) {
+                $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#articles');
+            }
+        });
+    });
+</script>
 
 </body>
 </html>

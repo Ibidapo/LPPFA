@@ -83,7 +83,8 @@ include_once 'mail/career.php';
                                         uncovering consumer insights and delivering innovative marketing campaigns. You will
                                         join a dynamic and fast-paced environment and you will generate strategies that grow market
                                         share and brand’s reputation, improve customer experience and drive growth.</p>
-                                    <a class="btn btn-outline-loc" href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/BRAND_EXECUTIVE_LAGOS.pdf" target="_blank">Requirements</a>
+                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
+                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/BRAND_EXECUTIVE_LAGOS.pdf" target="_blank">View Requirements</a></div>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +105,8 @@ include_once 'mail/career.php';
                                         forecasting and simulations.
                                         Helps in allocating resources, measure performance from large data base for
                                         investment purposes.</p>
-                                    <a class="btn btn-outline-loc" href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/RESEARCH_ANALYST_LAGOS.pdf" target="_blank">Requirements</a>
+                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
+                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/RESEARCH_ANALYST_LAGOS.pdf" target="_blank">View Requirements</a></div>
                                 </div>
                             </div>
                         </div>
@@ -124,7 +126,8 @@ include_once 'mail/career.php';
                                     <p>To coordinate and synchronize the activities of the sales unit in house and the
                                         agents (foot soldiers)
                                         to ensure maximization of human and material resources.</p>
-                                    <a class="btn btn-outline-loc" href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/Sales-Executives.pdf" target="_blank">Requirements</a>
+                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
+                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/Sales-Executives.pdf" target="_blank">View Requirements</a></div>
                                 </div>
                             </div>
                         </div>
@@ -147,7 +150,8 @@ include_once 'mail/career.php';
                                         composition of the bond portfolio
                                         to make buy/hold and sell decision thereby minimizing cost and maximizing
                                         profit.</p>
-                                    <a class="btn btn-outline-loc" href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/ADVERT_Fixed_Income_Analyst.pdf" target="_blank">Requirements</a>
+                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
+                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/ADVERT_Fixed_Income_Analyst.pdf" target="_blank">View Requirements</a></div>
                                 </div>
                             </div>
                         </div>
@@ -166,7 +170,8 @@ include_once 'mail/career.php';
 
                                     <p>The role will be responsible for all aspects of day-to-day Accounting for a group
                                         of assigned funds.</p>
-                                    <a class="btn btn-outline-loc" href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/FUND_ACCOUNTANT.pdf" target="_blank">Requirements</a>
+                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
+                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/FUND_ACCOUNTANT.pdf" target="_blank">View Requirements</a></div>
                                 </div>
                             </div>
                         </div>
@@ -186,7 +191,8 @@ include_once 'mail/career.php';
                                     <p>To co-ordinate and amange the entire legal framework of LPPFA particularly the
                                         review of policies,
                                         procedures, manuals, contracts and any other legal documentation.</p>
-                                    <a type="button" class="btn btn-outline-loc">Requirements</a>
+                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
+                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/ADVERT_LEGAL_OFFICER.pdf" target="_blank">View Requirements</a></div>
                                 </div>
                             </div>
                         </div>
@@ -262,7 +268,7 @@ include_once 'mail/career.php';
                         </div>
                         <div class="col-sm-6 cult-box4">
                             <p class="v-align">Head over now to our blog section for tips on how to assemble your CV and
-                            other relevant documents<br><a href="#" class="btn btn-outline-white-sm">Learn more</a></p>
+                            other relevant documents<br><a href="/blog#careerTip" class="btn btn-outline-white-sm">Learn more</a></p>
                         </div>
                     </div>
                 </div>
@@ -1647,6 +1653,10 @@ include_once 'mail/career.php';
             } else if (i == 2) {
                 $('a[href="#alm"]').tab('show');
             }
+        });
+
+        $('.apply').click(function(){
+            $('a[href="#cv"]').tab('show');
         });
 
         $('input[type="file"]').change(function (e) {

@@ -78,7 +78,6 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
                             <select class="form-control" id="m-newsTab" data-aos="fade">
                                 <option value="0">Recent Stories</option>
                                 <option value="1">Gallery</option>
-                                <option value="2">Calender</option>
                             </select>
                         </div>
                     </form>

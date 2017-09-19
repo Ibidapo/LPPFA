@@ -655,7 +655,6 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 .loc-add span{
     position: absolute;
-    top: 30px;
     left: 55px;
     font-size: 15px;
     line-height: 1.5;
@@ -935,6 +934,12 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 .career-tab form, .company-tab form, .benefits-tab form, .news-tab form, .m-blogTab form{
     margin-top: 1rem;
+}
+a[target="_blank"]{
+    color: #4b78af !important;
+}
+.apply {
+    margin-bottom: .5rem;
 }
 
 /*Styling for Body Section of Investment Page*/
@@ -1484,6 +1489,9 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .recent .news-date{
     top: 17%;
     color: white;
+}
+.news-tab {
+    margin-top: 1.5rem;
 }
 
 /*Styling Body Section of Blog Page*/

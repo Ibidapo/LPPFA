@@ -66,7 +66,11 @@ $services = get_field('services');
             $("#m-top").attr("class", "container-fluid");
         }
 
-        $('#prod-list a[href="'+ window.location.hash+ '"]').tab('show'); // Select tab by name if provided in location hash
+        $('#prod-list a[href="'+ window.location.hash+ '"]').tab('show', function(){
+            $('body,html').animate({
+                scrollTop : 0
+            }, 500);
+        }); // Select tab by name if provided in location hash
 
         $('#prod-list a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
             e.preventDefault();
