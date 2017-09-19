@@ -60,18 +60,15 @@ $services = get_field('services');
 <?php get_footer(); ?>
 <script>
     $(document).ready(function() {
-
         //Resize container based on desktop or mobile viewport.
         var size = window.innerWidth;
         if (size <= 991) {
             $("#m-top").attr("class", "container-fluid");
-        } else {
-            $("m-top").attr("class", "container");
         }
 
         $('#prod-list a[href="'+ window.location.hash+ '"]').tab('show'); // Select tab by name if provided in location hash
 
-        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        $('#prod-list a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
             e.preventDefault();
             e.stopPropagation();
             $(this).closest('ul').find('.show').removeClass('show');
@@ -97,24 +94,28 @@ $services = get_field('services');
         });
 
         $(".dropdown-menu.ps a:first-child").click(function(){
-            $('a[href="#rsa"]').tab('show');
+            $('a[href="#retirement-savings-account-0"]').tab('show');
         });
 
         $(".dropdown-menu.ps a:nth-child(2)").click(function(){
-            $('a[href="#avc"]').tab('show');
+            $('a[href="#additional-voluntary-contribution-1"]').tab('show');
+        });
+
+        $(".dropdown-menu.ps a:nth-child(3)").click(function(){
+            $('a[href="#cross-border-services-3"]').tab('show');
         });
 
         $(".dropdown-menu.ps a:nth-child(4)").click(function(){
-            $('a[href="#mf"]').tab('show');
+            $('a[href="#managed-funds-2"]').tab('show');
         });
 
         $(".dropdown-menu.ps a:nth-child(5)").click(function(){
-            $('a[href="#nst"]').tab('show');
+            $('a[href="#nsitf-4"]').tab('show');
         });
 
         $(".dropdown-menu.ps a:nth-child(6)").click(function(){
-            $('a[href="#pms"]').tab('show');
-        });
+            $('a[href="#personal-messaging-services-5"]').tab('show');
+    });
 
         $('#sms-slide').on('slide.bs.carousel', function (e){
             var id = e.relatedTarget.id;

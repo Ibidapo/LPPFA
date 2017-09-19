@@ -15,6 +15,10 @@ $request_args = [
 $formName = array_get($_POST, 'formName');
 
 if ($formName == 'token-form') {
+
+    $userInfo = json_decode($params, true);
+    $_SESSION['user_full_name'] = $userInfo['firstname'] ." ". $userInfo['middlename'] ." ". $userInfo['surname'];
+
     $url = "https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/SendEnrolmentToken";
     $response = wp_remote_post($url, $request_args);
     $response = getResponse($response);

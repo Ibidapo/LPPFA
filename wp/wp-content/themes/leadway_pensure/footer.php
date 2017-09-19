@@ -106,7 +106,7 @@
             <div class="col-12">
                 <ul class="nav justify-content-center" style="margin-top: 15px">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Site Map</a>
+                        <a class="nav-link" href="/sitemap">Site Map</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/privacy">Privacy Policy</a>

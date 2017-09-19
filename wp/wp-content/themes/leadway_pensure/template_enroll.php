@@ -32,7 +32,8 @@ if(isset($_POST['token'])) {
         </div>
         <div class="col-3 offset-2 col-md-3 offset-md-2">
             <div class="row">
-                <div class=col-12> Client: <span id="a-name"> <?= array_get($_POST, 'email') ?></span></div>
+                <div class=col-12> Client Name: <span id="a-name"> <?= array_get($_SESSION, 'user_full_name') ?></span></div>
+                <div class=col-12> Client Email: <span id="a-name"> <?= array_get($_POST, 'email') ?></span></div>
                 <div class=col-12> Token no: <span id="a-token"> <?= array_get($_POST, 'token') ?> </span></div>
             </div>
         </div>
@@ -65,13 +66,13 @@ if(isset($_POST['token'])) {
                                 <label class="field-label"> Title </label>
                                 <select name=title type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-email placeholder="local government area" style="border: 1px solid white">
 <option> Select a title </option> 
-<option> Mr. </option> 
-<option> Miss. </option> 
-<option> Mrs. </option> 
-<option> Dr. </option> 
-<option> Engr. </option>
-<option> Mallam. </option> 
-<option> Archbishop. </option> 
+<option value="Mr."> Mr </option> 
+<option value="Miss."> Miss </option> 
+<option value="Mrs."> Mrs </option> 
+<option value="Dr."> Dr </option> 
+<option value="Engr."> Engr </option>
+<option value="Mallam"> Mallam </option> 
+<option value="Archbishop"> Archbishop </option> 
 </select> 
                             </div>
 
@@ -93,7 +94,7 @@ if(isset($_POST['token'])) {
   <!-- space for middle name --> 
           <div class="form-group ">
                                 <label class="field-label"> Mobile No  </label>
-                                <input name=pidmobileno type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id='p-mno' placeholder="Mobile No" style="border: 1px solid white">
+                                <input name=pidmobileno type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" data-parsley-minlength="11" data-parsley-maxlength="15" id='p-mno' placeholder="Mobile No" style="border: 1px solid white">
            </div>
 
                            
@@ -1455,6 +1456,10 @@ if(isset($_POST['token'])) {
             }
         }
 
+//validate gender against title 
+
+ 
+
  // parsing local goverment html|values based on selected state for pid section
 
               $('#soo').change(function(){
@@ -1706,6 +1711,9 @@ if(isset($_POST['token'])) {
 
         $("#1c").click(function () {
 
+ 
+            var title = document.getElementById('p-email').value; 
+            var gender = document.getElementById('gender').value;
             var birthday = document.getElementById('birthday').value;
       
              console.log(birthday)
@@ -1721,9 +1729,11 @@ if(isset($_POST['token'])) {
                console.log(userBirthday);
                console.log(minAge);
 
-          }else{
+          }else if(title == "Mr." && gender == "Female" || title == "Miss." && gender == "Male" || title == "Mrs." && gender == "Male" ){  alert ("Please reconfirm your title or gender");
+           
+}else{
 
-            alert ('dob validation test successful')
+             alert ('dob validation test successful')
 
             if ($('.demo-form').parsley().validate({group: 'block1', force: true })){
                     alert("validated")

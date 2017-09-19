@@ -59,7 +59,8 @@ get_header();
                 </li>
                 <?php foreach ($hero_nav_items[1] as $key => $item) { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= $item['nav_link'] ?>">
+                        <a class="nav-link" href="<?= $item['nav_link'] ?: "#" ?>"
+                            <?php if($key == 1) { ?> id='search-landing' <?php } ?>>
                             <figure>
                                 <img src="<?= $item['nav_image']['url'] ?>" alt="<?= $item['nav_image']['alt'] ?>">
                                 <figcaption> <?= $item['nav_title'] ?></figcaption>
