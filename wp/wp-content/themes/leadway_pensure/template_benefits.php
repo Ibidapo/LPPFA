@@ -9,7 +9,7 @@
  */
 function getId($aKey, $bKey)
 {
-    $id = "$aKey-$bKey";
+    $id = "benefit-{$aKey}-{$bKey}";
     if ($aKey == 0) {
         switch ($bKey) {
             case 0:
@@ -20,15 +20,6 @@ function getId($aKey, $bKey)
                 break;
             case 2:
                 $id = "annt";
-                break;
-			case 3:
-                $id = "0-3";
-                break;
-			case 4:
-                $id = "0-4";
-                break;
-			case 5:
-                $id = "0-5";
                 break;
         }
     } elseif ($aKey == 1) {
@@ -47,18 +38,6 @@ function getId($aKey, $bKey)
                 break;
             case 4:
                 $id = "frgn";
-                break;
-			case 5:
-                $id = "1-5";
-                break;
-			case 6:
-                $id = "1-6";
-                break;
-			case 7:
-                $id = "1-7";
-                break;
-			case 8:
-                $id = "1-8";
                 break;
         }
     } 
