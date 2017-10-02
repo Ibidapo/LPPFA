@@ -628,12 +628,20 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 /*Note:Accordion5 is for career page*/
 #accordion1, #accordion2, #accordion3, #accordion4, #accordion5, #accordion6, #accordion7, #accordion8, #accordion9, #accordion10,
+<<<<<<< HEAD
 #accordion11 {
+=======
+#accordion11, #accordion12 {
+>>>>>>> ff2923b9e575f1e978f8dbbe5bdf88f0620a0b61
     margin: 25px auto;
     width: 90%;
 }
 #accordion1 .card, #accordion2 .card, #accordion3 .card, #accordion4 .card, #accordion5 .card, #accordion7 .card, #accordion8 .card,
+<<<<<<< HEAD
 #accordion9 .card, #accordion10 .card, #accordion11 .card {
+=======
+#accordion9 .card, #accordion10 .card, #accordion11 .card, #accordion12 .card {
+>>>>>>> ff2923b9e575f1e978f8dbbe5bdf88f0620a0b61
     background: transparent;
     margin: 10px auto;
     border: 2px solid #4c4648;
@@ -641,13 +649,21 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 #accordion1 .card .card-header, #accordion2 .card .card-header, #accordion3 .card .card-header, #accordion4 .card .card-header,
 #accordion5 .card .card-header, #accordion6 .card .card-header, #accordion7 .card .card-header, #accordion8 .card .card-header,
+<<<<<<< HEAD
 #accordion9 .card .card-header, #accordion10 .card .card-header,  #accordion11 .card .card-header {
+=======
+#accordion9 .card .card-header, #accordion10 .card .card-header,  #accordion11 .card .card-header, #accordion12 .card .card-header {
+>>>>>>> ff2923b9e575f1e978f8dbbe5bdf88f0620a0b61
      background: transparent;
      border-bottom: none;
      text-align: center;
  }
 #accordion1 a, #accordion2 a, #accordion3 a, #accordion4 a, #accordion5 a, #accordion7 a, #accordion8 a, #accordion9 a,
+<<<<<<< HEAD
 #accordion10 a, #accordion11 a {
+=======
+#accordion10 a, #accordion11 a, #accordion12 a{
+>>>>>>> ff2923b9e575f1e978f8dbbe5bdf88f0620a0b61
     color: #4c4648;
     text-decoration: none;
 }
@@ -1372,12 +1388,21 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     margin: 2rem 0 1rem 0;
     color: #2068a4
 }
+<<<<<<< HEAD
 #accordion7 .card, #accordion8 .card, #accordion8 .card, #accordion9 .card, #accordion10 .card, #accordion11 .card {
+=======
+#accordion7 .card, #accordion8 .card, #accordion8 .card, #accordion9 .card, #accordion10 .card, #accordion11 .card,
+#accordion12 .card {
+>>>>>>> ff2923b9e575f1e978f8dbbe5bdf88f0620a0b61
      border: 2px solid #e2e2e0;
      text-align: center;
 }
 #accordion7 .card .card-header, #accordion8 .card .card-header, #accordion9 .card .card-header, #accordion10 .card .card-header,
+<<<<<<< HEAD
 #accordion11 .card .card-header {
+=======
+#accordion11 .card .card-header, #accordion12 .card .card-header {
+>>>>>>> ff2923b9e575f1e978f8dbbe5bdf88f0620a0b61
     background: #e2e2e0;
     border-radius: 23px;
 }

@@ -27,7 +27,11 @@
             <p class="text-center">The Calculator on this page is indicating and strictly for information purposes. Leadway Pensure PFA's obligations
                 with respect to its services on this page are governed solely by the agreements under which they are provided and
                 nothing hereof should be construed to alter such 'Service' agreements".</p>
+<<<<<<< HEAD
             <div class="text-center"><a href="#" class="btn btn-outline-white" id="agree">I agree</a>
+=======
+            <div><a href="javascript:" class="btn btn-outline-white" id="agree">I agree</a>
+>>>>>>> ff2923b9e575f1e978f8dbbe5bdf88f0620a0b61
                 <a href="/" class="btn btn-outline-white">I do not agree</a>
             </div>
 
