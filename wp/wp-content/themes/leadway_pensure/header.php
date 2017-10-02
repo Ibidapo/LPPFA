@@ -84,7 +84,42 @@ if (!$rsa_rf) {
                 a.appendChild(r);
             })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
         </script>
+      
+        <script>
 
+        var captchaSubmit = function(){
+       
+
+        var recaptchaButton =  document.getElementById('recaptcha');
+        
+        var buttonHolder =  document.getElementById('button-holder'); 
+      if ( recaptchaButton !== null) {
+         recaptchaButton.parentNode.removeChild(recaptchaButton);
+
+ }else if ( recaptchaButton == null ){
+         var createGetTokenButton = document.createElement('button'); 
+         createGetTokenButton.id = 'token-submit'; 
+         createGetTokenButton.setAttribute('class','btn btn-purple validate'); 
+         createGetTokenButton.setAttribute('type', 'submit'); 
+         buttonHolder.appendChild(createGetTokenButton);
+         createGetTokenButton.innerHTML = "Get token";  
+}  
+}
+        var onloadCallback = function(){  grecaptcha.render('recaptcha',
+        {"sitekey":"6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7","callback":captchaSubmit});
+                
+  } 
+//var myCallBack = function() {
+//	alert('Rendering...');
+//	grecaptcha.render('recaptcha',
+//  {"sitekey":"6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7","callback":captchaSubmit});
+//}
+
+     </script> 
+
+        
+        <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+        
         <script>
             (function (i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r;
@@ -101,6 +136,7 @@ if (!$rsa_rf) {
             ga('create', 'UA-105192236-1', 'auto');
             ga('send', 'pageview');
         </script>
+
 
         <!-- custom CSS for theme -->
         <? if (isset($options['custom_css'])): ?>
@@ -174,7 +210,7 @@ if (!$rsa_rf) {
                 <li><a href="/career">Careers</a></li>
                 <li><a data-toggle="collapse" href="#med" aria-expanded="false" aria-controls="med">Media <i class="fa fa-chevron-down"></i></a>
                     <ul class="sub-menu collapse" id="med">
-                        <li><a href="/news">News & Gallery</a></li>
+                        <li><a href="/news">News & Events</a></li>
                         <li><a href="/social">Social</a></li>
                         <li><a href="/blog">Blog</a></li>
                     </ul>

@@ -627,12 +627,13 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     font-weight: 500;
 }
 /*Note:Accordion5 is for career page*/
-#accordion1, #accordion2, #accordion3, #accordion4, #accordion5, #accordion6, #accordion7, #accordion8, #accordion9, #accordion10 {
+#accordion1, #accordion2, #accordion3, #accordion4, #accordion5, #accordion6, #accordion7, #accordion8, #accordion9, #accordion10,
+#accordion11 {
     margin: 25px auto;
     width: 90%;
 }
 #accordion1 .card, #accordion2 .card, #accordion3 .card, #accordion4 .card, #accordion5 .card, #accordion7 .card, #accordion8 .card,
-#accordion9 .card, #accordion10 .card {
+#accordion9 .card, #accordion10 .card, #accordion11 .card {
     background: transparent;
     margin: 10px auto;
     border: 2px solid #4c4648;
@@ -640,13 +641,13 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 #accordion1 .card .card-header, #accordion2 .card .card-header, #accordion3 .card .card-header, #accordion4 .card .card-header,
 #accordion5 .card .card-header, #accordion6 .card .card-header, #accordion7 .card .card-header, #accordion8 .card .card-header,
-#accordion9 .card .card-header, #accordion10 .card .card-header{
+#accordion9 .card .card-header, #accordion10 .card .card-header,  #accordion11 .card .card-header {
      background: transparent;
      border-bottom: none;
      text-align: center;
  }
 #accordion1 a, #accordion2 a, #accordion3 a, #accordion4 a, #accordion5 a, #accordion7 a, #accordion8 a, #accordion9 a,
-#accordion10 a{
+#accordion10 a, #accordion11 a {
     color: #4c4648;
     text-decoration: none;
 }
@@ -719,7 +720,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     font-weight: 300;
 }
 .bg-txt p{
-    width: 80%;
+    width: 85%;
     margin: 3% auto;
 }
 .bg-txt p a{
@@ -935,7 +936,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .career-tab form, .company-tab form, .benefits-tab form, .news-tab form, .m-blogTab form{
     margin-top: 1rem;
 }
-a[target="_blank"]{
+#vac a[target="_blank"]{
     color: #4b78af !important;
 }
 .apply {
@@ -948,7 +949,7 @@ a[target="_blank"]{
     background-size: cover;
 }
 .invest-calc, .multi-fund, .invest-rep, .invest-chart {
-    height: 400px;
+    height: 450px;
     color: white;
 }
 .invest-calc{
@@ -1027,6 +1028,29 @@ a[target="_blank"]{
 .company-bg{
     background: url(../images/company-bg.jpg) no-repeat center;
     background-size: cover;
+}
+.company-txt {
+    max-height: 325px;
+    overflow-y: auto;
+}
+.company-bg .bg-txt {
+    padding: 2% 0;
+}
+.company-bg .bg-txt p {
+    margin: 1rem auto;
+}
+.company-bg .bg-txt p a{
+    margin-top: 0;
+}
+.company-bg .bg-txt .card {
+    background: transparent;
+    width: 85%;
+    border: none;
+    padding: 0;
+}
+.company-bg .bg-txt .card p {
+    width: 100%;
+    margin-top: 1rem;
 }
 #compTab img, #benefitsTab img{
     height: 60px;
@@ -1348,13 +1372,22 @@ a[target="_blank"]{
     margin: 2rem 0 1rem 0;
     color: #2068a4
 }
-#accordion7 .card, #accordion8 .card, #accordion8 .card, #accordion9 .card, #accordion10 .card{
+#accordion7 .card, #accordion8 .card, #accordion8 .card, #accordion9 .card, #accordion10 .card, #accordion11 .card {
      border: 2px solid #e2e2e0;
      text-align: center;
 }
-#accordion7 .card .card-header, #accordion8 .card .card-header, #accordion9 .card .card-header, #accordion10 .card .card-header {
+#accordion7 .card .card-header, #accordion8 .card .card-header, #accordion9 .card .card-header, #accordion10 .card .card-header,
+#accordion11 .card .card-header {
     background: #e2e2e0;
     border-radius: 23px;
+}
+#faq .table {
+    margin: 1rem;
+}
+#faq .table thead th {
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 500;
 }
 
 /*Styling for Body Section of Login Page*/
@@ -1777,7 +1810,7 @@ footer h6{
     margin-top: 25px;
     text-decoration: underline;
 }
-footer .table td, .table th {
+footer .table td, footer .table th {
     padding: 4px;
     font-size: 0.85rem;
 }
@@ -1833,13 +1866,15 @@ footer .table td, .table th {
 }
 #downld{
     margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 #downld h4 {
     color: #2068a4;
 }
 #downld > div {
-    margin-top: 5%;
-    padding-left: calc(10% - 15px);
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 1rem;
 }
 #downld ul li a, ul.ben-downld li a{
     color: #2068a4 !important;
@@ -2071,7 +2106,7 @@ footer .table td, .table th {
         margin: 15% 10px 0 10px;
     }
     .invest-bg{
-        height: 310px;
+        height: 325px;
     }
     .invest-txt {
         width: 50%;

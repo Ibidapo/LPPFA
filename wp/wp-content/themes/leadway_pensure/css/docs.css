@@ -12,6 +12,13 @@ font-size: 0.85rem;
   padding :20px ;
 }
 
+#alm {
+background: url(../images/alumni-network.jpg)no-repeat; 
+}
+#csr{
+background: url(../images/community-service.jpg)no-repeat;
+background-size: contain;
+}
 div.FAQ{
 margin-top: 5%;
 }

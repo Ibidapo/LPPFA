@@ -1,11 +1,8 @@
-<?php /* Template Name: Services */ ?>
-
 <?php
-$services = get_field('services');
+/* Template Name: Sitemap */
 
+get_header();
 ?>
-
-<?php get_header(); ?>
 <nav class="navbar fixed-top hidden-md-down pOff">
     <!-- desktop price charts start -->
     <table class="table table-responsive mOff">

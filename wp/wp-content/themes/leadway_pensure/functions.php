@@ -284,6 +284,21 @@ function array_get($data, $key, $default = null)
 }
 
 /**
+ * @param $params
+ * @param $url
+ * @return array|WP_Error
+ */
+function sendReq($url, $params)
+{
+    $trends = wp_remote_post($url, [
+        'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
+        'body' => json_encode($params),
+        'method' => 'POST'
+    ]);
+    return $trends;
+}
+
+/**
  * @param $response
  * @return bool
  */

@@ -1611,7 +1611,7 @@ include_once 'mail/career.php';
             </form>
         </div>
         <div class="tab-pane fade col-12 text-center" role="tabpanel" id="alm">
-            <h1>Coming Soon!</h1>
+            
         </div>
     </div>
 </div>

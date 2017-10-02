@@ -28,7 +28,9 @@ include_once 'mail/company.php';
 
                     <h3 class="hidden-md-up"><?= $intro_title ?></h3>
                 </div>
-                <?= $intro_content ?>
+                <div class="company-txt">
+                    <?= $intro_content ?>
+                </div>
             </div>
         </div>
     </div>
@@ -377,6 +379,12 @@ include_once 'mail/company.php';
             $('body,html').animate({
                 scrollTop: 480
             }, 800);
+        });
+
+        $('#read').on('shown.bs.collapse', function(){
+            $('a[href="#read"]').text('Read less')
+        }).on('hidden.bs.collapse',function(){
+            $('a[href="#read"]').text('Read more')
         });
 
         $(".dropdown-menu.oc a:first-child").click(function () {

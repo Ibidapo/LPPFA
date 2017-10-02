@@ -8,30 +8,41 @@
 <!-- Body of Disclaimer  -->
 <div class="container-fluid" id="disclaim-overlay">
     <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 text-center">
-            <h4 class="hidden-sm-down">COMPOUND INTEREST CALCULATOR</h4>
-            <h5 class="hidden-md-up">COMPOUND INTEREST CALCULATOR</h5>
-            <p>Use our compound interest calculator to plan your resources over time.</p>
-            <ul style="list-style-type: none">
+         <div class="col-12 col-md-6" style="border-right:1px solid white"> 
+
+           <h4 class="hidden-sm-down text-center">COMPOUND INTEREST CALCULATOR</h4>
+            <h5 class="hidden-md-up text-center">COMPOUND INTEREST CALCULATOR</h5>
+            <p class="text-center">Use our compound interest calculator to plan your resources over time.</p>
+            <ul class="text-center" style="list-style-type: none">
                 <li>Input values to activate dynamic graph <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc-list1.png"/></li>
                 <li>Review graphs to analyze wealth valuation <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc-list2.png"/></li>
                 <li>Enroll for Pension Plan immediately <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc-list3.png"/></li>
             </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 text-center">
-            <h4 class="hidden-sm-down">DISCLAIMER</h4>
-            <h5 class="hidden-md-up">DISCLAIMER</h5>
-            <p>The Calculator on this page is indicating and strictly for information purposes. Leadway Pensure PFA's obligations
+
+         </div> 
+<div class="col-12 col-md-6" style=""> 
+     
+        <h4 class="hidden-sm-down text-center">DISCLAIMER</h4>
+            <h5 class="hidden-md-up text-center">DISCLAIMER</h5>
+            <p class="text-center">The Calculator on this page is indicating and strictly for information purposes. Leadway Pensure PFA's obligations
                 with respect to its services on this page are governed solely by the agreements under which they are provided and
                 nothing hereof should be construed to alter such 'Service' agreements".</p>
-            <div><a href="#" class="btn btn-outline-white" id="agree">I agree</a>
+            <div class="text-center"><a href="#" class="btn btn-outline-white" id="agree">I agree</a>
                 <a href="/" class="btn btn-outline-white">I do not agree</a>
             </div>
+
+         </div>
         </div>
     </div>
+<!-- disclaimer content 
+
+        <div class="col-12 col-md-10 offset-md-1 text-center">
+           
+        </div>
+    </div>
+   
 </div>
+--> 
 <!-- Body of Calculator Page -->
 <div class="container" id="calc-page">
     <div class="row" style="margin-top: 1rem">
