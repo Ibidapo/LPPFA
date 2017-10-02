@@ -341,11 +341,10 @@
                     title: "Successful!",
                     text: responseText,
                     type: "success"
-                }, function(){
-                    $('#valid-token').val(body.request.otp);
-                    $('#valid-email').val(body.request.email);
-                    $('#validated-token-form').submit();
                 });
+                $('#valid-token').val(body.request.otp);
+                $('#valid-email').val(body.request.email);
+                $('#validated-token-form').submit();
             } else {
                 swal({
                     title: "Error!",
