@@ -28,7 +28,7 @@ get_header();
                         <div class="carousel-item <?php if ($key === 0) echo 'active' ?>">
                             <img src="<?php echo $image['url']; ?>" alt="Third slide">
 
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption animated fadeInLeftBig d-none d-md-block">
                                 <h1><?= $image['title'] ?></h1>
 
                                 <p><?= $image['caption'] ?></p>
@@ -36,6 +36,14 @@ get_header();
                         </div>
                     <?php } ?>
                 </div>
+				 <a class="carousel-control-prev" href="#top-slide" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#top-slide" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
             </div>
         </div>
         <!-- /slider -->
@@ -193,7 +201,7 @@ get_header();
                                     <img class="card-img-top" src="<?= $item['image']['url'] ?>"
                                          alt="<?= $item['image']['alt'] ?>"/>
 
-                                    <div class="card-block">
+                                    <div class="card-block text-center">
                                         <?= $item['content'] ?>
                                     </div>
                                 </div>
@@ -392,6 +400,8 @@ get_header();
                 $('#search-index').focus();
             }, 800)
         });
+		
+		$("#top-slide .carousel-item").first().find(".carousel-caption").addClass("slide1");
 
         $('#client-area').mouseenter(function(){
             $('#customer-slide').carousel('pause');

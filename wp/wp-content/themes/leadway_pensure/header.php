@@ -52,6 +52,7 @@ if (!$rsa_rf) {
               integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
               crossorigin="anonymous">
         <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
         <link rel="stylesheet"
               href="<?php echo get_bloginfo('template_directory'); ?>/owlcarousel/assets/owl.carousel.css">
         <link rel="stylesheet"
@@ -84,42 +85,77 @@ if (!$rsa_rf) {
                 a.appendChild(r);
             })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
         </script>
-      
+		
+		<?php if (
+			is_page_template("template_token.php")
+		): ?>
         <script>
-
+        
         var captchaSubmit = function(){
        
 
-        var recaptchaButton =  document.getElementById('recaptcha');
-        
-        var buttonHolder =  document.getElementById('button-holder'); 
-      if ( recaptchaButton !== null) {
-         recaptchaButton.parentNode.removeChild(recaptchaButton);
+			var recaptchaButton =  document.getElementById('recaptcha');
+			
+			var buttonHolder =  document.getElementById('button-holder'); 
+			if ( recaptchaButton !== null) {
+				recaptchaButton.parentNode.removeChild(recaptchaButton);
 
- }else if ( recaptchaButton == null ){
-         var createGetTokenButton = document.createElement('button'); 
-         createGetTokenButton.id = 'token-submit'; 
-         createGetTokenButton.setAttribute('class','btn btn-purple validate'); 
-         createGetTokenButton.setAttribute('type', 'submit'); 
-         buttonHolder.appendChild(createGetTokenButton);
-         createGetTokenButton.innerHTML = "Get token";  
-}  
-}
-        var onloadCallback = function(){  grecaptcha.render('recaptcha',
-        {"sitekey":"6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7","callback":captchaSubmit});
-                
-  } 
-//var myCallBack = function() {
-//	alert('Rendering...');
-//	grecaptcha.render('recaptcha',
-//  {"sitekey":"6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7","callback":captchaSubmit});
-//}
+			}else if ( recaptchaButton == null ){
+				var createGetTokenButton = document.createElement('button'); 
+				createGetTokenButton.id = 'token-submit'; 
+				createGetTokenButton.setAttribute('class','btn btn-purple validate'); 
+				createGetTokenButton.setAttribute('type', 'submit'); 
+				buttonHolder.appendChild(createGetTokenButton);
+				createGetTokenButton.innerHTML = "Get token";  
+			}  
+		}
+		
+		 var onloadCallback = function() {
+          grecaptcha.render('recaptcha', {
+            'sitekey' : "6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7",
+            'callback' : captchaSubmit
+          });
+        };
+		
+		//var myCallBack = function() {
+		//	alert('Rendering...');
+		//	grecaptcha.render('recaptcha',
+		//  {"sitekey":"6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7","callback":captchaSubmit});
+		//}
+		</script> 
 
-     </script> 
-
-        
-        <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
-        
+		<? endif ?>
+	 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+		<!-- Feedback form recaptcha function --> 
+		<script>
+			function feedbackSubmit(token) {
+				document.getElementById("feedback_captcha").submit();
+			}
+		</script>
+		
+		<?php if (
+			is_page_template("template_career.php")
+		): ?>
+			<!-- Career form recaptcha function -->
+			<script>
+				function careerSubmit(token) {
+					document.getElementById("career_captcha").submit();
+				}
+			</script>
+		<? endif ?>
+		<?php if (
+			is_page_template("template_company.php")
+		): ?>
+			<!-- Company form recaptcha function -->
+			<script>
+				function companySubmit(token) {
+					document.getElementById("company_captcha").submit();
+				}
+			</script>
+		<? endif ?>
+		
         <script>
             (function (i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r;
@@ -198,8 +234,8 @@ if (!$rsa_rf) {
             <ul class="menu">
                 <li><a data-toggle="collapse" href="#log" aria-expanded="false" aria-controls="log">Login / Register <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                     <ul class="sub-menu collapse" id="log">
-                        <li><a href="/login">Client login</a></li>
-                        <li><a href="#">Employer login</a></li>
+                        <li><a href="https://p-online.leadway-pensure.com/">Client login</a></li>
+                        <li><a href="https://employerportal.leadway-pensure.com/onlinepensure/employer">Employer login</a></li>
                         <li><a href="/enroll">Register</a></li>
                     </ul>
                 </li>
@@ -254,12 +290,12 @@ if (!$rsa_rf) {
                         <td>
                             <span class="head-td">RETIREE FUND</span><br>
                             <span> &#8358;<?= array_get($rsa_rf['rf']->values, 0) ?>
-                                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png" alt="">
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png" alt="">
                             </span>
                         </td>
                     <?php } ?>
                     <td>
-                        <a href="/login" style="color: white; font-weight: 500">LOGIN</a>
+                        <a href="https://employerportal.leadway-pensure.com/" style="color: white; font-weight: 500">LOGIN</a>
                     </td>
                     <td>
                         <a href="/calculator" class="nav-calc"> <img

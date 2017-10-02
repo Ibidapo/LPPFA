@@ -7,10 +7,10 @@
 get_header(); ?>
 
     <!-- Body and Main Content of page -->
-    <div class="container-fluid" id="m-top">
+    <div class="container" id="m-top">
         <div class="row">
             <div class="col-12">
-                <div class="page-wrapper" style="min-height:300px;padding: 50px 0;">
+                <div class="page-wrapper text-center" style="min-height:300px;padding: 50px 0;">
                     <div class="page-content">
                         <h1 class="page-title"><?php _e( 'Not Found'); ?></h1>
                         <h2><?php _e( 'This is somewhat embarrassing, isn’t it?'); ?></h2>

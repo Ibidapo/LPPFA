@@ -28,6 +28,9 @@ padding:0 !important;
 .mOff {
 margin:0 !important;
 }
+#logon-email {
+ background: #eceeef !important;
+}
 #wrapper {
 margin-top:3% !important;
 -webkit-transform: translateZ(0) !important;
@@ -460,6 +463,9 @@ color: #1f69a5;
 .solutions1{
     padding-bottom: 70px;
 }
+.solutions1 .col-12 {
+	margin-bottom: 1rem;
+}
 .solutions {
 	margin: 5px 0;
     font-size: 0.85rem;
@@ -551,6 +557,10 @@ color:white;
 }
 .social-feed{
   padding:30px;
+}
+
+#logon-email:active {
+background-color: #ffffff;
 }
 
 .game{

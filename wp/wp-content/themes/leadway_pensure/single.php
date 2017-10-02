@@ -2,82 +2,97 @@
 get_header();
 $options = get_option('theme_options');
 $social_options = get_option('theme_social_options');
-?>
 
-<?php
-
-$params = [
-    "RSAFund" => true,
-    "RetireeFund" => true,
-    "duration" => 0
-];
-$json_params = json_encode($params);
-$cacheKey = "leadway_rsa_rf_info-" . md5($json_params);
+$results = [];
+$cacheKey = "leadway_rsa_rf_info";
 $rsa_rf = get_transient($cacheKey);
 
 if (!$rsa_rf) {
-    $rsa_rf = wp_remote_post("https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/Chart", [
+    $rsa_rf['rsa'] = wp_remote_post("https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/Chart", [
         'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
-        'body' => json_encode($params),
+        'body' => json_encode([
+            "RSAFund" => true,
+            "duration" => 0
+        ]),
         'method' => 'POST'
     ]);
-    if (is_array($rsa_rf) && isset($rsa_rf['body'])) {
-        $rsa_rf_json = json_decode($rsa_rf['body']);
-        $rsa_rf = $rsa_rf_json->Data;
+    $rsa_rf['rf'] = wp_remote_post("https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/Chart", [
+        'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
+        'body' => json_encode([
+            "RetireeFund" => true,
+            "duration" => 0
+        ]),
+        'method' => 'POST'
+    ]);
+    if (
+        is_array($rsa_rf['rsa']) && isset($rsa_rf['rsa']['body']) &&
+        is_array($rsa_rf['rf']) && isset($rsa_rf['rf']['body'])
+    ) {
+        $rsa_json = json_decode($rsa_rf['rsa']['body']);
+        $rf_json = json_decode($rsa_rf['rf']['body']);
+        $rsa_rf['rsa'] = $rsa_json->Data;
+        $rsa_rf['rf'] = $rf_json->Data;
         set_transient($cacheKey, $rsa_rf, DAY_IN_SECONDS);
     } else {
         $rsa_rf = false;
     }
 }
-
 ?>
+
+<!-- Custom style for blog post -->
+<style>
+.entry-content-page img {margin-top: 30px;margin-bottom: 30px;width:100%; max-width:100%; height:auto;}
+</style>
+
+
 <!-- Desktop navigation -->
 <nav class="navbar fixed-top hidden-md-down pOff">
     <!-- desktop price charts start -->
-    <table class="table table-responsive mOff">
-        <tbody>
-        <tr>
-            <td>
-                <div id="google_translate_element"></div>
-            </td>
-            <td>
+    <!-- desktop price charts start -->
+            <table class="table table-responsive mOff">
+                <tbody>
+                <tr>
+                    <td>
+                        <div id="google_translate_element"></div>
+                    </td>
+                    <td>
                         <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i>
                             <?= $options['phone_number'] ?>
                         </span>
-            </td>
-            <?php if ($rsa_rf) { ?>
-                <td>
-                    <span class="head-td"> RSA FUND</span><br>
-                    <span>&#8358;<?= array_get($rsa_rf->values, 0) ?>
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png" alt="">
+                    </td>
+                    <?php if ($rsa_rf) { ?>
+                        <td>
+                            <span class="head-td"> RSA FUND</span><br>
+                            <span>&#8358;<?= array_get($rsa_rf['rsa']->values, 0) ?>
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png" alt="">
                             </span>
-                </td>
-                <td>
-                    <span class="head-td">RETIREE FUND</span><br>
-                    <span> &#8358;<?= array_get($rsa_rf->values, 0) ?>
-                        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png" alt="">
+                        </td>
+                        <td>
+                            <span class="head-td">RETIREE FUND</span><br>
+                            <span> &#8358;<?= array_get($rsa_rf['rf']->values, 0) ?>
+                                <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png" alt="">
                             </span>
-                </td>
-            <?php } ?>
-            <td>
-                <a href="/login" style="color: white; font-weight: 500">LOGIN</a>
-            </td>
-            <td>
-                <a href="/calculator" class="nav-calc"> <img
-                        src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png">
-                    <span>Calculator</span></a>
-            </td>
-            <td>
-                <button onclick="location='/trends'" type="button" class="btn btn-outline-secondary v-trends">
-                    VIEW TRENDS
-                </button>
-            </td>
-            <td>
-                <span id="date"></span>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+                        </td>
+                    <?php } ?>
+                    <td>
+                        <a href="https://employerportal.leadway-pensure.com/" style="color: white; font-weight: 500">LOGIN</a>
+                    </td>
+                    <td>
+                        <a href="/calculator" class="nav-calc"> <img
+                                src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png">
+                            <span>Calculator</span></a>
+                    </td>
+                    <td>
+                        <button onclick="location='/trends'" type="button" class="btn btn-outline-secondary v-trends">
+                            VIEW TRENDS
+                        </button>
+                    </td>
+                    <td>
+                        <span id="date"></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
     <!-- Navbar -->
     <div class="navBlog">
         <div class="col-md-12">
@@ -160,6 +175,7 @@ if (!$rsa_rf) {
                     <div class="entry-content-page">
                         <?php the_content(); ?> <!-- Page Content -->
                     </div>
+
                     <!-- .entry-content-page -->
 
 

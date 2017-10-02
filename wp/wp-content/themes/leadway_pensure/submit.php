@@ -15,35 +15,34 @@ $request_args = [
 $formName = array_get($_POST, 'formName');
 
 if ($formName == 'token-form') {
+	$userInfo = json_decode($params, true);
+	$_SESSION['user_full_name'] = $userInfo['firstname'] ." ". $userInfo['middlename'] ." ". $userInfo['surname'];
 
-    $userInfo = json_decode($params, true);
-    $_SESSION['user_full_name'] = $userInfo['firstname'] ." ". $userInfo['middlename'] ." ". $userInfo['surname'];
+	$url = "https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/SendEnrolmentToken";
+	$response1 = wp_remote_post($url, $request_args);
+	$response1 = getResponse($response1);
 
-    $url = "https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/SendEnrolmentToken";
-    $response = wp_remote_post($url, $request_args);
-    $response = getResponse($response);
-
-    $userFeedback = compact('response');
-    return die(json_encode($userFeedback));
+	$userFeedback = compact('response1');
+	return die(json_encode($userFeedback));
 }
 
 if ($formName == 'enroll-form') {
-    $url = "https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/EnrolWebsiteProspect";
-    $response = wp_remote_post($url, $request_args);
-    $response = getResponse($response);
+	$url = "https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/EnrolWebsiteProspect";
+	$response1 = wp_remote_post($url, $request_args);
+	$response1 = getResponse($response1);
 
-    /*$sent = true;
-    if ($response) {
-        $to = array_get($_POST, 'emailaddress');
-        $from = get_option('admin_email');
-        $sent = sendMail("Leadway Pensure", $from, $to, "Enrollment Token", $response);
-    }
-    $userFeedback = [
-        'response' => $response,
-        'mail' => $sent
-    ];*/
-    $userFeedback = compact('response');
-    return die(json_encode($userFeedback));
+	/*$sent = true;
+	if ($response) {
+		$to = array_get($_POST, 'emailaddress');
+		$from = get_option('admin_email');
+		$sent = sendMail("Leadway Pensure", $from, $to, "Enrollment Token", $response);
+	}
+	$userFeedback = [
+		'response' => $response,
+		'mail' => $sent
+	];*/
+	$userFeedback = compact('response1');
+	return die(json_encode($userFeedback));
 }
 
 

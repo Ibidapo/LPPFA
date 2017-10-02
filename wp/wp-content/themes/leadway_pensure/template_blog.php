@@ -21,6 +21,30 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
 ?>
 
 <?php get_header(); ?>
+
+<style>
+.seriesCap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    right: 0;
+    padding: 10px;
+    color: #fff;
+    top: 77%;
+}
+
+.seriesCap p {
+    color: #fff;
+}
+
+#series1 span.badge {
+    left: 83%;
+    top: 2%;
+    background: #000;
+    font-weight: 800;
+}
+</style>
 <!-- Desktop navigation -->
 <nav class="navbar fixed-top hidden-md-down pOff">
     
@@ -88,10 +112,11 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                         <?php endforeach ?>
 
                         <div class="seriesCap">
-                            <span class="cap-color">
+                            <!-- <span class="cap-color">
                                 Confident</span> because<br>my finances are<br><span class="cap-color">pensure
-                            </span>
-                            <p><?= summary($firstInvNews->post_content, 100) ?></p>
+                            </span> -->
+							<p><?= summary($firstInvNews->post_content, 100) ?></p>
+                            
                             <a href="<?= get_permalink($firstInvNews) ?>" class="btn btn-primary">Learn more</a>
                         </div>
                     <?php endif ?>
@@ -136,7 +161,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                                     <h5 class="mt-0"><?= $news->post_title ?></h5>
 
                                     <p>
-                                        <?= summary($news->post_content, 100) ?>
+                                        <?= summary($news->post_content, 150) ?>
                                         <a href="<?= get_permalink($news) ?>">Read more</a>
                                     </p>
                                 </div>

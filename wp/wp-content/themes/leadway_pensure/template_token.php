@@ -130,10 +130,10 @@
                                 <div class="col-12 col-sm-6 text-center form-pad">
                                     <label class="form-label"> Email </label>
                                     <input name=emailaddress class="form-control e-fields text-center" type="text"
-                                           placeholder="Johnsnow@xxxxxxx" required="" data-parsley-group="block1">
+                                           placeholder="Johnsnow@xxxxxxx" required="" data-parsley-group="block1" id="token-email">
                                 </div>
                             </div>
-                            <d8iv class="row">
+                            <div class="row">
                                 <div class="col-12 col-sm-6 text-center form-pad">
                                     <label class="form-label"> Mobile no </label>
                                     <input name=mobileno class="form-control e-fields text-center" type="number"
@@ -148,6 +148,7 @@
 
                                     <!--  g-recaptcha 6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7 -->
                                 </div>
+							</div>
                     </div>
                     <div class="row">
                         <div class="col-12 text-center form-pad">
@@ -185,10 +186,10 @@
             <div class="row">
                 <div class="col-12 col-sm-4 email-field">
                     <input name="email" class="form-control e-fields" type="text" placeholder="Email-address"
-                           required="">
+                           required="" id="logon-email" readonly>
                 </div>
                 <div class="col-12 col-sm-4 token-field">
-                    <input name="token" class="form-control e-fields" type="text" placeholder="Token no" required="">
+                    <input name="token" class="form-control e-fields" type="text" placeholder="Token no" required="" id="logon-email">
                 </div>
                 <div class="col-12 col-sm-3 text-center">
                     <input type=submit class="btn btn-purple" value="Enroll now" id="call-json">
@@ -255,6 +256,20 @@
         return json;
 
     }
+    
+   $('#recaptcha').click(function(){
+       
+       var tokenEmail = document.getElementById('token-email').value;
+       var g_captcha_response = $("#g-recaptcha-response").val() 
+         console.log(g_captcha_response);
+         console.log(tokenEmail);   
+           
+       $('#logon-email').val(tokenEmail);
+       
+       });
+    
+   
+
 
     //sample string generation block
 

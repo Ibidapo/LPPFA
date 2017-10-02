@@ -21,6 +21,15 @@ function getId($aKey, $bKey)
             case 2:
                 $id = "annt";
                 break;
+			case 3:
+                $id = "0-3";
+                break;
+			case 4:
+                $id = "0-4";
+                break;
+			case 5:
+                $id = "0-5";
+                break;
         }
     } elseif ($aKey == 1) {
         switch ($bKey) {
@@ -39,35 +48,20 @@ function getId($aKey, $bKey)
             case 4:
                 $id = "frgn";
                 break;
-        }
-    } elseif ($aKey == 2) {
-        switch ($bKey) {
-            case 0:
-                $id = "l-sum";
+			case 5:
+                $id = "1-5";
                 break;
-            case 1:
-                $id = "enbloc";
+			case 6:
+                $id = "1-6";
                 break;
-            case 2:
-                $id = "med-grnd2";
+			case 7:
+                $id = "1-7";
                 break;
-            case 3:
-                $id = "dth-ben2";
-                break;
-            case 4:
-                $id = "frgn2";
-                break;
-            case 5:
-                $id = "nst2";
-                break;
-            case 6:
-                $id = "leg-app";
-                break;
-            case 7:
-                $id = "avc-app";
+			case 8:
+                $id = "1-8";
                 break;
         }
-    }
+    } 
     return $id;
 }
 
@@ -178,14 +172,10 @@ $benefits = get_field("benefits");
         });
 
         $(".dropdown-menu.bnf a:first-child").click(function(){
-            $('a[href="#ab-ret"]').tab('show');
-        });
-
-        $(".dropdown-menu.bnf a:nth-child(2)").click(function(){
             $('a[href="#pay-grnd"]').tab('show');
         });
 
-        $(".dropdown-menu.bnf a:nth-child(3)").click(function(){
+        $(".dropdown-menu.bnf a:nth-child(2)").click(function(){
             $('a[href="#pay-type"]').tab('show');
         });
 
@@ -193,53 +183,50 @@ $benefits = get_field("benefits");
             var i = $(this).val();
 
             if (i == 0) {
-                $('a[href="#ab-ret"]').tab('show');
+                $('a[href="#pay-grnd"]').tab('show');
                 $('a[href="#gen-app"]').tab('show');
             } else if (i == 1) {
-                $('a[href="#ab-ret"]').tab('show');
+                $('a[href="#pay-grnd"]').tab('show');
                 $('a[href="#prog-wd"]').tab('show');
             } else if (i == 2) {
-                $('a[href="#ab-ret"]').tab('show');
+                $('a[href="#pay-grnd"]').tab('show');
                 $('a[href="#annt"]').tab('show');
             } else if (i == 3) {
                 $('a[href="#pay-grnd"]').tab('show');
-                $('a[href="#man-ret"]').tab('show');
+                $('a[href="#0-3"]').tab('show');
             } else if (i == 4) {
                 $('a[href="#pay-grnd"]').tab('show');
-                $('a[href="#temp-ret"]').tab('show');
+                $('a[href="#0-4"]').tab('show');
             } else if (i == 5) {
                 $('a[href="#pay-grnd"]').tab('show');
-                $('a[href="#med-grnd"]').tab('show');
-            } else if (i == 6) {
-                $('a[href="#pay-grnd"]').tab('show');
-                $('a[href="#dth-ben"]').tab('show');
+                $('a[href="#0-5"]').tab('show');
+            }else if (i == 6) {
+                $('a[href="#pay-type"]').tab('show');
+                $('a[href="#man-ret"]').tab('show');
             } else if (i == 7) {
-                $('a[href="#pay-grnd"]').tab('show');
-                $('a[href="#frgn"]').tab('show');
+                $('a[href="#pay-type"]').tab('show');
+                $('a[href="#temp-ret"]').tab('show');
             } else if (i == 8) {
                 $('a[href="#pay-type"]').tab('show');
-                $('a[href="#l-sum"]').tab('show');
-            }else if (i == 9) {
+                $('a[href="#med-grnd"]').tab('show');
+            } else if (i == 9) {
                 $('a[href="#pay-type"]').tab('show');
-                $('a[href="#enbloc"]').tab('show');
+                $('a[href="#dth-ben"]').tab('show');
             } else if (i == 10) {
                 $('a[href="#pay-type"]').tab('show');
-                $('a[href="#med-grnd2"]').tab('show');
+                $('a[href="#frgn"]').tab('show'); 
             } else if (i == 11) {
                 $('a[href="#pay-type"]').tab('show');
-                $('a[href="#dth-ben2"]').tab('show');
+                $('a[href="#1-5"]').tab('show');
             } else if (i == 12) {
                 $('a[href="#pay-type"]').tab('show');
-                $('a[href="#frgn2"]').tab('show');
+                $('a[href="#1-6"]').tab('show');
             } else if (i == 13) {
                 $('a[href="#pay-type"]').tab('show');
-                $('a[href="#nst2"]').tab('show');
+                $('a[href="#1-7"]').tab('show');
             } else if (i == 14) {
                 $('a[href="#pay-type"]').tab('show');
-                $('a[href="#leg-app"]').tab('show');
-            } else if (i == 15) {
-                $('a[href="#pay-type"]').tab('show');
-                $('a[href="#avc-app"]').tab('show');
+                $('a[href="#1-8"]').tab('show');
             }
         });
     });

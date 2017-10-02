@@ -42,7 +42,7 @@ $retiree_funds_faqs = get_field("retiree_funds_faqs");
                     <div class="card">
                         <div class="card-header" role="tab" id="contr<?= $num ?>">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#accordion8" href="#cntr<?= $num ?>" aria-expanded="true" aria-controls="cntr<?= $num ?>">
+                                <a data-toggle="collapse" data-parent="#accordion7" href="#cntr<?= $num ?>" aria-expanded="true" aria-controls="cntr<?= $num ?>">
                                     <?= $faq['title'] ?>
                                 </a>
                             </h5>
@@ -64,7 +64,7 @@ $retiree_funds_faqs = get_field("retiree_funds_faqs");
                     <div class="card">
                         <div class="card-header" role="tab" id="retr<?= $num ?>">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#accordion9" href="#ret<?= $num ?>" aria-expanded="true" aria-controls="ret<?= $num ?>">
+                                <a data-toggle="collapse" data-parent="#accordion7" href="#ret<?= $num ?>" aria-expanded="true" aria-controls="ret<?= $num ?>">
                                     <?= $faq['title'] ?>
                                 </a>
                             </h5>
@@ -85,7 +85,7 @@ $retiree_funds_faqs = get_field("retiree_funds_faqs");
                     <div class="card">
                         <div class="card-header" role="tab" id="retrf1<?= $num ?>">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#accordion10" href="#retf<?= $num ?>" aria-expanded="true" aria-controls="retf<?= $num ?>">
+                                <a data-toggle="collapse" data-parent="#accordion7" href="#retf<?= $num ?>" aria-expanded="true" aria-controls="retf<?= $num ?>">
                                     <?= $faq['title'] ?>
                                 </a>
                             </h5>
@@ -107,7 +107,7 @@ $retiree_funds_faqs = get_field("retiree_funds_faqs");
                     <div class="card-header" role="tab" id="multi1">
                         <h5 class="mb-0">
                             <a data-toggle="collapse" data-parent="#accordion11" href="#str1" aria-expanded="true" aria-controls="str1">
-                                Why is my monthly Pension delayed?
+                                What is the Multi-fund structure?
                             </a>
                         </h5>
                     </div>
@@ -362,116 +362,23 @@ $retiree_funds_faqs = get_field("retiree_funds_faqs");
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-=======
-        <div class="col-12">
-            <h3 class="text-center">FAQs on Retirement Benefit Payment</h3>
-            <div id="accordion12" role="tablist" aria-multiselectable="true">
-                <div class="card">
-                    <div class="card-header" role="tab" id="benpay1">
-                        <h5 class="mb-0">
-                            <a data-toggle="collapse" data-parent="#accordion12" href="#pay1" aria-expanded="true" aria-controls="pay1">
-                                Does the scheme allow a retiree to withdraw the balance of the RSA at once?
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="pay1" class="collapse show" role="tabpanel" aria-labelledby="benpay1">
-                        <div class="card-block">
-                            A Retiree is entitled to a mimimum lump sum of 25% and a Maximum lump sum of 50%.  RSA Hoders with
-                            550,000.00 (Five hundred and fifty thousand naira or less (N 550,000.00).
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" role="tab" id="benpay2">
-                        <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion12" href="#pay2" aria-expanded="false" aria-controls="pay2">
-                                What are the benefits of the scheme?
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="pay2" class="collapse" role="tabpanel" aria-labelledby="benpay2">
-                        <div class="card-block">
-                            It ensures that the retiree receives his or her benefits as and when due.
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" role="tab" id="benpay3">
-                        <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion12" href="#pay3" aria-expanded="false" aria-controls="pay3">
-                                Are there rules and guidelines governing the scheme?
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="pay3" class="collapse" role="tabpanel" aria-labelledby="benpay3">
-                        <div class="card-block">
-                            Yes, the Pension Reform Act 2014 and Guidelines issued by the National Pension Commission provide
-                            minimum standards and rules for security, accountability, management and feedback on Retirement
-                            Savings Account (RSA) to measure performances.
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" role="tab" id="benpay4">
-                        <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion12" href="#pay4" aria-expanded="false" aria-controls="pay4">
-                                How can retirees monitor returns made on Retirement Account?
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="pay4" class="collapse" role="tabpanel" aria-labelledby="benpay4">
-                        <div class="card-block">
-                            These are provided in quarterly statements and can be calculated by the growth in the unit price
-                            over the period. The information required for this purpose are readily available on our Website
-                            and Mobile App.
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" role="tab" id="benpay5">
-                        <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion12" href="#pay5" aria-expanded="false" aria-controls="pay5">
-                                Is there uniformity on how the administration of pension funds’ assets are managed?
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="pay5" class="collapse" role="tabpanel" aria-labelledby="benpay5">
-                        <div class="card-block">
-                            The National Pension Commission has established a uniform set of rules and regulations for the
-                            administration and payment of retirement benefits in both public and private sectors.
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" role="tab" id="benpay6">
-                        <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion12" href="#pay6" aria-expanded="false" aria-controls="pay6">
-                                Where are monthly or quarterly pension payments collected?
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="pay6" class="collapse" role="tabpanel" aria-labelledby="benpay6">
-                        <div class="card-block">
-                            Upon completion of the benefit payment process, your designated bank account is credited with your
-                            lump sum payment; and the subsequent monthly or quarterly pension (on Customer's preference) is
-                            credited directly into designated Bank Accounts.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
->>>>>>> ff2923b9e575f1e978f8dbbe5bdf88f0620a0b61
     </div>
 </div>
 
 <?php get_footer(); ?>
 <script>
-    //Resize container based on desktop or mobile viewport.
-    var size = window.innerWidth;
-    if (size <= 991) {
-        $("#m-top").attr("class", "container-fluid");
-    }
+	$(document).ready(function () {
+		
+		//Resize container based on desktop or mobile viewport.
+		var size = window.innerWidth;
+		if (size <= 991) {
+			$("#m-top").attr("class", "container-fluid");
+		}
+		
+		$('html,body').animate({
+		  scrollTop: $(window.location.hash).offset().top
+		});
+	});
 </script>
 
 </body>

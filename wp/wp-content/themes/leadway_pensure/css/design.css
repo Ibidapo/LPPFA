@@ -130,6 +130,39 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     position: relative;
     height: 100vh;
 }
+#top-slide .carousel-item .carousel-caption {
+	position: absolute;
+    bottom: 25%;
+    left: 7%;
+    width: 48%;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: left !important;
+}
+.slide1 {
+	font-size: 1.25rem !important;
+    left: auto !important;
+    right: 3.5%!important;
+    width: 21.5% !important;
+}
+.slide1  ul {
+	list-style-type: none;
+	padding: 0;
+}
+#top-slide .carousel-control-next,#top-slide  .carousel-control-prev {
+	background-color: #223e70;
+    width: 70px;
+    height: 50px;
+    top: 45%;
+}
+#top-slide .carousel-control-prev{  
+	border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+#top-slide .carousel-control-next{
+	border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
 #scroll-btn{
     position: absolute;
     bottom: 40%;
@@ -224,16 +257,18 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     color: #171616;
     font-weight: 300;
     font-size: 1rem;
-    padding: 30px;
+}
+.client-txt {
+	padding: 30px 0 30px 60px;
 }
 .client-txt h3{
     margin-bottom: 15px;
 }
 #customer-slide{
     position: absolute;
-    top: -25px;
-    left: calc(50% - 88px);
-    width: 175px;
+    top: -15px;
+    left: calc(50% - 100px);
+    width: 200px;
 }
 #customer-slide .carousel-item{
     background-color: transparent;
@@ -628,20 +663,12 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 /*Note:Accordion5 is for career page*/
 #accordion1, #accordion2, #accordion3, #accordion4, #accordion5, #accordion6, #accordion7, #accordion8, #accordion9, #accordion10,
-<<<<<<< HEAD
 #accordion11 {
-=======
-#accordion11, #accordion12 {
->>>>>>> ff2923b9e575f1e978f8dbbe5bdf88f0620a0b61
     margin: 25px auto;
     width: 90%;
 }
 #accordion1 .card, #accordion2 .card, #accordion3 .card, #accordion4 .card, #accordion5 .card, #accordion7 .card, #accordion8 .card,
-<<<<<<< HEAD
 #accordion9 .card, #accordion10 .card, #accordion11 .card {
-=======
-#accordion9 .card, #accordion10 .card, #accordion11 .card, #accordion12 .card {
->>>>>>> ff2923b9e575f1e978f8dbbe5bdf88f0620a0b61
     background: transparent;
     margin: 10px auto;
     border: 2px solid #4c4648;
@@ -649,21 +676,13 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 #accordion1 .card .card-header, #accordion2 .card .card-header, #accordion3 .card .card-header, #accordion4 .card .card-header,
 #accordion5 .card .card-header, #accordion6 .card .card-header, #accordion7 .card .card-header, #accordion8 .card .card-header,
-<<<<<<< HEAD
 #accordion9 .card .card-header, #accordion10 .card .card-header,  #accordion11 .card .card-header {
-=======
-#accordion9 .card .card-header, #accordion10 .card .card-header,  #accordion11 .card .card-header, #accordion12 .card .card-header {
->>>>>>> ff2923b9e575f1e978f8dbbe5bdf88f0620a0b61
      background: transparent;
      border-bottom: none;
      text-align: center;
  }
 #accordion1 a, #accordion2 a, #accordion3 a, #accordion4 a, #accordion5 a, #accordion7 a, #accordion8 a, #accordion9 a,
-<<<<<<< HEAD
 #accordion10 a, #accordion11 a {
-=======
-#accordion10 a, #accordion11 a, #accordion12 a{
->>>>>>> ff2923b9e575f1e978f8dbbe5bdf88f0620a0b61
     color: #4c4648;
     text-decoration: none;
 }
@@ -734,6 +753,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     background-color: rgba(32, 104, 164, .7);;
     font-size: 1.125rem;
     font-weight: 300;
+	text-align: justify;
 }
 .bg-txt p{
     width: 85%;
@@ -910,7 +930,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     padding: .25rem .75rem;
 }
 #cv textarea, #cv select, #feed textarea {
-    background: #ebebeb !important;
+    background: #ebebeb;
     border: none !important;
     border-radius: 20px !important;
 }
@@ -1117,7 +1137,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     height: 70%;
 }
 .mission p {
-    margin: 0 20px;
+    margin: 0 20px 10px;
 }
 #accordion6 .card{
     background: white;
@@ -1237,12 +1257,11 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
 }
-#dir1, #dir2, #dir3, #dir4, #dir5, #dir6, #dir7, #dir8, #dir9, #mgt1, #mgt2, #mgt3, #mgt4, #mgt5, #mgt6, #mgt7, #mgt8, #mgt9 {
+#mgt-team .tab-pane, #board-dir  .tab-pane {
     margin-bottom: 50px;
     padding: 25px 0;
 }
-#dir1 p, #dir2 p, #dir3 p, #dir4 p, #dir5 p, #dir6 p, #dir7 p, #dir8 p, #dir9 p,
-#mgt1 p, #mgt2 p, #mgt3 p, #mgt4 p, #mgt5 p, #mgt6 p, #mgt7 p, #mgt8 p, #mgt9 p {
+#mgt-team .tab-pane p, #board-dir  .tab-pane p{
     padding: 0 25px;
 }
 .dir-img figure{
@@ -1388,21 +1407,12 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     margin: 2rem 0 1rem 0;
     color: #2068a4
 }
-<<<<<<< HEAD
 #accordion7 .card, #accordion8 .card, #accordion8 .card, #accordion9 .card, #accordion10 .card, #accordion11 .card {
-=======
-#accordion7 .card, #accordion8 .card, #accordion8 .card, #accordion9 .card, #accordion10 .card, #accordion11 .card,
-#accordion12 .card {
->>>>>>> ff2923b9e575f1e978f8dbbe5bdf88f0620a0b61
      border: 2px solid #e2e2e0;
      text-align: center;
 }
 #accordion7 .card .card-header, #accordion8 .card .card-header, #accordion9 .card .card-header, #accordion10 .card .card-header,
-<<<<<<< HEAD
 #accordion11 .card .card-header {
-=======
-#accordion11 .card .card-header, #accordion12 .card .card-header {
->>>>>>> ff2923b9e575f1e978f8dbbe5bdf88f0620a0b61
     background: #e2e2e0;
     border-radius: 23px;
 }
@@ -1875,6 +1885,11 @@ footer .table td, footer .table th {
 #print{
     bottom: 65px;
 }
+#chat-icon {
+    position: fixed;
+    bottom: 50px;
+	z-index: 2 !important;
+}
 
 /*Styling for Mail Chimp*/
 #mc-embedded-subscribe {
@@ -2108,10 +2123,18 @@ footer .table td, footer .table th {
         margin-top: 83px;
     }
     #slider, #slider .carousel-item {
-        height: 40vh;
+        height: 45vh;
         padding: 0;
         overflow: hidden;
     }
+	#top-slide .carousel-item .carousel-caption{
+		bottom: 0;
+		left: 10%;
+		width: 55%;
+	}
+	#top-slide .carousel-control-next, #top-slide  .carousel-control-prev{
+		width: 60px;
+	}
     .client-intro {
         width: 41.6667%;
         margin-left: 1%;
@@ -2120,12 +2143,12 @@ footer .table td, footer .table th {
         padding: 20px 10px;
     }
     .client-txt {
-        font-size: 0.85rem;
+        padding: 30px 15px 30px 30px;
     }
     #customer-slide {
         top: 0;
-        left: calc(50% - 75px);
-        width: 150px;
+        left: calc(50% - 88px);
+		width: 175px;
     }
     .vids-txt {
         margin: 15% 10px 0 10px;
@@ -2414,17 +2437,22 @@ footer .table td, footer .table th {
 @media (max-width: 767px){
 
     /*Styling for HomePage*/
+	#top-slide .carousel-control-next, #top-slide .carousel-control-prev {
+		width: 45px;
+		height: 45px;
+	}
     .client-intro{
         width: 50%;
         margin-left: 25%;
     }
     .client-txt{
         font-size: 0.85rem;
+		padding: 30px 30px 10px;
     }
     #mob-customer-slide .card img{
         object-fit: contain;
-        width: 30%;
-        margin-left: 35%;
+        width: 25%;
+        margin-left: 37.5%;
     }
     #mob-customer-slide .carousel-inner .card{
         background-color: transparent;
@@ -2435,7 +2463,7 @@ footer .table td, footer .table th {
         color: rgba(0, 0, 0, 0.75);
     }
     .vids-txt {
-        margin: 15% 25px 0 25px;
+        margin: 5% 25px 25px 25px;
     }
     .invest-bg {
         background-size: cover;
@@ -2555,7 +2583,7 @@ footer .table td, footer .table th {
 
     /*Styling for Company Page*/
     .comp-prof {
-        height: 115px;
+        height: 125px;
     }
     .prof-label {
         font-size: 1rem;
@@ -2588,7 +2616,7 @@ footer .table td, footer .table th {
 		-o-transform: translate(-50% , -50%);
 		transform: translate(-50%, -50%);
 	}
-	#dir1, #dir2, #dir3, #dir4, #dir5, #dir6, #dir7, #dir8, #dir9, #mgt1, #mgt2, #mgt3, #mgt4, #mgt5, #mgt6, #mgt7, #mgt8, #mgt9 {
+	#mgt-team .tab-pane, #board-dir  .tab-pane {
 		margin-bottom: 50px;
 		padding: 0 0 25px;
 	}
@@ -2700,11 +2728,11 @@ footer .table td, footer .table th {
     }
     #mob-customer-slide .card img{
         object-fit: contain;
-        width: 55%;
-        margin-left: 22.5%;
+        width: 50%;
+        margin-left: 25%;
     }
     #mob-customer-slide .carousel-item .card-block {
-        padding: 1.25rem 0;
+        padding: 1.25rem 0 0.875rem;
     }
     .invest-bg{
         background: url("../images/m-piggy.jpg") no-repeat center;

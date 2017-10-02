@@ -7,7 +7,7 @@
 get_header(); ?>
 
     <!-- Body and Main Content of page -->
-    <div class="container-fluid" id="m-top">
+    <div class="container text-center" id="m-top">
         <br/>
 
         <header class="page-header">

@@ -63,6 +63,10 @@ if(isset($_POST['token'])) {
                     <div class="row">
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
  <div class="form-group ">
+ <input type=hidden name="firstname" value="Otaru" id='fn'> 
+ <input type=hidden name="middlename" value="Andrew" id='mn'> 
+ <input type=hidden name="lastname"  value="Daudu" id='ln'>
+ <input type=hidden name="Email" value="Otarudaudu@gmail.com" id='email'> 
                                 <label class="field-label"> Title </label>
                                 <select name=title type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-email placeholder="local government area" style="border: 1px solid white">
 <option> Select a title </option> 
@@ -898,6 +902,25 @@ if(isset($_POST['token'])) {
                         <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
 
                             <div class="form-group">
+                                <label class="field-label"> First name </label>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="d-fn">
+                            </div>
+
+                        </div>
+                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+
+                                <div class="form-group ">
+                                 <label class="field-label"> Middle Name  </label>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dp-mn" placeholder="" readonly>
+                            </div>
+                             <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                             <label class="field-label"> Last name </label>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="d-ln">
+                            
+                        </div>
+                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+
+                            <div class="form-group">
                                 <label class="field-label"> Gender </label>
                                 <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dGender">
                             </div>
@@ -906,9 +929,7 @@ if(isset($_POST['token'])) {
                         <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
 
                                 <div class="form-group ">
-                                 <label class="field-label"> Mobile no
-
-                                </label>
+                                 <label class="field-label"> Email </label>
                                 <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dp-mno" placeholder="" readonly>
                             </div>
                         </div>
@@ -1316,7 +1337,8 @@ if(isset($_POST['token'])) {
 
         var array = jQuery(form).serializeArray();
         var json = {};
-
+         
+        json['clientID'] = '9dy8earw04r09wjefsdp90zsjs';
         jQuery.each(array, function () {
             json[this.name] = this.value || '';
         });
@@ -1373,33 +1395,34 @@ if(isset($_POST['token'])) {
         };
 
         //accessing values of personal information form fields
-        var responseA = _('gender');
-        var responseB = _('status');
-        var responseC = _('birthday');
-        var responseD = _('soo');
-        var responseE = _('lga');
-        var responseF = _('nation');
-        var responseG = _('idt');
-        var responseH = _('p-email');
-        var responseI = _('p-mno');
-        var responseJ = _('org');
-        var responseK = _('orgAdd');
-        var responseL = _('orgLga');
-        var responseM = _('orgState');
-        var responseN = _('orgNo');
-        var responseO = _('doe');
-        var responseP = _('sop');
-        var responseQ = _('cpfa');
-        var responseR = _('pin');
-        var responseS = _('k-title');
-        var responseT = _('k-lname');
-        var responseU = _('k-fname');
-        var responseV = _('relationship');
-        var responseW = _('k-gender');
-        var responseX = _('k-add');
-        var responseY = _('k-soo');
-        var responseZ = _('k-lga');
+        var responseA  = _('gender');
+        var responseB  = _('status');
+        var responseC  = _('birthday');
+        var responseD  = _('soo');
+        var responseE  = _('lga');
+        var responseF  = _('nation');
+        var responseG  = _('idt');
+        var responseH  = _('p-email');
+        var responseI  = _('p-mno');
+        var responseJ  = _('org');
+        var responseK  = _('orgAdd');
+        var responseL  = _('orgLga');
+        var responseM  = _('orgState');
+        var responseN  = _('orgNo');
+        var responseO  = _('doe');
+        var responseP  = _('sop');
+        var responseQ  = _('cpfa');
+        var responseR  = _('pin');
+        var responseS  = _('k-title');
+        var responseT  = _('k-lname');
+        var responseU  = _('k-fname');
+        var responseV  = _('relationship');
+        var responseW  = _('k-gender');
+        var responseX  = _('k-add');
+        var responseY  = _('k-soo');
+        var responseZ  = _('k-lga');
         var responseA1 = _('k-mno');
+        var responseA2 = _('fn')
 
 
         //accessing all select box ids
@@ -1415,36 +1438,37 @@ if(isset($_POST['token'])) {
         var inputA = __('lga')
 
         //accessing innerHTML of Display fields for personal information form responses
-        var displayA = __('dGender');
-        var displayB = __('dStatus');
-        var displayC = __('dBirthday');
-        var displayD = __('dSoo');
-        var displayE = __('dLga');
-        var displayF = __('dNation');
-        var displayG = __('dIdt');
-        var displayH = __('dp-email');
-        var displayI = __('dp-mno');
-        var displayJ = __('dOrg');
-        var displayK = __('dOrgAdd');
-        var displayL = __('dOrgLga');
-        var displayM = __('dOrgState');
-        var displayN = __('dOrgNo');
-        var displayO = __('dDoe');
-        var displayP = __('dSop');
-        var displayQ = __('dcpfa');
-        var displayR = __('dpin');
-        var displayS = __('dk-title');
-        var displayT = __('dk-fname');
-        var displayU = __('dk-lname');
-        var displayV = __('drelationship');
-        var displayW = __('dkgender');
-        var displayX = __('dkadd');
-        var displayY = __('dksoo');
-        var displayZ = __('dklga');
+        var displayA  = __('dGender');
+        var displayB  = __('dStatus');
+        var displayC  = __('dBirthday');
+        var displayD  = __('dSoo');
+        var displayE  = __('dLga');
+        var displayF  = __('dNation');
+        var displayG  = __('dIdt');
+        var displayH  = __('dp-email');
+        var displayI  = __('dp-mno');
+        var displayJ  = __('dOrg');
+        var displayK  = __('dOrgAdd');
+        var displayL  = __('dOrgLga');
+        var displayM  = __('dOrgState');
+        var displayN  = __('dOrgNo');
+        var displayO  = __('dDoe');
+        var displayP  = __('dSop');
+        var displayQ  = __('dcpfa');
+        var displayR  = __('dpin');
+        var displayS  = __('dk-title');
+        var displayT  = __('dk-fname');
+        var displayU  = __('dk-lname');
+        var displayV  = __('drelationship');
+        var displayW  = __('dkgender');
+        var displayX  = __('dkadd');
+        var displayY  = __('dksoo');
+        var displayZ  = __('dklga');
         var displayA1 = __('dkmno');
+        var displayA2 = __('d-fn')
 
-        var responseArray1 = [responseA, responseB, responseC, responseD, responseE, responseF, responseG, responseH, responseI];
-        var displayArray1 = [displayA, displayB, displayC, displayD, displayE, displayF, displayG, displayH, displayI];
+        var responseArray1 = [responseA, responseB, responseC, responseD, responseE, responseF, responseG, responseH, responseI, responseA2];
+        var displayArray1 = [displayA, displayB, displayC, displayD, displayE, displayF, displayG, displayH, displayI, displayA2];
 
 
         function validateemail(x) {
@@ -1455,9 +1479,6 @@ if(isset($_POST['token'])) {
                 return false;
             }
         }
-
-//validate gender against title 
-
  
 
  // parsing local goverment html|values based on selected state for pid section
@@ -1749,8 +1770,8 @@ if(isset($_POST['token'])) {
                     responseI = _('p-mno');
 
                     //grouping response and display areas
-                    responseArray1 = [responseA, responseB, responseC, responseD, responseE, responseF, responseG, responseH, responseI];
-                    displayArray1 = [displayA, displayB, displayC, displayD, displayE, displayF, displayG, displayH, displayI];
+                    responseArray1 = [responseA, responseB, responseC, responseD, responseE, responseF, responseG, responseH, responseI, responseA2];
+                    displayArray1 = [displayA, displayB, displayC, displayD, displayE, displayF, displayG, displayH, displayI, displayA2];
 
 
 

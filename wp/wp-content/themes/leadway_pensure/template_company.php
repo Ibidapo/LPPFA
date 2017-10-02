@@ -77,19 +77,20 @@ include_once 'mail/company.php';
                     </p>
                 </div>
                 <div class="col-12 col-md-5">
-                    <form class="form-inline v-align" action="<?php the_permalink(); ?>" method="post">
+                    <form class="form-inline v-align" action="<?php the_permalink(); ?>" method="post" id="company_captcha">
                         <input type="hidden" name="company_submitted" value="1">
 
                         <div class="form-group mx-auto text-center">
                             <input name="email" type="email" class="form-control" placeholder="E-mail">
-                            <a class="btn btn-outline-purple" role="button" type="submit">Submit</a>
+                            <button class="btn btn-outline-purple g-recaptcha" data-sitekey="6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7"
+						data-callback="companySubmit" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="row mission">
                 <div class="vr hidden-sm-down"></div>
-                <div class="col-md-6">
+                <div class="col-md-6 text-justify">
                     <h2 class="hidden-sm-down text-center"><?= $mission_statement_box_title ?></h2>
 
                     <h3 class="hidden-md-up text-center"><?= $mission_statement_box_title ?></h3>
@@ -126,9 +127,9 @@ include_once 'mail/company.php';
             <div class="row comps">
                 <div class="vr hidden-sm-down"></div>
                 <div class="col-md-4 text-center">
-                    <h1 class="hidden-md-down v-align">Our Companies</h1>
+                    <h1 class="hidden-md-down v-align">Our Shareholders</h1>
 
-                    <h3 class="hidden-lg-up v-align">Our Companies</h3>
+                    <h3 class="hidden-lg-up v-align">Our Shareholders</h3>
                 </div>
                 <div class="col-md-8">
                     <div id="comps-slide" class="carousel slide" data-ride="carousel" data-interval="10000">
@@ -138,7 +139,7 @@ include_once 'mail/company.php';
                                     <div class="card">
                                         <img class="card-img-top mx-auto" src="<?= $company['logo']['url'] ?>">
 
-                                        <div class="card-block">
+                                        <div class="card-block text-justify">
                                             <p class="card-text">
                                                 <?= $company['description'] ?>
                                             </p>
@@ -212,7 +213,7 @@ include_once 'mail/company.php';
                                         </figcaption>
                                     </figure>
                                 </div>
-                                <div class="col-md-8 dir-history">
+                                <div class="col-md-8 dir-history text-justify">
                                     <?= get_field('chairman_description') ?>
                                 </div>
                             </div>
@@ -236,7 +237,7 @@ include_once 'mail/company.php';
                                                 </figcaption>
                                             </figure>
                                         </div>
-                                        <div class="col-md-8 dir-history">
+                                        <div class="col-md-8 dir-history text-justify">
                                             <?= $member['description'] ?>
                                         </div>
                                     </div>
@@ -290,7 +291,7 @@ include_once 'mail/company.php';
                                                 </figcaption>
                                             </figure>
                                         </div>
-                                        <div class="col-md-8 dir-history">
+                                        <div class="col-md-8 dir-history text-justify">
                                             <?= $member['description'] ?>
                                         </div>
                                     </div>
@@ -382,9 +383,17 @@ include_once 'mail/company.php';
         });
 
         $('#read').on('shown.bs.collapse', function(){
-            $('a[href="#read"]').text('Read less')
+            $('a[href="#read"]').text('Read less');
+			if (/MSIE (\d+\.\d+);/.test(navigator.userAgent) || navigator.userAgent.indexOf("Trident/") != -1 ){ 
+				// insert conditional IE code here
+				$('.company-txt').fadeIn('slow').css('width','47.5%'); 
+			};
         }).on('hidden.bs.collapse',function(){
-            $('a[href="#read"]').text('Read more')
+            $('a[href="#read"]').text('Read more');
+			if (/MSIE (\d+\.\d+);/.test(navigator.userAgent) || navigator.userAgent.indexOf("Trident/") != -1 ){ 
+				// insert conditional IE code here
+				$('.company-txt').css('width','auto'); 
+			};
         });
 
         $(".dropdown-menu.oc a:first-child").click(function () {
@@ -418,18 +427,5 @@ include_once 'mail/company.php';
         });
     });
 </script>
-
-<!--Leadway Pensure PFA Limited (“Leadway Pensure”) was incorporated on the 25th day of August, 2004 as a Pension Fund A in accordance with the provisions of the Pension Reforms Act 2004. Formed by a consortium of three (3) major financial service companies, Leadway Pensure is one of the most capitalized PFA’s in the Nigeria with an authorized share capital of N2.0 Billion. Our shareholder’s fund is in excess of N4.0 Billion, unimpaired by losses. Since inception we have positioned ourselves as one of Nigeria’s foremost Pension Fund Administrators.
-<div id="read" class="collapse">
-<div class="card card-block mx-auto">
-
-Leadway Pensure boasts of an extensive national coverage as well as an in-depth experience in pension administration and fund management for prominent corporate organizations, states and federal government Institutions.Our shareholders have a combined experience of over 125 years in the delivery of professional fund management service.
-
-Our outstanding experience, expertise, technology, and transparency positions us to deliver on our promise of providing you simple, coherent, efficient and exceptional quality service. Leadway Pensure PFA is reputed for her professional business ethics and corporate governance, which are driven by the unflinching level of integrity of its Directors and Shareholders.
-
-</div>
-</div>
-<a class="btn btn-outline-white" href="#read" data-toggle="collapse" aria-expanded="false" aria-controls="read">Read more</a> -->
-
 </body>
 </html>
