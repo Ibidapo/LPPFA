@@ -240,6 +240,21 @@ function myEndSession() {
     session_destroy ();
 }
 
+// timeout issue
+add_filter('http_request_args', 'bal_http_request_args', 100, 1);
+function bal_http_request_args($r) //called on line 237
+{
+    $r['timeout'] = 15;
+    return $r;
+}
+
+add_action('http_api_curl', 'bal_http_api_curl', 100, 1);
+function bal_http_api_curl($handle) //called on line 1315
+{
+    curl_setopt( $handle, CURLOPT_CONNECTTIMEOUT, 15 );
+    curl_setopt( $handle, CURLOPT_TIMEOUT, 15 );
+}
+
 
 // ==========================
 // helper functions
@@ -311,22 +326,6 @@ function getResponse($response)
         $response = false;
         return $response;
     }
-}
-
-// timeout issue
-
-add_filter('http_request_args', 'bal_http_request_args', 100, 1);
-function bal_http_request_args($r) //called on line 237
-{
-    $r['timeout'] = 15;
-    return $r;
-}
-
-add_action('http_api_curl', 'bal_http_api_curl', 100, 1);
-function bal_http_api_curl($handle) //called on line 1315
-{
-    curl_setopt( $handle, CURLOPT_CONNECTTIMEOUT, 15 );
-    curl_setopt( $handle, CURLOPT_TIMEOUT, 15 );
 }
 
 

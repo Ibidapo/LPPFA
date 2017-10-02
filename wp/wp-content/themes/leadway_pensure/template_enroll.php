@@ -1,18 +1,18 @@
 <?php /* Template Name: Enroll */
 
 if(isset($_POST['token'])) {
-    $params = [
-        'email' => array_get($_POST, 'email'),
-        'otp' => array_get($_POST, 'token')
-    ];
-    $params = json_encode($params);
-    $url = "https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/ValidateOTP";
-    $response = wp_remote_post($url, [
+    if(!isset($_SESSION['user'])) {
+        $_SESSION['user'] = [];
+    }
+    /*
+    $response = getResponse(wp_remote_post("https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/ValidateOTP", [
         'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
-        'body' => $params,
+        'body' => json_encode([
+            'email' => array_get($_POST, 'email'),
+            'otp' => array_get($_POST, 'token')
+        ]),
         'method' => 'POST'
-    ]);
-    $response = getResponse($response);
+    ]));*/
 } else {
     header("Location: /token");
 }
@@ -63,10 +63,10 @@ if(isset($_POST['token'])) {
                     <div class="row">
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
  <div class="form-group ">
- <input type=hidden name="firstname" value="Otaru" id='fn'> 
- <input type=hidden name="middlename" value="Andrew" id='mn'> 
- <input type=hidden name="lastname"  value="Daudu" id='ln'>
- <input type=hidden name="Email" value="Otarudaudu@gmail.com" id='email'> 
+ <input type=hidden name="firstname" value="<?= array_get($_SESSION['user'], 'firstname') ?>" id='fn'> 
+ <input type=hidden name="middlename" value="<?= array_get($_SESSION['user'], 'middlename') ?>" id='mn'> 
+ <input type=hidden name="lastname"  value="<?= array_get($_SESSION['user'], 'surname') ?>" id='ln'>
+ <input type=hidden name="Email" value="<?= array_get($_POST, 'email') ?>" id='email'> 
                                 <label class="field-label"> Title </label>
                                 <select name=title type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-email placeholder="local government area" style="border: 1px solid white">
 <option> Select a title </option> 
@@ -2102,7 +2102,6 @@ if(isset($_POST['token'])) {
 
             $(window).bind('beforeunload', before_this_page_reloads_huh() );
         }
-        console.log(button);
         swal({
             title: "<?= ucfirst($type); ?>!",
             text: "<?= $response->Message ?>",

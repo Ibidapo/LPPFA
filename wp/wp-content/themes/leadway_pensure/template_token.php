@@ -136,13 +136,12 @@
                             <div class="row">
                                 <div class="col-12 col-sm-6 text-center form-pad">
                                     <label class="form-label"> Mobile no </label>
-                                    <input name=mobileno class="form-control e-fields text-center" type="number"
+                                    <input name=mobileno class="form-control e-fields text-center" type="number" 
                                            placeholder="080xxxxxxx" data-parsley-minlength="11"
                                            data-parsley-maxlength="15" required="" data-parsley-group="block1">
                                 </div>
                                 <div class="col-12 col-sm-6 text-center form-pad" id="button-holder">
                                     <!-- enrollment field -->
-
 
                                     <button class="btn btn-purple" id="recaptcha"> I'm not a Robot</button>
 
@@ -182,19 +181,25 @@
 
     </div>
     <div class="col-10 token-entry">
-        <form data-parsley-validate method="POST" action="/enroll">
+        <form data-parsley-validate method="POST" action="/enroll" id="token-validation-form">
+            <input type="hidden" name="formName" value="token-validate-form" />
             <div class="row">
                 <div class="col-12 col-sm-4 email-field">
                     <input name="email" class="form-control e-fields" type="text" placeholder="Email-address"
-                           required="" id="logon-email" readonly>
+                           required="" id="logon-email" readonly="">
                 </div>
                 <div class="col-12 col-sm-4 token-field">
-                    <input name="token" class="form-control e-fields" type="text" placeholder="Token no" required="" id="logon-email">
+                    <input name="otp" class="form-control e-fields" type="text" placeholder="Token no" required="true">
                 </div>
                 <div class="col-12 col-sm-3 text-center">
                     <input type=submit class="btn btn-purple" value="Enroll now" id="call-json">
                 </div>
             </div>
+        </form>
+
+        <form action="/enroll" id="validated-token-form" method="POST">
+            <input type="hidden" name="token" id="valid-token">
+            <input type="hidden" name="email" id="valid-email">
         </form>
     </div>
 </div>
@@ -280,14 +285,12 @@
     });
 
 
+    var spinner = $(".spinner");
+
     var form = $("#token-data");
     form.bind('submit', function (event) {
         event.preventDefault();
-
-        var spinner = $(".spinner");
         spinner.show();
-
-        console.log(form.serialize());
 
         $.ajax({
             type: "POST",
@@ -304,6 +307,8 @@
                     text: responseText,
                     type: "success"
                 });
+
+                $('#logon-email').val(body.request.emailaddress);
             } else {
                 swal({
                     title: "Error!",
@@ -311,13 +316,51 @@
                     type: "error"
                 });
             }
-
-            console.log(body);
         }).fail(function (body) {
             spinner.hide();
-            console.log(body)
         })
-    })
+    });
+
+    // validate OTP form
+    // redirects to enroll page if successful
+    var validateForm = $('#token-validation-form');
+    validateForm.bind('submit', function (event) {
+        event.preventDefault();
+        spinner.show();
+
+        $.ajax({
+            type: "POST",
+            url: "<?php echo get_bloginfo('template_directory'); ?>/submit.php",
+            data: validateForm.serialize(),
+            dataType: "json"
+        }).done(function (body) {
+            spinner.hide();
+            var responseText = body.response.Message;
+            if (body.response.StatusCode == "00") {
+                swal({
+                    title: "Successful!",
+                    text: responseText,
+                    type: "success"
+                }, function(){
+                    $('#valid-token').val(body.request.otp);
+                    $('#valid-email').val(body.request.email);
+                    $('#validated-token-form').submit();
+                });
+            } else {
+                swal({
+                    title: "Error!",
+                    text: responseText,
+                    type: "error"
+                });
+            }
+        }).fail(function (response) {
+            spinner.hide();
+            swal({
+                title: "Error!",
+                type: "error"
+            });
+        })
+    });
 </script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
