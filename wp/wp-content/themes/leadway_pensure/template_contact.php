@@ -118,19 +118,17 @@ $branches = array_map("array_values", $branches);
                                 <div class="card-block">
                                     <div class="row justify-content-around">
                                         <div class="col-11 col-sm-6 col-md-5 col-lg-4 loc-add">
-                                            <h6><?= $branch->MapSearchName ?></h6>
                                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                                             <span><?= $branch->OfficeAddress ?>.</span><br>
                                         </div>
                                         <div class="col-11 col-sm-6 col-md-5 col-lg-4 loc-person">
-                                            <h6>Key Personnel</h6>
                                             <!--<i class="fa fa-user" aria-hidden="true"></i> --><?//= $branch->MapSearchName ?><!--<br>-->
                                             <i class="fa fa-envelope" aria-hidden="true"></i> <?= $branch->EmailAddress ?><br>
                                             <i class="fa fa-phone" aria-hidden="true"></i> <?= $branch->PhoneNo ?><br>
                                         </div>
-                                        <div class="col-10 text-center">
+                                       <!-- <div class="col-10 text-center">
                                             <a type="button" class="btn btn-outline-loc">Get Directions</a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -145,6 +143,30 @@ $branches = array_map("array_values", $branches);
 
 
 <?php get_footer(); ?>
+<script>
+    $(document).ready(function() {
+        //Resize container based on desktop or mobile viewport.
+        var size = window.innerWidth;
+        if (size <= 991) {
+            $("#m-top").attr("class", "container-fluid");
+        }
+
+        $("#regions").change(function (){
+            var i = $(this).val();
+
+            if(i == 0){
+                $('a[href="#west"]').tab('show');
+            }else if(i == 1){
+                $('a[href="#east"]').tab('show');
+            }else if(i == 2){
+                $('a[href="#north"]').tab('show');
+            }else if(i == 3){
+                $('a[href="#south"]').tab('show');
+            }
+        });
+
+    });
+</script>
 
 </body>
 </html>

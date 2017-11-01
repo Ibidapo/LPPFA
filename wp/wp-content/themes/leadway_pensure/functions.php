@@ -225,6 +225,37 @@ class My_Walker_Nav_Menu extends Walker_Nav_Menu
 }
 
 
+// session issues
+add_action('init', 'myStartSession', 1);
+add_action('wp_logout', 'myEndSession');
+add_action('wp_login', 'myEndSession');
+
+function myStartSession() {
+    if(!session_id()) {
+        session_start();
+    }
+}
+
+function myEndSession() {
+    session_destroy ();
+}
+
+// timeout issue
+add_filter('http_request_args', 'bal_http_request_args', 100, 1);
+function bal_http_request_args($r) //called on line 237
+{
+    $r['timeout'] = 15;
+    return $r;
+}
+
+add_action('http_api_curl', 'bal_http_api_curl', 100, 1);
+function bal_http_api_curl($handle) //called on line 1315
+{
+    curl_setopt( $handle, CURLOPT_CONNECTTIMEOUT, 15 );
+    curl_setopt( $handle, CURLOPT_TIMEOUT, 15 );
+}
+
+
 // ==========================
 // helper functions
 // ==========================
@@ -265,6 +296,36 @@ function array_get($data, $key, $default = null)
         return $default;
     }
     return isset($data[$key]) ? $data[$key] : $default;
+}
+
+/**
+ * @param $params
+ * @param $url
+ * @return array|WP_Error
+ */
+function sendReq($url, $params)
+{
+    $trends = wp_remote_post($url, [
+        'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
+        'body' => json_encode($params),
+        'method' => 'POST'
+    ]);
+    return $trends;
+}
+
+/**
+ * @param $response
+ * @return bool
+ */
+function getResponse($response)
+{
+    if (is_array($response) && isset($response['body'])) {
+        $response_json = json_decode($response['body']);
+        return $response_json;
+    } else {
+        $response = false;
+        return $response;
+    }
 }
 
 

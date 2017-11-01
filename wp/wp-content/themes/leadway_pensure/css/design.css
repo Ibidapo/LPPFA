@@ -130,6 +130,39 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     position: relative;
     height: 100vh;
 }
+#top-slide .carousel-item .carousel-caption {
+	position: absolute;
+    bottom: 25%;
+    left: 7%;
+    width: 48%;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: left !important;
+}
+.slide1 {
+	font-size: 1.25rem !important;
+    left: auto !important;
+    right: 3.5%!important;
+    width: 21.5% !important;
+}
+.slide1  ul {
+	list-style-type: none;
+	padding: 0;
+}
+#top-slide .carousel-control-next,#top-slide  .carousel-control-prev {
+	background-color: #223e70;
+    width: 70px;
+    height: 50px;
+    top: 45%;
+}
+#top-slide .carousel-control-prev{  
+	border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+#top-slide .carousel-control-next{
+	border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
 #scroll-btn{
     position: absolute;
     bottom: 40%;
@@ -224,16 +257,18 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     color: #171616;
     font-weight: 300;
     font-size: 1rem;
-    padding: 30px;
+}
+.client-txt {
+	padding: 30px 0 30px 60px;
 }
 .client-txt h3{
     margin-bottom: 15px;
 }
 #customer-slide{
     position: absolute;
-    top: -25px;
-    left: calc(50% - 88px);
-    width: 175px;
+    top: -15px;
+    left: calc(50% - 100px);
+    width: 200px;
 }
 #customer-slide .carousel-item{
     background-color: transparent;
@@ -427,19 +462,22 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .rsa-img, .avc-img, .sms-img, .cbs-img, .nst-img, .mf-img{
     object-fit: contain;
     width: 101%;
-    display: none;
 }
 .rsa-img{
     display: block;
+}
+.avc-img, .sms-img, .cbs-img, .nst-img, .mf-img {
+    display: none;
 }
 #rsa, #avc, #nst, #mf, #pms{
     background: url("../images/products-bg.jpg") no-repeat center;
     background-size: cover;
 }
-#rsa > p, #avc > p, #nst > p, #mf > p, #cbs > p, #pms > p{
-    margin: 35px 20px;
+#retirement-savings-account-0 > p, #additional-voluntary-contribution-1 > p, #nsitf-4 > p, #managed-funds-2 > p,
+#cross-border-services-3 > p, #personal-messaging-services-5 > p{
+    margin: 20px 10px;
 }
-#rsa p i, #avc p i, #nst p i, #mf p i{
+#retirement-savings-account-0 p i, #additional-voluntary-contribution-1 p i, #nsitf-4 p i, #managed-funds-2 p i{
     font-weight: 500;
 }
 .info-icon{
@@ -583,7 +621,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .location{
     background-color: rgba(56, 125, 194, .8);
 }
-.location h1, .location h3{
+.location h1, .location h3, .company-tab h3 {
     margin: 25px 0;
     font-weight: 300;
     color: white;
@@ -624,12 +662,13 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     font-weight: 500;
 }
 /*Note:Accordion5 is for career page*/
-#accordion1, #accordion2, #accordion3, #accordion4, #accordion5, #accordion6, #accordion7, #accordion8, #accordion9, #accordion10 {
+#accordion1, #accordion2, #accordion3, #accordion4, #accordion5, #accordion6, #accordion7, #accordion8, #accordion9, #accordion10,
+#accordion11 {
     margin: 25px auto;
     width: 90%;
 }
 #accordion1 .card, #accordion2 .card, #accordion3 .card, #accordion4 .card, #accordion5 .card, #accordion7 .card, #accordion8 .card,
-#accordion9 .card, #accordion10 .card {
+#accordion9 .card, #accordion10 .card, #accordion11 .card {
     background: transparent;
     margin: 10px auto;
     border: 2px solid #4c4648;
@@ -637,13 +676,13 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 #accordion1 .card .card-header, #accordion2 .card .card-header, #accordion3 .card .card-header, #accordion4 .card .card-header,
 #accordion5 .card .card-header, #accordion6 .card .card-header, #accordion7 .card .card-header, #accordion8 .card .card-header,
-#accordion9 .card .card-header, #accordion10 .card .card-header{
+#accordion9 .card .card-header, #accordion10 .card .card-header,  #accordion11 .card .card-header {
      background: transparent;
      border-bottom: none;
      text-align: center;
  }
 #accordion1 a, #accordion2 a, #accordion3 a, #accordion4 a, #accordion5 a, #accordion7 a, #accordion8 a, #accordion9 a,
-#accordion10 a{
+#accordion10 a, #accordion11 a {
     color: #4c4648;
     text-decoration: none;
 }
@@ -652,7 +691,6 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 .loc-add span{
     position: absolute;
-    top: 30px;
     left: 55px;
     font-size: 15px;
     line-height: 1.5;
@@ -715,9 +753,10 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     background-color: rgba(32, 104, 164, .7);;
     font-size: 1.125rem;
     font-weight: 300;
+	text-align: justify;
 }
 .bg-txt p{
-    width: 80%;
+    width: 85%;
     margin: 3% auto;
 }
 .bg-txt p a{
@@ -848,12 +887,16 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 }
 .career-cult-box h3{
     font-weight: 300;
+    width: 100%;
 }
-.cult-box1, .cult-box2, .cult-box3, .cult-box4, .cult-box5, .cult-box6{
+.cult-box1, .cult-box2, .cult-box3, .cult-box4{
     height: 240px;
+    padding: 0;
 }
 .career-cult-box p, .career-cult-box h3{
-    position: relative;
+    position: absolute;
+    left: 5%;
+    width: 90%;
     color: white;
 }
 .cult-box1{
@@ -868,15 +911,10 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     background-size: cover;
 }
 .cult-box4{
-    background: url(../images/sheet.jpg) no-repeat center center;
-    background-size: cover;
-}
-.cult-box5{
-    background: url(../images/crayon.jpg) no-repeat center center;
-    background-size: cover;
-}
-.cult-box6{
     background-color: #c0d4ec;
+}
+.cult-box2 p, .cult-box3 p {
+    display: none;
 }
 #cv h4{
     margin-top: 30px;
@@ -892,7 +930,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     padding: .25rem .75rem;
 }
 #cv textarea, #cv select, #feed textarea {
-    background: #ebebeb !important;
+    background: #ebebeb;
     border: none !important;
     border-radius: 20px !important;
 }
@@ -934,6 +972,12 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .career-tab form, .company-tab form, .benefits-tab form, .news-tab form, .m-blogTab form{
     margin-top: 1rem;
 }
+#vac a[target="_blank"]{
+    color: #4b78af !important;
+}
+.apply {
+    margin-bottom: .5rem;
+}
 
 /*Styling for Body Section of Investment Page*/
 .investment-bg{
@@ -941,7 +985,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     background-size: cover;
 }
 .invest-calc, .multi-fund, .invest-rep, .invest-chart {
-    height: 400px;
+    height: 450px;
     color: white;
 }
 .invest-calc{
@@ -1018,8 +1062,31 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 
 /*Styling for Body Section of Company Page*/
 .company-bg{
-    background: url(../images/company-bg.jpg);
+    background: url(../images/company-bg.jpg) no-repeat center;
     background-size: cover;
+}
+.company-txt {
+    max-height: 325px;
+    overflow-y: auto;
+}
+.company-bg .bg-txt {
+    padding: 2% 0;
+}
+.company-bg .bg-txt p {
+    margin: 1rem auto;
+}
+.company-bg .bg-txt p a{
+    margin-top: 0;
+}
+.company-bg .bg-txt .card {
+    background: transparent;
+    width: 85%;
+    border: none;
+    padding: 0;
+}
+.company-bg .bg-txt .card p {
+    width: 100%;
+    margin-top: 1rem;
 }
 #compTab img, #benefitsTab img{
     height: 60px;
@@ -1070,7 +1137,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     height: 70%;
 }
 .mission p {
-    margin: 0 20px;
+    margin: 0 20px 10px;
 }
 #accordion6 .card{
     background: white;
@@ -1190,12 +1257,11 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
 }
-#dir1, #dir2, #dir3, #dir4, #dir5, #dir6, #dir7, #dir8, #dir9, #mgt1, #mgt2, #mgt3, #mgt4, #mgt5, #mgt6, #mgt7, #mgt8 {
+#mgt-team .tab-pane, #board-dir  .tab-pane {
     margin-bottom: 50px;
     padding: 25px 0;
 }
-#dir1 p, #dir2 p, #dir3 p, #dir4 p, #dir5 p, #dir6 p, #dir7 p, #dir8 p, #dir9 p,
-#mgt1 p, #mgt2 p, #mgt3 p, #mgt4 p, #mgt5 p, #mgt6 p, #mgt7 p, #mgt8 p{
+#mgt-team .tab-pane p, #board-dir  .tab-pane p{
     padding: 0 25px;
 }
 .dir-img figure{
@@ -1265,6 +1331,10 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     -ms-transform: translate(-50% , -50%);
     -o-transform: translate(-50% , -50%);
     transform: translate(-50% , -50%);
+}
+#pay-type ul{
+    list-style: none;
+    padding-left: 0;
 }
 
 /*Styling for Body section of Calculator page*/
@@ -1337,13 +1407,22 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     margin: 2rem 0 1rem 0;
     color: #2068a4
 }
-#accordion7 .card, #accordion8 .card, #accordion8 .card, #accordion9 .card, #accordion10 .card{
+#accordion7 .card, #accordion8 .card, #accordion8 .card, #accordion9 .card, #accordion10 .card, #accordion11 .card {
      border: 2px solid #e2e2e0;
      text-align: center;
 }
-#accordion7 .card .card-header, #accordion8 .card .card-header, #accordion9 .card .card-header, #accordion10 .card .card-header {
+#accordion7 .card .card-header, #accordion8 .card .card-header, #accordion9 .card .card-header, #accordion10 .card .card-header,
+#accordion11 .card .card-header {
     background: #e2e2e0;
     border-radius: 23px;
+}
+#faq .table {
+    margin: 1rem;
+}
+#faq .table thead th {
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 500;
 }
 
 /*Styling for Body Section of Login Page*/
@@ -1479,6 +1558,9 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     top: 17%;
     color: white;
 }
+.news-tab {
+    margin-top: 1.5rem;
+}
 
 /*Styling Body Section of Blog Page*/
 #blogPage {
@@ -1569,6 +1651,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .blog-com, .blog-vid, .blog-tip {
     height: 280px;
     padding: 0;
+    cursor: pointer;
 }
 .blog-vid {
     background: url(../images/b3.png) no-repeat center;
@@ -1762,7 +1845,7 @@ footer h6{
     margin-top: 25px;
     text-decoration: underline;
 }
-footer .table td, .table th {
+footer .table td, footer .table th {
     padding: 4px;
     font-size: 0.85rem;
 }
@@ -1802,6 +1885,11 @@ footer .table td, .table th {
 #print{
     bottom: 65px;
 }
+#chat-icon {
+    position: fixed;
+    bottom: 50px;
+	z-index: 2 !important;
+}
 
 /*Styling for Mail Chimp*/
 #mc-embedded-subscribe {
@@ -1818,13 +1906,15 @@ footer .table td, .table th {
 }
 #downld{
     margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 #downld h4 {
     color: #2068a4;
 }
 #downld > div {
-    margin-top: 5%;
-    padding-left: calc(10% - 15px);
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 1rem;
 }
 #downld ul li a, ul.ben-downld li a{
     color: #2068a4 !important;
@@ -1850,7 +1940,8 @@ footer .table td, .table th {
 }
 
 /*Styling for Font Awesome Icons*/
-.solutions .fa-chevron-right::before ,#downld .fa-chevron-right::before, .blog-link .fa-chevron-right::before  {
+.solutions .fa-chevron-right::before ,#downld .fa-chevron-right::before, .blog-link .fa-chevron-right::before, #pay-type
+.fa-chevron-right::before  {
     color: #ffb81c !important;
 }
 .solution .fa-chevron-right::before{
@@ -2032,10 +2123,18 @@ footer .table td, .table th {
         margin-top: 83px;
     }
     #slider, #slider .carousel-item {
-        height: 40vh;
+        height: 45vh;
         padding: 0;
         overflow: hidden;
     }
+	#top-slide .carousel-item .carousel-caption{
+		bottom: 0;
+		left: 10%;
+		width: 55%;
+	}
+	#top-slide .carousel-control-next, #top-slide  .carousel-control-prev{
+		width: 60px;
+	}
     .client-intro {
         width: 41.6667%;
         margin-left: 1%;
@@ -2044,18 +2143,18 @@ footer .table td, .table th {
         padding: 20px 10px;
     }
     .client-txt {
-        font-size: 0.85rem;
+        padding: 30px 15px 30px 30px;
     }
     #customer-slide {
         top: 0;
-        left: calc(50% - 75px);
-        width: 150px;
+        left: calc(50% - 88px);
+		width: 175px;
     }
     .vids-txt {
         margin: 15% 10px 0 10px;
     }
     .invest-bg{
-        height: 310px;
+        height: 325px;
     }
     .invest-txt {
         width: 50%;
@@ -2174,7 +2273,7 @@ footer .table td, .table th {
     .news-tab a.nav-link.active::before,  .news-tab a.nav-link:hover::before, .news-tab a.nav-link:focus::before {
         width: 85%;
     }
-    .cult-box1, .cult-box2, .cult-box3, .cult-box4, .cult-box5, .cult-box6 {
+    .cult-box1, .cult-box2, .cult-box3, .cult-box4 {
         font-size: 0.875rem;
         height: 200px;
     }
@@ -2338,17 +2437,22 @@ footer .table td, .table th {
 @media (max-width: 767px){
 
     /*Styling for HomePage*/
+	#top-slide .carousel-control-next, #top-slide .carousel-control-prev {
+		width: 45px;
+		height: 45px;
+	}
     .client-intro{
         width: 50%;
         margin-left: 25%;
     }
     .client-txt{
         font-size: 0.85rem;
+		padding: 30px 30px 10px;
     }
     #mob-customer-slide .card img{
         object-fit: contain;
-        width: 30%;
-        margin-left: 35%;
+        width: 25%;
+        margin-left: 37.5%;
     }
     #mob-customer-slide .carousel-inner .card{
         background-color: transparent;
@@ -2359,7 +2463,7 @@ footer .table td, .table th {
         color: rgba(0, 0, 0, 0.75);
     }
     .vids-txt {
-        margin: 15% 25px 0 25px;
+        margin: 5% 25px 25px 25px;
     }
     .invest-bg {
         background-size: cover;
@@ -2479,7 +2583,7 @@ footer .table td, .table th {
 
     /*Styling for Company Page*/
     .comp-prof {
-        height: 115px;
+        height: 125px;
     }
     .prof-label {
         font-size: 1rem;
@@ -2512,7 +2616,7 @@ footer .table td, .table th {
 		-o-transform: translate(-50% , -50%);
 		transform: translate(-50%, -50%);
 	}
-	#dir1, #dir2, #dir3, #dir4, #dir5, #dir6, #dir7, #dir8, #dir9, #mgt1, #mgt2, #mgt3, #mgt4, #mgt5, #mgt6, #mgt7, #mgt8 {
+	#mgt-team .tab-pane, #board-dir  .tab-pane {
 		margin-bottom: 50px;
 		padding: 0 0 25px;
 	}
@@ -2624,11 +2728,11 @@ footer .table td, .table th {
     }
     #mob-customer-slide .card img{
         object-fit: contain;
-        width: 55%;
-        margin-left: 22.5%;
+        width: 50%;
+        margin-left: 25%;
     }
     #mob-customer-slide .carousel-item .card-block {
-        padding: 1.25rem 0;
+        padding: 1.25rem 0 0.875rem;
     }
     .invest-bg{
         background: url("../images/m-piggy.jpg") no-repeat center;
@@ -2656,6 +2760,7 @@ footer .table td, .table th {
     }
     .reg {
         background-size: 100% 100%;
+        height: 175px;
     }
 
     /*Styling for Contact Page*/
@@ -2718,7 +2823,7 @@ footer .table td, .table th {
     .sub-box, .pen-calc-bg {
         font-size: 0.85rem;
     }
-    .cult-box1, .cult-box2, .cult-box3, .cult-box4, .cult-box5, .cult-box6 {
+    .cult-box1, .cult-box2, .cult-box3, .cult-box4 {
         height: 180px;
     }
     .career-cult-box p{

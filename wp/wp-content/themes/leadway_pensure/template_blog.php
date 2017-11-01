@@ -21,49 +21,36 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
 ?>
 
 <?php get_header(); ?>
+
+<style>
+.seriesCap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    right: 0;
+    padding: 10px;
+    color: #fff;
+    top: 77%;
+}
+
+.seriesCap p {
+    color: #fff;
+}
+
+#series1 span.badge {
+    left: 83%;
+    top: 2%;
+    background: #000;
+    font-weight: 800;
+}
+</style>
 <!-- Desktop navigation -->
 <nav class="navbar fixed-top hidden-md-down pOff">
-    <!-- desktop price charts start -->
-    <table class="table table-responsive mOff">
-        <tbody>
-        <tr>
-            <td>
-                <div id="google_translate_element"></div>
-            </td>
-            <td>
-                <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i>
-                    <?= $options['phone_number'] ?>
-                </span>
-            </td>
-            <td>
-                <span class="head-td"> RSA FUNDS</span><br>
-                    <span>&#8358;2.3433 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png"
-                                             alt=""></span>
-            </td>
-            <td>
-                <span class="head-td">RETIREE FUNDS</span><br>
-                    <span> &#8358;2.3433 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png"
-                                              alt=""></span>
-            </td>
-            <td>
-                <span class="head-td">RSA ACCOUNTS </span><br>
-                <span> 500,000 </span>
-            </td>
-            <td>
-                <a href="/calculator" class="nav-calc"> <img
-                        src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png">
-                    <span>Calculator</span></a>
-            </td>
-            <td>
-                <button type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS
-                </button>
-            </td>
-            <td>
-                <span id="date"></span>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+    
+    <!-- chart header -->
+    <?php include_once('partials/chart-table.php') ?>
+
     <!-- Navbar -->
     <div class="navBlog">
         <div class="col-md-12">
@@ -72,7 +59,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                     <a class="nav-link active" data-toggle="tab" href="#blogHome" role="tab">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#blogInvest" role="tab">Investment Series</a>
+                    <a class="nav-link" data-toggle="tab" href="#articles" role="tab"> Articles </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#comic" role="tab">Comic</a>
@@ -100,7 +87,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                     <label class="text-center" for="m-blogTab">Our Blog</label>
                     <select class="form-control" id="m-blogTab" data-aos="fade">
                         <option value="0">Recent releases</option>
-                        <option value="1">Investment Series</option>
+                        <option value="1">Articles</option>
                         <option value="2">Comic</option>
                         <option value="3">Videos</option>
                         <option value="4">Career Tips</option>
@@ -125,10 +112,11 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                         <?php endforeach ?>
 
                         <div class="seriesCap">
-                            <span class="cap-color">
+                            <!-- <span class="cap-color">
                                 Confident</span> because<br>my finances are<br><span class="cap-color">pensure
-                            </span>
-                            <p><?= summary($firstInvNews->post_content, 100) ?></p>
+                            </span> -->
+							<p><?= summary($firstInvNews->post_content, 100) ?></p>
+                            
                             <a href="<?= get_permalink($firstInvNews) ?>" class="btn btn-primary">Learn more</a>
                         </div>
                     <?php endif ?>
@@ -173,7 +161,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                                     <h5 class="mt-0"><?= $news->post_title ?></h5>
 
                                     <p>
-                                        <?= summary($news->post_content, 100) ?>
+                                        <?= summary($news->post_content, 150) ?>
                                         <a href="<?= get_permalink($news) ?>">Read more</a>
                                     </p>
                                 </div>
@@ -204,11 +192,11 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade col-12" role="tabpanel" id="blogInvest">
-            <?php if ($firstInvNews) : $categories = get_the_category($firstInvNews->ID); ?>
+        <div class="tab-pane fade col-12" role="tabpanel" id="articles">
+            <?php if ($firstCTNews) : $categories = get_the_category($firstCTNews->ID); ?>
                 <div class="row topSeries">
                     <div class="col-12 col-md-5 col-lg-6 story-pic">
-                        <img src="<?= get_the_post_thumbnail_url($firstInvNews->ID); ?>">
+                        <img src="<?= get_the_post_thumbnail_url($firstCTNews->ID); ?>">
                     </div>
                     <div class="col-12 col-md-7 col-lg-6 story">
                         <?php foreach($categories as $category): ?>
@@ -217,28 +205,27 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                         <?php endforeach ?>
 
                         <span class="news-date">
-                            <?= date ( "F j, Y", strtotime($firstInvNews->post_date) ) ?>
+                            <?= date ( "F j, Y", strtotime($firstCTNews->post_date) ) ?>
                         </span>
-                        <h5><?= $firstInvNews->post_title ?></h5>
-                        <p><?= summary($firstInvNews->post_content, 100) ?></p>
+                        <h5><?= $firstCTNews->post_title ?></h5>
+                        <p><?= summary($firstCTNews->post_content, 100) ?></p>
                         <span>
                                 <img src="<?= asset() ?>/images/facebook.png">
                                 <img src="<?= asset() ?>/images/instagram.png">
                                 <img src="<?= asset() ?>/images/twitter.png">
                             </span>
-                        <span class="float-right link">&rarr; <a href="<?= get_permalink($firstInvNews) ?>">Read More</a></span>
+                        <span class="float-right link">&rarr; <a href="<?= get_permalink($firstCTNews) ?>">Read More</a></span>
                     </div>
                 </div>
             <?php endif ?>
-
             <div class="row recent">
                 <div class="col-12">
                     <h2>Recent releases</h2>
                 </div>
-                <? foreach ($investment_series as $news) { $categories = get_the_category($news->ID); ?>
+                <? foreach ($career_tips as $news) { $categories = get_the_category($news->ID); ?>
                     <div class="col-10 col-sm-6 col-md-4 mx-auto">
                         <?php foreach($categories as $category): ?>
-                            <span class="badge badge-primary"><?= $category->name ?></span>
+                            <span class="badge badge-success"><?= $category->name ?></span>
                         <?php endforeach ?>
 
                         <span class="news-date">
@@ -258,7 +245,6 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                 <? } ?>
             </div>
         </div>
-
         <div class="tab-pane fade col-12" role="tabpanel" id="comic">
             <?php if ($firstComNews) : $categories = get_the_category($firstComNews->ID); ?>
                 <div class="row topSeries">
@@ -464,9 +450,8 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
         <div class="col-12 col-md-4 align-self-center text-center">&copy; Leadway Pensure 2017</div>
         <div class="col-12 col-md-4 align-self-center text-center text-md-right">Web Design & Digital by iNspire</div>
     </div>
-    <a id="share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
-    <a id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
-    <a href="javascript:" id="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    <a  href="javascript:window.print()" data-toggle="tooltip" title="Print" data-placement="left" id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
+    <a href="javascript:" data-toggle="tooltip" title="Back to Top" data-placement="left" id="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
 </footer>
 <?php get_footer(); ?>
 <script>
@@ -477,13 +462,15 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
             $(".container").attr("class", "container-fluid");
         }
 
+        $('#blogTab a[href="'+ window.location.hash+ '"]').tab('show'); // Select tab by name if provided in location hash
+
         $("#m-blogTab").change(function (){
             var i = $(this).val();
 
             if(i == 0){
                 $('a[href="#blogHome"]').tab('show');
             }else if(i == 1){
-                $('a[href="#blogInvest"]').tab('show');
+                $('a[href="#articles"]').tab('show');
             }else if(i == 2) {
                 $('a[href="#comic"]').tab('show');
             }else if(i == 3) {
@@ -491,6 +478,18 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
             }else if(i == 4) {
                 $('a[href="#careerTip"]').tab('show');
             }
+        });
+
+        $('.blog-com').click(function(){
+            $('a[href="#comic"]').tab('show');
+        });
+
+        $('.blog-vid').click(function(){
+            $('a[href="#blogVids"]').tab('show');
+        });
+
+        $('.blog-tip').click(function(){
+            $('a[href="#careerTip"]').tab('show');
         });
     });
 </script>

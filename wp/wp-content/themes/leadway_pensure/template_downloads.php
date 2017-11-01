@@ -39,9 +39,7 @@ $downloads = get_field("downloads");
     //Resize container based on desktop or mobile viewport.
     var size = window.innerWidth;
     if (size <= 991) {
-        document.getElementById("m-top").setAttribute("class", "container-fluid");
-    } else {
-        document.getElementById("m-top").setAttribute("class", "container");
+        $("#m-top").attr("class", "container-fluid");
     }
 </script>
 

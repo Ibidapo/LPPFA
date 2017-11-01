@@ -118,11 +118,11 @@
 }
 
 #main__header-menu li:nth-child(3) .dropdown-menu {
-    left: -175% !important;
+    left: 0% !important;
 }
 
 #main__header-menu li:nth-child(4) .dropdown-menu {
-    left: -125% !important;
+    left: -100% !important;
 }
 
 #main__header-menu li:nth-child(5) .dropdown-menu {

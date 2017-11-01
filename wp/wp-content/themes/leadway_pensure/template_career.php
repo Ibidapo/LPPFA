@@ -6,11 +6,6 @@ include_once 'mail/career.php';
 
 <?php get_header(); ?>
 <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-    /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 <script type='text/javascript'>
     (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
@@ -65,33 +60,30 @@ include_once 'mail/career.php';
         <div class="tab-pane fade show active col-12" role="tabpanel" id="vac">
             <div class="row">
                 <div class="col-12 col-md-7 ext-center">
-                    <h1 class="hidden-sm-down vac-hd">We are Hiring!</h1>
+                    <h2 class="hidden-sm-down vac-hd">Join our Team</h2>
 
-                    <h3 class="hidden-md-up vac-hd">We are Hiring!</h3>
-                    <span>Choose your preferred designation to get started</span>
+                    <h4 class="hidden-md-up vac-hd">Join our Team</h4>
+                    <span>Be part of a great mission, make your next career move.</span>
 
                     <div id="accordion5" role="tablist" aria-multiselectable="true">
-                        <div class="card">
+						<div class="card">
                             <div class="card-header" role="tab" id="vac1">
                                 <h5 class="mb-0">
-                                    <a data-toggle="collapse" data-parent="#accordion5" href="#bm" aria-expanded="true"
-                                       aria-controls="bm">
-                                        Brand Manager
+                                    <a data-toggle="collapse" data-parent="#accordion5" href="#rm" aria-expanded="true" aria-controls="rm">
+                                        Relationship Manager
                                     </a>
                                 </h5>
                             </div>
-                            <div id="bm" class="collapse show" role="tabpanel" aria-labelledby="vac1">
+                            <div id="rm" class="collapse show" role="tabpanel" aria-labelledby="vac1">
                                 <div class="card-block">
-                                    <h6>Role Summary</h6>
+                                    <h6 class="text-center">Role Summary</h6>
 
-                                    <p>We are looking for an experienced Brand Manager who is passionate about
-                                        uncovering consumer insights
-                                        and delivering innovative marketing campaigns. You will join a dynamic and
-                                        fast-paced environment and
-                                        you will generate strategies that grow market share and brand’s reputation,
-                                        improve customer experience
-                                        and drive growth.</p>
-                                    <a type="button" class="btn btn-outline-loc">Requirements</a>
+                                    <p>We are searching for high-energy relationship managers who are proactive and passionate about company
+									products and the clients they serve. The ideal candidate will be able organized, focused on enhancing 
+									engagements with High Net-worth Clients and Companies opportunities and turn leads into long-lasting 
+									partnerships.</p>
+                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
+                                    <div><a href="http://www.leadway-pensure.com/wp-content/uploads/2017/09/RELATIONSHIP_MANAGER.pdf" target="_blank">View Requirements</a></div>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +104,8 @@ include_once 'mail/career.php';
                                         forecasting and simulations.
                                         Helps in allocating resources, measure performance from large data base for
                                         investment purposes.</p>
-                                    <a type="button" class="btn btn-outline-loc">Requirements</a>
+                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
+                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/RESEARCH_ANALYST_LAGOS.pdf" target="_blank">View Requirements</a></div>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +125,8 @@ include_once 'mail/career.php';
                                     <p>To coordinate and synchronize the activities of the sales unit in house and the
                                         agents (foot soldiers)
                                         to ensure maximization of human and material resources.</p>
-                                    <a type="button" class="btn btn-outline-loc">Requirements</a>
+                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
+                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/Sales-Executives.pdf" target="_blank">View Requirements</a></div>
                                 </div>
                             </div>
                         </div>
@@ -155,7 +149,8 @@ include_once 'mail/career.php';
                                         composition of the bond portfolio
                                         to make buy/hold and sell decision thereby minimizing cost and maximizing
                                         profit.</p>
-                                    <a type="button" class="btn btn-outline-loc">Requirements</a>
+                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
+                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/ADVERT_Fixed_Income_Analyst.pdf" target="_blank">View Requirements</a></div>
                                 </div>
                             </div>
                         </div>
@@ -174,7 +169,8 @@ include_once 'mail/career.php';
 
                                     <p>The role will be responsible for all aspects of day-to-day Accounting for a group
                                         of assigned funds.</p>
-                                    <a type="button" class="btn btn-outline-loc">Requirements</a>
+                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
+                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/FUND_ACCOUNTANT.pdf" target="_blank">View Requirements</a></div>
                                 </div>
                             </div>
                         </div>
@@ -194,7 +190,8 @@ include_once 'mail/career.php';
                                     <p>To co-ordinate and amange the entire legal framework of LPPFA particularly the
                                         review of policies,
                                         procedures, manuals, contracts and any other legal documentation.</p>
-                                    <a type="button" class="btn btn-outline-loc">Requirements</a>
+                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
+                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/ADVERT_LEGAL_OFFICER.pdf" target="_blank">View Requirements</a></div>
                                 </div>
                             </div>
                         </div>
@@ -213,7 +210,7 @@ include_once 'mail/career.php';
                             <div id="mc_embed_signup">
                                 <form action="//leadway-pensure.us10.list-manage.com/subscribe/post?u=a7d286c921166498a0b699255&amp;id=47a1abe4d1"
                                       method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                                      class="validate" target="_blank" novalidate>
+                                      class="validate  text-center" target="_blank" novalidate>
                                     <div id="mc_embed_signup_scroll">
                                         <div class="mc-field-group">
                                             <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
@@ -242,7 +239,7 @@ include_once 'mail/career.php';
                         <div class="pen-calc-bg text-center">
                             <div class="pen-calc mx-auto">
                                 <h3>Pensions Calculator</h3>
-                                <a type="button" class="btn btn-outline-white">Calculate Now</a>
+                                <a class="btn btn-outline-white" href="/calculator">Calculate Now</a>
                             </div>
                         </div>
                     </div>
@@ -255,36 +252,29 @@ include_once 'mail/career.php';
                 </div>
                 <div class="col-12 career-cult-box">
                     <div class="row">
-                        <div class="col-sm-6 col-md-4 cult-box1">
-                            <p class="v-align">Our people are at the core of our success, hence the attention to
-                                ensuring both mental and
-                                physical fitness of our team all the time.<br> <a href="#"
-                                                                                  class="btn btn-outline-white-sm">Learn
-                                    more</a></p>
+                        <div class="col-sm-6 cult-box1">
+                            <p class="v-align">We are one team that is passionate about the future of our clients. Our values
+                            captures and articulates the way we work and do business.</p>
                         </div>
-                        <div class="col-sm-6 col-md-4 cult-box2">
+                        <div class="col-sm-6 cult-box2">
                             <h3 class="v-align">Hangouts & Retreats</h3>
+                            <p class="v-align">Our people are at the core of our success, hence the attention to ensuring both mental and physical
+                            fitness of our team all the time. We work hard, and also play harder.</p>
                         </div>
-                        <div class="col-sm-6 col-md-4 cult-box3">
-                            <h3 class="v-align">Training</h3>
+                        <div class="col-sm-6 cult-box3">
+                            <h3 class="v-align">Learning & Development</h3>
+                            <p class="v-align">We care about the growth and development of our people, our customers and our community.</p>
                         </div>
-                        <div class="col-sm-6 col-md-4 cult-box4">
-                            <h3 class="v-align">Our Squeezed Sheet Theory</h3>
-                        </div>
-                        <div class="col-sm-6 col-md-4 cult-box5">
-                            <h3 class="v-align">Ready to Apply?</h3>
-                        </div>
-                        <div class="col-sm-6 col-md-4 cult-box6">
+                        <div class="col-sm-6 cult-box4">
                             <p class="v-align">Head over now to our blog section for tips on how to assemble your CV and
-                                other relevant
-                                documents<br><a href="#" class="btn btn-outline-white-sm">Learn more</a></p>
+                            other relevant documents<br><a href="/blog#careerTip" class="btn btn-outline-white-sm">Learn more</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="tab-pane fade col-12" role="tabpanel" id="cv">
-            <form enctype="multipart/form-data" action="<?php the_permalink(); ?>#cv" method="post">
+            <form enctype="multipart/form-data" action="<?php the_permalink(); ?>#cv" method="post" id="career_captcha" onsubmit="return cvValidation()">
                 <input type="hidden" name="career_submitted" value="1"/>
                 <div class="row">
                     <div class="col-xs-10 offset-xs-1 col-md-12 text-center">
@@ -312,13 +302,14 @@ include_once 'mail/career.php';
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="p-no">Phone No</label>
-                                    <input required name="phone_number" type="tel" class="form-control" id="p-no" value="<?= array_get($_POST, 'phone_number')?>">
+                                    <input required name="phone_number" type="number" class="form-control" id="p-no" value="<?= array_get($_POST, 'phone_number')?>">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="d-o-b">Date of Birth</label>
-                                    <input name="date_of_birth" type="date" class="form-control" id="d-o-b" value="<?= array_get($_POST, 'date_of_birth')?>">
+                                    <input name="date_of_birth" type="date" class="form-control" id="d-o-b" placeholder="mm/dd/yyyy" 
+									value="<?= array_get($_POST, 'date_of_birth')?>">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -331,7 +322,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="app">Applicant Type</label>
                                     <select name="applicant_type" class="form-control" id="app">
-                                        <option disabled>Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option>Young graduate</option>
                                         <option>Experienced</option>
                                         <option>Global talent</option>
@@ -341,7 +332,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="gen">Gender</label>
                                     <select name="gender" class="form-control" id="gen">
-                                        <option disabled>Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option>Female</option>
                                         <option>Male</option>
                                         <option>Other</option>
@@ -360,7 +351,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="i-name">Institutional Name</label>
                                     <select name="institution_name" class="form-control" id="i-name">
-                                        <option disabled>Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option value="28">Abia state University</option>
                                         <option value="1">Abubakar Tafawa Belewa University, Bauchi</option>
                                         <option value="64">Achievers University, Owo</option>
@@ -487,7 +478,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="edu-qlt">Qualification</label>
                                     <select name="qualification" class="form-control" id="edu-qlt">
-                                        <option>Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option value="8">Bachelor of Applied Science (BASc)</option>
                                         <option value="9">Bachelor of Architecture (BArch)</option>
                                         <option value="27">Bachelor of Art (French)</option>
@@ -523,7 +514,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="deg">Class of Degree</label>
                                     <select name="class_of_degree" class="form-control" id="deg">
-                                        <option value="">Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option value="First Class">First Class</option>
                                         <option value="Second Class Upper">Second Class Upper</option>
                                         <option value="Second Class Lower">Second Class Lower</option>
@@ -540,14 +531,14 @@ include_once 'mail/career.php';
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="yr-qlt">Year Completed</label>
-                                    <input name="year_completed" type="text" class="form-control" id="yr-qlt">
+                                    <input name="year_completed" type="text" class="form-control" id="yr-qlt" placeholder="yyyy">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="cont">Country Obtained</label>
                                     <select name="country_obtained" class="form-control" id="cont">
-                                        <option>Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option value="Afghanistan">Afghanistan</option>
                                         <option value="Aland Islands">Aland Islands</option>
                                         <option value="Albania">Albania</option>
@@ -820,7 +811,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="prof-qlt">Qualification</label>
                                     <select name="professional_qualification" class="form-control" id="prof-qlt">
-                                        <option value="">Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option value="19">Advertising Practioners Council of Nigeria (APCON)</option>
                                         <option value="22">African Institute for Applied Economics (AIAE)</option>
                                         <option value="3">Association of Chartered Certified Accountants (ACCA)</option>
@@ -932,7 +923,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="cont-prof">Country Obtained</label>
                                     <select name="professional_qualification_country_obtained" class="form-control" id="cont-prof">
-                                        <option>Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option value="Afghanistan">Afghanistan</option>
                                         <option value="Aland Islands">Aland Islands</option>
                                         <option value="Albania">Albania</option>
@@ -1196,7 +1187,7 @@ include_once 'mail/career.php';
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="yr-prof">Year Completed</label>
-                                    <input name="professional_qualification_year_completed" type="text" class="form-control" id="yr-prof">
+                                    <input name="professional_qualification_year_completed" type="text" class="form-control" id="yr-prof" placeholder="yyyy">
                                 </div>
                             </div>
                         </div>
@@ -1217,7 +1208,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="ind">Industry</label>
                                     <select name="work_experience_industry" class="form-control" id="ind">
-                                        <option value="">Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option value="13">Aviation</option>
                                         <option value="2">Banking</option>
                                         <option value="40">Building and Construction</option>
@@ -1264,7 +1255,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="spec">Specialization</label>
                                     <select name="work_experience_specialization" class="form-control" id="spec">
-                                        <option class="disabled">Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option value="4">Accounting</option>
                                         <option value="41">Actuarial Science</option>
                                         <option value="36">Admin</option>
@@ -1319,7 +1310,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="w-cont">Country Obtained</label>
                                     <select name="work_experience_country_obtained" class="form-control" id="w-cont">
-                                        <option>Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option value="Afghanistan">Afghanistan</option>
                                         <option value="Aland Islands">Aland Islands</option>
                                         <option value="Albania">Albania</option>
@@ -1589,11 +1580,11 @@ include_once 'mail/career.php';
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="f-date">From Date</label>
-                                    <input name="work_experience_from_date" type="date" class="form-control" id="f-date">
+                                    <input name="work_experience_from_date" type="date" class="form-control" placeholder="mm/dd/yyyy" id="f-date">
                                 </div>
                                 <div class="form-group">
                                     <label for="t-date">To Date</label>
-                                    <input name="work_experience_end_date" type="date" class="form-control" id="t-date">
+                                    <input name="work_experience_end_date" type="date" class="form-control" placeholder="mm/dd/yyyy" id="t-date">
                                 </div>
                             </div>
                         </div>
@@ -1613,14 +1604,15 @@ include_once 'mail/career.php';
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-purple">Submit</button>
+                            <button type="submit" class="btn btn-purple g-recaptcha" data-sitekey="6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7"
+						data-callback="careerSubmit" id="submitCV">Submit</button>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
         <div class="tab-pane fade col-12 text-center" role="tabpanel" id="alm">
-            <h1>Coming Soon!</h1>
+            
         </div>
     </div>
 </div>
@@ -1639,26 +1631,103 @@ include_once 'mail/career.php';
 <?php endif ?>
 
 <script>
-    //Resize container based on desktop or mobile viewport.
-    var size = window.innerWidth;
-    if (size <= 991) {
-        $(".container").attr("class", "container-fluid");
-    }
+	function cvValidation(){
+		var isValid = true;
+		var errorMsg = "";
+		$('#cv input[type="text"], #cv input[type="date"], #cv input[type="number"], #cv input[type="email"], #cv textarea').each(function() {
+			errorMsg = "*Field is Required*";
+			if ($.trim($(this).val()) == '') {
+				isValid = false;
+				$(this).css({"background": "#FFCECE"}).attr("placeholder", errorMsg);
+			} else {
+				$(this).css({"background": ""});
+			}
+		});
+		
+		$('#cv input[type="number"]').each(function(){
+			var validatePhone = new RegExp("[0-9]{11}");
+			var phoneNo = $(this).val();
+			errorMsg = "*Invalid - 11 digits are required*"
+			if (validatePhone.test(phoneNo)) {
+				$(this).css({"background": ""});
+			} else {
+				isValid = false;
+				$(this).css({"background": "#FFCECE"}).val("").attr("placeholder", errorMsg);
+			}
+		});
+		
+		$('#cv input[type="date"]').each(function(){
+			var validateDate = new RegExp("(0[1-9]|10|11|12)([/])(0[1-9]|1[0-9]|2[0-9]|3[1-2])([/])([1-2][0-9][0-9][0-9])");
+			var DateNo = $(this).val();
+			errorMsg = "*Invalid date*"
+			if (validateDate.test(DateNo)) {
+				$(this).css({"background": ""});
+			} else {
+				isValid = false;
+				$(this).css({"background": "#FFCECE"}).attr("placeholder", errorMsg);
+			}
+		});
+		
+		$('#cv select').each(function() {
+			if ($.trim($(this).val()) == '') {
+				isValid = false;
+				$(this).css({"background": "#FFCECE"});
+			} else {
+				$(this).css({"background": ""});
+			}
+		});
+		
+		if (isValid == false) {
+			return false;
+			$('body,html').animate({
+				scrollTop: 500
+			}, 800);
+			
+		}
+	};
 
-    $('#careerTab a[href="' + window.location.hash + '"]').tab('show');
-
-    $("#m-careerTab").change(function () {
-        var i = $(this).val();
-
-        if (i == 0) {
-            $('a[href="#vac"]').tab('show');
-        } else if (i == 1) {
-            $('a[href="#cv"]').tab('show');
-        } else if (i == 2) {
-            $('a[href="#alm"]').tab('show');
+    $(document).ready(function() {
+        //Resize container based on desktop or mobile viewport.
+        var size = window.innerWidth;
+        if (size <= 991) {
+            $(".container").attr("class", "container-fluid");
         }
+
+        $('#careerTab a[data-toggle="tab"]').on('shown.bs.tab', function () {
+            $('body,html').animate({
+                scrollTop: 480
+            }, 800);
+        });
+
+        $("#m-careerTab").change(function () {
+            var i = $(this).val();
+
+            if (i == 0) {
+                $('a[href="#vac"]').tab('show');
+            } else if (i == 1) {
+                $('a[href="#cv"]').tab('show');
+            } else if (i == 2) {
+                $('a[href="#alm"]').tab('show');
+            }
+        });
+
+        $('.apply').click(function(){
+            $('a[href="#cv"]').tab('show');
+        });
+
+        $('input[type="file"]').change(function (e) {
+            var fileName = e.target.files[0].name;
+            $('.custom-file-control').append(fileName);
+        });
+
+        $('.cult-box2, .cult-box3').mouseenter(function(){
+            $(this).children('h3').fadeOut('slow');
+            $(this).children('p').fadeIn('slow');
+        }).mouseleave(function(){
+            $(this).children('h3').fadeIn('slow');
+            $(this).children('p').fadeOut('slow');
+        });
     });
 </script>
-
 </body>
 </html>

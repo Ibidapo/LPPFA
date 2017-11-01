@@ -1,60 +1,30 @@
-<?php /* Template Name: Enroll */ ?>
+<?php /* Template Name: Enroll */
 
-<?php
+if(isset($_POST['token'])) {
+    if(!isset($_SESSION['user'])) {
+        $_SESSION['user'] = [];
+    }
+    /*
+    $response = getResponse(wp_remote_post("https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/ValidateOTP", [
+        'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
+        'body' => json_encode([
+            'email' => array_get($_POST, 'email'),
+            'otp' => array_get($_POST, 'token')
+        ]),
+        'method' => 'POST'
+    ]));*/
+} else {
+    header("Location: /token");
+}
 
 ?>
 
 <?php get_header(); ?>
 <!-- Body and Main Content of page -->
 <div class="container-fluid" id="enroll-bg">
-    <!-- Desktop navigation -->
-    <!-- Navbar -->
-    <nav class="navbar hidden-sm-down pOff fixed-top">
-        <!-- desktop price charts start -->
-        <table class="table table-responsive mOff">
-            <tbody>
-            <tr>
-                <td>
-                    <form>
-                        <div class="form-group">
-                            <select class="form-control language">
-                                <option>English</option>
-                                <option>Yoruba</option>
-                                <option>Hausa</option>
-                                <option>Igbo</option>
-                            </select>
-                        </div>
-                    </form>
-
-                </td>
-                <td>
-                    <span><i class="fa fa-phone" aria-hidden="true" style="color: #2068a4"></i> 0800-Pesnure</span>
-                </td>
-                <td>
-                    <span class="head-td"> RSA FUNDS</span><br>
-                    <span>&#8358;2.3433 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png" alt=""></span>
-                </td>
-                <td>
-                    <span class="head-td">RETIREE FUNDS</span><br>
-                    <span> &#8358;2.3433 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/neg.png" alt=""></span>
-                </td>
-                <td>
-                    <span class="head-td">RSA ADMIN FEE</span><br>
-                    <span> &#8358;100 </span>
-                </td>
-                <td>
-                    <img src="<?php echo get_bloginfo('template_directory'); ?>/images/calc.png"><span>Calculator</span>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-outline-secondary v-trends"><span>&#8594;</span> VIEW TRENDS </button>
-                </td>
-                <td>
-                    <span id="date"></span>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </nav>
+    
+    <!-- chart header -->
+    <?php include_once('partials/chart-header.php') ?>
 
     <div class="row p-id" id="test">
         <div id="progressMark" class="col-7">
@@ -62,14 +32,16 @@
         </div>
         <div class="col-3 offset-2 col-md-3 offset-md-2">
             <div class="row">
-                <div class=col-12> Client: <span id="a-name"> </span></div>
-                <div class=col-12> Token no: <span id="a-token"> 3458893i2 </span></div>
+                <div class=col-12> Client Name: <span id="a-name"> <?= array_get($_SESSION, 'user_full_name') ?></span></div>
+                <div class=col-12> Client Email: <span id="a-name"> <?= array_get($_POST, 'email') ?></span></div>
+                <div class=col-12> Token no: <span id="a-token"> <?= array_get($_POST, 'token') ?> </span></div>
             </div>
         </div>
     </div>
 
 
    <form class="demo-form" id="enroll-form" data-parsley-validate>
+       <input type="hidden" name="formName" value="enroll-form"/>
             <!-- personal information view start -->
             <div class="row p-details" id="pid">
                 <div class="col-3 col-sm-1">
@@ -90,7 +62,28 @@
                     <!-- line 1 start -->
                     <div class="row">
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
-                            <div class="form-group">
+ <div class="form-group ">
+ <input type=hidden name="firstname" value="<?= array_get($_SESSION['user'], 'firstname') ?>" id='fn'> 
+ <input type=hidden name="middlename" value="<?= array_get($_SESSION['user'], 'middlename') ?>" id='mn'> 
+ <input type=hidden name="lastname"  value="<?= array_get($_SESSION['user'], 'surname') ?>" id='ln'>
+ <input type=hidden name="Email" value="<?= array_get($_POST, 'email') ?>" id='email'> 
+                                <label class="field-label"> Title </label>
+                                <select name=title type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-email placeholder="local government area" style="border: 1px solid white">
+<option> Select a title </option> 
+<option value="Mr."> Mr </option> 
+<option value="Miss."> Miss </option> 
+<option value="Mrs."> Mrs </option> 
+<option value="Dr."> Dr </option> 
+<option value="Engr."> Engr </option>
+<option value="Mallam"> Mallam </option> 
+<option value="Archbishop"> Archbishop </option> 
+</select> 
+                            </div>
+
+                        </div>
+                        <div class= "col-12 col-sm-6 col-md-4 text-center">
+
+           <div class="form-group">
                                 <label class="field-label"> Gender </label>
                                 <select name=pidgender class="form-control language col-sm-7 mx-auto" id=gender  style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value="" id="default">Select gender</option>
@@ -98,24 +91,17 @@
                                     <option value="Female">Female</option>
                                 </select>
                             </div>
+           
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
 
-                            <div class="form-group ">
-                                <label class="field-label"> Status </label>
-                                <select name=pidrelationshipstatus  class="form-control language col-sm-7 mx-auto" id=status  style="border: 1px solid white" data-parsley-group="block1" required="">
-                                    <option value="" id="default">Select status</option>
-                                    <option value="Married">Married</option>
-                                    <option value="Single">Single</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center">
+  <!-- space for middle name --> 
+          <div class="form-group ">
+                                <label class="field-label"> Mobile No  </label>
+                                <input name=pidmobileno type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" data-parsley-minlength="11" data-parsley-maxlength="15" id='p-mno' placeholder="Mobile No" style="border: 1px solid white">
+           </div>
 
-                            <div class="form-group ">
-                                <label class="field-label"> Birthday </label>
-                                <input name=pidbirthday type="date" class="form-control language col-sm-7 mx-auto text-center" id=birthday  data-parsley-group="block1" style="border: 1px solid white" required="" >
-                            </div>
+                           
                         </div>
 
                         <!--end of line 1 -->
@@ -123,7 +109,30 @@
                         <!-- line 2 start -->
 
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
-                            <div class="form-group ">
+<div class="form-group ">
+                                <label class="field-label"> Status </label>
+                                <select name=pidrelationshipstatus  class="form-control language col-sm-7 mx-auto" id=status  style="border: 1px solid white" data-parsley-group="block1" required="">
+                                    <option value="" id="default">Select status</option>
+                                    <option value="Married">Married</option>
+                                    <option value="Single">Single</option>
+                                </select>
+                            </div>
+
+               
+                        </div>
+                        <div class= "col-12 col-sm-6 col-md-4 text-center">
+
+<div class="form-group ">
+                                <label class="field-label"> Birthday </label>
+                                <input name=pidbirthday type="date" class="form-control language col-sm-7 mx-auto text-center" id=birthday data-parsley-group="block1" style="border: 1px solid white" required="" >
+                            </div>
+
+
+
+                        </div>
+                        <div class= "col-12 col-sm-6 col-md-4 text-center">
+
+<div class="form-group ">
                                 <label class="field-label"> State of origin </label>
                                 <select name=pidstateoforigin class="form-control language col-sm-7 mx-auto" id=soo  style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value="">Select State </option>
@@ -167,18 +176,27 @@
 
                                 </select>
                             </div>
+
+                           
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center">
-                            <div class="form-group" id=lgaholder>
+
+
+                        <!-- end of line 2 -->
+                        <!-- line 3 start -->
+
+                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
+
+<div class="form-group" id=lgaholder>
                                 <label class="field-label" id="lga-label"> LGA </label>
                                 <select name=pidlga  class="form-control language col-sm-7 mx-auto" id=lga  style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value=""> select your local government </option>    
                                 </select>
 
                             </div>
+
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
-                            <div class="form-group ">
+<div class="form-group ">
                                 <label class="field-label"> Nationality </label>
                                 <select name=pidnationality  class="form-control language col-sm-7 mx-auto" id=nation  style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value=""> select your nationality </option>
@@ -432,13 +450,8 @@
                                 </select>
                             </div>
                         </div>
-
-
-                        <!-- end of line 2 -->
-                        <!-- line 3 start -->
-
-                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
-                            <div class="form-group ">
+                        <div class= "col-12 col-sm-6 col-md-4 text-center">
+<div class="form-group ">
                                 <label class="field-label"> ID type </label>
                                 <select name=pididentificationmode class="form-control language col-sm-7 mx-auto" id=idt style="border: 1px solid white" data-parsley-group="block1" required="">
                                     <option value="">Select ID</option>
@@ -448,18 +461,7 @@
                                     <option value= "Voters card"> Voters card </option>
                                 </select>
                             </div>
-                        </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center">
-                            <div class="form-group ">
-                                <label class="field-label"> Email </label>
-                                <input name=pidemail type="text" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-email placeholder="local government area" style="border: 1px solid white" readonly>
-                            </div>
-                        </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center">
-                            <div class="form-group ">
-                                <label class="field-label"> Mobile No </label>
-                                <input name=pidmobileno type="" class="form-control col-sm-7 language mx-auto text-center" data-parsley-group="block1" id=p-mno placeholder="local government area" style="border: 1px solid white" readonly>
-                            </div>
+                            
                         </div>
                     </div>
                     <!-- end of line 3 -->
@@ -505,21 +507,7 @@
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
-
-                            <div class="form-group" id="orgLgaHolder">
-                                <label class="field-label" id="orgLgaLabel"> LGA </label>
-                                <select name=organisationlga type="text" class="form-control language col-sm-7 mx-auto text-center" id="orgLga" placeholder="Local Government Area" style="border: 1px solid white" required="" data-parsley-group="block2">
-                                <option> Select local government area </option>s
-                                </select>
-                            </div>
-                        </div>
-
-                        <!--end of line 1 -->
-
-                        <!-- line 2 start -->
-
-                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
-                            <div class="form-group ">
+ <div class="form-group ">
                                 <label class="field-label"> State </label>
                                 <select name=organisationstate class="form-control language col-sm-7 mx-auto" id="orgState" style="border: 1px solid white" required="" data-parsley-group="block2">
                                     <option value="Select State of Origin" id="default">Select State </option>
@@ -561,12 +549,25 @@
                                     <option value="yobe">Yobe</option>
                                     <option value="zamfara">Zamfara</option>
                                 </select>
+                            </div>               
+                        </div>
+
+                        <!--end of line 1 -->
+
+                        <!-- line 2 start -->
+
+                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center">
+                            <div class="form-group" id="orgLgaHolder">
+                                <label class="field-label" id="orgLgaLabel"> LGA </label>
+                                <select name=organisationlga type="text" class="form-control language col-sm-7 mx-auto text-center" id="orgLga" placeholder="Local Government Area" style="border: 1px solid white" required="" data-parsley-group="block2">
+                                <option> Select local government area </option>s
+                                </select>
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> File No/Service No </label>
-                                <input name=organisationfile/service-no type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgNo" placeholder="File or service number" style="border: 1px solid white" data-parsley-group="block2">
+                                <input name=organisationfile type="text" class="form-control col-sm-7 language mx-auto text-center" id="orgNo" placeholder="File or service number" style="border: 1px solid white" data-parsley-group="block2">
                             </div>
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
@@ -630,7 +631,7 @@
                                 <label class="field-label"> Current PFA </label>
                                 <select name=currentpfa class="form-control language col-sm-7 mx-auto" id="cpfa" style="border: 1px solid white" required="" data-parsley-group="block2">
                                     <option value="" id="default"> Select Provider</option>
-                                    <option value="Not registered"> Not registered </option>
+                                    <option value="not registered"> Not registered </option>
                                     <option value="AIICO pension Managers"> AIICO pension Managers </option>
                                     <option value="APT Pension Managers Limited"> APT Pension Managers Limited </option>
                                     <option value="ARM Pension Fund Managers Limited"> ARM Pension Fund Managers Limited </option>
@@ -814,7 +815,7 @@
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Mobile no </label>
-                                <input name=kinmobileno  type="number" class="form-control col-sm-7 language mx-auto text-center" id="k-mno" placeholder="Mobile number" style="border: 1px solid white" type="number" data-parsley-group="block3" required="">
+                                <input name=kinmobileno  type="number" class="form-control col-sm-7 language mx-auto text-center" id="k-mno" placeholder="Mobile number" data-parsley-minlength="11" data-parsley-maxlength="15" style="border: 1px solid white" type="number" data-parsley-group="block3" required="">
                             </div>
                         </div>
                     </div>
@@ -851,17 +852,15 @@
             <div class="row p-form" style="height:324px" id="biometrics-form">
                 <div class="col-12 field-text">
                     <!-- line 1 start -->
-                    <div class="row">
-                        <div class= "col-12 text-center">
-                            <div class="dropzone col-5 mx-auto" id="upload">
-
-                            </div>
-                        </div>
-                        <div class="col-12 text-center" style="padding-bottom:2%">
-                            Upload your avatar
-                        </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <input type="file" id="user-image" class="form-control"/>
                     </div>
-                    <!--end of line 1 -->
+                    <div class="col-12 text-center" style="padding-bottom:2%">
+                        Upload your avatar
+                    </div>
+                </div>
+                <!--end of line 1 -->
 
                     <div class="row" id="biometrics-button">
                         <div class="col-12 continue text-center">
@@ -896,22 +895,42 @@
                     <!-- line 1 start -->
                     <div class="row">
                         <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
-                            <div class="form-group">
-                                <label class="field-label"> Gender </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dGender>
-                            </div>
-                        </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
-                            <div class="form-group">
-                                <label class="field-label"> Status </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dStatus readonly>
-                            </div>
+                             <label class="field-label"> Title </label>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dp-email">
+                            
                         </div>
                         <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
 
                             <div class="form-group">
-                                <label class="field-label"> Birthday </label>
-                                <input type="text" class="form-control language col-sm-7 mx-auto text-center" id=dBirthday readonly>
+                                <label class="field-label"> First name </label>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="d-fn">
+                            </div>
+
+                        </div>
+                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+
+                                <div class="form-group ">
+                                 <label class="field-label"> Middle Name  </label>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dp-mn" placeholder="" readonly>
+                            </div>
+                             <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                             <label class="field-label"> Last name </label>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="d-ln">
+                            
+                        </div>
+                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+
+                            <div class="form-group">
+                                <label class="field-label"> Gender </label>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dGender">
+                            </div>
+
+                        </div>
+                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+
+                                <div class="form-group ">
+                                 <label class="field-label"> Email </label>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dp-mno" placeholder="" readonly>
                             </div>
                         </div>
 
@@ -920,21 +939,22 @@
                         <!-- line 2 start -->
 
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
-                            <div class="form-group ">
+                            <div class="form-group">
+                                <label class="field-label"> Status </label>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dStatus" readonly>
+                            </div>
+                        </div>
+                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+ <div class="form-group">
+                                <label class="field-label"> Birthday </label>
+                                <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dBirthday" readonly>
+                            </div>
+                           
+                        </div>
+                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+<div class="form-group ">
                                 <label class="field-label"> State of Origin </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dSoo readonly>
-                            </div>
-                        </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
-                            <div class="form-group ">
-                                <label class="field-label"> Local Government Area </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dLga readonly>
-                            </div>
-                        </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
-                            <div class="form-group ">
-                                <label class="field-label"> Nationality </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dNation readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dSoo" readonly>
                             </div>
                         </div>
 
@@ -945,22 +965,21 @@
 
                         <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group">
+                                <label class="field-label"> Local Government Area </label>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dLga" readonly>
+                            </div>
+                        </div>
+                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                           <div class="form-group">
+                                <label class="field-label"> Nationality </label>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dNation" readonly>
+                            </div>
+           
+                        </div>
+                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">    
+                               <div class="form-group">
                                 <label class="field-label"> ID type </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dIdt readonly>
-                            </div>
-                        </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
-                            <div class="form-group ">
-                                <label class="field-label"> Email  </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dp-email readonly>
-                            </div>
-                        </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
-                            <div class="form-group ">
-                                <label class="field-label"> Mobile no
-
-                                </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id=dp-mno placeholder="" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dIdt" readonly>
                             </div>
                         </div>
                     </div>
@@ -1127,7 +1146,7 @@
             <div class="row" id="confirm-button">
                 <div class="col-12 continue text-center">
                     <div class="col-4 col-lg-1 btn btn-purple" name="back" id="5b"> Back </div>
-                    <div class="col-4 col-lg-1 btn btn-purple" type="submit" name="continue" id="5c"> Submit </div>
+                    <button class="col-4 col-lg-1 btn btn-purple" type="submit" name="continue" id="5c"> Submit </button>
                 </div>
             </div>
             <!-- Confirmation page end -->
@@ -1169,6 +1188,10 @@
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/progressbar.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/dropzone.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/parsley.min.js"></script>
+ <script href="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/af.js" > </script>
+     <script>
+    moment().format();
+</script>
 <script>
 
     $('.enroll-error').modal({
@@ -1314,7 +1337,8 @@
 
         var array = jQuery(form).serializeArray();
         var json = {};
-
+         
+        json['clientID'] = '9dy8earw04r09wjefsdp90zsjs';
         jQuery.each(array, function () {
             json[this.name] = this.value || '';
         });
@@ -1371,33 +1395,34 @@
         };
 
         //accessing values of personal information form fields
-        var responseA = _('gender');
-        var responseB = _('status');
-        var responseC = _('birthday');
-        var responseD = _('soo');
-        var responseE = _('lga');
-        var responseF = _('nation');
-        var responseG = _('idt');
-        var responseH = _('p-email');
-        var responseI = _('p-mno');
-        var responseJ = _('org');
-        var responseK = _('orgAdd');
-        var responseL = _('orgLga');
-        var responseM = _('orgState');
-        var responseN = _('orgNo');
-        var responseO = _('doe');
-        var responseP = _('sop');
-        var responseQ = _('cpfa');
-        var responseR = _('pin');
-        var responseS = _('k-title');
-        var responseT = _('k-lname');
-        var responseU = _('k-fname');
-        var responseV = _('relationship');
-        var responseW = _('k-gender');
-        var responseX = _('k-add');
-        var responseY = _('k-soo');
-        var responseZ = _('k-lga');
+        var responseA  = _('gender');
+        var responseB  = _('status');
+        var responseC  = _('birthday');
+        var responseD  = _('soo');
+        var responseE  = _('lga');
+        var responseF  = _('nation');
+        var responseG  = _('idt');
+        var responseH  = _('p-email');
+        var responseI  = _('p-mno');
+        var responseJ  = _('org');
+        var responseK  = _('orgAdd');
+        var responseL  = _('orgLga');
+        var responseM  = _('orgState');
+        var responseN  = _('orgNo');
+        var responseO  = _('doe');
+        var responseP  = _('sop');
+        var responseQ  = _('cpfa');
+        var responseR  = _('pin');
+        var responseS  = _('k-title');
+        var responseT  = _('k-lname');
+        var responseU  = _('k-fname');
+        var responseV  = _('relationship');
+        var responseW  = _('k-gender');
+        var responseX  = _('k-add');
+        var responseY  = _('k-soo');
+        var responseZ  = _('k-lga');
         var responseA1 = _('k-mno');
+        var responseA2 = _('fn')
 
 
         //accessing all select box ids
@@ -1413,36 +1438,37 @@
         var inputA = __('lga')
 
         //accessing innerHTML of Display fields for personal information form responses
-        var displayA = __('dGender');
-        var displayB = __('dStatus');
-        var displayC = __('dBirthday');
-        var displayD = __('dSoo');
-        var displayE = __('dLga');
-        var displayF = __('dNation');
-        var displayG = __('dIdt');
-        var displayH = __('dp-email');
-        var displayI = __('dp-mno');
-        var displayJ = __('dOrg');
-        var displayK = __('dOrgAdd');
-        var displayL = __('dOrgLga');
-        var displayM = __('dOrgState');
-        var displayN = __('dOrgNo');
-        var displayO = __('dDoe');
-        var displayP = __('dSop');
-        var displayQ = __('dcpfa');
-        var displayR = __('dpin');
-        var displayS = __('dk-title');
-        var displayT = __('dk-fname');
-        var displayU = __('dk-lname');
-        var displayV = __('drelationship');
-        var displayW = __('dkgender');
-        var displayX = __('dkadd');
-        var displayY = __('dksoo');
-        var displayZ = __('dklga');
+        var displayA  = __('dGender');
+        var displayB  = __('dStatus');
+        var displayC  = __('dBirthday');
+        var displayD  = __('dSoo');
+        var displayE  = __('dLga');
+        var displayF  = __('dNation');
+        var displayG  = __('dIdt');
+        var displayH  = __('dp-email');
+        var displayI  = __('dp-mno');
+        var displayJ  = __('dOrg');
+        var displayK  = __('dOrgAdd');
+        var displayL  = __('dOrgLga');
+        var displayM  = __('dOrgState');
+        var displayN  = __('dOrgNo');
+        var displayO  = __('dDoe');
+        var displayP  = __('dSop');
+        var displayQ  = __('dcpfa');
+        var displayR  = __('dpin');
+        var displayS  = __('dk-title');
+        var displayT  = __('dk-fname');
+        var displayU  = __('dk-lname');
+        var displayV  = __('drelationship');
+        var displayW  = __('dkgender');
+        var displayX  = __('dkadd');
+        var displayY  = __('dksoo');
+        var displayZ  = __('dklga');
         var displayA1 = __('dkmno');
+        var displayA2 = __('d-fn')
 
-        var responseArray1 = [responseA, responseB, responseC, responseD, responseE, responseF, responseG, responseH, responseI];
-        var displayArray1 = [displayA, displayB, displayC, displayD, displayE, displayF, displayG, displayH, displayI];
+        var responseArray1 = [responseA, responseB, responseC, responseD, responseE, responseF, responseG, responseH, responseI, responseA2];
+        var displayArray1 = [displayA, displayB, displayC, displayD, displayE, displayF, displayG, displayH, displayI, displayA2];
 
 
         function validateemail(x) {
@@ -1453,6 +1479,7 @@
                 return false;
             }
         }
+ 
 
  // parsing local goverment html|values based on selected state for pid section
 
@@ -1499,7 +1526,7 @@
                 }else if (state === "anambra"){
                     lgaArray = ["Aguata|aguata", "Anambra East | anambra east", "Anambra West|anambra west", "Anaocha|anaocha", "Awka North|awka north", "Ayamelum|ayamelum", "Dunukofia|dunukofia", "Ekwusigo|ekwusigo", "Idemili North | idemili north", "Ihiala|ihiala", "Njikoka|njikoka", "Nnewi north| nnewi north", "nnewi south| nnewi south", "Ogbaru|ogbaru", "Onitsha north|onitsha north", "Onitsha south | onitsha south", "Orumba North|orumba north", "Oyi|oyi"];
                 }else if (state === "bauchi"){
-                    lgaArray = ["Alkaleri|alkaleri", "Bauchi|bauchi", "Bogoro|bogoro", "Damban|damban", "Darazo|darazo", "Dass|dass", "Ganjuwa|ganjuwa","Giade|giade", "Itas/Gadau|itas/gadau","Jama'are|jama'are","Katagum|katagum", "Kirfi|kirfi", "Misau|misau", "Ningi|ningi", "Shira|shira", "Tafawa-Balewa|tafawa-balewa","Toro|toro","Warji|warji","Zaki|zaki"];, 
+                    lgaArray = ["Alkaleri|alkaleri", "Bauchi|bauchi", "Bogoro|bogoro", "Damban|damban", "Darazo|darazo", "Dass|dass", "Ganjuwa|ganjuwa","Giade|giade", "Itas/Gadau|itas/gadau","Jama'are|jama'are","Katagum|katagum", "Kirfi|kirfi", "Misau|misau", "Ningi|ningi", "Shira|shira", "Tafawa-Balewa|tafawa-balewa","Toro|toro","Warji|warji","Zaki|zaki"]; 
                 }else if(state === "bayelsa"){
                     lgaArray = ["Brass|brass", "Ekeremor|ekeremor","Kolokuma/Opokuma|Kolokuma/Opokuma","Nembe|nembe","Ogbia|ogbia","Sagbama|sagbama","Southern Jaw|southern jaw", "yenegoa"] 
                 }else if(state === "benue"){
@@ -1702,54 +1729,109 @@
         });
 
         // switch screen function on click
+
         $("#1c").click(function () {
 
-            if ($('.demo-form').parsley().validate({group: 'block1', force: true})) {
-                alert("validated")
-                //updating values of personal information form fields
-                responseA = _('gender');
-                responseB = _('status');
-                responseC = _('birthday');
-                responseD = _('soo');
-                responseE = _('lga');
-                responseF = _('nation');
-                responseG = _('idt');
-                responseH = _('p-email');
-                responseI = _('p-mno');
+ 
+            var title = document.getElementById('p-email').value; 
+            var gender = document.getElementById('gender').value;
+            var birthday = document.getElementById('birthday').value;
+      
+             console.log(birthday)
+              var leadwayMinAgeBracket = '2002-01-01';
+              var userBirthday = moment(birthday);
+              var minAge = moment(leadwayMinAgeBracket);
+              console.log(userBirthday);
+              console.log(minAge);
 
-                //grouping response and display areas
-                responseArray1 = [responseA, responseB, responseC, responseD, responseE, responseF, responseG, responseH, responseI];
-                displayArray1 = [displayA, displayB, displayC, displayD, displayE, displayF, displayG, displayH, displayI];
+          if (moment(minAge).isBefore(userBirthday)){
+
+               alert('Enrollment is only open to individuals 15years and above');
+               console.log(userBirthday);
+               console.log(minAge);
+
+          }else if(title == "Mr." && gender == "Female" || title == "Miss." && gender == "Male" || title == "Mrs." && gender == "Male" ){  alert ("Please reconfirm your title or gender");
+           
+}else{
+
+             alert ('dob validation test successful')
+
+            if ($('.demo-form').parsley().validate({group: 'block1', force: true })){
+                    alert("validated")
+                    //updating values of personal information form fields
+                    responseA = _('gender');
+                    responseB = _('status');
+                    responseC = _('birthday');
+                    responseD = _('soo');
+                    responseE = _('lga');
+                    responseF = _('nation');
+                    responseG = _('idt');
+                    responseH = _('p-email');
+                    responseI = _('p-mno');
+
+                    //grouping response and display areas
+                    responseArray1 = [responseA, responseB, responseC, responseD, responseE, responseF, responseG, responseH, responseI, responseA2];
+                    displayArray1 = [displayA, displayB, displayC, displayD, displayE, displayF, displayG, displayH, displayI, displayA2];
 
 
-                $("#pid, #pid-head, #pid-form, #pid-button").fadeOut(300, function () {
-                    $("#employer, #employer-head, #employer-form, #employer-button").fadeIn(500, progressbar.animate(0.2, {
-                        duration: 800,
-                        from: {color: '#2068a4'},
-                        to: {color: '#233d70'},
-                    }, progressbar.setText('20%')));
 
-                    //setting progress-text
-                    $('#progress-text').html("We know you should do it for the passion, doing it for the money isn't bad too...")
-                });
-
-
-                $("#2b").click(function () {
-                    $("#employer, #employer-head, #employer-form, #employer-button").fadeOut(300, function () {
-                        $("#pid, #pid-head, #pid-form, #pid-button").fadeIn(500, progressbar.animate(0, {
+                    $("#pid, #pid-head, #pid-form, #pid-button").fadeOut(300, function(){
+                        $("#employer, #employer-head, #employer-form, #employer-button").fadeIn(500, progressbar.animate(0.2, {
                             duration: 800,
-                            from: {color: '#2068a4'},
-                            to: {color: '#233d70'},
-                        }, progressbar.setText('0%')));
-                        $('#progress-text').html("The journey of a thousand miles begins with one step, here it begins with four!")
-                    });
-                });
+                            from: { color: '#2068a4' },
+                            to: { color: '#233d70' },
+                        }, progressbar.setText('20%')));
 
-            } else {
-                return false;
+                        //setting progress-text
+                        $('#progress-text').html("We know you should do it for the passion, doing it for the money isn't bad too...")
+                    });
+
+
+                    $("#2b").click(function(){
+                        $("#employer, #employer-head, #employer-form, #employer-button").fadeOut(300, function(){
+                            $("#pid, #pid-head, #pid-form, #pid-button").fadeIn(500, progressbar.animate(0, {
+                                duration: 800,
+                                from: { color: '#2068a4' },
+                                to: { color: '#233d70' },
+                            }, progressbar.setText('0%')));
+                            $('#progress-text').html("The journey of a thousand miles begins with one step, here it begins with four!")
+                        });
+                    });
+
+                }else {
+                    return false;
+                }
+
             }
 
+
         });
+
+
+      //function handling the customer segement validation 
+
+           $('#cpfa').change(function(){
+  
+            var currentPfa =  document.getElementById('cpfa').value; 
+            console.log(currentPfa); 
+            var pinNumber  = document.getElementById('pin');
+
+            if ( currentPfa ===  "not registered" ){
+
+                alert('testing pin disabling function')
+
+                pinNumber.readOnly = true;
+
+            }else{
+
+               pinNumber.readOnly = false;
+
+              return false;
+
+            }
+
+           });
+
 
 
         $("#2c").click(function () {
@@ -1847,7 +1929,17 @@
 
                 var form = document.getElementById('enroll-form');
                 var json = convertFormToJSON(form)
+                var image = $('#user-image').prop('files')[0];
+
+                var reader = new FileReader();
+                reader.readAsBinaryString(image);
+
+                var blob;
+                reader.onload = function() {
+                    blob = btoa(reader.result);
+                    json['image'] = blob;
                 console.log(JSON.stringify(json));
+               }
 
             if (document.querySelector('.dz-image-preview') !== null || $("#user-image").val() !== null) {
                 $("#biometrics, #biometrics-head, #biometrics-form, #biometrics-button").fadeOut(300, function () {
@@ -1915,19 +2007,28 @@
                 reader.onload = function() {
                     blob = btoa(reader.result);
                     json['image'] = blob;
-                    console.log(JSON.stringify(json))
+                    json['client id'] = '********';
+                    console.log(JSON.stringify(json));
 
-        //Converting JSON object to string format
+                    //Converting JSON object to string format
                     var myJSON = JSON.stringify(json);
 
                   
 
                     $.ajax({
                         type: "POST",
+<<<<<<< HEAD
                         url: "submit.php",
                         data: myJSON,
                         dataType: "json",
                     }).done(function () {
+=======
+                        url: "<?php echo get_bloginfo('template_directory'); ?>/submit.php",
+                        data: json,
+                        dataType: "json"
+                    }).done(function (response) {
+                        console.log(response);
+>>>>>>> 5d17c2a9d125503ea7fc21761d5db32663c80f0d
                         $("#confirm, #confirm-head, #confirm-form, #confirm-button").fadeOut(300, function () {
                             //pass in thank you view
                             $('#thankyou').fadeIn(500, progressbar.animate(1, {
@@ -1950,7 +2051,7 @@
         });
 
     });
-  console.log(myJSON)
+
 
 </script>
 <script>
@@ -1990,6 +2091,39 @@
         })
     });
 </script>
+
+<script src="<?php echo get_bloginfo('template_directory'); ?>/vendors/sweetalert/sweetalert.min.js"></script>
+
+<?php if(!empty($response)): $type = ((string) $response->StatusCode === "00" ? 'success': 'error')?>
+    <script>
+        var button, type = "<?= $type ?>";
+        if(type == 'error') {
+            button = "Back to Token page";
+        } else {
+            button = "Continue";
+            function before_this_page_reloads_huh(){
+                return function(){
+                    return "You have not completed the enrollment process."
+                }
+            }
+
+            $(window).bind('beforeunload', before_this_page_reloads_huh() );
+        }
+        swal({
+            title: "<?= ucfirst($type); ?>!",
+            text: "<?= $response->Message ?>",
+            type: "<?= $type ?>",
+            button: {
+                text: button
+            }
+        }, function(){
+            if(type == 'error') {
+                window.location.href = '/token';
+            }
+        });
+        $(".sa-confirm-button-container button").text(button);
+    </script>
+<?php endif ?>
 
 </body>
 </html>

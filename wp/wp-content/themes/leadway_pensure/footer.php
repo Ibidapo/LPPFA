@@ -4,6 +4,10 @@
     $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
     include_once 'mail/feedback.php';
     ?>
+	
+<?php 
+
+?>
 
     <!-- Footer of page -->
     <footer class="container-fluid">
@@ -78,7 +82,7 @@
             <div class="col-sm-10 col-md-4 collapse" id="feed">
                 <h5 class="text-center"> We'd love to hear from you </h5>
 
-                <form action="<?php the_permalink(); ?>" method="post">
+                <form action="<?php the_permalink(); ?>" method="post" id="feedback_captcha">
                     <div class="form-group">
                         <input name="email" class="form-control form-control-sm chimp text-center" type="email"
                                placeholder="E-mail Address" required>
@@ -87,8 +91,10 @@
                         <textarea name="feedback" class="form-control form-control-sm chimp text-center" rows="3"
                                   cols="inherit" placeholder="Please write here" required></textarea>
                     </div>
-                    <div class="text-center"><input type="submit" class="btn btn-outline-red btn-sm"
-                                                    value="Post feedback"></div>
+                    <div class="text-center">
+						<button type="submit" class="btn btn-outline-red btn-sm g-recaptcha" data-sitekey="6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7"
+						data-callback="feedbackSubmit">Post feedback</button>
+					</div>
                     <input type="hidden" name="submitted" value="1">
                 </form>
             </div>
@@ -106,7 +112,7 @@
             <div class="col-12">
                 <ul class="nav justify-content-center" style="margin-top: 15px">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Site Map</a>
+                        <a class="nav-link" href="/sitemap">Site Map</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/privacy">Privacy Policy</a>
@@ -126,7 +132,8 @@
         </div>
         <a href="javascript:window.print()" data-toggle="tooltip" title="Print" data-placement="left" id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
         <a href="javascript:" data-toggle="tooltip" title="Back to Top" data-placement="left" id="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-    </footer>
+		<a href="javascript:void(Tawk_API.toggle())" class="hidden-md-down" id="chat-icon"><img src="https://www.leadway-pensure.com/wp-content/uploads/2017/09/chat-icon.png"/></a>
+    </footer> 
 <?php endif ?>
 
 <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -140,6 +147,28 @@
         crossorigin="anonymous"></script>
 <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/59c24bec4854b82732ff1144/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ha,ig,yo', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 <script src="<?php echo get_bloginfo('template_directory'); ?>/owlcarousel/owl.carousel.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/vendors/sweetalert/sweetalert.min.js"></script>
 
@@ -153,30 +182,6 @@
     </script>
 <?php endif ?>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = 'https://embed.tawk.to/595a40d350fd5105d0c83b06/default';
-        s1.charset = 'UTF-8';
-        s1.setAttribute('crossorigin', '*');
-        s0.parentNode.insertBefore(s1, s0);
-    })();
-</script>
-<!--End of Tawk.to Script-->
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en',
-            includedLanguages: 'en,ha,ig,yo',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-        }, 'google_translate_element');
-    }
-</script>
-<script type="text/javascript"
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/index.js"></script>
 
 <?php wp_footer(); ?>
