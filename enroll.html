@@ -19,6 +19,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+   
         <!-- google analytics tracking snippet --> 
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -646,7 +648,7 @@
                                 <label class="field-label"> Current PFA </label>
                                 <select name=currentpfa class="form-control language col-sm-7 mx-auto" id="cpfa" style="border: 1px solid white" required="" data-parsley-group="block2">
                                     <option value="" id="default"> Select Provider</option>
-                                    <option value="Not registered"> Not registered </option>
+                                    <option value="not registered"> Not registered </option>
                                     <option value="AIICO pension Managers"> AIICO pension Managers </option>
                                     <option value="APT Pension Managers Limited"> APT Pension Managers Limited </option>
                                     <option value="ARM Pension Fund Managers Limited"> ARM Pension Fund Managers Limited </option>
@@ -1358,6 +1360,10 @@
     <script src="js/index.js"></script>
     <script src="js/dropzone.js"></script>
     <script src="js/parsley.min.js"></script>
+     <script href="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/af.js" > </script>
+     <script>
+    moment().format();
+</script>
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ha,ig,yo', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
@@ -1670,7 +1676,7 @@
                 }else if (state === "anambra"){
                     lgaArray = ["Aguata|aguata", "Anambra East | anambra east", "Anambra West|anambra west", "Anaocha|anaocha", "Awka North|awka north", "Ayamelum|ayamelum", "Dunukofia|dunukofia", "Ekwusigo|ekwusigo", "Idemili North | idemili north", "Ihiala|ihiala", "Njikoka|njikoka", "Nnewi north| nnewi north", "nnewi south| nnewi south", "Ogbaru|ogbaru", "Onitsha north|onitsha north", "Onitsha south | onitsha south", "Orumba North|orumba north", "Oyi|oyi"];
                 }else if (state === "bauchi"){
-                    lgaArray = ["Alkaleri|alkaleri", "Bauchi|bauchi", "Bogoro|bogoro", "Damban|damban", "Darazo|darazo", "Dass|dass", "Ganjuwa|ganjuwa","Giade|giade", "Itas/Gadau|itas/gadau","Jama'are|jama'are","Katagum|katagum", "Kirfi|kirfi", "Misau|misau", "Ningi|ningi", "Shira|shira", "Tafawa-Balewa|tafawa-balewa","Toro|toro","Warji|warji","Zaki|zaki"];, 
+                    lgaArray = ["Alkaleri|alkaleri", "Bauchi|bauchi", "Bogoro|bogoro", "Damban|damban", "Darazo|darazo", "Dass|dass", "Ganjuwa|ganjuwa","Giade|giade", "Itas/Gadau|itas/gadau","Jama'are|jama'are","Katagum|katagum", "Kirfi|kirfi", "Misau|misau", "Ningi|ningi", "Shira|shira", "Tafawa-Balewa|tafawa-balewa","Toro|toro","Warji|warji","Zaki|zaki"];
                 }else if(state === "bayelsa"){
                     lgaArray = ["Brass|brass", "Ekeremor|ekeremor","Kolokuma/Opokuma|Kolokuma/Opokuma","Nembe|nembe","Ogbia|ogbia","Sagbama|sagbama","Southern Jaw|southern jaw", "yenegoa"] 
                 }else if(state === "benue"){
@@ -1867,14 +1873,58 @@
             $('#progress-text').html("The journey of a thousand miles begins with one step, here it begins with four!")
 
             var formInstance = $('.demo-form');
-            $('.form-navigation .next').click(function() {
+            $('.form-navigation .next').click(function(){
 
             });
 
+            //testing my validation code-block
+
+            $('#birthday').change(function(){
+
+                 var leadwayMinAgeBracket = '1996-01-01';
+
+              var userBirthday = moment(this.value);
+              var minBirthday = moment('leadwayMinAgeBracket');
+              console.log(moment(this.value));
+              console.log(moment(leadwayMinAgeBracket));
+
+          if (moment(userBirthday).isBefore(leadwayMinAgeBracket)){
+
+               alert('Enrollment is only open to individuals 15years and above');
+               console.log(userBirthday);
+               console.log(leadwayMinAgeBracket);
+
+          }else{
+
+            alert ('validation test successful');
+
+            }
+              
+             
+        });
+
             // switch screen function on click
             $("#1c").click(function(){
+      
+             var currentBirthdayValue = document.getElementById('birthday').value;
 
-                if ($('.demo-form').parsley().validate({group: 'block1', force: true })){
+                 var leadwayMinAgeBracket = '1996-01-01';
+
+              var userBirthday = moment(currentBirthdayValue);
+              var minBirthday = moment(leadwayMinAgeBracket);
+              console.log(moment(userBirthday));
+              console.log(moment(minBirthday));
+
+          if (moment(minBirthday).isBefore(userBirthday)){
+
+               alert('Enrollment is only open to individuals 15years and above');
+               console.log(userBirthday);
+               console.log(leadwayMinAgeBracket);
+
+          }else{
+
+            alert ('validation test successful');
+            if ($('.demo-form').parsley().validate({group: 'block1', force: true })){
                     alert("validated")
                     //updating values of personal information form fields
                     responseA = _('gender');
@@ -1920,8 +1970,33 @@
                     return false;
                 }
 
+            }
+
+                
+
             });
 
+         //function handling the customer segement validation 
+
+           $('#cpfa').change(function(){
+  
+            var currentPfa =  document.getElementById('cpfa').value; 
+            console.log(currentPfa); 
+            var pinNumber  = document.getElementById('pin');
+
+            if ( currentPfa ===  "not registered" ){
+
+                alert('testing pin disabling function')
+
+                pinNumber.readOnly = true;
+
+            }else{
+
+              return false;
+
+            }
+
+           });
 
             $("#2c").click(function(){
                 if ($('.demo-form').parsley().validate({group: 'block2'})){
@@ -2024,7 +2099,7 @@
                  var json = convertFormToJSON(form)
 
                  console.log(json);
-                 console.log(JSON.stringify(json));
+                 //console.log(JSON.stringify(json));
 
                 if (document.querySelector('.dz-image-preview') !== null){
                     $("#biometrics, #biometrics-head, #biometrics-form, #biometrics-button").fadeOut(300, function(){
@@ -2072,7 +2147,7 @@
 
         $.ajax({
             type: "POST",
-            url: "submit.php",
+            url: "/[submit.php",
             data: json,
             dataType: "json",
         }).done(function(){

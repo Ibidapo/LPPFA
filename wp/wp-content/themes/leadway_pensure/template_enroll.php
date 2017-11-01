@@ -1924,7 +1924,7 @@
 
                     $.ajax({
                         type: "POST",
-                        url: "/submit.php",
+                        url: "submit.php",
                         data: myJSON,
                         dataType: "json",
                     }).done(function () {
