@@ -42,7 +42,7 @@ $retiree_funds_faqs = get_field("retiree_funds_faqs");
                     <div class="card">
                         <div class="card-header" role="tab" id="contr<?= $num ?>">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#accordion7" href="#cntr<?= $num ?>" aria-expanded="true" aria-controls="cntr<?= $num ?>">
+                                <a data-toggle="collapse" data-parent="#accordion8" href="#cntr<?= $num ?>" aria-expanded="true" aria-controls="cntr<?= $num ?>">
                                     <?= $faq['title'] ?>
                                 </a>
                             </h5>
@@ -64,7 +64,7 @@ $retiree_funds_faqs = get_field("retiree_funds_faqs");
                     <div class="card">
                         <div class="card-header" role="tab" id="retr<?= $num ?>">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#accordion7" href="#ret<?= $num ?>" aria-expanded="true" aria-controls="ret<?= $num ?>">
+                                <a data-toggle="collapse" data-parent="#accordion9" href="#ret<?= $num ?>" aria-expanded="true" aria-controls="ret<?= $num ?>">
                                     <?= $faq['title'] ?>
                                 </a>
                             </h5>
@@ -85,7 +85,7 @@ $retiree_funds_faqs = get_field("retiree_funds_faqs");
                     <div class="card">
                         <div class="card-header" role="tab" id="retrf1<?= $num ?>">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#accordion7" href="#retf<?= $num ?>" aria-expanded="true" aria-controls="retf<?= $num ?>">
+                                <a data-toggle="collapse" data-parent="#accordion10" href="#retf<?= $num ?>" aria-expanded="true" aria-controls="retf<?= $num ?>">
                                     <?= $faq['title'] ?>
                                 </a>
                             </h5>
@@ -219,7 +219,7 @@ $retiree_funds_faqs = get_field("retiree_funds_faqs");
                                 suitable for young contributors who have a long time before they retire. The long duration ensures that
                                 the contributors have enough time to realize potential gains and recover from potential losses that may
                                 occur in variable income instruments. Contributors in this Fund must be younger than 50 years old.</p>
-                            <p>Fund II is a balanced Fund and it is suitable for middle aged contribu-tors and those with a medium
+                            <p>Fund II is a balanced Fund and it is suitable for middle aged contributors and those with a medium
                                 risk appetite. It is designed to be less risky when compared to Fund I. All Contributors, other than
                                 those who are retired may find Fund II suitable.</p>
                             <p>Fund III is a conservative Fund and it is designed for contributors close to retirement and contributors
@@ -274,7 +274,7 @@ $retiree_funds_faqs = get_field("retiree_funds_faqs");
                         <div class="card-block">
                             A Retirement Savings Account (“RSA”) contributor under the age of 50 may switch between Fund III,
                             II and I by simply making a formal request to Leadway Pensure. An RSA contributor who is 50 years
-                            and above may switch between Fund III and Fund II only. Such a contribu-tor will not be allowed to
+                            and above may switch between Fund III and Fund II only. Such a contributor will not be allowed to
                             choose Fund I.
                         </div>
                     </div>
@@ -320,10 +320,10 @@ $retiree_funds_faqs = get_field("retiree_funds_faqs");
                     </div>
                     <div id="str11" class="collapse" role="tabpanel" aria-labelledby="multi11">
                         <div class="card-block">
-                            <p>The multi- Fund structure allows Leadway Pensure better serve its con-tributors by building
-                                portfolios that closely reflect their risk appe-tite. This implies that contributors with a
-                                large risk appetite are com-pensated for taking more risk whilst contributors with a low risk
-                                appe-tite are appropriately compensated.</p>
+                            <p>The multi-Fund structure allows Leadway Pensure better serve its contributors by building
+                                portfolios that closely reflect their risk appetite. This implies that contributors with a
+                                large risk appetite are compensated for taking more risk whilst contributors with a low risk
+                                appetite are appropriately compensated.</p>
                             <p>The new structure also recognizes that a contributor’s risk appetite may change over time due
                                 to a myriad of factors, thus the flexibility to switch from one fund to the other is an added
                                 advantage.</p>
@@ -375,9 +375,11 @@ $retiree_funds_faqs = get_field("retiree_funds_faqs");
 			$("#m-top").attr("class", "container-fluid");
 		}
 		
-		$('html,body').animate({
-		  scrollTop: $(window.location.hash).offset().top
-		});
+		if (window.location.hash) {
+			$('html,body').animate({
+			  scrollTop: $(window.location.hash).offset().top
+			}, 500);
+		}
 	});
 </script>
 

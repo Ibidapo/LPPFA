@@ -82,18 +82,19 @@
             <div class="col-sm-10 col-md-4 collapse" id="feed">
                 <h5 class="text-center"> We'd love to hear from you </h5>
 
-                <form action="<?php the_permalink(); ?>" method="post" id="feedback_captcha">
+                <form action="<?php the_permalink(); ?>" method="post">
                     <div class="form-group">
-                        <input name="email" class="form-control form-control-sm chimp text-center" type="email"
-                               placeholder="E-mail Address" required>
+                        <input name="email" class="form-control form-control-sm text-center" type="email"
+                               placeholder="E-mail Address" id="feed-email" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="feedback" class="form-control form-control-sm chimp text-center" rows="3"
-                                  cols="inherit" placeholder="Please write here" required></textarea>
+                        <textarea name="feedback" class="form-control form-control-sm text-center" rows="3"
+                                  cols="inherit" placeholder="Please write here" id="feedtext" required></textarea>
                     </div>
                     <div class="text-center">
-						<button type="submit" class="btn btn-outline-red btn-sm g-recaptcha" data-sitekey="6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7"
-						data-callback="feedbackSubmit">Post feedback</button>
+						<button type="submit" class="btn btn-outline-red btn-sm" id="footerForm">Post feedback</button>
+						<!-- <button type="submit" class="btn btn-outline-red btn-sm g-recaptcha" data-sitekey="6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7"
+						data-callback="feedbackSubmit">Post feedback</button> -->
 					</div>
                     <input type="hidden" name="submitted" value="1">
                 </form>
@@ -128,7 +129,7 @@
                     src="<?php echo get_bloginfo('template_directory'); ?>/images/pencom.png" height="90" width="90"
                     alt=""/></div>
             <div class="col-12 col-md-4 align-self-center text-center">&copy; Leadway Pensure 2017</div>
-            <div class="col-12 col-md-4 align-self-center text-center">Web Design & Digital by iNspire</div>
+           <!-- <div class="col-12 col-md-4 align-self-center text-center">Web Design & Digital by iNspire</div> -->
         </div>
         <a href="javascript:window.print()" data-toggle="tooltip" title="Print" data-placement="left" id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
         <a href="javascript:" data-toggle="tooltip" title="Back to Top" data-placement="left" id="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
@@ -171,6 +172,127 @@ function googleTranslateElementInit() {
 
 <script src="<?php echo get_bloginfo('template_directory'); ?>/owlcarousel/owl.carousel.js"></script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/vendors/sweetalert/sweetalert.min.js"></script>
+
+<?php if (
+	!is_page_template("template_token.php") && !is_page_template("template_career.php") && !is_page_template("template_company.php")
+): ?>
+	<!-- Footer reCAPTCHA function -->
+	<script type="text/javascript">
+		var validateFooter = function() {
+			
+			var emailVal = $('#feed-email').val();
+			var isValid = true;
+			var emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			
+			if (!emailExp.test(emailVal)){
+				$('#feed-email').css({"background": "#FFCECE"}).attr({"placeholder":"Invalid E-mail address", "value" : ""});
+				alert("Invalid email!");
+				isValid = false;
+			} else {
+				$('#feed-email').css({"background": ""});
+				alert("Valid email!");
+			}
+			
+			if ($.trim($('#feedtext').val()) == '' ){
+				$('#feedtext').css({"background": "#FFCECE"}).attr({"placeholder":"Feedback cannot be empty", "value" : ""});
+				isValid = false;
+			} else {
+				$('#feedtext').css({"background": ""});
+			}
+			
+			if (isValid == false) {
+				grecaptcha.reset(); 
+			} else {
+				return (true);
+			}
+		}
+	
+		var onloadFeedback = function() {
+			grecaptcha.render('footerForm', {'sitekey' : '6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7', 'callback' : validateFooter});
+		};
+	</script>
+	<script src="https://www.google.com/recaptcha/api.js?onload=onloadFeedback&render=explicit" async defer></script>
+<? endif ?>
+
+<?php if (
+	is_page_template("template_career.php")
+): ?>
+	<!-- Footer & Career reCAPTCHA function -->
+	<script type="text/javascript">
+		var validateFooter = function() {
+			
+			var emailVal = $('#feed-email').val();
+			var isValid = true;
+			var emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			
+			if (!emailExp.test(emailVal)){
+				$('#feed-email').css({"background": "#FFCECE"}).attr({"placeholder":"Invalid E-mail address", "value" : ""});
+				isValid = false;
+			} else {
+				$('#feed-email').css({"background": ""});    
+			}
+			
+			if ($.trim($('#feedtext').val()) == '' ){
+				$('#feedtext').css({"background": "#FFCECE"}).attr({"placeholder":"Feedback cannot be empty", "value" : ""});
+				isValid = false;
+			} else {
+				$('#feedtext').css({"background": ""});
+			}
+			
+			if (isValid == false) {
+				grecaptcha.reset(); 
+			}
+		}
+		
+		var onloadFeedback = function() {
+			grecaptcha.render('footerForm', {'sitekey' : '6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7', 'callback' : validateFooter});
+			grecaptcha.render('submitCV', {'sitekey' : '6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7'});
+		};
+	</script>
+	<script src="https://www.google.com/recaptcha/api.js?onload=onloadFeedback&render=explicit" async defer></script>
+<? endif ?>
+
+<?php if (
+	is_page_template("template_company.php")
+): ?>
+	<!-- Footer & Company reCAPTCHA function -->
+	<script type="text/javascript">
+		var validateFooter = function() {
+			
+			var emailVal = $('#feed-email').val();
+			var isValid = true;
+			var emailExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			
+			if (!emailExp.test(emailVal)){
+				$('#feed-email').css({"background": "#FFCECE"}).attr({"placeholder":"Invalid E-mail address", "value" : ""});
+				alert("Invalid email!");
+				isValid = false;
+			} else {
+				$('#feed-email').css({"background": ""});
+				alert("Valid email!");
+			}
+			
+			if ($.trim($('#feedtext').val()) == '' ){
+				$('#feedtext').css({"background": "#FFCECE"}).attr({"placeholder":"Feedback cannot be empty", "value" : ""});
+				isValid = false;
+			} else {
+				$('#feedtext').css({"background": ""});
+			}
+			
+			if (isValid == false) {
+				grecaptcha.reset(); 
+			} else {
+				return (true);
+			}
+		}
+		
+		var onloadFeedback = function() {
+			grecaptcha.render('footerForm', {'sitekey' : '6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7', 'callback' : validateFooter});
+			grecaptcha.render('compForm', {'sitekey' : '6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7'});
+		};
+	</script>
+	<script src="https://www.google.com/recaptcha/api.js?onload=onloadFeedback&render=explicit" async defer></script>
+<? endif ?>
 
 <?php if(!empty($response)):?>
     <script>

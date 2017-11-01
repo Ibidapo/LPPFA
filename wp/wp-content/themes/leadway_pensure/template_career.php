@@ -130,7 +130,7 @@ include_once 'mail/career.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                       <!-- <div class="card">
                             <div class="card-header" role="tab" id="vac4">
                                 <h5 class="mb-0">
                                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion5" href="#fia"
@@ -173,7 +173,7 @@ include_once 'mail/career.php';
                                     <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/FUND_ACCOUNTANT.pdf" target="_blank">View Requirements</a></div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="card">
                             <div class="card-header" role="tab" id="vac6">
                                 <h5 class="mb-0">
@@ -274,7 +274,7 @@ include_once 'mail/career.php';
             </div>
         </div>
         <div class="tab-pane fade col-12" role="tabpanel" id="cv">
-            <form enctype="multipart/form-data" action="<?php the_permalink(); ?>#cv" method="post" id="career_captcha" onsubmit="return cvValidation()">
+            <form enctype="multipart/form-data" action="<?php the_permalink(); ?>#cv" method="post" id="career_captcha">
                 <input type="hidden" name="career_submitted" value="1"/>
                 <div class="row">
                     <div class="col-xs-10 offset-xs-1 col-md-12 text-center">
@@ -923,7 +923,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="cont-prof">Country Obtained</label>
                                     <select name="professional_qualification_country_obtained" class="form-control" id="cont-prof">
-                                        <option value="" selected disabled>Please select</option>
+                                        <option>Please select</option>
                                         <option value="Afghanistan">Afghanistan</option>
                                         <option value="Aland Islands">Aland Islands</option>
                                         <option value="Albania">Albania</option>
@@ -1187,7 +1187,7 @@ include_once 'mail/career.php';
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="yr-prof">Year Completed</label>
-                                    <input name="professional_qualification_year_completed" type="text" class="form-control" id="yr-prof" placeholder="yyyy">
+                                    <input name="professional_qualification_year_completed" type="text" class="form-control" id="yr-prof">
                                 </div>
                             </div>
                         </div>
@@ -1208,7 +1208,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="ind">Industry</label>
                                     <select name="work_experience_industry" class="form-control" id="ind">
-                                        <option value="" selected disabled>Please select</option>
+                                        <option value="">Please select</option>
                                         <option value="13">Aviation</option>
                                         <option value="2">Banking</option>
                                         <option value="40">Building and Construction</option>
@@ -1255,7 +1255,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="spec">Specialization</label>
                                     <select name="work_experience_specialization" class="form-control" id="spec">
-                                        <option value="" selected disabled>Please select</option>
+                                        <option class="disabled">Please select</option>
                                         <option value="4">Accounting</option>
                                         <option value="41">Actuarial Science</option>
                                         <option value="36">Admin</option>
@@ -1310,7 +1310,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="w-cont">Country Obtained</label>
                                     <select name="work_experience_country_obtained" class="form-control" id="w-cont">
-                                        <option value="" selected disabled>Please select</option>
+                                        <option>Please select</option>
                                         <option value="Afghanistan">Afghanistan</option>
                                         <option value="Aland Islands">Aland Islands</option>
                                         <option value="Albania">Albania</option>
@@ -1580,11 +1580,11 @@ include_once 'mail/career.php';
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="f-date">From Date</label>
-                                    <input name="work_experience_from_date" type="date" class="form-control" placeholder="mm/dd/yyyy" id="f-date">
+                                    <input name="work_experience_from_date" type="date" class="form-control" id="f-date">
                                 </div>
                                 <div class="form-group">
                                     <label for="t-date">To Date</label>
-                                    <input name="work_experience_end_date" type="date" class="form-control" placeholder="mm/dd/yyyy" id="t-date">
+                                    <input name="work_experience_end_date" type="date" class="form-control" id="t-date">
                                 </div>
                             </div>
                         </div>
@@ -1604,15 +1604,14 @@ include_once 'mail/career.php';
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-purple g-recaptcha" data-sitekey="6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7"
-						data-callback="careerSubmit" id="submitCV">Submit</button>
+                            <button type="submit" class="btn btn-purple" id="submitCV">Submit</button>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
         <div class="tab-pane fade col-12 text-center" role="tabpanel" id="alm">
-            
+            <h1>Coming Soon!</h1>
         </div>
     </div>
 </div>
@@ -1631,61 +1630,6 @@ include_once 'mail/career.php';
 <?php endif ?>
 
 <script>
-	function cvValidation(){
-		var isValid = true;
-		var errorMsg = "";
-		$('#cv input[type="text"], #cv input[type="date"], #cv input[type="number"], #cv input[type="email"], #cv textarea').each(function() {
-			errorMsg = "*Field is Required*";
-			if ($.trim($(this).val()) == '') {
-				isValid = false;
-				$(this).css({"background": "#FFCECE"}).attr("placeholder", errorMsg);
-			} else {
-				$(this).css({"background": ""});
-			}
-		});
-		
-		$('#cv input[type="number"]').each(function(){
-			var validatePhone = new RegExp("[0-9]{11}");
-			var phoneNo = $(this).val();
-			errorMsg = "*Invalid - 11 digits are required*"
-			if (validatePhone.test(phoneNo)) {
-				$(this).css({"background": ""});
-			} else {
-				isValid = false;
-				$(this).css({"background": "#FFCECE"}).val("").attr("placeholder", errorMsg);
-			}
-		});
-		
-		$('#cv input[type="date"]').each(function(){
-			var validateDate = new RegExp("(0[1-9]|10|11|12)([/])(0[1-9]|1[0-9]|2[0-9]|3[1-2])([/])([1-2][0-9][0-9][0-9])");
-			var DateNo = $(this).val();
-			errorMsg = "*Invalid date*"
-			if (validateDate.test(DateNo)) {
-				$(this).css({"background": ""});
-			} else {
-				isValid = false;
-				$(this).css({"background": "#FFCECE"}).attr("placeholder", errorMsg);
-			}
-		});
-		
-		$('#cv select').each(function() {
-			if ($.trim($(this).val()) == '') {
-				isValid = false;
-				$(this).css({"background": "#FFCECE"});
-			} else {
-				$(this).css({"background": ""});
-			}
-		});
-		
-		if (isValid == false) {
-			return false;
-			$('body,html').animate({
-				scrollTop: 500
-			}, 800);
-			
-		}
-	};
-
     $(document).ready(function() {
         //Resize container based on desktop or mobile viewport.
         var size = window.innerWidth;
@@ -1729,5 +1673,6 @@ include_once 'mail/career.php';
         });
     });
 </script>
+
 </body>
 </html>

@@ -517,7 +517,7 @@ cursor: pointer;
 transition: opacity .25s ease;
 }
 .social-tab{
-    width:56% !important;
+    width:45% !important;
     cursor: pointer;
 }
 .social-img{
@@ -776,6 +776,13 @@ input[type="text"].language::-webkit-input-placeholder {
     font-family: montserrat, sans-serif;
     color: #2C3E50;
     font-size: 13px;
+}
+
+/*Styling for Social Page*/
+#twitfeed {
+	height: 500px;
+    overflow-y: scroll;
+    margin-bottom: 1rem;
 }
 /*buttons*/
 #msform .action-button {

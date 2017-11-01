@@ -48,7 +48,7 @@ get_header();
 ?>
 
 <!-- Body and Main Content of page -->
-<div class="container-fluid" id="m-top">
+<div class="container" id="m-top">
     <div class="row">
         <div class="col-12">
             <div class="page-wrapper" style="min-height:300px;padding: 50px 0;">
