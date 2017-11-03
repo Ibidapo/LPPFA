@@ -77,13 +77,12 @@ include_once 'mail/company.php';
                     </p>
                 </div>
                 <div class="col-12 col-md-5">
-                    <form class="form-inline v-align" action="<?php the_permalink(); ?>" method="post" id="company_captcha">
+                    <form class="form-inline v-align" action="<?php the_permalink(); ?>" method="post">
                         <input type="hidden" name="company_submitted" value="1">
 
                         <div class="form-group mx-auto text-center">
                             <input name="email" type="email" class="form-control" placeholder="E-mail">
-                            <button class="btn btn-outline-purple g-recaptcha" data-sitekey="6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7"
-						data-callback="companySubmit" type="submit">Submit</button>
+							<button class="btn btn-outline-purple" type="submit" id="compForm">Submit</button> 
                         </div>
                     </form>
                 </div>
@@ -356,7 +355,7 @@ include_once 'mail/company.php';
                          src="<?= array_get(get_field('reports_image'), 'url'); ?>"
                          alt="<?= array_get(get_field('reports_image'), 'alt'); ?>">
                 </div>
-            </div>
+            </div> 
         </div>
         <div class="tab-pane fade col-12 text-center" role="tabpanel" id="csr">
             <?= get_field('csr_content') ?>

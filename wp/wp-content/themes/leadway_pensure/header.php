@@ -72,19 +72,6 @@ if (!$rsa_rf) {
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-        <script>
-            (function (h, o, t, j, a, r) {
-                h.hj = h.hj || function () {
-                    (h.hj.q = h.hj.q || []).push(arguments)
-                };
-                h._hjSettings = {hjid: 536413, hjsv: 5};
-                a = o.getElementsByTagName('head')[0];
-                r = o.createElement('script');
-                r.async = 1;
-                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
-        </script>
 		
 		<?php if (
 			is_page_template("template_token.php")
@@ -123,37 +110,7 @@ if (!$rsa_rf) {
 		//  {"sitekey":"6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7","callback":captchaSubmit});
 		//}
 		</script> 
-
-		<? endif ?>
-	 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-    </script>
-		<!-- Feedback form recaptcha function --> 
-		<script>
-			function feedbackSubmit(token) {
-				document.getElementById("feedback_captcha").submit();
-			}
-		</script>
-		
-		<?php if (
-			is_page_template("template_career.php")
-		): ?>
-			<!-- Career form recaptcha function -->
-			<script>
-				function careerSubmit(token) {
-					document.getElementById("career_captcha").submit();
-				}
-			</script>
-		<? endif ?>
-		<?php if (
-			is_page_template("template_company.php")
-		): ?>
-			<!-- Company form recaptcha function -->
-			<script>
-				function companySubmit(token) {
-					document.getElementById("company_captcha").submit();
-				}
-			</script>
+		<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 		<? endif ?>
 		
         <script>

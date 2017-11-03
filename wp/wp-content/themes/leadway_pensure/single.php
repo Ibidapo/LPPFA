@@ -101,7 +101,7 @@ if (!$rsa_rf) {
                     <a class="nav-link active" data-toggle="tab" href="#blogHome" role="tab">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#blogInvest" role="tab">Investment Series</a>
+                    <a class="nav-link" data-toggle="tab" href="#articles" role="tab">Articles</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#comic" role="tab">Comic</a>
@@ -111,9 +111,6 @@ if (!$rsa_rf) {
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#careerTip" role="tab">Career Tips</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#articles" role="tab">Articles</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/"><img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" height="80"></a>
@@ -132,11 +129,10 @@ if (!$rsa_rf) {
                     <label class="text-center" for="m-blogTab">Our Blog</label>
                     <select class="form-control" id="m-blogTab" data-aos="fade">
                         <option value="0">Recent releases</option>
-                        <option value="1">Investment Series</option>
+                        <option value="1">Articles</option>
                         <option value="2">Comic</option>
                         <option value="3">Videos</option>
                         <option value="4">Career Tips</option>
-                        <option value="5">Articles</option>
                     </select>
                 </div>
             </form>
@@ -170,9 +166,9 @@ if (!$rsa_rf) {
                     <span class="news-date">
                         <?= the_date(); ?>
                     </span>
-                    <br><br>
+                    <br><br> 
 
-                    <div class="entry-content-page">
+                    <div class="entry-content-page text-justify">
                         <?php the_content(); ?> <!-- Page Content -->
                     </div>
 
@@ -253,7 +249,7 @@ if (!$rsa_rf) {
         endwhile; //resetting the page loop
         wp_reset_query(); //resetting the page query
         ?>
-    </div>
+	</div>
 </div>
 
 <?php get_footer(); ?>
@@ -266,44 +262,38 @@ if (!$rsa_rf) {
         }
 
         $('a[href="#blogHome"]').click(function(){
-            $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#blogHome');
+            $(location).attr('href','https://www.leadway-pensure.com/blog#blogHome');
         });
-
-        $('a[href="#blogInvest"]').click(function(){
-            $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#blogInvest');
+		
+		$('a[href="#articles"]').click(function(){
+            $(location).attr('href','https://www.leadway-pensure.com/blog#articles');
         });
 
         $('a[href="#comic"]').click(function(){
-            $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#comic');
+            $(location).attr('href','https://www.leadway-pensure.com/blog#comic');
         });
 
         $('a[href="#blogVids"]').click(function(){
-            $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#blogVids');
+            $(location).attr('href','https://www.leadway-pensure.com/blog#blogVids');
         });
 
         $('a[href="#careerTip"]').click(function(){
-            $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#careerTip');
-        });
-
-        $('a[href="#articles"]').click(function(){
-            $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#articles');
+            $(location).attr('href','https://www.leadway-pensure.com/blog#careerTip');
         });
 
         $("#m-blogTab").change(function (){
             var i = $(this).val();
 
             if(i == 0){
-                $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#blogHome');
+                $(location).attr('href','https://www.leadway-pensure.com/blog#blogHome');
             }else if(i == 1){
-                $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#blogInvest');
+                $(location).attr('href','https://www.leadway-pensure.com/blog#articles');
             }else if(i == 2) {
-                $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#comic');
+                $(location).attr('href','https://www.leadway-pensure.com/blog#comic');
             }else if(i == 3) {
-                $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#blogVids');
+                $(location).attr('href','https://www.leadway-pensure.com/blog#blogVids');
             }else if(i == 4) {
-                $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#careerTip');
-            }else if(i == 5) {
-                $(location).attr('href','http://www.lppfa-wp.inspireleadership.biz/blog#articles');
+                $(location).attr('href','https://www.leadway-pensure.com/blog#careerTip');
             }
         });
     });

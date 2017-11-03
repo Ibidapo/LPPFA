@@ -66,7 +66,7 @@
                     Receive your token via EMAIL today to get started
                 </div>
                 <div class="col-sm-3 offset-sm-9 col-md-3 offset-md-9 back">
-                    <a class="" href="#">
+                    <a class="" href="/">
                         <figure>
                             <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" alt=""
                                  class="img-fluid back-logo">
@@ -104,7 +104,7 @@
                 <div class="col-12">
                     <div id="requirement">
                         <h6 class="text-center form-pad mOff enroll-heading" style="color:white"> Fill out the form
-                            below to recieve your token instantly! </h6>
+                            below to receive your token instantly! </h6>
 
                         <form data-parsley-validate id="token-data" class="token-data">
                             <input type="hidden" name="formName" value="token-form" />
@@ -166,11 +166,11 @@
                 <div id="r-token">
                     <div class="requirementHolder">
                         <h6 class="text-center">
-                            You're opting to board the <span style="color:#"> Leading </span> team.</br> Below a re the
+                            You're opting to board the <span style="color:#"> Leading </span> team.</br> Below are the
                             requirements necessary to complete the process </h6>
 
                         <ol class="enrollmentRequirement text-center">
-                            <li> Fill out your name, phone number, mobile no and email address to recieve token</li>
+                            <li> Fill out your name, phone number, mobile no and email address to receive token</li>
                             <li> Information on your Personal, Employment and next of Kin</li>
                             <li> White background passport (max size = 500kb)</li>
 
@@ -186,7 +186,7 @@
             <input type="hidden" name="formName" value="token-validate-form" />
             <div class="row">
                 <div class="col-12 col-sm-4 email-field">
-                    <input name="email" class="form-control e-fields" type="text" placeholder="Email-address"
+                    <input name="email" class="form-control e-fields" type="text"
                            required="" id="logon-email" readonly="">
                 </div>
                 <div class="col-12 col-sm-4 token-field">

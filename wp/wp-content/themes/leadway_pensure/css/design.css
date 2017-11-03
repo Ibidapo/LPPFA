@@ -322,8 +322,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     background: #2069a6;
 }
 .invest-bg{
-    background: url("../images/piggy.jpg") no-repeat center;
-    background-size: cover;
+    background-size: cover !important;
     height:400px;
     color: white;
     box-shadow: -4px 0 9px -2px rgba(70, 74, 76, 0.15), 4px 0 9px -2px rgba(70, 74, 76, 0.15);
@@ -374,7 +373,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .culture-pic{
     position: absolute;
     width: 45%;
-    top: -30%;
+    top: -25%;
     box-shadow: 4px -4px 4px rgba(70, 74, 76, 0.15);
 }
 .culture img{
@@ -1156,7 +1155,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 .comps{
     position: relative;
     background: #c0d4ec;
-    height: 450px;
+    height: 500px;
 }
 .comps > .vr{
     top: 30%;
@@ -1286,8 +1285,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
 
 /*Styling for Body Section of Benefits Page*/
 .benefits-bg {
-    background: url(../images/gift.jpg) no-repeat center;
-    background-size: cover;
+    background-size: cover !important;
 }
 .benefits-bg .bg-txt {
     background-color: transparent;
@@ -1759,7 +1757,7 @@ footer .nav-link, footer .nav-link:hover, footer .nav-link:active, footer .nav-l
     height: 250px;
 }
 .blog-img img {
-    height: 300px
+    height: 375px
 }
 .blog-note p{
     margin: 1rem .75rem;
@@ -2304,7 +2302,7 @@ footer .table td, footer .table th {
         font-size: 1.125rem;
     }
 	.comps {
-		height: 485px;
+		height: auto;
 	}
     #comps-slide {
         padding-top: 20px;
@@ -2465,9 +2463,6 @@ footer .table td, footer .table th {
     .vids-txt {
         margin: 5% 25px 25px 25px;
     }
-    .invest-bg {
-        background-size: cover;
-    }
     .invest-txt {
         width: 55%;
     }
@@ -2589,9 +2584,9 @@ footer .table td, footer .table th {
         font-size: 1rem;
         margin-bottom: 0;
     }
-    .comps {
-        height: 530px;
-    }
+	.comps > .col-md-4{
+		height: 50px;
+	}
     .comps h3 {
         margin-top: 10px;
     }
@@ -2857,9 +2852,6 @@ footer .table td, footer .table th {
     .prof-label {
         font-size: 0.875rem;
         margin-bottom: 1rem;
-    }
-    .comps {
-        height: 530px;
     }
     .comps h3 {
         margin-top: 10px;

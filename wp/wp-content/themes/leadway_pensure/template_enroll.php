@@ -139,41 +139,40 @@ if(isset($_POST['token'])) {
                                     <option value="abia">Abia</option>
                                     <option value="abuja">Abuja</option>
                                     <option value="adamawa">Adamawa</option>
-                                    <option value="akwa Ibom">Akwa Ibom</option>
+                                    <option value="akwaibom">Akwa Ibom</option>
                                     <option value="anambra">Anambra</option>
                                     <option value="bauchi">Bauchi</option>
                                     <option value="bayelsa">Bayelsa</option>
                                     <option value="benue">Benue</option>
                                     <option value="borno">Borno</option>
-                                    <option value="cross River">Cross River</option>
-                                    <option value="Delta">Delta</option>
-                                    <option value="Ebonyi">Ebonyi</option>
-                                    <option value="Edo">Edo</option>
-                                    <option value="Ekiti">Ekiti</option>
-                                    <option value="Enugu">Enugu</option>
-                                    <option value="Gombe">Gombe</option>
-                                    <option value="Imo">Imo</option>
-                                    <option value="Jigawa">Jigawa</option>
-                                    <option value="Kaduna">Kaduna</option>
-                                    <option value="Kano">Kano</option>
-                                    <option value="Katsina">Katsina</option>
-                                    <option value="Kebbi">Kebbi</option>
-                                    <option value="Kogi">Kogi</option>
-                                    <option value="Kwara">Kwara</option>
-                                    <option value="Lagos">Lagos</option>
-                                    <option value="Nasarawa">Nasarawa</option>
-                                    <option value="Niger">Niger</option>
-                                    <option value="Ogun">Ogun</option>
-                                    <option value="Ondo">Ondo</option>
-                                    <option value="Osun">Osun</option>
-                                    <option value="Oyo">Oyo</option>
-                                    <option value="Plateau">Plateau</option>
-                                    <option value="Rivers">Rivers</option>
-                                    <option value="Sokoto">Sokoto</option>
-                                    <option value="Taraba">Taraba</option>
-                                    <option value="Yobe">Yobe</option>
-                                    <option value="Zamfara">Zamfara</option>
-
+                                    <option value="crossriver">Cross River</option>
+                                    <option value="delta">Delta</option>
+                                    <option value="ebonyi">Ebonyi</option>
+                                    <option value="edo">Edo</option>
+                                    <option value="ekiti">Ekiti</option>
+                                    <option value="enugu">Enugu</option>
+                                    <option value="gombe">Gombe</option>
+                                    <option value="imo">Imo</option>
+                                    <option value="jigawa">Jigawa</option>
+                                    <option value="kaduna">Kaduna</option>
+                                    <option value="kano">Kano</option>
+                                    <option value="katsina">Katsina</option>
+                                    <option value="kebbi">Kebbi</option>
+                                    <option value="kogi">Kogi</option>
+                                    <option value="kwara">Kwara</option>
+                                    <option value="lagos">Lagos</option>
+                                    <option value="nasarawa">Nasarawa</option>
+                                    <option value="niger">Niger</option>
+                                    <option value="ogun">Ogun</option>
+                                    <option value="ondo">Ondo</option>
+                                    <option value="osun">Osun</option>
+                                    <option value="oyo">Oyo</option>
+                                    <option value="plateau">Plateau</option>
+                                    <option value="rivers">Rivers</option>
+                                    <option value="sokoto">Sokoto</option>
+                                    <option value="taraba">Taraba</option>
+                                    <option value="yobe">Yobe</option>
+                                    <option value="zamfara">Zamfara</option>
                                 </select>
                             </div>
 
@@ -514,13 +513,13 @@ if(isset($_POST['token'])) {
                                     <option value="abia">Abia</option>
                                     <option value="abuja">Abuja</option>
                                     <option value="adamawa">Adamawa</option>
-                                    <option value="akwa Ibom">Akwa Ibom</option>
+                                    <option value="akwaibom">Akwa Ibom</option>
                                     <option value="anambra">Anambra</option>
                                     <option value="bauchi">Bauchi</option>
                                     <option value="bayelsa">Bayelsa</option>
                                     <option value="benue">Benue</option>
                                     <option value="borno">Borno</option>
-                                    <option value="cross River">Cross River</option>
+                                    <option value="crossriver">Cross River</option>
                                     <option value="delta">Delta</option>
                                     <option value="ebonyi">Ebonyi</option>
                                     <option value="edo">Edo</option>
@@ -658,7 +657,7 @@ if(isset($_POST['token'])) {
                         <div class= "col-12 col-sm-6 col-md-4 text-center">
                             <div class="form-group ">
                                 <label class="field-label"> Pin number </label>
-                                <input name=employmentdetailspin type="number" class="form-control col-sm-7 language mx-auto text-center" id="pin" placeholder="Mobile number" style="border: 1px solid white" >
+                                <input name=employmentdetailspin type="text" class="form-control col-sm-7 language mx-auto text-center" id="pin"  data-parsley-minlength="15"  data-parsley-maxlength="15" placeholder="Pin number" style="border: 1px solid white" >
                             </div>
                         </div>
                     </div>
@@ -767,40 +766,40 @@ if(isset($_POST['token'])) {
                                     <option value="abia">Abia</option>
                                     <option value="abuja">Abuja</option>
                                     <option value="adamawa">Adamawa</option>
-                                    <option value="akwa Ibom">Akwa Ibom</option>
+                                    <option value="akwaibom">Akwa Ibom</option>
                                     <option value="anambra">Anambra</option>
                                     <option value="bauchi">Bauchi</option>
                                     <option value="bayelsa">Bayelsa</option>
                                     <option value="benue">Benue</option>
-                                    <option value="Borno">Borno</option>
-                                    <option value="Cross River">Cross River</option>
-                                    <option value="Delta">Delta</option>
-                                    <option value="Ebonyi">Ebonyi</option>
-                                    <option value="Edo">Edo</option>
-                                    <option value="Ekiti">Ekiti</option>
-                                    <option value="Enugu">Enugu</option>
-                                    <option value="Gombe">Gombe</option>
-                                    <option value="Imo">Imo</option>
-                                    <option value="Jigawa">Jigawa</option>
-                                    <option value="Kaduna">Kaduna</option>
-                                    <option value="Kano">Kano</option>
-                                    <option value="Katsina">Katsina</option>
-                                    <option value="Kebbi">Kebbi</option>
-                                    <option value="Kogi">Kogi</option>
-                                    <option value="Kwara">Kwara</option>
-                                    <option value="Lagos">Lagos</option>
-                                    <option value="Nasarawa">Nasarawa</option>
-                                    <option value="Niger">Niger</option>
-                                    <option value="Ogun">Ogun</option>
-                                    <option value="Ondo">Ondo</option>
-                                    <option value="Osun">Osun</option>
-                                    <option value="Oyo">Oyo</option>
-                                    <option value="Plateau">Plateau</option>
-                                    <option value="Rivers">Rivers</option>
-                                    <option value="Sokoto">Sokoto</option>
-                                    <option value="Taraba">Taraba</option>
-                                    <option value="Yobe">Yobe</option>
-                                    <option value="Zamfara">Zamfara</option>
+                                    <option value="borno">Borno</option>
+                                    <option value="crossriver">Cross River</option>
+                                    <option value="delta">Delta</option>
+                                    <option value="ebonyi">Ebonyi</option>
+                                    <option value="edo">Edo</option>
+                                    <option value="ekiti">Ekiti</option>
+                                    <option value="enugu">Enugu</option>
+                                    <option value="gombe">Gombe</option>
+                                    <option value="imo">Imo</option>
+                                    <option value="jigawa">Jigawa</option>
+                                    <option value="kaduna">Kaduna</option>
+                                    <option value="kano">Kano</option>
+                                    <option value="katsina">Katsina</option>
+                                    <option value="kebbi">Kebbi</option>
+                                    <option value="kogi">Kogi</option>
+                                    <option value="kwara">Kwara</option>
+                                    <option value="lagos">Lagos</option>
+                                    <option value="nasarawa">Nasarawa</option>
+                                    <option value="niger">Niger</option>
+                                    <option value="ogun">Ogun</option>
+                                    <option value="ondo">Ondo</option>
+                                    <option value="osun">Osun</option>
+                                    <option value="oyo">Oyo</option>
+                                    <option value="plateau">Plateau</option>
+                                    <option value="rivers">Rivers</option>
+                                    <option value="sokoto">Sokoto</option>
+                                    <option value="taraba">Taraba</option>
+                                    <option value="yobe">Yobe</option>
+                                    <option value="zamfara">Zamfara</option>
                                 </select>
                             </div>
                         </div>
@@ -894,117 +893,116 @@ if(isset($_POST['token'])) {
                     <h5 class="text-center f-space"> 1. Personal Information </h5>
                     <!-- line 1 start -->
                     <div class="row">
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                              <label class="field-label"> Title </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dp-email">
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dp-email" readonly="">
                             
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
 
                             <div class="form-group">
                                 <label class="field-label"> First name </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="d-fn">
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="d-fn" readonly="">
                             </div>
 
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                         <div class="col-12 col-sm-6 col-md-4 text-center mOff">
 
-                                <div class="form-group ">
-                                 <label class="field-label"> Middle Name  </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dp-mn" placeholder="" readonly>
+ <div class="form-group ">
+ <label class="field-label"> Middle Name  </label>
+ <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="d-mn" placeholder="" readonly="">
+ </div>
+ 
+ </div>
+   <hr class="d-color">
+   <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
+      <div class="form-group">
+         <label class="field-label"> Last Name </label>
+             <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="d-ln" readonly="">
                             </div>
-                             <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
-                             <label class="field-label"> Last name </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="d-ln">
-                            
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+      
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
 
                             <div class="form-group">
                                 <label class="field-label"> Gender </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dGender">
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dGender" readonly="">
                             </div>
 
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
 
                                 <div class="form-group ">
-                                 <label class="field-label"> Email </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dp-mno" placeholder="" readonly>
+                                 <label class="field-label"> Mobile </label>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dp-mno" placeholder="" readonly="">
                             </div>
                         </div>
 
-                        <!--end of line 1 -->
-                        <hr class="d-color">
-                        <!-- line 2 start -->
-
-                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
-                            <div class="form-group">
-                                <label class="field-label"> Status </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dStatus" readonly>
-                            </div>
-                        </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                    <!-- end of line 3 -->
+                       <hr class="d-color">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
  <div class="form-group">
                                 <label class="field-label"> Birthday </label>
-                                <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dBirthday" readonly>
+                                <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dBirthday" readonly="">
                             </div>
                            
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
 <div class="form-group ">
                                 <label class="field-label"> State of Origin </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dSoo" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dSoo" readonly="">
+                            </div>
+                        </div>
+
+<div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
+      <div class="form-group">
+         <label class="field-label"> Status </label>
+             <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dStatus" readonly="">
                             </div>
                         </div>
 
 
-                        <!-- end of line 2 -->
-                        <hr class="d-color">
-                        <!-- line 3 start -->
+<hr class="d-color">
 
-                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
+ <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group">
                                 <label class="field-label"> Local Government Area </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dLga" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dLga" readonly="">
                             </div>
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                            <div class="form-group">
                                 <label class="field-label"> Nationality </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dNation" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dNation" readonly="">
                             </div>
            
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">    
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">    
                                <div class="form-group">
                                 <label class="field-label"> ID type </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dIdt" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dIdt" readonly="">
                             </div>
-                        </div>
-                    </div>
-                    <!-- end of line 3 -->
-                    <hr class="d-color">
+                        </div><hr class="d-color">
 
                     <!-- employment review start -->
                     <h5 class="text-center f-space"> 2. Employment Details </h5>
                     <!-- line 1 start -->
                     <div class="row">
-                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff" readonly>
+                        <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff" readonly="">
                             <label class="field-label"> Name of organization </label>
-                            <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dOrg" readonly>
+                            <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dOrg" readonly="">
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group">
                                 <label class="field-label"> Address </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dOrgAdd" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dOrgAdd" readonly="">
                             </div>
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
 
                             <div class="form-group">
                                 <label class="field-label"> LGA </label>
-                                <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dOrgLga" readonly>
+                                <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dOrgLga" readonly="">
                             </div>
                         </div>
 
@@ -1013,22 +1011,22 @@ if(isset($_POST['token'])) {
 
                         <!-- line 2 start -->
 
-                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group ">
                                 <label class="field-label"> State of origin </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dOrgState" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dOrgState" readonly="">
                             </div>
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group ">
                                 <label class="field-label"> File No/Service No </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dOrgNo" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dOrgNo" readonly="">
                             </div>
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group ">
                                 <label class="field-label"> Date of employment </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dDoe" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dDoe" readonly="">
                             </div>
                         </div>
 
@@ -1038,22 +1036,22 @@ if(isset($_POST['token'])) {
                         <hr class="d-color">
                         <!-- line 3 start -->
 
-                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group">
                                 <label class="field-label"> State of posting </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dSop" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dSop" readonly="">
                             </div>
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group ">
                                 <label class="field-label"> Current PFA  </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dcpfa" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dcpfa" readonly="">
                             </div>
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group ">
                                 <label class="field-label"> Pin number  </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dpin" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dpin" readonly="">
                             </div>
                         </div>
                     </div>
@@ -1067,21 +1065,21 @@ if(isset($_POST['token'])) {
                     <h5 class="text-center f-space"> 3. Next of Kin </h5>
                     <!-- line 1 start -->
                     <div class="row">
-                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
                             <label class="field-label"> Title </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dk-title" readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dk-title" readonly="">
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group">
                                 <label class="field-label"> Last name </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dk-lname" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dk-lname" readonly="">
                             </div>
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
 
                             <div class="form-group">
                                 <label class="field-label"> First name </label>
-                                <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dk-fname" readonly>
+                                <input type="text" class="form-control language col-sm-7 mx-auto text-center" id="dk-fname" readonly="">
                             </div>
                         </div>
 
@@ -1091,20 +1089,20 @@ if(isset($_POST['token'])) {
 
                         <!-- line 2 start -->
 
-                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group ">
                                 <label class="field-label"> Relationship </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="drelationship" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="drelationship" readonly="">
                             </div>
                         </div>
-                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
                             <label class="field-label"> Gender </label>
-                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dkgender" readonly>
+                            <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dkgender" readonly="">
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group ">
                                 <label class="field-label"> Address </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dkadd" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dkadd" readonly="">
                             </div>
                         </div>
 
@@ -1115,22 +1113,22 @@ if(isset($_POST['token'])) {
 
                         <!-- line 3 start -->
 
-                        <div class= "form-group col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="form-group col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group">
                                 <label class="field-label"> State of origin </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dksoo" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dksoo" readonly="">
                             </div>
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group ">
                                 <label class="field-label"> LGA </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dklga" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dklga" readonly="">
                             </div>
                         </div>
-                        <div class= "col-12 col-sm-6 col-md-4 text-center mOff">
+                        <div class="col-12 col-sm-6 col-md-4 text-center mOff">
                             <div class="form-group ">
                                 <label class="field-label"> Mobile no </label>
-                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dkmno" readonly>
+                                <input type="text" class="form-control col-sm-7 language mx-auto text-center" id="dkmno" readonly="">
                             </div>
                         </div>
                     </div>
@@ -1138,7 +1136,6 @@ if(isset($_POST['token'])) {
 
                     <!-- next of kin review end -->
                 </div>
-
 
 
 
@@ -1150,21 +1147,52 @@ if(isset($_POST['token'])) {
                 </div>
             </div>
             <!-- Confirmation page end -->
-        </form>
+            </div>
+    </form>
+    
 
 
-    <div class=row id='thankyou' style="display:none;">
+    <div class=row id='thankyou' style='display:none;margin-top:5%'>
         <div class='col-12'>
-
             <p class=text-center>
-                Some thank you message!
+              Welcome onboard the leading team. To complete your registration, a sales representative 
+              will visit you and request the following information 
             </p>
-
+            <div class=row> 
+             <div class='col-12 col-md-4 text-center'>
+              <figure>
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/images/print.png" alt="" class="img-fluid back-logo">
+                    <figcaption class="back" style="font-size:20px">
+                    Biometrics i.e Fingerprint
+                    </figcaption>
+                </figure> 
+         </div>
+              <div class='col-12 col-md-4 text-center'>
+              <figure>
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/images/sign.png" alt="" class="img-fluid back-logo">
+                    <figcaption class="back" style="font-size:20px">
+                    Signature
+                    </figcaption>
+                </figure> 
+         </div>
+         
+         <div class='col-12 col-md-4 text-center'>
+              <figure>
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/images/id.png" alt="" class="img-fluid back-logo">
+                    <figcaption class="back" style="font-size:20px">
+                    Means of identification
+                    </figcaption>
+                </figure> 
+         </div>
+         </div>
+                
+        
         </div>
     </div>
-    <div class=row>
+
+<div class=row style="margin-top:3%">
         <div class="col-12">
-            <a class="" href="/">
+            <a class="/">
                 <figure>
                     <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo-alt.png" alt="" class="img-fluid back-logo">
                     <figcaption class="back" style="font-size:10px"><i class="fa fa-arrow-left" aria-hidden="true"></i>
@@ -1174,15 +1202,26 @@ if(isset($_POST['token'])) {
             </a>
         </div>
     </div>
-</div>
 
 <div class="modal fade enroll-error" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
-            Some error content
+           <div class=row> 
+             <div class='col-12 text-center'>
+              <figure>
+                    <img src="<?php echo get_bloginfo('template_directory'); ?>/images/network.png" alt="" class="img-fluid back-logo">
+                    <figcaption class="back" style="font-size:20px">
+                    OOPS! Network time out... </br>
+                    Try again please
+                    </figcaption>
+                </figure> 
+         </div>
+         </div>
         </div>
     </div>
 </div>
+</div>
+
 
 <?php get_footer(); ?>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/progressbar.js"></script>
@@ -1422,7 +1461,9 @@ if(isset($_POST['token'])) {
         var responseY  = _('k-soo');
         var responseZ  = _('k-lga');
         var responseA1 = _('k-mno');
-        var responseA2 = _('fn')
+        var responseA2 = _('fn');
+        var responseA3 = _('mn');
+        var responseA4 = _('ln');
 
 
         //accessing all select box ids
@@ -1465,10 +1506,12 @@ if(isset($_POST['token'])) {
         var displayY  = __('dksoo');
         var displayZ  = __('dklga');
         var displayA1 = __('dkmno');
-        var displayA2 = __('d-fn')
+        var displayA2 = __('d-fn');
+        var displayA3 = __('d-mn');
+        var displayA4 = __('d-ln');
 
-        var responseArray1 = [responseA, responseB, responseC, responseD, responseE, responseF, responseG, responseH, responseI, responseA2];
-        var displayArray1 = [displayA, displayB, displayC, displayD, displayE, displayF, displayG, displayH, displayI, displayA2];
+        var responseArray1 = [responseA, responseB, responseC, responseD, responseE, responseF, responseG, responseH, responseI];
+        var displayArray1 = [displayA, displayB, displayC, displayD, displayE, displayF, displayG, displayH, displayI];
 
 
         function validateemail(x) {
@@ -1533,64 +1576,62 @@ if(isset($_POST['token'])) {
                     lgaArray = ["Ado|ado", "Agatu|agatu", "Apa|apa", "Buruku|buruku", "Gboko|gboko", "Guma|guma", "Gwer East|gwer east", "Gwer West|gwer west","Kastina-Ala|kastina-ala","Kwande|kwande","Logo|logo","Makurdi|makurdi", "Obi|obi","Ogbadibo|ogbadibo","Oju|oju","Okpokwu|okpokwu","Ohimini|ohimini","Oturkpo|oturkpo","Tarka|tarka","Ukum|ukum","Ushongo|ushongo","Vandeikya|vandeikya"];
                 }else if(state === "bornu"){
                     lgaArray = ["Abadam|abadam", "Askira|askira", "Bama|bama", "Bayo|bayo", "Biu| biu", "Chibok|chibok", "Damboa|damboa", "Dikwa|dikwa", "Gubio|gubio", "Guzamala|guzamala", "Gwoza|gwoza", "Hawul|hawul", "Jere|jere", "Kaga|kaga","Kala/Balge|kala/balge","Kondua|kondua","Kukuwa|kukuwa","Kwaya Kusar|Kwaya kusar", "Mafa|mafa","Magumeri|magumeri","Maiduguri|maiduguri","Marte|marte","Mobbar|mobbar","Monguno|monguno","Ngala|ngala","Nganzai|nganzai","Shani|shani"];
-                }else if(state === "cross-river"){
-                    Akpabuyo 
-
+                }else if(state === "crossriver"){
                     lgaArray = ["Akpabuyo|akpabuyo", "Odukpani|Odukpani","Akamkpa|Akamkpa","Biase|Biase","Abi|Abi","Ikom|Ikom", "Yarkur|Yakur", "Odubra|Odubra", "Boki|boki", "Ogoja|Ogoja", "Boki|Boki", "Ogoja|Ogoja", "Yala|yala", "Obanliku|Obanliku", "Obudu|Obudu","Calabar South |Calabar South", "Etung|Etung", "Bekwara|Bekwara", "Bakassi|Bakassi", "Calabar Municipality| Calabar Municipality"];
                 }else if(state === "delta"){
                     lgaArray = [ "Asaba Oshimili| Asaba Oshimili", "Aniocha|Aniocha", "Aniocha south| Aniocha south", "Ika South|Ika South", "Ika North-East| Ika North-East", "Ndokwa West| Ndokwa West", "Ndokwa East|Ndokwa East", "Isoko south| Isoko South","Isoko North| Isoko North", "Bomadi|Bomadi", "Burutu|Burutu", "Ughelli South| Ughelli South", "Ughelli North| Ughelli North", "Ethiope West | Ethiope West", "Ethiope East| Ethiope East", "Sapele| Sapele", "Okpe|Okpe", "Warri North|Warri North", "Warri South|Warri South", "Uvwie|Uvwie", "Udu|Udu", "Warri Central|Warri Central", "Ukwani|Ukwani","Oshimili North|Oshimili North", "Patani|Patani"];
                 }else if (state === "ebonyi"){
                     lgaArray = ["Afikpo South| Afikpo South", "Afikpo North|Afikpo North", "Onicha|Onicha","Ohaozara|Ohaozara","Abakaliki|Abakaliki","Ishielu|Ishielu","lkwo|lkwo","Ezza|Ezza","Ezza South| Ezza South","Ohaukwu|Ohaukwu","Ebonyi|Ebonyi","Ivo|Ivo"];
                 }else if (state === "edo"){
-                    lgaArray = [];
+                    lgaArray = ["Esan North-East|Esan North-East","Esan Central|Esan Central","Esan West|Esan West","Egor|Egor","Ukpoba|Ukpoba","Central|Central","Etsako Central|Etsako Central","Igueben|Igueben","Oredo|Oredo","Ovia South-West|Ovia South-West","Ovia South-East|Ovia South-East","Orhionwon|Orhionwon","Uhunmwonde|Uhunmwonde","Etsako East|Etsako East","Esan South-East|Esan South-East"];
                 }else if (state === "ekiti"){
-                    lgaArray = [];
+                    lgaArray = ["Ado|Ado","Ekiti East|Ekiti East", "Ekiti West|Ekiti West","Emure/Ise/Orun|Emure/Ise/Orun","Ekiti South-West|Ekiti South-West","Ikare|Ikare","Irepodun|Irepodun","Ijero|Ijero","Ido/Osi|Ido/Osi","Oye|Oye","Ikole|Ikole","Moba|Moba","Gboyin|Gboyin","Efon|Efon","Ise/Orun|Ise/Orun","Ilejemeje|Ilejemeje"];
                 }else if (state === "enugu"){
-                    lgaArray = [];
+                    lgaArray = ["Enugu South|Enugu South","Igbo-Eze South|Igbo-Eze South","Enugu North|Enugu North","Nkanu|Nkanu","Udi Agwu|Udi Agwu","Oji-River|Oji-River","Ezeagu|Ezeagu","Igbo-Eze North|Igbo-Eze North","Isi-Uzo|Isi-Uzo","Nsukka|Nsukka","Igbo-Ekiti|Igbo-Ekiti","Uzo-Uwani|Uzo-Uwani","Enugu East|Enugu East","Aninri|Aninri","Nkanu East|Nkanu East","Udenu|Udenu"];
                 }else if (state === "gombe"){
-                    lgaArray = [];
+                    lgaArray = ["Akko|Akko","Balanga|Balanga","Billiri|Billiri","Dukku|Dukku","Kaltungo|Kaltungo","Kwami|Kwami","Shomgom|Shomgom","Funakaye|Funakaye","Gombe|Gombe","Nafada/Bajoga|Nafada/Bajoga","Yamaltu/Delta|Yamaltu/Delta"];
                 }else if (state === "imo"){
-                    lgaArray = [];
+                    lgaArray = ["Aboh-Mbaise|Aboh-Mbaise","Ahiazu-Mbaise|Ahiazu-Mbaise","Ehime-Mbano|Ehime-Mbano","Ezinihitte|Ezinihitte","Ideato North|Ideato North","Ideato South|Ideato South","Ihitte/Uboma|Ihitte/Uboma","Ikeduru|Ikeduru","Isiala Mbano|Isiala Mbano","Isu|Isu","Mbaitoli|Mbaitoli","Ngor-Okpala|Ngor-Okpala","Njaba|Njaba","Nwangele|Nwangele","Nkwerre|Nkwerre","Obowo|Obowo","Oguta|Oguta","Ohaji/Egbema|Ohaji/Egbema","Okigwe|Okigwe","Orlu|Orlu","Orsu|Orsu","Oru East|Oru East","Oru West|Oru West","Owerri-Manucipal|Owerri-Manucipal","Owerri North|Owerri North","Owerri West|Owerri West"];
                 }else if (state === "jigawa"){
-                    lgaArray = [];
+                    lgaArray = ["Auyo|Auyo","Babura|Babura","Birni Kudu|Birni Kudu","Biriniwa|Biriniwa","Buji|Buji","Dutse|Dutse","Gagarawa|Gagarawa","Garki|Garki","Gumel|Gumel","Guri|Guri","Gwaram|Gwaram","Gwiwa|Gwiwa","Hadejia|Hadejia","Jahun|Jahun","kafin Hausa|Kafin Hausa","Kaugama Kazaure|Kaugama Kazaure","Kiri Kasamma","Kiyawa|Kiyawa","Maigatari|Maigatari","Malam Madori|Malam Madori","Miga|Miga","Ringim|Ringim","Roni|Roni","Sule-Tankarkar|Sule-Tankarkar","Taura|Taura","Yankwasi|Yankwashi"];
                 }else if (state === "kaduna"){
-                    lgaArray = [];
+                    lgaArray = ["Birni-Gwari|Birni-Gwari","Chikun|Chikun","Giwa|Giwa","Igabi|Igabi","Ikara|Ikara","Jaba|Jaba","Jema'a|Jema'a","Kachia|Kachia","Kaduna North|Kaduna North","Kaduna South|Kaduna South","Kagarko|Kargako","Kajuru|kajuru","Kaura|Kaura","Kauru|Kauru","Kabau|Kabau","Kudan|Kudan","Lere|Lere","Makarfi|Makarfi","Sabon-Gari|Sabon-Gari","Sanga|Sanga","Soba|Soba","Zango-Kataf|Zango-Kataf","Zaria|Zaria"];
                 }else if (state === "kano"){
-                    lgaArray = [];
+                    lgaArray = ["Ajingi|Ajingi","Albasu|Albasu","Bagwai|Bagwai","Bebeji|Bebeji","Bichi|Bichi","Bunkure|Bunkure","Dala|Dala","Dambatta|Dambatta","Dawakin Kudu|Dawakin Kudu","Dawakin Tofa|Dawakin Tofa","Doguwa|Doguwa","Fagge|Fagge","Gabasawa|Gabasawa","Garko|Garko","Garum|Garum","Mallam|Mallam","Gaya|Gaya","Gezawa|Gezawa","Gwale|Gwale","Gwarzo|Gwarzo","Kabo|Kabo","Kano Manucipal|Kanno Manucipal","Karaye|Karaye","Kibiya|Kibiya","Kiru|Kiru","Kumbotso|Kombotso","Kunchi|Kunchi","Kura|Kura","Madobi|Madobi","Makoda|Makoda","Minjibir|Minjibir","Nasarawa|Nasarawa","Rano|Rano","Rimin Gado|Rimin Gado","Rogo|Rogo","Shanono|Shanono","Sumaila|Sumaila","Takali|Takali","Tarauni|Tarauni","Tofa|Tofa","Tsanyawa|Tsanyawa","Tudun Wada|Tudun Wada","Ungogo|Ungogo","Warawa|Warawa","Wudil|Wudil"];
                 }else if (state === "kastina"){
-                    lgaArray = [];
+                    lgaArray = ["Bakori|Bakori","Batagarawa|Batagarawa","Batsari|Batsari","Baure|Baure","Bindawa|Bindawa","Charanchi|Charanchi","Dandume|Dandume","Danja|Danja","Dutsi|Dutsi","Dutsin-Ma|Dutsin-Ma","Faskari|Faskari","Funtua|Funtua","Ingawa|Ingawa","Jibia|Jibia","Kafur|Kafur","Kaita|Kaita","Kankara|Kankara","Kankia|Kankia","Katsina|Katsina","Kurfi|Kurfi","Kusada|Kusada","Mai'Adua|Mai'Adua","Malumfashi|Malumfashi","Mani|Mani","Matazuu|Matazuu","Musawa|Musawa","Rimi|Rimi","Sabuwa|Sabuwa","Safana|Safana","Sandamu|Sandamu","Zango|Zango"];
                 }else if (state === "kebbi"){
-                    lgaArray = [];
+                    lgaArray = ["Aleiro|Aleiro","Arewa-Dandi|Arewa-Dandi","Argungu|Argungu","Augie|Augie","Bagudo|Bagudo","Birnin Kebbi|Birnin Kebbi","Bunza|Bunza","Dandi|Dandi","Fakai|Fakai","Gwandu|Gwandu","Jega|Jega","Kalgo|Kalgo","Koko/Besse|Koko/Besse","Maiyama|Maiyama","Ngaski|Ngaski","Sakaba|Sakaba","Shanga|Shanga","Suru|Suru","Wasagu/Danko|Wasagu/Danko","Yauri|Yauri","Zuru|Zuru"];
                 }else if (state === "kogi"){
-                     lgaArray = [];
+                     lgaArray = ["Adavi|Adavi","Ajaokuta|Ajaokuta","Ankpa|Ankpa","Bassa|Bassa","Dekina|Dekina","Ibaji|Ibaji","Idah|Idah","Igalamela-Odolu|Igalamela-Odolu","Ijumu|Ijumu","Kabba/Bunu|Kabba/Bunu","Kogi|Kogi","Lokoja|Lokoja","Mopa-Muro|Mopa-Muro","Ofu|Ofu","Ogori/Mangongo|Ogori/Mangongo","Okehi|Okehi","Okene|Okene","Olamabolo|Olamabolo","Omala|Omala","Yagba East|Yagba East","Yagba West|Yagba West"];
                 }else if (state === "kwara"){
-                    lgaArray = [];
+                    lgaArray = ["Asa|Asa","Baruten|Baruten","Edu|Edu","Ekiti|Ekiti","Ifelodun|Ifelodun","Ilorin East|Ilorin East","Ilorin West|Ilorin West","Irepodun|Irepodun","Isin|Isin","Kaiama|Kaiama","Moro|Moro","Offa|Offa","Oke-Ero|Oke-Ero","Oyun|Oyun","Pategi|Pategi"];
                 }else if (state === "lagos"){
-                    lgaArray = [];
+                    lgaArray = ["Agege|Agege","Ajeromi-Ifelodun|Ajeromi-Ifelodun","Alimosho|Alimosho","Amuwo-Odofin|Amuwo-Odofin","Apapa|Apapa","Badagry|Badagry","Epe|Epe","Eti-Osa|Eti-Osa","Ibeju/Lekki|Ibeju/Lekki","Ifako-Ijaye|Ifako-Ijaiye","Ikeja|Ikaja","Ikorodu|Ikorodu","Kosofe|Kosofe","Lagos Island|Lagos Island","Lagos Mainland|Lagos Mainland","Mushin|Mushin","Ojo|Ojo","Oshodi/Isolo|Oshodi/Isolo","Shomolu|Shomolu","Surulere|Surulere"];
                 }else if (state === "nasarawa"){
-                   lgaArray = [];
+                   lgaArray = ["Akwanga|Akwanga","Awe|Awe","Doma|Doma","Karu|Karu","Keana|Keana","Keffi|Keffi","Kokona|Kokona","Lafia|Lafia","Nasarawa|Nasarawa","Nasarawa-Eggon|Nasarawa-Eggon","Obi|Obi","Toto|Toto","Wamba|Wamba"];
                 }else if ( state === "niger"){
-                   lgaArray = [];
+                   lgaArray = ["Agaie|Agaie","Agwara|Agwara","Bida|Bida","Borgu|Borgu","Bosso|Bosso","Chanchaga|Chanchaga","Edati|Edati","Gbako|Gbako","Gurara|Gurara","Katcha|Katcha","Kontagora|Kontagora","Lapai|Lapai","Lavun|Lavun","Magama|Magama","Mariga|Mariga","Mashegu|Mashegu","Mokwa|Mokwa","Muya|Muya","Pailoro|Pailoro","Rafi|Rafi","Rijau|Rijau","Shiroro|Shiroro","Tafa|Tafa","Wushishi|Wushishi"];
                 }else if ( state === "ogun"){
-                    lgaArray = [];
+                    lgaArray = ["Abeokuta North|Abeokuta North","Abeokuta South|Abeokuta South","Ado-Odo/Ota|Ado-Odo/Ota","Egbado North|Egbado North","Egbado South|Egbado South","Ewekoro|Ewekoro","Ifo|Ifo","Ijebu East|Ijebu East","Ijebu North|Ijebu North","Ijebu North-East|Ijebu North-East","Ijebu Ode|Ijebu Ode","Ikenne|Ikenne","Imeko-Afon|Imeko-Afon","Ipokia|Ipokia","Obafemi-Owode|Obafemi-Owode","Ogun Waterside|Ogun Waterside","Odeda|Odeda","Odogbolu|Odogbolu","Remo North|Remo North","Shagamu|Shagamu"];
                 }else if (state === "ondo"){
-                    lgaArray = [];
+                    lgaArray = ["Akoko North-East|Akoko North-East","Akoko North-West|Akoko North-West","Akoko South-East|Akoko South-East","Akoko South-West|Akoko South-West","Akure North|Akure North","Akure South|Akure South","Ese-Odo|Ese-Odo","Idanre|Idanre","Ifedore|Ifedore","Ilaje|Ilaje","Ile-Oluji|Ile-Oluji","Okeigbo|Okeigbo","Irele|Irele","Odigbo|Odigbo","Okitipupa|Okitipupa","Ondo East|Ondo East","Ondo West|Ondo West","Ose|Ose","Owo|Owo"];
                 }else if (state === "osun"){
-                    lgaArray = [];
+                    lgaArray = ["Aiyedade|Aiyedade","Aiyedire|Aiyedire","Atakumosa East|Atakumosa East","Atakumosa West|Atakumosa West","Boluwaduro|Boluwaduro","Boripe|Boripe","Ede North|Ede North","Ede South|Ede South","Egbedore|Egbedore","Ejigbo|Ejigbo","Ife Central|Ife Central","Ife East|Ife East","Ife North|Ife North","Ife South| Ife South","Ifedayo|Ifedayo","Ifelodun|Ifelodun","Ila|Ila", "Ilesha East|Ilesha East","Ilesha West|Ilessha West","Irepodun|Irepodun","Irewole|Irewole","Isokan|Isokan","Iwo|Iwo","Obokun|Obokun","Odo-Otin|Odo-Otin","Ola-Oluwa|Ola-Oluwa","Olorunda|Olorunda","Oriade|Oriade","Orolo|Orolu","Osogbo|Osogbo"];
                 }else if (state === "oyo"){
-                    lgaArray = [];
+                    lgaArray = ["Afijio|Afijio","Akinyele|Akinyele","Atiba|Atiba","Atigbo|Atigbo","Egbeda|Egbeda","Ibadan Central|Ibadan Central","Ibadan North|Ibadan North","Ibadan North-West|Ibadan North-West","Ibadan South East|Ibadan South-East","Ibadan South-West|Ibadan South-West","Ibarapa Central|Ibarapa Central","Ibarapa East|Ibarapa East","Ibarapa North|Ibarapa North","Ido|Ido","Irepo|Irepo","Iseyin|Iseyin","Itesiwaju|Itesiwaju","Iwajowa|Iwajowa","Kajola|Kajola","Lagelu Ogbomosho North|Lagelu Ogbomosho North","Ogbomosho South|Ogbomosho South","Ogo Oluwa|Ogo Oluwa","Olorunsogs|Olorunsogo","Oluyole|Oluyole","Ona-Ara|Ona-Ara","Orelope|Orelope","Ori ire|Ori Ire","Oyo East|Oyo East","Oyo West|Oyo West","Saki East|Saki East","Saki West|Saki West","Surulere|Surulere"];
                 }else if (state === "plateau"){
-                    lgaArray = [];
+                    lgaArray = ["Barikin Ladi|Barikin Ladi","Bassa|Bassa","Bokkos|Bokkos","Jos East|Jos East","Jos North|Jos North","Jos South|Jos South","Kanam|Kanam","Kanke|Kanke","Langtang North|Langtang North","Langtang South|Langtang South","Mangu|Mangu","Mikang|Mikang","Pankshin|Pankshin","Qua;an Pan|Qua'an Pan","Riyom|Riyom","Shendam|Shendam","Wase|Wase"];
                 }else if (state === "rivers"){
-                    lgaArray = [];
+                    lgaArray = ["Abua/Odual|Abua/Odual","Ahoada East|Ahaoda East","Ahoada West|Ahaoda West","Akuku Toru|Akuku Toru","Andoni|Andoni","Asari-Toru|Asari-Toru","Bonny|Bonny","Degema|Degema","Emohua|Emohua","Eleme|Eleme","Etche|Etche","Gokana|Gokana","Ikwerre|Ikwerre","Khana|Khana","Obia/Akpor|Obia/Akpor","Ogba/Egbema/Ndoni|Ogba/Egbema/Ndoni","Ogu/Bolo|Ogu/Bolo","Okrika|Okrika","Omumma|Omumma","Opobo/Nkoro|Opobo/Nkoro","Oyigbo/Oyigbo","Port-Harcourt|Port-Harcourt","Tai|Tai"];
                 }else if (state === "sokoto"){
-                     lgaArray = [];
+                     lgaArray = ["Binji|Binji","Bodinga|Bodinga","Dange-Shnsi|Dange-Shinsi","Gada|Gada","Goronyo|Goronyo","Gudu|Gudu","Gawabawa|Gawabawa","Illela|Illela","Isa|Isa","Kware|Kware","Kebbe|Kebbe","Rabah|Rabah","Sabon Birni|Sabon Birni","Shagari|Shagari","Silame|Silame","Sokoto North|Sokoto North","Sokoto South|Sokoto South","Tanbuwal|Tanbuwal","Tqngaza|Tqngaza","Tureta|Tureta","Wamako|Wamako","Wurno|Wurno","Yabo|Yabo"];
                 }else if (state === "taraba"){
-                    lgaArray = [];
+                    lgaArray = ["Ardo-Kola|Ardo-Kola","Bali|bali","Donga|Donga","Gashaka|Gashaka","Cassol|Cassol","Ibi|Ibi","Jalingo|Jalingo","Karin-Lamido|Karin-Lamido","Kurmi|Kurmi","Lau|Lau","Sardauna|Sadauna","Takum|Takum","Ussa|Ussa","Wukari|Wukari","Yorro|Yorro","Zing|Zing"];
                 }else if (state === "yobe"){
-                    lgaArray = [];
+                    lgaArray = ["Bade|Bade","Bursari|Bursari","Damaturu|Damaturu","Fika|Fika","Fune|Fune","Geidam|Geidam","Gujba|Gujba","Jakusko|Jakusko","Karasuwa|Karasuwa","Karawa|Karawa","Machina|Machina","Nangere|Nangere","Nguru Potiskum|Nguru Potiskum","Tarmua|Tarmua","Yunusari|Yunusari","Yusufari|Yusufari"];
                 }else if (state === "zamfara"){
-                    lgaArray = [];
+                    lgaArray = ["AnkavAnka","Bakura|Bakura","Birnin Magaji|Birnin Magaji","Bukkuyum|Bukkuyum","Bungudu|Bungudu","Gummi|Gummi","Guasu|Gusau","Kaura|kaura","Namoda|Namoda","Maradun|Maradun","Maru|Maru","Shinkafi|Shinkafi","Talata Mafara|Talata Mafara","Tsafe|Tsafe","Zurmi|Zurmi"];
                 }else{
 
                  return false 
@@ -1639,18 +1680,90 @@ if(isset($_POST['token'])) {
 
                 
                 
-                if (state === "abia"){
+               if (state === "abia"){
 
-                    lgaArray = [ "Aba North|a", "Aba South|b", "Arochukwu|c", "Bende|d", "Ikwuano|e", "Isiala-Ngwa North |f", "Isiala-Ngwa South |b", "Isuikwato|c", "Obi Nwa|d", "Ohafia|e", "Osisioma |f","Ngwa|g", "Ugwunagbo|g", "Ukwa East|g", "Ukwa West|g","Umuahia North|g","Umuahia South|g", "Umu-Neochi|h" ];
+                    lgaArray = [ "Aba North| aba north", "Aba South| aba south", "Arochukwu| Arochukwu", "Bende|bende", "Ikwuano| ikwuano", "Isiala-Ngwa North | isiala-ngwa north", "Isiala-Ngwa South | isiala-ngwa south", "Isuikwato| isuikwato", "Obi Nwa| obi nwa", "Ohafia| ohafia", "Osisioma | osisioma","Ngwa| ngwa", "Ugwunagbo| ugwunagbo", "Ukwa East| ukwa", "Ukwa West| ukwa west","Umuahia North| umuahia north","Umuahia South| umuahia south", "Umu-Neochi| umu-neochi" ];
                    
 
 
                 }else if (state === "abuja"){
-                    lgaArray =  [ "Gwagwalada|g", "Kuje|h", "Abaji|i", "Abuja Municipal|j", "Bwari|k", "Kwali|i" ];
+                    lgaArray =  [ "Gwagwalada|gwagwalada", "Kuje| kuje", "Abaji| abaji", "Abuja Municipal| Abuja municipal", "Bwari| bwari", "Kwali|kwali" ];
 
-                }else 
+                }else if (state === "adamawa"){
+                    lgaArray  = ["Demsa|demsa", "Fufore|fufore", "Ganaye|ganaye", "Gireri|gireri", "Gombi|gombi", "Guyuk|guyuk", "Hong|hong", "Jada|jada", "Lamurde|lamurde", "Madagali|madagali", "Maiha|maiha", "Mayo-Belwa|mayo-belwa", "Michika|michika", "Mubi North|mubi north", "Mubi South| mubi south", "Numan|numan", "Shelleng|shelleng", "Song|song", "Toungo|toungo", "Yola North| yola north", "Yola South|yola south"];
+
+                }else if (state === "akwaibom"){
+                    lgaArray = ["Abak|abak", "Eastern Obolo|eastern obolo", "Eket|eket","Esit Eket|esit eket","Essien Udim|essien udim", "Etim Ekpo|etim ekpo", "Etinan|etinan", "Ibeno|ibeno", "Ibeskipo Asutan|ibeskipo asutan","Ibiono Ibom|ibiono ibom","ika|ika","ikono|ikono", "Ikot Abasi|ikot abasi","Ikot Ekpene|ikot ekpene", "Ini|ini","Itu|itu","Mbo|mbo","Mkpat Enin|mkpat enin","Nsit Atai|nsit atai","Nsit Ibom|nsit ibom", "Nsit Ubium|nsit ubium","Obot Akara|obot akara","Okobo|okobo","Onna | onna","Oron|oron","Oruk Anam| oruk anam", "Udung Uko | udung uko", "ukanafun|ukanafun", "Uruan|uruan", "Urue-Offong/Oruko| urue-offong/oruko"];
+                }else if (state === "anambra"){
+                    lgaArray = ["Aguata|aguata", "Anambra East | anambra east", "Anambra West|anambra west", "Anaocha|anaocha", "Awka North|awka north", "Ayamelum|ayamelum", "Dunukofia|dunukofia", "Ekwusigo|ekwusigo", "Idemili North | idemili north", "Ihiala|ihiala", "Njikoka|njikoka", "Nnewi north| nnewi north", "nnewi south| nnewi south", "Ogbaru|ogbaru", "Onitsha north|onitsha north", "Onitsha south | onitsha south", "Orumba North|orumba north", "Oyi|oyi"];
+                }else if (state === "bauchi"){
+                    lgaArray = ["Alkaleri|alkaleri", "Bauchi|bauchi", "Bogoro|bogoro", "Damban|damban", "Darazo|darazo", "Dass|dass", "Ganjuwa|ganjuwa","Giade|giade", "Itas/Gadau|itas/gadau","Jama'are|jama'are","Katagum|katagum", "Kirfi|kirfi", "Misau|misau", "Ningi|ningi", "Shira|shira", "Tafawa-Balewa|tafawa-balewa","Toro|toro","Warji|warji","Zaki|zaki"]; 
+                }else if(state === "bayelsa"){
+                    lgaArray = ["Brass|brass", "Ekeremor|ekeremor","Kolokuma/Opokuma|Kolokuma/Opokuma","Nembe|nembe","Ogbia|ogbia","Sagbama|sagbama","Southern Jaw|southern jaw", "yenegoa"] 
+                }else if(state === "benue"){
+                    lgaArray = ["Ado|ado", "Agatu|agatu", "Apa|apa", "Buruku|buruku", "Gboko|gboko", "Guma|guma", "Gwer East|gwer east", "Gwer West|gwer west","Kastina-Ala|kastina-ala","Kwande|kwande","Logo|logo","Makurdi|makurdi", "Obi|obi","Ogbadibo|ogbadibo","Oju|oju","Okpokwu|okpokwu","Ohimini|ohimini","Oturkpo|oturkpo","Tarka|tarka","Ukum|ukum","Ushongo|ushongo","Vandeikya|vandeikya"];
+                }else if(state === "bornu"){
+                    lgaArray = ["Abadam|abadam", "Askira|askira", "Bama|bama", "Bayo|bayo", "Biu| biu", "Chibok|chibok", "Damboa|damboa", "Dikwa|dikwa", "Gubio|gubio", "Guzamala|guzamala", "Gwoza|gwoza", "Hawul|hawul", "Jere|jere", "Kaga|kaga","Kala/Balge|kala/balge","Kondua|kondua","Kukuwa|kukuwa","Kwaya Kusar|Kwaya kusar", "Mafa|mafa","Magumeri|magumeri","Maiduguri|maiduguri","Marte|marte","Mobbar|mobbar","Monguno|monguno","Ngala|ngala","Nganzai|nganzai","Shani|shani"];
+                }else if(state === "crossriver"){
+                    lgaArray = ["Akpabuyo|akpabuyo", "Odukpani|Odukpani","Akamkpa|Akamkpa","Biase|Biase","Abi|Abi","Ikom|Ikom", "Yarkur|Yakur", "Odubra|Odubra", "Boki|boki", "Ogoja|Ogoja", "Boki|Boki", "Ogoja|Ogoja", "Yala|yala", "Obanliku|Obanliku", "Obudu|Obudu","Calabar South |Calabar South", "Etung|Etung", "Bekwara|Bekwara", "Bakassi|Bakassi", "Calabar Municipality| Calabar Municipality"];
+                }else if(state === "delta"){
+                    lgaArray = [ "Asaba Oshimili| Asaba Oshimili", "Aniocha|Aniocha", "Aniocha south| Aniocha south", "Ika South|Ika South", "Ika North-East| Ika North-East", "Ndokwa West| Ndokwa West", "Ndokwa East|Ndokwa East", "Isoko south| Isoko South","Isoko North| Isoko North", "Bomadi|Bomadi", "Burutu|Burutu", "Ughelli South| Ughelli South", "Ughelli North| Ughelli North", "Ethiope West | Ethiope West", "Ethiope East| Ethiope East", "Sapele| Sapele", "Okpe|Okpe", "Warri North|Warri North", "Warri South|Warri South", "Uvwie|Uvwie", "Udu|Udu", "Warri Central|Warri Central", "Ukwani|Ukwani","Oshimili North|Oshimili North", "Patani|Patani"];
+                }else if (state === "ebonyi"){
+                    lgaArray = ["Afikpo South| Afikpo South", "Afikpo North|Afikpo North", "Onicha|Onicha","Ohaozara|Ohaozara","Abakaliki|Abakaliki","Ishielu|Ishielu","lkwo|lkwo","Ezza|Ezza","Ezza South| Ezza South","Ohaukwu|Ohaukwu","Ebonyi|Ebonyi","Ivo|Ivo"];
+                }else if (state === "edo"){
+                    lgaArray = ["Esan North-East|Esan North-East","Esan Central|Esan Central","Esan West|Esan West","Egor|Egor","Ukpoba|Ukpoba","Central|Central","Etsako Central|Etsako Central","Igueben|Igueben","Oredo|Oredo","Ovia South-West|Ovia South-West","Ovia South-East|Ovia South-East","Orhionwon|Orhionwon","Uhunmwonde|Uhunmwonde","Etsako East|Etsako East","Esan South-East|Esan South-East"];
+                }else if (state === "ekiti"){
+                    lgaArray = ["Ado|Ado","Ekiti East|Ekiti East", "Ekiti West|Ekiti West","Emure/Ise/Orun|Emure/Ise/Orun","Ekiti South-West|Ekiti South-West","Ikare|Ikare","Irepodun|Irepodun","Ijero|Ijero","Ido/Osi|Ido/Osi","Oye|Oye","Ikole|Ikole","Moba|Moba","Gboyin|Gboyin","Efon|Efon","Ise/Orun|Ise/Orun","Ilejemeje|Ilejemeje"];
+                }else if (state === "enugu"){
+                    lgaArray = ["Enugu South|Enugu South","Igbo-Eze South|Igbo-Eze South","Enugu North|Enugu North","Nkanu|Nkanu","Udi Agwu|Udi Agwu","Oji-River|Oji-River","Ezeagu|Ezeagu","Igbo-Eze North|Igbo-Eze North","Isi-Uzo|Isi-Uzo","Nsukka|Nsukka","Igbo-Ekiti|Igbo-Ekiti","Uzo-Uwani|Uzo-Uwani","Enugu East|Enugu East","Aninri|Aninri","Nkanu East|Nkanu East","Udenu|Udenu"];
+                }else if (state === "gombe"){
+                    lgaArray = ["Akko|Akko","Balanga|Balanga","Billiri|Billiri","Dukku|Dukku","Kaltungo|Kaltungo","Kwami|Kwami","Shomgom|Shomgom","Funakaye|Funakaye","Gombe|Gombe","Nafada/Bajoga|Nafada/Bajoga","Yamaltu/Delta|Yamaltu/Delta"];
+                }else if (state === "imo"){
+                    lgaArray = ["Aboh-Mbaise|Aboh-Mbaise","Ahiazu-Mbaise|Ahiazu-Mbaise","Ehime-Mbano|Ehime-Mbano","Ezinihitte|Ezinihitte","Ideato North|Ideato North","Ideato South|Ideato South","Ihitte/Uboma|Ihitte/Uboma","Ikeduru|Ikeduru","Isiala Mbano|Isiala Mbano","Isu|Isu","Mbaitoli|Mbaitoli","Ngor-Okpala|Ngor-Okpala","Njaba|Njaba","Nwangele|Nwangele","Nkwerre|Nkwerre","Obowo|Obowo","Oguta|Oguta","Ohaji/Egbema|Ohaji/Egbema","Okigwe|Okigwe","Orlu|Orlu","Orsu|Orsu","Oru East|Oru East","Oru West|Oru West","Owerri-Manucipal|Owerri-Manucipal","Owerri North|Owerri North","Owerri West|Owerri West"];
+                }else if (state === "jigawa"){
+                    lgaArray = ["Auyo|Auyo","Babura|Babura","Birni Kudu|Birni Kudu","Biriniwa|Biriniwa","Buji|Buji","Dutse|Dutse","Gagarawa|Gagarawa","Garki|Garki","Gumel|Gumel","Guri|Guri","Gwaram|Gwaram","Gwiwa|Gwiwa","Hadejia|Hadejia","Jahun|Jahun","kafin Hausa|Kafin Hausa","Kaugama Kazaure|Kaugama Kazaure","Kiri Kasamma","Kiyawa|Kiyawa","Maigatari|Maigatari","Malam Madori|Malam Madori","Miga|Miga","Ringim|Ringim","Roni|Roni","Sule-Tankarkar|Sule-Tankarkar","Taura|Taura","Yankwasi|Yankwashi"];
+                }else if (state === "kaduna"){
+                    lgaArray = ["Birni-Gwari|Birni-Gwari","Chikun|Chikun","Giwa|Giwa","Igabi|Igabi","Ikara|Ikara","Jaba|Jaba","Jema'a|Jema'a","Kachia|Kachia","Kaduna North|Kaduna North","Kaduna South|Kaduna South","Kagarko|Kargako","Kajuru|kajuru","Kaura|Kaura","Kauru|Kauru","Kabau|Kabau","Kudan|Kudan","Lere|Lere","Makarfi|Makarfi","Sabon-Gari|Sabon-Gari","Sanga|Sanga","Soba|Soba","Zango-Kataf|Zango-Kataf","Zaria|Zaria"];
+                }else if (state === "kano"){
+                    lgaArray = ["Ajingi|Ajingi","Albasu|Albasu","Bagwai|Bagwai","Bebeji|Bebeji","Bichi|Bichi","Bunkure|Bunkure","Dala|Dala","Dambatta|Dambatta","Dawakin Kudu|Dawakin Kudu","Dawakin Tofa|Dawakin Tofa","Doguwa|Doguwa","Fagge|Fagge","Gabasawa|Gabasawa","Garko|Garko","Garum|Garum","Mallam|Mallam","Gaya|Gaya","Gezawa|Gezawa","Gwale|Gwale","Gwarzo|Gwarzo","Kabo|Kabo","Kano Manucipal|Kanno Manucipal","Karaye|Karaye","Kibiya|Kibiya","Kiru|Kiru","Kumbotso|Kombotso","Kunchi|Kunchi","Kura|Kura","Madobi|Madobi","Makoda|Makoda","Minjibir|Minjibir","Nasarawa|Nasarawa","Rano|Rano","Rimin Gado|Rimin Gado","Rogo|Rogo","Shanono|Shanono","Sumaila|Sumaila","Takali|Takali","Tarauni|Tarauni","Tofa|Tofa","Tsanyawa|Tsanyawa","Tudun Wada|Tudun Wada","Ungogo|Ungogo","Warawa|Warawa","Wudil|Wudil"];
+                }else if (state === "kastina"){
+                    lgaArray = ["Bakori|Bakori","Batagarawa|Batagarawa","Batsari|Batsari","Baure|Baure","Bindawa|Bindawa","Charanchi|Charanchi","Dandume|Dandume","Danja|Danja","Dutsi|Dutsi","Dutsin-Ma|Dutsin-Ma","Faskari|Faskari","Funtua|Funtua","Ingawa|Ingawa","Jibia|Jibia","Kafur|Kafur","Kaita|Kaita","Kankara|Kankara","Kankia|Kankia","Katsina|Katsina","Kurfi|Kurfi","Kusada|Kusada","Mai'Adua|Mai'Adua","Malumfashi|Malumfashi","Mani|Mani","Matazuu|Matazuu","Musawa|Musawa","Rimi|Rimi","Sabuwa|Sabuwa","Safana|Safana","Sandamu|Sandamu","Zango|Zango"];
+                }else if (state === "kebbi"){
+                    lgaArray = ["Aleiro|Aleiro","Arewa-Dandi|Arewa-Dandi","Argungu|Argungu","Augie|Augie","Bagudo|Bagudo","Birnin Kebbi|Birnin Kebbi","Bunza|Bunza","Dandi|Dandi","Fakai|Fakai","Gwandu|Gwandu","Jega|Jega","Kalgo|Kalgo","Koko/Besse|Koko/Besse","Maiyama|Maiyama","Ngaski|Ngaski","Sakaba|Sakaba","Shanga|Shanga","Suru|Suru","Wasagu/Danko|Wasagu/Danko","Yauri|Yauri","Zuru|Zuru"];
+                }else if (state === "kogi"){
+                     lgaArray = ["Adavi|Adavi","Ajaokuta|Ajaokuta","Ankpa|Ankpa","Bassa|Bassa","Dekina|Dekina","Ibaji|Ibaji","Idah|Idah","Igalamela-Odolu|Igalamela-Odolu","Ijumu|Ijumu","Kabba/Bunu|Kabba/Bunu","Kogi|Kogi","Lokoja|Lokoja","Mopa-Muro|Mopa-Muro","Ofu|Ofu","Ogori/Mangongo|Ogori/Mangongo","Okehi|Okehi","Okene|Okene","Olamabolo|Olamabolo","Omala|Omala","Yagba East|Yagba East","Yagba West|Yagba West"];
+                }else if (state === "kwara"){
+                    lgaArray = ["Asa|Asa","Baruten|Baruten","Edu|Edu","Ekiti|Ekiti","Ifelodun|Ifelodun","Ilorin East|Ilorin East","Ilorin West|Ilorin West","Irepodun|Irepodun","Isin|Isin","Kaiama|Kaiama","Moro|Moro","Offa|Offa","Oke-Ero|Oke-Ero","Oyun|Oyun","Pategi|Pategi"];
+                }else if (state === "lagos"){
+                    lgaArray = ["Agege|Agege","Ajeromi-Ifelodun|Ajeromi-Ifelodun","Alimosho|Alimosho","Amuwo-Odofin|Amuwo-Odofin","Apapa|Apapa","Badagry|Badagry","Epe|Epe","Eti-Osa|Eti-Osa","Ibeju/Lekki|Ibeju/Lekki","Ifako-Ijaye|Ifako-Ijaiye","Ikeja|Ikaja","Ikorodu|Ikorodu","Kosofe|Kosofe","Lagos Island|Lagos Island","Lagos Mainland|Lagos Mainland","Mushin|Mushin","Ojo|Ojo","Oshodi/Isolo|Oshodi/Isolo","Shomolu|Shomolu","Surulere|Surulere"];
+                }else if (state === "nasarawa"){
+                   lgaArray = ["Akwanga|Akwanga","Awe|Awe","Doma|Doma","Karu|Karu","Keana|Keana","Keffi|Keffi","Kokona|Kokona","Lafia|Lafia","Nasarawa|Nasarawa","Nasarawa-Eggon|Nasarawa-Eggon","Obi|Obi","Toto|Toto","Wamba|Wamba"];
+                }else if ( state === "niger"){
+                   lgaArray = ["Agaie|Agaie","Agwara|Agwara","Bida|Bida","Borgu|Borgu","Bosso|Bosso","Chanchaga|Chanchaga","Edati|Edati","Gbako|Gbako","Gurara|Gurara","Katcha|Katcha","Kontagora|Kontagora","Lapai|Lapai","Lavun|Lavun","Magama|Magama","Mariga|Mariga","Mashegu|Mashegu","Mokwa|Mokwa","Muya|Muya","Pailoro|Pailoro","Rafi|Rafi","Rijau|Rijau","Shiroro|Shiroro","Tafa|Tafa","Wushishi|Wushishi"];
+                }else if ( state === "ogun"){
+                    lgaArray = ["Abeokuta North|Abeokuta North","Abeokuta South|Abeokuta South","Ado-Odo/Ota|Ado-Odo/Ota","Egbado North|Egbado North","Egbado South|Egbado South","Ewekoro|Ewekoro","Ifo|Ifo","Ijebu East|Ijebu East","Ijebu North|Ijebu North","Ijebu North-East|Ijebu North-East","Ijebu Ode|Ijebu Ode","Ikenne|Ikenne","Imeko-Afon|Imeko-Afon","Ipokia|Ipokia","Obafemi-Owode|Obafemi-Owode","Ogun Waterside|Ogun Waterside","Odeda|Odeda","Odogbolu|Odogbolu","Remo North|Remo North","Shagamu|Shagamu"];
+                }else if (state === "ondo"){
+                    lgaArray = ["Akoko North-East|Akoko North-East","Akoko North-West|Akoko North-West","Akoko South-East|Akoko South-East","Akoko South-West|Akoko South-West","Akure North|Akure North","Akure South|Akure South","Ese-Odo|Ese-Odo","Idanre|Idanre","Ifedore|Ifedore","Ilaje|Ilaje","Ile-Oluji|Ile-Oluji","Okeigbo|Okeigbo","Irele|Irele","Odigbo|Odigbo","Okitipupa|Okitipupa","Ondo East|Ondo East","Ondo West|Ondo West","Ose|Ose","Owo|Owo"];
+                }else if (state === "osun"){
+                    lgaArray = ["Aiyedade|Aiyedade","Aiyedire|Aiyedire","Atakumosa East|Atakumosa East","Atakumosa West|Atakumosa West","Boluwaduro|Boluwaduro","Boripe|Boripe","Ede North|Ede North","Ede South|Ede South","Egbedore|Egbedore","Ejigbo|Ejigbo","Ife Central|Ife Central","Ife East|Ife East","Ife North|Ife North","Ife South| Ife South","Ifedayo|Ifedayo","Ifelodun|Ifelodun","Ila|Ila", "Ilesha East|Ilesha East","Ilesha West|Ilessha West","Irepodun|Irepodun","Irewole|Irewole","Isokan|Isokan","Iwo|Iwo","Obokun|Obokun","Odo-Otin|Odo-Otin","Ola-Oluwa|Ola-Oluwa","Olorunda|Olorunda","Oriade|Oriade","Orolo|Orolu","Osogbo|Osogbo"];
+                }else if (state === "oyo"){
+                    lgaArray = ["Afijio|Afijio","Akinyele|Akinyele","Atiba|Atiba","Atigbo|Atigbo","Egbeda|Egbeda","Ibadan Central|Ibadan Central","Ibadan North|Ibadan North","Ibadan North-West|Ibadan North-West","Ibadan South East|Ibadan South-East","Ibadan South-West|Ibadan South-West","Ibarapa Central|Ibarapa Central","Ibarapa East|Ibarapa East","Ibarapa North|Ibarapa North","Ido|Ido","Irepo|Irepo","Iseyin|Iseyin","Itesiwaju|Itesiwaju","Iwajowa|Iwajowa","Kajola|Kajola","Lagelu Ogbomosho North|Lagelu Ogbomosho North","Ogbomosho South|Ogbomosho South","Ogo Oluwa|Ogo Oluwa","Olorunsogs|Olorunsogo","Oluyole|Oluyole","Ona-Ara|Ona-Ara","Orelope|Orelope","Ori ire|Ori Ire","Oyo East|Oyo East","Oyo West|Oyo West","Saki East|Saki East","Saki West|Saki West","Surulere|Surulere"];
+                }else if (state === "plateau"){
+                    lgaArray = ["Barikin Ladi|Barikin Ladi","Bassa|Bassa","Bokkos|Bokkos","Jos East|Jos East","Jos North|Jos North","Jos South|Jos South","Kanam|Kanam","Kanke|Kanke","Langtang North|Langtang North","Langtang South|Langtang South","Mangu|Mangu","Mikang|Mikang","Pankshin|Pankshin","Qua;an Pan|Qua'an Pan","Riyom|Riyom","Shendam|Shendam","Wase|Wase"];
+                }else if (state === "rivers"){
+                    lgaArray = ["Abua/Odual|Abua/Odual","Ahoada East|Ahaoda East","Ahoada West|Ahaoda West","Akuku Toru|Akuku Toru","Andoni|Andoni","Asari-Toru|Asari-Toru","Bonny|Bonny","Degema|Degema","Emohua|Emohua","Eleme|Eleme","Etche|Etche","Gokana|Gokana","Ikwerre|Ikwerre","Khana|Khana","Obia/Akpor|Obia/Akpor","Ogba/Egbema/Ndoni|Ogba/Egbema/Ndoni","Ogu/Bolo|Ogu/Bolo","Okrika|Okrika","Omumma|Omumma","Opobo/Nkoro|Opobo/Nkoro","Oyigbo/Oyigbo","Port-Harcourt|Port-Harcourt","Tai|Tai"];
+                }else if (state === "sokoto"){
+                     lgaArray = ["Binji|Binji","Bodinga|Bodinga","Dange-Shnsi|Dange-Shinsi","Gada|Gada","Goronyo|Goronyo","Gudu|Gudu","Gawabawa|Gawabawa","Illela|Illela","Isa|Isa","Kware|Kware","Kebbe|Kebbe","Rabah|Rabah","Sabon Birni|Sabon Birni","Shagari|Shagari","Silame|Silame","Sokoto North|Sokoto North","Sokoto South|Sokoto South","Tanbuwal|Tanbuwal","Tqngaza|Tqngaza","Tureta|Tureta","Wamako|Wamako","Wurno|Wurno","Yabo|Yabo"];
+                }else if (state === "taraba"){
+                    lgaArray = ["Ardo-Kola|Ardo-Kola","Bali|bali","Donga|Donga","Gashaka|Gashaka","Cassol|Cassol","Ibi|Ibi","Jalingo|Jalingo","Karin-Lamido|Karin-Lamido","Kurmi|Kurmi","Lau|Lau","Sardauna|Sadauna","Takum|Takum","Ussa|Ussa","Wukari|Wukari","Yorro|Yorro","Zing|Zing"];
+                }else if (state === "yobe"){
+                    lgaArray = ["Bade|Bade","Bursari|Bursari","Damaturu|Damaturu","Fika|Fika","Fune|Fune","Geidam|Geidam","Gujba|Gujba","Jakusko|Jakusko","Karasuwa|Karasuwa","Karawa|Karawa","Machina|Machina","Nangere|Nangere","Nguru Potiskum|Nguru Potiskum","Tarmua|Tarmua","Yunusari|Yunusari","Yusufari|Yusufari"];
+                }else if (state === "zamfara"){
+                    lgaArray = ["AnkavAnka","Bakura|Bakura","Birnin Magaji|Birnin Magaji","Bukkuyum|Bukkuyum","Bungudu|Bungudu","Gummi|Gummi","Guasu|Gusau","Kaura|kaura","Namoda|Namoda","Maradun|Maradun","Maru|Maru","Shinkafi|Shinkafi","Talata Mafara|Talata Mafara","Tsafe|Tsafe","Zurmi|Zurmi"];
+                }else{
 
                  return false 
+                };
 
                  for (var lgaOption in lgaArray){
                   var selectedLga = lgaArray[lgaOption].split("|");
@@ -1693,19 +1806,90 @@ if(isset($_POST['token'])) {
 
                 
                 
-                if (state === "abia"){
+                   if (state === "abia"){
 
-                    lgaArray = [ "Aba North|a", "Aba South|b", "Arochukwu|c", "Bende|d", "Ikwuano|e", "Isiala-Ngwa North |f", "Isiala-Ngwa South |b", "Isuikwato|c", "Obi Nwa|d", "Ohafia|e", "Osisioma |f","Ngwa|g", "Ugwunagbo|g", "Ukwa East|g", "Ukwa West|g","Umuahia North|g","Umuahia South|g", "Umu-Neochi|h" ];
+                    lgaArray = [ "Aba North| aba north", "Aba South| aba south", "Arochukwu| Arochukwu", "Bende|bende", "Ikwuano| ikwuano", "Isiala-Ngwa North | isiala-ngwa north", "Isiala-Ngwa South | isiala-ngwa south", "Isuikwato| isuikwato", "Obi Nwa| obi nwa", "Ohafia| ohafia", "Osisioma | osisioma","Ngwa| ngwa", "Ugwunagbo| ugwunagbo", "Ukwa East| ukwa", "Ukwa West| ukwa west","Umuahia North| umuahia north","Umuahia South| umuahia south", "Umu-Neochi| umu-neochi" ];
                    
 
 
                 }else if (state === "abuja"){
-                    lgaArray =  [ "Gwagwalada|g", "Kuje|h", "Abaji|i", "Abuja Municipal|j", "Bwari|k", "Kwali|i" ];
+                    lgaArray =  [ "Gwagwalada|gwagwalada", "Kuje| kuje", "Abaji| abaji", "Abuja Municipal| Abuja municipal", "Bwari| bwari", "Kwali|kwali" ];
 
-                }else 
+                }else if (state === "adamawa"){
+                    lgaArray  = ["Demsa|demsa", "Fufore|fufore", "Ganaye|ganaye", "Gireri|gireri", "Gombi|gombi", "Guyuk|guyuk", "Hong|hong", "Jada|jada", "Lamurde|lamurde", "Madagali|madagali", "Maiha|maiha", "Mayo-Belwa|mayo-belwa", "Michika|michika", "Mubi North|mubi north", "Mubi South| mubi south", "Numan|numan", "Shelleng|shelleng", "Song|song", "Toungo|toungo", "Yola North| yola north", "Yola South|yola south"];
+
+                }else if (state === "akwaibom"){
+                    lgaArray = ["Abak|abak", "Eastern Obolo|eastern obolo", "Eket|eket","Esit Eket|esit eket","Essien Udim|essien udim", "Etim Ekpo|etim ekpo", "Etinan|etinan", "Ibeno|ibeno", "Ibeskipo Asutan|ibeskipo asutan","Ibiono Ibom|ibiono ibom","ika|ika","ikono|ikono", "Ikot Abasi|ikot abasi","Ikot Ekpene|ikot ekpene", "Ini|ini","Itu|itu","Mbo|mbo","Mkpat Enin|mkpat enin","Nsit Atai|nsit atai","Nsit Ibom|nsit ibom", "Nsit Ubium|nsit ubium","Obot Akara|obot akara","Okobo|okobo","Onna | onna","Oron|oron","Oruk Anam| oruk anam", "Udung Uko | udung uko", "ukanafun|ukanafun", "Uruan|uruan", "Urue-Offong/Oruko| urue-offong/oruko"];
+                }else if (state === "anambra"){
+                    lgaArray = ["Aguata|aguata", "Anambra East | anambra east", "Anambra West|anambra west", "Anaocha|anaocha", "Awka North|awka north", "Ayamelum|ayamelum", "Dunukofia|dunukofia", "Ekwusigo|ekwusigo", "Idemili North | idemili north", "Ihiala|ihiala", "Njikoka|njikoka", "Nnewi north| nnewi north", "nnewi south| nnewi south", "Ogbaru|ogbaru", "Onitsha north|onitsha north", "Onitsha south | onitsha south", "Orumba North|orumba north", "Oyi|oyi"];
+                }else if (state === "bauchi"){
+                    lgaArray = ["Alkaleri|alkaleri", "Bauchi|bauchi", "Bogoro|bogoro", "Damban|damban", "Darazo|darazo", "Dass|dass", "Ganjuwa|ganjuwa","Giade|giade", "Itas/Gadau|itas/gadau","Jama'are|jama'are","Katagum|katagum", "Kirfi|kirfi", "Misau|misau", "Ningi|ningi", "Shira|shira", "Tafawa-Balewa|tafawa-balewa","Toro|toro","Warji|warji","Zaki|zaki"]; 
+                }else if(state === "bayelsa"){
+                    lgaArray = ["Brass|brass", "Ekeremor|ekeremor","Kolokuma/Opokuma|Kolokuma/Opokuma","Nembe|nembe","Ogbia|ogbia","Sagbama|sagbama","Southern Jaw|southern jaw", "yenegoa"] 
+                }else if(state === "benue"){
+                    lgaArray = ["Ado|ado", "Agatu|agatu", "Apa|apa", "Buruku|buruku", "Gboko|gboko", "Guma|guma", "Gwer East|gwer east", "Gwer West|gwer west","Kastina-Ala|kastina-ala","Kwande|kwande","Logo|logo","Makurdi|makurdi", "Obi|obi","Ogbadibo|ogbadibo","Oju|oju","Okpokwu|okpokwu","Ohimini|ohimini","Oturkpo|oturkpo","Tarka|tarka","Ukum|ukum","Ushongo|ushongo","Vandeikya|vandeikya"];
+                }else if(state === "bornu"){
+                    lgaArray = ["Abadam|abadam", "Askira|askira", "Bama|bama", "Bayo|bayo", "Biu| biu", "Chibok|chibok", "Damboa|damboa", "Dikwa|dikwa", "Gubio|gubio", "Guzamala|guzamala", "Gwoza|gwoza", "Hawul|hawul", "Jere|jere", "Kaga|kaga","Kala/Balge|kala/balge","Kondua|kondua","Kukuwa|kukuwa","Kwaya Kusar|Kwaya kusar", "Mafa|mafa","Magumeri|magumeri","Maiduguri|maiduguri","Marte|marte","Mobbar|mobbar","Monguno|monguno","Ngala|ngala","Nganzai|nganzai","Shani|shani"];
+                }else if(state === "crossriver"){
+                    lgaArray = ["Akpabuyo|akpabuyo", "Odukpani|Odukpani","Akamkpa|Akamkpa","Biase|Biase","Abi|Abi","Ikom|Ikom", "Yarkur|Yakur", "Odubra|Odubra", "Boki|boki", "Ogoja|Ogoja", "Boki|Boki", "Ogoja|Ogoja", "Yala|yala", "Obanliku|Obanliku", "Obudu|Obudu","Calabar South |Calabar South", "Etung|Etung", "Bekwara|Bekwara", "Bakassi|Bakassi", "Calabar Municipality| Calabar Municipality"];
+                }else if(state === "delta"){
+                    lgaArray = [ "Asaba Oshimili| Asaba Oshimili", "Aniocha|Aniocha", "Aniocha south| Aniocha south", "Ika South|Ika South", "Ika North-East| Ika North-East", "Ndokwa West| Ndokwa West", "Ndokwa East|Ndokwa East", "Isoko south| Isoko South","Isoko North| Isoko North", "Bomadi|Bomadi", "Burutu|Burutu", "Ughelli South| Ughelli South", "Ughelli North| Ughelli North", "Ethiope West | Ethiope West", "Ethiope East| Ethiope East", "Sapele| Sapele", "Okpe|Okpe", "Warri North|Warri North", "Warri South|Warri South", "Uvwie|Uvwie", "Udu|Udu", "Warri Central|Warri Central", "Ukwani|Ukwani","Oshimili North|Oshimili North", "Patani|Patani"];
+                }else if (state === "ebonyi"){
+                    lgaArray = ["Afikpo South| Afikpo South", "Afikpo North|Afikpo North", "Onicha|Onicha","Ohaozara|Ohaozara","Abakaliki|Abakaliki","Ishielu|Ishielu","lkwo|lkwo","Ezza|Ezza","Ezza South| Ezza South","Ohaukwu|Ohaukwu","Ebonyi|Ebonyi","Ivo|Ivo"];
+                }else if (state === "edo"){
+                    lgaArray = ["Esan North-East|Esan North-East","Esan Central|Esan Central","Esan West|Esan West","Egor|Egor","Ukpoba|Ukpoba","Central|Central","Etsako Central|Etsako Central","Igueben|Igueben","Oredo|Oredo","Ovia South-West|Ovia South-West","Ovia South-East|Ovia South-East","Orhionwon|Orhionwon","Uhunmwonde|Uhunmwonde","Etsako East|Etsako East","Esan South-East|Esan South-East"];
+                }else if (state === "ekiti"){
+                    lgaArray = ["Ado|Ado","Ekiti East|Ekiti East", "Ekiti West|Ekiti West","Emure/Ise/Orun|Emure/Ise/Orun","Ekiti South-West|Ekiti South-West","Ikare|Ikare","Irepodun|Irepodun","Ijero|Ijero","Ido/Osi|Ido/Osi","Oye|Oye","Ikole|Ikole","Moba|Moba","Gboyin|Gboyin","Efon|Efon","Ise/Orun|Ise/Orun","Ilejemeje|Ilejemeje"];
+                }else if (state === "enugu"){
+                    lgaArray = ["Enugu South|Enugu South","Igbo-Eze South|Igbo-Eze South","Enugu North|Enugu North","Nkanu|Nkanu","Udi Agwu|Udi Agwu","Oji-River|Oji-River","Ezeagu|Ezeagu","Igbo-Eze North|Igbo-Eze North","Isi-Uzo|Isi-Uzo","Nsukka|Nsukka","Igbo-Ekiti|Igbo-Ekiti","Uzo-Uwani|Uzo-Uwani","Enugu East|Enugu East","Aninri|Aninri","Nkanu East|Nkanu East","Udenu|Udenu"];
+                }else if (state === "gombe"){
+                    lgaArray = ["Akko|Akko","Balanga|Balanga","Billiri|Billiri","Dukku|Dukku","Kaltungo|Kaltungo","Kwami|Kwami","Shomgom|Shomgom","Funakaye|Funakaye","Gombe|Gombe","Nafada/Bajoga|Nafada/Bajoga","Yamaltu/Delta|Yamaltu/Delta"];
+                }else if (state === "imo"){
+                    lgaArray = ["Aboh-Mbaise|Aboh-Mbaise","Ahiazu-Mbaise|Ahiazu-Mbaise","Ehime-Mbano|Ehime-Mbano","Ezinihitte|Ezinihitte","Ideato North|Ideato North","Ideato South|Ideato South","Ihitte/Uboma|Ihitte/Uboma","Ikeduru|Ikeduru","Isiala Mbano|Isiala Mbano","Isu|Isu","Mbaitoli|Mbaitoli","Ngor-Okpala|Ngor-Okpala","Njaba|Njaba","Nwangele|Nwangele","Nkwerre|Nkwerre","Obowo|Obowo","Oguta|Oguta","Ohaji/Egbema|Ohaji/Egbema","Okigwe|Okigwe","Orlu|Orlu","Orsu|Orsu","Oru East|Oru East","Oru West|Oru West","Owerri-Manucipal|Owerri-Manucipal","Owerri North|Owerri North","Owerri West|Owerri West"];
+                }else if (state === "jigawa"){
+                    lgaArray = ["Auyo|Auyo","Babura|Babura","Birni Kudu|Birni Kudu","Biriniwa|Biriniwa","Buji|Buji","Dutse|Dutse","Gagarawa|Gagarawa","Garki|Garki","Gumel|Gumel","Guri|Guri","Gwaram|Gwaram","Gwiwa|Gwiwa","Hadejia|Hadejia","Jahun|Jahun","kafin Hausa|Kafin Hausa","Kaugama Kazaure|Kaugama Kazaure","Kiri Kasamma","Kiyawa|Kiyawa","Maigatari|Maigatari","Malam Madori|Malam Madori","Miga|Miga","Ringim|Ringim","Roni|Roni","Sule-Tankarkar|Sule-Tankarkar","Taura|Taura","Yankwasi|Yankwashi"];
+                }else if (state === "kaduna"){
+                    lgaArray = ["Birni-Gwari|Birni-Gwari","Chikun|Chikun","Giwa|Giwa","Igabi|Igabi","Ikara|Ikara","Jaba|Jaba","Jema'a|Jema'a","Kachia|Kachia","Kaduna North|Kaduna North","Kaduna South|Kaduna South","Kagarko|Kargako","Kajuru|kajuru","Kaura|Kaura","Kauru|Kauru","Kabau|Kabau","Kudan|Kudan","Lere|Lere","Makarfi|Makarfi","Sabon-Gari|Sabon-Gari","Sanga|Sanga","Soba|Soba","Zango-Kataf|Zango-Kataf","Zaria|Zaria"];
+                }else if (state === "kano"){
+                    lgaArray = ["Ajingi|Ajingi","Albasu|Albasu","Bagwai|Bagwai","Bebeji|Bebeji","Bichi|Bichi","Bunkure|Bunkure","Dala|Dala","Dambatta|Dambatta","Dawakin Kudu|Dawakin Kudu","Dawakin Tofa|Dawakin Tofa","Doguwa|Doguwa","Fagge|Fagge","Gabasawa|Gabasawa","Garko|Garko","Garum|Garum","Mallam|Mallam","Gaya|Gaya","Gezawa|Gezawa","Gwale|Gwale","Gwarzo|Gwarzo","Kabo|Kabo","Kano Manucipal|Kanno Manucipal","Karaye|Karaye","Kibiya|Kibiya","Kiru|Kiru","Kumbotso|Kombotso","Kunchi|Kunchi","Kura|Kura","Madobi|Madobi","Makoda|Makoda","Minjibir|Minjibir","Nasarawa|Nasarawa","Rano|Rano","Rimin Gado|Rimin Gado","Rogo|Rogo","Shanono|Shanono","Sumaila|Sumaila","Takali|Takali","Tarauni|Tarauni","Tofa|Tofa","Tsanyawa|Tsanyawa","Tudun Wada|Tudun Wada","Ungogo|Ungogo","Warawa|Warawa","Wudil|Wudil"];
+                }else if (state === "kastina"){
+                    lgaArray = ["Bakori|Bakori","Batagarawa|Batagarawa","Batsari|Batsari","Baure|Baure","Bindawa|Bindawa","Charanchi|Charanchi","Dandume|Dandume","Danja|Danja","Dutsi|Dutsi","Dutsin-Ma|Dutsin-Ma","Faskari|Faskari","Funtua|Funtua","Ingawa|Ingawa","Jibia|Jibia","Kafur|Kafur","Kaita|Kaita","Kankara|Kankara","Kankia|Kankia","Katsina|Katsina","Kurfi|Kurfi","Kusada|Kusada","Mai'Adua|Mai'Adua","Malumfashi|Malumfashi","Mani|Mani","Matazuu|Matazuu","Musawa|Musawa","Rimi|Rimi","Sabuwa|Sabuwa","Safana|Safana","Sandamu|Sandamu","Zango|Zango"];
+                }else if (state === "kebbi"){
+                    lgaArray = ["Aleiro|Aleiro","Arewa-Dandi|Arewa-Dandi","Argungu|Argungu","Augie|Augie","Bagudo|Bagudo","Birnin Kebbi|Birnin Kebbi","Bunza|Bunza","Dandi|Dandi","Fakai|Fakai","Gwandu|Gwandu","Jega|Jega","Kalgo|Kalgo","Koko/Besse|Koko/Besse","Maiyama|Maiyama","Ngaski|Ngaski","Sakaba|Sakaba","Shanga|Shanga","Suru|Suru","Wasagu/Danko|Wasagu/Danko","Yauri|Yauri","Zuru|Zuru"];
+                }else if (state === "kogi"){
+                     lgaArray = ["Adavi|Adavi","Ajaokuta|Ajaokuta","Ankpa|Ankpa","Bassa|Bassa","Dekina|Dekina","Ibaji|Ibaji","Idah|Idah","Igalamela-Odolu|Igalamela-Odolu","Ijumu|Ijumu","Kabba/Bunu|Kabba/Bunu","Kogi|Kogi","Lokoja|Lokoja","Mopa-Muro|Mopa-Muro","Ofu|Ofu","Ogori/Mangongo|Ogori/Mangongo","Okehi|Okehi","Okene|Okene","Olamabolo|Olamabolo","Omala|Omala","Yagba East|Yagba East","Yagba West|Yagba West"];
+                }else if (state === "kwara"){
+                    lgaArray = ["Asa|Asa","Baruten|Baruten","Edu|Edu","Ekiti|Ekiti","Ifelodun|Ifelodun","Ilorin East|Ilorin East","Ilorin West|Ilorin West","Irepodun|Irepodun","Isin|Isin","Kaiama|Kaiama","Moro|Moro","Offa|Offa","Oke-Ero|Oke-Ero","Oyun|Oyun","Pategi|Pategi"];
+                }else if (state === "lagos"){
+                    lgaArray = ["Agege|Agege","Ajeromi-Ifelodun|Ajeromi-Ifelodun","Alimosho|Alimosho","Amuwo-Odofin|Amuwo-Odofin","Apapa|Apapa","Badagry|Badagry","Epe|Epe","Eti-Osa|Eti-Osa","Ibeju/Lekki|Ibeju/Lekki","Ifako-Ijaye|Ifako-Ijaiye","Ikeja|Ikaja","Ikorodu|Ikorodu","Kosofe|Kosofe","Lagos Island|Lagos Island","Lagos Mainland|Lagos Mainland","Mushin|Mushin","Ojo|Ojo","Oshodi/Isolo|Oshodi/Isolo","Shomolu|Shomolu","Surulere|Surulere"];
+                }else if (state === "nasarawa"){
+                   lgaArray = ["Akwanga|Akwanga","Awe|Awe","Doma|Doma","Karu|Karu","Keana|Keana","Keffi|Keffi","Kokona|Kokona","Lafia|Lafia","Nasarawa|Nasarawa","Nasarawa-Eggon|Nasarawa-Eggon","Obi|Obi","Toto|Toto","Wamba|Wamba"];
+                }else if ( state === "niger"){
+                   lgaArray = ["Agaie|Agaie","Agwara|Agwara","Bida|Bida","Borgu|Borgu","Bosso|Bosso","Chanchaga|Chanchaga","Edati|Edati","Gbako|Gbako","Gurara|Gurara","Katcha|Katcha","Kontagora|Kontagora","Lapai|Lapai","Lavun|Lavun","Magama|Magama","Mariga|Mariga","Mashegu|Mashegu","Mokwa|Mokwa","Muya|Muya","Pailoro|Pailoro","Rafi|Rafi","Rijau|Rijau","Shiroro|Shiroro","Tafa|Tafa","Wushishi|Wushishi"];
+                }else if ( state === "ogun"){
+                    lgaArray = ["Abeokuta North|Abeokuta North","Abeokuta South|Abeokuta South","Ado-Odo/Ota|Ado-Odo/Ota","Egbado North|Egbado North","Egbado South|Egbado South","Ewekoro|Ewekoro","Ifo|Ifo","Ijebu East|Ijebu East","Ijebu North|Ijebu North","Ijebu North-East|Ijebu North-East","Ijebu Ode|Ijebu Ode","Ikenne|Ikenne","Imeko-Afon|Imeko-Afon","Ipokia|Ipokia","Obafemi-Owode|Obafemi-Owode","Ogun Waterside|Ogun Waterside","Odeda|Odeda","Odogbolu|Odogbolu","Remo North|Remo North","Shagamu|Shagamu"];
+                }else if (state === "ondo"){
+                    lgaArray = ["Akoko North-East|Akoko North-East","Akoko North-West|Akoko North-West","Akoko South-East|Akoko South-East","Akoko South-West|Akoko South-West","Akure North|Akure North","Akure South|Akure South","Ese-Odo|Ese-Odo","Idanre|Idanre","Ifedore|Ifedore","Ilaje|Ilaje","Ile-Oluji|Ile-Oluji","Okeigbo|Okeigbo","Irele|Irele","Odigbo|Odigbo","Okitipupa|Okitipupa","Ondo East|Ondo East","Ondo West|Ondo West","Ose|Ose","Owo|Owo"];
+                }else if (state === "osun"){
+                    lgaArray = ["Aiyedade|Aiyedade","Aiyedire|Aiyedire","Atakumosa East|Atakumosa East","Atakumosa West|Atakumosa West","Boluwaduro|Boluwaduro","Boripe|Boripe","Ede North|Ede North","Ede South|Ede South","Egbedore|Egbedore","Ejigbo|Ejigbo","Ife Central|Ife Central","Ife East|Ife East","Ife North|Ife North","Ife South| Ife South","Ifedayo|Ifedayo","Ifelodun|Ifelodun","Ila|Ila", "Ilesha East|Ilesha East","Ilesha West|Ilessha West","Irepodun|Irepodun","Irewole|Irewole","Isokan|Isokan","Iwo|Iwo","Obokun|Obokun","Odo-Otin|Odo-Otin","Ola-Oluwa|Ola-Oluwa","Olorunda|Olorunda","Oriade|Oriade","Orolo|Orolu","Osogbo|Osogbo"];
+                }else if (state === "oyo"){
+                    lgaArray = ["Afijio|Afijio","Akinyele|Akinyele","Atiba|Atiba","Atigbo|Atigbo","Egbeda|Egbeda","Ibadan Central|Ibadan Central","Ibadan North|Ibadan North","Ibadan North-West|Ibadan North-West","Ibadan South East|Ibadan South-East","Ibadan South-West|Ibadan South-West","Ibarapa Central|Ibarapa Central","Ibarapa East|Ibarapa East","Ibarapa North|Ibarapa North","Ido|Ido","Irepo|Irepo","Iseyin|Iseyin","Itesiwaju|Itesiwaju","Iwajowa|Iwajowa","Kajola|Kajola","Lagelu Ogbomosho North|Lagelu Ogbomosho North","Ogbomosho South|Ogbomosho South","Ogo Oluwa|Ogo Oluwa","Olorunsogs|Olorunsogo","Oluyole|Oluyole","Ona-Ara|Ona-Ara","Orelope|Orelope","Ori ire|Ori Ire","Oyo East|Oyo East","Oyo West|Oyo West","Saki East|Saki East","Saki West|Saki West","Surulere|Surulere"];
+                }else if (state === "plateau"){
+                    lgaArray = ["Barikin Ladi|Barikin Ladi","Bassa|Bassa","Bokkos|Bokkos","Jos East|Jos East","Jos North|Jos North","Jos South|Jos South","Kanam|Kanam","Kanke|Kanke","Langtang North|Langtang North","Langtang South|Langtang South","Mangu|Mangu","Mikang|Mikang","Pankshin|Pankshin","Qua;an Pan|Qua'an Pan","Riyom|Riyom","Shendam|Shendam","Wase|Wase"];
+                }else if (state === "rivers"){
+                    lgaArray = ["Abua/Odual|Abua/Odual","Ahoada East|Ahaoda East","Ahoada West|Ahaoda West","Akuku Toru|Akuku Toru","Andoni|Andoni","Asari-Toru|Asari-Toru","Bonny|Bonny","Degema|Degema","Emohua|Emohua","Eleme|Eleme","Etche|Etche","Gokana|Gokana","Ikwerre|Ikwerre","Khana|Khana","Obia/Akpor|Obia/Akpor","Ogba/Egbema/Ndoni|Ogba/Egbema/Ndoni","Ogu/Bolo|Ogu/Bolo","Okrika|Okrika","Omumma|Omumma","Opobo/Nkoro|Opobo/Nkoro","Oyigbo/Oyigbo","Port-Harcourt|Port-Harcourt","Tai|Tai"];
+                }else if (state === "sokoto"){
+                     lgaArray = ["Binji|Binji","Bodinga|Bodinga","Dange-Shnsi|Dange-Shinsi","Gada|Gada","Goronyo|Goronyo","Gudu|Gudu","Gawabawa|Gawabawa","Illela|Illela","Isa|Isa","Kware|Kware","Kebbe|Kebbe","Rabah|Rabah","Sabon Birni|Sabon Birni","Shagari|Shagari","Silame|Silame","Sokoto North|Sokoto North","Sokoto South|Sokoto South","Tanbuwal|Tanbuwal","Tqngaza|Tqngaza","Tureta|Tureta","Wamako|Wamako","Wurno|Wurno","Yabo|Yabo"];
+                }else if (state === "taraba"){
+                    lgaArray = ["Ardo-Kola|Ardo-Kola","Bali|bali","Donga|Donga","Gashaka|Gashaka","Cassol|Cassol","Ibi|Ibi","Jalingo|Jalingo","Karin-Lamido|Karin-Lamido","Kurmi|Kurmi","Lau|Lau","Sardauna|Sadauna","Takum|Takum","Ussa|Ussa","Wukari|Wukari","Yorro|Yorro","Zing|Zing"];
+                }else if (state === "yobe"){
+                    lgaArray = ["Bade|Bade","Bursari|Bursari","Damaturu|Damaturu","Fika|Fika","Fune|Fune","Geidam|Geidam","Gujba|Gujba","Jakusko|Jakusko","Karasuwa|Karasuwa","Karawa|Karawa","Machina|Machina","Nangere|Nangere","Nguru Potiskum|Nguru Potiskum","Tarmua|Tarmua","Yunusari|Yunusari","Yusufari|Yusufari"];
+                }else if (state === "zamfara"){
+                    lgaArray = ["AnkavAnka","Bakura|Bakura","Birnin Magaji|Birnin Magaji","Bukkuyum|Bukkuyum","Bungudu|Bungudu","Gummi|Gummi","Guasu|Gusau","Kaura|kaura","Namoda|Namoda","Maradun|Maradun","Maru|Maru","Shinkafi|Shinkafi","Talata Mafara|Talata Mafara","Tsafe|Tsafe","Zurmi|Zurmi"];
+                }else{
 
                  return false 
-
+                };
                  for (var lgaOption in lgaArray){
                   var selectedLga = lgaArray[lgaOption].split("|");
                   var optionsFeed =  document.createElement("option"); 
@@ -1719,7 +1903,6 @@ if(isset($_POST['token'])) {
 
             }); 
 
-
         //setting initial progress-text content
         $('#progress-text').html("The journey of a thousand miles begins with one step, here it begins with four!")
 
@@ -1732,7 +1915,10 @@ if(isset($_POST['token'])) {
 
         $("#1c").click(function () {
 
- 
+            console.log(responseA2);
+            console.log(responseA3);
+            console.log(responseA4);
+            
             var title = document.getElementById('p-email').value; 
             var gender = document.getElementById('gender').value;
             var birthday = document.getElementById('birthday').value;
@@ -1768,10 +1954,13 @@ if(isset($_POST['token'])) {
                     responseG = _('idt');
                     responseH = _('p-email');
                     responseI = _('p-mno');
+                    responseA2 = _('fn');
+                    responseA3 = _('mn');
+                    responseA4 = _('ln');
 
                     //grouping response and display areas
-                    responseArray1 = [responseA, responseB, responseC, responseD, responseE, responseF, responseG, responseH, responseI, responseA2];
-                    displayArray1 = [displayA, displayB, displayC, displayD, displayE, displayF, displayG, displayH, displayI, displayA2];
+                    responseArray1 = [responseA, responseB, responseC, responseD, responseE, responseF, responseG, responseH, responseI, responseA2, responseA3, responseA4];
+                    displayArray1 = [displayA, displayB, displayC, displayD, displayE, displayF, displayG, displayH, displayI, displayA2, displayA3, displayA4];
 
 
 
@@ -1831,11 +2020,36 @@ if(isset($_POST['token'])) {
             }
 
            });
+           
+           
 
 
 
         $("#2c").click(function () {
-            if ($('.demo-form').parsley().validate({group: 'block2'})) {
+        
+            var currentPfa =  document.getElementById('cpfa').value;   
+            var penstring = _('pin')
+            var pen = penstring.substring(0, 3);
+            var penNumber = penstring.substring(3, 15)
+            var penLength = penNumber.length
+            console.log(pen)   
+            console.log(penNumber)
+            console.log(penLength)
+        // function validating dob is not before or equals to doe 
+            
+       var employmentDate = document.getElementById('doe').value; 
+       var birthday = document.getElementById('birthday').value;
+           momentEmploymentDate =  moment(employmentDate);
+           momentbirthday = moment(birthday);
+           
+           if(moment(momentEmploymentDate).isSameOrBefore(momentbirthday)){           
+           alert('Please confirm your Employment date')
+           }else{
+           
+           
+             if (penLength === 12 && (pen == "PEN" || pen == "pen")){
+                
+                 if ($('.demo-form').parsley().validate({group: 'block2'})) {
                 alert("block2 validated")
                 // updating values for employment responses
                 responseJ = _('org');
@@ -1874,7 +2088,56 @@ if(isset($_POST['token'])) {
                 });
             } else {
                 return false;
-            }
+            } 
+               
+                }else if (currentPfa === "not registered" ){  
+                
+                            if ($('.demo-form').parsley().validate({group: 'block2'})) {
+                alert("block2 validated")
+                // updating values for employment responses
+                responseJ = _('org');
+                responseK = _('orgAdd');
+                responseL = _('orgLga');
+                responseM = _('orgState');
+                responseN = _('orgNo');
+                responseO = _('doe');
+                responseP = _('sop');
+                responseQ = _('cpfa');
+                responseR = _('pin');
+
+
+                // grouping response and display areas
+                responseArray2 = [responseJ, responseK, responseL, responseM, responseN, responseO, responseP, responseQ, responseR];
+                displayArray2 = [displayJ, displayK, displayL, displayM, displayN, displayO, displayP, displayQ, displayR];
+
+                $("#employer, #employer-head, #employer-form, #employer-button").fadeOut(300, function () {
+                    $("#kin, #kin-head, #kin-form, #kin-button").fadeIn(500, progressbar.animate(0.4, {
+                        duration: 800,
+                        from: {color: '#2068a4'},
+                        to: {color: '#233d70'},
+                    }, progressbar.setText('40%')));
+                    $('#progress-text').html("If you can't give them your atm pin, they don't qualify :p")
+                });
+
+                $("#3b").click(function () {
+                    $("#kin, #kin-head, #kin-form, #kin-button").fadeOut(300, function () {
+                        $("#employer, #employer-head, #employer-form, #employer-button").fadeIn(500, progressbar.animate(0.2, {
+                            duration: 800,
+                            from: {color: '#2068a4'},
+                            to: {color: '#233d70'},
+                        }, progressbar.setText('20%')));
+                        $('#progress-text').html("We know you should do it for the passion, doing it for the money isn't bad too...")
+                    });
+                });
+            } else {
+                return false;
+            };
+                }else {
+                alert("please confirm your pin number")
+                }         
+           }
+
+                                   
         });
         $("#3c").click(function () {
 
@@ -1940,6 +2203,8 @@ if(isset($_POST['token'])) {
                     json['image'] = blob;
                 console.log(JSON.stringify(json));
                }
+               
+          
 
             if (document.querySelector('.dz-image-preview') !== null || $("#user-image").val() !== null) {
                 $("#biometrics, #biometrics-head, #biometrics-form, #biometrics-button").fadeOut(300, function () {
@@ -1962,6 +2227,7 @@ if(isset($_POST['token'])) {
                         $('#progress-text').html(" It's about time we saw that pretty face :)")
                     });
                 });
+                
                 parse(accessed, displayArray1, responseArray1);
                 parse(accessed, displayArray2, responseArray2);
                 parse(accessed, displayArray3, responseArray3);
