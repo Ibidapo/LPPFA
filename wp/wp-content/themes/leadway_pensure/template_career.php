@@ -1,7 +1,8 @@
-<?php /* Template Name: Career */ ?>
+<?php /* Template Name: Career */ 
 
-<?php
 include_once 'mail/career.php';
+
+$vacancies = get_field('vacancies');
 ?>
 
 <?php get_header(); ?>
@@ -66,135 +67,31 @@ include_once 'mail/career.php';
                     <span>Be part of a great mission, make your next career move.</span>
 
                     <div id="accordion5" role="tablist" aria-multiselectable="true">
-						<div class="card">
+                        <?php foreach ($vacancies as $key => $vacancy) { ?>
+                        <div class="card">
                             <div class="card-header" role="tab" id="vac1">
                                 <h5 class="mb-0">
-                                    <a data-toggle="collapse" data-parent="#accordion5" href="#rm" aria-expanded="true" aria-controls="rm">
-                                        Relationship Manager
+                                    <a data-toggle="collapse" data-parent="#accordion5" href="#card-<?= $key ?>" aria-expanded="true" aria-controls="card-<?= $key ?>">
+                                        <?= $vacancy['role_title'] ?>
                                     </a>
                                 </h5>
                             </div>
-                            <div id="rm" class="collapse show" role="tabpanel" aria-labelledby="vac1">
+                            <div id="card-<?= $key ?>" class="collapse <?= $key == 0 ? 'show' : ''?>" role="tabpanel" aria-labelledby="vac1">
                                 <div class="card-block">
                                     <h6 class="text-center">Role Summary</h6>
 
-                                    <p>We are searching for high-energy relationship managers who are proactive and passionate about company
-									products and the clients they serve. The ideal candidate will be able organized, focused on enhancing 
-									engagements with High Net-worth Clients and Companies opportunities and turn leads into long-lasting 
-									partnerships.</p>
-                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
-                                    <div><a href="http://www.leadway-pensure.com/wp-content/uploads/2017/09/RELATIONSHIP_MANAGER.pdf" target="_blank">View Requirements</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="vac2">
-                                <h5 class="mb-0">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion5" href="#ra"
-                                       aria-expanded="false" aria-controls="ra">
-                                        Research Analyst
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="ra" class="collapse" role="tabpanel" aria-labelledby="vac2">
-                                <div class="card-block">
-                                    <h6 class="text-center">Role Summary</h6>
+                                    <p><?= $vacancy['role_summary'] ?></p>
 
-                                    <p>To gather and analyze research data, top level strategizing, planning,
-                                        forecasting and simulations.
-                                        Helps in allocating resources, measure performance from large data base for
-                                        investment purposes.</p>
                                     <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
-                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/RESEARCH_ANALYST_LAGOS.pdf" target="_blank">View Requirements</a></div>
+                                    <div>
+                                        <a href="<?= isset($vacancy['requirements_file']['url']) ? $vacancy['requirements_file']['url'] : '#' ?>" target="_blank">
+                                            View Requirements
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="vac3">
-                                <h5 class="mb-0">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion5" href="#se"
-                                       aria-expanded="false" aria-controls="se">
-                                        Sales Exexcutives
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="se" class="collapse" role="tabpanel" aria-labelledby="vac3">
-                                <div class="card-block">
-                                    <h6>Role Summary</h6>
-
-                                    <p>To coordinate and synchronize the activities of the sales unit in house and the
-                                        agents (foot soldiers)
-                                        to ensure maximization of human and material resources.</p>
-                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
-                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/Sales-Executives.pdf" target="_blank">View Requirements</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="vac4">
-                                <h5 class="mb-0">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion5" href="#fia"
-                                       aria-expanded="false" aria-controls="fia">
-                                        Fixed Income Analyst
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="fia" class="collapse" role="tabpanel" aria-labelledby="vac4">
-                                <div class="card-block">
-                                    <h6>Role Summary</h6>
-
-                                    <p>We are looking for an individual whose primary function is to deeply examine the
-                                        bonds and T-Bills market,
-                                        trading on both securities, providing research and valuation report on the
-                                        composition of the bond portfolio
-                                        to make buy/hold and sell decision thereby minimizing cost and maximizing
-                                        profit.</p>
-                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
-                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/ADVERT_Fixed_Income_Analyst.pdf" target="_blank">View Requirements</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="vac5">
-                                <h5 class="mb-0">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion5" href="#fa"
-                                       aria-expanded="false" aria-controls="fa">
-                                        Fund Accountant
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="fa" class="collapse" role="tabpanel" aria-labelledby="vac5">
-                                <div class="card-block">
-                                    <h6>Role Summary</h6>
-
-                                    <p>The role will be responsible for all aspects of day-to-day Accounting for a group
-                                        of assigned funds.</p>
-                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
-                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/FUND_ACCOUNTANT.pdf" target="_blank">View Requirements</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="vac6">
-                                <h5 class="mb-0">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion5" href="#lo"
-                                       aria-expanded="false" aria-controls="lo">
-                                        Legal Officer
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="lo" class="collapse" role="tabpanel" aria-labelledby="vac6">
-                                <div class="card-block">
-                                    <h6>Role Summary</h6>
-
-                                    <p>To co-ordinate and amange the entire legal framework of LPPFA particularly the
-                                        review of policies,
-                                        procedures, manuals, contracts and any other legal documentation.</p>
-                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
-                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/ADVERT_LEGAL_OFFICER.pdf" target="_blank">View Requirements</a></div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="col-12 col-md-5">

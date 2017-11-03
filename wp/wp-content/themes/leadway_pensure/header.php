@@ -280,7 +280,10 @@ if (!$rsa_rf) {
                             <?= $options['phone_number'] ?>
                         </span>
                     </td>
-                    <?php if ($rsa_rf) { ?>
+                    <?php if (
+                        isset($rsa_rf['rsa']) && is_object($rsa_rf['rsa']) &&
+                        isset($rsa_rf['rf']) && is_object($rsa_rf['rf'])
+                        ) { ?>
                         <td>
                             <span class="head-td"> RSA FUND</span><br>
                             <span>&#8358;<?= array_get($rsa_rf['rsa']->values, 0) ?>

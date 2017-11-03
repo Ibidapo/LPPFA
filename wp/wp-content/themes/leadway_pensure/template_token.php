@@ -143,7 +143,8 @@
                                 <div class="col-12 col-sm-6 text-center form-pad" id="button-holder">
                                     <!-- enrollment field -->
 
-                                    <button class="btn btn-purple" id="recaptcha"> I'm not a Robot</button>
+                                    <button type="submit">submit</button>
+                                    <!-- <button class="btn btn-purple" id="recaptcha"> I'm not a Robot</button> -->
 
                                     <!--  g-recaptcha 6LfvHTEUAAAAAFwUDBuiqITNXeNSjA6Wv2HhIZl7 -->
                                 </div>

@@ -1,9 +1,5 @@
 <?php /* Template Name: Calculator */ ?>
 
-<?php
-
-?>
-
 <?php get_header(); ?>
 <!-- Body of Disclaimer  -->
 <div class="container-fluid" id="disclaim-overlay">
