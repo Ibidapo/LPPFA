@@ -4,6 +4,7 @@
 $durationOptions = [
     0 => "Last Available Date",
     1 => "Year To Date",
+    7 => "Last 7 days",
     2 => "Last 14 Days",
     3 => "Last 1 Month",
     4 => "Last 3 Months",
