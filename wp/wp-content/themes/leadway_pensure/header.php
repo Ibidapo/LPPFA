@@ -243,13 +243,13 @@ if (!$rsa_rf) {
                         ) { ?>
                         <td>
                             <span class="head-td"> RSA FUND</span><br>
-                            <span>&#8358;<?= array_get($rsa_rf['rsa']->values, 0) ?>
+                            <span>&#8358;<?= number_format((float) array_get($rsa_rf['rsa']->values, 0), 4, '.', '') ?>
                                 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png" alt="">
                             </span>
                         </td>
                         <td>
                             <span class="head-td">RETIREE FUND</span><br>
-                            <span> &#8358;<?= array_get($rsa_rf['rf']->values, 0) ?>
+                            <span> &#8358;<?= number_format((float) array_get($rsa_rf['rf']->values, 0), 4, '.', '') ?>
                                 <img src="<?php echo get_bloginfo('template_directory'); ?>/images/pos.png" alt="">
                             </span>
                         </td>

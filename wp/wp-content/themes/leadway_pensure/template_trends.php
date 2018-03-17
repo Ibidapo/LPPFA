@@ -15,7 +15,9 @@ $durationOptions = [
 $cacheKey = "leadway_trends_page_info";
 delete_transient($cacheKey);
 $trends = get_transient($cacheKey);
-if (!$trends) {
+// forcing cache removal
+// if (!$trends) {
+if (true) {
     $url = "https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/Chart";
     $duration = array_get($_GET, 'duration', 3);
     $trends['rf'] = sendReq($url, [
@@ -124,7 +126,18 @@ get_header();
         },
 
         // Configuration options go here
-        options: {}
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        // Include a dollar sign in the ticks
+                        callback: function(value, index, values) {
+                            return value.toFixed(4);
+                        }
+                    }
+                }]
+            }
+        }
     });
 </script>
 <?php endif ?>
