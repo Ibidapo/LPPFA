@@ -21,6 +21,30 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
 ?>
 
 <?php get_header(); ?>
+
+<style>
+.seriesCap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    right: 0;
+    padding: 10px;
+    color: #fff;
+    top: 77%;
+}
+
+.seriesCap p {
+    color: #fff;
+}
+
+#series1 span.badge {
+    left: 83%;
+    top: 2%;
+    background: #000;
+    font-weight: 800;
+}
+</style>
 <!-- Desktop navigation -->
 <nav class="navbar fixed-top hidden-md-down pOff">
     
@@ -81,17 +105,18 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                     <?php if ($firstInvNews) : $categories = get_the_category($firstInvNews->ID); ?>
                         <img src="<?= get_the_post_thumbnail_url($firstInvNews->ID); ?>"/>
 
-                        <?php foreach($categories as $category): ?>
-                            <span class="badge badge-primary">
+                         <?php foreach($categories as $category): ?>
+                            <!-- <span class="badge badge-primary">
                                 <?= $category->name ?>
-                            </span>
-                        <?php endforeach ?>
+                            </span> -->
+                        <?php endforeach ?> 
 
                         <div class="seriesCap">
-                            <span class="cap-color">
+                            <!-- <span class="cap-color">
                                 Confident</span> because<br>my finances are<br><span class="cap-color">pensure
-                            </span>
-                            <p><?= summary($firstInvNews->post_content, 100) ?></p>
+                            </span> -->
+							<p><?= summary($firstInvNews->post_content, 100) ?></p>
+                            
                             <a href="<?= get_permalink($firstInvNews) ?>" class="btn btn-primary">Learn more</a>
                         </div>
                     <?php endif ?>
@@ -136,7 +161,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                                     <h5 class="mt-0"><?= $news->post_title ?></h5>
 
                                     <p>
-                                        <?= summary($news->post_content, 100) ?>
+                                        <?= summary($news->post_content, 150) ?>
                                         <a href="<?= get_permalink($news) ?>">Read more</a>
                                     </p>
                                 </div>
@@ -168,28 +193,25 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
             </div>
         </div>
         <div class="tab-pane fade col-12" role="tabpanel" id="articles">
-            <?php if ($firstCTNews) : $categories = get_the_category($firstCTNews->ID); ?>
+            <?php if ($firstInvNews) : $categories = get_the_category($firstInvNews->ID); ?>
                 <div class="row topSeries">
                     <div class="col-12 col-md-5 col-lg-6 story-pic">
-                        <img src="<?= get_the_post_thumbnail_url($firstCTNews->ID); ?>">
+                        <img src="<?= get_the_post_thumbnail_url($firstInvNews->ID); ?>">
                     </div>
                     <div class="col-12 col-md-7 col-lg-6 story">
-                        <?php foreach($categories as $category): ?>
-                            <h3 class="hidden-md-down text-right"><span class="badge badge-primary"><?= $category->name ?></span></h3>
-                            <h5 class="hidden-lg-up text-right"><span class="badge badge-primary"><?= $category->name ?></span></h5>
-                        <?php endforeach ?>
+                            <h3 class="hidden-md-down text-right"><span class="badge badge-primary">Articles</span></h3>
+                            <h5 class="hidden-lg-up text-right"><span class="badge badge-primary">Articles</span></h5>
 
                         <span class="news-date">
-                            <?= date ( "F j, Y", strtotime($firstCTNews->post_date) ) ?>
+                            <?= date ( "F j, Y", strtotime($firstInvNews->post_date) ) ?>
                         </span>
-                        <h5><?= $firstCTNews->post_title ?></h5>
-                        <p><?= summary($firstCTNews->post_content, 100) ?></p>
+                        <h5><?= $firstInvNews->post_title ?></h5>
+                        <p><?= summary($firstInvNews->post_content, 100) ?></p>
                         <span>
-                                <img src="<?= asset() ?>/images/facebook.png">
-                                <img src="<?= asset() ?>/images/instagram.png">
-                                <img src="<?= asset() ?>/images/twitter.png">
-                            </span>
-                        <span class="float-right link">&rarr; <a href="<?= get_permalink($firstCTNews) ?>">Read More</a></span>
+							<a href="<?= $social_options['facebook'] ?>"><img src="<?= asset() ?>/images/facebook.png"></a>
+							<a href="<?= $social_options['twitter'] ?>"><img src="<?= asset() ?>/images/twitter.png"></a>
+						</span>
+                        <span class="float-right link">&rarr; <a href="<?= get_permalink($firstInvNews) ?>">Read More</a></span>
                     </div>
                 </div>
             <?php endif ?>
@@ -198,10 +220,8 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                     <h2>Recent releases</h2>
                 </div>
                 <? foreach ($career_tips as $news) { $categories = get_the_category($news->ID); ?>
-                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
-                        <?php foreach($categories as $category): ?>
-                            <span class="badge badge-success"><?= $category->name ?></span>
-                        <?php endforeach ?>
+                    <div class="offset-1 col-10 offset-sm-0 col-sm-6 col-md-4">
+                            <span class="badge badge-success">Articles</span>
 
                         <span class="news-date">
                             <?= date ( "F j, Y", strtotime($news->post_date) ) ?>
@@ -238,10 +258,9 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                         <h5><?= $firstComNews->post_title ?></h5>
                         <p><?= summary($firstComNews->post_content, 100) ?></p>
                         <span>
-                                <img src="<?= asset() ?>/images/facebook.png">
-                                <img src="<?= asset() ?>/images/instagram.png">
-                                <img src="<?= asset() ?>/images/twitter.png">
-                            </span>
+							<a href="<?= $social_options['facebook'] ?>"><img src="<?= asset() ?>/images/facebook.png"></a>
+							<a href="<?= $social_options['twitter'] ?>"><img src="<?= asset() ?>/images/twitter.png"></a>
+						</span>
                         <span class="float-right link">&rarr; <a href="<?= get_permalink($firstComNews) ?>">Read More</a></span>
                     </div>
                 </div>
@@ -251,7 +270,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                     <h2>Recent releases</h2>
                 </div>
                 <? foreach ($comics as $news) { $categories = get_the_category($news->ID); ?>
-                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                    <div class="offset-1 col-10 offset-sm-0 col-sm-6 col-md-4">
                         <?php foreach($categories as $category): ?>
                             <span class="badge badge-success"><?= $category->name ?></span>
                         <?php endforeach ?>
@@ -291,10 +310,9 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                         <h5><?= $firstVidNews->post_title ?></h5>
                         <p><?= summary($firstVidNews->post_content, 100) ?></p>
                         <span>
-                                <img src="<?= asset() ?>/images/facebook.png">
-                                <img src="<?= asset() ?>/images/instagram.png">
-                                <img src="<?= asset() ?>/images/twitter.png">
-                            </span>
+							<a href="<?= $social_options['facebook'] ?>"><img src="<?= asset() ?>/images/facebook.png"></a>
+							<a href="<?= $social_options['twitter'] ?>"><img src="<?= asset() ?>/images/twitter.png"></a>
+						</span>
                         <span class="float-right link">&rarr; <a href="<?= get_permalink($firstVidNews) ?>">Read More</a></span>
                     </div>
                 </div>
@@ -304,7 +322,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                     <h2>Recent releases</h2>
                 </div>
                 <? foreach ($videos as $news) { $categories = get_the_category($news->ID); ?>
-                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                    <div class="offset-1 col-10 offset-sm-0 col-sm-6 col-md-4">
                         <?php foreach($categories as $category): ?>
                             <span class="badge badge-success"><?= $category->name ?></span>
                         <?php endforeach ?>
@@ -344,10 +362,9 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                         <h5><?= $firstCTNews->post_title ?></h5>
                         <p><?= summary($firstCTNews->post_content, 100) ?></p>
                         <span>
-                                <img src="<?= asset() ?>/images/facebook.png">
-                                <img src="<?= asset() ?>/images/instagram.png">
-                                <img src="<?= asset() ?>/images/twitter.png">
-                            </span>
+							<a href="<?= $social_options['facebook'] ?>"><img src="<?= asset() ?>/images/facebook.png"></a>
+							<a href="<?= $social_options['twitter'] ?>"><img src="<?= asset() ?>/images/twitter.png"></a>
+						</span>
                         <span class="float-right link">&rarr; <a href="<?= get_permalink($firstCTNews) ?>">Read More</a></span>
                     </div>
                 </div>
@@ -357,7 +374,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
                     <h2>Recent releases</h2>
                 </div>
                 <? foreach ($career_tips as $news) { $categories = get_the_category($news->ID); ?>
-                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
+                    <div class="offset-1 col-10 offset-sm-0 col-sm-6 col-md-4">
                         <?php foreach($categories as $category): ?>
                             <span class="badge badge-success"><?= $category->name ?></span>
                         <?php endforeach ?>
@@ -385,27 +402,27 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
             <h2 class="hidden-sm-down text-center">Join the Conversation</h2>
             <h4 class="hidden-md-up text-center">Join the Conversation</h4>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
 
-            <div class="fb-page" data-href="<?= $social_options['facebook'] ?>"
+            <div class="fb-page" style="padding: 0" data-href="<?= $social_options['facebook'] ?>"
                  data-tabs="timeline,messages,events" data-width="700px" data-height="500px"
                  data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
                  data-show-facepile="true">
                 <blockquote cite="<?= $social_options['facebook'] ?>"
                             class="fb-xfbml-parse-ignore">
-                    <a href="<?= $social_options['facebook'] ?>">iNspire Leadership</a>
+                    <a href="<?= $social_options['facebook'] ?>">Leadway Pensure</a>
                 </blockquote>
             </div>
 
         </div>
-        <div class="col-md-6">
+        <!-- <div class="col-md-4">
             <div class=social-feed id=instafeed > </div>
+		</div> -->
+        <div class="col-md-4" id=twitfeed>
+			<a class="twitter-timeline" href="https://twitter.com/LeadwayPensure?ref_src=twsrc%5Etfw" data-tweet-limit="10">Tweets by Leadway Pensure</a> 
+			<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
-        <div class="col-md-6" id=twitfeed>
-            <a class="twitter-grid" data-lang="en" data-limit="9" data-partner="tweetdeck" href="https://twitter.com/OAOD_iNspire/timelines/894512301486870529">leadway test </a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-        </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
             <script type="IN/FollowCompany" data-id="7110418" data-counter="top"></script>
             <script type="IN/CompanyProfile" data-id="7110418" data-format="inline" data-related="false"></script>
@@ -413,17 +430,17 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
 
     </div>
 </div>
+<a href="javascript:void(Tawk_API.toggle())" style="padding-left: 15px;" class="hidden-md-down" id="chat-icon"><img src="https://www.leadway-pensure.com/wp-content/uploads/2017/09/chat-icon.png"></a>
 
 <footer class="container" id="blog-Ft">
     <div class="row">
         <div class="col-12 col-md-4 align-self-center text-center text-md-left">
-            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/facebook.png">
-            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/instagram.png">
-            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/twitter.png">
-            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/linkedin.png">
+            <a href="https://www.facebook.com/leadwaypensure/"><img src="<?php echo get_bloginfo('template_directory'); ?>/images/facebook.png"></a>
+            <!-- <a href=""><img src="<?php echo get_bloginfo('template_directory'); ?>/images/instagram.png"></a> -->
+            <a href="https://twitter.com/LeadwayPensure"><img src="<?php echo get_bloginfo('template_directory'); ?>/images/twitter.png"></a>
+            <a href="http://www.linkedin.com/company/leadway-pensure-pfa-limited?trk=cws-cpw-coname-0-0"><img src="<?php echo get_bloginfo('template_directory'); ?>/images/linkedin.png"></a>
         </div>
         <div class="col-12 col-md-4 align-self-center text-center">&copy; Leadway Pensure 2017</div>
-        <div class="col-12 col-md-4 align-self-center text-center text-md-right">Web Design & Digital by iNspire</div>
     </div>
     <a  href="javascript:window.print()" data-toggle="tooltip" title="Print" data-placement="left" id="print"><i class="fa fa-print" aria-hidden="true"></i></a>
     <a href="javascript:" data-toggle="tooltip" title="Back to Top" data-placement="left" id="back-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
@@ -469,7 +486,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
     });
 </script>
 <script src="<?php echo get_bloginfo('template_directory'); ?>/js/instafeed.min.js"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     var feed = new Instafeed({
         get: 'user',
         userId: '5841177351',
@@ -479,7 +496,7 @@ $latest_news = get_posts(['category' => 2, 'numberposts' => 3]);
 
     });
     feed.run();
-</script>
+</script> -->
 
 </body>
 </html>

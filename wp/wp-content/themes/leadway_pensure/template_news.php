@@ -2,7 +2,7 @@
 
 <?php
 $featured_news = get_field("featured_posts");
-$first_featured_news = array_splice($featured_news, 0, 1);
+/* $first_featured_news = array_splice($featured_news, 0, 1); */
 $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
 ?>
 <style>
@@ -15,7 +15,7 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 news-bg">
-            <h1 class="text-center">What's New!</h1>
+            <h1 class="text-center">What's New!</h1> 
 
             <div class="row">
                 <div class="col-12 col-sm-10 col-md-5 col-lg-4 mx-auto">
@@ -34,11 +34,11 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
                         <span class="news-date">
                             <?= date("F j, Y", strtotime($first_featured_news[0]->post_date)) ?>
                         </span>
-                    <? endif ?>
+                    <? endif  ?>
                 </div>
                 <div class=" col-12 col-md-7 col-lg-8">
                     <div class="row other-news">
-                        <?php foreach ($featured_news as $key => $news) { ?>
+                        <?php /* foreach ($featured_news as $key => $news) { ?>
                             <div class="offset-sm-1 col-sm-10 offset-md-0 col-md-12 col-lg-6 <?= $key > 1 ? "hidden-md-down" : "" ?>">
                                 <div class="media">
                                     <img class="d-flex align-self-center mr-3"
@@ -55,7 +55,7 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
                                     </div>
                                 </div>
                             </div>
-                        <?php } ?>
+                        <?php } */?>
                     </div>
                 </div>
             </div>
@@ -94,11 +94,8 @@ $recent_news = get_posts(['category' => 2, 'numberposts' => 3]);
                     <h2>Recent releases</h2>
                 </div>
                 <?php foreach ($recent_news as $key => $news) { ?>
-                    <div class="col-10 col-sm-6 col-md-4 mx-auto">
-                        <span class="badge badge-info">News & Events</span>
-                        <span class="news-date">
-                            <?= date("F j, Y", strtotime($first_featured_news[0]->post_date)) ?>
-                        </span>
+                    <div class="offset-1 col-10 offset-sm-0 col-sm-6 col-md-4">
+                        <span class="badge badge-info">News</span>
                         <a href="<?= get_permalink($news) ?>">
                             <figure>
                                 <img src="<?= get_the_post_thumbnail_url($news->ID); ?>"/>

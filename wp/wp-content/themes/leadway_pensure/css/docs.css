@@ -12,6 +12,13 @@ font-size: 0.85rem;
   padding :20px ;
 }
 
+#alm {
+background: url(../images/alumni-network.jpg)no-repeat; 
+}
+#csr{
+background: url(../images/community-service.jpg)no-repeat;
+background-size: contain;
+}
 div.FAQ{
 margin-top: 5%;
 }
@@ -20,6 +27,9 @@ padding:0 !important;
 }
 .mOff {
 margin:0 !important;
+}
+#logon-email {
+ background: #eceeef !important;
 }
 #wrapper {
 margin-top:3% !important;
@@ -453,6 +463,9 @@ color: #1f69a5;
 .solutions1{
     padding-bottom: 70px;
 }
+.solutions1 .col-12 {
+	margin-bottom: 1rem;
+}
 .solutions {
 	margin: 5px 0;
     font-size: 0.85rem;
@@ -504,7 +517,7 @@ cursor: pointer;
 transition: opacity .25s ease;
 }
 .social-tab{
-    width:56% !important;
+    width:45% !important;
     cursor: pointer;
 }
 .social-img{
@@ -544,6 +557,10 @@ color:white;
 }
 .social-feed{
   padding:30px;
+}
+
+#logon-email:active {
+background-color: #ffffff;
 }
 
 .game{
@@ -759,6 +776,13 @@ input[type="text"].language::-webkit-input-placeholder {
     font-family: montserrat, sans-serif;
     color: #2C3E50;
     font-size: 13px;
+}
+
+/*Styling for Social Page*/
+#twitfeed {
+	height: 500px;
+    overflow-y: scroll;
+    margin-bottom: 1rem;
 }
 /*buttons*/
 #msform .action-button {

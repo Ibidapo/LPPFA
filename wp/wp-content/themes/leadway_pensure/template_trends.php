@@ -4,6 +4,7 @@
 $durationOptions = [
     0 => "Last Available Date",
     1 => "Year To Date",
+    7 => "Last 7 days",
     2 => "Last 14 Days",
     3 => "Last 1 Month",
     4 => "Last 3 Months",
@@ -11,35 +12,46 @@ $durationOptions = [
     6 => "Last 5 Years"
 ];
 
-$params = [
-    "RSAFund" => true,
-    "RetireeFund" => true,
-    "duration" => array_get($_GET, 'duration', 3)
-];
-$json_params = json_encode($params);
-$cacheKey = "leadway_trends_info-" . md5($json_params);
+$cacheKey = "leadway_trends_page_info";
+delete_transient($cacheKey);
 $trends = get_transient($cacheKey);
-
-if (!$trends) {
-    $trends = wp_remote_post("https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/Chart", [
-        'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
-        'body' => json_encode($params),
-        'method' => 'POST'
+// forcing cache removal
+// if (!$trends) {
+if (true) {
+    $url = "https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/Chart";
+    $duration = array_get($_GET, 'duration', 3);
+    $trends['rf'] = sendReq($url, [
+        "RetireeFund" => true,
+        "duration" => $duration
     ]);
-    if (is_array($trends) && isset($trends['body'])) {
-        $trends_json = json_decode($trends['body']);
-        $trends = $trends_json->Data;
+    $trends['rsa'] = sendReq($url, [
+        "RSAFund" => true,
+        "duration" => $duration
+    ]);
+    $trends = [
+        'rf' => [
+            'label' => 'Retiree Fund',
+            'bg_color' => 'rgba(255, 159, 64, 0.2)',
+            'color' => 'rgba(255, 159, 64, 1)',
+            'response' => ($response = getResponse($trends['rf'])) ? $response->Data : false
+        ],
+        'rsa' => [
+            'label' => 'RSA Fund',
+            'bg_color' => 'rgba(54, 162, 235, 0.2)',
+            'color' => 'rgba(54, 162, 235, 1)',
+            'response' => ($response = getResponse($trends['rsa'])) ? $response->Data : false
+        ]
+    ];
+    if (isset($trends['rf']['response']) && isset($trends['rsa']['response'])) {
         set_transient($cacheKey, $trends, DAY_IN_SECONDS);
-    } else {
-        $trends = false;
     }
 }
-get_header();
 
+get_header();
 ?>
 
 <!-- Body and Main Content of page -->
-<div class="container-fluid" id="m-top">
+<div class="container" id="m-top">
     <div class="row">
         <div class="col-12">
             <div class="page-wrapper" style="min-height:300px;padding: 50px 0;">
@@ -77,6 +89,7 @@ get_header();
 
 <?php get_footer(); ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<?php if(isset($trends['rf']['response'])):?>
 <script>
     var ctx = document.getElementById('trendChart').getContext('2d');
     var chart = new Chart(ctx, {
@@ -87,26 +100,44 @@ get_header();
         data: {
             labels: [
                 <?php
-                foreach($trends->Datelabels as $label):
+                foreach($trends['rf']['response']->Datelabels as $label):
                     echo "'$label',";
                 endforeach
                 ?>
             ],
-            datasets: [{
-                label: "RSA Fund",
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
-                data: [
-                    <?php
-                    foreach($trends->values as $value):
-                        echo "$value,";
-                    endforeach
-                    ?>
-                ],
-            }]
+            datasets: [
+                <?php
+                foreach($trends as $trend): ?>
+                {
+                    label: '<?= $trend['label'] ?>',
+                    backgroundColor: '<?= $trend['bg_color'] ?>',
+                    borderColor: '<?= $trend['color'] ?>',
+                    data: [
+                        <?php
+                        foreach($trend['response']->values as $value):
+                            echo "$value,";
+                        endforeach
+                        ?>
+                    ]
+                },
+                <?php endforeach ?>
+
+            ]
         },
 
         // Configuration options go here
-        options: {}
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        // Include a dollar sign in the ticks
+                        callback: function(value, index, values) {
+                            return value.toFixed(4);
+                        }
+                    }
+                }]
+            }
+        }
     });
 </script>
+<?php endif ?>

@@ -1,7 +1,8 @@
-<?php /* Template Name: Career */ ?>
+<?php /* Template Name: Career */ 
 
-<?php
 include_once 'mail/career.php';
+
+$vacancies = get_field('vacancies');
 ?>
 
 <?php get_header(); ?>
@@ -66,136 +67,31 @@ include_once 'mail/career.php';
                     <span>Be part of a great mission, make your next career move.</span>
 
                     <div id="accordion5" role="tablist" aria-multiselectable="true">
+                        <?php foreach ($vacancies as $key => $vacancy) { ?>
                         <div class="card">
                             <div class="card-header" role="tab" id="vac1">
                                 <h5 class="mb-0">
-                                    <a data-toggle="collapse" data-parent="#accordion5" href="#bm" aria-expanded="true"
-                                       aria-controls="bm">
-                                        Brand Manager
+                                    <a data-toggle="collapse" data-parent="#accordion5" href="#card-<?= $key ?>" aria-expanded="true" aria-controls="card-<?= $key ?>">
+                                        <?= $vacancy['role_title'] ?>
                                     </a>
                                 </h5>
                             </div>
-                            <div id="bm" class="collapse show" role="tabpanel" aria-labelledby="vac1">
-                                <div class="card-block">
-                                    <h6>Role Summary</h6>
-
-                                    <p>We are looking for an experienced Brand Manager who is passionate about
-                                        uncovering consumer insights and delivering innovative marketing campaigns. You will
-                                        join a dynamic and fast-paced environment and you will generate strategies that grow market
-                                        share and brand’s reputation, improve customer experience and drive growth.</p>
-                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
-                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/BRAND_EXECUTIVE_LAGOS.pdf" target="_blank">View Requirements</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="vac2">
-                                <h5 class="mb-0">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion5" href="#ra"
-                                       aria-expanded="false" aria-controls="ra">
-                                        Research Analyst
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="ra" class="collapse" role="tabpanel" aria-labelledby="vac2">
+                            <div id="card-<?= $key ?>" class="collapse <?= $key == 0 ? 'show' : ''?>" role="tabpanel" aria-labelledby="vac1">
                                 <div class="card-block">
                                     <h6 class="text-center">Role Summary</h6>
 
-                                    <p>To gather and analyze research data, top level strategizing, planning,
-                                        forecasting and simulations.
-                                        Helps in allocating resources, measure performance from large data base for
-                                        investment purposes.</p>
-                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
-                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/RESEARCH_ANALYST_LAGOS.pdf" target="_blank">View Requirements</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="vac3">
-                                <h5 class="mb-0">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion5" href="#se"
-                                       aria-expanded="false" aria-controls="se">
-                                        Sales Exexcutives
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="se" class="collapse" role="tabpanel" aria-labelledby="vac3">
-                                <div class="card-block">
-                                    <h6>Role Summary</h6>
+                                    <p><?= $vacancy['role_summary'] ?></p>
 
-                                    <p>To coordinate and synchronize the activities of the sales unit in house and the
-                                        agents (foot soldiers)
-                                        to ensure maximization of human and material resources.</p>
                                     <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
-                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/Sales-Executives.pdf" target="_blank">View Requirements</a></div>
+                                    <div>
+                                        <a href="<?= isset($vacancy['requirements_file']['url']) ? $vacancy['requirements_file']['url'] : '#' ?>" target="_blank">
+                                            View Requirements
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="vac4">
-                                <h5 class="mb-0">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion5" href="#fia"
-                                       aria-expanded="false" aria-controls="fia">
-                                        Fixed Income Analyst
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="fia" class="collapse" role="tabpanel" aria-labelledby="vac4">
-                                <div class="card-block">
-                                    <h6>Role Summary</h6>
-
-                                    <p>We are looking for an individual whose primary function is to deeply examine the
-                                        bonds and T-Bills market,
-                                        trading on both securities, providing research and valuation report on the
-                                        composition of the bond portfolio
-                                        to make buy/hold and sell decision thereby minimizing cost and maximizing
-                                        profit.</p>
-                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
-                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/ADVERT_Fixed_Income_Analyst.pdf" target="_blank">View Requirements</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="vac5">
-                                <h5 class="mb-0">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion5" href="#fa"
-                                       aria-expanded="false" aria-controls="fa">
-                                        Fund Accountant
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="fa" class="collapse" role="tabpanel" aria-labelledby="vac5">
-                                <div class="card-block">
-                                    <h6>Role Summary</h6>
-
-                                    <p>The role will be responsible for all aspects of day-to-day Accounting for a group
-                                        of assigned funds.</p>
-                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
-                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/FUND_ACCOUNTANT.pdf" target="_blank">View Requirements</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" role="tab" id="vac6">
-                                <h5 class="mb-0">
-                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion5" href="#lo"
-                                       aria-expanded="false" aria-controls="lo">
-                                        Legal Officer
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="lo" class="collapse" role="tabpanel" aria-labelledby="vac6">
-                                <div class="card-block">
-                                    <h6>Role Summary</h6>
-
-                                    <p>To co-ordinate and amange the entire legal framework of LPPFA particularly the
-                                        review of policies,
-                                        procedures, manuals, contracts and any other legal documentation.</p>
-                                    <a href="javascript:" class="btn btn-outline-loc apply">Apply Now</a>
-                                    <div><a href="http://lppfa-wp.inspireleadership.biz/wp-content/uploads/2017/09/ADVERT_LEGAL_OFFICER.pdf" target="_blank">View Requirements</a></div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="col-12 col-md-5">
@@ -254,7 +150,7 @@ include_once 'mail/career.php';
                 <div class="col-12 career-cult-box">
                     <div class="row">
                         <div class="col-sm-6 cult-box1">
-                            <p class="v-align">We are one team that is passionate about the future of our customers. Our values
+                            <p class="v-align">We are one team that is passionate about the future of our clients. Our values
                             captures and articulates the way we work and do business.</p>
                         </div>
                         <div class="col-sm-6 cult-box2">
@@ -275,7 +171,7 @@ include_once 'mail/career.php';
             </div>
         </div>
         <div class="tab-pane fade col-12" role="tabpanel" id="cv">
-            <form enctype="multipart/form-data" action="<?php the_permalink(); ?>#cv" method="post">
+            <form enctype="multipart/form-data" action="<?php the_permalink(); ?>#cv" method="post" id="career_captcha">
                 <input type="hidden" name="career_submitted" value="1"/>
                 <div class="row">
                     <div class="col-xs-10 offset-xs-1 col-md-12 text-center">
@@ -303,13 +199,14 @@ include_once 'mail/career.php';
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="p-no">Phone No</label>
-                                    <input required name="phone_number" type="tel" class="form-control" id="p-no" value="<?= array_get($_POST, 'phone_number')?>">
+                                    <input required name="phone_number" type="number" class="form-control" id="p-no" value="<?= array_get($_POST, 'phone_number')?>">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="d-o-b">Date of Birth</label>
-                                    <input name="date_of_birth" type="date" class="form-control" id="d-o-b" value="<?= array_get($_POST, 'date_of_birth')?>">
+                                    <input name="date_of_birth" type="date" class="form-control" id="d-o-b" placeholder="mm/dd/yyyy" 
+									value="<?= array_get($_POST, 'date_of_birth')?>">
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -322,7 +219,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="app">Applicant Type</label>
                                     <select name="applicant_type" class="form-control" id="app">
-                                        <option disabled>Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option>Young graduate</option>
                                         <option>Experienced</option>
                                         <option>Global talent</option>
@@ -332,7 +229,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="gen">Gender</label>
                                     <select name="gender" class="form-control" id="gen">
-                                        <option disabled>Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option>Female</option>
                                         <option>Male</option>
                                         <option>Other</option>
@@ -351,7 +248,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="i-name">Institutional Name</label>
                                     <select name="institution_name" class="form-control" id="i-name">
-                                        <option disabled>Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option value="28">Abia state University</option>
                                         <option value="1">Abubakar Tafawa Belewa University, Bauchi</option>
                                         <option value="64">Achievers University, Owo</option>
@@ -478,7 +375,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="edu-qlt">Qualification</label>
                                     <select name="qualification" class="form-control" id="edu-qlt">
-                                        <option>Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option value="8">Bachelor of Applied Science (BASc)</option>
                                         <option value="9">Bachelor of Architecture (BArch)</option>
                                         <option value="27">Bachelor of Art (French)</option>
@@ -514,7 +411,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="deg">Class of Degree</label>
                                     <select name="class_of_degree" class="form-control" id="deg">
-                                        <option value="">Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option value="First Class">First Class</option>
                                         <option value="Second Class Upper">Second Class Upper</option>
                                         <option value="Second Class Lower">Second Class Lower</option>
@@ -531,14 +428,14 @@ include_once 'mail/career.php';
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="yr-qlt">Year Completed</label>
-                                    <input name="year_completed" type="text" class="form-control" id="yr-qlt">
+                                    <input name="year_completed" type="text" class="form-control" id="yr-qlt" placeholder="yyyy">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="cont">Country Obtained</label>
                                     <select name="country_obtained" class="form-control" id="cont">
-                                        <option>Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option value="Afghanistan">Afghanistan</option>
                                         <option value="Aland Islands">Aland Islands</option>
                                         <option value="Albania">Albania</option>
@@ -811,7 +708,7 @@ include_once 'mail/career.php';
                                 <div class="form-group">
                                     <label for="prof-qlt">Qualification</label>
                                     <select name="professional_qualification" class="form-control" id="prof-qlt">
-                                        <option value="">Please select</option>
+                                        <option value="" selected disabled>Please select</option>
                                         <option value="19">Advertising Practioners Council of Nigeria (APCON)</option>
                                         <option value="22">African Institute for Applied Economics (AIAE)</option>
                                         <option value="3">Association of Chartered Certified Accountants (ACCA)</option>
@@ -1604,7 +1501,7 @@ include_once 'mail/career.php';
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-purple">Submit</button>
+                            <button type="submit" class="btn btn-purple" id="submitCV">Submit</button>
                         </div>
                     </div>
                 </div>

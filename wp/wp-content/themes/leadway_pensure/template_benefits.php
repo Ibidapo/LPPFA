@@ -9,7 +9,7 @@
  */
 function getId($aKey, $bKey)
 {
-    $id = "$aKey-$bKey";
+    $id = "benefit-{$aKey}-{$bKey}";
     if ($aKey == 0) {
         switch ($bKey) {
             case 0:
@@ -40,34 +40,7 @@ function getId($aKey, $bKey)
                 $id = "frgn";
                 break;
         }
-    } elseif ($aKey == 2) {
-        switch ($bKey) {
-            case 0:
-                $id = "l-sum";
-                break;
-            case 1:
-                $id = "enbloc";
-                break;
-            case 2:
-                $id = "med-grnd2";
-                break;
-            case 3:
-                $id = "dth-ben2";
-                break;
-            case 4:
-                $id = "frgn2";
-                break;
-            case 5:
-                $id = "nst2";
-                break;
-            case 6:
-                $id = "leg-app";
-                break;
-            case 7:
-                $id = "avc-app";
-                break;
-        }
-    }
+    } 
     return $id;
 }
 
@@ -82,7 +55,7 @@ $benefits = get_field("benefits");
 <!-- Body and Main Content of page -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 benefits-bg" style="background-image: url(<?= $banner_image['url'] ?>)">
+        <div class="col-12 benefits-bg" style="background: url(<?= $banner_image['url'] ?>) no-repeat center">
             <div class="bg-txt">
                 <h1 class="hidden-md-down"><?= $banner_title ?></h1>
                 <h2 class="hidden-lg-up"><?= $banner_title ?></h2>
@@ -178,68 +151,62 @@ $benefits = get_field("benefits");
         });
 
         $(".dropdown-menu.bnf a:first-child").click(function(){
-            $('a[href="#ab-ret"]').tab('show');
-        });
-
-        $(".dropdown-menu.bnf a:nth-child(2)").click(function(){
             $('a[href="#pay-grnd"]').tab('show');
         });
 
-        $(".dropdown-menu.bnf a:nth-child(3)").click(function(){
+        $(".dropdown-menu.bnf a:nth-child(2)").click(function(){
             $('a[href="#pay-type"]').tab('show');
         });
 
         $("#m-benefitsTab").change(function () {
             var i = $(this).val();
+			var label = $(this.options[this.selectedIndex]).closest('optgroup').prop('label');
 
-            if (i == 0) {
-                $('a[href="#ab-ret"]').tab('show');
+            if (i == 0 && label == "Grounds for Withdrawal") {
+                $('a[href="#pay-grnd"]').tab('show');
                 $('a[href="#gen-app"]').tab('show');
-            } else if (i == 1) {
-                $('a[href="#ab-ret"]').tab('show');
+            } else if (i == 1 && label == "Grounds for Withdrawal") {
+                $('a[href="#pay-grnd"]').tab('show');
                 $('a[href="#prog-wd"]').tab('show');
-            } else if (i == 2) {
-                $('a[href="#ab-ret"]').tab('show');
+            } else if (i == 2 && label == "Grounds for Withdrawal") {
+                $('a[href="#pay-grnd"]').tab('show');
                 $('a[href="#annt"]').tab('show');
-            } else if (i == 3) {
+            } else if (i == 3 && label == "Grounds for Withdrawal") {
                 $('a[href="#pay-grnd"]').tab('show');
+                $('a[href="#benefit-0-3"]').tab('show');
+            } else if (i == 4 && label == "Grounds for Withdrawal") {
+                $('a[href="#pay-grnd"]').tab('show');
+                $('a[href="#benefit-0-4"]').tab('show');
+            } else if (i == 5 && label == "Grounds for Withdrawal") {
+                $('a[href="#pay-grnd"]').tab('show');
+                $('a[href="#benefit-0-5"]').tab('show');
+            }else if (i == 0 && label == "Payment Types") {
+                $('a[href="#pay-type"]').tab('show');
                 $('a[href="#man-ret"]').tab('show');
-            } else if (i == 4) {
-                $('a[href="#pay-grnd"]').tab('show');
+            } else if (i == 1 && label == "Payment Types") {
+                $('a[href="#pay-type"]').tab('show');
                 $('a[href="#temp-ret"]').tab('show');
-            } else if (i == 5) {
-                $('a[href="#pay-grnd"]').tab('show');
+            } else if (i == 2 && label == "Payment Types") {
+                $('a[href="#pay-type"]').tab('show');
                 $('a[href="#med-grnd"]').tab('show');
-            } else if (i == 6) {
-                $('a[href="#pay-grnd"]').tab('show');
+            } else if (i == 3 && label == "Payment Types") {
+                $('a[href="#pay-type"]').tab('show');
                 $('a[href="#dth-ben"]').tab('show');
-            } else if (i == 7) {
-                $('a[href="#pay-grnd"]').tab('show');
-                $('a[href="#frgn"]').tab('show');
-            } else if (i == 8) {
+            } else if (i == 4 && label == "Payment Types") {
                 $('a[href="#pay-type"]').tab('show');
-                $('a[href="#l-sum"]').tab('show');
-            }else if (i == 9) {
+                $('a[href="#frgn"]').tab('show'); 
+            } else if (i == 5 && label == "Payment Types") {
                 $('a[href="#pay-type"]').tab('show');
-                $('a[href="#enbloc"]').tab('show');
-            } else if (i == 10) {
+                $('a[href="#benefit-1-5"]').tab('show');
+            } else if (i == 6 && label == "Payment Types") {
                 $('a[href="#pay-type"]').tab('show');
-                $('a[href="#med-grnd2"]').tab('show');
-            } else if (i == 11) {
+                $('a[href="#benefit-1-6"]').tab('show');
+            } else if (i == 7 && label == "Payment Types") {
                 $('a[href="#pay-type"]').tab('show');
-                $('a[href="#dth-ben2"]').tab('show');
-            } else if (i == 12) {
+                $('a[href="#benefit-1-7"]').tab('show');
+            } else if (i == 8 && label == "Payment Types") {
                 $('a[href="#pay-type"]').tab('show');
-                $('a[href="#frgn2"]').tab('show');
-            } else if (i == 13) {
-                $('a[href="#pay-type"]').tab('show');
-                $('a[href="#nst2"]').tab('show');
-            } else if (i == 14) {
-                $('a[href="#pay-type"]').tab('show');
-                $('a[href="#leg-app"]').tab('show');
-            } else if (i == 15) {
-                $('a[href="#pay-type"]').tab('show');
-                $('a[href="#avc-app"]').tab('show');
+                $('a[href="#benefit-1-8"]').tab('show');
             }
         });
     });

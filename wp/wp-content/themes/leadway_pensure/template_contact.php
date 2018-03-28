@@ -3,6 +3,8 @@
 <?php
 
 // retrieve branches from cache
+delete_transient("leadway_branch_info");
+$branches = false;
 $branches = get_transient("leadway_branch_info");
 
 // if doesn't exist in cache, get from api
@@ -10,8 +12,8 @@ if (!$branches) {
     $branches = wp_remote_post("https://mapps.leadway-pensure.com/LeadwayMobileApplicationWebAPI/WebData/ListOfBranchDetails");
     if (is_array($branches) && isset($branches['body'])) {
         $branches_json = json_decode($branches['body']);
-        $branches = $branches_json->Data;
-        set_transient( 'leadway_branch_info', $branches, DAY_IN_SECONDS );
+        $branches = !empty($branches_json->Data) ? $branches_json->Data : false;
+        if ($branches) set_transient( 'leadway_branch_info', $branches, DAY_IN_SECONDS );
     } else {
         $branches = false;
     }

@@ -225,6 +225,86 @@ class My_Walker_Nav_Menu extends Walker_Nav_Menu
 }
 
 
+// session issues
+add_action('init', 'myStartSession', 1);
+add_action('wp_logout', 'myEndSession');
+add_action('wp_login', 'myEndSession');
+
+function myStartSession() {
+    if(!session_id()) {
+        session_start();
+    }
+}
+
+function myEndSession() {
+    session_destroy ();
+}
+
+// timeout issue
+add_filter('http_request_args', 'bal_http_request_args', 100, 1);
+function bal_http_request_args($r) //called on line 237
+{
+    $r['timeout'] = 15;
+    return $r;
+}
+
+add_action('http_api_curl', 'bal_http_api_curl', 100, 1);
+function bal_http_api_curl($handle) //called on line 1315
+{
+    curl_setopt( $handle, CURLOPT_CONNECTTIMEOUT, 15 );
+    curl_setopt( $handle, CURLOPT_TIMEOUT, 15 );
+}
+
+/**
+ * Join posts and postmeta tables
+ *
+ * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_join
+ */
+function cf_search_join( $join ) {
+    global $wpdb;
+
+    if ( is_search() ) {    
+        $join .=' LEFT JOIN '.$wpdb->postmeta. ' ON '. $wpdb->posts . '.ID = ' . $wpdb->postmeta . '.post_id ';
+    }
+
+    return $join;
+}
+add_filter('posts_join', 'cf_search_join' );
+
+/**
+ * Modify the search query with posts_where
+ *
+ * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_where
+ */
+function cf_search_where( $where ) {
+    global $pagenow, $wpdb;
+
+    if ( is_search() ) {
+        $where = preg_replace(
+            "/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",
+            "(".$wpdb->posts.".post_title LIKE $1) OR (".$wpdb->postmeta.".meta_value LIKE $1)", $where );
+    }
+
+    return $where;
+}
+add_filter( 'posts_where', 'cf_search_where' );
+
+/**
+ * Prevent duplicates
+ *
+ * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_distinct
+ */
+function cf_search_distinct( $where ) {
+    global $wpdb;
+
+    if ( is_search() ) {
+        return "DISTINCT";
+    }
+
+    return $where;
+}
+add_filter( 'posts_distinct', 'cf_search_distinct' );
+
 // ==========================
 // helper functions
 // ==========================
@@ -268,6 +348,21 @@ function array_get($data, $key, $default = null)
 }
 
 /**
+ * @param $params
+ * @param $url
+ * @return array|WP_Error
+ */
+function sendReq($url, $params)
+{
+    $trends = wp_remote_post($url, [
+        'headers' => array('Content-Type' => 'application/json; charset=utf-8'),
+        'body' => json_encode($params),
+        'method' => 'POST'
+    ]);
+    return $trends;
+}
+
+/**
  * @param $response
  * @return bool
  */
@@ -280,22 +375,6 @@ function getResponse($response)
         $response = false;
         return $response;
     }
-}
-
-// timeout issue
-
-add_filter('http_request_args', 'bal_http_request_args', 100, 1);
-function bal_http_request_args($r) //called on line 237
-{
-    $r['timeout'] = 15;
-    return $r;
-}
-
-add_action('http_api_curl', 'bal_http_api_curl', 100, 1);
-function bal_http_api_curl($handle) //called on line 1315
-{
-    curl_setopt( $handle, CURLOPT_CONNECTTIMEOUT, 15 );
-    curl_setopt( $handle, CURLOPT_TIMEOUT, 15 );
 }
 
 
