@@ -1781,7 +1781,7 @@ footer .table td, .table th {
     object-fit: contain;
     width: 155px;
 }
-#back-top, #share, #print{
+#back-top, #print{
     position: fixed;
     display: none;
     right: 15px;
@@ -1808,8 +1808,9 @@ footer .table td, .table th {
 #print{
     bottom: 65px;
 }
-#share{
-    bottom: 115px;
+#chat-icon {
+    position: fixed;
+    bottom: 50px;
 }
 
 /*Styling for Mail Chimp*/
